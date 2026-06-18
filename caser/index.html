@@ -82,9 +82,9 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
 .logowall{padding:34px 26px;border-top:1px solid var(--line)}
 .logowall .lbl{text-align:center;font-size:0.71rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:20px}
 .logowall .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:26px 46px}
-.logowall img{height:36px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.58;transition:.25s}
-.logowall img:hover{filter:none;opacity:1}
-@media(max-width:680px){.logowall img{height:28px}.logowall .row{gap:20px 32px}}
+.logowall img{height:48px;width:auto;object-fit:contain;opacity:1;transition:.25s}
+.logowall img:hover{transform:translateY(-2px)}
+@media(max-width:680px){.logowall img{height:34px}.logowall .row{gap:22px 34px}}
 
 /* sections */
 .sec{padding:90px 0}
@@ -143,7 +143,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
 .casegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px}
 @media(max-width:860px){.casegrid{grid-template-columns:1fr}}
 .casecard{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px 30px;box-shadow:var(--sh-sm);display:flex;flex-direction:column;min-height:250px}
-.casecard .clogo{height:24px;width:auto;object-fit:contain;filter:grayscale(1);opacity:.7;margin-bottom:20px;align-self:flex-start}
+.casecard .clogo{height:28px;width:auto;object-fit:contain;opacity:1;margin-bottom:20px;align-self:flex-start}
 .casecard .metric{font-family:var(--disp);font-weight:800;font-size:3rem;line-height:1;letter-spacing:-0.04em;color:var(--ink)}
 .casecard .metric .u{color:var(--accent-deep)}
 .casecard .ms{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:9px}
@@ -645,7 +645,7 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
         <svg width="16" height="16" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       </div>
       <p class="cs-quote">"Wow, selv statics som fungerer så bra! Super jobb dere, fantastisk"</p>
-      <p class="cs-quote-author"><strong>Mokki</strong> — Kunde</p>
+      <p class="cs-quote-author"><strong>Mattis Ohana Goksøyr</strong> — CMO @ Mokki</p>
     </div>
   </div>
 </div>
@@ -688,6 +688,21 @@ h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.05;letter-spacing
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <blockquote>&ldquo;Kan absolutt anbefale disse gutta. God kommunikasjon og gode resultater!&rdquo;</blockquote>
         <div class="who"><span class="ph">TF</span><div><b>Theo Floden</b><span>Dittutstyr</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Selv statics fungerer så godt! Veldig bra jobba dere, fantastisk!&rdquo;</blockquote>
+        <div class="who"><span class="ph">MG</span><div><b>Mattis Ohana Goksøyr</b><span>CMO @ Mokki</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Supert, dere er flinke 😊 Nå synes jeg det ser veldig bra ut 😊&rdquo;</blockquote>
+        <div class="who"><span class="ph">EF</span><div><b>Erle Fjeldsaa</b><span>Daglig leder, Frøyd</span></div></div>
+      </div>
+      <div class="tcard reveal">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Bra jobba boys! Very good.&rdquo;</blockquote>
+        <div class="who"><span class="ph">JR</span><div><b>Jonathan Rothe</b><span>Daglig leder, Utvendigrenhold</span></div></div>
       </div>
     </div>
   </div>
