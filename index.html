@@ -36,7 +36,7 @@
 <style>
 :root{
   --bg:#F9F8F4; --paper:#ffffff; --surface:#F2EDE4;
-  --ink:#0F0D0A; --ink2:#2D2820; --muted:#4E483D; --faint:#847E6D;
+  --ink:#0F0D0A; --ink2:#2D2820; --muted:#4E483D; --faint:#6E6858;
   --line:#E5DFD3; --line-2:#D5CDBC;
   --dark:#141210; --on-dark-dim:#C6C0B5;
   --accent:#00C96F; --accent-deep:#009052; --accent-ink:#06231a;
@@ -127,32 +127,29 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 @keyframes wscroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
 .wad{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--surface);flex:none}
 .wad img{width:100%;aspect-ratio:4/5;object-fit:cover}
-.wad figcaption{position:absolute;left:9px;bottom:8px;background:rgba(255,255,255,.93);backdrop-filter:blur(4px);padding:4px 10px;border-radius:var(--pill);font-size:0.66rem;font-weight:700}
+.wad figcaption{position:absolute;left:9px;bottom:8px;background:rgba(255,255,255,.95);backdrop-filter:blur(4px);padding:4px 10px;border-radius:var(--pill);font-size:0.7rem;font-weight:700}
 @media(prefers-reduced-motion:reduce){.wcol{animation:none}}
 /* sitat-bobler over veggen */
 .qb{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:5px 16px 16px 16px;padding:12px 16px;box-shadow:var(--sh);font-size:0.9rem;line-height:1.4;max-width:240px;z-index:3;color:var(--ink2)}
-.qb b{display:block;font-family:var(--disp);font-weight:700;font-size:0.76rem;color:var(--ink);margin-top:6px}
+.qb b{display:block;font-family:var(--disp);font-weight:700;font-size:0.8rem;color:var(--ink);margin-top:6px}
 .qb b span{font-weight:500;color:var(--faint)}
 .qb1{top:7%;left:-26px;transform:rotate(-2deg)}
 .qb2{top:42%;right:-18px;transform:rotate(1.5deg)}
 .qb3{bottom:9%;left:6%;transform:rotate(-1.5deg)}
 /* mobil */
-.mstrip{display:none}
 @media(max-width:900px){
   .hero{padding:40px 0 0}
   .hero-grid{grid-template-columns:1fr;gap:0;text-align:center}
   .hero h1{margin:0 auto 20px}
   .hero .sub{margin:0 auto}
   .hero .cta-row,.faces{justify-content:center}
-  .wallbox{display:none}
-  .mstrip{display:block;margin-top:38px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
-  .mtrack{display:flex;gap:12px;width:max-content;animation:mscroll 40s linear infinite}
-  @keyframes mscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-  .mstrip .wad{width:170px}
+  .wallbox{margin-top:36px}
+  .wall{height:430px;gap:10px}
+  .wad{border-radius:12px}
+  .wad figcaption{left:7px;bottom:6px;padding:3px 8px;font-size:0.62rem}
+  .qb{display:none}
   .cmt.hide-m{display:none}
 }
-.mq{width:185px;flex:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px 15px;font-size:0.86rem;line-height:1.45;color:var(--ink2);display:flex;flex-direction:column;justify-content:center;gap:8px}
-.mq b{font-family:var(--disp);font-weight:700;font-size:0.72rem;color:var(--faint)}
 
 /* ---- proof band ---- */
 .proofband{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);margin-top:60px}
@@ -161,10 +158,10 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .stats .s{text-align:center;padding:28px 12px;border-right:1px solid var(--line)}
 .stats .s:last-child{border-right:0}
 .stats .n{font-family:var(--disp);font-weight:800;font-size:2.1rem;letter-spacing:-0.03em;color:var(--ink)}
-.stats .t{font-size:0.82rem;color:var(--muted);margin-top:3px}
+.stats .t{font-size:0.87rem;color:var(--muted);margin-top:3px}
 @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}.stats .s:nth-child(2){border-right:0}.stats .s:nth-child(1),.stats .s:nth-child(2){border-bottom:1px solid var(--line)}}
 .logowall{padding:32px 24px;border-top:1px solid var(--line)}
-.logowall .lbl{text-align:center;font-size:0.71rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:20px}
+.logowall .lbl{text-align:center;font-size:0.74rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);margin-bottom:20px}
 .logowall .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:26px 46px}
 .logowall img{height:46px;width:auto;object-fit:contain}
 @media(max-width:680px){.logowall img{height:33px}.logowall .row{gap:20px 32px}}
@@ -177,7 +174,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .cmt .av{width:38px;height:38px;border-radius:50%;background:var(--paper);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:800;color:var(--muted);font-size:0.8rem;flex:none;margin-top:2px}
 .cmt .bub{background:var(--paper);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:13px 17px;box-shadow:var(--sh-sm)}
 .cmt .bub b{font-family:var(--disp);font-weight:700;font-size:0.9rem;letter-spacing:-0.01em}
-.cmt .bub .role{font-size:0.75rem;color:var(--faint);margin-left:6px}
+.cmt .bub .role{font-size:0.8rem;color:var(--faint);margin-left:6px}
 .cmt .bub p{font-size:1rem;color:var(--ink2);line-height:1.5;margin-top:4px}
 .rev-score{display:inline-flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--pill);padding:10px 20px;box-shadow:var(--sh-sm);margin-top:18px}
 .rev-score .n{font-family:var(--disp);font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;color:var(--accent-deep)}
@@ -189,7 +186,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 
 @media(max-width:600px){.week{grid-template-columns:1fr}}
 .day{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 24px}
-.day .d{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--accent-deep)}
+.day .d{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--accent-deep)}
 .day h3{font-size:1.25rem;margin:10px 0 8px}
 .day p{color:var(--muted);font-size:0.98rem;line-height:1.55}
 .ai-line{max-width:720px;margin:38px auto 0;text-align:center;font-size:1.1rem;color:var(--ink);line-height:1.6}
@@ -213,13 +210,13 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .fad{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--sh-sm);display:flex;flex-direction:column}
 .fad .fh{display:flex;align-items:center;gap:10px;padding:13px 15px}
 .fad .fh img{height:22px;width:auto;object-fit:contain}
-.fad .fh .sp{margin-left:auto;font-size:0.7rem;font-weight:600;color:var(--faint);letter-spacing:.04em}
+.fad .fh .sp{margin-left:auto;font-size:0.75rem;font-weight:600;color:var(--faint);letter-spacing:.03em}
 .fad .fcopy{padding:0 15px 12px;font-size:0.97rem;color:var(--ink2);line-height:1.45}
 .fad .fmedia{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 15px;text-align:center}
 .fad .fmedia .metric{font-family:var(--disp);font-weight:800;font-size:3.2rem;line-height:1;letter-spacing:-0.04em;color:var(--ink)}
 .fad .fmedia .metric .u{color:var(--accent-deep)}
 .fad .fmedia .ms{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:9px}
-.fad .ff{padding:11px 15px;display:flex;align-items:center;justify-content:space-between;font-size:0.76rem;color:var(--faint);font-weight:600;margin-top:auto}
+.fad .ff{padding:12px 15px;display:flex;align-items:center;justify-content:space-between;font-size:0.8rem;color:var(--faint);font-weight:600;margin-top:auto}
 .fad .ff a{color:var(--accent-deep);font-weight:700}
 
 /* ---- steps ---- */
@@ -374,28 +371,6 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
     </div>
   </div>
 
-  <!-- mobil: horisontal stripe -->
-  <div class="mstrip" aria-hidden="true">
-    <div class="mtrack">
-      <figure class="wad"><img src="/img/ad-ugc.jpg" alt=""><figcaption>UGC</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-static.jpg" alt=""><figcaption>Static</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-review.jpg" alt=""><figcaption>Review</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-kvittering.jpg" alt=""><figcaption>Kvittering</figcaption></figure>
-      <div class="mq">&ldquo;Vi får flere leads enn noensinne!!&rdquo;<b>Elliot &middot; Badstugutta</b></div>
-      <figure class="wad"><img src="/img/ad-meta.jpg" alt=""><figcaption>Meta</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-katalog.jpg" alt=""><figcaption>Katalog</figcaption></figure>
-      <div class="mq">&ldquo;&hellip;en tidsepoke før og etter.&rdquo;<b>Thommy &middot; Leid.no</b></div>
-      <figure class="wad"><img src="/img/ad-snapchat.jpg" alt=""><figcaption>Snapchat</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-ugc.jpg" alt=""><figcaption>UGC</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-static.jpg" alt=""><figcaption>Static</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-review.jpg" alt=""><figcaption>Review</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-kvittering.jpg" alt=""><figcaption>Kvittering</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-meta.jpg" alt=""><figcaption>Meta</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-katalog.jpg" alt=""><figcaption>Katalog</figcaption></figure>
-      <figure class="wad"><img src="/img/ad-snapchat.jpg" alt=""><figcaption>Snapchat</figcaption></figure>
-    </div>
-  </div>
-
   <!-- ===== PROOF BAND ===== -->
   <div class="proofband">
     <div class="stats">
@@ -451,9 +426,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
         <h2>Ingen resultater.<br><span class="dim">Ingen regning.</span></h2>
         <p class="mp">Du beholder marginene dine. Vi tjener først når du tjener mer &mdash; så du tar null risiko ved å teste oss. At det går bra med deg, er bokstavelig talt forretningsmodellen vår.</p>
         <ul>
-          <li><span class="chk2"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; honoraret er knyttet til det vi skaper</li>
+          <li><span class="chk2"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; honoraret er knyttet til resultatene vi skaper</li>
           <li><span class="chk2"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 10+ nye annonser testet hver eneste uke</li>
-          <li><span class="chk2"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Sporing rigget mot faktiske salg &mdash; ikke klikk og visninger</li>
+          <li><span class="chk2"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Sporing som måler faktiske salg &mdash; ikke klikk og visninger</li>
         </ul>
       </div>
       <div class="chartcard reveal">
@@ -497,7 +472,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
         <div class="day reveal"><div class="d">Mandag</div><h3>Rapporten</h3><p>Du får tallene som betyr noe: hva du brukte, hva du tjente &mdash; og hva vi gjør med det denne uka.</p></div>
         <div class="day reveal"><div class="d">Tirsdag&ndash;torsdag</div><h3>Produksjon</h3><p>Vi skriver hooks, klipper UGC, designer statics og bygger kampanjer. Minst 10 nye annonser ut &mdash; hver uke.</p></div>
         <div class="day reveal"><div class="d">Fredag</div><h3>Vinnere og tapere</h3><p>Vi skalerer det som funker, pauser det som ikke gjør det &mdash; og luker ut søketermer som brenner pengene dine.</p></div>
-        <div class="day reveal"><div class="d">Hver dag</div><h3>Direktelinje</h3><p>Du har oss på chat. Ikke et ticketsystem, ikke en account manager &mdash; oss.</p></div>
+        <div class="day reveal"><div class="d">Hver dag</div><h3>Én melding unna</h3><p>Du har oss på chat. Ikke et ticketsystem, ikke en account manager &mdash; oss.</p></div>
       </div>
       <div class="report reveal" aria-label="Utdrag fra mandagsrapport">
         <div class="rh">Mandagsrapport <span>Leid.no &middot; utdrag</span></div>
