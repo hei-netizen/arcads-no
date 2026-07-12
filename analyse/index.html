@@ -88,11 +88,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 @media(max-width:600px){.strip{font-size:0.88rem}}
 
 /* ---- hero ---- */
-.hero{padding:40px 0 56px}
-.hero-top{max-width:780px;margin:0 auto;text-align:center}
-.hero h1{margin:4px auto 20px}
-.hero-top .blist{display:inline-grid;text-align:left;margin-bottom:22px}
-.hero-top .faces{justify-content:center}
+.hero{padding:36px 0 56px}
+.hero-grid{display:grid;grid-template-columns:0.98fr 1.02fr;gap:44px;align-items:start}
+.hero h1{margin:4px 0 20px}
 .blist{list-style:none;display:grid;gap:11px;margin:0 0 24px}
 .blist li{display:flex;align-items:flex-start;gap:11px;font-size:0.99rem;font-weight:600;color:var(--ink2);line-height:1.45}
 .chk{width:22px;height:22px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:2px}
@@ -121,19 +119,16 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .field input:focus,.field select:focus{outline:none}
 .formcard .cta{width:100%;margin-top:6px}
 .fmsg{display:none;background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent-deep);padding:13px 15px;border-radius:12px;font-size:0.9rem;margin-bottom:14px;font-weight:600}
-.formcard .fine,.bookcard .fine{display:flex;flex-direction:column;gap:4px;font-size:0.76rem;color:var(--muted);margin-top:13px;text-align:center}
-.formcard .fine b,.bookcard .fine b{color:var(--ink2);font-weight:700}
+.formcard .fine{display:flex;flex-direction:column;gap:4px;font-size:0.76rem;color:var(--muted);margin-top:13px;text-align:center}
+.formcard .fine b{color:var(--ink2);font-weight:700}
 .hp{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
-/* booking-kort (fullbredde, cal.com inline) */
-.bookcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 20px;box-shadow:var(--sh);margin-top:40px;scroll-margin-top:16px}
-.bookcard .bhead{text-align:center;margin-bottom:18px}
-.bookcard .bhead b{display:block;font-family:var(--disp);font-size:1.5rem;font-weight:800;letter-spacing:-0.01em}
-.bookcard .bhead span{display:block;font-size:0.92rem;color:var(--muted);margin-top:6px}
-.calwrap{width:100%;min-height:620px;border-radius:12px;background:#fff}
-@media(max-width:480px){.calwrap{min-height:520px}.bookcard{padding:24px 14px 14px}}
+/* cal.com-kalender i hero-kortet */
+.calwrap{width:100%;height:580px;overflow:auto;border-radius:12px;background:#fff}
+@media(max-width:480px){.calwrap{height:520px}}
 @media(max-width:900px){
   .hero{padding:26px 0 46px}
-  .bookcard{margin-top:30px}
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero-copy{order:1}.hero-form{order:2}
 }
 @media(max-width:480px){
   .h-xl{font-size:1.8rem}
@@ -260,16 +255,6 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .modal .close:hover{background:var(--ink);color:#fff}
 @media(max-width:620px){.modal .mbody{padding:28px 22px}}
 
-/* ---- sticky book bar ---- */
-.sbar{position:fixed;left:0;right:0;bottom:0;z-index:55;background:rgba(19,18,13,.96);backdrop-filter:blur(10px);color:#fff;transform:translateY(110%);transition:.35s cubic-bezier(.2,.7,.2,1)}
-.sbar.show{transform:none}
-.sbar-inner{max-width:var(--maxw);margin:0 auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.sbar b{font-family:var(--disp);font-weight:700;letter-spacing:-0.02em;font-size:0.98rem}
-.sbar span{display:block;font-size:0.8rem;color:var(--on-dark-dim);font-weight:400}
-.sbar .btn{display:inline-flex;align-items:center;background:var(--accent);color:var(--accent-ink);border-radius:var(--pill);padding:12px 24px;font-weight:700;font-size:0.9rem;white-space:nowrap;transition:.2s}
-.sbar .btn:hover{background:var(--accent-deep);color:#fff}
-@media(max-width:560px){.sbar .txt{display:none}.sbar .btn{width:100%;justify-content:center}}
-
 /* reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.7,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -290,33 +275,37 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-top">
-      <h1 class="h-xl">Vi gir deg bedre resultater på Meta &amp; Google&nbsp;Ads.</h1>
-      <ul class="blist">
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; du betaler først når vi leverer</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 10+ nye annonser i uka, alt laget in-house</li>
-        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mandagsrapport: hva du brukte, hva du tjente</li>
-      </ul>
-      <div class="priceblock">
-        <span class="ord">Andre byråer: <s>fast honorar uansett resultat</s></span>
-        <span class="now">Hos oss: 0 kr før vi leverer</span>
-      </div>
-      <div class="faces">
-        <div class="pics">
-          <img src="/img/victor.png" alt="Victor" width="44" height="44">
-          <img src="/img/jona.png" alt="Jona" width="44" height="44">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <h1 class="h-xl">Vi gir deg bedre resultater på Meta &amp; Google&nbsp;Ads.</h1>
+        <ul class="blist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; du betaler først når vi leverer</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 10+ nye annonser i uka, alt laget in-house</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mandagsrapport: hva du brukte, hva du tjente</li>
+        </ul>
+        <div class="priceblock">
+          <span class="ord">Andre byråer: <s>fast honorar uansett resultat</s></span>
+          <span class="now">Hos oss: 0 kr før vi leverer</span>
         </div>
-        <div class="ftxt"><b>Victor &amp; Jona</b>du snakker med oss to &mdash; ikke en selger</div>
+        <div class="faces">
+          <div class="pics">
+            <img src="/img/victor.png" alt="Victor" width="44" height="44">
+            <img src="/img/jona.png" alt="Jona" width="44" height="44">
+          </div>
+          <div class="ftxt"><b>Victor &amp; Jona</b>du snakker med oss to &mdash; ikke en selger</div>
+        </div>
       </div>
-    </div>
 
-    <div class="bookcard" id="book">
-      <div class="bhead"><b>Book en gratis analyse</b><span>Velg et tidspunkt under &mdash; 30 minutter med Victor, uforpliktende.</span></div>
-      <!-- cal.com inline embed -->
-      <div class="calwrap" id="my-cal-inline-30min"></div>
-      <div class="fine">
-        <span>Vi deler aldri detaljene dine med noen andre.</span>
-        <span style="font-size:0.71rem">Du velger tidspunktet &middot; analysen er din uansett.</span>
+      <div class="hero-form">
+        <div class="formcard" id="book">
+          <div class="fhead"><b>Book en gratis analyse</b><span>Velg et tidspunkt under &mdash; 30 minutter med Victor, uforpliktende.</span></div>
+          <!-- cal.com inline embed -->
+          <div class="calwrap" id="my-cal-inline-30min"></div>
+          <div class="fine">
+            <span>Vi deler aldri detaljene dine med noen andre.</span>
+            <span style="font-size:0.71rem">Du velger tidspunktet &middot; analysen er din uansett.</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -580,14 +569,6 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
   </div>
 </footer>
 
-<!-- ===== STICKY BOOK BAR ===== -->
-<div class="sbar" id="sbar">
-  <div class="sbar-inner">
-    <div class="txt"><b>Gratis analyse av annonsekontoen din</b><span>30 min med Victor &middot; uforpliktende &middot; ingen binding</span></div>
-    <a href="#book" class="btn jump">Book nå</a>
-  </div>
-</div>
-
 <!-- ===== TIMED POPUP ===== -->
 <div class="modal-overlay" id="popup" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-label="Book en gratis analyse">
@@ -625,13 +606,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 /* ---- scroll reveal ---- */
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-
-/* ---- sticky bar ---- */
-var sbar=document.getElementById('sbar'),heroEl=document.querySelector('.hero');
-window.addEventListener('scroll',function(){
-  var past=window.pageYOffset>(heroEl.offsetTop+heroEl.offsetHeight);
-  if(past)sbar.classList.add('show');else sbar.classList.remove('show');
-},{passive:true});
 
 /* ===== lead submit → Make (+ on-device backup) ===== */
 function postTo(url,obj){if(!url)return;var b=new URLSearchParams();for(var k in obj){if(obj.hasOwnProperty(k)&&k.charAt(0)!=='_')b.append(k,obj[k]);}try{if(navigator.sendBeacon&&navigator.sendBeacon(url,b))return;}catch(e){}try{fetch(url,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()});}catch(e){}}
