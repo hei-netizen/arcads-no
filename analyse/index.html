@@ -7,7 +7,7 @@
 <!-- ============================================================
      ARCADS.NO v9 — Frøyd-LP-struktur (direct response), Arcads-palett
      Tilbud: Gratis analyse av annonsekontoen. 100% resultatbasert.
-     Skjema/booking rett i hero. BOOKING_URL i script-blokken nederst.
+     Booking rett i hero: cal.com inline-embed (arcads/30min).
      ============================================================ -->
 <meta name="description" content="Vi gir deg bedre resultater på Meta & Google Ads. 100% resultatbasert — du betaler først når vi leverer. Book en gratis analyse av annonsekontoen din.">
 <link rel="canonical" href="https://arcads.no/analyse/">
@@ -122,9 +122,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .formcard .fine{display:flex;flex-direction:column;gap:4px;font-size:0.76rem;color:var(--muted);margin-top:13px;text-align:center}
 .formcard .fine b{color:var(--ink2);font-weight:700}
 .hp{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
-/* booking-kalender i formcard */
-.calbox{display:none;min-height:600px}
-.calbox iframe,.calbox .calendly-inline-widget{width:100%;height:620px;border:0}
+/* cal.com-kalender i formcard */
+.calwrap{width:100%;height:620px;overflow:auto;border-radius:12px;background:#fff}
+@media(max-width:480px){.calwrap{height:560px}}
 @media(max-width:900px){
   .hero{padding:26px 0 46px}
   .hero-grid{grid-template-columns:1fr;gap:30px}
@@ -308,42 +308,12 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 
       <div class="hero-form">
         <div class="formcard">
-          <div class="fhead"><b>Book en gratis analyse</b><span>Vi går gjennom annonsekontoen din og viser hvor pengene lekker &mdash; uforpliktende.</span></div>
-          <!-- Booking-kalender (vises når BOOKING_URL er satt) -->
-          <div class="calbox" id="calWrap"></div>
-          <!-- Leadskjema (fallback til BOOKING_URL er satt) -->
-          <div id="leadWrap">
-            <div class="fmsg" id="formMsg">Takk! Victor ringer deg innen 1 virkedag.</div>
-            <form id="leadForm" novalidate>
-              <div class="hp" aria-hidden="true"><label>Firma<input type="text" id="company" name="company" tabindex="-1" autocomplete="off"></label></div>
-              <div class="field">
-                <label for="name">Navn <span class="req">*</span></label>
-                <div class="inp"><input type="text" id="name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
-              </div>
-              <div class="field">
-                <label for="phone">Telefon <span class="req">*</span></label>
-                <div class="inp"><input type="tel" id="phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" inputmode="tel" required></div>
-              </div>
-              <div class="field">
-                <label for="email">E-post <span class="req">*</span></label>
-                <div class="inp"><input type="email" id="email" name="email" placeholder="din@epost.no" autocomplete="email" inputmode="email" required></div>
-              </div>
-              <div class="field">
-                <label for="budget">Månedlig annonsebudsjett <span class="req">*</span></label>
-                <div class="inp"><select id="budget" name="budget" required>
-                  <option value="" disabled selected>Velg budsjett</option>
-                  <option>Under 25 000 kr</option>
-                  <option>25 000&ndash;75 000 kr</option>
-                  <option>75 000&ndash;200 000 kr</option>
-                  <option>Over 200 000 kr</option>
-                </select></div>
-              </div>
-              <button type="submit" class="cta"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
-            </form>
-          </div>
+          <div class="fhead"><b>Book en gratis analyse</b><span>Velg et tidspunkt under &mdash; 30 minutter med Victor, uforpliktende.</span></div>
+          <!-- cal.com inline embed -->
+          <div class="calwrap" id="my-cal-inline-30min"></div>
           <div class="fine">
             <span>Vi deler aldri detaljene dine med noen andre.</span>
-            <span style="font-size:0.71rem">Svar innen 1 virkedag &middot; analysen er din uansett.</span>
+            <span style="font-size:0.71rem">Du velger tidspunktet &middot; analysen er din uansett.</span>
           </div>
         </div>
       </div>
@@ -440,8 +410,8 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
     <div class="darkband reveal">
       <span class="eyebrow">&mdash; Gratis analyse av annonsekontoen din &mdash;</span>
       <h2 class="h-lg">Vi viser deg hvor pengene lekker. Gratis.</h2>
-      <p>20 minutter med Victor. Vi går gjennom Google- og Meta-kontoen din og viser konkret hva vi ville gjort annerledes &mdash; analysen er din uansett.</p>
-      <div class="codebox"><b>Gratis analyse</b> <span class="hl">&rarr; 20 minutter &middot; uforpliktende &middot; ingen binding</span></div>
+      <p>30 minutter med Victor. Vi går gjennom Google- og Meta-kontoen din og viser konkret hva vi ville gjort annerledes &mdash; analysen er din uansett.</p>
+      <div class="codebox"><b>Gratis analyse</b> <span class="hl">&rarr; 30 minutter &middot; uforpliktende &middot; ingen binding</span></div>
       <div style="margin-top:26px"><a href="#top" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
       <p class="micro">100% resultatbasert &middot; du betaler først når vi leverer</p>
     </div>
@@ -458,7 +428,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
     <div class="inc-card reveal">
       <div class="body">
         <ul class="inc-list">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>20 minutter med Victor</b> &mdash; ikke en selger</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>30 minutter med Victor</b> &mdash; ikke en selger</span></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Gjennomgang av Google- og Meta-kontoen din</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Vi viser konkret hvor pengene lekker &mdash; og hva vi ville gjort annerledes</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Ærlig svar på om vi kan tjene deg penger &mdash; er vi ikke sikre, sier vi nei</li>
@@ -466,7 +436,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
         </ul>
         <div class="pricebar">
           <span class="ord">Verdien ligger i funnene &mdash; prisen er:</span>
-          <span class="now">Gratis <small>&middot; 20 min &middot; uforpliktende</small></span>
+          <span class="now">Gratis <small>&middot; 30 min &middot; uforpliktende</small></span>
         </div>
       </div>
       <div class="pic"><img src="/img/founders.jpg" alt="Victor og Jona i Arcads" loading="lazy"></div>
@@ -581,7 +551,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
       <h2 class="h-lg" style="margin-top:12px">Det folk lurer på før de booker</h2>
     </div>
     <div class="faq reveal">
-      <details open><summary>Hva skjer i den første praten?<span class="pm">+</span></summary><div class="ans">20 minutter på video med Victor. Vi ser på annonsekontoen din sammen og viser konkret hva vi ville gjort annerledes. Ingen pitch, ingen forpliktelser &mdash; du sitter igjen med analysen uansett.</div></details>
+      <details open><summary>Hva skjer i den første praten?<span class="pm">+</span></summary><div class="ans">30 minutter på video med Victor. Vi ser på annonsekontoen din sammen og viser konkret hva vi ville gjort annerledes. Ingen pitch, ingen forpliktelser &mdash; du sitter igjen med analysen uansett.</div></details>
       <details><summary>Hva betyr «100% resultatbasert»?<span class="pm">+</span></summary><div class="ans">Vi tar betalt for resultater, ikke for løfter. Du tar ingen risiko på å teste oss &mdash; den nøyaktige modellen avtaler vi i den første praten.</div></details>
       <details><summary>Hvordan vet jeg at det er dere som skapte salget?<span class="pm">+</span></summary><div class="ans">Vi setter opp riktig sporing (Google Ads, Meta Pixel og GA4) før vi starter, så vi måler faktiske konverteringer. Hver mandag får du en rapport på ROAS og kostnad per konvertering.</div></details>
       <details><summary>Er det binding?<span class="pm">+</span></summary><div class="ans">Nei. Vi vinner deg på resultater, ikke på kontrakter.</div></details>
@@ -612,7 +582,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 <!-- ===== STICKY BOOK BAR ===== -->
 <div class="sbar" id="sbar">
   <div class="sbar-inner">
-    <div class="txt"><b>Gratis analyse av annonsekontoen din</b><span>20 min med Victor &middot; uforpliktende &middot; ingen binding</span></div>
+    <div class="txt"><b>Gratis analyse av annonsekontoen din</b><span>30 min med Victor &middot; uforpliktende &middot; ingen binding</span></div>
     <a href="#top" class="btn jump">Book nå</a>
   </div>
 </div>
@@ -643,34 +613,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 </div>
 
 <script>
-/* ===== Konfig =====
-   BOOKING_URL: lim inn Calendly- eller cal.com-lenke → kalender vises i
-   hero-kortet i stedet for skjemaet. Tom = leadskjema (Make-webhook). */
-var BOOKING_URL = '';                  // <-- LIM INN BOOKING-URL (Calendly/cal.com)
-var ARCADS_LEAD_WEBHOOK = 'https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi'; // Make: scenario "Arcads LP leads" (6202084) → data store 133291
+/* ===== Konfig ===== */
+var ARCADS_LEAD_WEBHOOK = 'https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi'; // Make: scenario "Arcads LP leads" (6202084) → data store 133291 (brukes av popup-skjemaet)
 var LEAD_SOURCE = 'arcads-analyse';
-
-/* ---- booking-kalender (Calendly inline eller cal.com iframe) ---- */
-(function(){
-  if(!BOOKING_URL)return;
-  var wrap=document.getElementById('calWrap');
-  document.getElementById('leadWrap').style.display='none';
-  wrap.style.display='block';
-  if(BOOKING_URL.indexOf('cal.com')>-1){
-    var i=document.createElement('iframe');
-    i.src=BOOKING_URL+(BOOKING_URL.indexOf('?')>-1?'&':'?')+'embed=true';
-    i.loading='lazy';
-    wrap.appendChild(i);
-  }else{
-    var d=document.createElement('div');
-    d.className='calendly-inline-widget';
-    d.setAttribute('data-url',BOOKING_URL+(BOOKING_URL.indexOf('?')>-1?'&':'?')+'hide_gdpr_banner=1&primary_color=00C96F');
-    wrap.appendChild(d);
-    var s=document.createElement('script');
-    s.src='https://assets.calendly.com/assets/external/widget.js';s.async=true;
-    document.head.appendChild(s);
-  }
-})();
 
 /* ---- smooth scroll ---- */
 function scrollToY(y,dur){var s=window.pageYOffset,d=y-s,t0=null;function f(t){if(t0===null)t0=t;var p=Math.min((t-t0)/dur,1);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;window.scrollTo(0,s+d*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
@@ -716,9 +661,26 @@ if(overlay){
 }
 </script>
 
+<!-- Cal inline embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "30min", {origin:"https://app.cal.com"});
+Cal.config = Cal.config || {};
+Cal.config.forwardQueryParams = true;
+
+  Cal.ns["30min"]("inline", {
+    elementOrSelector:"#my-cal-inline-30min",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "arcads/30min",
+  });
+
+  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#00a25a"}}});
+</script>
+<!-- Cal inline embed code ends -->
+
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Hva skjer i den første praten?","acceptedAnswer":{"@type":"Answer","text":"20 minutter på video med Victor. Vi ser på annonsekontoen din sammen og viser konkret hva vi ville gjort annerledes. Ingen pitch, ingen forpliktelser — du sitter igjen med analysen uansett."}},
+{"@type":"Question","name":"Hva skjer i den første praten?","acceptedAnswer":{"@type":"Answer","text":"30 minutter på video med Victor. Vi ser på annonsekontoen din sammen og viser konkret hva vi ville gjort annerledes. Ingen pitch, ingen forpliktelser — du sitter igjen med analysen uansett."}},
 {"@type":"Question","name":"Hva betyr 100% resultatbasert?","acceptedAnswer":{"@type":"Answer","text":"Vi tar betalt for resultater, ikke for løfter. Du tar ingen risiko på å teste oss — den nøyaktige modellen avtaler vi i den første praten."}},
 {"@type":"Question","name":"Hvordan vet jeg at det er dere som skapte salget?","acceptedAnswer":{"@type":"Answer","text":"Vi setter opp riktig sporing (Google Ads, Meta Pixel og GA4) før vi starter, så vi måler faktiske konverteringer. Hver mandag får du en rapport på ROAS og kostnad per konvertering."}},
 {"@type":"Question","name":"Er det binding?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi vinner deg på resultater, ikke på kontrakter."}},
