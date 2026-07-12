@@ -88,9 +88,11 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 @media(max-width:600px){.strip{font-size:0.88rem}}
 
 /* ---- hero ---- */
-.hero{padding:36px 0 56px}
-.hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr;gap:44px;align-items:start}
-.hero h1{margin:4px 0 20px}
+.hero{padding:40px 0 56px}
+.hero-top{max-width:780px;margin:0 auto;text-align:center}
+.hero h1{margin:4px auto 20px}
+.hero-top .blist{display:inline-grid;text-align:left;margin-bottom:22px}
+.hero-top .faces{justify-content:center}
 .blist{list-style:none;display:grid;gap:11px;margin:0 0 24px}
 .blist li{display:flex;align-items:flex-start;gap:11px;font-size:0.99rem;font-weight:600;color:var(--ink2);line-height:1.45}
 .chk{width:22px;height:22px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:2px}
@@ -119,16 +121,19 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .field input:focus,.field select:focus{outline:none}
 .formcard .cta{width:100%;margin-top:6px}
 .fmsg{display:none;background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent-deep);padding:13px 15px;border-radius:12px;font-size:0.9rem;margin-bottom:14px;font-weight:600}
-.formcard .fine{display:flex;flex-direction:column;gap:4px;font-size:0.76rem;color:var(--muted);margin-top:13px;text-align:center}
-.formcard .fine b{color:var(--ink2);font-weight:700}
+.formcard .fine,.bookcard .fine{display:flex;flex-direction:column;gap:4px;font-size:0.76rem;color:var(--muted);margin-top:13px;text-align:center}
+.formcard .fine b,.bookcard .fine b{color:var(--ink2);font-weight:700}
 .hp{position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden}
-/* cal.com-kalender i formcard */
-.calwrap{width:100%;height:620px;overflow:auto;border-radius:12px;background:#fff}
-@media(max-width:480px){.calwrap{height:560px}}
+/* booking-kort (fullbredde, cal.com inline) */
+.bookcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px 28px 20px;box-shadow:var(--sh);margin-top:40px;scroll-margin-top:16px}
+.bookcard .bhead{text-align:center;margin-bottom:18px}
+.bookcard .bhead b{display:block;font-family:var(--disp);font-size:1.5rem;font-weight:800;letter-spacing:-0.01em}
+.bookcard .bhead span{display:block;font-size:0.92rem;color:var(--muted);margin-top:6px}
+.calwrap{width:100%;min-height:620px;border-radius:12px;background:#fff}
+@media(max-width:480px){.calwrap{min-height:520px}.bookcard{padding:24px 14px 14px}}
 @media(max-width:900px){
   .hero{padding:26px 0 46px}
-  .hero-grid{grid-template-columns:1fr;gap:30px}
-  .hero-copy{order:1}.hero-form{order:2}
+  .bookcard{margin-top:30px}
 }
 @media(max-width:480px){
   .h-xl{font-size:1.8rem}
@@ -285,37 +290,33 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <h1 class="h-xl">Vi gir deg bedre resultater på Meta &amp; Google&nbsp;Ads.</h1>
-        <ul class="blist">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; du betaler først når vi leverer</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 10+ nye annonser i uka, alt laget in-house</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mandagsrapport: hva du brukte, hva du tjente</li>
-        </ul>
-        <div class="priceblock">
-          <span class="ord">Andre byråer: <s>fast honorar uansett resultat</s></span>
-          <span class="now">Hos oss: 0 kr før vi leverer</span>
-        </div>
-        <div class="faces">
-          <div class="pics">
-            <img src="/img/victor.png" alt="Victor" width="44" height="44">
-            <img src="/img/jona.png" alt="Jona" width="44" height="44">
-          </div>
-          <div class="ftxt"><b>Victor &amp; Jona</b>du snakker med oss to &mdash; ikke en selger</div>
-        </div>
+    <div class="hero-top">
+      <h1 class="h-xl">Vi gir deg bedre resultater på Meta &amp; Google&nbsp;Ads.</h1>
+      <ul class="blist">
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; du betaler først når vi leverer</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 10+ nye annonser i uka, alt laget in-house</li>
+        <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mandagsrapport: hva du brukte, hva du tjente</li>
+      </ul>
+      <div class="priceblock">
+        <span class="ord">Andre byråer: <s>fast honorar uansett resultat</s></span>
+        <span class="now">Hos oss: 0 kr før vi leverer</span>
       </div>
-
-      <div class="hero-form">
-        <div class="formcard">
-          <div class="fhead"><b>Book en gratis analyse</b><span>Velg et tidspunkt under &mdash; 30 minutter med Victor, uforpliktende.</span></div>
-          <!-- cal.com inline embed -->
-          <div class="calwrap" id="my-cal-inline-30min"></div>
-          <div class="fine">
-            <span>Vi deler aldri detaljene dine med noen andre.</span>
-            <span style="font-size:0.71rem">Du velger tidspunktet &middot; analysen er din uansett.</span>
-          </div>
+      <div class="faces">
+        <div class="pics">
+          <img src="/img/victor.png" alt="Victor" width="44" height="44">
+          <img src="/img/jona.png" alt="Jona" width="44" height="44">
         </div>
+        <div class="ftxt"><b>Victor &amp; Jona</b>du snakker med oss to &mdash; ikke en selger</div>
+      </div>
+    </div>
+
+    <div class="bookcard" id="book">
+      <div class="bhead"><b>Book en gratis analyse</b><span>Velg et tidspunkt under &mdash; 30 minutter med Victor, uforpliktende.</span></div>
+      <!-- cal.com inline embed -->
+      <div class="calwrap" id="my-cal-inline-30min"></div>
+      <div class="fine">
+        <span>Vi deler aldri detaljene dine med noen andre.</span>
+        <span style="font-size:0.71rem">Du velger tidspunktet &middot; analysen er din uansett.</span>
       </div>
     </div>
   </div>
@@ -412,7 +413,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
       <h2 class="h-lg">Vi viser deg hvor pengene lekker. Gratis.</h2>
       <p>30 minutter med Victor. Vi går gjennom Google- og Meta-kontoen din og viser konkret hva vi ville gjort annerledes &mdash; analysen er din uansett.</p>
       <div class="codebox"><b>Gratis analyse</b> <span class="hl">&rarr; 30 minutter &middot; uforpliktende &middot; ingen binding</span></div>
-      <div style="margin-top:26px"><a href="#top" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
       <p class="micro">100% resultatbasert &middot; du betaler først når vi leverer</p>
     </div>
   </div>
@@ -539,7 +540,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Bruker 25 000+ kr/mnd på annonser &mdash; eller er klar for det</h4></div></li>
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vil måles på bunnlinje &mdash; ikke rapporter</h4></div></li>
     </ul>
-    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#top" class="cta jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#book" class="cta jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
   </div>
 </section>
 
@@ -565,7 +566,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
   <div class="wrap center reveal">
     <span class="eyebrow">Gratis &amp; uforpliktende</span>
     <h2 class="h-lg" style="margin:12px 0 24px">Klar for en større bunnlinje?</h2>
-    <a href="#top" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
+    <a href="#book" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
     <p style="font-size:0.86rem;color:var(--muted);margin-top:16px">Foretrekker du e-post? <a href="mailto:victor@arcads.no" style="color:var(--accent-deep);font-weight:600">victor@arcads.no</a></p>
   </div>
 </section>
@@ -583,7 +584,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 <div class="sbar" id="sbar">
   <div class="sbar-inner">
     <div class="txt"><b>Gratis analyse av annonsekontoen din</b><span>30 min med Victor &middot; uforpliktende &middot; ingen binding</span></div>
-    <a href="#top" class="btn jump">Book nå</a>
+    <a href="#book" class="btn jump">Book nå</a>
   </div>
 </div>
 
@@ -674,7 +675,7 @@ Cal.config.forwardQueryParams = true;
     calLink: "arcads/30min",
   });
 
-  Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#00a25a"}}});
+  Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":false,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#00a25a"}}});
 </script>
 <!-- Cal inline embed code ends -->
 
