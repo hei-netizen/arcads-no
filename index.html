@@ -203,15 +203,17 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .founder-note b{font-weight:700}
 
 /* ---- caser som feed-ads ---- */
-.fadgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-@media(max-width:880px){.fadgrid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+.fadgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+@media(max-width:1080px){.fadgrid{grid-template-columns:repeat(2,1fr);gap:18px}}
+@media(max-width:640px){.fadgrid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+.fad .fh .lb{width:24px;height:24px;border-radius:7px;background:var(--dark);color:#fff;font-weight:800;font-size:0.85rem;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
 .fad{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--sh-sm);display:flex;flex-direction:column}
 .fad .fh{display:flex;align-items:center;gap:10px;padding:13px 15px}
 .fad .fh img{height:22px;width:auto;object-fit:contain}
 .fad .fh .sp{margin-left:auto;font-size:0.75rem;font-weight:600;color:var(--faint);letter-spacing:.03em}
 .fad .fcopy{padding:0 15px 12px;font-size:1rem;color:var(--ink);line-height:1.5}
 .fad .fmedia{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 15px;text-align:center}
-.fad .fmedia .metric{font-family:var(--disp);font-weight:800;font-size:3.2rem;line-height:1;letter-spacing:-0.04em;color:var(--ink)}
+.fad .fmedia .metric{font-family:var(--disp);font-weight:800;font-size:clamp(2.3rem,2.4vw,3rem);line-height:1;letter-spacing:-0.04em;color:var(--ink)}
 .fad .fmedia .metric .u{color:var(--accent-deep)}
 .fad .fmedia .ms{font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--faint);margin-top:9px}
 .fad .ff{padding:12px 15px;display:flex;align-items:center;justify-content:space-between;font-size:0.8rem;color:var(--faint);font-weight:600;margin-top:auto}
@@ -524,22 +526,28 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
     </div>
     <div class="fadgrid">
       <div class="fad reveal">
-        <div class="fh"><img src="/logos/leid.svg" alt="Leid.no"><span class="sp">Sponset &middot; Meta + Google</span></div>
-        <div class="fcopy">Sporingen var ødelagt da vi tok over. Vi fikset den, økte tempoet på nye annonser &mdash; og skalerte uten å gamble med budsjettet.</div>
+        <div class="fh"><img src="/logos/leid.svg" alt="Leid.no" style="height:17px"><span class="sp">Sponset &middot; Meta + Google</span></div>
+        <div class="fcopy">&Oslash;delagt sporing da vi tok over. Vi fikset den &mdash; og skalerte uten &aring; gamble.</div>
         <div class="fmedia"><div class="metric">4,73<span class="u">x</span></div><div class="ms">ROAS &middot; 100&nbsp;000+ kr/mnd</div></div>
         <div class="ff"><span>Leid.no &middot; Tilhengerutleie</span><a href="caser/">Les caset &rarr;</a></div>
       </div>
       <div class="fad reveal">
-        <div class="fh"><img src="/logos/mokki.png" alt="Mokki"><span class="sp">Sponset &middot; Meta</span></div>
-        <div class="fcopy">Prisvinnende barnesolbriller i tre land: Norge, Tyskland og Danmark. Lønnsomt i alle tre.</div>
-        <div class="fmedia"><div class="metric"><span class="u">+</span>127<span class="u">%</span></div><div class="ms">profitt år-over-år</div></div>
+        <div class="fh"><img src="/logos/mokki.png" alt="Mokki"><span class="sp">Sponset &middot; 3 kanaler</span></div>
+        <div class="fcopy">Prisvinnende barnesolbriller i tre land: Norge, Tyskland og Danmark. L&oslash;nnsomt i alle tre.</div>
+        <div class="fmedia"><div class="metric"><span class="u">+</span>127<span class="u">%</span></div><div class="ms">profitt &aring;r-over-&aring;r</div></div>
         <div class="ff"><span>Mokki &middot; E-handel</span><a href="caser/">Les caset &rarr;</a></div>
       </div>
       <div class="fad reveal">
-        <div class="fh"><img src="/logos/mokki.png" alt="Mokki"><span class="sp">Sponset &middot; Google</span></div>
-        <div class="fcopy">Vi bygde Google-satsingen fra null &mdash; Search og Shopping fra dag én.</div>
-        <div class="fmedia"><div class="metric">0 <span class="u">&rarr;</span> 9<span class="u">x</span></div><div class="ms">ROAS på Google</div></div>
-        <div class="ff"><span>Mokki &middot; Google Ads</span><a href="caser/">Les caset &rarr;</a></div>
+        <div class="fh"><span class="lb">M</span><span class="sp">Sponset &middot; Meta</span></div>
+        <div class="fcopy">Aldri m&aring;lt ett eneste lead f&oslash;r oss. Vi bygde sporing, landingssider og annonser fra bunnen.</div>
+        <div class="fmedia"><div class="metric">0 <span class="u">&rarr;</span> 11</div><div class="ms">leads i uka &middot; CPL &pound;17</div></div>
+        <div class="ff"><span>Marlow &middot; Tannklinikk (UK)</span><a href="caser/">Les caset &rarr;</a></div>
+      </div>
+      <div class="fad reveal">
+        <div class="fh"><img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold"><span class="sp">Sponset &middot; Meta + Google</span></div>
+        <div class="fcopy">Egen kampanje per lokasjon &mdash; tak- og fasadevask over hele Norge.</div>
+        <div class="fmedia"><div class="metric">142</div><div class="ms">leads p&aring; &eacute;n uke &middot; 9 lokasjoner</div></div>
+        <div class="ff"><span>Utvendigrenhold</span><a href="caser/">Les caset &rarr;</a></div>
       </div>
     </div>
     <div class="center" style="margin-top:36px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center">
