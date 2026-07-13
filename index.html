@@ -39,7 +39,7 @@
   --ink:#0F0D0A; --ink2:#2D2820; --muted:#4E483D; --faint:#6E6858;
   --line:#E5DFD3; --line-2:#D5CDBC;
   --dark:#141210; --on-dark-dim:#D8D3C9;
-  --accent:#00C96F; --accent-deep:#009052; --accent-ink:#06231a;
+  --accent:#00C96F; --accent-deep:#009052; --accent-text:#00713F; --accent-ink:#06231a;
   --accent-soft:rgba(0,201,111,.10); --accent-line:rgba(0,201,111,.30);
   --gold:#D9A441;
   --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
@@ -60,10 +60,10 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .section{padding:84px 0}
 @media(max-width:760px){.section{padding:54px 0}}
-.eyebrow{display:inline-block;font-family:var(--serif);font-style:italic;font-size:1.22rem;letter-spacing:0;text-transform:none;color:var(--accent-deep)}
+.eyebrow{display:inline-block;font-family:var(--serif);font-style:italic;font-size:1.25rem;letter-spacing:0;text-transform:none;color:var(--accent-text)}
 .eyebrow.muted{color:var(--muted)}
 .h-lg{font-size:clamp(1.7rem,3.2vw,2.4rem)}
-.lede{font-size:1.13rem;color:var(--ink2);max-width:56ch}
+.lede{font-size:1.13rem;color:var(--ink);max-width:56ch}
 .center{text-align:center}
 .stars{color:var(--gold);letter-spacing:1.5px}
 
@@ -107,7 +107,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .hero{padding:60px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:0.94fr 1.06fr;gap:48px;align-items:center;max-width:var(--maxw);margin:0 auto;padding:0 24px}
 .hero h1{font-size:clamp(2.6rem,5vw,4.2rem);margin:0 0 20px;max-width:14ch}
-.hero .sub{font-size:1.2rem;color:var(--ink2);max-width:44ch;line-height:1.6}
+.hero .sub{font-size:1.2rem;color:var(--ink);max-width:44ch;line-height:1.6}
 .hero .sub b{color:var(--ink);font-weight:700}
 .hero .sub .brk{display:block;margin-top:10px}
 .hero .cta-row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:28px}
@@ -130,7 +130,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .wad figcaption{position:absolute;left:9px;bottom:8px;background:rgba(255,255,255,.95);backdrop-filter:blur(4px);padding:4px 10px;border-radius:var(--pill);font-size:0.7rem;font-weight:700}
 @media(prefers-reduced-motion:reduce){.wcol{animation:none}}
 /* sitat-bobler over veggen */
-.qb{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:5px 16px 16px 16px;padding:12px 16px;box-shadow:var(--sh);font-size:0.9rem;line-height:1.4;max-width:240px;z-index:3;color:var(--ink2)}
+.qb{position:absolute;background:var(--paper);border:1px solid var(--line);border-radius:5px 16px 16px 16px;padding:12px 16px;box-shadow:var(--sh);font-size:0.9rem;line-height:1.4;max-width:240px;z-index:3;color:var(--ink)}
 .qb b{display:block;font-family:var(--disp);font-weight:700;font-size:0.8rem;color:var(--ink);margin-top:6px}
 .qb b span{font-weight:500;color:var(--faint)}
 .qb1{top:7%;left:-26px;transform:rotate(-2deg)}
@@ -175,7 +175,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .cmt .bub{background:var(--paper);border:1px solid var(--line);border-radius:4px 18px 18px 18px;padding:13px 17px;box-shadow:var(--sh-sm)}
 .cmt .bub b{font-family:var(--disp);font-weight:700;font-size:0.9rem;letter-spacing:-0.01em}
 .cmt .bub .role{font-size:0.8rem;color:var(--faint);margin-left:6px}
-.cmt .bub p{font-size:1.04rem;color:var(--ink2);line-height:1.55;margin-top:4px}
+.cmt .bub p{font-size:1.04rem;color:var(--ink);line-height:1.55;margin-top:4px}
 .rev-score{display:inline-flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--pill);padding:10px 20px;box-shadow:var(--sh-sm);margin-top:18px}
 .rev-score .n{font-family:var(--disp);font-size:1.5rem;font-weight:800;letter-spacing:-0.02em;color:var(--accent-deep)}
 .rev-score small{color:var(--muted);font-weight:500}
@@ -186,9 +186,9 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 
 @media(max-width:600px){.week{grid-template-columns:1fr}}
 .day{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:26px 24px}
-.day .d{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--accent-deep)}
+.day .d{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--accent-text)}
 .day h3{font-size:1.25rem;margin:10px 0 8px}
-.day p{color:var(--ink2);font-size:1.04rem;line-height:1.6}
+.day p{color:var(--ink);font-size:1.04rem;line-height:1.6}
 .ai-line{max-width:720px;margin:38px auto 0;text-align:center;font-size:1.1rem;color:var(--ink);line-height:1.6}
 .ai-line b{font-weight:700}
 
@@ -198,8 +198,8 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .mphoto{width:100%;height:auto;border-radius:22px;box-shadow:var(--sh);display:block}
 .bios{display:grid;gap:30px}
 .bio h3{font-size:1.45rem}
-.bio .role{font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--accent-deep);margin-top:3px}
-.bio p{color:var(--ink2);font-size:1.08rem;margin-top:9px;line-height:1.65;max-width:46ch}
+.bio .role{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--accent-text);margin-top:3px}
+.bio p{color:var(--ink);font-size:1.08rem;margin-top:9px;line-height:1.65;max-width:46ch}
 @media(max-width:860px){.bio p{max-width:none}}
 .founder-note{max-width:640px;margin:36px auto 0;text-align:center;font-size:1.12rem;color:var(--ink);line-height:1.65}
 .founder-note b{font-weight:700}
@@ -211,7 +211,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .fad .fh{display:flex;align-items:center;gap:10px;padding:13px 15px}
 .fad .fh img{height:22px;width:auto;object-fit:contain}
 .fad .fh .sp{margin-left:auto;font-size:0.75rem;font-weight:600;color:var(--faint);letter-spacing:.03em}
-.fad .fcopy{padding:0 15px 12px;font-size:1rem;color:var(--ink2);line-height:1.5}
+.fad .fcopy{padding:0 15px 12px;font-size:1rem;color:var(--ink);line-height:1.5}
 .fad .fmedia{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:38px 15px;text-align:center}
 .fad .fmedia .metric{font-family:var(--disp);font-weight:800;font-size:3.2rem;line-height:1;letter-spacing:-0.04em;color:var(--ink)}
 .fad .fmedia .metric .u{color:var(--accent-deep)}
@@ -225,7 +225,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .pill{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px 30px}
 .pill .n{font-family:var(--disp);font-weight:800;font-size:1.3rem;color:var(--accent-deep);letter-spacing:-0.02em}
 .pill h3{font-size:1.35rem;margin:12px 0 9px}
-.pill p{color:var(--ink2);font-size:1.05rem;line-height:1.6}
+.pill p{color:var(--ink);font-size:1.05rem;line-height:1.6}
 
 /* ---- faq ---- */
 .faq{display:grid;gap:11px;max-width:840px;margin:42px auto 0}
@@ -235,7 +235,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .faq summary::-webkit-details-marker{display:none}
 .faq summary .pm{width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:none;transition:.3s}
 .faq details[open] summary .pm{transform:rotate(45deg);background:var(--accent);color:var(--accent-ink)}
-.faq .ans{padding:0 0 20px;color:var(--ink2);font-size:1.04rem;max-width:72ch;line-height:1.65}
+.faq .ans{padding:0 0 20px;color:var(--ink);font-size:1.04rem;max-width:72ch;line-height:1.65}
 
 /* ---- booking ---- */
 .final{background:var(--dark);color:#fff;border-radius:26px;padding:64px 40px 44px;text-align:center;box-shadow:var(--sh);scroll-margin-top:80px}
@@ -475,12 +475,14 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
         <div class="day reveal"><div class="d">Hver dag</div><h3>Én melding unna</h3><p>Du har oss på chat. Ikke et ticketsystem, ikke en account manager &mdash; oss.</p></div>
       </div>
       <div class="report reveal" aria-label="Utdrag fra mandagsrapport">
-        <div class="rh">Mandagsrapport <span>Leid.no &middot; utdrag</span></div>
-        <div class="rrow"><span>ROAS</span><b class="up">4,73x</b></div>
-        <div class="rrow"><span>Annonsespend</span><b>100&nbsp;000+ kr/mnd</b></div>
-        <div class="rrow"><span>Nye annonser denne uka</span><b class="up">10+</b></div>
+        <div class="rh">Mandagsrapport <span>Mokki &middot; utdrag</span></div>
+        <div class="rrow"><span>ROAS &middot; Google Ads</span><b class="up">9,00x</b></div>
+        <div class="rrow"><span>POAS &middot; Google Ads</span><b class="up">4,72x</b></div>
+        <div class="rrow"><span>ROAS &middot; Meta</span><b class="up">4,88x</b></div>
+        <div class="rrow"><span>CPA &middot; per ordre (Google)</span><b>115 kr</b></div>
+        <div class="rrow"><span>Nye annonse-varianter</span><b class="up">10+</b></div>
         <div class="rrow"><span>Neste steg</span><b>Skalere vinnerne</b></div>
-        <div class="rfoot">Ekte tall fra ekte kunde &middot; en sånn rapport lander i innboksen din hver mandag</div>
+        <div class="rfoot">Ekte tall fra Mokki (mars 2026) &middot; en sånn rapport lander i innboksen din hver mandag</div>
       </div>
     </div>
     <p class="ai-line reveal">Og ja &mdash; vi bruker AI tyngre enn noe annet norsk byrå vi kjenner til.<br><b>Det er sånn to karer leverer som et helt team.</b></p>
