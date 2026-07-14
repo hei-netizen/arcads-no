@@ -16,17 +16,24 @@
        300+ prosjekter, 5,0 på Google (60+).
      TODO før publisering:
        1) Bytt PLASSHOLDER-tilbud (strip, hero-offer, darkband, inc-card, FAQ, popup)
-       2) Koble Make-webhook (WEBHOOK_URL i script) + evt. takkeside-URL
-       3) Legg inn gtag (AW-…) + Meta Pixel for Badstugutta
+       2) ✅ GJORT 14.07.2026: Make-webhook koblet (scenario 6554541 → klientens CRM-sheet, «Meta Leads»-fanen; IKKE Telegram — fjernet på Victors beskjed). Gjenstår kun: evt. takkeside-URL (THANK_YOU_URL)
+       3) ✅ GJORT 14.07.2026: Meta Pixel inne (init+PageView + Lead/SubmitApplication ved submit, verifisert headless).
+          ✅ GJORT 14.07.2026: gtag AW-11408967890 + konvertering ved submit → «Lead Kontaktskjema» (7606640395, 5 400 kr)
      Anmeldelser: ekte, ordrett fra Loox-widgeten på badstugutta.no (2026-07-10), merket «Bekreftet kjøp».
      ============================================================ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<!-- TODO: Google tag (gtag.js) — Badstugutta AW-XXXXXXXXXX
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-XXXXXXXXXX');</script>
--->
+<!-- Google tag (gtag.js) — Badstugutta -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11408967890"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11408967890');</script>
+<!-- Meta Pixel — Badstugutta (dataset 1383226895916991 = «BG - Shopify/config», live browser+CAPI) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1383226895916991');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1383226895916991&amp;ev=PageView&amp;noscript=1"/></noscript>
+<!-- End Meta Pixel -->
 <style>
 :root{
   /* ===== Badstugutta palette (navy #0A395E + hvit, varm tre-aksent fra foto) ===== */
@@ -103,6 +110,9 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .offer .freebadge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--clay);color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--pill);padding:4px 12px;white-space:nowrap}
 .offer-note{font-size:0.84rem;font-weight:600;color:var(--gold-deep);margin-top:12px}
 .offer-note span{color:var(--muted);font-weight:500}
+.trustline{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:0.82rem;font-weight:600;color:var(--ink2);margin-top:16px}
+.trustline span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.trustline .st{color:var(--gold)}
 @media(max-width:480px){.offer{gap:9px}.offer .tile img{height:84px}.offer .plus{width:28px;height:28px;font-size:1.05rem}}
 
 /* ---- Mattis-kort ---- */
@@ -114,21 +124,23 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 @media(max-width:480px){.s-media .personcard img,.personcard img{width:170px;height:170px}}
 
 /* hero form card */
-.formcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh)}
-.formcard .fhead b{display:block;font-size:1.28rem;font-weight:800;letter-spacing:-0.01em}
-.formcard .fhead span{display:block;font-size:0.86rem;color:var(--muted);margin:6px 0 18px}
-.field{margin-bottom:14px}
-.field label{display:block;font-size:0.82rem;font-weight:700;margin-bottom:6px}
+.formcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px 20px;box-shadow:var(--sh)}
+.formcard .fhead b{display:block;font-size:1.14rem;font-weight:800;letter-spacing:-0.01em}
+.formcard .fhead span{display:block;font-size:0.82rem;color:var(--muted);margin:5px 0 12px}
+.field{margin-bottom:10px}
+.field label{display:block;font-size:0.78rem;font-weight:700;margin-bottom:4px}
 .field label .req{color:var(--clay)}
 .field .inp{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);overflow:hidden}
 .field .inp:focus-within{border-color:var(--clay);background:#fff}
 .field .flag{padding:0 10px;font-size:1.05rem;border-right:1px solid var(--line);align-self:stretch;display:flex;align-items:center}
-.field input{flex:1;width:100%;padding:13px 14px;border:0;background:transparent;font-family:var(--mont);font-size:0.96rem;color:var(--ink)}
+.field input{flex:1;width:100%;padding:10px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.94rem;color:var(--ink)}
 .field input:focus{outline:none}
-.formcard .cta{width:100%;margin-top:6px}
+.field textarea{flex:1;width:100%;padding:9px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.94rem;color:var(--ink);resize:vertical;min-height:46px;line-height:1.45}
+.field textarea:focus{outline:none}
+.formcard .cta{width:100%;margin-top:4px;padding:13px 32px}
 .fmsg{display:none;background:var(--clay-tint);border:1px solid var(--clay-soft);color:var(--clay-deep);padding:13px 15px;border-radius:12px;font-size:0.9rem;margin-bottom:14px;font-weight:600}
 .fmsg a{text-decoration:underline;font-weight:700}
-.formcard .fine{display:flex;flex-direction:column;gap:4px;font-size:0.76rem;color:var(--muted);margin-top:13px;text-align:center}
+.formcard .fine{display:flex;flex-direction:column;gap:3px;font-size:0.74rem;color:var(--muted);margin-top:10px;text-align:center}
 .formcard .fine b{color:var(--ink2);font-weight:700}
 @media(max-width:900px){
   .hero{padding:26px 0 46px}
@@ -276,11 +288,11 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1 class="h-xl">Dr&oslash;mmer du om egen badstu &mdash; uten byggestress?</h1>
+        <h1 class="h-xl">Din egen badstu + kaldkulp &mdash; klar til f&oslash;rste &oslash;kt p&aring; ca. 4 uker</h1>
         <ul class="blist">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Levert ferdigbygd og l&oslash;ftet p&aring; plass med kranbil</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> De fleste modeller klare p&aring; ca. 4 uker</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> &Eacute;n fast kontaktperson fra id&eacute; til f&oslash;rste badstu&oslash;kt</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Varme &oslash;kter og iskald dukkert &mdash; hele &aring;ret</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Ferdigbygd, levert og l&oslash;ftet p&aring; plass med kranbil</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> &Eacute;n fast badstuekspert hele veien</li>
         </ul>
         <div class="offer">
           <div class="tile">
@@ -296,19 +308,19 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
             <span class="pr"><s>6&nbsp;399 kr</s> <span class="zero">0 kr</span></span>
           </div>
         </div>
-        <p class="offer-note">Ved bestilling av badstu f&oslash;r 31. juli <span>&middot; inkl. elektrisk pumpe</span></p>
+        <p class="offer-note">Gjelder bestilling f&oslash;r 31. juli</p>
       </div>
 
       <div class="hero-form">
         <div class="formcard">
           <div class="fhead">
-            <b>F&aring; din komplette badstue-plan</b>
-            <span>3 anbefalte modeller for ditt behov, totalpris levert til din adresse, og sjekkliste for fundament og str&oslash;m &mdash; som regel samme dag.</span>
+            <b>F&aring; din gratis badstue-plan</b>
+            <span>3 anbefalte modeller, totalpris levert &mdash; og kaldkulpen reservert til deg.</span>
           </div>
           <div class="fmsg" id="formMsg">Takk! Planen er p&aring; vei &mdash; vi ringer deg innen &eacute;n virkedag. Vil du velge tidspunkt selv? <a href="https://calendly.com/mattis-tss/gratis-badstukonsultasjon" target="_blank" rel="noopener">Book badstukonsultasjonen direkte her.</a></div>
           <form id="leadForm" novalidate>
             <div class="field">
-              <label for="name">Fornavn og etternavn</label>
+              <label for="name">Fornavn og etternavn <span class="req">*</span></label>
               <div class="inp"><input type="text" id="name" name="name" placeholder="Navnet ditt" required></div>
             </div>
             <div class="field">
@@ -320,15 +332,14 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
               <div class="inp"><input type="email" id="email" name="email" placeholder="din@epost.no" required></div>
             </div>
             <div class="field">
-              <label for="zip">Postnummer <span style="font-weight:500;color:var(--muted)">(for totalpris levert)</span></label>
-              <div class="inp"><input type="text" id="zip" name="zip" inputmode="numeric" maxlength="4" placeholder="0000"></div>
+              <label for="msg">Melding <span style="font-weight:500;color:var(--muted)">(valgfritt)</span></label>
+              <div class="inp"><textarea id="msg" name="message" rows="2" placeholder="Hvor skal badstuen st&aring;? &Oslash;nsker? Sp&oslash;rsm&aring;l?"></textarea></div>
             </div>
             <input type="hidden" name="interest" value="Badstue-plan + sommerpakken">
             <button type="submit" class="cta"><span class="t">F&aring; gratis badstue-plan<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></button>
           </form>
           <div class="fine">
-            <span>Vi deler aldri opplysningene dine med noen andre.</span>
-            <span style="font-size:0.71rem">Du f&aring;r planen p&aring; e-post og en hyggelig, uforpliktende prat med en badstuekspert.</span>
+            <span>100&nbsp;% uforpliktende &mdash; vi deler aldri opplysningene dine.</span>
           </div>
         </div>
       </div>
@@ -358,9 +369,9 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
         <h2 class="h-lg" style="margin:12px 0 8px">Egen badstu er enklere enn du tror&hellip;</h2>
         <p class="lede" style="margin-bottom:30px">&hellip; og det starter med en gratis badstue-plan.</p>
         <ul class="feat">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vi ordner alt fra A til &Aring;</h4><p>Vi tar h&aring;nd om hele prosessen, bortsett fra svettingen &mdash; levering, kranl&oslash;ft og montering.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vi ordner alt fra A til &Aring;</h4><p>Levering, kranl&oslash;ft og montering &mdash; du trenger bare &aring; bestemme hvor badstuen skal st&aring;.</p></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>300+ prosjekter levert siden 2024</h4><p>Og h&oslash;yest vurdering p&aring; Google i bransjen &mdash; 5,0 stjerner.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Totalpris f&oslash;r du bestemmer deg</h4><p>Tydelig avtale med priser, vilk&aring;r og garantier &mdash; ingen skjulte kostnader.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Faste priser &mdash; totalpris f&oslash;r du bestemmer deg</h4><p>Tydelig avtale med priser, vilk&aring;r og garantier &mdash; ingen skjulte kostnader.</p></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>&Eacute;n fast kontaktperson</h4><p>Du forholder deg til samme badstuekspert gjennom hele prosjektet.</p></div></li>
         </ul>
       </div>
@@ -387,7 +398,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
     <div class="darkband reveal">
       <span class="eyebrow">&mdash; Sommerpakken &mdash;</span>
       <h2 class="h-lg">Akkurat n&aring;: kaldkulp p&aring; kj&oslash;pet n&aring;r du bestiller badstu</h2>
-      <p>Bestiller du badstu f&oslash;r 31. juli, legger vi Kaldkulp Pro 100 med elektrisk pumpe (verdi <s>6&nbsp;399 kr</s>) i leveransen &mdash; helt uten ekstra kostnad. Varme og kulde, slik det skal v&aelig;re.</p>
+      <p>Bestiller du badstu f&oslash;r 31. juli, legger vi Kaldkulp Pro 100 med elektrisk pumpe (verdi <s>6&nbsp;399 kr</s>) i leveransen &mdash; helt uten ekstra kostnad. Glovarm badstu, iskaldt vann &mdash; slik det skal v&aelig;re.</p>
       <div class="codebox"><b>Sommerpakken</b> <span class="hl">&rarr; kaldkulp verdi 6&nbsp;399 kr &middot; fri frakt &middot; minst 24 mnd garanti</span></div>
       <div style="margin-top:26px"><a href="#top" class="cta lg jump"><span class="t">F&aring; gratis badstue-plan<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></a></div>
       <p class="micro">Gjelder bestillinger t.o.m. 31. juli &middot; kan ikke kombineres med andre avtaler</p>
@@ -399,13 +410,13 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 <section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="center" style="max-width:560px;margin:0 auto 32px">
-      <span class="eyebrow">Alt du f&aring;r &mdash; helt gratis</span>
-      <h2 class="h-lg" style="margin-top:12px">Hva f&aring;r du n&aring;r du legger igjen nummeret?</h2>
+      <span class="eyebrow">Badstue-plan + sommerpakken</span>
+      <h2 class="h-lg" style="margin-top:12px">Alt dette f&aring;r du &mdash; helt gratis</h2>
     </div>
     <div class="inc-card reveal">
       <div class="body">
         <ul class="inc-list">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>Komplett badstue-plan</b> &mdash; 3 modeller anbefalt for akkurat ditt behov</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>Komplett badstue-plan</b> &mdash; 3 modeller anbefalt for akkurat ditt behov, vedfyrt eller elektrisk</span></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Totalpris levert til din adresse &mdash; ingen skjulte kostnader</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Sjekkliste for fundament og str&oslash;m &mdash; s&aring; du vet at alt er klart</li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Gratis badstukonsultasjon med en badstuekspert &mdash; telefon eller video</li>
@@ -415,7 +426,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
           <span class="ord">Verdi for deg: <s>6&nbsp;399 kr+</s></span>
           <span class="now">Gratis <small>&middot; helt uforpliktende</small></span>
         </div>
-        <p style="font-size:0.8rem;color:var(--muted);margin-top:14px">Du f&aring;r planen p&aring; e-post &mdash; som regel samme dag. Ingen bindinger, ingen mas.</p>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:14px">Planen kommer p&aring; e-post &mdash; som regel samme dag. Ingen bindinger, ingen mas.</p>
       </div>
       <div class="pic"><img src="https://badstugutta.no/cdn/shop/files/Hils_1_9549d2f3-9f94-4114-864d-6d22fc421977.jpg?v=1758024818&amp;width=1070" alt="Kunder som nyter badstuen sin fra Badstugutta"></div>
     </div>
@@ -443,7 +454,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
         <span class="eyebrow">Trygt fra id&eacute; til ferdig badstue</span>
         <h2 class="h-lg" style="margin:12px 0 22px">Badstu-dr&oslash;mmen, i trygge hender</h2>
         <ul class="feat">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Autorisert forhandler av de beste badstumerkene</h4></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Autorisert forhandler av de beste badstu- og saunamerkene</h4></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>300+ prosjekter levert siden 2024</h4></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Minst 24 m&aring;neders garanti</h4></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Delbetaling med Klarna, om du vil</h4></div></li>
@@ -459,7 +470,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
     <div class="center reveal" style="max-width:640px;margin:0 auto">
       <span class="eyebrow">Hvem passer det for?</span>
       <h2 class="h-lg" style="margin:12px 0 10px">Dette er for deg som&hellip;</h2>
-      <p class="lede" style="margin:0 auto 28px">Badstuene v&aring;re st&aring;r p&aring; hytter, i hager og ved sj&oslash;en over hele Norge &mdash; det passer perfekt om du:</p>
+      <p class="lede" style="margin:0 auto 28px">Badstuene v&aring;re st&aring;r utend&oslash;rs p&aring; hytter, i hager og ved sj&oslash;en over hele Norge &mdash; det passer perfekt om du:</p>
     </div>
     <ul class="feat reveal" style="max-width:560px;margin:0 auto;text-align:left">
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Har hytte eller hage med plass til badstu</h4></div></li>
@@ -591,7 +602,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
       </ul>
       <div class="fmsg" id="formMsgModal">Takk! Planen er p&aring; vei &mdash; vi ringer deg innen &eacute;n virkedag. Vil du velge tidspunkt selv? <a href="https://calendly.com/mattis-tss/gratis-badstukonsultasjon" target="_blank" rel="noopener">Book badstukonsultasjonen direkte her.</a></div>
       <form id="leadFormModal" novalidate>
-        <div class="field"><label for="m_name">Fornavn og etternavn</label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Navnet ditt" required></div></div>
+        <div class="field"><label for="m_name">Fornavn og etternavn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Navnet ditt" required></div></div>
         <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="m_phone" name="phone" placeholder="S&aring; vi kan ringe deg om planen" required></div></div>
         <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
         <input type="hidden" name="interest" value="Popup — Badstue-plan + sommerpakken">
@@ -604,7 +615,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 
 <script>
 /* ===== CONFIG — bytt disse før publisering ===== */
-var WEBHOOK_URL   ='';   /* TODO: Make-webhook for Badstugutta-leads */
+var WEBHOOK_URL   ='https://hook.eu1.make.com/k26fw4n3gsmstter9fqd4rseskfw9npt';   /* Make «Badstugutta LP leads» (scenario 6554541) → klientens CRM-sheet, «Meta Leads»-fanen (1phda6aOiMIhh8yqvu…) */
 var BACKUP_ENDPOINT='';  /* TODO: valgfri backup-webhook */
 var THANK_YOU_URL ='';   /* TODO: takkeside-URL (tom = viser melding + Calendly-lenke på siden) */
 var CALENDLY_URL  ='https://calendly.com/mattis-tss/gratis-badstukonsultasjon';
@@ -654,9 +665,11 @@ function flushStoredLeads(){
 }
 function submitLead(form,msgEl,extraSource){
   if(!form.name.value||!form.phone.value||!form.email.value){form.reportValidity();return;}
-  sendLead({subject:'Ring ASAP — nytt Badstugutta-lead',lead_source:LEAD_SOURCE+(extraSource||''),name:form.name.value,phone:form.phone.value,email:form.email.value,zip:(form.zip?form.zip.value:''),interest:(form.interest?form.interest.value:'Badstue-plan'),page_url:location.href,user_agent:navigator.userAgent});
+  sendLead({subject:'Ring ASAP — nytt Badstugutta-lead',lead_source:LEAD_SOURCE+(extraSource||''),name:form.name.value,phone:form.phone.value,email:form.email.value,zip:(form.zip?form.zip.value:''),message:(form.message?form.message.value:''),interest:(form.interest?form.interest.value:'Badstue-plan'),page_url:location.href,user_agent:navigator.userAgent});
   try{sessionStorage.setItem('bg_lead_done','1');}catch(e){}
-  /* TODO: gtag('event','conversion',{send_to:'AW-XXXXXXXXXX/xxxxx'}) + fbq('track','SubmitApplication') her */
+  try{if(window.fbq){fbq('track','Lead');fbq('track','SubmitApplication');}}catch(e){}
+  /* Google Ads-konvertering: «Lead Kontaktskjema» (7606640395, primary, default 5 400 kr) */
+  try{if(window.gtag){gtag('event','conversion',{send_to:'AW-11408967890/oemjCIu-kKscENKRnMAq'});}}catch(e){}
   if(msgEl)msgEl.style.display='block';
   if(THANK_YOU_URL){setTimeout(function(){window.location.href=THANK_YOU_URL;},650);}
   else{form.style.display='none';}
