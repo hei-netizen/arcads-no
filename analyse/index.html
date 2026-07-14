@@ -262,6 +262,13 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
 </style>
+<!-- Meta Pixel (Pixel - Arcads) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1573565776638708');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1573565776638708&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -625,6 +632,7 @@ function submitLead(f,msgEl,extraSource){
   if(!f.name.value||!f.phone.value||!f.email.value||(f.budget&&!f.budget.value)){f.reportValidity();return;}
   var p={subject:'Nytt lead — Arcads LP',lead_source:LEAD_SOURCE+(extraSource||''),name:f.name.value,phone:f.phone.value,email:f.email.value,budget:(f.budget?f.budget.value:''),page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
+  try{if(window.fbq)fbq('track','Lead',{content_name:p.lead_source});}catch(e){}
   try{sessionStorage.setItem('arcads_lead_done','1');}catch(e){}
   if(msgEl)msgEl.style.display='block';
   f.reset();
@@ -660,6 +668,7 @@ Cal.config.forwardQueryParams = true;
   });
 
   Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":true,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#00a25a"}}});
+  Cal.ns["30min"]("on", {action:"bookingSuccessful", callback: function(){ try{ if(window.fbq) fbq('track','Schedule',{content_name:'cal-30min'}); }catch(e){} }});
 </script>
 <!-- Cal inline embed code ends -->
 
