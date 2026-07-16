@@ -16,7 +16,7 @@
        300+ prosjekter, 5,0 på Google (60+).
      TODO før publisering:
        1) Bytt PLASSHOLDER-tilbud (strip, hero-offer, darkband, inc-card, FAQ, popup)
-       2) ✅ GJORT 14.07.2026: Make-webhook koblet (scenario 6554541 → klientens CRM-sheet, «Meta Leads»-fanen; IKKE Telegram — fjernet på Victors beskjed). Gjenstår kun: evt. takkeside-URL (THANK_YOU_URL)
+       2) ✅ GJORT 16.07.2026: Dobbel lead-levering — PRIMÆR n8n (n8n.badstugutta.no/webhook/dinbadstue-lead) + BACKUP Make (scenario 6554541 → klientens CRM-sheet, «Meta Leads»-fanen; IKKE Telegram). Begge fyrer på hvert lead. Takkeside satt: dinbadstue.badstugutta.no/takk
        3) ✅ GJORT 14.07.2026: Meta Pixel inne (init+PageView + Lead/SubmitApplication ved submit, verifisert headless).
           ✅ GJORT 14.07.2026: gtag AW-11408967890 + konvertering ved submit → «Lead Kontaktskjema» (7606640395, 5 400 kr)
      Anmeldelser: ekte, ordrett fra Loox-widgeten på badstugutta.no (2026-07-10), merket «Bekreftet kjøp».
@@ -615,9 +615,9 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 
 <script>
 /* ===== CONFIG — bytt disse før publisering ===== */
-var WEBHOOK_URL   ='https://hook.eu1.make.com/k26fw4n3gsmstter9fqd4rseskfw9npt';   /* Make «Badstugutta LP leads» (scenario 6554541) → klientens CRM-sheet, «Meta Leads»-fanen (1phda6aOiMIhh8yqvu…) */
-var BACKUP_ENDPOINT='';  /* TODO: valgfri backup-webhook */
-var THANK_YOU_URL ='';   /* TODO: takkeside-URL (tom = viser melding + Calendly-lenke på siden) */
+var WEBHOOK_URL   ='https://n8n.badstugutta.no/webhook/dinbadstue-lead';   /* PRIMÆR: n8n (Badstugutta selvhostet) */
+var BACKUP_ENDPOINT='https://hook.eu1.make.com/k26fw4n3gsmstter9fqd4rseskfw9npt';  /* BACKUP: Make «Badstugutta LP leads» (scenario 6554541, hook 3388858) → klientens CRM-sheet, «Meta Leads»-fanen (1phda6aOiMIhh8yqvu…). Har retry via flushStoredLeads. Begge webhooks fyrer på hvert lead. */
+var THANK_YOU_URL ='https://arcads.no/badstugutta/takk/';   /* redirect ~650ms etter submit; sendBeacon/keepalive sikrer at begge webhooks fullfører før navigasjon */
 var CALENDLY_URL  ='https://calendly.com/mattis-tss/gratis-badstukonsultasjon';
 var LEAD_SOURCE   ='badstugutta-froyd-lp';
 
@@ -667,9 +667,8 @@ function submitLead(form,msgEl,extraSource){
   if(!form.name.value||!form.phone.value||!form.email.value){form.reportValidity();return;}
   sendLead({subject:'Ring ASAP — nytt Badstugutta-lead',lead_source:LEAD_SOURCE+(extraSource||''),name:form.name.value,phone:form.phone.value,email:form.email.value,zip:(form.zip?form.zip.value:''),message:(form.message?form.message.value:''),interest:(form.interest?form.interest.value:'Badstue-plan'),page_url:location.href,user_agent:navigator.userAgent});
   try{sessionStorage.setItem('bg_lead_done','1');}catch(e){}
-  try{if(window.fbq){fbq('track','Lead');fbq('track','SubmitApplication');}}catch(e){}
-  /* Google Ads-konvertering: «Lead Kontaktskjema» (7606640395, primary, default 5 400 kr) */
-  try{if(window.gtag){gtag('event','conversion',{send_to:'AW-11408967890/oemjCIu-kKscENKRnMAq'});}}catch(e){}
+  /* Konverterings-events fyrer nå på takkesiden /takk (Meta Lead+SubmitApplication + Google Ads «Lead Kontaktskjema»),
+     IKKE her — for å unngå dobbelttelling. Webhooks (n8n+Make) fyrer fortsatt her siden skjemadataene kun finnes her. */
   if(msgEl)msgEl.style.display='block';
   if(THANK_YOU_URL){setTimeout(function(){window.location.href=THANK_YOU_URL;},650);}
   else{form.style.display='none';}

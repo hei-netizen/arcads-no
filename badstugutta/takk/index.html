@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Tusen takk! · Badstugutta</title>
+<!-- ============================================================
+     BADSTUGUTTA — TAKKESIDE for dinbadstue-funnelen
+     Rolle: siden brukeren rediroutes til etter skjema-innsending (THANK_YOU_URL).
+     Sporing fyrer HER (ikke lenger på submit) — «event snippet på takkeside»-mønsteret:
+       • Meta Pixel 1383226895916991 («BG - Shopify/config»): PageView + Lead + SubmitApplication
+       • Google Ads AW-11408967890: konvertering «Lead Kontaktskjema» (label oemjCIu-kKscENKRnMAq)
+     Leads-data (n8n + Make) sendes FORTSATT på submit på selve LP-en (skjemadata finnes bare der).
+     Fyrer én gang per økt (sessionStorage-guard) for å unngå dobbelttelling ved refresh.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) — Badstugutta -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11408967890"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11408967890');</script>
+
+<!-- Meta Pixel — Badstugutta (dataset 1383226895916991 = «BG - Shopify/config») -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1383226895916991');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1383226895916991&amp;ev=PageView&amp;noscript=1"/></noscript>
+
+<!-- ===== KONVERTERINGS-EVENTS (fyrer én gang per økt) ===== -->
+<script>
+(function(){
+  try{ if(sessionStorage.getItem('bg_takk_fired')==='1') return; }catch(e){}
+  try{
+    if(window.fbq){ fbq('track','Lead'); fbq('track','SubmitApplication'); }
+  }catch(e){}
+  try{
+    if(window.gtag){ gtag('event','conversion',{send_to:'AW-11408967890/oemjCIu-kKscENKRnMAq'}); }
+  }catch(e){}
+  try{ sessionStorage.setItem('bg_takk_fired','1'); }catch(e){}
+})();
+</script>
+<style>
+:root{
+  --cream:#F6F4F0; --sand:#FBFAF7; --white:#fff;
+  --ink:#12293D; --ink2:#1C3A55; --muted:#55677A; --line:#E5E1D8;
+  --clay:#0A395E; --clay-deep:#072A47; --clay-tint:#EDF3F8;
+  --gold-acc:#B98A55; --gold-deep:#8F6531; --gold:#C8A35B;
+  --mont:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --pill:999px; --r:18px;
+  --sh:0 24px 54px -32px rgba(7,42,71,.42);
+  --sh-sm:0 14px 30px -22px rgba(7,42,71,.32);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--mont);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.topbar{text-align:center;padding:18px 16px 12px}
+.topbar .wordmark{font-size:1.5rem;letter-spacing:.06em;color:var(--clay);line-height:1}
+.topbar .wordmark b{font-weight:800}.topbar .wordmark span{font-weight:300}
+.topbar .rate{display:flex;align-items:center;justify-content:center;gap:7px;font-size:0.9rem;font-weight:600;color:var(--ink);margin-top:8px}
+.topbar .stars{color:var(--gold);letter-spacing:1px}
+.topbar .rate small{color:var(--muted);font-weight:500}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px 20px 48px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:24px;box-shadow:var(--sh);max-width:560px;width:100%;padding:44px 40px;text-align:center}
+.tick{width:78px;height:78px;border-radius:50%;background:var(--clay);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;box-shadow:var(--sh-sm)}
+.tick svg{width:38px;height:38px;stroke:#fff}
+h1{font-size:clamp(1.9rem,5vw,2.5rem);font-weight:800;letter-spacing:-0.02em;line-height:1.05;margin-bottom:12px}
+.lede{font-size:1.04rem;color:var(--muted);max-width:42ch;margin:0 auto 26px}
+.lede b{color:var(--ink2);font-weight:700}
+.steps{list-style:none;display:grid;gap:12px;text-align:left;max-width:400px;margin:0 auto 28px}
+.steps li{display:flex;align-items:flex-start;gap:12px;font-size:0.97rem;font-weight:500;color:var(--ink2)}
+.steps .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--clay-tint);color:var(--clay-deep);font-weight:800;font-size:0.85rem;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.gift{background:var(--clay-tint);border:1px dashed var(--gold-acc);border-radius:14px;padding:15px 18px;font-size:0.92rem;font-weight:600;color:var(--clay-deep);margin:0 auto 28px;max-width:420px}
+.gift b{color:var(--gold-deep)}
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--clay);color:#fff;border:0;cursor:pointer;border-radius:var(--pill);padding:16px 40px;line-height:1.15;transition:.2s;box-shadow:0 16px 30px -18px rgba(7,42,71,.5)}
+.cta:hover{background:var(--clay-deep);transform:translateY(-2px)}
+.cta .t{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.04rem}
+.cta .t .arw{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center}
+.cta .t .arw svg{width:13px;height:13px;stroke:#fff}
+.cta .sub{font-size:0.74rem;font-weight:500;opacity:.85}
+.phone{margin-top:20px;font-size:0.92rem;color:var(--muted)}
+.phone a{color:var(--clay-deep);font-weight:700}
+.foot{text-align:center;padding:22px 16px 30px;font-size:0.82rem;color:var(--muted)}
+.foot a{color:var(--clay-deep);font-weight:600}
+@media(max-width:480px){.card{padding:34px 24px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="wordmark"><b>BADSTU</b><span>GUTTA</span></span>
+  <div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5,0 <small>(60+ anmeldelser p&aring; Google)</small></div>
+</div>
+
+<main class="main">
+  <div class="card">
+    <div class="tick">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h1>Tusen takk!</h1>
+    <p class="lede">Vi har mottatt henvendelsen din. En <b>badstuekspert ringer deg innen &eacute;n virkedag</b> med badstue-planen din.</p>
+
+    <ul class="steps">
+      <li><span class="n">1</span><span>Vi setter sammen 3 anbefalte modeller for akkurat ditt behov &mdash; med totalpris levert.</span></li>
+      <li><span class="n">2</span><span>Du f&aring;r en hyggelig, uforpliktende prat &mdash; p&aring; telefon, video eller e-post.</span></li>
+      <li><span class="n">3</span><span>Du bestemmer i ditt eget tempo. Ingen binding, ingen mas.</span></li>
+    </ul>
+
+    <div class="gift"><b>Sommerpakken er reservert til deg:</b> Kaldkulp Pro 100 (verdi 6&nbsp;399 kr) p&aring; kj&oslash;pet ved bestilling f&oslash;r 31. juli.</div>
+
+    <a href="https://calendly.com/mattis-tss/gratis-badstukonsultasjon" target="_blank" rel="noopener" class="cta">
+      <span class="t">Velg tidspunkt selv<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span>
+      <span class="sub">Book badstukonsultasjonen n&aring;r det passer deg</span>
+    </a>
+
+    <p class="phone">Vil du heller ringe med det samme? <a href="tel:+4722222522">22 22 25 22</a></p>
+  </div>
+</main>
+
+<div class="foot">
+  &copy; 2026 Badstugutta &mdash; Norsk badstuleverand&oslash;r &middot; <a href="https://badstugutta.no" target="_blank" rel="noopener">badstugutta.no</a>
+</div>
+
+</body>
+</html>
