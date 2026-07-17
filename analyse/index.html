@@ -307,12 +307,28 @@ fbq('track','PageView');
 
       <div class="hero-form">
         <div class="formcard" id="book">
-          <div class="fhead"><b>Book en gratis analyse</b><span>Velg et tidspunkt under &mdash; 30 minutter med Victor, uforpliktende.</span></div>
-          <!-- cal.com inline embed -->
-          <div class="calwrap" id="my-cal-inline-30min"></div>
-          <div class="fine">
-            <span>Vi deler aldri detaljene dine med noen andre.</span>
-            <span style="font-size:0.71rem">Du velger tidspunktet &middot; analysen er din uansett.</span>
+          <!-- STEG 1: lead-skjema -->
+          <div id="leadStep">
+            <div class="fhead"><b>Få en gratis analyse</b><span>Fyll ut, så tar Victor kontakt &mdash; eller book tid med en gang etterpå.</span></div>
+            <div class="fmsg" id="formMsg">Takk! Du kan booke tid med en gang under.</div>
+            <form id="leadForm" novalidate>
+              <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div></div>
+              <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" required></div></div>
+              <div class="field"><label for="h_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="h_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div></div>
+              <button type="submit" class="cta"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
+            </form>
+            <div class="fine">
+              <span>Vi deler aldri detaljene dine med noen andre.</span>
+              <span style="font-size:0.71rem">Analysen er din uansett &middot; ingen binding.</span>
+            </div>
+          </div>
+          <!-- STEG 2: booking (avsløres etter at leaden er sendt) -->
+          <div id="bookStep" style="display:none">
+            <div class="fhead"><b id="bookThanks">Takk!</b><span>Vil du sette av tid med en gang? Velg et tidspunkt &mdash; 30 minutter med Victor.</span></div>
+            <!-- cal.com inline embed (mountes av arcadsInitCal etter lead) -->
+            <div class="calwrap" id="my-cal-inline-30min"></div>
+            <div class="fine"><span>Victor tar uansett kontakt &mdash; bookingen er bare for å gå raskere.</span></div>
           </div>
         </div>
       </div>
@@ -411,7 +427,7 @@ fbq('track','PageView');
       <h2 class="h-lg">Vi viser deg hvor pengene lekker. Gratis.</h2>
       <p>30 minutter med Victor. Vi går gjennom Google- og Meta-kontoen din og viser konkret hva vi ville gjort annerledes &mdash; analysen er din uansett.</p>
       <div class="codebox"><b>Gratis analyse</b> <span class="hl">&rarr; 30 minutter &middot; uforpliktende &middot; ingen binding</span></div>
-      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
       <p class="micro">100% resultatbasert &middot; du betaler først når vi leverer</p>
     </div>
   </div>
@@ -546,7 +562,7 @@ fbq('track','PageView');
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Bruker 25 000+ kr/mnd på annonser &mdash; eller er klar for det</h4></div></li>
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vil måles på bunnlinje &mdash; ikke rapporter</h4></div></li>
     </ul>
-    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#book" class="cta jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#book" class="cta jump"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
   </div>
 </section>
 
@@ -572,7 +588,7 @@ fbq('track','PageView');
   <div class="wrap center reveal">
     <span class="eyebrow">Gratis &amp; uforpliktende</span>
     <h2 class="h-lg" style="margin:12px 0 24px">Klar for en større bunnlinje?</h2>
-    <a href="#book" class="cta lg jump"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
+    <a href="#book" class="cta lg jump"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
     <p style="font-size:0.86rem;color:var(--muted);margin-top:16px">Foretrekker du e-post? <a href="mailto:victor@arcads.no" style="color:var(--accent-deep);font-weight:600">victor@arcads.no</a></p>
   </div>
 </section>
@@ -604,7 +620,7 @@ fbq('track','PageView');
         <div class="field"><label for="m_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Fornavn og etternavn" required></div></div>
         <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" required></div></div>
         <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
-        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t">Book min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
+        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
         <p style="font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center">Vi deler aldri detaljene dine med noen andre.</p>
       </form>
     </div>
@@ -627,31 +643,47 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 /* ===== lead submit → Make (+ on-device backup) ===== */
 function postTo(url,obj){if(!url)return;var b=new URLSearchParams();for(var k in obj){if(obj.hasOwnProperty(k)&&k.charAt(0)!=='_')b.append(k,obj[k]);}try{if(navigator.sendBeacon&&navigator.sendBeacon(url,b))return;}catch(e){}try{fetch(url,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()});}catch(e){}}
 function storeLead(o){try{var a=JSON.parse(localStorage.getItem('arcads_leads')||'[]');a.push(o);localStorage.setItem('arcads_leads',JSON.stringify(a.slice(-50)));}catch(e){}}
-function submitLead(f,msgEl,extraSource){
+/* Steg 2: vis cal.com-bookingen i hero-kortet ETTER at leaden er sendt */
+function revealBooking(name){
+  var lead=document.getElementById('leadStep');
+  var book=document.getElementById('bookStep');
+  if(!book)return;
+  if(lead)lead.style.display='none';
+  book.style.display='block';
+  var first=(name||'').trim().split(/\s+/)[0];
+  var th=document.getElementById('bookThanks');
+  if(th)th.textContent=first?('Takk, '+first+'!'):'Takk!';
+  if(window.arcadsInitCal)window.arcadsInitCal();
+}
+function submitLead(f,msgEl,extraSource,onDone){
   if(f.company&&f.company.value){if(msgEl)msgEl.style.display='block';f.reset();return;} /* honeypot */
   if(!f.name.value||!f.phone.value||!f.email.value||(f.budget&&!f.budget.value)){f.reportValidity();return;}
-  var p={subject:'Nytt lead — Arcads LP',lead_source:LEAD_SOURCE+(extraSource||''),name:f.name.value,phone:f.phone.value,email:f.email.value,budget:(f.budget?f.budget.value:''),page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
+  var nameVal=f.name.value;
+  var p={subject:'Nytt lead — Arcads LP',lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,budget:(f.budget?f.budget.value:''),page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
   try{if(window.fbq)fbq('track','Lead',{content_name:p.lead_source});}catch(e){}
   try{sessionStorage.setItem('arcads_lead_done','1');}catch(e){}
   if(msgEl)msgEl.style.display='block';
   f.reset();
+  if(typeof onDone==='function')onDone(nameVal);
 }
-function bindForm(id,msgId,src){var f=document.getElementById(id);if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();submitLead(e.target,document.getElementById(msgId),src);});}
-bindForm('leadForm','formMsg','');
-bindForm('leadFormModal','formMsgModal','-popup');
+function bindForm(id,msgId,src,onDone){var f=document.getElementById(id);if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();submitLead(e.target,document.getElementById(msgId),src,onDone);});}
 
 /* ---- timed popup (20s, én gang per økt, ikke ved innsendt lead) ---- */
 var overlay=document.getElementById('popup');
+function closePopup(){if(!overlay)return;overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('arcads_popup_done','1');}catch(e){}}
 if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('arcads_popup_done')||sessionStorage.getItem('arcads_lead_done');}catch(e){return false;}};
   var openPopup=function(){if(popupSeen())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
-  var closePopup=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('arcads_popup_done','1');}catch(e){}};
   setTimeout(openPopup,20000);
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
 }
+
+/* Hero-skjema → avslør booking i samme kort. Popup-skjema → «Takk!», lukk popup, avslør booking i hero + scroll opp. */
+bindForm('leadForm','formMsg','',function(name){revealBooking(name);});
+bindForm('leadFormModal','formMsgModal','-popup',function(name){setTimeout(function(){closePopup();revealBooking(name);var b=document.getElementById('book');if(b)scrollToY(Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-10),500);},1100);});
 </script>
 
 <!-- Cal inline embed code begins -->
@@ -661,14 +693,19 @@ Cal("init", "30min", {origin:"https://app.cal.com"});
 Cal.config = Cal.config || {};
 Cal.config.forwardQueryParams = true;
 
-  Cal.ns["30min"]("inline", {
-    elementOrSelector:"#my-cal-inline-30min",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "arcads/30min",
-  });
-
   Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":true,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#00a25a"}}});
   Cal.ns["30min"]("on", {action:"bookingSuccessful", callback: function(){ try{ if(window.fbq) fbq('track','Schedule',{content_name:'cal-30min'}); }catch(e){} }});
+
+  /* Kalenderen mountes først når leaden er sendt (revealBooking → arcadsInitCal).
+     Da har containeren fått bredde/høyde, så embedden sizer riktig. */
+  window.arcadsInitCal = function(){
+    if(window.__arcadsCalMounted) return; window.__arcadsCalMounted = true;
+    Cal.ns["30min"]("inline", {
+      elementOrSelector:"#my-cal-inline-30min",
+      config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+      calLink: "arcads/30min",
+    });
+  };
 </script>
 <!-- Cal inline embed code ends -->
 
