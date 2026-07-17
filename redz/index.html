@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<title>Redz Tattoo Supply — Google Ads Audit | Arcads</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Helvetica Neue', sans-serif;
+    background: #0a0a0a;
+    color: #e5e7eb;
+    line-height: 1.5;
+  }
+
+  /* Slide container */
+  .slide {
+    width: 100vw;
+    height: 100vh;
+    min-height: 700px;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    page-break-after: always;
+    border-bottom: 1px solid #1a1a1a;
+    position: relative;
+    overflow: hidden;
+  }
+  .slide-num {
+    position: absolute;
+    bottom: 28px;
+    right: 40px;
+    color: #4b5563;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  .brand {
+    position: absolute;
+    bottom: 28px;
+    left: 80px;
+    color: #4b5563;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Typography */
+  h1 { font-size: 56px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  h2 { font-size: 38px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; }
+  h3 { font-size: 22px; font-weight: 600; color: #d1d5db; margin-bottom: 12px; }
+  .eyebrow { color: #00C96F; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 16px; }
+  .subtitle { color: #9ca3af; font-size: 18px; margin-top: 12px; max-width: 800px; }
+  .lead { font-size: 22px; color: #d1d5db; line-height: 1.5; max-width: 900px; }
+
+  /* Cover slide */
+  .cover {
+    background: radial-gradient(ellipse at top right, #0d2818 0%, #0a0a0a 60%);
+    justify-content: center;
+  }
+  .cover .meta {
+    color: #6b7280;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .cover h1 { font-size: 84px; max-width: 1100px; }
+  .cover .accent { color: #00C96F; }
+  .cover .footer {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    color: #6b7280;
+    font-size: 14px;
+  }
+
+  /* Section divider slide */
+  .section-divider {
+    background: linear-gradient(135deg, #0a0a0a 0%, #0d2818 100%);
+    justify-content: center;
+  }
+  .section-divider .num {
+    font-size: 200px;
+    font-weight: 900;
+    color: #00C96F;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    opacity: 0.95;
+  }
+  .section-divider h2 { font-size: 64px; margin-top: 16px; }
+
+  /* KPIs */
+  .grid { display: grid; gap: 20px; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+  .kpi {
+    background: #14171c;
+    border: 1px solid #1f242c;
+    border-radius: 14px;
+    padding: 24px;
+  }
+  .kpi .label { color: #9ca3af; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; font-weight: 600; }
+  .kpi .value { font-size: 40px; font-weight: 800; letter-spacing: -0.02em; line-height: 1; }
+  .kpi .sub { color: #6b7280; font-size: 13px; margin-top: 10px; }
+
+  .green { color: #00C96F; }
+  .yellow { color: #fbbf24; }
+  .red { color: #ef4444; }
+  .blue { color: #60a5fa; }
+  .muted { color: #6b7280; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #1f242c; }
+  th { background: #0f1318; color: #9ca3af; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: none; }
+
+  /* Cards */
+  .card { background: #14171c; border: 1px solid #1f242c; border-radius: 14px; padding: 24px; }
+  .card-soft { background: #0f1318; border: 1px solid #1a1f26; border-radius: 12px; padding: 20px; }
+
+  /* Pills */
+  .pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .pill.green { background: rgba(0, 201, 111, 0.15); color: #00C96F; }
+  .pill.red { background: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+  .pill.yellow { background: rgba(251, 191, 36, 0.15); color: #fcd34d; }
+  .pill.gray { background: #1f242c; color: #9ca3af; }
+
+  /* Insights & callouts */
+  .insight {
+    background: linear-gradient(135deg, #14171c, #0f1f15);
+    border: 1px solid #1f242c;
+    border-left: 4px solid #00C96F;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-top: 16px;
+  }
+  .insight.red { border-left-color: #ef4444; background: linear-gradient(135deg, #14171c, #1f1414); }
+  .insight.yellow { border-left-color: #fbbf24; background: linear-gradient(135deg, #14171c, #1f1d14); }
+  .insight strong { color: #fff; }
+
+  /* Issue cards */
+  .issue {
+    background: #14171c;
+    border: 1px solid #1f242c;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    gap: 20px;
+  }
+  .issue .icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .issue.crit .icon { background: rgba(239, 68, 68, 0.15); }
+  .issue.warn .icon { background: rgba(251, 191, 36, 0.15); }
+  .issue.ok .icon { background: rgba(0, 201, 111, 0.15); }
+  .issue .content h3 { font-size: 18px; margin-bottom: 6px; color: #fff; }
+  .issue .content p { color: #9ca3af; font-size: 14px; line-height: 1.55; }
+  .issue .content .stat { color: #fbbf24; font-weight: 600; }
+
+  /* Action list */
+  .action {
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 100px;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 24px;
+    background: #14171c;
+    border: 1px solid #1f242c;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+  .action .rank { font-size: 32px; font-weight: 800; color: #00C96F; }
+  .action h3 { font-size: 17px; color: #fff; margin-bottom: 4px; }
+  .action p { color: #9ca3af; font-size: 13px; }
+  .action .score { text-align: center; }
+  .action .score-val { font-size: 22px; font-weight: 700; color: #fff; }
+  .action .score-lbl { font-size: 10px; color: #6b7280; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* Bar chart */
+  .bar-row { display: grid; grid-template-columns: 200px 1fr 100px; gap: 16px; align-items: center; padding: 10px 0; }
+  .bar-track { background: #0f1318; border-radius: 8px; height: 32px; overflow: hidden; position: relative; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #00C96F, #00a85d); }
+  .bar-fill.yellow { background: linear-gradient(90deg, #fbbf24, #d97706); }
+  .bar-fill.red { background: linear-gradient(90deg, #ef4444, #b91c1c); }
+  .bar-label { color: #d1d5db; font-size: 14px; }
+  .bar-value { text-align: right; color: #fff; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* Print */
+  @media print {
+    .slide { page-break-after: always; height: 100vh; min-height: auto; }
+    body { background: #0a0a0a; }
+  }
+
+  /* Helper */
+  .mt-4 { margin-top: 16px; } .mt-6 { margin-top: 24px; } .mt-8 { margin-top: 32px; }
+  .header-row { display: flex; justify-content: space-between; align-items: end; margin-bottom: 32px; }
+  .title-block { flex: 1; }
+  .header-meta { color: #6b7280; font-size: 13px; text-align: right; }
+</style>
+</head>
+<body>
+
+<!-- ============ SLIDE 1: COVER ============ -->
+<div class="slide cover">
+  <div class="meta">Google Ads Audit · Mai 2026</div>
+  <h1>Redz Tattoo Supply<br><span class="accent">på Google Ads</span></h1>
+  <div class="subtitle mt-6">En gjennomgang av kontostruktur, ytelse og hvor vi mener det ligger størst potensial for vekst.</div>
+  <div class="footer">
+    <div>
+      <div style="color:#9ca3af;font-weight:600;margin-bottom:4px;">Presentert av Arcads</div>
+      <div>Victor Skretteberg · Jona Helgen</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="margin-bottom:4px;">9. mai 2026</div>
+      <div>Konto-ID 414-863-4386</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SLIDE 2: AGENDA ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Agenda</div>
+      <h2>Hva vi går gjennom</h2>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt-6" style="gap:20px;">
+    <div class="card">
+      <div style="font-size:32px;font-weight:800;color:#00C96F;line-height:1;margin-bottom:12px;">01</div>
+      <h3>Status og topplinje</h3>
+      <p style="color:#9ca3af;font-size:14px;">Hvordan kontoen presterer på 30 dager — spend, konverteringer, ROAS og hvordan budsjettet fordeles.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:32px;font-weight:800;color:#00C96F;line-height:1;margin-bottom:12px;">02</div>
+      <h3>Hvor pengene faktisk går</h3>
+      <p style="color:#9ca3af;font-size:14px;">Brand vs. ikke-brand — den viktigste fordelingen i hele kontoen, og hvorfor det avgjør hvor inkrementell veksten kan komme fra.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:32px;font-weight:800;color:#00C96F;line-height:1;margin-bottom:12px;">03</div>
+      <h3>Strukturelle hull og muligheter</h3>
+      <p style="color:#9ca3af;font-size:14px;">Sporing, paused kampanjer, PMax-headroom, og hvor det ligger reell skalerings-potensial.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:32px;font-weight:800;color:#00C96F;line-height:1;margin-bottom:12px;">04</div>
+      <h3>Plan: Topp 5 prioriterte handlinger</h3>
+      <p style="color:#9ca3af;font-size:14px;">Konkret plan for de neste 30 dagene — hva vi gjør, hvorfor, og hvilken impact vi forventer.</p>
+    </div>
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">02</div>
+</div>
+
+<!-- ============ SLIDE 3: SECTION 1 ============ -->
+<div class="slide section-divider">
+  <div class="eyebrow">Del 1</div>
+  <div class="num">01</div>
+  <h2>Topplinjen<br><span style="color:#9ca3af;font-weight:500;">Slik ser kontoen ut akkurat nå</span></h2>
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">03</div>
+</div>
+
+<!-- ============ SLIDE 4: KPIs ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Siste 30 dager</div>
+      <h2>Kontoen leverer — på papiret</h2>
+      <div class="subtitle">På overflaten ser tallene veldig sterke ut. Men det er én ting vi må snakke om før vi kan stole på dem.</div>
+    </div>
+    <div class="header-meta">9. apr – 8. mai 2026<br>Kilde: Google Ads API</div>
+  </div>
+
+  <div class="grid grid-4 mt-8">
+    <div class="kpi">
+      <div class="label">Total spend</div>
+      <div class="value">11 065 <span style="font-size:18px;color:#9ca3af;">kr</span></div>
+      <div class="sub">~369 kr/dag</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Konverteringer</div>
+      <div class="value green">99,7</div>
+      <div class="sub">CPA: 111 kr</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Konv-verdi</div>
+      <div class="value">221 362 <span style="font-size:18px;color:#9ca3af;">kr</span></div>
+      <div class="sub">Rapportert i kontoen</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Blended ROAS</div>
+      <div class="value green">20,0x</div>
+      <div class="sub">7-dagers trend: 9,1x</div>
+    </div>
+  </div>
+
+  <div class="insight yellow mt-6">
+    <strong>⚠️ Forbehold:</strong> ROAS-tallet er kunstig høyt fordi mesteparten av konverteringene kommer fra <strong>brand-trafikk</strong> — folk som allerede søker etter "Redz" eller "tattooshop". Vi går nærmere inn på hvorfor dette er viktig på neste slide.
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">04</div>
+</div>
+
+<!-- ============ SLIDE 5: Spend distribution ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Hvor pengene går</div>
+      <h2>3 kampanjer står for 100% av spend</h2>
+      <div class="subtitle">Av 23 kampanjer i kontoen er det reelt sett bare tre som leverer trafikk. Resten har 0 kr spend siste 30 dager.</div>
+    </div>
+  </div>
+
+  <div class="card mt-8">
+    <div class="bar-row">
+      <div class="bar-label">PMax — Maskiner, INK & stensil</div>
+      <div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div>
+      <div class="bar-value">4 440 kr <span class="muted">(40%)</span></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Search — Brand</div>
+      <div class="bar-track"><div class="bar-fill yellow" style="width:68%;"></div></div>
+      <div class="bar-value">3 020 kr <span class="muted">(27%)</span></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">PMax — PMU + spirit</div>
+      <div class="bar-track"><div class="bar-fill" style="width:67%;"></div></div>
+      <div class="bar-value">3 001 kr <span class="muted">(27%)</span></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Search — Eget navn</div>
+      <div class="bar-track"><div class="bar-fill yellow" style="width:14%;"></div></div>
+      <div class="bar-value">604 kr <span class="muted">(5%)</span></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label muted">19 andre kampanjer (paused/inactive)</div>
+      <div class="bar-track"><div class="bar-fill red" style="width:1%;"></div></div>
+      <div class="bar-value muted">0 kr</div>
+    </div>
+  </div>
+
+  <div class="grid grid-3 mt-8">
+    <div class="card-soft">
+      <div class="label" style="color:#9ca3af;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:8px;">Brand Search</div>
+      <div style="font-size:24px;font-weight:700;">~33%</div>
+      <div style="color:#6b7280;font-size:13px;margin-top:4px;">av spend, men ~70% av all konv-verdi</div>
+    </div>
+    <div class="card-soft">
+      <div class="label" style="color:#9ca3af;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:8px;">PMax (begge)</div>
+      <div style="font-size:24px;font-weight:700;">~67%</div>
+      <div style="color:#6b7280;font-size:13px;margin-top:4px;">av spend, ROAS 9-10x</div>
+    </div>
+    <div class="card-soft">
+      <div class="label" style="color:#9ca3af;font-size:11px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:8px;">Ikke-brand Search</div>
+      <div style="font-size:24px;font-weight:700;" class="red">0%</div>
+      <div style="color:#6b7280;font-size:13px;margin-top:4px;">16 kampanjer kjører ikke</div>
+    </div>
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">05</div>
+</div>
+
+<!-- ============ SLIDE 6: SECTION 2 ============ -->
+<div class="slide section-divider">
+  <div class="eyebrow">Del 2</div>
+  <div class="num">02</div>
+  <h2>Brand-paradokset<br><span style="color:#9ca3af;font-weight:500;">Det viktigste vi fant</span></h2>
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">06</div>
+</div>
+
+<!-- ============ SLIDE 7: Brand search terms ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Søketermer på Brand-kampanjen</div>
+      <h2>Folk søker på dere — og dere kjøper klikket</h2>
+      <div class="subtitle">Topp 5 søketermer på Brand-kampanjen er alle direkte navnesøk. Dette er trafikk som svært sannsynlig hadde kommet inn organisk uansett.</div>
+    </div>
+  </div>
+
+  <div class="card mt-6">
+    <table>
+      <thead>
+        <tr>
+          <th>Søketerm</th>
+          <th class="num">Imp</th>
+          <th class="num">Klikk</th>
+          <th class="num">Spend</th>
+          <th class="num">Konv</th>
+          <th class="num">Konv-verdi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>redz tattoo</strong> <span class="pill green" style="margin-left:8px;">brand</span></td>
+          <td class="num">97</td>
+          <td class="num">76</td>
+          <td class="num">382 kr</td>
+          <td class="num">5,1</td>
+          <td class="num"><strong>11 340 kr</strong></td>
+        </tr>
+        <tr>
+          <td><strong>mokki tattoo</strong> <span class="pill green" style="margin-left:8px;">brand</span></td>
+          <td class="num">112</td>
+          <td class="num">67</td>
+          <td class="num">328 kr</td>
+          <td class="num">13,0</td>
+          <td class="num"><strong>25 761 kr</strong></td>
+        </tr>
+        <tr>
+          <td><strong>redz tattoo supply</strong> <span class="pill green" style="margin-left:8px;">brand</span></td>
+          <td class="num">51</td>
+          <td class="num">36</td>
+          <td class="num">216 kr</td>
+          <td class="num">9,0</td>
+          <td class="num"><strong>17 223 kr</strong></td>
+        </tr>
+        <tr>
+          <td><strong>redz</strong> <span class="pill green" style="margin-left:8px;">brand</span></td>
+          <td class="num">165</td>
+          <td class="num">116</td>
+          <td class="num">187 kr</td>
+          <td class="num">16,9</td>
+          <td class="num"><strong>23 377 kr</strong></td>
+        </tr>
+        <tr>
+          <td><strong>tattooshop</strong> <span class="pill green" style="margin-left:8px;">brand</span></td>
+          <td class="num">27</td>
+          <td class="num">16</td>
+          <td class="num">167 kr</td>
+          <td class="num">7,0</td>
+          <td class="num"><strong>16 752 kr</strong></td>
+        </tr>
+        <tr style="background:#0f1318;">
+          <td><strong style="color:#fbbf24;">Topp 5 totalt</strong></td>
+          <td class="num"><strong>452</strong></td>
+          <td class="num"><strong>311</strong></td>
+          <td class="num"><strong style="color:#fbbf24;">1 280 kr</strong></td>
+          <td class="num"><strong>51,0</strong></td>
+          <td class="num"><strong style="color:#00C96F;">94 453 kr</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <strong>Det vi anbefaler:</strong> Vi <strong>ikke</strong> pauser brand — den driver tross alt mye konverteringer i dag. I stedet <strong>setter vi et tak på brand-spend</strong> og bygger opp ikke-brand parallelt slik at andre kanaler gradvis tar over. Da unngår vi et brått fall mens vi får et mer realistisk og bærekraftig ROAS-bilde.
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">07</div>
+</div>
+
+<!-- ============ SLIDE 8: Brand IS problem ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Brand-kampanjens helse</div>
+      <h2>Dere får KUN 10% av eget brand-søk</h2>
+      <div class="subtitle">Selv om mye av brand-trafikken er kannibalisering av organisk, er det et eget problem at dere ikke "eier" feltet når noen faktisk er klare til å klikke betalt.</div>
+    </div>
+  </div>
+
+  <div class="grid grid-3 mt-8">
+    <div class="kpi">
+      <div class="label">Search Impression Share</div>
+      <div class="value red">10%</div>
+      <div class="sub">Dere vises på 1 av 10 brand-søk</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Tapt til budsjett</div>
+      <div class="value yellow">51%</div>
+      <div class="sub">For lite budsjett til å levere</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Tapt til rank</div>
+      <div class="value yellow">40%</div>
+      <div class="sub">Bud/relevans-utfordring</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt-8">
+    <div class="card">
+      <h3 class="red">Problemet</h3>
+      <p style="color:#9ca3af;font-size:15px;line-height:1.6;">
+        Dagsbudsjett på <strong style="color:#fff;">100 kr</strong> betyr at brand-kampanjen kveles tidlig på dagen. På toppen av det har konkurrenter sannsynligvis bud på "Redz" og "Mokki tattoo" — noe som driver opp CPC og spiser budsjett.
+      </p>
+    </div>
+    <div class="card">
+      <h3 class="green">Løsningen</h3>
+      <p style="color:#9ca3af;font-size:15px;line-height:1.6;">
+        <strong style="color:#fff;">Sett et tak på brand</strong> (f.eks. holde dagsbudsjett rundt 100-150 kr) slik at vi forsvarer eget navn uten å la brand kannibalisere hele budsjettet. <strong style="color:#fff;">Parallelt</strong> bygger vi opp ikke-brand så veksten kommer fra kategori- og produktsøk.
+      </p>
+    </div>
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">08</div>
+</div>
+
+<!-- ============ SLIDE 9: SECTION 3 ============ -->
+<div class="slide section-divider">
+  <div class="eyebrow">Del 3</div>
+  <div class="num">03</div>
+  <h2>Strukturelle hull<br><span style="color:#9ca3af;font-weight:500;">Hvor det ligger reell vekst</span></h2>
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">09</div>
+</div>
+
+<!-- ============ SLIDE 10: Issues ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Det vi fant</div>
+      <h2>Tre kritiske, fire verdt å fikse</h2>
+      <div class="subtitle">Sortert etter forventet impact. Vi tar de viktigste først.</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt-6" style="gap:16px;">
+    <div class="issue crit">
+      <div class="icon">🔴</div>
+      <div class="content">
+        <h3>Konverteringssporing er rotete</h3>
+        <p><span class="stat">29 Reaktion-handlinger + GA4 + lokale handlinger</span> er aktivert. Kun én er primær, og mange er ikke inkludert i conversions-metric. Dette gjør at Google Ads sannsynligvis optimerer mot feil signal.</p>
+      </div>
+    </div>
+    <div class="issue crit">
+      <div class="icon">🔴</div>
+      <div class="content">
+        <h3>PMax er rank-begrenset</h3>
+        <p>Begge PMax-kampanjer har <span class="stat">69-70% impressions tapt til rank</span>. Med 9-10x ROAS er dette klar skalerings-mulighet — vi gir slipp på volum vi kunne tatt.</p>
+      </div>
+    </div>
+    <div class="issue crit">
+      <div class="icon">🔴</div>
+      <div class="content">
+        <h3>16 Search-kampanjer kjører ikke</h3>
+        <p>Maskiner, INK, Blekk, PMU, Piercing, Stensil, Hansker — alle har <span class="stat">0 kr spend</span>. Ikke-brand search er hele veksten, men dere bruker den ikke i dag.</p>
+      </div>
+    </div>
+    <div class="issue warn">
+      <div class="icon">🟡</div>
+      <div class="content">
+        <h3>Brand-kannibalisering</h3>
+        <p>Top 5 søketermer er rene navnesøk som sannsynligvis kunne kommet organisk. <span class="stat">~70% av konv-verdien</span> hviler på dette — må valideres.</p>
+      </div>
+    </div>
+    <div class="issue warn">
+      <div class="icon">🟡</div>
+      <div class="content">
+        <h3>Generic keywords sløser</h3>
+        <p>Søkeordet <span class="stat">"tattoo" (QS 5)</span> får trafikk fra "tattoo piercing", "tattoo pen" — 0 conv. Mer aggressiv negative-strategi trengs på generic kwds.</p>
+      </div>
+    </div>
+    <div class="issue ok">
+      <div class="icon">🟢</div>
+      <div class="content">
+        <h3>Negatives er solid pleiet</h3>
+        <p><span class="stat">820 negatives</span> totalt, 409 i hver brand-kampanje. Bra grunnarbeid er gjort her — vi bygger videre på dette.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">10</div>
+</div>
+
+<!-- ============ SLIDE 11: PMax opportunity ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Vekstmulighet #1</div>
+      <h2>PMax kan skalere — men er kvelt</h2>
+      <div class="subtitle">Begge PMax-kampanjer leverer 9-10x ROAS. Men de mister 70% av impressions fordi bud/budsjett er for lavt.</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt-8">
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px;">
+        <h3 style="font-size:17px;">PMax — Maskiner, INK & stensil</h3>
+        <span class="pill green">9,4x ROAS</span>
+      </div>
+      <div class="bar-row" style="grid-template-columns:160px 1fr 60px;">
+        <div class="bar-label" style="font-size:13px;">Impressions vunnet</div>
+        <div class="bar-track" style="height:24px;"><div class="bar-fill" style="width:26%;"></div></div>
+        <div class="bar-value" style="font-size:13px;">26%</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:160px 1fr 60px;">
+        <div class="bar-label" style="font-size:13px;">Tapt til rank</div>
+        <div class="bar-track" style="height:24px;"><div class="bar-fill yellow" style="width:69%;"></div></div>
+        <div class="bar-value" style="font-size:13px;">69%</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:160px 1fr 60px;">
+        <div class="bar-label" style="font-size:13px;">Tapt til budsjett</div>
+        <div class="bar-track" style="height:24px;"><div class="bar-fill red" style="width:5%;"></div></div>
+        <div class="bar-value" style="font-size:13px;">5%</div>
+      </div>
+      <div class="card-soft mt-4" style="background:#0a1f15;border-color:#1a3320;">
+        <div style="font-size:13px;color:#00C96F;font-weight:600;margin-bottom:4px;">→ Forventet effekt</div>
+        <div style="font-size:14px;color:#d1d5db;">Justere tROAS-mål ned + øke budsjett kan doble volum med beholdt 5x+ ROAS.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:12px;">
+        <h3 style="font-size:17px;">PMax — PMU + spirit + redz</h3>
+        <span class="pill green">9,0x ROAS</span>
+      </div>
+      <div class="bar-row" style="grid-template-columns:160px 1fr 60px;">
+        <div class="bar-label" style="font-size:13px;">Impressions vunnet</div>
+        <div class="bar-track" style="height:24px;"><div class="bar-fill" style="width:19%;"></div></div>
+        <div class="bar-value" style="font-size:13px;">19%</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:160px 1fr 60px;">
+        <div class="bar-label" style="font-size:13px;">Tapt til rank</div>
+        <div class="bar-track" style="height:24px;"><div class="bar-fill yellow" style="width:70%;"></div></div>
+        <div class="bar-value" style="font-size:13px;">70%</div>
+      </div>
+      <div class="bar-row" style="grid-template-columns:160px 1fr 60px;">
+        <div class="bar-label" style="font-size:13px;">Tapt til budsjett</div>
+        <div class="bar-track" style="height:24px;"><div class="bar-fill red" style="width:11%;"></div></div>
+        <div class="bar-value" style="font-size:13px;">11%</div>
+      </div>
+      <div class="card-soft mt-4" style="background:#0a1f15;border-color:#1a3320;">
+        <div style="font-size:13px;color:#00C96F;font-weight:600;margin-bottom:4px;">→ Forventet effekt</div>
+        <div style="font-size:14px;color:#d1d5db;">Asset-refresh (15/5/5 maks) + audience signals + samme tROAS/budsjett-justering.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Konservativt estimat:</strong> Hvis vi løser opp PMax-strupingen kan vi <strong>skalere ikke-brand-spend fra ~250 kr/dag til 600-800 kr/dag</strong> med beholdt lønnsomhet. Dette er den raskeste veien til reell vekst i kontoen.
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">11</div>
+</div>
+
+<!-- ============ SLIDE 12: SECTION 4 ============ -->
+<div class="slide section-divider">
+  <div class="eyebrow">Del 4</div>
+  <div class="num">04</div>
+  <h2>Vår plan<br><span style="color:#9ca3af;font-weight:500;">De neste 30 dagene</span></h2>
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">12</div>
+</div>
+
+<!-- ============ SLIDE 13: Action plan ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Topp 5 prioriterte handlinger</div>
+      <h2>Hva vi gjør først</h2>
+      <div class="subtitle">Sortert etter impact / innsats. Vi anbefaler å ta dem i rekkefølge — sporing og brand-test må på plass før vi skalerer.</div>
+    </div>
+  </div>
+
+  <div class="mt-6">
+    <div class="action">
+      <div class="rank">1</div>
+      <div>
+        <h3>Auditér og rydd opp i konverteringssporingen</h3>
+        <p>Kartlegg hvilke Reaktion-handlinger som faktisk teller, sett kun ÉN primær per kampanjetype, ekskluder mikro-konverteringer. Dette må være på plass før Smart Bidding kan stoles på.</p>
+      </div>
+      <div class="score"><div class="score-val green">10/10</div><div class="score-lbl">Impact</div></div>
+      <div class="score"><div class="score-val yellow">5/10</div><div class="score-lbl">Innsats</div></div>
+    </div>
+
+    <div class="action">
+      <div class="rank">2</div>
+      <div>
+        <h3>Sett tak på brand-spend, flytt vekst til ikke-brand</h3>
+        <p>Lås brand-dagsbudsjett rundt 100-150 kr (forsvarer eget navn uten å sluke alt). Frigjort budsjett + nytt budsjett kanaliseres til ikke-brand Search og PMax-skalering, slik at andre kanaler gradvis tar over som primær driver.</p>
+      </div>
+      <div class="score"><div class="score-val green">9/10</div><div class="score-lbl">Impact</div></div>
+      <div class="score"><div class="score-val green">3/10</div><div class="score-lbl">Innsats</div></div>
+    </div>
+
+    <div class="action">
+      <div class="rank">3</div>
+      <div>
+        <h3>Reaktiver topp 3-4 ikke-brand Search-kampanjer</h3>
+        <p>Maskiner, Blekk, PMU og Patroner & nåler. Hver med tight ad groups, RSA fylt med 15/4 (maksimert), dynamic insertion på {KeyWord} og {LOCATION}, riktig negative-grunnlag.</p>
+      </div>
+      <div class="score"><div class="score-val green">9/10</div><div class="score-lbl">Impact</div></div>
+      <div class="score"><div class="score-val red">8/10</div><div class="score-lbl">Innsats</div></div>
+    </div>
+
+    <div class="action">
+      <div class="rank">4</div>
+      <div>
+        <h3>Justér PMax tROAS og budsjett</h3>
+        <p>Senk tROAS-målet på begge PMax-kampanjer for å hente inn impressions tapt til rank. Hev daglig budsjett gradvis. Mål: doble volum, beholde 5x+ ROAS.</p>
+      </div>
+      <div class="score"><div class="score-val green">8/10</div><div class="score-lbl">Impact</div></div>
+      <div class="score"><div class="score-val green">3/10</div><div class="score-lbl">Innsats</div></div>
+    </div>
+
+    <div class="action">
+      <div class="rank">5</div>
+      <div>
+        <h3>Bygg ny RSA for Brand + asset-oppdatering på PMax</h3>
+        <p>Maks ut 15/4 på brand-RSA med USPer fra siden ("Siden 1999", merker, fysisk butikk Oslo). PMax: maks 15/5/5 + nye bilder + audience signals.</p>
+      </div>
+      <div class="score"><div class="score-val yellow">7/10</div><div class="score-lbl">Impact</div></div>
+      <div class="score"><div class="score-val yellow">4/10</div><div class="score-lbl">Innsats</div></div>
+    </div>
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">13</div>
+</div>
+
+<!-- ============ SLIDE 14: Expected impact ============ -->
+<div class="slide">
+  <div class="header-row">
+    <div class="title-block">
+      <div class="eyebrow">Realistisk forventning</div>
+      <h2>Hvor vi tror dere kan være om 60 dager</h2>
+      <div class="subtitle">Konservative tall basert på hva vi ser i kontoen. Disse forutsetter at sporing fikses og at PMax får skalere.</div>
+    </div>
+  </div>
+
+  <div class="grid grid-3 mt-8">
+    <div class="kpi">
+      <div class="label">I dag</div>
+      <div class="value">11k kr</div>
+      <div class="sub" style="margin-top:8px;color:#9ca3af;">Månedlig spend (30d)</div>
+      <div class="sub">~99 konv · 20x rapportert ROAS</div>
+    </div>
+    <div class="kpi" style="border-color:#1a3320;background:#0a1f15;">
+      <div class="label" style="color:#00C96F;">Om 60 dager (mål)</div>
+      <div class="value green">25-30k kr</div>
+      <div class="sub" style="margin-top:8px;color:#9ca3af;">Månedlig spend</div>
+      <div class="sub">5-7x ROAS reell, ~2x volum på ikke-brand</div>
+    </div>
+    <div class="kpi">
+      <div class="label">Drivere</div>
+      <div class="value" style="font-size:18px;line-height:1.4;color:#d1d5db;">PMax skalert<br>Ikke-brand reaktivert<br>Sporing fikset</div>
+    </div>
+  </div>
+
+  <div class="grid grid-2 mt-8">
+    <div class="card">
+      <h3 class="green">Det vi forventer går opp</h3>
+      <ul style="color:#9ca3af;font-size:15px;line-height:1.9;list-style:none;">
+        <li>✓ Reell ikke-brand omsetning (2-3x)</li>
+        <li>✓ Total volum (klikk og konverteringer)</li>
+        <li>✓ Markedsdekning på primærkategorier</li>
+        <li>✓ Datakvalitet for Smart Bidding</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 class="yellow">Det vi forventer går ned</h3>
+      <ul style="color:#9ca3af;font-size:15px;line-height:1.9;list-style:none;">
+        <li>↓ Rapportert blended ROAS (men reell går opp)</li>
+        <li>↓ Brand-andel av total konv-verdi (fra ~70% til ~40-50%)</li>
+        <li>↓ Andel "ghost-konverteringer" fra dårlig sporing</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="brand">REDZ × ARCADS</div>
+  <div class="slide-num">14</div>
+</div>
+
+<!-- ============ SLIDE 15: Closing ============ -->
+<div class="slide cover" style="background:radial-gradient(ellipse at bottom left, #0d2818 0%, #0a0a0a 60%);">
+  <div class="meta">Spørsmål, kommentarer, neste steg</div>
+  <h1>Klare til å sette<br><span class="accent">i gang?</span></h1>
+  <div class="lead mt-6">
+    Vi foreslår å starte med <strong style="color:#fff;">handling 1 og 2</strong> denne uken — sporing må fikses, og brand-taket gjør at vi trygt kan flytte fokus til ikke-brand uten å miste det som fungerer.
+  </div>
+
+  <div class="card mt-8" style="max-width:700px;">
+    <h3 style="color:#00C96F;font-size:14px;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Kontakt</h3>
+    <div style="display:flex;gap:48px;">
+      <div>
+        <div style="color:#fff;font-weight:600;font-size:17px;">Victor Skretteberg</div>
+        <div style="color:#9ca3af;font-size:14px;margin-top:4px;">hei@arcads.no</div>
+      </div>
+      <div>
+        <div style="color:#fff;font-weight:600;font-size:17px;">Jona Helgen</div>
+        <div style="color:#9ca3af;font-size:14px;margin-top:4px;">arcads.no</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Datakilde: Google Ads API · 9. apr – 8. mai 2026</div>
+    <div>Konto-ID 414-863-4386</div>
+  </div>
+</div>
+
+</body>
+</html>
