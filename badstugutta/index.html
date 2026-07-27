@@ -41,6 +41,11 @@
           (badstutype/budsjett nye keys) + bakt inn i message. Popup fortsatt minimal.
           ⚠️ BUDSJETT-RANGENE (80–120/120–180/180+) er antatt fra «fra ~80 000 kr»-FAQ —
           MÅ verifiseres mot faktisk katalog med Mattis før publisering.
+      11) LIVE på arcads.no/badstugutta fra 27.07 (erstattet variant A på hoved-URL —
+          før/etter-test, ikke parallell split). Samme dag: «I hagen» → «Hjemme» i
+          plassering-valgene, og popupen ombygd til pills (Hjemme/hytta/sjøen/ikke bestemt)
+          i stedet for select — matcher wizard-stilen. Egen pills-binder for popup-skjemaet
+          (wizard-binderen er leadForm-spesifikk).
        LEAD_SOURCE = badstugutta-froyd-lp-b → sheet-rader merkes «(…-b)» / «(…-b-popup)».
        Takkeside/pixel/gtag UENDRET — samme /takk, konverteringer fyrer der som før.
      =================================================================================
@@ -186,8 +191,6 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .formcard .fine{display:flex;flex-direction:column;gap:3px;font-size:0.74rem;color:var(--muted);margin-top:10px;text-align:center}
 .formcard .fine b{color:var(--ink2);font-weight:700}
 /* ---- variant B: 2-stegs skjema + kvalifisering ---- */
-.field select{flex:1;width:100%;padding:10px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.94rem;color:var(--ink);cursor:pointer}
-.field select:focus{outline:none}
 .qual{margin-bottom:12px}
 .qual .q{font-size:0.8rem;font-weight:700;margin-bottom:6px}
 .qual .opts{display:flex;flex-wrap:wrap;gap:7px}
@@ -390,7 +393,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
             <div class="wstep on">
               <div class="qual" data-key="plassering">
                 <div class="q">Hvor skal badstuen st&aring;?</div>
-                <div class="opts"><button type="button" class="opt">I hagen</button><button type="button" class="opt">P&aring; hytta</button><button type="button" class="opt">Ved sj&oslash;en</button><button type="button" class="opt">Ikke bestemt</button></div>
+                <div class="opts"><button type="button" class="opt">Hjemme</button><button type="button" class="opt">P&aring; hytta</button><button type="button" class="opt">Ved sj&oslash;en</button><button type="button" class="opt">Ikke bestemt</button></div>
               </div>
               <div class="qual" data-key="badstutype">
                 <div class="q">Hva slags badstu ser du for deg?</div>
@@ -700,9 +703,13 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
       </div>
       <div class="fmsg" id="formMsgModal">Takk! Vi ringer deg innen &eacute;n virkedag. Vil du velge tidspunkt selv? <a href="https://calendly.com/mattis-tss/gratis-badstukonsultasjon" target="_blank" rel="noopener">Book badstukonsultasjonen direkte her.</a></div>
       <form id="leadFormModal" novalidate>
+        <div class="qual" data-key="plassering">
+          <div class="q">Hvor skal badstuen st&aring;? <span class="req">*</span></div>
+          <div class="opts"><button type="button" class="opt">Hjemme</button><button type="button" class="opt">P&aring; hytta</button><button type="button" class="opt">Ved sj&oslash;en</button><button type="button" class="opt">Ikke bestemt</button></div>
+        </div>
         <div class="field"><label for="m_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" autocomplete="name" placeholder="Navnet ditt" required></div></div>
         <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="m_phone" name="phone" autocomplete="tel" placeholder="S&aring; vi kan ringe deg" required></div></div>
-        <div class="field"><label for="m_plass">Hvor skal badstuen st&aring;? <span class="req">*</span></label><div class="inp"><select id="m_plass" name="plassering" required><option value="">Velg&hellip;</option><option>I hagen</option><option>P&aring; hytta</option><option>Ved sj&oslash;en</option><option>Ikke bestemt</option></select></div></div>
+        <input type="hidden" name="plassering">
         <input type="hidden" name="interest" value="Popup — Badstue-plan + sommerpakken">
         <div class="hp" aria-hidden="true"><label>Firma<input type="text" name="company" tabindex="-1" autocomplete="off"></label></div>
         <div class="ferr" id="formErrModal"></div>
@@ -829,6 +836,21 @@ flushStoredLeads();
   });
   if(back)back.addEventListener('click',function(){show(cur-1);});
   show(0);
+})();
+
+/* ---- popup-pills (samme stil som wizarden, uten steg) ---- */
+(function(){
+  var f=document.getElementById('leadFormModal');if(!f)return;
+  f.querySelectorAll('.qual').forEach(function(g){
+    var key=g.getAttribute('data-key');
+    g.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
+        b.classList.add('on');
+        if(f[key])f[key].value=b.textContent;
+      });
+    });
+  });
 })();
 
 /* ---- inline validering på blur (variant B): rød ramme mens man fyller ut ---- */
