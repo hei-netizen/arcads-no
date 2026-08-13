@@ -149,7 +149,12 @@
   }
 
   /* ---- cover ---- */
-  .cover { background: var(--petrol); border-bottom: none; color: #F3F8F7; }
+  .cover {
+    background:
+      linear-gradient(160deg, rgba(6,38,42,0.92) 0%, rgba(8,48,53,0.88) 55%, rgba(6,34,38,0.94) 100%),
+      url(img/cover-tak.jpg) center 38% / cover no-repeat;
+    border-bottom: none; color: #F3F8F7;
+  }
   .cover .eyebrow { color: #8FD6DD; }
   .cover .eyebrow::before { background: #8FD6DD; }
   .cover h1 { font-size: clamp(42px, 8.5vw, 108px); color: #FFFFFF; }
@@ -206,6 +211,7 @@
     line-height: 1;
     font-variant-numeric: tabular-nums;
     color: var(--ink);
+    white-space: nowrap;
   }
   .metric .num.pos { color: var(--positive); }
   .metric .num.wtr { color: var(--water); }
@@ -307,6 +313,118 @@
   .principle p { margin: 0; font-size: 15.5px; line-height: 1.5; color: var(--ink); max-width: 74ch; }
   .principle strong { font-weight: 700; }
 
+  /* ---- q-slide decor ---- */
+  .q-slide::after {
+    content: "?";
+    position: absolute; right: 4vw; bottom: -6vh;
+    font-family: var(--font-display); font-weight: 800;
+    font-size: 46vh; line-height: 1; color: var(--water);
+    opacity: 0.07; pointer-events: none; user-select: none;
+  }
+
+  /* ---- ikonruter på kort ---- */
+  .card .ic-sq {
+    width: 42px; height: 42px; border-radius: 11px;
+    background: var(--water-soft); color: var(--water);
+    display: grid; place-items: center; margin-bottom: 14px;
+  }
+  .card .ic-sq svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---- LP-utsnitt på kort ---- */
+  .card img.snip { width: 100%; display: block; border: 1px solid var(--line); border-radius: 9px; margin-bottom: 12px; }
+  .why-grid { gap: 12px; }
+  .why-grid .card { padding: 15px 15px 16px; }
+  .why-grid .card h3 { font-size: 15.5px; margin-bottom: 5px; }
+  .why-grid .card p { font-size: 13.5px; line-height: 1.42; }
+  .why-grid .card .tag { margin-bottom: 8px; }
+
+  /* ---- telefonrammer (LP-screenshots) ---- */
+  .phones { display: flex; gap: clamp(16px, 3vw, 34px); justify-content: center; align-items: flex-start; flex-wrap: wrap; }
+  .phone-wrap { text-align: center; }
+  .phone {
+    width: clamp(190px, 21vw, 270px);
+    aspect-ratio: 390 / 700;
+    border-radius: 32px;
+    border: 7px solid #14201E;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 26px 60px rgba(20,32,30,0.30);
+    position: relative;
+  }
+  .phone img { width: 100%; display: block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .phone img { transition: transform 7s ease-in-out; }
+    .phone:hover img { transform: translateY(-70%); }
+  }
+  .phone::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 56px;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,0.9));
+    pointer-events: none;
+  }
+  .phone-wrap .url {
+    display: inline-block; margin-top: 14px;
+    font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.03em;
+    color: var(--muted); background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; padding: 5px 13px; max-width: 100%;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .phone-hint { margin-top: 8px; font-size: 12px; color: var(--muted); font-family: var(--font-mono); }
+  @media (hover: none), (max-width: 720px) { .phone-hint { display: none; } }
+  .lp-split { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(20px, 2.5vw, 44px); align-items: center; margin-top: 30px; }
+  .lp-split .phone { width: clamp(180px, 17vw, 245px); }
+  @media (max-width: 940px) { .lp-split { grid-template-columns: 1fr; } }
+
+  /* ---- CVR-sammenligning (bars) ---- */
+  .cvr-bars { display: grid; gap: 14px; margin-top: 26px; }
+  .cvr-row { display: grid; grid-template-columns: 150px 1fr; gap: 14px; align-items: center; }
+  @media (max-width: 560px) { .cvr-row { grid-template-columns: 1fr; gap: 4px; } }
+  .cvr-row .lb { font-size: 13.5px; color: var(--muted); line-height: 1.3; }
+  .cvr-row .bar { height: 34px; border-radius: 8px; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; font-family: var(--font-mono); font-weight: 700; font-size: 14px; color: #fff; min-width: 58px; }
+  .cvr-row .bar.old { background: #9AB0AC; }
+  .cvr-row .bar.new { background: var(--water); }
+  .cvr-row .bar.aug { background: var(--positive); }
+
+  /* ---- lokal LP-demo (SERP → side) ---- */
+  .serp {
+    display: flex; align-items: center; gap: 12px;
+    background: #fff; border: 1px solid var(--line); border-radius: 999px;
+    padding: 12px 20px; box-shadow: 0 8px 26px rgba(20,32,30,0.10);
+    font-size: 16.5px; color: var(--ink); width: fit-content; max-width: 100%;
+  }
+  .serp svg { width: 19px; height: 19px; stroke: var(--muted); fill: none; stroke-width: 2; flex: none; }
+  .serp b { font-weight: 600; }
+  .serp .caret { display: inline-block; width: 2px; height: 19px; background: var(--water); margin-left: -2px; animation: blink 1.1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .serp .caret { animation: none; } }
+  .serp-meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted); margin: 10px 0 0 6px; }
+  .flow-arrow { margin: 16px 0 16px 26px; color: var(--water); }
+  .flow-arrow svg { width: 26px; height: 34px; stroke: currentColor; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .mini-lp {
+    width: min(330px, 100%);
+    border-radius: 22px; border: 6px solid #14201E; overflow: hidden;
+    box-shadow: 0 22px 54px rgba(20,32,30,0.26); background: #fff;
+  }
+  .mini-lp .m-head { background: var(--petrol); color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; }
+  .mini-lp .m-head .m-logo { font-family: var(--font-display); font-weight: 800; font-size: 11px; letter-spacing: 0.06em; line-height: 1.1; }
+  .mini-lp .m-head .m-cta { background: #fff; color: var(--petrol); font-size: 10.5px; font-weight: 700; border-radius: 999px; padding: 5px 11px; }
+  .mini-lp .m-bar { background: #14201E; color: #E8EFEE; font-size: 10px; text-align: center; padding: 5px 8px; letter-spacing: 0.04em; }
+  .mini-lp .m-body { padding: 16px 16px 18px; background: linear-gradient(#F4F8F7, #fff); }
+  .mini-lp h5 { margin: 0 0 12px; font-family: var(--font-display); font-weight: 800; font-size: 19.5px; line-height: 1.14; letter-spacing: -0.015em; color: #14201E; }
+  .mini-lp h5 em { font-style: normal; color: var(--water); }
+  .mini-lp .m-check { display: flex; gap: 8px; align-items: center; font-size: 12px; color: #2A3B38; margin: 7px 0; }
+  .mini-lp .m-check .ck { width: 16px; height: 16px; border-radius: 50%; background: var(--petrol); color: #fff; display: grid; place-items: center; font-size: 9.5px; flex: none; }
+  .mini-lp .m-field { height: 26px; border: 1px solid var(--line); border-radius: 6px; margin-top: 8px; background: #fff; position: relative; }
+  .mini-lp .m-field::before { content: attr(data-l); position: absolute; left: 9px; top: 6px; font-size: 9.5px; color: #9AA7A4; }
+  .mini-lp .m-btn { margin-top: 10px; background: #F5DD4B; border-radius: 8px; text-align: center; font-weight: 700; font-size: 11.5px; letter-spacing: 0.08em; padding: 9px; color: #14201E; }
+  .mini-lp .m-hl { background: color-mix(in srgb, #F5DD4B 38%, transparent); border-radius: 3px; padding: 0 3px; }
+  .sketch-tag {
+    display: inline-block; margin-bottom: 12px;
+    font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--amber); border: 1px dashed color-mix(in srgb, var(--amber) 55%, transparent);
+    border-radius: 999px; padding: 4px 12px;
+  }
+
   .hint-nav {
     position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%);
     font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
@@ -373,7 +491,7 @@
 
   <!-- 2 · WHO -->
   <section class="slide">
-    <span class="slide-no">02 / 14</span>
+    <span class="slide-no">02 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Først — hvem er vi</div>
       <h2>Arcads driver annonseringen deres</h2>
@@ -400,7 +518,7 @@
 
   <!-- QUESTION 1 (åpner møtet) -->
   <section class="slide q-slide">
-    <span class="slide-no">03 / 14</span>
+    <span class="slide-no">03 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Over til dere</div>
       <h2>Hvordan har resultatene vært fra deres side?</h2>
@@ -415,16 +533,16 @@
 
   <!-- 3 · WHAT WE'VE DONE -->
   <section class="slide">
-    <span class="slide-no">04 / 14</span>
+    <span class="slide-no">04 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Arbeidet så langt</div>
       <h2>Hva vi har gjort</h2>
       <p class="lede">Ikke bare «å skru på annonser» — en kontinuerlig motor av produksjon, testing og opprydding.</p>
       <div class="grid g4">
-        <div class="card"><span class="tag">Drift</span><h3>Google + Meta</h3><p>Daglig drift av søk, Performance Max og Meta-annonser for tak- og fasadevask, per lokasjon.</p></div>
-        <div class="card"><span class="tag">Kreativ</span><h3>Nye annonser løpende</h3><p>Vi produserer nye annonser hele tiden — video, bilder og tekst i mange varianter, og tester dem mot hverandre.</p></div>
-        <div class="card"><span class="tag">Testing</span><h3>Landingssider</h3><p>Egne landingssider for takvask og fasadevask, testet mot hverandre for å finne det som konverterer best.</p></div>
-        <div class="card"><span class="tag">Struktur</span><h3>Opprydding</h3><p>Ryddet i gamle annonser, skilt Karriere fra salg, og strammet inn hvor pengene brukes.</p></div>
+        <div class="card"><div class="ic-sq"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><circle cx="9" cy="7" r="2.4"/><line x1="4" y1="16" x2="20" y2="16"/><circle cx="15" cy="16" r="2.4"/></svg></div><span class="tag">Drift</span><h3>Google + Meta</h3><p>Daglig drift av søk, Performance Max og Meta-annonser for tak- og fasadevask, per lokasjon.</p></div>
+        <div class="card"><div class="ic-sq"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2.5"/><polygon points="10.5,9.5 15.5,12 10.5,14.5"/></svg></div><span class="tag">Kreativ</span><h3>Nye annonser løpende</h3><p>Vi produserer nye annonser hele tiden — video, bilder og tekst i mange varianter, og tester dem mot hverandre.</p></div>
+        <div class="card"><div class="ic-sq"><svg viewBox="0 0 24 24"><rect x="3.5" y="4" width="7.2" height="16" rx="1.8"/><rect x="13.3" y="4" width="7.2" height="16" rx="1.8"/><polyline points="5.6,9 7.1,10.5 9.4,7.5"/></svg></div><span class="tag">Testing</span><h3>Landingssider</h3><p>Egne landingssider for takvask og fasadevask, testet mot hverandre for å finne det som konverterer best.</p></div>
+        <div class="card"><div class="ic-sq"><svg viewBox="0 0 24 24"><polygon points="4,5 20,5 14,12.5 14,19 10,17 10,12.5"/></svg></div><span class="tag">Struktur</span><h3>Opprydding</h3><p>Ryddet i gamle annonser, skilt Karriere fra salg, og strammet inn hvor pengene brukes.</p></div>
       </div>
       <p class="kicker">Kort sagt: <b>vi tester bredt, kutter det som ikke virker, og legger mer bak vinnerne.</b></p>
     </div>
@@ -433,7 +551,7 @@
 
   <!-- AD WALL -->
   <section class="slide adwall-slide">
-    <span class="slide-no">05 / 14</span>
+    <span class="slide-no">05 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Kreativ produksjon</div>
       <h2>De nyeste annonsene vi kjører</h2>
@@ -458,7 +576,7 @@
 
   <!-- 4 · YEAR TO DATE -->
   <section class="slide">
-    <span class="slide-no">06 / 14</span>
+    <span class="slide-no">06 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Resultatene · hele 2026</div>
       <h2>Sterk vår, roligere sommer — nå på vei opp igjen</h2>
@@ -523,7 +641,7 @@
 
   <!-- 5 · WHAT WORKS -->
   <section class="slide">
-    <span class="slide-no">07 / 14</span>
+    <span class="slide-no">07 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Hva presterer</div>
       <h2>Det som drar lasset</h2>
@@ -531,14 +649,14 @@
         <li><span class="dot win"></span><div><strong>Video slår alt annet.</strong> Talking-head og «gjør-det-selv»-video henter klart billigst leads. <span class="kpi">UR_tak_06 (recut): ned mot 60–146 kr per lead</span><span class="meta">Ekte, hverdagslig stil funker bedre enn polerte reklamer.</span></div></li>
         <li><span class="dot win"></span><div><strong>Fasade-video leverer jevnt.</strong> Fasadevask-videoene holder lav pris uke etter uke. <span class="kpi">UR_Fasade_Video_04: ~84–134 kr per lead</span></div></li>
         <li><span class="dot win"></span><div><strong>Google-søk på merkenavn er billigst.</strong> Folk som allerede søker etter dere konverterer nesten gratis. <span class="kpi">Merkesøk: ~50–70 kr per lead</span></div></li>
-        <li><span class="dot wtr"></span><div><strong>Riktig side til riktig tjeneste.</strong> Takvask-annonser → takvask-side, fasade-annonser → fasade-side. Rydder opp i konvertering.</div></li>
+        <li><span class="dot wtr"></span><div><strong>Riktig side til riktig tjeneste.</strong> Takvask-annonser → takvask-side, fasade-annonser → fasade-side. <span class="kpi">Nye landingssider på Google: +71 % flere leads per klikk — mer om det om litt</span></div></li>
       </ul>
     </div>
   </section>
 
   <!-- HVA FUNKER — HOOKS -->
   <section class="slide">
-    <span class="slide-no">08 / 14</span>
+    <span class="slide-no">08 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Hva funker veldig godt</div>
       <h2>Hookene som stopper scrollingen</h2>
@@ -554,7 +672,7 @@
 
   <!-- 7 · PER LOCATION -->
   <section class="slide">
-    <span class="slide-no">09 / 14</span>
+    <span class="slide-no">09 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Per lokasjon</div>
       <h2>Hvor står hver avdeling</h2>
@@ -567,7 +685,7 @@
             <tr><td>Bergen</td><td><span class="pill win">Sterk</span></td><td>Stabil tilstrømming, god pris.</td></tr>
             <tr><td>Sørlandet</td><td><span class="pill win">God</span></td><td>Jevn levering uke for uke.</td></tr>
             <tr><td>Rogaland</td><td><span class="pill win">God</span></td><td>Solid volum, rom for å skalere.</td></tr>
-            <tr><td>Trondheim</td><td><span class="pill grow">Vokser</span></td><td>Trenger flere lokale vinkler for å få ned prisen.</td></tr>
+            <tr><td>Trondheim</td><td><span class="pill grow">Vokser</span></td><td>Trenger flere lokale vinkler — først ut med egen lokal landingsside.</td></tr>
             <tr><td>Østfold / Møre</td><td><span class="pill win">God</span></td><td>Løftet med nye lokale vinkler og statiske annonser — på rett vei.</td></tr>
           </tbody>
         </table>
@@ -580,9 +698,108 @@
   </section>
 
 
-  <!-- 9 · NEXT -->
+  <!-- 10 · GOOGLE: NYE LANDINGSSIDER -->
   <section class="slide">
-    <span class="slide-no">10 / 14</span>
+    <span class="slide-no">10 / 17</span>
+    <div class="wrap">
+      <div class="eyebrow">Google Ads · landingssider</div>
+      <h2>Nye landingssider — nesten dobbelt så mange leads per klikk</h2>
+      <p class="lede">Vi har bygget egne landingssider for takvask og fasadevask, laget for én ting: å gjøre Google-klikk om til henvendelser. Før pekte annonsene til de vanlige tjenestesidene — forskjellen er tydelig.</p>
+      <div class="lp-split">
+        <div>
+          <div class="cvr-bars">
+            <div class="cvr-row"><span class="lb">Gamle tjenestesider</span><div class="bar old" style="width:50%">6,2 %</div></div>
+            <div class="cvr-row"><span class="lb">Nye landingssider</span><div class="bar new" style="width:86%">10,6 %</div></div>
+            <div class="cvr-row"><span class="lb">Nye sider · august</span><div class="bar aug" style="width:100%">12,3 %</div></div>
+          </div>
+          <p class="serp-meta" style="margin-left:0;">Andel av annonseklikk som blir til leads (CVR)</p>
+          <div class="grid g3" style="margin-top:22px;">
+            <div class="card metric"><span class="num wtr" style="font-size:clamp(26px,2.4vw,34px);">670+</span><span class="label">leads via de nye sidene siden mars</span></div>
+            <div class="card metric"><span class="num" style="font-size:clamp(26px,2.4vw,34px);">142 kr</span><span class="label">per lead i august — beste måned hittil</span></div>
+            <div class="card metric"><span class="num pos" style="font-size:clamp(26px,2.4vw,34px);">+71 %</span><span class="label">flere leads per klikk enn på gamle sider</span></div>
+          </div>
+          <p class="foot-note">Google Ads-tall. Nye landingssider mars–august 2026, målt mot de gamle tjenestesidene annonsene brukte i januar–februar.</p>
+        </div>
+        <div class="phones">
+          <div class="phone-wrap">
+            <div class="phone"><img src="img/lp-takvask-mobil.jpg" alt="Landingsside for takvask på mobil" loading="lazy"></div>
+            <span class="url">/tjenester/takvask-landingside/</span>
+          </div>
+          <div class="phone-wrap">
+            <div class="phone"><img src="img/lp-fasadevask-mobil.jpg" alt="Landingsside for fasadevask på mobil" loading="lazy"></div>
+            <span class="url">/tjenester/fasadevask-landingside/</span>
+            <div class="phone-hint">hold musen over for å bla ↓</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · GOOGLE: HVORFOR DET VIRKER -->
+  <section class="slide">
+    <span class="slide-no">11 / 17</span>
+    <div class="wrap" style="max-width:1160px;">
+      <div class="eyebrow">Google Ads · hvorfor det virker</div>
+      <h2 style="font-size:clamp(28px,3.6vw,42px);">Derfor konverterer de nye sidene</h2>
+      <p class="lede" style="margin-top:10px;font-size:clamp(15px,1.4vw,17px);">Ingen magi — siden har ett mål, og alt på den jobber mot skjemaet. Grepene, vist med utsnitt fra selve siden:</p>
+      <div class="grid g3 why-grid" style="margin-top:22px;">
+        <div class="card"><img class="snip" src="img/why-hook.jpg" alt="Overskrift: Mose og grønske ødelegger taket ditt — vi fikser det" loading="lazy"><span class="tag">01 · Hooken</span><h3>Overskriften er problemet folk googlet</h3><p>Samme ord som i søket og annonsen — du lander og kjenner deg igjen med en gang. Ingen «Velkommen til oss».</p></div>
+        <div class="card"><img class="snip" src="img/why-pris.jpg" alt="Takvask til fastpris fra kr 9 000" loading="lazy"><span class="tag">02 · Pris</span><h3>Prisen kommer før du rekker å lure</h3><p>«Fra kr 9 000,- fastpris» svarer på det første alle tenker på. Prisusikkerhet er grunn nr. 1 til at folk ikke tar kontakt.</p></div>
+        <div class="card"><img class="snip" src="img/why-skjema.jpg" alt="Kort skjema med gult NESTE-steg" loading="lazy"><span class="tag">03 · Skjema</span><h3>Skjemaet øverst — i små steg</h3><p>Ingen meny, ingen blindveier — eneste vei videre er skjemaet. Små steg gjør terskelen lav for å begynne.</p></div>
+        <div class="card"><img class="snip" src="img/why-bevis.jpg" alt="Før- og etter-bilde av takvask" loading="lazy"><span class="tag">04 · Bevis</span><h3>Før/etter selger jobben uten ord</h3><p>Transformasjonen er hele produktet — den vises i stedet for å beskrives. Bildet gjør prisen over til en selvfølge.</p></div>
+        <div class="card"><img class="snip" src="img/why-trygg.jpg" alt="Fastpris, fornøydgaranti og tilstandsrapport" loading="lazy"><span class="tag">05 · Trygghet</span><h3>Innvendingene besvares én for én</h3><p>Fastpris, 100 % fornøydgaranti, tilstandsrapport med bilder — det som gjør det trygt å si ja, står svart på hvitt.</p></div>
+        <div class="card"><img class="snip" src="img/why-popup.jpg" alt="Popup: Vent litt — få et uforpliktende pristilbud" loading="lazy"><span class="tag">06 · Sistesjansen</span><h3>De som nøler, får ett tilbud til</h3><p>På vei ut? Siden spør én gang: uforpliktende pristilbud, svar innen 24 timer. Fanger leads som ellers forsvant.</p></div>
+      </div>
+      <p class="kicker">Samme oppskrift tar vi nå videre — <b>tilpasset hver enkelt lokasjon.</b></p>
+    </div>
+  </section>
+
+  <!-- 12 · GOOGLE: LOKALE LANDINGSSIDER -->
+  <section class="slide">
+    <span class="slide-no">12 / 17</span>
+    <div class="wrap">
+      <div class="eyebrow">Google Ads · neste steg</div>
+      <h2>Søker du i Trondheim, skal siden snakke Trondheim</h2>
+      <p class="lede">Neste løft er én landingsside per lokasjon. Samme oppskrift som sidene som allerede leverer — men overskrift, tekst og referanser tilpasses stedet folk søker fra.</p>
+      <div class="split" style="align-items:start;">
+        <div>
+          <div class="serp" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+            <span><b>takvask trondheim</b></span><span class="caret"></span>
+          </div>
+          <p class="serp-meta">Søk fra en boligeier i Trondheim</p>
+          <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 26 34"><line x1="13" y1="2" x2="13" y2="28"/><polyline points="5,21 13,29 21,21"/></svg></div>
+          <div class="mini-lp" aria-label="Skisse av lokal landingsside for Trondheim">
+            <div class="m-head"><span class="m-logo">UTVENDIG<br>RENHOLD</span><span class="m-cta">Få gratis pristilbud</span></div>
+            <div class="m-bar">– Din lokale avdeling i <b>Trondheim</b> –</div>
+            <div class="m-body">
+              <h5>Mose og grønske ødelegger taket ditt — <em>vi fikser det i <span class="m-hl">Trondheim</span></em></h5>
+              <div class="m-check"><span class="ck">✓</span>Lokal avdeling med eget mannskap i Trøndelag</div>
+              <div class="m-check"><span class="ck">✓</span>Nylige takvask-jobber i <span class="m-hl">ditt nærområde</span></div>
+              <div class="m-check"><span class="ck">✓</span>Fastpris og tilstandsrapport med bilder</div>
+              <div class="m-field" data-l="Navn"></div>
+              <div class="m-field" data-l="Mobil"></div>
+              <div class="m-btn">NESTE</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="sketch-tag">Skisse — slik bygger vi det</span>
+          <div class="who-list">
+            <div class="row"><div class="ic">01</div><div><h4>Stedsnavn hele veien</h4><p>Søket, annonsen og landingssiden sier det samme: «takvask trondheim» → annonse om Trondheim → side om Trondheim.</p></div></div>
+            <div class="row"><div class="ic">02</div><div><h4>Lokalt innhold, ikke bare byttet bynavn</h4><p>Avdelingen, mannskapet og jobber fra området — gjerne før/etter-bilder fra nabolag folk kjenner igjen.</p></div></div>
+            <div class="row"><div class="ic">03</div><div><h4>Relevans belønnes av Google</h4><p>Bedre samsvar gir høyere kvalitetsscore — som betyr bedre plassering og lavere pris per klikk.</p></div></div>
+            <div class="row"><div class="ic">04</div><div><h4>Vi starter der det monner mest</h4><p>Lokasjonene med størst potensial først — som Trondheim — deretter resten, tjeneste for tjeneste.</p></div></div>
+          </div>
+          <p class="kicker">Her trenger vi dere: <b>lokale bilder, referansejobber og det dere vet om markedet.</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 · NEXT -->
+  <section class="slide">
+    <span class="slide-no">13 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Veien videre</div>
       <h2>Hva vi gjør fremover</h2>
@@ -598,7 +815,7 @@
 
   <!-- 10 · CREATIVE DIRECTION -->
   <section class="slide">
-    <span class="slide-no">11 / 14</span>
+    <span class="slide-no">14 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Annonser fremover</div>
       <h2>Video først — det er der pengene ligger</h2>
@@ -617,7 +834,7 @@
 
   <!-- NESTE STEG -->
   <section class="slide">
-    <span class="slide-no">12 / 14</span>
+    <span class="slide-no">15 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Neste steg</div>
       <h2>Det vi setter i gang med nå</h2>
@@ -633,7 +850,7 @@
 
   <!-- 11 · QUESTION 2 -->
   <section class="slide q-slide">
-    <span class="slide-no">13 / 14</span>
+    <span class="slide-no">16 / 17</span>
     <div class="wrap">
       <div class="eyebrow">Diskusjon</div>
       <h2>Hva tenker dere?</h2>
