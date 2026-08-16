@@ -331,8 +331,9 @@
 .ur-lp .loc-ava{width:128px;height:128px;border-radius:50%;background:var(--teal);color:#fff;font-weight:800;font-size:2rem;display:flex;align-items:center;justify-content:center;flex:none}
 .ur-lp .loc-card b{display:block;font-size:1.06rem}
 .ur-lp .loc-card .role{display:block;font-size:.82rem;color:var(--muted);margin:2px 0 12px}
-.ur-lp .loc-card a.loc-tel{display:inline-flex;align-items:center;gap:9px;background:var(--teal);color:#fff;font-weight:700;font-size:.92rem;border-radius:999px;padding:11px 22px;transition:.2s;box-shadow:0 10px 22px -14px rgba(10,60,60,.5)}
+.ur-lp .loc-card a.loc-tel{display:inline-flex;align-items:center;gap:9px;background:var(--teal);color:#fff;font-weight:700;font-size:.92rem;border-radius:999px;padding:11px 22px;transition:.2s;box-shadow:0 10px 22px -14px rgba(10,60,60,.5);white-space:nowrap}
 .ur-lp .loc-card a.loc-tel:hover{background:var(--teal-deep);transform:translateY(-1px)}
+@media(max-width:620px){.ur-lp .loc-card a.loc-tel{font-size:.85rem;padding:10px 16px;gap:7px}}
 .ur-lp .loc-areas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:720px;margin:26px auto 0}
 .ur-lp .loc-areas span{background:var(--white);border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:.86rem;font-weight:600;color:var(--ink2)}
 .ur-lp .loc-note{font-size:.85rem;color:var(--muted);margin:18px auto 0;max-width:60ch}
