@@ -1,0 +1,44 @@
+# Deployer arcads.no til GitHub Pages med minifisert HTML/CSS/JS.
+# Kildefilene i repoet forblir lesbare — kun det som publiseres komprimeres
+# (fjerner kommentarer, whitespace og gjør koden uleselig i view-source).
+name: Deploy minifisert
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Bygg minifisert kopi
+        run: |
+          rsync -a --exclude .git --exclude .github --exclude _site ./ _site/
+          npx --yes html-minifier-terser@7 \
+            --input-dir _site --output-dir _site --file-ext html \
+            --collapse-whitespace --remove-comments \
+            --minify-css true --minify-js true
+          find _site \( -name "*.css" -o -name "*.js" \) \
+            -exec npx --yes esbuild@0.25 --minify --allow-overwrite {} --outfile={} \;
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
