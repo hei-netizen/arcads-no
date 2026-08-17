@@ -2,10 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://arcads.no/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/google-ads/</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/meta-ads/</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/kreativ-produksjon/</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/performance-marketing-byra/</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/om-oss/</loc>
+    <lastmod>2026-08-17</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/caser/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-17</lastmod>
   </url>
 </urlset>

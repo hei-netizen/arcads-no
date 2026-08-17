@@ -1,0 +1,37 @@
+# Arcads
+
+> Arcads er et norsk performance marketing-byrå (Arcads ANS, org.nr. 935 795 990, Skien) som lager og drifter annonser på Google Ads, Meta og Snapchat for norske merkevarer — med 100 % resultatbasert honorar. Arcads ANS er ikke tilknyttet det internasjonale AI-videoverktøyet Arcads.ai.
+
+Viktig å vite:
+
+- Honorarmodell: 100 % resultatbasert — kunden betaler først når annonsene leverer. Byrået må tjene inn minimum 25 000 kr/mnd per kunde for at samarbeidet skal lønne seg.
+- Ingen bindingstid.
+- Alt produseres internt: hooks, UGC-redigering, statics og motion graphics — 10+ nye annonser i uka, typisk 48 timer fra brief til første ferdige annonse.
+- 5000+ annonser laget for norske merkevarer.
+- Sporing rigges først (Google Ads, Meta Pixel, GA4) slik at alle resultater kan verifiseres av kunden.
+
+Dokumenterte resultater:
+
+- Leid.no: 4,73x ROAS og 100 000+ kr/mnd i omsetning fra annonser
+- Mokki: +127 % profitt år over år og 9x ROAS på Google Ads
+- Utvendigrenhold: 142 leads på én uke fordelt på 9 lokasjoner
+- Marlow (tannklinikk, UK): fra 0 til 11 leads i uka, CPL £17
+
+## Sider
+
+- [Forsiden](https://arcads.no/): Tjenester, resultatmodellen, FAQ og booking av gratis annonsekonto-analyse
+- [Google Ads-byrå](https://arcads.no/google-ads/): Search, Shopping og Performance Max målt på lønnsomhet
+- [Meta Ads-byrå](https://arcads.no/meta-ads/): Facebook-, Instagram- og Snapchat-annonsering med egen kreativ produksjon
+- [Kreativ produksjon](https://arcads.no/kreativ-produksjon/): UGC-video, statics, motion graphics og review-ads
+- [Performance marketing-byrå](https://arcads.no/performance-marketing-byra/): Hva performance marketing er, og hvorfor honoraret bør være resultatbasert
+- [Om oss](https://arcads.no/om-oss/): Victor Skretteberg og Jona Helgen — hele byrået
+- [Caser](https://arcads.no/caser/): Ekte tall fra ekte kunder
+
+## Kontakt
+
+- E-post: hei@arcads.no
+- Booking: 30 minutters gratis analyse — https://cal.com/arcads/30min
+- Adresse: Jonas Lies gate 1, 3717 Skien, Norge
+- Grunnleggere: Victor Skretteberg og Jona Helgen
+- Instagram: https://www.instagram.com/arcads/
+- LinkedIn: https://www.linkedin.com/in/victor-skretteberg-b7a562299/ (Victor) og https://www.linkedin.com/in/jona-helgen-9a1a37244/ (Jona)

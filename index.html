@@ -27,6 +27,32 @@
 <meta name="twitter:title" content="Arcads — Annonser som betaler for seg selv. 100% resultatbasert">
 <meta name="twitter:description" content="5000+ annonser for norske merkevarer. Du betaler først når vi leverer.">
 <meta name="twitter:image" content="https://arcads.no/img/founders.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["Organization","ProfessionalService"],"@id":"https://arcads.no/#org",
+"name":"Arcads","legalName":"Arcads ANS","url":"https://arcads.no/",
+"logo":"https://arcads.no/logos/arcads-logo.png","image":"https://arcads.no/img/founders.jpg",
+"slogan":"Annonser som betaler for seg selv",
+"description":"Norsk performance marketing-byrå. Google Ads, Meta Ads og kreativ produksjon (UGC, statics, video) for norske merkevarer — 100% resultatbasert honorar.",
+"disambiguatingDescription":"Arcads ANS er et norsk markedsføringsbyrå i Skien, og er ikke tilknyttet det internasjonale AI-videoverktøyet Arcads.ai.",
+"email":"hei@arcads.no","telephone":"+47 467 75 530",
+"identifier":{"@type":"PropertyValue","name":"Organisasjonsnummer","value":"935795990"},
+"vatID":"NO935795990MVA",
+"foundingDate":"2025-07-03",
+"founder":[{"@type":"Person","name":"Victor Skretteberg","jobTitle":"Medgründer","sameAs":["https://www.linkedin.com/in/victor-skretteberg-b7a562299/"]},{"@type":"Person","name":"Jona Helgen","jobTitle":"Medgründer","sameAs":["https://www.linkedin.com/in/jona-helgen-9a1a37244/"]}],
+"address":{"@type":"PostalAddress","streetAddress":"Jonas Lies gate 1","postalCode":"3717","addressLocality":"Skien","addressCountry":"NO"},
+"areaServed":{"@type":"Country","name":"Norge"},
+"knowsLanguage":["nb","en"],
+"priceRange":"Fra 25 000 kr/mnd — 100% resultatbasert",
+"knowsAbout":["Google Ads","Meta Ads","Performance marketing","UGC-annonser","Kreativ produksjon","Performance Max","Snapchat Ads"],
+"sameAs":["https://www.instagram.com/arcads/","https://www.linkedin.com/in/victor-skretteberg-b7a562299/","https://www.linkedin.com/in/jona-helgen-9a1a37244/","https://virksomhet.brreg.no/nb/oppslag/enheter/935795990"],
+"hasOfferCatalog":{"@type":"OfferCatalog","name":"Tjenester","itemListElement":[
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Google Ads-annonsering","url":"https://arcads.no/google-ads/","description":"Search, Performance Max og Shopping — struktur, negatives og skalering basert på lønnsomhet."}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Meta Ads-annonsering","url":"https://arcads.no/meta-ads/","description":"Kampanjer på Facebook, Instagram og Snapchat med løpende kreativ testing."}},
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"Kreativ produksjon","url":"https://arcads.no/kreativ-produksjon/","description":"UGC-video, statics og motion graphics — 10+ nye annonser i uka, alt produsert internt."}}]}},
+{"@type":"WebSite","@id":"https://arcads.no/#website","url":"https://arcads.no/","name":"Arcads","inLanguage":"nb","publisher":{"@id":"https://arcads.no/#org"}}
+]}
+</script>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="apple-touch-icon" href="/favicon-180.png">
@@ -249,11 +275,28 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 @media(max-width:620px){.final{padding:44px 18px 32px}.calcard{padding:10px 6px 6px}}
 
 /* ---- footer ---- */
-.footer{background:var(--dark);color:rgba(255,255,255,.6);font-size:0.88rem;text-align:center;padding:48px 0 36px;margin-top:80px}
-.footer img{height:30px;margin:0 auto 14px;display:block}
-.footer .reg{margin-top:10px;font-size:0.8rem;color:rgba(255,255,255,.45);line-height:1.7}
-.footer a{color:var(--accent);font-weight:600}
+.footer{background:var(--dark);color:rgba(255,255,255,.6);font-size:0.9rem;padding:56px 0 30px;margin-top:80px}
 @media(max-width:760px){.footer{margin-top:52px}}
+.footer .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;text-align:left}
+@media(max-width:900px){.footer .fgrid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:560px){.footer .fgrid{grid-template-columns:1fr}}
+.footer .flogo{height:28px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px}
+.footer .ftag{max-width:30ch;line-height:1.6;color:rgba(255,255,255,.55)}
+.footer .fsoc{display:flex;gap:9px;margin-top:18px;flex-wrap:wrap}
+.footer .fsoc a{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(255,255,255,.18);border-radius:var(--pill);padding:7px 14px;font-size:0.8rem;font-weight:600;color:#fff;transition:.2s}
+.footer .fsoc a:hover{border-color:var(--accent);color:var(--accent)}
+.footer .fsoc svg{width:14px;height:14px;flex:none}
+.footer .fh2{font-family:var(--disp);font-weight:700;font-size:0.78rem;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px}
+.footer .fcol{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.footer .fcol a{color:rgba(255,255,255,.78);font-weight:500}
+.footer .fcol a:hover{color:var(--accent)}
+.footer .fcol span{color:rgba(255,255,255,.55);line-height:1.65}
+.footer .fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;text-align:center;font-size:0.8rem;color:rgba(255,255,255,.45);line-height:1.7}
+
+/* ---- LinkedIn-knapp (om oss) ---- */
+.li-btn{display:inline-flex;align-items:center;gap:8px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:var(--pill);padding:8px 16px;font-weight:600;font-size:0.84rem;margin-top:12px;transition:.2s}
+.li-btn:hover{border-color:#0A66C2;color:#0A66C2}
+.li-btn svg{width:15px;height:15px;fill:#0A66C2}
 
 
 /* ---- modellen (fargeblokk m/graf) ---- */
@@ -323,7 +366,7 @@ gtag('config', 'G-XRR38FQQH7');
 fbq('init','1573565776638708');
 fbq('track','PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1573565776638708&ev=PageView&noscript=1"/></noscript>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1573565776638708&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
@@ -527,11 +570,13 @@ fbq('track','PageView');
           <h3>Victor</h3>
           <div class="role">Daglig leder &amp; Google Performance</div>
           <p>Det er Victor du møter i den første praten. Han bygger Google-kontoen din, graver i tallene dine og sender deg mandagsrapporten.</p>
+          <a class="li-btn" href="https://www.linkedin.com/in/victor-skretteberg-b7a562299/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Victor på LinkedIn</a>
         </div>
         <div class="bio">
           <h3>Jona</h3>
           <div class="role">Creative &amp; Sosiale Medier Performance</div>
           <p>Jona lager annonsene du så i veggen der oppe &mdash; hooks, UGC, statics og konsepter. 10+ nye i uka blir ikke til av seg selv.</p>
+          <a class="li-btn" href="https://www.linkedin.com/in/jona-helgen-9a1a37244/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Jona på LinkedIn</a>
         </div>
       </div>
     </div>
@@ -636,8 +681,36 @@ fbq('track','PageView');
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
   <div class="wrap">
-    <img src="/logos/arcads-logo.png" alt="Arcads" style="filter:brightness(0) invert(1)">
-    <div class="reg">Bygget i Skien av Victor &amp; Jona &middot; <a href="mailto:victor@arcads.no">victor@arcads.no</a> &middot; Arcads ANS<br>100% resultatbasert &mdash; du betaler først når vi leverer.</div>
+    <div class="fgrid">
+      <div>
+        <img src="/logos/arcads-logo.png" alt="Arcads" class="flogo">
+        <p class="ftag">Norsk performance marketing-byrå. 100% resultatbasert — du betaler først når vi leverer.</p>
+        <div class="fsoc">
+          <a href="https://www.instagram.com/arcads/" target="_blank" rel="noopener" aria-label="Arcads på Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a>
+          <a href="https://www.linkedin.com/in/victor-skretteberg-b7a562299/" target="_blank" rel="noopener" aria-label="Victor på LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Victor</a>
+          <a href="https://www.linkedin.com/in/jona-helgen-9a1a37244/" target="_blank" rel="noopener" aria-label="Jona på LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Jona</a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="fh2">Tjenester</div>
+        <a href="/google-ads/">Google Ads-byrå</a>
+        <a href="/meta-ads/">Meta Ads-byrå</a>
+        <a href="/kreativ-produksjon/">Kreativ produksjon</a>
+        <a href="/performance-marketing-byra/">Performance marketing-byrå</a>
+      </div>
+      <div class="fcol">
+        <div class="fh2">Selskap</div>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/caser/">Caser</a>
+        <a href="#book">Book gratis analyse</a>
+      </div>
+      <div class="fcol">
+        <div class="fh2">Kontakt</div>
+        <a href="mailto:victor@arcads.no">victor@arcads.no</a>
+        <span>Jonas Lies gate 1<br>3717 Skien</span>
+      </div>
+    </div>
+    <div class="fbot">&copy; 2026 Arcads ANS &middot; Org.nr. 935 795 990 MVA &middot; Bygget i Skien av Victor &amp; Jona &middot; 100% resultatbasert — du betaler først når vi leverer.</div>
   </div>
 </footer>
 
