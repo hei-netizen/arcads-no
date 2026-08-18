@@ -30,6 +30,9 @@ Dokumenterte resultater:
 
 ## Artikler
 
+- [Hva er UGC?](https://arcads.no/artikler/hva-er-ugc/): Innholdet som ser ut som en venn har laget det — og derfor selger
+- [Facebook-annonsering](https://arcads.no/artikler/facebook-annonsering/): Pris, boost-fella og det som faktisk funker (Facebook + Instagram = samme system)
+- [Annonsere på Google](https://arcads.no/artikler/annonsere-pa-google/): Slik fungerer det, hva det koster og de tre vanligste pengeslukene
 - [Hva koster Google Ads i Norge?](https://arcads.no/artikler/hva-koster-google-ads/): Klikkpriser, lønnsomhetsregnestykket og hva drift koster
 - [Hva er en god ROAS?](https://arcads.no/artikler/hva-er-en-god-roas/): Breakeven ROAS = 1/bruttomargin — og hvorfor POAS ofte er ærligere
 - [Google Ads eller Meta Ads?](https://arcads.no/artikler/google-ads-eller-meta-ads/): Google fanger etterspørsel, Meta skaper den — når du bør starte med hva

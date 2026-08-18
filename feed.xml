@@ -5,8 +5,29 @@
   <link href="https://arcads.no/feed.xml" rel="self"/>
   <link href="https://arcads.no/artikler/"/>
   <id>https://arcads.no/artikler/</id>
-  <updated>2026-08-18T08:00:00Z</updated>
+  <updated>2026-08-18T12:00:00Z</updated>
   <author><name>Victor Skretteberg</name><email>hei@arcads.no</email></author>
+  <entry>
+    <title>Hva er UGC? Og hvorfor annonsene dine trenger det</title>
+    <link href="https://arcads.no/artikler/hva-er-ugc/"/>
+    <id>https://arcads.no/artikler/hva-er-ugc/</id>
+    <updated>2026-08-18T12:00:00Z</updated>
+    <summary>UGC betyr user-generated content — innhold som ser ut som det er laget av vanlige folk. Hvorfor det slår polerte reklamefilmer i annonser, og hvordan du får tak i det.</summary>
+  </entry>
+  <entry>
+    <title>Facebook-annonsering: pris, oppsett og det som faktisk funker</title>
+    <link href="https://arcads.no/artikler/facebook-annonsering/"/>
+    <id>https://arcads.no/artikler/facebook-annonsering/</id>
+    <updated>2026-08-18T12:00:00Z</updated>
+    <summary>Hva Facebook-annonsering koster, hvorfor boost-knappen er en felle, og hva som skiller annonser som selger fra annonser som bare koster.</summary>
+  </entry>
+  <entry>
+    <title>Annonsere på Google: slik kommer du i gang uten å brenne penger</title>
+    <link href="https://arcads.no/artikler/annonsere-pa-google/"/>
+    <id>https://arcads.no/artikler/annonsere-pa-google/</id>
+    <updated>2026-08-18T12:00:00Z</updated>
+    <summary>Hvordan Google-annonsering faktisk fungerer, hva det koster, og de tre feilene som brenner mest penger.</summary>
+  </entry>
   <entry>
     <title>Hva koster Google Ads i Norge? (2026)</title>
     <link href="https://arcads.no/artikler/hva-koster-google-ads/"/>
