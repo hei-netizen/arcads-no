@@ -42,3 +42,15 @@ jobs:
 
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # Varsler Bing/IndexNow om alle URL-er i sitemap etter hver deploy —
+      # ChatGPT-browsing bruker Bing-indeksen, så rask indeksering der = GEO.
+      - name: IndexNow-ping (Bing)
+        if: success()
+        run: |
+          KEY=d6556a3e3dca895298f5bfa38c182269
+          URLS=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | jq -R . | jq -sc .)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"arcads.no\",\"key\":\"$KEY\",\"keyLocation\":\"https://arcads.no/$KEY.txt\",\"urlList\":$URLS}" \
+            -o /dev/null -w "IndexNow HTTP %{http_code}\n" || true

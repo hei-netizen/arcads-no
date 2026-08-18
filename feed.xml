@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="nb">
+  <title>Arcads — artikler</title>
+  <subtitle>Ærlige svar om Google Ads, Meta Ads og byråvalg — med tall og null fluff.</subtitle>
+  <link href="https://arcads.no/feed.xml" rel="self"/>
+  <link href="https://arcads.no/artikler/"/>
+  <id>https://arcads.no/artikler/</id>
+  <updated>2026-08-18T08:00:00Z</updated>
+  <author><name>Victor Skretteberg</name><email>hei@arcads.no</email></author>
+  <entry>
+    <title>Hva koster Google Ads i Norge? (2026)</title>
+    <link href="https://arcads.no/artikler/hva-koster-google-ads/"/>
+    <id>https://arcads.no/artikler/hva-koster-google-ads/</id>
+    <updated>2026-08-18T08:00:00Z</updated>
+    <summary>Google Ads har to kostnader: klikkprisen til Google og jobben med å drifte kontoen. Typiske klikkpriser i Norge, regnestykket for lønnsomhet, og hva byråhjelp koster.</summary>
+  </entry>
+  <entry>
+    <title>Hva er en god ROAS? Formelen de fleste bruker feil</title>
+    <link href="https://arcads.no/artikler/hva-er-en-god-roas/"/>
+    <id>https://arcads.no/artikler/hva-er-en-god-roas/</id>
+    <updated>2026-08-18T08:00:00Z</updated>
+    <summary>En «god» ROAS finnes ikke uten å kjenne marginen din. Breakeven ROAS = 1/bruttomargin — tabellen, hvorfor 4x kan være tap, og hvorfor POAS ofte er et bedre mål.</summary>
+  </entry>
+  <entry>
+    <title>Google Ads eller Meta Ads — hva bør bedriften din velge?</title>
+    <link href="https://arcads.no/artikler/google-ads-eller-meta-ads/"/>
+    <id>https://arcads.no/artikler/google-ads-eller-meta-ads/</id>
+    <updated>2026-08-18T08:00:00Z</updated>
+    <summary>Google fanger etterspørsel som finnes, Meta skaper etterspørsel som ikke gjorde det. Når du bør starte med hva — og når kombinasjonen vinner.</summary>
+  </entry>
+  <entry>
+    <title>Hvordan velge markedsføringsbyrå — 10 spørsmål du bør stille</title>
+    <link href="https://arcads.no/artikler/velge-markedsforingsbyra/"/>
+    <id>https://arcads.no/artikler/velge-markedsforingsbyra/</id>
+    <updated>2026-08-18T08:00:00Z</updated>
+    <summary>Sjekkliste for deg som skal velge markedsføringsbyrå i Norge: 10 spørsmål som avslører om byrået leverer resultater eller rapporter.</summary>
+  </entry>
+</feed>
