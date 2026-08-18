@@ -5,8 +5,22 @@
   <link href="https://arcads.no/feed.xml" rel="self"/>
   <link href="https://arcads.no/artikler/"/>
   <id>https://arcads.no/artikler/</id>
-  <updated>2026-08-18T12:00:00Z</updated>
+  <updated>2026-08-18T15:00:00Z</updated>
   <author><name>Victor Skretteberg</name><email>hei@arcads.no</email></author>
+  <entry>
+    <title>Digital markedsføring: hva som faktisk flytter tall i 2026</title>
+    <link href="https://arcads.no/artikler/digital-markedsforing/"/>
+    <id>https://arcads.no/artikler/digital-markedsforing/</id>
+    <updated>2026-08-18T15:00:00Z</updated>
+    <summary>En ærlig oversikt over kanalene, hva de koster, hva som passer for hvem — og rekkefølgen som funker.</summary>
+  </entry>
+  <entry>
+    <title>Google Shopping for nettbutikker: slik blir det lønnsomt</title>
+    <link href="https://arcads.no/artikler/google-shopping/"/>
+    <id>https://arcads.no/artikler/google-shopping/</id>
+    <updated>2026-08-18T15:00:00Z</updated>
+    <summary>Ofte nettbutikkens mest lønnsomme kanal — når feeden er ryddig og kampanjene måles på margin.</summary>
+  </entry>
   <entry>
     <title>Hva er UGC? Og hvorfor annonsene dine trenger det</title>
     <link href="https://arcads.no/artikler/hva-er-ugc/"/>

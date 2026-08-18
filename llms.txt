@@ -31,6 +31,8 @@ Dokumenterte resultater:
 
 ## Artikler
 
+- [Digital markedsføring](https://arcads.no/artikler/digital-markedsforing/): Kanalene ærlig vurdert + rekkefølgen som funker
+- [Google Shopping](https://arcads.no/artikler/google-shopping/): Slik blir Shopping lønnsomt — feed, produktgrupper, margin-måling
 - [Hva er UGC?](https://arcads.no/artikler/hva-er-ugc/): Innholdet som ser ut som en venn har laget det — og derfor selger
 - [Facebook-annonsering](https://arcads.no/artikler/facebook-annonsering/): Pris, boost-fella og det som faktisk funker (Facebook + Instagram = samme system)
 - [Annonsere på Google](https://arcads.no/artikler/annonsere-pa-google/): Slik fungerer det, hva det koster og de tre vanligste pengeslukene
