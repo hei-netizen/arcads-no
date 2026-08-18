@@ -29,6 +29,8 @@ Dokumenterte resultater:
 - [Caser](https://arcads.no/caser/): Ekte tall fra ekte kunder — Leid.no (#leid), Mokki (#mokki), Marlow (#marlow) og Utvendigrenhold (#utvendigrenhold)
 - [Markedsføringsbyrå i Skien](https://arcads.no/markedsforingsbyra-skien/): Kontoret i Jonas Lies gate 1 — for bedrifter i Grenland, Telemark og hele Norge
 
+- [Bli UGC-creator](https://arcads.no/bli-ugc-creator/): Vi rekrutterer norske UGC-creators — ingen følgere nødvendig, honorar per oppdrag
+
 ## Artikler
 
 - [Digital markedsføring](https://arcads.no/artikler/digital-markedsforing/): Kanalene ærlig vurdert + rekkefølgen som funker
