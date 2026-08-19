@@ -22,6 +22,9 @@
 <!-- Google tag (gtag.js) — Badstugutta -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11408967890"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-11408967890');</script>
+<!-- Google Analytics 4 (Arcads-property, i tillegg til klientens AW-konvertering) -->
+<script>gtag('config','G-XRR38FQQH7');</script>
+
 
 <!-- Meta Pixel — Badstugutta (dataset 1383226895916991 = «BG - Shopify/config») -->
 <script>
@@ -39,6 +42,7 @@ fbq('init','1383226895916991');fbq('track','PageView');
   }catch(e){}
   try{
     if(window.gtag){ gtag('event','conversion',{send_to:'AW-11408967890/oemjCIu-kKscENKRnMAq'}); }
+    try{ if(window.gtag) gtag('event','generate_lead',{method:'badstugutta-lp'}); }catch(e){}
   }catch(e){}
   try{ sessionStorage.setItem('bg_takk_fired','1'); }catch(e){}
 })();
