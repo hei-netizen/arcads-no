@@ -11,7 +11,7 @@
      mørke ink-CTA-er (grønn kun som aksent), flate editorial-flater.
      cal.com-booking nederst (#book).
      ============================================================ -->
-<meta name="description" content="Annonser som betaler for seg selv. 5000+ laget for norske merkevarer, 10+ nye i uka. 100% resultatbasert — du betaler først når de leverer. Book en gratis analyse.">
+<meta name="description" content="Annonser som betaler for seg selv. 5000+ laget for norske merkevarer, 10+ nye i uka. 100% resultatbasert — du betaler først når de leverer. Få en gratis videoanalyse.">
 <link rel="canonical" href="https://arcads.no/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arcads.no/">
@@ -268,8 +268,19 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .final .eyebrow{color:var(--accent)}
 .final h2{font-size:clamp(2rem,3.8vw,3rem);color:#fff;max-width:20ch;margin:14px auto 12px}
 .final p{color:var(--on-dark-dim);max-width:48ch;margin:0 auto 28px;font-size:1.06rem;line-height:1.55}
-.calcard{max-width:780px;margin:0 auto;background:var(--paper);border-radius:var(--r);padding:18px 16px 10px;text-align:left}
-.calwrap{width:100%;min-height:460px;border-radius:12px;background:#fff}
+.calcard{max-width:640px;margin:0 auto;background:var(--paper);border-radius:var(--r);padding:26px 24px 22px;text-align:left}
+/* ---- leadskjema (gratis videoanalyse) ---- */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:0.8rem;font-weight:700;margin-bottom:5px;color:var(--ink)}
+.field label .req{color:var(--accent-text)}
+.field input,.field select{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:var(--rs);background:var(--paper);font-family:var(--sans);font-size:0.96rem;color:var(--ink);caret-color:var(--accent-deep)}
+.field input:focus,.field select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.field input::placeholder{color:var(--faint)}
+#leadForm .cta{width:100%;margin-top:6px}
+#leadForm .cta[disabled]{opacity:.65;cursor:progress}
 .final .fine{font-size:0.84rem;color:var(--on-dark-dim);margin-top:16px;text-align:center}
 .final .fine a{color:#fff;font-weight:600}
 @media(max-width:620px){.final{padding:44px 18px 32px}.calcard{padding:10px 6px 6px}}
@@ -381,7 +392,7 @@ fbq('track','PageView');
       <a href="#caser" class="lnk">Caser</a>
       <a href="#omoss" class="lnk">Om oss</a>
       <a href="#resultater" class="lnk">Resultater</a>
-      <a href="#book" class="nav-cta"><span class="full">Book en gratis analyse</span><span class="short">Book analyse</span></a>
+      <a href="#book" class="nav-cta"><span class="full">Få gratis videoanalyse</span><span class="short">Gratis analyse</span></a>
     </nav>
   </div>
 </header>
@@ -393,7 +404,7 @@ fbq('track','PageView');
       <h1>Annonser som betaler for seg selv.</h1>
       <p class="sub">Vi har laget 5000+ annonser for norske merkevarer &mdash; og lager 10+ nye hver uke.<span class="brk"><b>Du betaler først når de leverer.</b> Hadde vi ikke klart det, hadde vi ikke turt å prise oss sånn.</span></p>
       <div class="cta-row">
-        <a href="#book" class="cta"><span class="t">Book en gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
+        <a href="#book" class="cta"><span class="t">Få gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a>
       </div>
       <div class="faces">
         <div class="pics">
@@ -478,7 +489,7 @@ fbq('track','PageView');
       <div class="cmt reveal hide-m"><span class="av">JA</span><div class="bub"><b>Joonas Andersson</b><span class="role">Elevate Productions</span><p>På vegne av Elevate Productions gir vi Victor og Jona våre beste anbefalinger. Disse leverer på et høyt nivå og skaper ekte resultater. Anbefales!</p></div></div>
       <div class="cmt reveal hide-m"><span class="av">TF</span><div class="bub"><b>Theo Floden</b><span class="role">Dittutstyr</span><p>Kan absolutt anbefale disse gutta. God kommunikasjon og gode resultater!</p></div></div>
     </div>
-<div class="center" style="margin-top:40px"><a href="#book" class="cta"><span class="t">Bli den neste på lista<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+<div class="center" style="margin-top:40px"><a href="#book" class="cta"><span class="t">Bli den neste på lista<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a></div>
   </div>
 </section>
 
@@ -521,7 +532,7 @@ fbq('track','PageView');
       </div>
     </div>
     <div class="mcta reveal">
-      <a href="#book" class="btn-white"><span class="t">Book en gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
+      <a href="#book" class="btn-white"><span class="t">Få gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a>
     </div>
   </div>
 </section>
@@ -552,7 +563,7 @@ fbq('track','PageView');
       </div>
     </div>
     <p class="ai-line reveal">Og ja &mdash; vi bruker AI tyngre enn noe annet norsk byrå vi kjenner til.<br>Det er sånn to karer leverer som et helt team.</p>
-<div class="center" style="margin-top:40px"><a href="#book" class="cta"><span class="t">Se hva vi kan gjøre for deg<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+<div class="center" style="margin-top:40px"><a href="#book" class="cta"><span class="t">Se hva vi kan gjøre for deg<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a></div>
   </div>
 </section>
 
@@ -581,7 +592,7 @@ fbq('track','PageView');
       </div>
     </div>
     <p class="founder-note reveal">To karer fra Skien med en usunn obsesjon for markedsføring.<br>Vi ble lei av byråer som fakturerer uansett om det funker &mdash; så vi bygde vårt eget.<br>Ingen mellomledd, ingen selgere. Du får oss.</p>
-<div class="center" style="margin-top:40px"><a href="#book" class="cta"><span class="t">Ta en prat med oss<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+<div class="center" style="margin-top:40px"><a href="#book" class="cta"><span class="t">Få gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a></div>
   </div>
 </section>
 
@@ -632,13 +643,13 @@ fbq('track','PageView');
       <h2 class="h-lg">Sånn kommer vi i gang.</h2>
     </div>
     <div class="pillars">
-      <div class="pill reveal"><div class="n">1</div><h3>Book en gratis analyse</h3><p>30 minutter. Vi går gjennom annonsekontoen din og viser hvor pengene lekker &mdash; før du har betalt en krone.</p></div>
+      <div class="pill reveal"><div class="n">1</div><h3>Få en gratis videoanalyse</h3><p>Vi går gjennom annonsekontoen din og sender deg en video som viser hvor pengene lekker &mdash; før du har betalt en krone.</p></div>
       <div class="pill reveal"><div class="n">2</div><h3>Vi bygger og lanserer</h3><p>Vi rigger sporing som måler salg &mdash; ikke klikk. De første annonsene dine er live innen 48 timer.</p></div>
       <div class="pill reveal"><div class="n">3</div><h3>Du betaler når det leverer</h3><p>Hver mandag ser du hva du brukte og hva du tjente. Resultatene avgjør fakturaen &mdash; ikke timene våre.</p></div>
     </div>
     <div class="center" style="margin-top:38px">
       <p class="lede" style="margin:0 auto 22px;max-width:62ch">Helt transparent: vi må tjene minimum 25&nbsp;000 kr i måneden per kunde for at det skal lønne seg for oss. Siden vi kun tar betalt av resultater, betyr det at vi må tjene deg enda mer enn det &mdash; hver eneste måned. Det er insentivet vårt.</p>
-      <a href="#book" class="cta"><span class="t">Book en gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
+      <a href="#book" class="cta"><span class="t">Få gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a>
     </div>
   </div>
 </section>
@@ -650,7 +661,7 @@ fbq('track','PageView');
       <h2 class="h-lg">Det folk lurer på før de booker.</h2>
     </div>
     <div class="faq reveal">
-      <details open><summary>Hva skjer i den første praten?<span class="pm">+</span></summary><div class="ans">30 minutter på video med Victor. Vi ser på annonsekontoen din sammen og viser konkret hva vi ville gjort annerledes. Ingen pitch, ingen forpliktelser &mdash; du sitter igjen med analysen uansett.</div></details>
+      <details open><summary>Hva får jeg i den gratis videoanalysen?<span class="pm">+</span></summary><div class="ans">Victor spiller inn 5&ndash;10 minutter der han går gjennom annonsene og nettsiden din på skjerm, og viser tre konkrete grep vi ville gjort først. Du får den på e-post innen 24 timer. Ingen pitch, ingen forpliktelser &mdash; analysen er din uansett hva du gjør videre. Vil du heller ta det live, kan du booke 30 minutter i stedet.</div></details>
       <details><summary>Hva betyr «100% resultatbasert»?<span class="pm">+</span></summary><div class="ans">At regningen henger på resultatene &mdash; ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten.</div></details>
       <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">Helt transparent: vi må tjene minimum 25&nbsp;000 kr i måneden per kunde for at det skal lønne seg for oss. Siden honoraret er 100% resultatbasert, betyr det at vi først må tjene deg enda mer enn det. Den nøyaktige modellen avtaler vi i den første praten.</div></details>
       <details><summary>Hvordan vet jeg at det er dere som skapte salget?<span class="pm">+</span></summary><div class="ans">Det første vi gjør er å rigge sporingen skikkelig (Google Ads, Meta Pixel og GA4). Da slipper du å ta vårt ord for noe som helst &mdash; du ser hvert salg svart på hvitt i mandagsrapporten.</div></details>
@@ -665,15 +676,24 @@ fbq('track','PageView');
   <div class="wrap">
     <div class="final reveal">
       <span id="prat"></span>
-      <span class="eyebrow">Gratis &amp; uforpliktende</span>
-      <h2>Book 30 minutter med Victor.</h2>
-      <p>Velg et tidspunkt, så tar vi en videoprat. Du får en ærlig gjennomgang av kontoen din &mdash; hva som funker, hva som brenner penger, og hva vi ville gjort. Den er din uansett.</p>
+      <span class="eyebrow">Gratis videoanalyse</span>
+      <h2>Se hva vi ville gjort &mdash; før du bestemmer deg.</h2>
+      <p>Victor spiller inn en video der han går gjennom annonsene dine og viser <b>tre konkrete grep</b> vi ville gjort først. Den lander i innboksen din innen 24 timer, og den er din å beholde &mdash; uansett hva du gjør videre.</p>
       <div class="calcard">
-        <!-- cal.com inline embed -->
-        <div class="calwrap" id="my-cal-inline-30min"></div>
+        <form id="leadForm" novalidate>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="frow">
+            <div class="field"><label for="l_name">Navn <span class="req">*</span></label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
+            <div class="field"><label for="l_site">Nettside <span class="req">*</span></label><input type="text" id="l_site" name="website" placeholder="bedriften.no" autocomplete="url" required></div>
+            <div class="field"><label for="l_email">E-post <span class="req">*</span></label><input type="email" id="l_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div>
+            <div class="field"><label for="l_phone">Telefon <span class="req">*</span></label><input type="tel" id="l_phone" name="phone" placeholder="Så vi får tak i deg" autocomplete="tel" required></div>
+          </div>
+          <div class="field"><label for="l_budget">Omsetning i året</label><select id="l_budget" name="budget"><option value="">Velg (valgfritt)</option><option>Under 2 mill</option><option>2&ndash;10 mill</option><option>10&ndash;50 mill</option><option>Over 50 mill</option></select></div>
+          <button type="submit" class="cta" id="leadBtn"><span class="t">Få min gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></button>
+        </form>
       </div>
-      <p class="fine">Gratis &middot; ingen binding &middot; du velger tidspunktet</p>
-      <p class="fine" style="margin-top:8px">Passer ingen tidspunkt? <a href="mailto:victor@arcads.no">victor@arcads.no</a></p>
+      <p class="fine">Gratis &middot; ingen binding &middot; vi deler aldri infoen din</p>
+      <p class="fine" style="margin-top:8px">Vil du heller ta praten direkte? <a href="https://cal.com/arcads/30min">Book 30 minutter i kalenderen &rarr;</a></p>
     </div>
   </div>
 </section>
@@ -727,27 +747,51 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
 
-<!-- Cal inline embed code begins -->
-<script type="text/javascript">
-  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-Cal("init", "30min", {origin:"https://app.cal.com"});
-Cal.config = Cal.config || {};
-Cal.config.forwardQueryParams = true;
-
-  Cal.ns["30min"]("inline", {
-    elementOrSelector:"#my-cal-inline-30min",
-    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-    calLink: "arcads/30min",
+<!-- ===== LEADSKJEMA -> Make-webhook -> /takk/ =====
+     Konvertering fires på /takk/ (én gang, ingen dobbelttelling herfra). -->
+<script>
+(function(){
+  var HOOK='https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi';
+  var LEAD_SOURCE='arcads-forside';
+  var f=document.getElementById('leadForm');
+  if(!f)return;
+  var btn=document.getElementById('leadBtn');
+  var sent=false;
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    if(sent)return;
+    if(f.company.value){sent=true;location.href='/takk/';return;} /* honeypot */
+    if(!f.name.value.trim()||!f.email.value.includes('@')||!f.phone.value.trim()||!f.website.value.trim()){
+      if(f.reportValidity)f.reportValidity();
+      return;
+    }
+    sent=true;
+    btn.disabled=true;
+    btn.querySelector('.t').childNodes[0].nodeValue='Sender…';
+    var b=new URLSearchParams({
+      subject:'Nytt lead - Arcads LP',
+      lead_source:LEAD_SOURCE,
+      name:f.name.value.trim(),
+      email:f.email.value.trim(),
+      phone:f.phone.value.trim(),
+      website:f.website.value.trim(),
+      budget:f.budget.value,
+      page_url:location.href,
+      user_agent:navigator.userAgent,
+      _ts:Date.now()
+    });
+    function go(){location.href='/takk/';}
+    /* sendBeacon overlever navigasjon; fetch som fallback */
+    try{ if(navigator.sendBeacon && navigator.sendBeacon(HOOK,b)){ go(); return; } }catch(e){}
+    fetch(HOOK,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()})
+      .then(go,function(){ sent=false; btn.disabled=false; alert('Noe gikk galt - prøv igjen, eller send en mail til victor@arcads.no'); });
   });
-
-  Cal.ns["30min"]("ui", {"theme":"light","hideEventTypeDetails":true,"layout":"month_view","cssVarsPerTheme":{"light":{"cal-brand":"#00a25a"}}});
-  Cal.ns["30min"]("on", {action:"bookingSuccessful", callback: function(){ try{ if(window.fbq) fbq('track','Schedule',{content_name:'cal-30min'}); }catch(e){} try{ if(window.gtag) gtag('event','generate_lead',{method:'cal-booking'}); }catch(e){} }});
+})();
 </script>
-<!-- Cal inline embed code ends -->
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Hva skjer i den første praten?","acceptedAnswer":{"@type":"Answer","text":"30 minutter på video med Victor. Vi ser på annonsekontoen din sammen og viser konkret hva vi ville gjort annerledes. Ingen pitch, ingen forpliktelser — du sitter igjen med analysen uansett."}},
+{"@type":"Question","name":"Hva får jeg i den gratis videoanalysen?","acceptedAnswer":{"@type":"Answer","text":"Victor spiller inn 5-10 minutter der han går gjennom annonsene og nettsiden din på skjerm, og viser tre konkrete grep vi ville gjort først. Du får den på e-post innen 24 timer. Ingen pitch, ingen forpliktelser — analysen er din uansett hva du gjør videre. Vil du heller ta det live, kan du booke 30 minutter i stedet."}},
 {"@type":"Question","name":"Hva betyr 100% resultatbasert?","acceptedAnswer":{"@type":"Answer","text":"At regningen henger på resultatene — ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten."}},
 {"@type":"Question","name":"Hva koster det?","acceptedAnswer":{"@type":"Answer","text":"Vi må tjene minimum 25 000 kr i måneden per kunde for at det skal lønne seg for oss. Siden honoraret er 100% resultatbasert, betyr det at vi først må tjene deg enda mer enn det. Den nøyaktige modellen avtaler vi i den første praten."}},
 {"@type":"Question","name":"Hvordan vet jeg at det er dere som skapte salget?","acceptedAnswer":{"@type":"Answer","text":"Det første vi gjør er å rigge sporingen skikkelig (Google Ads, Meta Pixel og GA4). Da slipper du å ta vårt ord for noe som helst — du ser hvert salg svart på hvitt i mandagsrapporten."}},
