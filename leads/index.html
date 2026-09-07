@@ -110,6 +110,24 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .faces .ftxt{text-align:left;font-size:0.88rem;color:var(--muted);line-height:1.4}
 .faces .ftxt b{font-family:var(--disp);color:var(--ink);font-weight:700;letter-spacing:-0.02em;display:block}
 
+/* wizard (Badstugutta-stil) */
+.qual{margin-bottom:12px}
+.qual .q{font-size:0.86rem;font-weight:700;margin-bottom:7px}
+.qual .opts{display:flex;flex-wrap:wrap;gap:7px}
+.qual .opt{border:1.5px solid var(--line);background:var(--surface);border-radius:var(--pill);padding:9px 15px;font-size:0.88rem;font-weight:600;cursor:pointer;transition:.15s;font-family:var(--sans);color:var(--ink)}
+.qual .opt:hover{border-color:var(--accent-deep)}
+.qual .opt.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.ferr{display:none;font-size:0.78rem;font-weight:600;color:var(--red);margin:2px 0 8px}
+.wstep{display:none}
+.wstep.on{display:block;animation:wfade .25s ease}
+@keyframes wfade{from{opacity:0;transform:translateX(10px)}to{opacity:1;transform:none}}
+.wprog{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.wprog .wtxt{font-size:0.72rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.wprog .bar{flex:1;height:3px;background:var(--line);border-radius:3px;overflow:hidden}
+.wprog .bar i{display:block;height:100%;background:var(--accent);transition:.3s}
+.wback{display:block;margin:10px auto 0;background:none;border:0;font-family:var(--sans);font-size:0.76rem;font-weight:600;color:var(--muted);cursor:pointer;text-decoration:underline}
+.qsum{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.qsum b{background:var(--accent-soft);color:var(--accent-deep);font-size:0.72rem;font-weight:700;border-radius:var(--pill);padding:4px 10px}
 /* hero form card */
 .formcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh)}
 .formcard .fhead b{display:block;font-family:var(--disp);font-size:1.28rem;font-weight:800;letter-spacing:-0.01em}
@@ -328,21 +346,15 @@ fbq('track','PageView');
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">For bedrifter som lever av henvendelser</span>
-        <h1 class="h-xl">Flere henvendelser til bedriften din. Du betaler først når de kommer.</h1>
-        <p class="lede">Vi bygger annonsene <b>og</b> landingssiden folk lander på &mdash; hele maskinen som gjør klikk om til jobber i innboksen din.</p>
-        <div class="forwho">
-          <span>Håndverk &amp; bygg</span><span>Klinikk &amp; helse</span><span>Flytting &amp; renhold</span><span>Finans</span><span>Lokale tjenester</span>
-        </div>
+        <h1 class="h-xl">Flere henvendelser til bedriften din &mdash; du betaler først når de kommer</h1>
         <ul class="blist">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Egen landingsside per tjeneste &mdash; og per by hvis du er lokal</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Annonser på Google og Meta &mdash; 10+ nye i uka, alt lager vi selv</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Hvert lead rett til deg samme minutt &mdash; ikke i en rapport neste uke</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mandagsrapport: hva du brukte, hvor mange henvendelser det ga</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Annonser + egen landingsside &mdash; hele maskinen</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Hvert lead rett på mobilen din, samme minutt</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> For håndverk, klinikker og tjenestebedrifter</li>
         </ul>
         <div class="priceblock">
-          <span class="ord">Andre byråer: <s>fast honorar uansett om det kommer leads</s></span>
-          <span class="now">Hos oss: 0 kr før henvendelsene kommer</span>
+          <span class="ord">Andre byråer: <s>fast honorar uansett</s></span>
+          <span class="now">Hos oss: 0 kr før leadsene kommer</span>
         </div>
         <div class="faces">
           <div class="pics">
@@ -355,49 +367,46 @@ fbq('track','PageView');
 
       <div class="hero-form">
         <div class="formcard" id="book">
-          <!-- STEG 1: lead-skjema (kvalifiserende) -->
           <div id="leadStep">
-            <div class="fhead"><b>Få en gratis lead-analyse</b><span>Vi ser på hvor henvendelsene lekker i dag &mdash; og hva vi ville gjort. Victor tar kontakt, eller book tid rett etterpå.</span></div>
+            <div class="fhead"><b>Få en gratis lead-analyse</b><span>Tre raske spørsmål &mdash; så ringer Victor deg. Helt uforpliktende.</span></div>
             <div class="fmsg" id="formMsg">Takk! Du kan booke tid med en gang under.</div>
             <form id="leadForm" novalidate>
-              <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div></div>
-              <div class="f2">
+              <div class="wprog"><span class="wtxt" id="wTxt">1 av 3</span><span class="bar"><i id="wBar" style="width:33%"></i></span></div>
+              <div class="wstep on">
+                <div class="qual" data-key="industry">
+                  <div class="q">Hva driver du med?</div>
+                  <div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button></div>
+                </div>
+              </div>
+              <div class="wstep">
+                <div class="qual" data-key="budget">
+                  <div class="q">Hvor mye bruker du på annonser i måneden?</div>
+                  <div class="opts"><button type="button" class="opt" data-v="ingen">Annonserer ikke ennå</button><button type="button" class="opt" data-v="under-10k">Under 10 000</button><button type="button" class="opt" data-v="10-20k">10&ndash;20 000</button><button type="button" class="opt" data-v="20-50k">20&ndash;50 000</button><button type="button" class="opt" data-v="50k+">Over 50 000</button></div>
+                </div>
+                <div class="qual" data-key="goal">
+                  <div class="q">Hva vil du ha mer av?</div>
+                  <div class="opts"><button type="button" class="opt" data-v="henvendelser">Henvendelser / tilbud</button><button type="button" class="opt" data-v="bookinger">Bookinger</button><button type="button" class="opt" data-v="telefoner">Telefoner</button><button type="button" class="opt" data-v="usikker">Usikker</button></div>
+                </div>
+              </div>
+              <div class="wstep">
+                <div class="qsum" id="qSum"></div>
+                <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Navnet ditt" autocomplete="name" required></div></div>
                 <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" required></div></div>
                 <div class="field"><label for="h_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="h_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div></div>
+                <div class="field"><label for="h_web">Nettside <span class="opt">(valgfritt)</span></label><div class="inp"><input type="text" id="h_web" name="website" placeholder="dinbedrift.no"></div></div>
+                <div class="ferr" id="formErr"></div>
+                <button type="submit" class="cta"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
               </div>
-              <div class="f2">
-                <div class="field"><label for="h_industry">Bransje <span class="req">*</span></label><div class="inp sel"><select id="h_industry" name="industry" class="empty" required>
-                  <option value="" disabled selected>Velg bransje</option>
-                  <option value="handverk">Håndverk / bygg</option>
-                  <option value="klinikk">Klinikk / helse</option>
-                  <option value="flytting-renhold">Flytting / renhold</option>
-                  <option value="finans">Finans / forsikring</option>
-                  <option value="tjeneste">Annen tjenestebedrift</option>
-                  <option value="nettbutikk">Nettbutikk / produkt</option>
-                </select></div></div>
-                <div class="field"><label for="h_budget">Annonsebudsjett i dag <span class="req">*</span></label><div class="inp sel"><select id="h_budget" name="budget" class="empty" required>
-                  <option value="" disabled selected>Per måned</option>
-                  <option value="ingen">Annonserer ikke ennå</option>
-                  <option value="under-10k">Under 10 000 kr</option>
-                  <option value="10-20k">10 000 &ndash; 20 000 kr</option>
-                  <option value="20-50k">20 000 &ndash; 50 000 kr</option>
-                  <option value="50k+">Over 50 000 kr</option>
-                </select></div></div>
-              </div>
-              <div class="field"><label for="h_web">Nettside <span class="opt">(valgfritt)</span></label><div class="inp"><input type="text" id="h_web" name="website" placeholder="dinbedrift.no" autocomplete="url"></div></div>
-              <button type="submit" class="cta"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
+              <button type="button" class="wback" id="wBack" style="display:none">&larr; Tilbake</button>
+              <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal">
             </form>
-            <div class="fine">
-              <span>Vi deler aldri detaljene dine med noen andre.</span>
-              <span style="font-size:0.71rem">Analysen er din uansett &middot; ingen binding.</span>
-            </div>
+            <div class="fine"><span>Vi deler aldri opplysningene dine med noen andre.</span></div>
           </div>
-          <!-- STEG 2: booking (avsløres etter at leaden er sendt) -->
           <div id="bookStep" style="display:none">
-            <div class="fhead"><b id="bookThanks">Takk!</b><span>Vil du sette av tid med en gang? Velg et tidspunkt &mdash; 30 minutter med Victor.</span></div>
+            <div class="fhead"><b id="bookThanks">Takk!</b><span>Vil du velge tidspunkt selv? 30 minutter med Victor.</span></div>
             <div class="calwrap" id="my-cal-inline-30min"></div>
-            <div class="fine"><span>Victor tar uansett kontakt &mdash; bookingen er bare for å gå raskere.</span></div>
+            <div class="fine"><span>Victor ringer deg uansett &mdash; bookingen er bare for å gå raskere.</span></div>
           </div>
         </div>
       </div>
@@ -434,42 +443,40 @@ fbq('track','PageView');
       </div>
       <div class="reveal">
         <span class="eyebrow">Hvorfor velger tjenestebedrifter Arcads?</span>
-        <h2 class="h-lg" style="margin:12px 0 8px">Fordi vi tar regningen når telefonen ikke ringer.</h2>
-        <p class="lede" style="margin-bottom:30px">To karer fra Skien som gjør hele jobben selv &mdash; og tør å la betalingen henge på om det faktisk kommer henvendelser.</p>
+        <h2 class="h-lg" style="margin:12px 0 8px">Flere jobber i innboksen er enklere enn du tror&hellip;</h2>
+        <p class="lede" style="margin-bottom:30px">&hellip; og det starter med en gratis lead-analyse.</p>
         <ul class="feat">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>100% resultatbasert</h4><p>Kommer det ikke henvendelser, betaler du ikke. Så enkel er modellen.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Hele maskinen, ikke bare annonser</h4><p>Landingsside, annonser, sporing og varsling. Det er kombinasjonen som gjør at det funker igjen og igjen.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vi gj&oslash;r alt selv &mdash; ingen mellomledd</h4><p>Du snakker direkte med de to som bygger siden og lager annonsene.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Tall du faktisk forstår</h4><p>Mandagsrapporten viser antall henvendelser og hva hver av dem kostet. Ikke visninger.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>100% resultatbasert</h4><p>Kommer det ikke henvendelser, betaler du ikke.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vi bygger hele maskinen</h4><p>Landingsside, annonser, sporing og varsling.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Ingen mellomledd</h4><p>Du snakker med de to som gjør jobben.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Mandagsrapport hver uke</h4><p>Brukt, henvendelser, pris per henvendelse. Ferdig.</p></div></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== MASKINEN (system + varsel-feed) ===== -->
+<!-- ===== MASKINEN ===== -->
 <section class="section">
   <div class="wrap">
     <div class="center" style="max-width:640px;margin:0 auto">
       <span class="eyebrow">Sånn funker det</span>
       <h2 class="h-lg" style="margin-top:12px">Klikk inn. Henvendelse ut. Samme minutt.</h2>
-      <p class="lede" style="margin:12px auto 0">De fleste byråer sender trafikk til forsiden din og krysser fingrene. Vi bygger hele veien fra annonse til innboks.</p>
     </div>
     <div class="machine">
       <ol class="steps reveal">
-        <li><span class="num"></span><div><h4>Egen landingsside for tjenesten din</h4><p>Ikke forsiden. Én side, ett budskap, ett skjema &mdash; bygget for å gjøre besøk om til henvendelser. Er du lokal, lager vi én per by.</p></div></li>
-        <li><span class="num"></span><div><h4>Annonser på Google og Meta</h4><p>Google fanger dem som søker etter tjenesten nå. Meta finner dem som trenger den, men ikke har søkt ennå. 10+ nye annonser i uka.</p></div></li>
-        <li><span class="num"></span><div><h4>Leadet lander hos deg med en gang</h4><p>Navn, telefon og hva de trenger &mdash; rett på mobilen din samme minutt. Den som ringer først, får jobben.</p></div></li>
-        <li><span class="num"></span><div><h4>Mandagsrapport hver uke</h4><p>Hva du brukte, hvor mange henvendelser det ga, og hva hver av dem kostet. Tre tall. Ingen fluff.</p></div></li>
+        <li><span class="num"></span><div><h4>Egen landingsside for tjenesten din</h4><p>Ikke forsiden. Én side, ett skjema. Lokal? Én per by.</p></div></li>
+        <li><span class="num"></span><div><h4>Annonser på Google og Meta</h4><p>10+ nye i uka. Alt lager vi selv.</p></div></li>
+        <li><span class="num"></span><div><h4>Leadet lander hos deg med en gang</h4><p>Navn, telefon og hva de trenger. Den som ringer først, får jobben.</p></div></li>
       </ol>
       <div class="reveal">
         <div class="phone" aria-label="Illustrasjon av lead-varsler på mobil">
           <div class="ph-top"><b>Lead-varsler</b><span>i dag</span></div>
-          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>09:12</span></div><div class="nt">Takvask &middot; Drammen</div><div class="nb">Enebolig, ønsker befaring denne uka &middot; tlf + e-post</div></div>
-          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>10:47</span></div><div class="nt">Flyttevask &middot; Oslo vest</div><div class="nb">3-roms, utflytting 28. &middot; ber om pris</div></div>
-          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>13:05</span></div><div class="nt">Konsultasjon &middot; klinikk</div><div class="nb">Vil booke time, foretrekker ettermiddag</div></div>
+          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>09:12</span></div><div class="nt">Takvask &middot; Drammen</div><div class="nb">Enebolig, ønsker befaring denne uka</div></div>
+          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>10:47</span></div><div class="nt">Flyttevask &middot; Oslo vest</div><div class="nb">3-roms, utflytting 28.</div></div>
+          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>13:05</span></div><div class="nt">Konsultasjon &middot; klinikk</div><div class="nb">Vil booke time</div></div>
           <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>15:31</span></div><div class="nt">Fasadevask &middot; Skien</div><div class="nb">Næringsbygg, ønsker tilbud</div></div>
-          <div class="ph-cap">Illustrasjon av varslene kundene våre får. Ekte tall står i casene under.</div>
+          <div class="ph-cap">Illustrasjon. Ekte tall står i casene under.</div>
         </div>
       </div>
     </div>
@@ -482,10 +489,9 @@ fbq('track','PageView');
     <span class="eyebrow">Kjenner du deg igjen?</span>
     <h2 class="h-lg" style="margin-top:12px">Dette slipper du hos oss&hellip;</h2>
     <div class="pain">
-      <div class="row reveal"><span class="x">&#10005;</span> Byrået sender trafikk til forsiden din &mdash; og ingen ringer</div>
-      <div class="row reveal"><span class="x">&#10005;</span> Du vet hva annonsene koster, men ikke hva en henvendelse koster</div>
-      <div class="row reveal"><span class="x">&#10005;</span> Leads kommer i en rapport en uke etterpå &mdash; når de alt har valgt en annen</div>
-      <div class="row reveal"><span class="x">&#10005;</span> Samme faktura i en måned med tre henvendelser som i en med tretti</div>
+      <div class="row reveal"><span class="x">&#10005;</span> Slutt på trafikk til forsiden &mdash; uten at noen ringer</div>
+      <div class="row reveal"><span class="x">&#10005;</span> Slutt på rapporter med klikk &mdash; uten henvendelser</div>
+      <div class="row reveal"><span class="x">&#10005;</span> Slutt på fakturaer i måneder uten leads</div>
     </div>
   </div>
 </section>
@@ -496,7 +502,7 @@ fbq('track','PageView');
     <div class="darkband reveal">
       <span class="eyebrow">&mdash; Gratis lead-analyse &mdash;</span>
       <h2 class="h-lg">Vi viser deg hvor henvendelsene lekker. Gratis.</h2>
-      <p>30 minutter med Victor. Vi går gjennom annonsene og siden folk lander på i dag, og viser konkret hva vi ville bygget for din bedrift &mdash; analysen er din uansett.</p>
+      <p>30 minutter med Victor. Vi viser hva vi ville bygget for din bedrift &mdash; analysen er din uansett.</p>
       <div class="codebox"><b>Gratis lead-analyse</b> <span class="hl">&rarr; 30 minutter &middot; uforpliktende &middot; ingen binding</span></div>
       <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
       <p class="micro">100% resultatbasert &middot; du betaler først når henvendelsene kommer</p>
@@ -514,12 +520,11 @@ fbq('track','PageView');
     <div class="inc-card reveal">
       <div class="body">
         <ul class="inc-list">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>Landingsside per tjeneste</b> &mdash; og per by hvis du er lokal</span></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Google Søk + Meta-annonser &mdash; 10+ nye i uka, laget av oss</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Lead-varsling til mobilen din samme minutt</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Sporing som faktisk teller henvendelser &mdash; ikke klikk</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Mandagsrapport: brukt, henvendelser, kostnad per henvendelse</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>0 kr oppstart, ingen binding</b> &mdash; du betaler først når det leverer</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>Landingsside</b> per tjeneste &mdash; og per by</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Google + Meta-annonser &mdash; 10+ nye i uka</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Lead-varsling til mobilen samme minutt</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Sporing som teller henvendelser &mdash; ikke klikk</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>0 kr oppstart</b> &middot; ingen binding</span></li>
         </ul>
         <div class="pricebar">
           <span class="ord">Første steg er en gratis lead-analyse:</span>
@@ -544,7 +549,7 @@ fbq('track','PageView');
         <div class="metric">142</div>
         <div class="ms">leads p&aring; &eacute;n uke &middot; 194 kr per lead</div>
         <div class="ch">Egen kampanje og side per lokasjon</div>
-        <div class="desc">Tak- og fasadevask over hele Norge &mdash; 9 lokasjoner med lokal styring p&aring; Meta og Google.</div>
+        <div class="desc">Tak- og fasadevask, 9 lokasjoner i Norge.</div>
         <div class="tag">Utvendigrenhold &middot; Franchise</div>
       </div>
       <div class="casecard reveal">
@@ -552,7 +557,7 @@ fbq('track','PageView');
         <div class="metric">165 <span class="u">kr</span></div>
         <div class="ms">per lead p&aring; Meta &middot; 13 leads p&aring; &eacute;n uke</div>
         <div class="ch">Ny landingsside ble lead-motoren</div>
-        <div class="desc">Skreddersydde badstuer. Vi bygde en egen side for Meta-trafikken &mdash; kostnad per lead falt til en br&oslash;kdel av Google.</div>
+        <div class="desc">Egen side for Meta-trafikken. Pris per lead: en br&oslash;kdel av Google.</div>
         <div class="tag">Badstugutta &middot; H&aring;ndverk</div>
       </div>
       <div class="casecard reveal">
@@ -560,7 +565,7 @@ fbq('track','PageView');
         <div class="metric">0 <span class="u">&rarr;</span> 11</div>
         <div class="ms">leads i uka &middot; CPL &pound;17</div>
         <div class="ch">Fra null sporing til leads hver uke</div>
-        <div class="desc">Kontoen hadde aldri m&aring;lt ett lead. Vi bygde sporing, landingssider og annonser fra bunnen.</div>
+        <div class="desc">Kontoen hadde aldri m&aring;lt ett lead. Vi bygde alt fra bunnen.</div>
         <div class="tag">Marlow &middot; Tannklinikk (UK)</div>
       </div>
       <div class="casecard reveal">
@@ -568,7 +573,7 @@ fbq('track','PageView');
         <div class="metric">181 <span class="u">kr</span></div>
         <div class="ms">per lead &middot; m&aring;l var 300</div>
         <div class="ch">Flyttevask i Oslo, uke etter uke</div>
-        <div class="desc">Google S&oslash;k og PMax med egne landingssider per tjeneste &mdash; godt under kundens m&aring;l per henvendelse.</div>
+        <div class="desc">Google S&oslash;k med egne sider per tjeneste.</div>
         <div class="tag">Veldigrent &middot; Renhold</div>
       </div>
     </div>
@@ -622,15 +627,14 @@ fbq('track','PageView');
     <div class="center reveal" style="max-width:640px;margin:0 auto">
       <span class="eyebrow">Vi tar ikke alle</span>
       <h2 class="h-lg" style="margin:12px 0 10px">Det passer for deg hvis&hellip;</h2>
-      <p class="lede" style="margin:0 auto 28px">100% resultatbasert funker bare n&aring;r vi er sikre p&aring; at vi kan skaffe deg henvendelser som l&oslash;nner seg. Helt transparent: vi m&aring; tjene deg godt over 25&nbsp;000 kr i m&aring;neden for at det skal l&oslash;nne seg for oss. Vi passer sammen hvis du:</p>
+      <p class="lede" style="margin:0 auto 28px">Vi tjener bare n&aring;r du tjener. Derfor passer vi sammen hvis du:</p>
     </div>
-    <ul class="feat reveal" style="max-width:600px;margin:0 auto;text-align:left">
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Lever av henvendelser</h4><p>H&aring;ndverk, bygg, klinikk, flytting, renhold, finans eller andre tjenester der en henvendelse blir til en jobb.</p></div></li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Har kapasitet til flere jobber n&aring;</h4><p>Leads du ikke rekker &aring; f&oslash;lge opp, er penger ut av vinduet &mdash; for oss begge.</p></div></li>
+    <ul class="feat reveal" style="max-width:560px;margin:0 auto;text-align:left">
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Lever av henvendelser &mdash; h&aring;ndverk, klinikk, tjenester</h4></div></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Har kapasitet til flere jobber n&aring;</h4></div></li>
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Bruker 20&nbsp;000+ kr/mnd p&aring; annonser &mdash; eller er klar for det</h4></div></li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vil m&aring;les p&aring; kostnad per henvendelse &mdash; ikke p&aring; klikk</h4></div></li>
     </ul>
-    <div class="notfor reveal">Selger du fysiske produkter i nettbutikk? Da er <a href="/analyse/">denne siden</a> laget for deg.</div>
+    <div class="notfor reveal">Nettbutikk? <a href="/analyse/">Denne siden</a> er for deg.</div>
     <div style="margin-top:34px;text-align:center" class="reveal"><a href="#book" class="cta jump"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
   </div>
 </section>
@@ -643,11 +647,11 @@ fbq('track','PageView');
       <h2 class="h-lg" style="margin-top:12px">Det folk lurer på før de tar kontakt</h2>
     </div>
     <div class="faq reveal">
-      <details open><summary>Hva skjer i den første praten?<span class="pm">+</span></summary><div class="ans">30 minutter på video med Victor. Vi ser på annonsene dine og siden folk lander på i dag, og viser konkret hva vi ville bygget for din bedrift. Ingen pitch, ingen forpliktelser &mdash; du sitter igjen med analysen uansett.</div></details>
-      <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">Null oppstart og ingen binding. Vi tar betalt n&aring;r henvendelsene kommer &mdash; ikke f&oslash;r. Helt transparent: vi m&aring; tjene deg godt over 25&nbsp;000 kr i m&aring;neden for at det skal l&oslash;nne seg for oss, s&aring; insentivet v&aring;rt er &aring; skaffe deg mest mulig. Den n&oslash;yaktige modellen avtaler vi i den f&oslash;rste praten.</div></details>
-      <details><summary>Trenger jeg ny nettside?<span class="pm">+</span></summary><div class="ans">Nei. Vi bygger en egen landingsside for tjenesten din som annonsene sender folk til. Nettsiden din st&aring;r ur&oslash;rt.</div></details>
-      <details><summary>Hvor fort kommer de f&oslash;rste henvendelsene?<span class="pm">+</span></summary><div class="ans">Typisk 48 timer fra brief til f&oslash;rste ferdige annonse, og landingssiden er oppe i l&oslash;pet av f&oslash;rste uke. Google S&oslash;k gir som regel de f&oslash;rste henvendelsene innen f&aring; dager; Meta trenger litt lengre tid p&aring; &aring; l&aelig;re.</div></details>
-      <details><summary>Hvordan vet jeg at det er dere som skaffet henvendelsen?<span class="pm">+</span></summary><div class="ans">Hvert lead fra siden v&aring;r g&aring;r rett til deg med navn, telefon og hva de trenger, og vi rigger sporingen i Google Ads og Meta f&oslash;rst. Du ser hver henvendelse svart p&aring; hvitt i mandagsrapporten &mdash; du trenger ikke ta v&aring;rt ord for noe.</div></details>
+      <details open><summary>Hva skjer i den første praten?<span class="pm">+</span></summary><div class="ans">30 minutter med Victor. Vi viser hva vi ville bygget for deg. Ingen pitch. Analysen er din uansett.</div></details>
+      <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">0 kr oppstart, ingen binding. Vi tar betalt n&aring;r henvendelsene kommer. Modellen avtaler vi i den f&oslash;rste praten.</div></details>
+      <details><summary>Trenger jeg ny nettside?<span class="pm">+</span></summary><div class="ans">Nei. Vi bygger en egen landingsside. Nettsiden din st&aring;r ur&oslash;rt.</div></details>
+      <details><summary>Hvor fort kommer de f&oslash;rste henvendelsene?<span class="pm">+</span></summary><div class="ans">Annonser p&aring; 48 timer, side i l&oslash;pet av f&oslash;rste uke. Google gir som regel leads innen f&aring; dager.</div></details>
+      <details><summary>Hvordan vet jeg at det er dere som skaffet leadet?<span class="pm">+</span></summary><div class="ans">Hvert lead g&aring;r rett til deg med navn og telefon, og du ser alt i mandagsrapporten.</div></details>
       <details><summary>Er det binding?<span class="pm">+</span></summary><div class="ans">Nei. Vi vinner deg på resultater, ikke på kontrakter.</div></details>
     </div>
   </div>
@@ -679,9 +683,8 @@ fbq('track','PageView');
       <button class="close" id="popupClose" aria-label="Lukk">&#10005;</button>
       <div class="center">
         <h3 style="font-size:2rem;line-height:1.05;margin:4px 0 4px">Før du går!</h3>
-        <p style="font-size:1.02rem;color:var(--muted);margin-bottom:20px">Få en gratis analyse av hvor henvendelsene lekker</p>
+        <p style="font-size:1.02rem;color:var(--muted);margin-bottom:20px">Få en gratis lead-analyse av bedriften din</p>
         <ul style="list-style:none;display:grid;gap:11px;justify-items:center;margin-bottom:22px">
-          <li style="display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:var(--ink2)"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Annonser + landingsside &mdash; hele maskinen</li>
           <li style="display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:var(--ink2)"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; <b>0 kr før leadsene kommer</b></li>
         </ul>
       </div>
@@ -692,25 +695,10 @@ fbq('track','PageView');
           <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" required></div></div>
           <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
         </div>
-        <div class="f2">
-          <div class="field"><label for="m_industry">Bransje <span class="req">*</span></label><div class="inp sel"><select id="m_industry" name="industry" class="empty" required>
-            <option value="" disabled selected>Velg bransje</option>
-            <option value="handverk">Håndverk / bygg</option>
-            <option value="klinikk">Klinikk / helse</option>
-            <option value="flytting-renhold">Flytting / renhold</option>
-            <option value="finans">Finans / forsikring</option>
-            <option value="tjeneste">Annen tjenestebedrift</option>
-            <option value="nettbutikk">Nettbutikk / produkt</option>
-          </select></div></div>
-          <div class="field"><label for="m_budget">Annonsebudsjett <span class="req">*</span></label><div class="inp sel"><select id="m_budget" name="budget" class="empty" required>
-            <option value="" disabled selected>Per måned</option>
-            <option value="ingen">Annonserer ikke ennå</option>
-            <option value="under-10k">Under 10 000 kr</option>
-            <option value="10-20k">10 000 &ndash; 20 000 kr</option>
-            <option value="20-50k">20 000 &ndash; 50 000 kr</option>
-            <option value="50k+">Over 50 000 kr</option>
-          </select></div></div>
-        </div>
+        <div class="qual" data-key="industry"><div class="q">Hva driver du med?</div><div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button></div></div>
+        <div class="qual" data-key="budget"><div class="q">Annonsebudsjett i måneden?</div><div class="opts"><button type="button" class="opt" data-v="ingen">Ingen ennå</button><button type="button" class="opt" data-v="under-10k">Under 10 000</button><button type="button" class="opt" data-v="10-20k">10&ndash;20 000</button><button type="button" class="opt" data-v="20-50k">20&ndash;50 000</button><button type="button" class="opt" data-v="50k+">Over 50 000</button></div></div>
+        <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal">
+        <div class="ferr" id="formErrModal"></div>
         <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
         <p style="font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center">Vi deler aldri detaljene dine med noen andre.</p>
       </form>
@@ -734,8 +722,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
-/* ---- select-placeholder-farge ---- */
-document.querySelectorAll('select').forEach(function(s){s.addEventListener('change',function(){s.classList.toggle('empty',!s.value);});});
 
 /* ===== lead submit → Make (+ on-device backup) ===== */
 function postTo(url,obj){if(!url)return;var b=new URLSearchParams();for(var k in obj){if(obj.hasOwnProperty(k)&&k.charAt(0)!=='_')b.append(k,obj[k]);}try{if(navigator.sendBeacon&&navigator.sendBeacon(url,b))return;}catch(e){}try{fetch(url,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()});}catch(e){}}
@@ -755,11 +741,14 @@ function revealBooking(name){
 }
 function submitLead(f,msgEl,extraSource,onDone){
   if(f.company&&f.company.value){if(msgEl)msgEl.style.display='block';f.reset();return;} /* honeypot */
-  if(!f.name.value||!f.phone.value||!f.email.value||!f.industry.value||!f.budget.value){f.reportValidity();return;}
+  var err=f.querySelector('.ferr');
+  if(!f.industry.value||!f.budget.value){if(err){err.textContent='Velg bransje og budsjett først.';err.style.display='block';}return;}
+  if(!f.name.value||!f.phone.value||!f.email.value){f.reportValidity();return;}
+  if(err)err.style.display='none';
   var nameVal=f.name.value;
   var industry=f.industry.value, budget=f.budget.value;
   var qualified=isQualified(industry,budget);
-  var p={subject:'Nytt lead — Arcads LP (leads)',lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,website:(f.website?f.website.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
+  var p={subject:'Nytt lead — Arcads LP (leads)',lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),website:(f.website?f.website.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
   /* Meta: kun kvalifiserte leads sendes som «Lead» — det er dét Meta skal lære av. Resten som «SubmitApplication». */
   try{if(window.fbq){if(qualified){fbq('track','Lead',{content_name:p.lead_source,content_category:industry});}else{fbq('track','SubmitApplication',{content_name:p.lead_source,content_category:industry,status:budget});}}}catch(e){}
@@ -767,7 +756,7 @@ function submitLead(f,msgEl,extraSource,onDone){
   try{sessionStorage.setItem('arcads_lead_done','1');}catch(e){}
   if(msgEl)msgEl.style.display='block';
   f.reset();
-  f.querySelectorAll('select').forEach(function(s){s.classList.add('empty');});
+  f.querySelectorAll('.opt.on').forEach(function(o){o.classList.remove('on');});
   if(typeof onDone==='function')onDone(nameVal);
 }
 function bindForm(id,msgId,src,onDone){var f=document.getElementById(id);if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();submitLead(e.target,document.getElementById(msgId),src,onDone);});}
@@ -783,6 +772,54 @@ if(overlay){
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
 }
+
+/* ---- wizard i hero (Badstugutta-stil): ett steg om gangen, auto-videre ---- */
+(function(){
+  var form=document.getElementById('leadForm');if(!form)return;
+  var steps=form.querySelectorAll('.wstep');if(!steps.length)return;
+  var bar=document.getElementById('wBar'),txt=document.getElementById('wTxt'),back=document.getElementById('wBack'),qSum=document.getElementById('qSum');
+  var cur=0;
+  function show(i){
+    cur=Math.max(0,Math.min(i,steps.length-1));
+    for(var k=0;k<steps.length;k++)steps[k].classList.toggle('on',k===cur);
+    if(bar)bar.style.width=Math.round((cur+1)/steps.length*100)+'%';
+    if(txt)txt.textContent=(cur+1)+' av '+steps.length;
+    if(back)back.style.display=cur>0?'block':'none';
+    if(cur===steps.length-1){
+      if(qSum){qSum.innerHTML='';form.querySelectorAll('.opt.on').forEach(function(o){var b=document.createElement('b');b.textContent=o.textContent;qSum.appendChild(b);});}
+      var n=document.getElementById('h_name');if(n)setTimeout(function(){n.focus();},260);
+    }
+  }
+  form.querySelectorAll('.qual').forEach(function(g){
+    var key=g.getAttribute('data-key');
+    g.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
+        b.classList.add('on');
+        if(form[key])form[key].value=b.getAttribute('data-v')||b.textContent;
+        var st=g.closest('.wstep'),qs=st?st.querySelectorAll('.qual'):[],done=true;
+        for(var i=0;i<qs.length;i++){if(!qs[i].querySelector('.opt.on')){done=false;break;}}
+        if(done)setTimeout(function(){show(cur+1);},250);
+      });
+    });
+  });
+  if(back)back.addEventListener('click',function(){show(cur-1);});
+  show(0);
+})();
+/* ---- popup-pills (uten steg) ---- */
+(function(){
+  var f=document.getElementById('leadFormModal');if(!f)return;
+  f.querySelectorAll('.qual').forEach(function(g){
+    var key=g.getAttribute('data-key');
+    g.querySelectorAll('.opt').forEach(function(b){
+      b.addEventListener('click',function(){
+        g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
+        b.classList.add('on');
+        if(f[key])f[key].value=b.getAttribute('data-v')||b.textContent;
+      });
+    });
+  });
+})();
 
 /* Hero-skjema → avslør booking i samme kort. Popup-skjema → «Takk!», lukk popup, avslør booking i hero + scroll opp. */
 bindForm('leadForm','formMsg','',function(name){revealBooking(name);});
@@ -812,11 +849,11 @@ Cal.config.forwardQueryParams = true;
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Hva skjer i den første praten?","acceptedAnswer":{"@type":"Answer","text":"30 minutter på video med Victor. Vi ser på annonsene dine og siden folk lander på i dag, og viser konkret hva vi ville bygget for din bedrift. Ingen pitch, ingen forpliktelser — du sitter igjen med analysen uansett."}},
-{"@type":"Question","name":"Hva koster det?","acceptedAnswer":{"@type":"Answer","text":"Null oppstart og ingen binding. Vi tar betalt når henvendelsene kommer — ikke før. Helt transparent: vi må tjene deg godt over 25 000 kr i måneden for at det skal lønne seg for oss, så insentivet vårt er å skaffe deg mest mulig. Den nøyaktige modellen avtaler vi i den første praten."}},
-{"@type":"Question","name":"Trenger jeg ny nettside?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi bygger en egen landingsside for tjenesten din som annonsene sender folk til. Nettsiden din står urørt."}},
-{"@type":"Question","name":"Hvor fort kommer de første henvendelsene?","acceptedAnswer":{"@type":"Answer","text":"Typisk 48 timer fra brief til første ferdige annonse, og landingssiden er oppe i løpet av første uke. Google Søk gir som regel de første henvendelsene innen få dager; Meta trenger litt lengre tid på å lære."}},
-{"@type":"Question","name":"Hvordan vet jeg at det er dere som skaffet henvendelsen?","acceptedAnswer":{"@type":"Answer","text":"Hvert lead fra siden vår går rett til deg med navn, telefon og hva de trenger, og vi rigger sporingen i Google Ads og Meta først. Du ser hver henvendelse svart på hvitt i mandagsrapporten — du trenger ikke ta vårt ord for noe."}},
+{"@type":"Question","name":"Hva skjer i den første praten?","acceptedAnswer":{"@type":"Answer","text":"30 minutter med Victor. Vi viser hva vi ville bygget for deg. Ingen pitch. Analysen er din uansett."}},
+{"@type":"Question","name":"Hva koster det?","acceptedAnswer":{"@type":"Answer","text":"0 kr oppstart, ingen binding. Vi tar betalt når henvendelsene kommer. Modellen avtaler vi i den første praten."}},
+{"@type":"Question","name":"Trenger jeg ny nettside?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi bygger en egen landingsside. Nettsiden din står urørt."}},
+{"@type":"Question","name":"Hvor fort kommer de første henvendelsene?","acceptedAnswer":{"@type":"Answer","text":"Annonser på 48 timer, side i løpet av første uke. Google gir som regel leads innen få dager."}},
+{"@type":"Question","name":"Hvordan vet jeg at det er dere som skaffet leadet?","acceptedAnswer":{"@type":"Answer","text":"Hvert lead går rett til deg med navn og telefon, og du ser alt i mandagsrapporten."}},
 {"@type":"Question","name":"Er det binding?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi vinner deg på resultater, ikke på kontrakter."}}
 ]}
 </script>
