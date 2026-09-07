@@ -128,6 +128,16 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .wback{display:block;margin:10px auto 0;background:none;border:0;font-family:var(--sans);font-size:0.76rem;font-weight:600;color:var(--muted);cursor:pointer;text-decoration:underline}
 .qsum{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
 .qsum b{background:var(--accent-soft);color:var(--accent-deep);font-size:0.72rem;font-weight:700;border-radius:var(--pill);padding:4px 10px}
+/* mobil-CTA i hero (kun små skjermer) */
+.hero-mcta{display:none;margin:0 0 22px}
+@media(max-width:900px){.hero-mcta{display:block}}
+/* kort kundesitat under skjemakortet */
+.fquote{margin:14px 6px 0;font-size:0.86rem;color:var(--muted);text-align:center;line-height:1.45}
+.fquote b{color:var(--ink);font-weight:700}
+.fquote .stars{color:var(--gold);letter-spacing:1px;margin-right:6px}
+/* hint når nettbutikk velges */
+.qhint{display:none;background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:12px;padding:11px 14px;font-size:0.86rem;margin-top:8px}
+.qhint a{color:var(--accent-deep);font-weight:700;text-decoration:underline}
 /* hero form card */
 .formcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh)}
 .formcard .fhead b{display:block;font-family:var(--disp);font-size:1.28rem;font-weight:800;letter-spacing:-0.01em}
@@ -356,6 +366,7 @@ fbq('track','PageView');
           <span class="ord">Andre byråer: <s>fast honorar uansett</s></span>
           <span class="now">Hos oss: 0 kr før leadsene kommer</span>
         </div>
+        <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t">Få gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tre raske spørsmål &middot; 30 sekunder</span></a></div>
         <div class="faces">
           <div class="pics">
             <img src="/img/victor.png" alt="Victor" width="44" height="44">
@@ -376,6 +387,7 @@ fbq('track','PageView');
                 <div class="qual" data-key="industry">
                   <div class="q">Hva driver du med?</div>
                   <div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button></div>
+                  <div class="qhint" id="shopHint">Nettbutikk? Da har vi en egen side for deg: <a href="/analyse/">arcads.no/analyse</a>. Du kan også fortsette her.</div>
                 </div>
               </div>
               <div class="wstep">
@@ -392,9 +404,8 @@ fbq('track','PageView');
                 <div class="qsum" id="qSum"></div>
                 <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Navnet ditt" autocomplete="name" required></div></div>
-                <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" required></div></div>
+                <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" inputmode="tel" required></div></div>
                 <div class="field"><label for="h_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="h_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div></div>
-                <div class="field"><label for="h_web">Nettside <span class="opt">(valgfritt)</span></label><div class="inp"><input type="text" id="h_web" name="website" placeholder="dinbedrift.no"></div></div>
                 <div class="ferr" id="formErr"></div>
                 <button type="submit" class="cta"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
               </div>
@@ -409,6 +420,7 @@ fbq('track','PageView');
             <div class="fine"><span>Victor ringer deg uansett &mdash; bookingen er bare for å gå raskere.</span></div>
           </div>
         </div>
+        <p class="fquote"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&laquo;Vi får flere leads enn noensinne&raquo; &mdash; <b>Elliot, Badstugutta</b></p>
       </div>
     </div>
   </div>
@@ -692,7 +704,7 @@ fbq('track','PageView');
       <form id="leadFormModal" novalidate>
         <div class="field"><label for="m_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Fornavn og etternavn" required></div></div>
         <div class="f2">
-          <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" required></div></div>
+          <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" inputmode="tel" required></div></div>
           <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
         </div>
         <div class="qual" data-key="industry"><div class="q">Hva driver du med?</div><div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button></div></div>
@@ -748,7 +760,7 @@ function submitLead(f,msgEl,extraSource,onDone){
   var nameVal=f.name.value;
   var industry=f.industry.value, budget=f.budget.value;
   var qualified=isQualified(industry,budget);
-  var p={subject:'Nytt lead — Arcads LP (leads)',lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),website:(f.website?f.website.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
+  var p={subject:'Nytt lead — Arcads LP (leads)',lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
   /* Meta: kun kvalifiserte leads sendes som «Lead» — det er dét Meta skal lære av. Resten som «SubmitApplication». */
   try{if(window.fbq){if(qualified){fbq('track','Lead',{content_name:p.lead_source,content_category:industry});}else{fbq('track','SubmitApplication',{content_name:p.lead_source,content_category:industry,status:budget});}}}catch(e){}
@@ -768,17 +780,30 @@ if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('arcads_popup_done')||sessionStorage.getItem('arcads_lead_done');}catch(e){return false;}};
   var openPopup=function(){if(popupSeen())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
   setTimeout(openPopup,20000);
+  /* exit-intent på desktop: musa forlater vinduet i toppen */
+  document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0&&window.innerWidth>900)openPopup();});
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
 }
+
+/* ---- URL-prefill fra annonsene: ?b=handverk|klinikk|flytting-renhold|finans|tjeneste (bransje) ---- */
+var HERO_BY_INDUSTRY={
+  'handverk':'Flere jobber til håndverksbedriften din \u2014 du betaler først når de kommer',
+  'klinikk':'Flere bookinger til klinikken din \u2014 du betaler først når de kommer',
+  'flytting-renhold':'Flere oppdrag til flytte- eller renholdsbedriften din \u2014 du betaler først når de kommer',
+  'finans':'Flere kvalifiserte henvendelser \u2014 du betaler først når de kommer',
+  'tjeneste':'Flere henvendelser til bedriften din \u2014 du betaler først når de kommer'
+};
+var PRESET_INDUSTRY=(function(){try{return new URLSearchParams(location.search).get('b')||'';}catch(e){return '';}})();
+if(PRESET_INDUSTRY&&HERO_BY_INDUSTRY[PRESET_INDUSTRY]){var h1=document.querySelector('.hero h1');if(h1)h1.textContent=HERO_BY_INDUSTRY[PRESET_INDUSTRY];}
 
 /* ---- wizard i hero (Badstugutta-stil): ett steg om gangen, auto-videre ---- */
 (function(){
   var form=document.getElementById('leadForm');if(!form)return;
   var steps=form.querySelectorAll('.wstep');if(!steps.length)return;
   var bar=document.getElementById('wBar'),txt=document.getElementById('wTxt'),back=document.getElementById('wBack'),qSum=document.getElementById('qSum');
-  var cur=0;
+  var cur=0,startFired=false;
   function show(i){
     cur=Math.max(0,Math.min(i,steps.length-1));
     for(var k=0;k<steps.length;k++)steps[k].classList.toggle('on',k===cur);
@@ -788,23 +813,33 @@ if(overlay){
     if(cur===steps.length-1){
       if(qSum){qSum.innerHTML='';form.querySelectorAll('.opt.on').forEach(function(o){var b=document.createElement('b');b.textContent=o.textContent;qSum.appendChild(b);});}
       var n=document.getElementById('h_name');if(n)setTimeout(function(){n.focus();},260);
+      /* mikro-signal til Meta/GA4: kom til kontaktsteget (kvalifisert eller ikke) */
+      if(!startFired){startFired=true;var q=isQualified(form.industry.value,form.budget.value);
+        try{if(window.fbq)fbq('trackCustom','LeadStart',{content_name:LEAD_SOURCE,content_category:form.industry.value,qualified:q?'ja':'nei'});}catch(e){}
+        try{if(window.gtag)gtag('event','lead_start',{industry:form.industry.value,budget:form.budget.value,qualified:q});}catch(e){}}
     }
   }
-  form.querySelectorAll('.qual').forEach(function(g){
+  function pick(g,b){
     var key=g.getAttribute('data-key');
+    g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
+    b.classList.add('on');
+    if(form[key])form[key].value=b.getAttribute('data-v')||b.textContent;
+    var hint=document.getElementById('shopHint');if(hint&&key==='industry')hint.style.display=(form[key].value==='nettbutikk')?'block':'none';
+  }
+  form.querySelectorAll('.qual').forEach(function(g){
     g.querySelectorAll('.opt').forEach(function(b){
       b.addEventListener('click',function(){
-        g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
-        b.classList.add('on');
-        if(form[key])form[key].value=b.getAttribute('data-v')||b.textContent;
+        pick(g,b);
         var st=g.closest('.wstep'),qs=st?st.querySelectorAll('.qual'):[],done=true;
         for(var i=0;i<qs.length;i++){if(!qs[i].querySelector('.opt.on')){done=false;break;}}
-        if(done)setTimeout(function(){show(cur+1);},250);
+        if(done)setTimeout(function(){show(cur+1);},form.industry.value==='nettbutikk'&&cur===0?900:250);
       });
     });
   });
   if(back)back.addEventListener('click',function(){show(cur-1);});
   show(0);
+  /* forhåndsvalgt bransje fra URL → hopp rett til steg 2 */
+  if(PRESET_INDUSTRY){var g=form.querySelector('.qual[data-key="industry"]');var b=g?g.querySelector('.opt[data-v="'+PRESET_INDUSTRY+'"]'):null;if(b){pick(g,b);show(1);}}
 })();
 /* ---- popup-pills (uten steg) ---- */
 (function(){
