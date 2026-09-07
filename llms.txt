@@ -42,6 +42,20 @@ Dokumenterte resultater:
 
 ## Bransjer (leadsbedrifter)
 
+- [Markedsføring for tjenestebedrifter](https://arcads.no/markedsforing-for-tjenestebedrifter/): Hub — kanalvalg, hva et lead kan koste, og lenker til alle bransjer
+- [Markedsføring for håndverkere](https://arcads.no/markedsforing-for-handverkere/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for rørleggere](https://arcads.no/markedsforing-for-rorleggere/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for elektrikere](https://arcads.no/markedsforing-for-elektrikere/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for malere](https://arcads.no/markedsforing-for-malere/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for byggfirma og entreprenører](https://arcads.no/markedsforing-for-byggfirma/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for tannleger](https://arcads.no/markedsforing-for-tannleger/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for frisører og salonger](https://arcads.no/markedsforing-for-frisorer/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for bilverksted](https://arcads.no/markedsforing-for-bilverksted/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for regnskapsførere](https://arcads.no/markedsforing-for-regnskapsforere/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for advokater](https://arcads.no/markedsforing-for-advokater/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for eiendomsmeglere](https://arcads.no/markedsforing-for-eiendomsmeglere/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for treningssentre](https://arcads.no/markedsforing-for-treningssentre/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
+- [Markedsføring for fysioterapeuter og kiropraktorer](https://arcads.no/markedsforing-for-fysioterapeuter/): Hvor kundene leter, kanalvalg, lead-regnestykke, sesong, vanlige feil, første 30 dager
 - [Google Ads for tjenestebedrifter](https://arcads.no/google-ads-for-tjenestebedrifter/): Leads-kontoer for renhold, håndverk, flytting, klinikker, B2B — ekte CPL-tall
 - [Google Ads for renholdsbedrifter](https://arcads.no/google-ads-for-renholdsbedrifter/): 163 kr per lead over 9 regioner, 202 kr flyttevask Oslo
 - [Google Ads for flyttebyrå](https://arcads.no/google-ads-for-flyttebyra/): 413 kr per booking i Oslo, retargeting 310 kr
@@ -53,6 +67,11 @@ Dokumenterte resultater:
 
 ## Artikler
 
+- [Hvordan få flere kunder?](https://arcads.no/artikler/hvordan-fa-flere-kunder/): Fem ting i rekkefølge for tjenestebedrifter, med tall
+- [Markedsføring for små bedrifter](https://arcads.no/artikler/markedsforing-for-sma-bedrifter/): Gjør selv / kjøp / dropp-tabell, kostnader, rekkefølge
+- [Annonsering på nett](https://arcads.no/artikler/annonsering-pa-nett/): Google, Meta, Snapchat, LinkedIn, YouTube, TikTok sammenlignet; synlighet uten annonser
+- [Leadgenerering](https://arcads.no/artikler/leadgenerering/): Kanaler rangert, kvalifiserende skjema, svartid, kjøpte vs egne leads
+- [B2B-markedsføring](https://arcads.no/artikler/b2b-markedsforing/): Google først, LinkedIn kun ved høy kundeverdi; 406 kr per B2B-lead
 - [Hva koster et lead i Norge?](https://arcads.no/artikler/hva-koster-et-lead-i-norge/): Ekte CPL-tall per bransje fra Google Ads-kontoer vi drifter (2026), med forbehold
 - [Resultatbasert eller fastpris?](https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/): Insentivene bak de fire honorarmodellene, og når resultatbasert ikke passer
 
