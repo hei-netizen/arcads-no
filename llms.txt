@@ -18,6 +18,9 @@ Viktig å vite:
 
 Dokumenterte resultater:
 
+- Utvendigrenhold (Google Ads, 9 regioner): 549 leads på 90 dager til 163 kr per lead, 10,7 % konverteringsrate (juni–sept 2026)
+- Kostnad per lead i kontoene våre (2026): fasadevask 163 kr, flyttevask Oslo 202 kr, flyttebyrå Oslo 413 kr, B2B-leasing 406 kr, badstuer ~940 kr
+
 - Leid.no: 4,73x ROAS og 100 000+ kr/mnd i omsetning fra annonser
 - Mokki: +127 % profitt år over år og 9x ROAS på Google Ads
 - Utvendigrenhold: 142 leads på én uke fordelt på 9 lokasjoner
@@ -37,7 +40,21 @@ Dokumenterte resultater:
 
 - [Bli UGC-creator](https://arcads.no/bli-ugc-creator/): Vi rekrutterer norske UGC-creators — ingen følgere nødvendig, honorar per oppdrag
 
+## Bransjer (leadsbedrifter)
+
+- [Google Ads for tjenestebedrifter](https://arcads.no/google-ads-for-tjenestebedrifter/): Leads-kontoer for renhold, håndverk, flytting, klinikker, B2B — ekte CPL-tall
+- [Google Ads for renholdsbedrifter](https://arcads.no/google-ads-for-renholdsbedrifter/): 163 kr per lead over 9 regioner, 202 kr flyttevask Oslo
+- [Google Ads for flyttebyrå](https://arcads.no/google-ads-for-flyttebyra/): 413 kr per booking i Oslo, retargeting 310 kr
+- [Annonsering for klinikker](https://arcads.no/annonsering-for-klinikker/): Google for det folk søker, Meta for behandlinger som må vekkes; tannklinikk 0→11 bookinger/uke
+- [Google Ads for flere lokasjoner](https://arcads.no/google-ads-for-flere-lokasjoner/): Én kampanje per region, én landingsside per by; CPL 145–341 kr mellom regioner
+- [Case: Utvendigrenhold](https://arcads.no/caser/utvendigrenhold/): 549 leads på 90 dager fra 9 regioner, 163 kr per lead, tabell per region
+- [Pris](https://arcads.no/pris/): Slik regnes det resultatbaserte honoraret — 0 kr fast, 0 binding, minimum 25 000 kr/mnd skapt verdi
+- [Victor Skretteberg](https://arcads.no/om-oss/victor-skretteberg/) og [Jona Helgen](https://arcads.no/om-oss/jona-helgen/): forfattersider
+
 ## Artikler
+
+- [Hva koster et lead i Norge?](https://arcads.no/artikler/hva-koster-et-lead-i-norge/): Ekte CPL-tall per bransje fra Google Ads-kontoer vi drifter (2026), med forbehold
+- [Resultatbasert eller fastpris?](https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/): Insentivene bak de fire honorarmodellene, og når resultatbasert ikke passer
 
 - [Digital markedsføring](https://arcads.no/artikler/digital-markedsforing/): Kanalene ærlig vurdert + rekkefølgen som funker
 - [Google Shopping](https://arcads.no/artikler/google-shopping/): Slik blir Shopping lønnsomt — feed, produktgrupper, margin-måling
