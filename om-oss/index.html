@@ -75,7 +75,7 @@ fbq('track','PageView');
       <a href="/markedsforing-for-tjenestebedrifter/" class="lnk">Bransjer</a>
       <a href="/caser/" class="lnk">Caser</a>
       <a href="/om-oss/" class="lnk on">Om oss</a>
-      <a href="/#book" class="nav-cta"><span class="full">Få gratis videoanalyse</span><span class="short">Gratis analyse</span></a>
+      <a href="#book" class="nav-cta"><span class="full">Få gratis videoanalyse</span><span class="short">Gratis analyse</span></a>
     </nav>
   </div>
 </header>
@@ -174,14 +174,28 @@ fbq('track','PageView');
 </section>
 
 <!-- ===== CTA ===== -->
-<section class="section" style="padding-top:0">
+<section class="section" id="book" style="padding-top:0">
   <div class="wrap">
     <div class="final reveal">
       <span class="eyebrow">Gratis &amp; uforpliktende</span>
       <h2>Ta en prat med oss.</h2>
       <p>30 minutter på video med Victor. Ingen pitch, ingen selgere — bare en ærlig gjennomgang av hva vi ville gjort for deg.</p>
-      <a href="/#book" class="btn-white"><span class="t">Få gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></a>
-      <p class="fine">Eller send en mail: <a href="mailto:victor@arcads.no">victor@arcads.no</a></p>
+            <div class="calcard">
+        <div class="fwho"><img src="/img/founders.webp" alt="Victor og Jona, Arcads" width="1100" height="819" loading="lazy"><div><b>Victor spiller inn videoen selv.</b> 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.</div></div>
+        <form id="leadForm" novalidate>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="frow">
+            <div class="field"><label for="l_name">Navn <span class="req">*</span></label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
+            <div class="field"><label for="l_site">Nettside <span class="req">*</span></label><input type="text" id="l_site" name="website" placeholder="bedriften.no" autocomplete="url" required></div>
+            <div class="field"><label for="l_email">E-post <span class="req">*</span></label><input type="email" id="l_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div>
+            <div class="field"><label for="l_phone">Telefon <span class="req">*</span></label><input type="tel" id="l_phone" name="phone" placeholder="Så vi får tak i deg" autocomplete="tel" required></div>
+          </div>
+          <div class="field"><label for="l_budget">Omsetning i året</label><select id="l_budget" name="budget"><option value="">Velg (valgfritt)</option><option>Under 2 mill</option><option>2&ndash;10 mill</option><option>10&ndash;50 mill</option><option>Over 50 mill</option></select></div>
+          <button type="submit" class="cta" id="leadBtn"><span class="t">Få min gratis videoanalyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Video på e-post innen 24 timer</span></button>
+        </form>
+      </div>
+      <p class="fine">Gratis &middot; ingen binding &middot; vi deler aldri infoen din</p>
+      <p class="fine" style="margin-top:8px">Vil du heller ta praten direkte? <a href="https://cal.com/arcads/30min">Book 30 minutter i kalenderen &rarr;</a> &middot; <a href="mailto:victor@arcads.no">victor@arcads.no</a></p>
     </div>
   </div>
 </section>
@@ -216,7 +230,7 @@ fbq('track','PageView');
         <a href="/markedsforingsbyra-skien/">Markedsføringsbyrå i Skien</a>
         <a href="/artikler/">Artikler</a>
         <a href="/bli-ugc-creator/">Bli UGC-creator</a>
-        <a href="/#book">Få gratis videoanalyse</a>
+        <a href="#book">Få gratis videoanalyse</a>
       </div>
       <div class="fcol">
         <div class="fh2">Kontakt</div>
@@ -231,6 +245,23 @@ fbq('track','PageView');
 <script>
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+<script>
+(function(){
+  var HOOK='https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi';
+  var f=document.getElementById('leadForm'); if(!f)return;
+  var btn=document.getElementById('leadBtn'); var sent=false;
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault(); if(sent)return;
+    if(f.company.value){sent=true;location.href='/takk/';return;}
+    if(!f.name.value.trim()||!f.email.value.includes('@')||!f.phone.value.trim()||!f.website.value.trim()){ if(f.reportValidity)f.reportValidity(); return; }
+    sent=true; btn.disabled=true; btn.querySelector('.t').childNodes[0].nodeValue='Sender…';
+    var b=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:'arcads-'+location.pathname.replace(/\//g,'-').replace(/^-|-$/g,''),name:f.name.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),website:f.website.value.trim(),budget:f.budget.value,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
+    function go(){location.href='/takk/';}
+    try{ if(navigator.sendBeacon && navigator.sendBeacon(HOOK,b)){ go(); return; } }catch(e){}
+    fetch(HOOK,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()}).then(go,function(){ sent=false; btn.disabled=false; alert('Noe gikk galt - prøv igjen, eller send en mail til victor@arcads.no'); });
+  });
+})();
 </script>
 </body>
 </html>
