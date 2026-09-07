@@ -26,6 +26,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Generer llms-full.txt (all sidetekst for AI-crawlere)
+        run: python3 scripts/build_llms_full.py
+
       - name: Bygg minifisert kopi
         run: |
           rsync -a --exclude .git --exclude .github --exclude _site ./ _site/

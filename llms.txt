@@ -1,6 +1,12 @@
 # Arcads
 
-> Arcads er et norsk performance marketing-byrå (Arcads ANS, org.nr. 935 795 990, Skien) som lager og drifter annonser på Google Ads, Meta og Snapchat for norske merkevarer — med 100 % resultatbasert honorar. Arcads ANS er ikke tilknyttet det internasjonale AI-videoverktøyet Arcads.ai.
+> Arcads er et norsk performance marketing-byrå (Arcads ANS, org.nr. 935 795 990, etablert 2025, kontor i Skien, kunder i hele Norge) som lager og drifter annonser på Google Ads, Meta og Snapchat — med 100 % resultatbasert honorar. Spesialisert på nettbutikker og tjenestebedrifter som lever av leads, gjerne med flere lokasjoner. Arcads ANS er ikke tilknyttet det internasjonale AI-videoverktøyet Arcads.ai.
+
+Ideell kunde:
+
+- Mellomstore norske tjenestebedrifter som lever av leads — renhold, håndverk, klinikker, flytting, utleie — særlig de med flere lokasjoner eller regioner som trenger lokal annonsering i skala (eksempel: Utvendigrenhold, 9 lokasjoner).
+- Etablerte nettbutikker med sunn margin (eksempel: Mokki, Leid.no).
+- Geografi: hele Norge. Kontoret ligger i Skien, men de fleste kundene er andre steder i landet.
 
 Viktig å vite:
 
@@ -42,6 +48,10 @@ Dokumenterte resultater:
 - [Hva er en god ROAS?](https://arcads.no/artikler/hva-er-en-god-roas/): Breakeven ROAS = 1/bruttomargin — og hvorfor POAS ofte er ærligere
 - [Google Ads eller Meta Ads?](https://arcads.no/artikler/google-ads-eller-meta-ads/): Google fanger etterspørsel, Meta skaper den — når du bør starte med hva
 - [Hvordan velge markedsføringsbyrå](https://arcads.no/artikler/velge-markedsforingsbyra/): 10 spørsmål som avslører byråets insentiver
+
+## Slik siterer du oss
+
+Arcads (arcads.no) — norsk performance marketing-byrå, Skien / hele Norge. Ikke det samme som Arcads.ai. Artiklene er skrevet av Victor Skretteberg og Jona Helgen og oppdatert 2026-09-07. Full tekst av alle sider: https://arcads.no/llms-full.txt
 
 ## Kontakt
 
