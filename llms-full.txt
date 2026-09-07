@@ -1236,7 +1236,7 @@ Google Ads for tjenestebedrifter — leads i hele Norge | Arcads
  Renhold, håndverk, flytting, klinikker, B2B-tjenester. Vi bygger Google-kontoer som leverer henvendelser til en kostnad du kan regne hjem — i hele Norge. Honoraret er 100 % resultatbasert: leverer ikke kontoen, betaler du ikke.
  Kort svar: Arcads drifter Google Ads for norske tjenestebedrifter som lever av henvendelser. I kontoene våre koster et lead typisk 160–420 kr for lokale tjenester (fasadevask, flyttevask, flyttebyrå, B2B-leasing) og rundt 900–1 000 kr for tjenester med høy ordreverdi. Vi rigger sporing som teller skjemaer og samtaler, bygger én kampanje per region, og skalerer bare det som ligger under din maks-pris per lead.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasade- og takvask, 9 regioner
 202 kr
@@ -1253,13 +1253,13 @@ resultatbasert honorar
 Skjema, telefonklikk og samtaler — hver for seg, så du vet hva som er ekte. Google får bare optimalisere mot leads som faktisk kom inn. Uten dette optimaliserer kontoen i blinde, og det er den vanligste feilen vi finner.
 Struktur
 ### Én kampanje per region
-Prisen per lead varierer mer mellom byer enn mellom søkeord. Med egen kampanje og egen landingsside per region ser vi hvor det er billig og dyrt — og flytter budsjettet dit henvendelsene koster minst. Mer om flere lokasjoner.
+Prisen per lead varierer mer mellom byer enn mellom søkeord. Med egen kampanje og egen landingsside per region ser vi hvor det er billig og dyrt, og flytter budsjettet dit henvendelsene koster minst. Mer om flere lokasjoner.
 Hver uke
 ### Søketerm-vasking
 «Vaske taket selv», «gratis», «jobb som» — tjenestesøk trekker mye som aldri blir kunder. Vi luker ukentlig og legger inn negative søkeord, så budsjettet går til folk som skal kjøpe.
 Landingsside
 ### Siden annonsen lander på
-Én tjeneste, ett skjema, pris eller prisanslag, anmeldelser og en telefon som svarer. Vi bygger landingssidene selv når kundens side ikke konverterer — og måler konverteringsraten per side.
+Én tjeneste, ett skjema, pris eller prisanslag, anmeldelser og en telefon som svarer. Vi bygger landingssidene selv når kundens side ikke konverterer, og måler konverteringsraten per side.
 Skalering
 ### Maks-pris per lead først
 Vi regner ut hva et lead kan koste for deg (verdi per kunde × andel som kjøper) før vi skrur opp. Kampanjer under taket får mer budsjett, de over pauses eller bygges om.
@@ -1268,7 +1268,7 @@ Hver mandag
 Leads, kostnad per lead og hva vi gjør denne uka — per region hvis du har flere. Ingen 40-siders PDF.
  Ekte tall
 ## Sånn ser det ut når det funker.
- Utvendigrenhold vasker fasader og tak i hele Norge. Vi drifter én Google-kampanje per region, med egen landingsside for hver — og måler alt på innsendte skjemaer, ikke klikk.
+ Utvendigrenhold vasker fasader og tak i hele Norge. Vi drifter én Google-kampanje per region, med egen landingsside for hver, og måler alt på innsendte skjemaer, ikke klikk.
  En sånn rapport lander i innboksen din hver mandag. Les hele caset →
  Mandagsrapport Utvendigrenhold · 90 dager
  Leads (skjema) · Google Ads 549
@@ -1302,15 +1302,15 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det tjenestebedrifter lurer på.
  Hva koster et lead fra Google Ads i Norge?+ Det avhenger av bransje og by. I kontoene vi drifter (juni–september 2026) ligger fasade- og takvask på 163 kr per lead, flyttevask i Oslo på 202 kr, flyttebyrå i Oslo på 413 kr, B2B-leasing på 406 kr og badstuer på rundt 940 kr. Alle tall er innsendte skjemaer, ikke klikk. Hele tabellen med forbehold her.
 Hvor stort budsjett trenger en tjenestebedrift?+ Nok til minst 20–30 leads i måneden per region, ellers får ikke Google nok data til å lære. Med 200 kr per lead er det 4 000–6 000 kr per region per måned. Under det bør du heller kjøre én region godt enn fem dårlig.
 Fungerer Google Ads for små tjenestebedrifter?+ Ja, hvis folk søker etter tjenesten din og du kan ta imot henvendelsene raskt. Et lead som ikke blir ringt innen en time er ofte tapt til konkurrenten som ringte. Vi ber alltid om at noen eier innboksen før vi skrur på.
 Google Ads eller Meta for leads?+ Google først for tjenester folk allerede søker etter (rørlegger, flyttevask, tannlege). Meta når etterspørselen må skapes eller du vil nå en region der søkevolumet er lite. Lengre svar her.
-Hva betyr resultatbasert for en leads-bedrift?+ At honoraret henger på henvendelsene vi skaper, målt i din egen konto. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss — den nøyaktige modellen avtaler vi i første prat. Se prissiden.
+Hva betyr resultatbasert for en leads-bedrift?+ At honoraret henger på henvendelsene vi skaper, målt i din egen konto. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Den nøyaktige modellen avtaler vi i første prat. Se prissiden.
 Jobber dere med bedrifter utenfor Skien?+ Ja, de fleste kundene våre er andre steder i landet: Oslo, Bergen, Trondheim, Stavanger, Kristiansand, Ålesund og Innlandet. Kontoret ligger i Skien, jobben skjer på video og i kontoen din.
  Gratis videoanalyse
 ## Få en ærlig gjennomgang av leads-kontoen din.
@@ -1335,10 +1335,10 @@ Google Ads for renholdsbedrifter — 163 kr per lead | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Google Ads for renhold
 # Google Ads for renholdsbedrifter.
- Fasadevask, takvask, flyttevask, kontorrenhold. Vi drifter Google-kontoene til to av Norges mest aktive renholdsaktører — og har tallene som viser hva et lead faktisk koster. 100 % resultatbasert honorar.
+ Fasadevask, takvask, flyttevask, kontorrenhold. Vi drifter Google-kontoene til to av Norges mest aktive renholdsaktører, og har tallene som viser hva et lead faktisk koster. 100 % resultatbasert honorar.
  Kort svar: I kontoene våre koster et lead for fasade- og takvask 163 kr i snitt over 9 regioner (juni–september 2026, 549 innsendte skjemaer), og flyttevask i Oslo 202 kr. Nøkkelen er én kampanje per region, egen landingsside per tjeneste, ukentlig vasking av søketermer som «vaske selv» og «jobb», og sporing som teller skjema og samtaler hver for seg.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasade- og takvask, 9 regioner
 202 kr
@@ -1352,16 +1352,16 @@ fra brief til live annonser
  Renhold er en av de mest lønnsomme bransjene på Google — søkeintensjonen er høy, klikkene er billige (17–26 kr i kontoene våre) og folk vil ha svar i dag. Men det er også en bransje der halvparten av søkene er folk som vil gjøre jobben selv.
  Søketermer
 ### «Vaske taket selv» betaler du ikke for
-Renholdssøk er fulle av gjør-det-selv, «pris» uten kjøpsintensjon, og jobbsøkere. Vi vasker søketermene hver uke og bygger negative lister per tjeneste — det alene senker prisen per lead 20–40 % i kontoer vi tar over.
+Renholdssøk er fulle av gjør-det-selv, «pris» uten kjøpsintensjon, og jobbsøkere. Vi vasker søketermene hver uke og bygger negative lister per tjeneste. Det alene senker prisen per lead 20–40 % i kontoer vi tar over.
 Struktur
 ### Én tjeneste, én annonsegruppe, én side
 Fasadevask, takvask, vindusvask, algebehandling — hver med egne søkeord, egne annonser og en landingsside som handler om akkurat den tjenesten. Google belønner det med bedre kvalitetspoeng og lavere klikkpris.
 Geografi
 ### Kampanje per region, ikke «hele Norge»
-Prisen per lead varierer fra 145 kr til 341 kr mellom regionene vi drifter for samme kunde. Med egne kampanjer ser vi det — og flytter budsjett dit leadsene er billigst.
+Prisen per lead varierer fra 145 kr til 341 kr mellom regionene vi drifter for samme kunde. Med egne kampanjer ser vi det, og flytter budsjett dit leadsene er billigst.
 Landingsside
 ### Før/etter-bilder, fastpris, skjema
-Renhold selges på bilder. Vi bygger landingssider med før/etter, prisanslag, anmeldelser og et kort skjema — og har egen versjon per by når kunden har flere avdelinger.
+Renhold selges på bilder. Vi bygger landingssider med før/etter, prisanslag, anmeldelser og et kort skjema, og har egen versjon per by når kunden har flere avdelinger.
 Sesong
 ### Vår og høst er to forskjellige kontoer
 Mars–mai er høysesong for fasade og tak; september–november er «gjør huset klart for vinteren». Budsjett og annonsetekst følger sesongen, ikke kalenderåret.
@@ -1370,7 +1370,7 @@ Måling
 Vi teller innsendte skjemaer, telefonklikk og samtaler som separate konverteringer. Da vet du hvor mange som faktisk tok kontakt, og Google optimaliserer mot ekte henvendelser.
  Ekte tall
 ## Sånn ser det ut når det funker.
- Utvendigrenhold vasker fasader og tak i hele Norge. Vi drifter én Google-kampanje per region, med egen landingsside for hver — og måler alt på innsendte skjemaer, ikke klikk.
+ Utvendigrenhold vasker fasader og tak i hele Norge. Vi drifter én Google-kampanje per region, med egen landingsside for hver, og måler alt på innsendte skjemaer, ikke klikk.
  En sånn rapport lander i innboksen din hver mandag. Les hele caset →
  Mandagsrapport Utvendigrenhold · 90 dager
  Leads (skjema) · Google Ads 549
@@ -1399,14 +1399,14 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det renholdsbedrifter spør om.
  Hva koster et lead for et renholdsfirma på Google?+ I kontoene vi drifter: 163 kr i snitt for fasade- og takvask over 9 regioner, og 202–211 kr for flyttevask i Oslo (juni–september 2026). Beste region ligger på 145 kr, dyreste på 341 kr. Tallene er innsendte skjemaer, ikke klikk.
 Fungerer Google Ads for flyttevask og kontorrenhold?+ Ja. Flyttevask har høy intensjon (folk må ut av leiligheten en bestemt dato) og konverterer 12–13 % av klikkene i Oslo. Kontorrenhold er B2B med færre søk, men høyere verdi per kunde — der bør annonsen og siden være mer formell, og budene høyere.
 Bør vi ha én kampanje for hele Norge?+ Nei. Prisen per lead varierer over dobbelt så mye mellom byer som mellom søkeord. Med én kampanje per region ser du hvor det er billig, og Google får budsjett der det leverer. Slik gjør vi det med 9 regioner.
-Hvordan unngår vi henvendelser fra folk som vil gjøre det selv?+ Negative søkeord, oppdatert hver uke: «selv», «hvordan», «tips», «jobb», «stilling», «gratis». Og annonsetekst som sier fastpris og befaring — det filtrerer før klikket.
+Hvordan unngår vi henvendelser fra folk som vil gjøre det selv?+ Negative søkeord, oppdatert hver uke: «selv», «hvordan», «tips», «jobb», «stilling», «gratis». Og annonsetekst som sier fastpris og befaring. Det filtrerer før klikket.
 Hva med sesongen?+ Fasade og tak topper mars–mai og har en sekundær sesong september–november. Vi skrur budsjettet opp før sesongen starter, ikke når konkurrentene allerede byr, og bytter annonsetekst til «klar for vinteren» på høsten.
 Hva koster dere?+ Honoraret er 100 % resultatbasert og henger på henvendelsene vi skaper. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Ingen bindingstid. Se prissiden.
  Gratis videoanalyse
@@ -1435,7 +1435,7 @@ Google Ads for flyttebyrå — leads til 300–450 kr | Arcads
  Flytting er en av de dyreste bransjene på Google — klikkene i Oslo koster 40+ kr, og halvparten av søkene er folk som sammenligner priser. Vi drifter kontoen til et flyttebyrå i Oslo og vet hvor grensen går. 100 % resultatbasert honorar.
  Kort svar: For et flyttebyrå i Oslo koster et lead 413 kr i snitt i kontoen vi drifter (juni–september 2026, 242 leads): 467 kr på søk, 310 kr på retargeting, 390 kr i ring-kampanjen for kommunene rundt Oslo. Klikkprisen er 42 kr, så konverteringsraten på landingssiden (10 %) avgjør alt. Bookingskjema med dato, ikke «kontakt oss».
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 413 kr
 per lead — flyttebyrå Oslo, alle kampanjer
 310 kr
@@ -1446,7 +1446,7 @@ av klikkene booker
 klikkpris i Oslo
  Noen av dem vi jobber med
 ## Sånn drifter vi Google Ads for flytting.
- Flyttesøk er dyre, sesongstyrte og fulle av prisjegere. Det som skiller en lønnsom konto fra en som blør, er ikke søkeordene — det er bookingskjemaet, geografien og tålmodigheten til å la tCPA jobbe.
+ Flyttesøk er dyre, sesongstyrte og fulle av prisjegere. Det som skiller en lønnsom konto fra en som blør, er ikke søkeordene. Det er bookingskjemaet, geografien og tålmodigheten til å la tCPA jobbe.
  Søk
 ### Kjernen: «flyttebyrå oslo» og venner
 Intensjonen er høyest på by + tjeneste. Vi bygger annonsegrupper per tjeneste (flyttebyrå, flyttehjelp, bedriftsflytting, flyttevask) og skriver annonser som svarer på det folk faktisk spør om: pris, dato, forsikring.
@@ -1455,19 +1455,19 @@ Geografi
 Oslo er dyrest, men også der volumet er. Vi kjører en egen ring-kampanje for kommunene innen 60 minutter (Bærum, Asker, Lillestrøm, Follo, Drammen) og måler CPL isolert før den blir slått sammen med hovedkampanjen.
 Retargeting
 ### De som sjekket pris, men ikke booket
-Folk sammenligner tre–fire flyttebyråer. En retargeting-kampanje mot besøkende på pris- og kontaktsiden gir leads til 310 kr mot 467 kr på søk — den billigste kroner vi bruker i kontoen.
+Folk sammenligner tre–fire flyttebyråer. En retargeting-kampanje mot besøkende på pris- og kontaktsiden gir leads til 310 kr mot 467 kr på søk. Den billigste kroner vi bruker i kontoen.
 Landingsside
 ### Booking, ikke «kontakt oss»
 Skjema med flyttedato, fra- og til-adresse og størrelse. Det gir leads som kan prises på minuttet, og en konverteringsrate som bærer 42-kroners klikk. Pris fra, forsikring og anmeldelser rett under.
 Bud
-### tCPA — og la den være i fred
-Vi setter mål-CPA etter hva et lead kan koste, og justerer maks hver 2.–3. uke. Kontoer som får rykk i budet hver uke lærer aldri. Klienten vår har 480 kr som tak — og ligger under.
+### tCPA, og la den være i fred
+Vi setter mål-CPA etter hva et lead kan koste, og justerer maks hver 2.–3. uke. Kontoer som får rykk i budet hver uke lærer aldri. Klienten vår har 480 kr som tak, og ligger under.
 Merkevare
 ### Egen brand-kampanje til 15 kr
 Folk som googler navnet ditt skal ikke koste 44 kr. Vi skiller merkevaresøk i en egen kampanje med lavt tak, så nykundeannonsene viser ekte tall.
  Ekte tall
 ## Flyttebyrå i Oslo, 90 dager.
- Én søkekampanje, én ring-kampanje for nabokommunene, én retargeting. Alt måles på innsendte bookinger på takkesiden — ikke klikk, ikke telefonklikk.
+ Én søkekampanje, én ring-kampanje for nabokommunene, én retargeting. Alt måles på innsendte bookinger på takkesiden, ikke klikk, ikke telefonklikk.
  Rapporten kommer hver mandag med det som ble justert forrige uke og hva som er planlagt denne. Flere caser →
  Mandagsrapport Flyttebyrå Oslo · 90 dager
  Bookinger · alle kampanjer 242
@@ -1487,12 +1487,12 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det flyttebyråer spør om.
  Hva koster et lead for et flyttebyrå på Google Ads?+ I Oslo-kontoen vi drifter: 413 kr i snitt over alle kampanjer (juni–september 2026), 467 kr på søk, 310 kr på retargeting og 390 kr i ring-kampanjen for kommunene rundt. Klikkprisen er 42 kr. Tallene er innsendte bookinger, ikke telefonklikk.
-Hvorfor er flytting så dyrt på Google?+ Mange aktører byr på få søkeord, og de fleste søk skjer i Oslo-området. Det gjør klikkene dyre — og det gjør konverteringsraten på landingssiden til det viktigste tallet i kontoen. 10 % vs 5 % er forskjellen på 400 og 800 kr per lead.
+Hvorfor er flytting så dyrt på Google?+ Mange aktører byr på få søkeord, og de fleste søk skjer i Oslo-området. Det gjør klikkene dyre, og det gjør konverteringsraten på landingssiden til det viktigste tallet i kontoen. 10 % vs 5 % er forskjellen på 400 og 800 kr per lead.
 Bør vi annonsere utenfor Oslo?+ Ja, men i en egen kampanje så du ser prisen isolert. Nabokommunene innen en time har lavere klikkpris og nesten samme konverteringsrate. Vi tester ringen i 3–4 uker før vi folder den inn i hovedkampanjen.
 Hva med Performance Max?+ Vi bruker PMax til retargeting, ikke til nykunder. Som retargeting leverer den de billigste bookingene i kontoen (310 kr); som nykundekampanje lekker den fort til apper og videoer som ikke flytter. Plasseringsrapporten sjekkes hver uke.
 Hva slags skjema konverterer best?+ Bookingskjema med dato og adresser, ikke «kontakt oss». Det gir 10 %+ konvertering i Oslo og leads som kan prises umiddelbart. Pris fra, forsikring og anmeldelser rett under skjemaet.
@@ -1520,10 +1520,10 @@ Annonsering for klinikker — tannlege, hudpleie, estetikk | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Annonsering for klinikker
 # Annonsering for klinikker.
- Tannlege, hudpleie, estetiske behandlinger. Google fanger pasientene som leter etter deg; Meta skaper etterspørsel etter behandlinger folk ikke visste de ville ha. Vi gjør begge — og måler alt på bookinger. 100 % resultatbasert honorar.
- Kort svar: For klinikker fungerer Google Ads best for behandlinger folk søker aktivt etter (tannlege, tannregulering, implantat) og Meta best for behandlinger som må vekkes (skinbooster, microneedling, botox). For en tannklinikk i England gikk vi fra 0 til 11 bookinger i uka til £17 per lead med Meta og egen behandlingsside. Nøkkelen er én landingsside per behandling med pris eller bookingavgift tydelig, og sporing som teller gjennomførte bookinger — ikke klikk.
+ Tannlege, hudpleie, estetiske behandlinger. Google fanger pasientene som leter etter deg; Meta skaper etterspørsel etter behandlinger folk ikke visste de ville ha. Vi gjør begge, og måler alt på bookinger. 100 % resultatbasert honorar.
+ Kort svar: For klinikker fungerer Google Ads best for behandlinger folk søker aktivt etter (tannlege, tannregulering, implantat) og Meta best for behandlinger som må vekkes (skinbooster, microneedling, botox). For en tannklinikk i England gikk vi fra 0 til 11 bookinger i uka til £17 per lead med Meta og egen behandlingsside. Nøkkelen er én landingsside per behandling med pris eller bookingavgift tydelig, og sporing som teller gjennomførte bookinger, ikke klikk.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 0 → 11
 bookinger i uka — tannklinikk, Meta
 £17
@@ -1537,18 +1537,18 @@ resultatbasert honorar
  Klinikker har to problemer på én gang: behandlinger med høy verdi og lavt søkevolum, og et regelverk for hva du kan love. Det er derfor kanalvalget og landingssiden betyr mer enn budsjettet.
  Kanalvalg
 ### Google for det folk søker, Meta for det de ikke visste
-«Tannlege Skien» og «tannregulering pris» søkes hver dag — det tar Google. Skinbooster, PDRN og microneedling må vises til riktige folk før de søker — det gjør Meta med video og før/etter. Vi starter med den kanalen som har etterspørsel.
+«Tannlege Skien» og «tannregulering pris» søkes hver dag. Det tar Google. Skinbooster, PDRN og microneedling må vises til riktige folk før de søker. Det gjør Meta med video og før/etter. Vi starter med den kanalen som har etterspørsel.
 Landingsside
 ### Én side per behandling
 Ikke send pasienten til forsiden. Én side per behandling med hva det er, hva det koster (eller hva bookingavgiften er), hvem som utfører det, og et bookingskjema. Det er sånn vi gikk fra 0 til 11 bookinger i uka for en tannklinikk.
 Sporing
 ### Booking, ikke klikk
-Vi rigger konvertering på gjennomført booking (takkeside eller bookingsystem), og teller skjema og telefon hver for seg. Da vet du hva en ny pasient koster — og Meta og Google optimaliserer mot ekte bookinger.
+Vi rigger konvertering på gjennomført booking (takkeside eller bookingsystem), og teller skjema og telefon hver for seg. Da vet du hva en ny pasient koster, og Meta og Google optimaliserer mot ekte bookinger.
 Innhold
 ### Behandleren foran kamera
 Klinikker vinner på tillit. Korte videoer med behandleren som forklarer behandlingen slår polerte klinikkfilmer i feeden. Vi skriver manus, klipper og tester 10+ varianter i uka.
 Regelverk
-### Det du kan si — og ikke
+### Det du kan si, og ikke
 Ingen «gratis konsultasjon» hvis det ikke er gratis, ingen resultatgarantier, riktig tittel på behandleren. Vi faktasjekker hver annonse mot klinikkens faktiske priser og kvalifikasjoner før den går live.
 Tilbud
 ### Kampanjer som fyller ledige timer
@@ -1575,13 +1575,13 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det klinikker spør om.
  Google Ads eller Meta for en klinikk?+ Google for behandlinger folk søker etter aktivt (tannlege, tannregulering, implantat, hudlege). Meta for behandlinger som må vekkes (skinbooster, microneedling, botox, PRF). De fleste klinikker bør ha begge, men starte med den som har etterspørsel.
 Hva koster en ny pasient fra annonser?+ Det varierer enormt med behandling. For tannklinikken vi jobber med i England landet vi på £17 per lead med Meta. I Norge ligger klikkprisene for tannlege-søk typisk i den øvre delen av tjenestesøk. Vi regner ut maks-prisen per pasient fra behandlingens verdi før vi starter.
-Kan vi si «gratis konsultasjon»?+ Bare hvis den faktisk er gratis, uten bookingavgift. Vi ser mange klinikker som lover gratis og tar £50–£100 i bookingavgift — det bryter både regelverk og tillit. Vi faktasjekker hver annonse mot klinikkens faktiske priser.
+Kan vi si «gratis konsultasjon»?+ Bare hvis den faktisk er gratis, uten bookingavgift. Vi ser mange klinikker som lover gratis og tar £50–£100 i bookingavgift. Det bryter både regelverk og tillit. Vi faktasjekker hver annonse mot klinikkens faktiske priser.
 Hvem bør være i videoene?+ Behandleren. Pasienter velger klinikk på tillit, og en tannlege eller hudterapeut som forklarer behandlingen på 30 sekunder slår en polert klinikkfilm i feeden. Vi skriver manus og klipper, dere filmer med mobilen.
 Hvordan måler dere bookinger?+ Konvertering på takkesiden etter booking (eller i bookingsystemet), og skjema og telefon som separate konverteringer. Bookinger som skjer via telefon etter en annonse fanges med samtalesporing der det er mulig.
 Hva koster dere?+ 100 % resultatbasert honorar, ingen bindingstid. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Se prissiden.
@@ -1608,10 +1608,10 @@ Google Ads for bedrifter med flere lokasjoner | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Flere lokasjoner
 # Google Ads for bedrifter med flere lokasjoner.
- Avdelinger i flere byer, ett markedsbudsjett, og en Google-konto som behandler Norge som ett sted? Det er der pengene lekker. Vi drifter 9 regioner for én kunde — og vet hvor mye prisen per lead varierer. 100 % resultatbasert honorar.
+ Avdelinger i flere byer, ett markedsbudsjett, og en Google-konto som behandler Norge som ett sted? Det er der pengene lekker. Vi drifter 9 regioner for én kunde, og vet hvor mye prisen per lead varierer. 100 % resultatbasert honorar.
  Kort svar: Bedrifter med flere lokasjoner bør ha én Google Ads-kampanje per region og én landingsside per by, ikke én nasjonal kampanje. For kunden vår med 9 regioner varierer kostnaden per lead fra 145 kr til 341 kr mellom regionene (snitt 163 kr) — en forskjell du bare ser, og bare kan flytte budsjett etter, når regionene er skilt. Geografien speiles mot der bedriften faktisk leverer, med radius rundt hver avdeling.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 9
 regioner i én konto — Utvendigrenhold
 145–341 kr
@@ -1625,16 +1625,16 @@ lokale landingssider bygget for én kunde
  En nasjonal kampanje skjuler at Trondheim leverer leads til 145 kr og Østfold til 341 kr. Google fordeler budsjettet etter klikk, ikke etter hva som lønner seg for deg. Vi gjør det motsatt:
  Struktur
 ### Én kampanje per region
-Hver region får egen kampanje med eget budsjett, egne annonser («Fasadevask i Bergen») og egen rapportlinje. Da ser du prisen per lead per avdeling hver mandag — og kan svare avdelingslederen som spør hvorfor Bergen får mer budsjett enn Oslo.
+Hver region får egen kampanje med eget budsjett, egne annonser («Fasadevask i Bergen») og egen rapportlinje. Da ser du prisen per lead per avdeling hver mandag, og kan svare avdelingslederen som spør hvorfor Bergen får mer budsjett enn Oslo.
 Geografi
 ### Radius rundt der dere faktisk kjører
 Ikke «Vestland fylke». Vi setter radius rundt hver avdeling (typisk 25–50 km) etter der bilene faktisk kjører, og speiler det mot geografien i Meta så kanalene forsterker hverandre. Områder dere ikke leverer til blir ekskludert.
 Landingssider
 ### Én side per by
-«Fasadevask i Stavanger» med lokal tekst, lokal telefon og lokale anmeldelser konverterer bedre og får bedre kvalitetspoeng enn den nasjonale tjenestesiden. Vi bygde 18 slike sider for én kunde — og annonsene i hver region peker på sin.
+«Fasadevask i Stavanger» med lokal tekst, lokal telefon og lokale anmeldelser konverterer bedre og får bedre kvalitetspoeng enn den nasjonale tjenestesiden. Vi bygde 18 slike sider for én kunde, og annonsene i hver region peker på sin.
 Budsjett
 ### Kroner dit leadsene er billigst
-Hver uke flyttes budsjett fra regioner over maks-pris til regioner under. Nye regioner starter lavt (100 kr/dag) og skaleres når prisen per lead er bevist — ikke når kalenderen sier det.
+Hver uke flyttes budsjett fra regioner over maks-pris til regioner under. Nye regioner starter lavt (100 kr/dag) og skaleres når prisen per lead er bevist, ikke når kalenderen sier det.
 Merkevare
 ### Én brand-kampanje for alle
 Folk som googler navnet deres skal ikke betale regionpris. Én nasjonal merkevarekampanje med lavt tak (47 kr per lead hos kunden vår) holder nykundetallene i regionene ærlige.
@@ -1643,7 +1643,7 @@ Rapport
 Leads, kostnad per lead og endringer — per avdeling. Rapporten kan deles rett med regionsjefene.
  Ekte tall
 ## Sånn ser det ut når det funker.
- Utvendigrenhold vasker fasader og tak i hele Norge. Vi drifter én Google-kampanje per region, med egen landingsside for hver — og måler alt på innsendte skjemaer, ikke klikk.
+ Utvendigrenhold vasker fasader og tak i hele Norge. Vi drifter én Google-kampanje per region, med egen landingsside for hver, og måler alt på innsendte skjemaer, ikke klikk.
  En sånn rapport lander i innboksen din hver mandag. Les hele caset →
  Mandagsrapport Utvendigrenhold · 90 dager
  Leads (skjema) · Google Ads 549
@@ -1676,9 +1676,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det bedrifter med flere avdelinger spør om.
  Bør vi ha én kampanje per by eller én for hele landet?+ Én per region. Prisen per lead varierte fra 145 til 341 kr mellom regionene til en kunde vi drifter — samme tjeneste, samme periode. Med én nasjonal kampanje ser du ikke det, og Google fordeler budsjettet etter klikk, ikke etter hva som lønner seg.
 Trenger vi en landingsside per by?+ Ja, hvis dere vil ha lavest mulig pris per lead. Lokal side gir bedre kvalitetspoeng (lavere klikkpris) og høyere konvertering. Vi bygger dem etter mal, så 10–20 sider tar dager, ikke måneder.
@@ -1709,8 +1709,8 @@ Pris — hva koster Arcads? 100 % resultatbasert honorar | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Pris
 # Hva koster Arcads?
- Ingen fastpris. Ingen timepris. Ingen prosent av budsjettet. Honoraret vårt er 100 % resultatbasert — det henger på tallene vi skaper i din egen konto, og det er ingen bindingstid.
- Kort svar: Arcads tar ikke fast månedshonorar. Honoraret er en andel av verdien annonsene skaper, målt i din egen Google Ads- og Meta-konto. Vi må skape mer enn 25 000 kr i måneden i verdi for at samarbeidet skal lønne seg for oss — så vi sier nei til kunder der regnestykket ikke går opp. Ingen bindingstid, ingen oppstartskostnad. Annonsebudsjettet betaler du direkte til Google og Meta.
+ Ingen fastpris. Ingen timepris. Ingen prosent av budsjettet. Honoraret vårt er 100 % resultatbasert . Det henger på tallene vi skaper i din egen konto, og det er ingen bindingstid.
+ Kort svar: Arcads tar ikke fast månedshonorar. Honoraret er en andel av verdien annonsene skaper, målt i din egen Google Ads- og Meta-konto. Vi må skape mer enn 25 000 kr i måneden i verdi for at samarbeidet skal lønne seg for oss, så vi sier nei til kunder der regnestykket ikke går opp. Ingen bindingstid, ingen oppstartskostnad. Annonsebudsjettet betaler du direkte til Google og Meta.
  Få gratis videoanalyse Video på e-post innen 24 timer
 0 kr
 fast månedshonorar
@@ -1727,12 +1727,12 @@ minimum skapt verdi per måned
 For en nettbutikk er det bruttofortjeneste fra annonsene. For en leads-bedrift er det henvendelser × det en henvendelse er verdt for deg. Tallet står i din egen konto som konverteringsverdi, så det kan ettergås.
 2
 ### Vi rigger sporingen først
-Google Ads, Meta Pixel og GA4 måler faktiske salg og leads før vi bruker en krone. Du ser hvert salg svart på hvitt i mandagsrapporten — ikke i en PDF vi har laget.
+Google Ads, Meta Pixel og GA4 måler faktiske salg og leads før vi bruker en krone. Du ser hvert salg svart på hvitt i mandagsrapporten, ikke i en PDF vi har laget.
 3
 ### Honoraret følger tallene
 En avtalt andel av verdien annonsene skapte forrige måned. Leverer kontoen ikke, betaler du oss ikke. Den nøyaktige andelen avtaler vi i den første praten, fordi den avhenger av marginene dine.
 ## Sammenlignet med de andre modellene.
-Ingen modell er uærlig i seg selv — men bare én gjør at byrået taper penger når du gjør det.
+Ingen modell er uærlig i seg selv, men bare én gjør at byrået taper penger når du gjør det.
  | | Modell | Typisk i Norge | Byråets insentiv | Du betaler i en dårlig måned
  | Fast månedshonorar | 15 000–50 000 kr/mnd | Beholde deg som kunde | Fullt honorar
  | Timepris | 1 000–2 000 kr/t | Bruke timer | Timene som ble brukt
@@ -1745,15 +1745,15 @@ Ingen modell er uærlig i seg selv — men bare én gjør at byrået taper penge
  | Henvendelser fra annonsene | 120
  | Kostnad per henvendelse | 250 kr
  | Verdi skapt (120 × 2 000 kr) | 240 000 kr
- | Arcads-honorar | Avtalt andel av de 240 000 — og 0 kr hvis henvendelsene uteblir
+ | Arcads-honorar | Avtalt andel av de 240 000, og 0 kr hvis henvendelsene uteblir
  Tallene er et regneeksempel, ikke et løfte. Det er derfor vi alltid starter med en gratis analyse: da får du et anslag for din bedrift før du bestemmer deg. Vil du se hva et lead faktisk koster i bransjen din, har vi tallene fra kontoene våre her .
 ## Det folk lurer på om prisen.
- Hva koster Arcads?+ Honoraret er 100 % resultatbasert. Vi må skape mer enn 25 000 kr i måneden i verdi for kunden for at samarbeidet skal lønne seg for oss — den nøyaktige modellen (andel av verdiskapingen, målt i din egen konto) avtaler vi i den første praten. Annonsebudsjettet betaler du direkte til Google og Meta.
+ Hva koster Arcads?+ Honoraret er 100 % resultatbasert. Vi må skape mer enn 25 000 kr i måneden i verdi for kunden for at samarbeidet skal lønne seg for oss. Den nøyaktige modellen (andel av verdiskapingen, målt i din egen konto) avtaler vi i den første praten. Annonsebudsjettet betaler du direkte til Google og Meta.
 Hva skjer i en dårlig måned?+ Da tjener vi mindre — eller ingenting. Det er hele poenget med modellen: vi taper penger når du gjør det, så vi jobber som om kontoen var vår egen.
 Er det bindingstid?+ Nei. Ingen bindingstid, ingen oppsigelsestid utover inneværende måned. Vi vinner deg på resultater, ikke på kontrakter.
-Er det noen oppstartskostnad?+ Nei. Sporing, struktur, landingssider og de første annonsene er en del av jobben — og honoraret kommer først når det leverer.
-Hvorfor sier dere nei til noen kunder?+ Fordi regnestykket må gå opp for begge. Er marginen for lav, søkevolumet for lite eller budsjettet for lite til å skape 25 000 kr i måneden i verdi, sier vi det ærlig i den første praten — og anbefaler heller hva du kan gjøre selv.
-Hvordan vet jeg hva dere har skapt?+ Vi rigger sporing (Google Ads, Meta Pixel, GA4) før vi bruker en krone, og du ser hvert salg og hvert lead i din egen konto. Mandagsrapporten viser hva du brukte og hva du tjente — det er grunnlaget for fakturaen.
+Er det noen oppstartskostnad?+ Nei. Sporing, struktur, landingssider og de første annonsene er en del av jobben, og honoraret kommer først når det leverer.
+Hvorfor sier dere nei til noen kunder?+ Fordi regnestykket må gå opp for begge. Er marginen for lav, søkevolumet for lite eller budsjettet for lite til å skape 25 000 kr i måneden i verdi, sier vi det ærlig i den første praten, og anbefaler heller hva du kan gjøre selv.
+Hvordan vet jeg hva dere har skapt?+ Vi rigger sporing (Google Ads, Meta Pixel, GA4) før vi bruker en krone, og du ser hvert salg og hvert lead i din egen konto. Mandagsrapporten viser hva du brukte og hva du tjente. Det er grunnlaget for fakturaen.
 Hva er «verdi» for en leads-bedrift?+ Antall henvendelser × det dere har avtalt at en henvendelse er verdt (typisk verdi per kunde × andel som kjøper). Vi setter tallet sammen med deg i starten, og det står i din egen Google Ads-konto som konverteringsverdi.
  Gratis videoanalyse
 ## Få et anslag for din bedrift — gratis.
@@ -1780,7 +1780,7 @@ Hva koster et lead i Norge? Ekte tall fra Google Ads-kontoer (2026) | Arcads
 # Hva koster et lead i Norge?
  Spør du Google får du amerikanske gjennomsnitt i dollar. Her er tallene fra norske Google Ads-kontoer vi faktisk drifter — bransje for bransje, med klikkpris, konverteringsrate og forbeholdene som hører med.
  Av Victor Skretteberg , Arcads · Oppdatert 7. september 2026
- Kort svar: I Google Ads-kontoene vi drifter (9. juni – 6. september 2026) koster et lead 163 kr for fasade- og takvask (snitt over 9 regioner), 202 kr for flyttevask i Oslo, 413 kr for et flyttebyrå i Oslo, 406 kr for næringsleasing (B2B) og rundt 940 kr for badstuer med høy ordreverdi. Klikkprisene spenner fra 9 kr til 74 kr. Alle tall er innsendte skjemaer, ikke klikk — og prisen per lead varierer mer mellom regioner enn mellom søkeord.
+ Kort svar: I Google Ads-kontoene vi drifter (9. juni – 6. september 2026) koster et lead 163 kr for fasade- og takvask (snitt over 9 regioner), 202 kr for flyttevask i Oslo, 413 kr for et flyttebyrå i Oslo, 406 kr for næringsleasing (B2B) og rundt 940 kr for badstuer med høy ordreverdi. Klikkprisene spenner fra 9 kr til 74 kr. Alle tall er innsendte skjemaer, ikke klikk, og prisen per lead varierer mer mellom regioner enn mellom søkeord.
 ## Tallene
 Alle tall er fra Google Ads-kontoer vi drifter, perioden 9. juni – 6. september 2026, kun aktive kampanjer. «Lead» betyr innsendt skjema på nettsiden (for flyttevask også telefon- og e-postklikk, se forbehold). Ingen av tallene er justert, avrundet til nærmeste krone.
  | | Bransje | Kostnad per lead | Klikkpris | Konverteringsrate | Leads i perioden
@@ -1791,20 +1791,20 @@ Alle tall er fra Google Ads-kontoer vi drifter, perioden 9. juni – 6. septembe
  | Badstuer (høy ordreverdi), hele Norge | ~940 kr | 9 kr | 0,9 % | 141
 ## Det tabellen egentlig sier
 Klikkprisen forklarer ikke prisen per lead. Badstuer har den billigste klikkprisen i tabellen (9 kr) og den dyreste prisen per lead. Leasing har den dyreste klikkprisen (74 kr) og en av de beste konverteringsratene. Det som avgjør er hvor mange av de som klikker som faktisk tar kontakt — altså landingssiden og intensjonen i søket.
-Regionen betyr mer enn søkeordet. For fasade- og takvask varierer prisen per lead fra 145 kr (Trondheim) til 341 kr (Østfold, ny region) — for samme tjeneste, samme kunde, samme periode. Én nasjonal kampanje hadde skjult det. Hele regiontabellen her.
+Regionen betyr mer enn søkeordet. For fasade- og takvask varierer prisen per lead fra 145 kr (Trondheim) til 341 kr (Østfold, ny region), for samme tjeneste, samme kunde, samme periode. Én nasjonal kampanje hadde skjult det. Hele regiontabellen her.
 Retargeting er billigst. For både flyttevask (116 kr) og flyttebyrå (310 kr) leverer retargeting-kampanjen de billigste leadsene i kontoen. Folk som allerede har sjekket prisen din er de enkleste å hente inn.
 Merkevaresøk pynter tallene. Fasadevask-kontoen har en brand-kampanje som leverer leads til 47 kr. Den er tatt ut av snittet over — blander du den inn, ser nykundeannonsene bedre ut enn de er.
 ## Hva et lead bør koste for deg
 Tabellen sier hva et lead koster. Om det er billig eller dyrt, avhenger av hva et lead er verdt for deg:
-Maks-pris per lead = verdi per ny kunde × andel av leads som blir kunder. Er en kunde verdt 8 000 kr i bruttofortjeneste og hver fjerde henvendelse blir kunde, tåler du 2 000 kr per lead — og 413 kr er et røverkjøp. Er en kunde verdt 1 500 kr og hver tiende blir kunde, tåler du 150 kr, og de samme 413 kr er tap.
+Maks-pris per lead = verdi per ny kunde × andel av leads som blir kunder. Er en kunde verdt 8 000 kr i bruttofortjeneste og hver fjerde henvendelse blir kunde, tåler du 2 000 kr per lead, og 413 kr er et røverkjøp. Er en kunde verdt 1 500 kr og hver tiende blir kunde, tåler du 150 kr, og de samme 413 kr er tap.
 Det regnestykket tar fem minutter, og det er det første vi gjør med en ny kunde. Skalering skjer bare i kampanjer som ligger under taket.
 ## Forbehold, fordi de betyr noe
  - Lead ≠ kunde. Tallene er innsendte skjemaer. Hvor mange som blir kunder avhenger av hvor fort dere ringer tilbake — et lead som ikke får svar innen en time, er ofte tapt.
  - Flyttevask-tallet inkluderer telefon- og e-postklikk (27 % av konverteringene). Ren skjema-CPL ligger noe høyere.
- - Badstu-tallet inkluderer 6 signerte ordre i tillegg til leads. Ren lead-CPL er 978 kr. Med leads verdt 5 000–54 000 kr er det likevel lønnsomt — det er derfor kontoen styres på verdi, ikke CPA.
+ - Badstu-tallet inkluderer 6 signerte ordre i tillegg til leads. Ren lead-CPL er 978 kr. Med leads verdt 5 000–54 000 kr er det likevel lønnsomt. Det er derfor kontoen styres på verdi, ikke CPA.
  - Leasing har bare 32 leads i perioden. Retningsgivende, ikke konklusivt.
  - Sesong. Juni–september er lavsesong for fasadevask og høysesong for flytting. Tallene svinger med måneden.
- - Én konto per bransje. Dette er ikke bransjegjennomsnitt — det er hva vi ser i kontoene vi drifter. Din konto kan ligge over eller under.
+ - Én konto per bransje. Dette er ikke bransjegjennomsnitt. Det er hva vi ser i kontoene vi drifter. Din konto kan ligge over eller under.
 ## Slik senker du prisen per lead
  - Én landingsside per tjeneste, med skjema over folden. Konverteringsraten er den største spaken i tabellen.
  - Én kampanje per region, så budsjettet kan flyttes dit leadsene er billigst.
@@ -1825,9 +1825,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Hva er en normal kostnad per lead i Norge?+ For lokale tjenester (renhold, flytting, håndverk) ser vi 160–450 kr per lead i kontoene vi drifter. For B2B-tjenester 400–500 kr med få leads. For produkter med høy ordreverdi (badstuer, boliger, biler) 900 kr og oppover. Det finnes ikke ett normaltall — bare hva som lønner seg for din margin.
 Hva koster et klikk på Google Ads i Norge?+ I kontoene i denne artikkelen: 9 kr (badstuer), 17 kr (fasadevask), 26 kr (flyttevask), 42 kr (flyttebyrå Oslo), 74 kr (næringsleasing). Konkurranseutsatte tjenester i storby og finans/advokat ligger høyere. Mer om klikkpriser her.
@@ -1856,9 +1856,9 @@ Resultatbasert eller fastpris: hvordan bør du betale et markedsføringsbyrå? |
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Artikkel
 # Resultatbasert eller fastpris?
- Ja, vi er et resultatbasert byrå, så les dette med det i mente. Men vi har jobbet under alle fire modellene — og insentivene de skaper er ikke en mening, de er matematikk.
+ Ja, vi er et resultatbasert byrå, så les dette med det i mente. Men vi har jobbet under alle fire modellene, og insentivene de skaper er ikke en mening, de er matematikk.
  Av Victor Skretteberg , Arcads · Oppdatert 7. september 2026
- Kort svar: Fast månedshonorar (15 000–50 000 kr/mnd i Norge) gir byrået insentiv til å beholde deg, ikke til å skape vekst. Prosent av budsjett gir insentiv til å øke budsjettet. Timepris gir insentiv til å bruke timer. Resultatbasert honorar er den eneste modellen der byrået taper penger når du gjør det — men den passer bare bedrifter med sporbare resultater og nok volum til at byrået kan leve av andelen. Er du under det, er fastpris ærligere for begge.
+ Kort svar: Fast månedshonorar (15 000–50 000 kr/mnd i Norge) gir byrået insentiv til å beholde deg, ikke til å skape vekst. Prosent av budsjett gir insentiv til å øke budsjettet. Timepris gir insentiv til å bruke timer. Resultatbasert honorar er den eneste modellen der byrået taper penger når du gjør det, men den passer bare bedrifter med sporbare resultater og nok volum til at byrået kan leve av andelen. Er du under det, er fastpris ærligere for begge.
 ## De fire modellene, og hva de belønner
 Et byrå gjør det det får betalt for. Ikke fordi folk er kyniske, men fordi det er sånn insentiver virker over tid. Så før du sammenligner byråer, sammenlign hva de tjener penger på.
  | | Modell | Typisk i Norge | Byrået tjener mest når…
@@ -1873,14 +1873,14 @@ Denne modellen er ærlig om hva den er: byrået får mer når du bruker mer. Det
 ## Resultatbasert: hva det faktisk betyr
 Byrået får en avtalt andel av verdien annonsene skaper, målt i kundens egen konto. Ingen resultater, ingen regning. Det høres ut som en selvfølge, men det krever tre ting som ikke alle bedrifter har:
  - Sporbare resultater. Salg i en nettbutikk eller henvendelser på et skjema kan måles. Merkevarekjennskap kan ikke. Er målet ditt «synlighet», finnes det ingenting å basere honoraret på.
- - Nok volum. Byrået må kunne leve av andelen. Hos oss betyr det at vi må skape mer enn 25 000 kr i måneden i verdi — så vi sier nei til bedrifter under det, og anbefaler heller hva de kan gjøre selv.
+ - Nok volum. Byrået må kunne leve av andelen. Hos oss betyr det at vi må skape mer enn 25 000 kr i måneden i verdi, så vi sier nei til bedrifter under det, og anbefaler heller hva de kan gjøre selv.
  - Enighet om hva verdi er. For en nettbutikk: bruttofortjeneste fra annonsene. For en leads-bedrift: henvendelser × verdi per henvendelse. Tallet må avtales før start og stå i kontoen, ellers blir det krangel i måned to.
 Den ærlige ulempen: resultatbaserte byråer er kresne. De tar ikke alle, fordi de taper penger på kunder der regnestykket ikke går opp. Får du nei, er det som regel et ærlig svar på om annonsering lønner seg for deg akkurat nå.
 ## Når fastpris faktisk er riktig
-Hvis du er tidlig, har lite budsjett, eller trenger hjelp til ting som ikke gir målbare tall på kort sikt (merkevarebygging, innhold, nettside), er fastpris ærligere for begge parter. Da kjøper du timer og kompetanse, og bør evaluere det som det. Bare vær klar over insentivet — og be om en kunderapport som handler om salg, ikke klikk.
+Hvis du er tidlig, har lite budsjett, eller trenger hjelp til ting som ikke gir målbare tall på kort sikt (merkevarebygging, innhold, nettside), er fastpris ærligere for begge parter. Da kjøper du timer og kompetanse, og bør evaluere det som det. Bare vær klar over insentivet, og be om en kunderapport som handler om salg, ikke klikk.
 ## Spørsmålene som avslører modellen
  - Hva skjer med fakturaen i en dårlig måned?
- - Hvordan måler dere det jeg betaler for — og kan jeg se det i min egen konto?
+ - Hvordan måler dere det jeg betaler for, og kan jeg se det i min egen konto?
  - Er det bindingstid? (Bindingstid er en forsikring byrået tegner mot sine egne resultater.)
  - Når sier dere nei til en kunde?
 Vi har ti spørsmål til her , og de gjelder også oss. Hvordan vår modell regnes ut står på prissiden .
@@ -1897,9 +1897,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Hva koster et markedsføringsbyrå i Norge?+ Fast honorar ligger typisk på 15 000–50 000 kr i måneden, timepris 1 000–2 000 kr, og prosent-av-budsjett-modeller tar 10–20 % av annonsebudsjettet. Resultatbaserte byråer tar en andel av verdien annonsene skaper, og ingenting hvis verdien uteblir.
 Er resultatbasert honorar dyrere?+ I gode måneder kan det være det — byrået får en andel av mer. I dårlige måneder er det billigere, ofte gratis. Over tid betaler du for det du får, ikke for tiden som gikk.
@@ -1941,16 +1941,16 @@ av klikkene sender skjema
 regioner med egen kampanje
  Fra annonsene vi lager for Utvendigrenhold — filmet av dem, klippet av oss.
 ## Utgangspunktet
-Utvendigrenhold har avdelinger fra Agder til Trøndelag og selger tjenester der hele salget skjer i én telefon etter et skjema. Utfordringen med Google Ads var ikke om det virket — det var å vite hvor det virket. Én tjeneste, ni regioner, ett budsjett: hvor skal kronene?
+Utvendigrenhold har avdelinger fra Agder til Trøndelag og selger tjenester der hele salget skjer i én telefon etter et skjema. Utfordringen med Google Ads var ikke om det virket. Det var å vite hvor det virket. Én tjeneste, ni regioner, ett budsjett: hvor skal kronene?
 ## Det vi bygde
 ### 1. Én kampanje per region
-Hver region fikk egen søkekampanje med egne annonser («Fasadevask i Bergen»), eget budsjett og egen rapportlinje. Geografien er satt som radius rundt der bilene faktisk kjører — ikke fylkesgrenser — og speilet mot Meta-kampanjene, så begge kanaler jobber i samme områder. Områder de ikke leverer til er ekskludert.
+Hver region fikk egen søkekampanje med egne annonser («Fasadevask i Bergen»), eget budsjett og egen rapportlinje. Geografien er satt som radius rundt der bilene faktisk kjører, ikke fylkesgrenser, og speilet mot Meta-kampanjene, så begge kanaler jobber i samme områder. Områder de ikke leverer til er ekskludert.
 ### 2. En landingsside per by
 Vi bygde 18 lokale landingssider etter mal: «Fasadevask i Stavanger» med lokal tekst, lokale anmeldelser og kundens eget skjema. Annonsene i hver region peker på sin side. Det gir bedre kvalitetspoeng (lavere klikkpris) og høyere konvertering enn den nasjonale tjenestesiden.
 ### 3. Sporing på innsendt skjema
 Kun innsendte skjemaer teller som konvertering. Ikke sidevisninger, ikke klikk på telefonnummeret. Da optimaliserer Google mot ekte henvendelser, og tallene i rapporten er tall kunden kan finne igjen i innboksen.
 ### 4. Merkevare for seg
-Folk som googler «utvendigrenhold» hadde funnet dem uansett. De søkene går i en egen brand-kampanje (47 kr per lead) og er holdt utenfor regiontallene under — ellers hadde nykundeannonsene sett bedre ut enn de er.
+Folk som googler «utvendigrenhold» hadde funnet dem uansett. De søkene går i en egen brand-kampanje (47 kr per lead) og er holdt utenfor regiontallene under. Ellers hadde nykundeannonsene sett bedre ut enn de er.
 ### 5. Søketermer vasket hver uke
 «Vaske taket selv», «jobb», «gratis», «hvordan» — renholdssøk trekker mye som aldri blir kunder. Negative søkeord oppdateres ukentlig per tjeneste.
 ## Tallene per region
@@ -1999,7 +1999,7 @@ Victor Skretteberg — Daglig leder & Google Performance, Arcads | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Daglig leder & Google Performance, Arcads
 # Victor Skretteberg
- Victor er medgründer og daglig leder i Arcads, og den som bygger og drifter Google Ads-kontoene til kundene: struktur, sporing, søketermer, budsjett — og mandagsrapporten. Han er den du møter i den første praten.
+ Victor er medgründer og daglig leder i Arcads, og den som bygger og drifter Google Ads-kontoene til kundene: struktur, sporing, søketermer, budsjett, og mandagsrapporten. Han er den du møter i den første praten.
  Victor på LinkedIn Få gratis videoanalyse Video på e-post innen 24 timer
 ## Hva Victor gjør
 Google Ads fra bunnen av: konverteringssporing som teller salg og leads, kampanjestruktur som skiller merkevare fra nykunder, ukentlig søketerm-vasking og budsjettflytting dit marginen er. For nettbutikker betyr det Shopping og Performance Max målt på lønnsomhet; for tjenestebedrifter betyr det én kampanje per region og landingssider som konverterer.
@@ -2042,7 +2042,7 @@ Jona Helgen — Creative & Sosiale Medier Performance, Arcads | Arcads
  Jona er medgründer i Arcads og lager annonsene: hooks, UGC-video, statics, motion graphics og konsepter — 10+ nye i uka. Han drifter Meta- og Snapchat-kampanjene og styrer creator-nettverket.
  Jona på LinkedIn Få gratis videoanalyse Video på e-post innen 24 timer
 ## Hva Jona gjør
-Alt kunden ser i feeden. Jona skriver hooks og manus, rekrutterer og briefer UGC-creators, klipper video, bygger statics og motion graphics, og tester 10+ nye varianter i uka i Meta og Snapchat. Ingen freelancere, ingen byråpartnere — det er derfor det tar 48 timer fra brief til første ferdige annonse.
+Alt kunden ser i feeden. Jona skriver hooks og manus, rekrutterer og briefer UGC-creators, klipper video, bygger statics og motion graphics, og tester 10+ nye varianter i uka i Meta og Snapchat. Ingen freelancere, ingen byråpartnere. Det er derfor det tar 48 timer fra brief til første ferdige annonse.
 Han drifter Meta-kontoene med samme regel som Victor på Google: sporing først, salg og leads som eneste mål, og annonser som byttes ut før de slites.
 ## Tall fra arbeidet
  - 5000+ annonser laget for norske merkevarer.
@@ -2078,7 +2078,7 @@ Markedsføring for tjenestebedrifter — flere kunder fra Google og Meta | Arcad
  Håndverkere, klinikker, salonger, verksted, regnskap, advokat, megler, renhold, flytting. Vi bygger Google- og Meta-kontoer som leverer henvendelser til en pris du kan regne hjem — i hele Norge. 100 % resultatbasert honorar.
  Kort svar: Tjenestebedrifter får flest nye kunder ved å være synlige i det øyeblikket noen søker etter tjenesten (Google Ads og Google Business Profile), og ved å bli husket lokalt før behovet oppstår (Facebook og Instagram med ekte innhold). Rekkefølgen: rigg sporing på henvendelser, ta Google til lønnsomhet, legg til Meta og retargeting. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Sett et tak per lead ut fra kundeverdi før du skrur på.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202 kr
@@ -2106,7 +2106,7 @@ Hvor kundene leter, hva et lead kan koste, sesong, vanlige feil og de første 30
 Rørleggere, elektrikere, malere, tømrere og byggfirma.
 Rørlegger
 ### Markedsføring for rørleggere →
-Halvparten av rørleggersøkene er akutte — lekkasje, tett avløp, ingen varmt vann — og de kundene ringer den første som svarer.
+Halvparten av rørleggersøkene er akutte — lekkasje, tett avløp, ingen varmt vann, og de kundene ringer den første som svarer.
 Elektriker
 ### Markedsføring for elektrikere →
 Elbillader, sikringsskap, varmepumpe, el-sjekk ved boligsalg.
@@ -2177,9 +2177,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det tjenestebedrifter spør om.
  Hvordan får en tjenestebedrift flere kunder?+ Vær der når kunden søker (Google Ads på tjeneste + by, komplett Google Business Profile), gjør det lett å ta kontakt (pris, telefon, skjema over folden), og bli husket lokalt før behovet oppstår (Facebook/Instagram med ekte bilder og video innen 10–30 km). Mål alt på henvendelser, ikke klikk.
 Google Ads eller Facebook for en tjenestebedrift?+ Google først hvis folk søker etter tjenesten din (rørlegger, tannlege, flyttevask). Facebook først hvis kunden må se deg før de vet de trenger deg (frisør, treningssenter, estetiske behandlinger). De fleste bør ha begge, i den rekkefølgen.
@@ -2210,10 +2210,10 @@ Markedsføring for håndverkere — flere kunder fra Google og Meta | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for håndverkere
 # Markedsføring for håndverkere.
- Rørleggere, elektrikere, malere, tømrere og byggfirma. Kundene dine søker etter deg samme dag som de trenger deg — og velger den som svarer først. Her er hvordan du blir den de finner, og hva det bør koste.
+ Rørleggere, elektrikere, malere, tømrere og byggfirma. Kundene dine søker etter deg samme dag som de trenger deg, og velger den som svarer først. Her er hvordan du blir den de finner, og hva det bør koste.
  Kort svar: Håndverkere bør starte med Google Ads på «[fag] + [by]»-søk, fordi kunden allerede leter og velger den som svarer først. Én landingsside per fag med telefon, prisanslag og anmeldelser konverterer 10 % eller mer av klikkene. Facebook fungerer for større jobber (bad, tak, tilbygg) og for å bli husket i nærområdet, men gir sjelden akutte oppdrag. Sett et tak per lead ut fra jobbverdi før du skrur på.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2227,7 +2227,7 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for håndverkere: «rørlegger [by]», «elektriker [by]», «snekker pris», «maler [by]», «håndverker nær meg». Håndverkstjenester er «bli funnet»-jobben i sin reneste form: ingen søker «elektriker Drammen» for moro skyld. Klikkene er dyrere enn for renhold (konkurransen er høyere i storbyene), men konverteringsraten er god hvis siden svarer på det kunden lurer på: kan dere komme, hva koster det, og er dere seriøse.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for håndverkere: en gjennomsnittsjobb på 12 000 kr med 35 % margin (4 200 kr), og hver tredje henvendelse blir jobb. Da er en henvendelse verdt 1 400 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for håndverkere: en gjennomsnittsjobb på 12 000 kr med 35 % margin (4 200 kr), og hver tredje henvendelse blir jobb. Da er en henvendelse verdt 1 400 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Innendørs arbeid (bad, kjøkken, elektro) topper januar–april; utendørs (maling, tak, terrasse) april–september. Akuttjobber (lekkasje, strømbrudd) er jevne hele året og bør ha egen annonsegruppe med «i dag»/«døgnvakt» hvis dere tilbyr det.
 ## De vanligste feilene vi ser
@@ -2255,12 +2255,12 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det håndverkere spør om.
  Hva koster et lead for en håndverker på Google?+ Det avhenger av fag og by. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Håndverk i storby ligger typisk over renhold i klikkpris (20–60 kr per klikk), så konverteringsraten på landingssiden avgjør om leadet havner på 300 eller 800 kr.
-Google eller Facebook for håndverkere?+ Google først: kunden søker allerede. Facebook for større, planlagte jobber (bad, tak, tilbygg) der du kan vise før/etter til folk i nærområdet — og som retargeting mot de som besøkte siden din uten å ringe.
+Google eller Facebook for håndverkere?+ Google først: kunden søker allerede. Facebook for større, planlagte jobber (bad, tak, tilbygg) der du kan vise før/etter til folk i nærområdet, og som retargeting mot de som besøkte siden din uten å ringe.
 Hvor stort budsjett trenger et lite håndverksfirma?+ Nok til 20–30 leads i måneden i ett område. Med 400 kr per lead er det 8 000–12 000 kr. Under det bør du kjøre ett fag i én by godt, ikke alt overalt.
 Vi får henvendelser vi ikke kan ta. Hva gjør vi?+ Det er et geo- eller søketermproblem: for stor radius, eller søk som «billig» og «akutt» når dere ikke tar akutt. Begge fikses i kontoen på en uke.
 Hva koster Arcads?+ 100 % resultatbasert honorar, ingen bindingstid, ingen oppstartskostnad. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Se prissiden.
@@ -2288,10 +2288,10 @@ Markedsføring for rørleggere — flere kunder fra Google og Meta | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for rørleggere
 # Markedsføring for rørleggere.
- Halvparten av rørleggersøkene er akutte — lekkasje, tett avløp, ingen varmt vann — og de kundene ringer den første som svarer. Den andre halvparten planlegger bad og bereder og sammenligner tre tilbud. De to gruppene trenger hver sin kampanje.
- Kort svar: Rørleggere bør dele Google Ads i to: en akutt-kampanje («rørlegger akutt», «lekkasje», «tett avløp») med telefon som eneste mål og annonser som sier «i dag», og en planlagt-kampanje (bad, bereder, varmepumpe) med skjema og prisanslag. Akutte leads er dyrere per klikk, men konverterer høyest. Telefonsporing er ikke valgfritt — de fleste rørleggerleads er samtaler.
+ Halvparten av rørleggersøkene er akutte — lekkasje, tett avløp, ingen varmt vann, og de kundene ringer den første som svarer. Den andre halvparten planlegger bad og bereder og sammenligner tre tilbud. De to gruppene trenger hver sin kampanje.
+ Kort svar: Rørleggere bør dele Google Ads i to: en akutt-kampanje («rørlegger akutt», «lekkasje», «tett avløp») med telefon som eneste mål og annonser som sier «i dag», og en planlagt-kampanje (bad, bereder, varmepumpe) med skjema og prisanslag. Akutte leads er dyrere per klikk, men konverterer høyest. Telefonsporing er ikke valgfritt. De fleste rørleggerleads er samtaler.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2305,11 +2305,11 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for rørleggere: «rørlegger [by]», «rørlegger akutt», «rørlegger pris», «bytte varmtvannsbereder», «lekkasje rørlegger». Rørlegger er blant de dyreste håndverksfagene på Google i storby, fordi akuttjobber har høy verdi og alle vet det. Det gjør to ting viktige: at annonsen bare vises til folk i området dere faktisk rykker ut til, og at telefonen tas. Et akutt-lead som får telefonsvarer er tapt til neste i lista.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for rørleggere: en akuttjobb på 6 000 kr med 40 % margin (2 400 kr), og annenhver samtale blir jobb. Da er en henvendelse verdt 1 200 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for rørleggere: en akuttjobb på 6 000 kr med 40 % margin (2 400 kr), og annenhver samtale blir jobb. Da er en henvendelse verdt 1 200 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Frost (november–mars) gir topper på lekkasje og frosne rør. Bad og bereder er jevnt, med topp januar–mars. Varmepumpe og gulvvarme topper august–oktober.
 ## De vanligste feilene vi ser
-- Akutt og planlagt i samme kampanje — da byr du akuttpris på «pris på nytt bad».
+- Akutt og planlagt i samme kampanje. Da byr du akuttpris på «pris på nytt bad».
 - Ingen samtalesporing. Kontoen optimaliserer mot skjema, mens kundene ringer.
 - Annonse som sier «døgnvakt» når ingen tar telefonen etter 16.
 - Radius satt til fylket. Utrykning til 80 km koster mer enn leadet er verdt.
@@ -2333,12 +2333,12 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det rørleggere spør om.
  Hva koster et lead for en rørlegger?+ I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Rørlegger i storby ligger høyere i klikkpris enn renhold; med 40–60 kr per klikk og 10 % konvertering lander et lead på 400–600 kr. Verdien på en akuttjobb bærer det med god margin.
-Bør vi annonsere «akutt rørlegger» hvis vi ikke har døgnvakt?+ Nei. Da betaler du for samtaler ingen tar, og Google lærer feil. Kjør akutt-annonsene bare i timene noen svarer — det styres med annonseplan i kontoen.
+Bør vi annonsere «akutt rørlegger» hvis vi ikke har døgnvakt?+ Nei. Da betaler du for samtaler ingen tar, og Google lærer feil. Kjør akutt-annonsene bare i timene noen svarer. Det styres med annonseplan i kontoen.
 Fungerer Facebook for rørleggere?+ Til planlagte jobber, ja: bad-oppussing med før/etter-bilder til folk i nærområdet, og retargeting mot de som sjekket bad-siden. Til akutt, nei — ingen scroller Facebook mens kjelleren fylles.
 Hvordan sorterer vi ut folk som vil gjøre det selv?+ Negative søkeord: «selv», «hvordan», «youtube», «deler», «biltema». Oppdateres hver uke fra søketermrapporten.
 Hva koster Arcads?+ 100 % resultatbasert honorar, ingen bindingstid, ingen oppstartskostnad. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Se prissiden.
@@ -2369,7 +2369,7 @@ Markedsføring for elektrikere — flere kunder fra Google og Meta | Arcads
  Elbillader, sikringsskap, varmepumpe, el-sjekk ved boligsalg. Elektrikerjobbene er konkrete, kunden vet hva de trenger, og de søker på akkurat det. Kontoen din bør se ut som den lista.
  Kort svar: Elektrikere bør bygge Google Ads rundt konkrete jobber, ikke faget: «elbillader montering», «bytte sikringsskap», «el-sjekk», «varmepumpe montering» — hver med egen annonse og egen side med fastpris eller prisanslag. Det gir høyere konvertering og lavere klikkpris enn en generell «elektriker [by]»-kampanje. Elbillader er den mest lønnsomme inngangen akkurat nå fordi jobben er standardisert og kunden vil ha en pris.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2383,7 +2383,7 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for elektrikere: «elektriker [by]», «elektriker pris», «bytte sikringsskap», «elbillader montering», «el-sjekk». Elektrikerjobber egner seg uvanlig godt for fastpris i annonsen. «Elbillader montert fra 8 900 kr» slår «Vi er din lokale elektriker» hver gang, fordi kunden søker etter en pris, ikke en relasjon. Og fastpris filtrerer bort de som ikke har råd før de klikker.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for elektrikere: en elbillader-jobb på 10 000 kr med 35 % margin (3 500 kr), og hver tredje henvendelse blir jobb. Da er en henvendelse verdt 1 100 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for elektrikere: en elbillader-jobb på 10 000 kr med 35 % margin (3 500 kr), og hver tredje henvendelse blir jobb. Da er en henvendelse verdt 1 100 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Elbillader og varmepumpe topper august–november. Sikringsskap og el-sjekk følger boligsalg (vår og høst). Utebelysning september–november.
 ## De vanligste feilene vi ser
@@ -2397,7 +2397,7 @@ Elbillader og varmepumpe topper august–november. Sikringsskap og el-sjekk føl
 - Fastpris eller «fra»-pris i annonse og på side
 - Negative søkeord: lønn, lærling, utdanning, kurs, selv
 Deretter: søketermer vaskes hver uke, budsjett flyttes dit leadsene er billigst, og mandagsrapporten viser hva du brukte og hva du fikk.
-Ekte tall fra en beslektet konto: Utvendigrenhold — 549 leads på 90 dager til 163 kr per lead med én side per tjeneste. Elektriker-jobber er enda mer standardiserte — og egner seg enda bedre for fastpris.
+Ekte tall fra en beslektet konto: Utvendigrenhold — 549 leads på 90 dager til 163 kr per lead med én side per tjeneste. Elektriker-jobber er enda mer standardiserte, og egner seg enda bedre for fastpris.
 Flere bransjer og hele metoden: markedsføring for tjenestebedrifter . Hva et lead koster i andre bransjer: tabellen fra kontoene våre .
  Før / etter
 ## Før og etter Arcads.
@@ -2411,13 +2411,13 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det elektrikere spør om.
  Hva koster et lead for en elektriker?+ I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Elektriker ligger typisk mellom renhold og rørlegger i klikkpris. Med fastpris på siden og 10 %+ konvertering er 300–500 kr per lead realistisk i de fleste byer.
 Skal vi annonsere på «elektriker [by]» eller på jobbene?+ Begge, men i hver sin annonsegruppe. Jobb-søkene («elbillader montering») konverterer best og bør få mest budsjett. «Elektriker [by]» fanger resten.
-Facebook for elektrikere?+ Til elbillader og varmepumpe, ja — det er planlagte kjøp der en video med pris og montering på 30 sekunder fungerer i feeden. Retargeting mot de som besøkte prissiden er billigst.
+Facebook for elektrikere?+ Til elbillader og varmepumpe, ja. Det er planlagte kjøp der en video med pris og montering på 30 sekunder fungerer i feeden. Retargeting mot de som besøkte prissiden er billigst.
 Vi får for mange små jobber. Hva gjør vi?+ Sett minstepris i annonsen («fra 2 900 kr») og negativer småjobb-søk («bytte stikkontakt», «lampe»). Kontoen skal jobbe for jobbene dere vil ha.
 Hva koster Arcads?+ 100 % resultatbasert honorar, ingen bindingstid, ingen oppstartskostnad. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Se prissiden.
 Jobber dere med bedrifter i hele Norge?+ Ja. Kontoret er i Skien, men kundene er i Oslo, Bergen, Trondheim, Stavanger, Kristiansand, Ålesund og Innlandet. Jobben skjer på video og i kontoen din.
@@ -2444,10 +2444,10 @@ Markedsføring for malere og malerfirma — flere kunder fra Google og Meta | Ar
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for malere
 # Markedsføring for malere.
- Maling er visuelt, sesongstyrt og planlagt. Kunden sammenligner tilbud i ukevis før de bestemmer seg — og velger den som viste dem hvordan det ble. Derfor er maling et av få håndverksfag der Facebook kan slå Google.
- Kort svar: Malerfirma bør kjøre Google Ads på «maler [by]» og «male hus utvendig pris» for de som er klare, og Facebook med før/etter-bilder til huseiere i nærområdet for de som ikke har begynt å søke ennå. Utvendig maling selges april–august og må annonseres fra mars. Landingssiden må ha bilder av eget arbeid, prisanslag per kvadratmeter og et skjema som ber om adresse og bilder — det gir tilbud som kan sendes uten befaring.
+ Maling er visuelt, sesongstyrt og planlagt. Kunden sammenligner tilbud i ukevis før de bestemmer seg, og velger den som viste dem hvordan det ble. Derfor er maling et av få håndverksfag der Facebook kan slå Google.
+ Kort svar: Malerfirma bør kjøre Google Ads på «maler [by]» og «male hus utvendig pris» for de som er klare, og Facebook med før/etter-bilder til huseiere i nærområdet for de som ikke har begynt å søke ennå. Utvendig maling selges april–august og må annonseres fra mars. Landingssiden må ha bilder av eget arbeid, prisanslag per kvadratmeter og et skjema som ber om adresse og bilder. Det gir tilbud som kan sendes uten befaring.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2458,10 +2458,10 @@ fra brief til live annonser
 resultatbasert honorar
  Noen av dem vi jobber med
 ## Hvor kundene dine leter
-Søkene vi bygger kontoer rundt for malere: «maler [by]», «malerfirma pris», «male hus utvendig pris», «maler innvendig», «sparkling og maling». Utvendig maling er en jobb på 40 000–150 000 kr som kunden bestemmer seg for én gang hvert tiende år. Det gir god margin per lead, men også lang beslutningstid. Retargeting mot de som besøkte siden er derfor den viktigste kampanjen — den holder dere synlige de tre ukene kunden tenker.
+Søkene vi bygger kontoer rundt for malere: «maler [by]», «malerfirma pris», «male hus utvendig pris», «maler innvendig», «sparkling og maling». Utvendig maling er en jobb på 40 000–150 000 kr som kunden bestemmer seg for én gang hvert tiende år. Det gir god margin per lead, men også lang beslutningstid. Retargeting mot de som besøkte siden er derfor den viktigste kampanjen. Den holder dere synlige de tre ukene kunden tenker.
 Kanalvalg: Google og Meta sammen — Google fanger de som søker, Meta skaper og holder på etterspørselen.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for malere: en utvendig malejobb på 80 000 kr med 30 % margin (24 000 kr), og hver fjerde henvendelse blir jobb. Da er en henvendelse verdt 6 000 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for malere: en utvendig malejobb på 80 000 kr med 30 % margin (24 000 kr), og hver fjerde henvendelse blir jobb. Da er en henvendelse verdt 6 000 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Utvendig: annonser fra mars, salg april–august, siste jobber september. Innvendig: oktober–mars. Bytt hele kontoen to ganger i året.
 ## De vanligste feilene vi ser
@@ -2489,14 +2489,14 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det malere spør om.
  Hva koster et lead for et malerfirma?+ I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Maling har færre akuttsøk og lengre beslutningstid; regn med 300–600 kr per lead på Google i sesong, lavere på Facebook-retargeting. Med jobber på 50 000 kr og oppover er det billig.
 Google eller Facebook for malere?+ Begge, med ulike jobber: Google tar de som søker nå, Facebook viser før/etter til de som ikke har begynt å tenke. For utvendig maling i sesong har Facebook ofte lavere pris per lead.
 Når bør vi starte annonseringen for utvendig maling?+ Mars. Kunden bestemmer seg i april–mai, og retargeting trenger noen uker. Starter du i mai, betaler du toppris for de siste kundene.
-Hvordan får vi tilbud uten å reise på befaring?+ Skjema med adresse, antall etasjer og bilder. Med Google Maps og bildene kan de fleste utvendige jobber prises fra kontoret — og kunden får svar samme dag.
+Hvordan får vi tilbud uten å reise på befaring?+ Skjema med adresse, antall etasjer og bilder. Med Google Maps og bildene kan de fleste utvendige jobber prises fra kontoret, og kunden får svar samme dag.
 Hva koster Arcads?+ 100 % resultatbasert honorar, ingen bindingstid, ingen oppstartskostnad. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Se prissiden.
 Jobber dere med bedrifter i hele Norge?+ Ja. Kontoret er i Skien, men kundene er i Oslo, Bergen, Trondheim, Stavanger, Kristiansand, Ålesund og Innlandet. Jobben skjer på video og i kontoen din.
  Gratis videoanalyse
@@ -2525,7 +2525,7 @@ Markedsføring for byggfirma og entreprenører — flere kunder fra Google og Me
  Tilbygg, totalrenovering, garasje, bad. Jobber på 200 000 kr og oppover, der kunden bruker måneder på å bestemme seg og snakker med tre firmaer. Her handler markedsføring om å være det ene firmaet kunden stoler på når de endelig ringer.
  Kort svar: Byggfirma bør annonsere på prosjekttypene, ikke på «byggfirma»: «tilbygg pris», «totalrenovering», «bygge garasje». Google fanger de som planlegger, Facebook og retargeting holder dere synlige i månedene beslutningen tar. Landingssiden må vise ferdige prosjekter med tall (pris, tid, kvadratmeter) og be om nok informasjon til at dere kan sortere leads etter verdi. Med prosjekter på 500 000 kr tåler dere 2 000–5 000 kr per kvalifisert lead.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2536,16 +2536,16 @@ fra brief til live annonser
 resultatbasert honorar
  Noen av dem vi jobber med
 ## Hvor kundene dine leter
-Søkene vi bygger kontoer rundt for byggfirma og entreprenører: «tilbygg pris», «byggfirma [by]», «totalrenovering», «rehabilitering bad», «garasje bygge pris», «entreprenør [by]». Byggprosjekter har den lengste beslutningstiden av alle tjenester vi jobber med — og den høyeste verdien. Det gjør vanlig «lead-tenkning» feil: dere trenger ikke flest leads, dere trenger de riktige, og dere trenger å bli husket i fire måneder. Kvalifiserende skjema (budsjett, tidsramme, adresse) og retargeting er de to viktigste verktøyene.
+Søkene vi bygger kontoer rundt for byggfirma og entreprenører: «tilbygg pris», «byggfirma [by]», «totalrenovering», «rehabilitering bad», «garasje bygge pris», «entreprenør [by]». Byggprosjekter har den lengste beslutningstiden av alle tjenester vi jobber med, og den høyeste verdien. Det gjør vanlig «lead-tenkning» feil: dere trenger ikke flest leads, dere trenger de riktige, og dere trenger å bli husket i fire måneder. Kvalifiserende skjema (budsjett, tidsramme, adresse) og retargeting er de to viktigste verktøyene.
 Kanalvalg: Google og Meta sammen — Google fanger de som søker, Meta skaper og holder på etterspørselen.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for byggfirma og entreprenører: et tilbygg på 600 000 kr med 15 % margin (90 000 kr), og hver femte kvalifiserte henvendelse blir kontrakt. Da er en henvendelse verdt 18 000 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for byggfirma og entreprenører: et tilbygg på 600 000 kr med 15 % margin (90 000 kr), og hver femte kvalifiserte henvendelse blir kontrakt. Da er en henvendelse verdt 18 000 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Planlegging skjer om vinteren (januar–mars er høysesong for søk), bygging vår og sommer. Annonser når folk planlegger, ikke når dere har ledig kapasitet.
 ## De vanligste feilene vi ser
 - Skjema med navn og telefon. Dere får 40 henvendelser der 35 vil ha «et prisanslag» på noe de ikke har råd til.
 - Ingen prosjekter med tall på siden. «Vi leverer kvalitet» sier alle.
-- Annonserer bare når ordreboka er tom — og da er det for sent, kunden bestemte seg i mars.
+- Annonserer bare når ordreboka er tom, og da er det for sent, kunden bestemte seg i mars.
 - Ingen retargeting. Kunden som tenker i fire måneder møter tre konkurrenter i mellomtiden.
 ## De første 30 dagene hos oss
 - Sporing på skjema med kvalifisering (prosjekttype, budsjettspenn, tidsramme)
@@ -2567,14 +2567,14 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det byggfirma og entreprenører spør om.
  Hva bør et lead koste for et byggfirma?+ Regn baklengs fra prosjektverdien: er et tilbygg verdt 90 000 kr i margin og hver femte kvalifiserte henvendelse blir kontrakt, tåler dere 18 000 kr per lead. I praksis ligger kvalifiserte byggleads på 1 000–5 000 kr. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026).
 Hvordan unngår vi henvendelser uten budsjett?+ Kvalifiserende skjema (budsjettspenn, tidsramme) og prisanslag på siden («tilbygg fra 25 000 kr/m²»). Det halverer antall leads og dobler kvaliteten.
 Google eller Facebook for byggfirma?+ Google for de som søker «tilbygg pris» i dag. Facebook for å vise ferdige prosjekter til huseiere i området før de søker, og som retargeting i beslutningsmånedene. Begge, men start med Google.
-Hva med Mittanbud og Byggstart?+ Fint som supplement, men der konkurrerer dere på pris med fem andre. Egen annonsering gir dere kunden alene — og dere eier relasjonen.
+Hva med Mittanbud og Byggstart?+ Fint som supplement, men der konkurrerer dere på pris med fem andre. Egen annonsering gir dere kunden alene, og dere eier relasjonen.
 Hva koster Arcads?+ 100 % resultatbasert honorar, ingen bindingstid, ingen oppstartskostnad. Vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss. Se prissiden.
 Jobber dere med bedrifter i hele Norge?+ Ja. Kontoret er i Skien, men kundene er i Oslo, Bergen, Trondheim, Stavanger, Kristiansand, Ålesund og Innlandet. Jobben skjer på video og i kontoen din.
  Gratis videoanalyse
@@ -2600,10 +2600,10 @@ Markedsføring for tannleger — flere kunder fra Google og Meta | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for tannleger
 # Markedsføring for tannleger.
- Tannlege er en av få bransjer der Google Ads har hatt høy konkurranse i Norge i mange år. Det betyr dyre klikk på «tannlege [by]» — og at pengene ligger i behandlingene: bleking, implantat, regulering, Invisalign.
- Kort svar: Tannklinikker bør annonsere på behandlinger med høy verdi og aktiv søking (implantat, tannregulering, bleking, akutt tannlege), ikke bare på «tannlege [by]». Hver behandling trenger egen side med pris eller prisfra, hvem som utfører den, og booking. Meta fungerer for estetiske behandlinger (bleking, fasetter, Invisalign) med før/etter — men Google først. For en tannklinikk i England gikk vi fra 0 til 11 bookinger i uka.
+ Tannlege er en av få bransjer der Google Ads har hatt høy konkurranse i Norge i mange år. Det betyr dyre klikk på «tannlege [by]», og at pengene ligger i behandlingene: bleking, implantat, regulering, Invisalign.
+ Kort svar: Tannklinikker bør annonsere på behandlinger med høy verdi og aktiv søking (implantat, tannregulering, bleking, akutt tannlege), ikke bare på «tannlege [by]». Hver behandling trenger egen side med pris eller prisfra, hvem som utfører den, og booking. Meta fungerer for estetiske behandlinger (bleking, fasetter, Invisalign) med før/etter, men Google først. For en tannklinikk i England gikk vi fra 0 til 11 bookinger i uka.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2617,7 +2617,7 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for tannleger: «tannlege [by]», «tannlege akutt», «tannbleking pris», «implantat pris», «tannregulering voksne». Nye pasienter velger tannlege på tre ting: nærhet, tillit og pris på den behandlingen de trenger. En generell klinikkside gir dem ingen av delene. En side som sier «Implantat fra 18 900 kr, utført av [navn], 15 min fra sentrum, book her» gir alle tre.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for tannleger: et implantat til 25 000 kr med 40 % margin (10 000 kr), og hver tredje henvendelse booker. Da er en henvendelse verdt 3 300 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for tannleger: et implantat til 25 000 kr med 40 % margin (10 000 kr), og hver tredje henvendelse booker. Da er en henvendelse verdt 3 300 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Akutt er jevnt. Bleking og estetikk topper mai–juni (bryllup, sommer) og november (jul). Regulering følger skolestart (august) og nyttår.
 ## De vanligste feilene vi ser
@@ -2645,9 +2645,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det tannleger spør om.
  Hva koster en ny pasient fra Google Ads?+ Klikkprisene for tannlege i norske byer er blant de høyeste for tjenester. Regn med 400–1 000 kr per booking avhengig av behandling; implantat og regulering i den øvre delen, men med langt høyere verdi. For en klinikk i England landet vi på £17 per lead på Meta.
 Kan vi si «gratis konsultasjon»?+ Bare hvis den faktisk er gratis, uten bookingavgift. Vi faktasjekker hver annonse mot klinikkens priser før den går live.
@@ -2681,7 +2681,7 @@ Markedsføring for frisører og salonger — flere kunder fra Google og Meta | A
  Frisør, hudpleie, negler, vipper. Kundene bor innen 15 minutter, velger på bilder og Instagram, og kommer tilbake hver 6.–8. uke hvis de er fornøyde. Markedsføringen skal gjøre én ting: fylle de tomme timene med nye kunder som blir faste.
  Kort svar: Salonger bør bruke Meta (Instagram og Facebook) som hovedkanal, med bilder og korte videoer av eget arbeid til folk innen 10–15 km, og et enkelt bookingtilbud for nye kunder. Google Ads på «frisør [by]» og «drop in» fanger de som søker akkurat nå. Pris per ny kunde bør ligge godt under det en kunde er verdt over et år (ofte 5 000–10 000 kr), så 200–400 kr per booking er billig. Booking direkte i annonsen, ikke «send melding».
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2692,12 +2692,12 @@ fra brief til live annonser
 resultatbasert honorar
  Noen av dem vi jobber med
 ## Hvor kundene dine leter
-Søkene vi bygger kontoer rundt for frisører og salonger: «frisør [by]», «frisør drop in», «balayage pris», «frisør nær meg», «hudpleie [by]», «vippeextensions». Salong er visuelt og lokalt. En video av en balayage under arbeid, vist til kvinner 25–45 innen 10 km, fungerer bedre enn noe søkeord — og den kan bookes med to klikk. Google tar de som søker «frisør drop in» på lørdag formiddag. Sammen fyller de kalenderen.
+Søkene vi bygger kontoer rundt for frisører og salonger: «frisør [by]», «frisør drop in», «balayage pris», «frisør nær meg», «hudpleie [by]», «vippeextensions». Salong er visuelt og lokalt. En video av en balayage under arbeid, vist til kvinner 25–45 innen 10 km, fungerer bedre enn noe søkeord, og den kan bookes med to klikk. Google tar de som søker «frisør drop in» på lørdag formiddag. Sammen fyller de kalenderen.
 Kanalvalg: Meta først — kunden må se dere før de søker.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for frisører og salonger: en ny kunde som kommer 6 ganger i året à 1 100 kr med 50 % margin (3 300 kr/år), og annenhver booking blir fast kunde. Da er en henvendelse verdt 1 600 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for frisører og salonger: en ny kunde som kommer 6 ganger i året à 1 100 kr med 50 % margin (3 300 kr/år), og annenhver booking blir fast kunde. Da er en henvendelse verdt 1 600 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
-Desember og mai–juni er høysesong. Januar og august er tomme — det er da annonsene skal gå med nykundetilbud.
+Desember og mai–juni er høysesong. Januar og august er tomme. Det er da annonsene skal gå med nykundetilbud.
 ## De vanligste feilene vi ser
 - «Send oss en DM» som CTA. Booking-lenke i annonsen, alltid.
 - Stockbilder. Kunden vil se deres arbeid, deres lokale, deres folk.
@@ -2723,9 +2723,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det frisører og salonger spør om.
  Hva koster en ny kunde for en salong?+ Med Meta i et lokalområde ser vi typisk 150–400 kr per booking for tjenester i denne prisklassen. Er en fast kunde verdt 3 000 kr i året, er det svært lønnsomt.
 Instagram eller Google for frisører?+ Instagram/Facebook som hovedkanal (visuelt, lokalt, bookbart). Google for de som søker «frisør [by]» og «drop in» — mindre volum, høy intensjon.
@@ -2756,10 +2756,10 @@ Markedsføring for bilverksted — flere kunder fra Google og Meta | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for bilverksted
 # Markedsføring for bilverksted.
- EU-kontroll, service, dekkskift, bremser. Kunden søker når lampen lyser eller brevet fra Vegvesenet kommer — og booker det verkstedet som viser pris og ledig tid. Markedsføring for verksted er å være der med et tall.
+ EU-kontroll, service, dekkskift, bremser. Kunden søker når lampen lyser eller brevet fra Vegvesenet kommer, og booker det verkstedet som viser pris og ledig tid. Markedsføring for verksted er å være der med et tall.
  Kort svar: Bilverksteder bør annonsere på Google på de konkrete tjenestene (EU-kontroll, dekkskift, service, bremser) med pris i annonsen og online booking, innenfor 15–20 km. EU-kontroll og dekkskift er sesong-inngangene som gir nye faste kunder. Facebook fungerer for dekkskift-kampanjer i sesong og for å minne eksisterende kunder om service. Pris per booking bør ligge på 100–300 kr, siden en fast kunde er verdt flere tusen i året.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2770,10 +2770,10 @@ fra brief til live annonser
 resultatbasert honorar
  Noen av dem vi jobber med
 ## Hvor kundene dine leter
-Søkene vi bygger kontoer rundt for bilverksted: «bilverksted [by]», «eu-kontroll [by]», «dekkskift pris», «service bil pris», «bilverksted nær meg». Verkstedkunder er de mest prisstyrte i tjenestemarkedet: «EU-kontroll 690 kr, ledig i morgen» vinner klikket. Men de er også lojale når de først er fornøyde. Derfor er lavmargin-tjenester (EU-kontroll, dekkskift) den beste inngangen — de betaler seg på service og reparasjoner senere.
+Søkene vi bygger kontoer rundt for bilverksted: «bilverksted [by]», «eu-kontroll [by]», «dekkskift pris», «service bil pris», «bilverksted nær meg». Verkstedkunder er de mest prisstyrte i tjenestemarkedet: «EU-kontroll 690 kr, ledig i morgen» vinner klikket. Men de er også lojale når de først er fornøyde. Derfor er lavmargin-tjenester (EU-kontroll, dekkskift) den beste inngangen. De betaler seg på service og reparasjoner senere.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for bilverksted: en ny kunde som legger igjen 8 000 kr i året med 35 % margin (2 800 kr), og annenhver booking blir fast kunde. Da er en henvendelse verdt 1 400 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for bilverksted: en ny kunde som legger igjen 8 000 kr i året med 35 % margin (2 800 kr), og annenhver booking blir fast kunde. Da er en henvendelse verdt 1 400 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Dekkskift: siste halvdel av oktober og april (annonser to uker før). EU-kontroll: jevnt, med topp etter ferien. Aircondition: mai–juni.
 ## De vanligste feilene vi ser
@@ -2801,9 +2801,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det bilverksted spør om.
  Hva koster en booking for et verksted på Google?+ Lokale tjenester med pris i annonsen ligger i den lave enden: I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). For EU-kontroll og dekkskift med online booking er 100–300 kr per booking realistisk.
 Facebook for bilverksted?+ Til sesongkampanjer (dekkskift-uke, aircondition før sommeren) og til eksisterende kunder. Ikke som hovedkanal — kunden søker når behovet oppstår.
@@ -2837,7 +2837,7 @@ Markedsføring for regnskapsførere — flere kunder fra Google og Meta | Arcads
  Regnskap er B2B, tillitsbasert og selges på pris og tilgjengelighet. Kundene er små bedrifter som bytter regnskapsfører når det skjer noe: nyoppstart, misnøye, vekst. Markedsføringen skal fange dem i det øyeblikket.
  Kort svar: Regnskapsførere bør annonsere på Google mot bedrifter i bytte- eller oppstartsmodus: «regnskapsfører [by]», «regnskapsfører enkeltpersonforetak», «bytte regnskapsfører», «regnskapsfører pris». Landingssiden må ha en prisindikasjon (fra-pris per måned eller per bilag), hvilke systemer dere bruker (Fiken, Tripletex, PowerOffice) og et skjema som spør om selskapsform og omsetning. LinkedIn og Facebook kan brukes mot nyregistrerte selskaper, men Google er hovedkanalen. Et lead på 400–800 kr er billig når kunden er verdt 30 000 kr i året.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2848,17 +2848,17 @@ fra brief til live annonser
 resultatbasert honorar
  Noen av dem vi jobber med
 ## Hvor kundene dine leter
-Søkene vi bygger kontoer rundt for regnskapsførere: «regnskapsfører [by]», «regnskapsfører pris», «regnskapsfører enkeltpersonforetak», «bytte regnskapsfører», «regnskap små bedrifter». Regnskapskunder er blant de mest verdifulle leadene i tjenestemarkedet: en liten bedrift betaler 20 000–60 000 kr i året, i mange år. Det tåler høy pris per lead — og gjør at de fleste regnskapsbyråer underinvesterer i annonsering. Det er en mulighet.
+Søkene vi bygger kontoer rundt for regnskapsførere: «regnskapsfører [by]», «regnskapsfører pris», «regnskapsfører enkeltpersonforetak», «bytte regnskapsfører», «regnskap små bedrifter». Regnskapskunder er blant de mest verdifulle leadene i tjenestemarkedet: en liten bedrift betaler 20 000–60 000 kr i året, i mange år. Det tåler høy pris per lead, og gjør at de fleste regnskapsbyråer underinvesterer i annonsering. Det er en mulighet.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for regnskapsførere: en kunde som betaler 30 000 kr/år med 40 % margin (12 000 kr) i snitt tre år, og hver tredje henvendelse blir kunde. Da er en henvendelse verdt 12 000 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for regnskapsførere: en kunde som betaler 30 000 kr/år med 40 % margin (12 000 kr) i snitt tre år, og hver tredje henvendelse blir kunde. Da er en henvendelse verdt 12 000 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Januar (nyttår, nye selskaper, bytte) og mai–juni (etter årsoppgjør, misnøye). Oppstartsselskaper registreres jevnt, med topp januar og august.
 ## De vanligste feilene vi ser
 - Ingen pris. Bedrifter som sammenligner regnskapsførere vil ha en fra-pris.
 - «Vi er et personlig byrå». Alle sier det. Si hvilke systemer, hvilke bransjer, hvor fort dere svarer.
 - Skjema uten kvalifisering. Spør om selskapsform og omsetning, så prioriterer dere riktig.
-- Bud på «regnskap» alene — det er studenter, kurs og programvare.
+- Bud på «regnskap» alene. Det er studenter, kurs og programvare.
 ## De første 30 dagene hos oss
 - Sporing på skjema + telefon + booket møte
 - Annonsegrupper: bytte, oppstart/ENK, bransjer dere er gode på
@@ -2879,11 +2879,11 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det regnskapsførere spør om.
- Hva koster et lead for et regnskapsbyrå?+ B2B-tjenester ligger høyere i klikkpris enn privatmarkedet. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). For regnskap er 400–800 kr per kvalifisert lead realistisk — og billig mot kundeverdien.
+ Hva koster et lead for et regnskapsbyrå?+ B2B-tjenester ligger høyere i klikkpris enn privatmarkedet. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). For regnskap er 400–800 kr per kvalifisert lead realistisk, og billig mot kundeverdien.
 Google eller LinkedIn for regnskapsførere?+ Google for de som søker nå (bytte, oppstart). LinkedIn er dyrt og passer bedre for større kunder og B2B-innhold. Facebook kan brukes mot nyregistrerte selskaper i området.
 Bør vi annonsere pris?+ Ja. «Regnskap for ENK fra 990 kr/mnd» gir færre, men bedre henvendelser. Uten pris får dere spørsmålet i hver eneste samtale uansett.
 Hvordan når vi nyoppstartede selskaper?+ Søkeord som «regnskapsfører enkeltpersonforetak», «starte AS regnskap», og innhold som svarer på oppstartsspørsmål. Brønnøysund-data kan brukes til målrettet utsendelse, men Google-søk er raskest.
@@ -2915,7 +2915,7 @@ Markedsføring for advokater — flere kunder fra Google og Meta | Arcads
  Advokat er det dyreste tjenestesøket på Google i Norge — klikk på 50–150 kr er normalt. Det gjør annonsering enten svært lønnsomt eller et pengesluk, og forskjellen er om kontoen er bygget per rettsområde og om siden filtrerer.
  Kort svar: Advokatfirma bør annonsere per rettsområde (arv, arbeidsrett, samlivsbrudd, eiendom, bolig), aldri på «advokat» alene, og landingssiden må si hva en time koster og hva første samtale innebærer. Klikkprisene er høye (50–150 kr), så konverteringsraten og filtrering av «gratis»-søk avgjør alt. Fri rettshjelp-søkere skal ekskluderes med negative søkeord med mindre dere tilbyr det. Et lead på 800–2 000 kr er normalt og lønnsomt ved saker på 30 000 kr og oppover.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -2929,7 +2929,7 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for advokater: «advokat [by]», «advokat arbeidsrett», «advokat arv», «advokat samlivsbrudd», «advokat pris», «gratis advokat». Advokatsøk har to grupper: de som har en sak og penger, og de som leter etter gratis hjelp. Begge søker «advokat arbeidsrett». Skillet gjøres i annonseteksten (pris per time), på landingssiden (hva første samtale koster) og med negative søkeord (gratis, fri rettshjelp, jusstudent). Kontoer som ikke gjør det, betaler 100 kr per klikk for folk som aldri skulle klikket.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for advokater: en sak på 40 000 kr med 60 % margin (24 000 kr), og hver fjerde kvalifiserte henvendelse blir sak. Da er en henvendelse verdt 6 000 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for advokater: en sak på 40 000 kr med 60 % margin (24 000 kr), og hver fjerde kvalifiserte henvendelse blir sak. Da er en henvendelse verdt 6 000 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Arv og skifte: januar og etter sommeren. Arbeidsrett: jevnt, med topp ved nedbemanninger. Samlivsbrudd: januar og august. Bolig/eiendom: vår og høst.
 ## De vanligste feilene vi ser
@@ -2957,11 +2957,11 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det advokater spør om.
- Hva koster et lead for et advokatfirma?+ Med klikk på 50–150 kr og 8–15 % konvertering lander et lead på 800–2 000 kr. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Advokat ligger over alle disse — men saksverdien gjør det lønnsomt hvis leadene er kvalifiserte.
+ Hva koster et lead for et advokatfirma?+ Med klikk på 50–150 kr og 8–15 % konvertering lander et lead på 800–2 000 kr. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Advokat ligger over alle disse, men saksverdien gjør det lønnsomt hvis leadene er kvalifiserte.
 Bør vi vise timepris i annonsen?+ Ja. Det halverer klikkene fra de som ikke har råd, og de klikkene var de dyreste dere hadde.
 Facebook for advokater?+ Sjelden som hovedkanal — folk søker når saken oppstår. Retargeting mot de som besøkte en rettsområde-side kan fungere, med saklig innhold.
 Hvordan sorterer vi bort fri rettshjelp-søkere?+ Negative søkeord (gratis, fri rettshjelp, rettshjelp, jusstudent) og pris i annonsen. Tilbyr dere fri rettshjelp, kjør det som egen kampanje med egen side.
@@ -2993,7 +2993,7 @@ Markedsføring for eiendomsmeglere — flere kunder fra Google og Meta | Arcads
  Selgere velger megler på tre ting: hvem de kjenner, hvem naboen brukte, og hvem som ga dem en verdivurdering først. Den tredje kan kjøpes. Markedsføring for meglere handler om å være den som gir verdivurderingen.
  Kort svar: Eiendomsmeglere bør annonsere på «verdivurdering» og «hva er boligen min verdt» på Google (høy intensjon, selgeren er i planleggingsmodus), og bruke Facebook/Instagram med solgte boliger og «solgt over takst»-innhold mot huseiere i de områdene dere vil vinne. Landingssiden er et verdivurderingsskjema med adresse, ikke en meglerprofil. Retargeting i 60–90 dager, fordi boligsalg planlegges lenge. Et verdivurderings-lead på 300–800 kr er billig mot et honorar på 50 000 kr og oppover.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -3007,7 +3007,7 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for eiendomsmeglere: «eiendomsmegler [by]», «verdivurdering bolig», «hva er boligen min verdt», «selge bolig [by]», «megler pris». Meglerkjedene annonserer nasjonalt og generelt. Den lokale megleren vinner ved å eie ett område: annonser med solgte boliger i akkurat det nabolaget, til folk som bor der, med gratis verdivurdering som inngang. Det er billig, målbart og noe kjedene ikke gjør godt.
 Kanalvalg: Google og Meta sammen — Google fanger de som søker, Meta skaper og holder på etterspørselen.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for eiendomsmeglere: et salgsoppdrag med honorar 60 000 kr og 50 % margin (30 000 kr), og hver femte verdivurdering blir oppdrag. Da er en henvendelse verdt 6 000 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for eiendomsmeglere: et salgsoppdrag med honorar 60 000 kr og 50 % margin (30 000 kr), og hver femte verdivurdering blir oppdrag. Da er en henvendelse verdt 6 000 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Selgere planlegger januar–mars for vårsalg og august for høstsalg. Annonser to måneder før — verdivurdering i januar gir oppdrag i mars.
 ## De vanligste feilene vi ser
@@ -3035,9 +3035,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det eiendomsmeglere spør om.
  Hva koster et selger-lead for en megler?+ Verdivurderingsleads på Google ligger typisk på 300–800 kr i norske byer; Facebook mot valgte nabolag ofte lavere. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Med honorarer på 50 000 kr og oppover er det marginalt.
 Google eller Facebook for meglere?+ Begge: Google for de som søker «verdivurdering» nå, Facebook for å bli megleren nabolaget kjenner før de søker. Facebook-delen er der lokale meglere kan slå kjedene.
@@ -3068,10 +3068,10 @@ Markedsføring for treningssentre — flere kunder fra Google og Meta | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for treningssentre
 # Markedsføring for treningssentre.
- Medlemskap selges i januar og august, i en radius på 3 km, til folk som scroller på kvelden. Det er Meta-jobb. Google tar de som søker «treningssenter [by] pris» — og de er klare til å tegne.
+ Medlemskap selges i januar og august, i en radius på 3 km, til folk som scroller på kvelden. Det er Meta-jobb. Google tar de som søker «treningssenter [by] pris», og de er klare til å tegne.
  Kort svar: Treningssentre bør bruke Meta (Instagram/Facebook) som hovedkanal med video fra senteret, et konkret tilbud (prøveuke, ingen bindingstid, første måned gratis) og geo på 3–5 km, med tunge kampanjer i januar og august. Google Ads på «treningssenter [by]» og «pt [by]» fanger de som søker nå. Sporing må måle innmeldinger (skjema eller nettbutikk), ikke klikk. Med et medlemskap verdt 6 000 kr i året er 200–500 kr per innmelding lønnsomt.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -3085,7 +3085,7 @@ resultatbasert honorar
 Søkene vi bygger kontoer rundt for treningssentre: «treningssenter [by]», «treningssenter pris», «pt [by]», «gruppetimer [by]», «treningssenter nær meg». Trening er en vane-beslutning som tas i et vindu: nyttår, etter ferien, før sommeren. Sentre som annonserer jevnt hele året kaster penger i mai; sentre som er tunge i uke 1–4 og 32–36 vinner året. Og lokalt: ingen reiser 15 minutter for å trene når det finnes et senter på 5.
 Kanalvalg: Meta først — kunden må se dere før de søker.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for treningssentre: et medlemskap på 500 kr/mnd i 12 måneder med 70 % margin (4 200 kr), og annenhver innmeldingshenvendelse blir medlem. Da er en henvendelse verdt 2 100 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for treningssentre: et medlemskap på 500 kr/mnd i 12 måneder med 70 % margin (4 200 kr), og annenhver innmeldingshenvendelse blir medlem. Da er en henvendelse verdt 2 100 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Januar (uke 1–4) og august–september er 60 % av året. Mai (før sommeren) er en tredje, mindre topp.
 ## De vanligste feilene vi ser
@@ -3113,9 +3113,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det treningssentre spør om.
  Hva koster en innmelding fra annonser?+ Med Meta i et lokalområde og et tydelig tilbud ser vi typisk 200–500 kr per innmeldingshenvendelse i denne kategorien. Verdien på et årsmedlemskap bærer det lett.
 Meta eller Google for treningssentre?+ Meta som hovedkanal (lokalt, visuelt, tilbudsdrevet). Google for de som søker «treningssenter [by] pris» og «pt [by]» — mindre volum, høy intensjon.
@@ -3146,10 +3146,10 @@ Markedsføring for fysioterapeuter og kiropraktorer — flere kunder fra Google 
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Markedsføring for fysioterapeuter og kiropraktorer
 # Markedsføring for fysioterapeuter og kiropraktorer.
- Pasienten har vondt nå, søker «fysioterapeut [by]» eller «kiropraktor nær meg» og booker den som har ledig time i dag. Enkelt marked, kort beslutningstid — og en klinikk som viser ledig tid og pris vinner.
+ Pasienten har vondt nå, søker «fysioterapeut [by]» eller «kiropraktor nær meg» og booker den som har ledig time i dag. Enkelt marked, kort beslutningstid, og en klinikk som viser ledig tid og pris vinner.
  Kort svar: Fysio- og kiropraktorklinikker bør annonsere på Google på «[behandler] [by]» og på plagene («vondt i ryggen», «nakkesmerter behandling»), med pris, «ledig i dag» og online booking på siden. Radius 10–15 km. Meta fungerer for forebyggende innhold og retargeting, men Google er hovedkanalen fordi pasienten søker når det gjør vondt. En ny pasient er verdt flere tusen kroner over et behandlingsløp, så 150–400 kr per booking er lønnsomt.
  Få gratis videoanalyse Video på e-post innen 24 timer
- Victor & Jona du snakker med oss to — ikke en selger
+ Victor & Jona du snakker med oss to, ikke en selger
 163 kr
 per lead — fasadevask, 9 regioner
 202–413 kr
@@ -3160,10 +3160,10 @@ fra brief til live annonser
 resultatbasert honorar
  Noen av dem vi jobber med
 ## Hvor kundene dine leter
-Søkene vi bygger kontoer rundt for fysioterapeuter og kiropraktorer: «fysioterapeut [by]», «kiropraktor [by]», «fysioterapi uten henvisning», «vondt i ryggen behandling», «naprapat [by]». Smerte gir høy intensjon og null lojalitet til den de ikke har prøvd. Klinikken som svarer med «ledig i dag, 650 kr, book her» får pasienten. Det er sjelden dyrt — konkurransen på Google er moderat utenfor Oslo — men få klinikker gjør det ordentlig.
+Søkene vi bygger kontoer rundt for fysioterapeuter og kiropraktorer: «fysioterapeut [by]», «kiropraktor [by]», «fysioterapi uten henvisning», «vondt i ryggen behandling», «naprapat [by]». Smerte gir høy intensjon og null lojalitet til den de ikke har prøvd. Klinikken som svarer med «ledig i dag, 650 kr, book her» får pasienten. Det er sjelden dyrt — konkurransen på Google er moderat utenfor Oslo, men få klinikker gjør det ordentlig.
 Kanalvalg: Google Ads først — kunden søker allerede.
 ## Hva et lead kan koste dere
-Regn baklengs før du bruker en krone. Et eksempel for fysioterapeuter og kiropraktorer: et behandlingsløp på 5 timer à 650 kr med 60 % margin (1 950 kr), og annenhver booking blir pasient. Da er en henvendelse verdt 975 kr — det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
+Regn baklengs før du bruker en krone. Et eksempel for fysioterapeuter og kiropraktorer: et behandlingsløp på 5 timer à 650 kr med 60 % margin (1 950 kr), og annenhver booking blir pasient. Da er en henvendelse verdt 975 kr . Det er taket. Alt under taket er lønnsomt, alt over pauses. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tallene er eksempler for regnestykket, ikke et løfte for din bedrift.
 ## Sesongen
 Januar (nyttårsforsetter, treningsskader), vår (hagearbeid, løping) og høst er topper. Jevnt ellers.
 ## De vanligste feilene vi ser
@@ -3191,9 +3191,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Det fysioterapeuter og kiropraktorer spør om.
  Hva koster en ny pasient fra Google?+ Klinikker i denne kategorien ligger i den lave enden av tjenestemarkedet: I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). For fysio og kiropraktor med online booking er 150–400 kr per booking realistisk utenfor Oslo.
 Kan vi annonsere på plager, ikke bare faget?+ Ja, og det er ofte billigere: «vondt i korsryggen behandling» har mindre konkurranse enn «kiropraktor oslo» og pasienten er like klar.
@@ -3228,18 +3228,18 @@ Hvordan få flere kunder: 5 ting som faktisk virker for tjenestebedrifter | Arca
  Av Victor Skretteberg , Arcads · Oppdatert 7. september 2026
  Kort svar: Flere kunder kommer fra fem ting i rekkefølge: 1) vær synlig i det øyeblikket noen søker etter tjenesten din (Google Ads på «tjeneste + by» og en komplett Google Business Profile), 2) gjør det lett å ta kontakt (pris, telefon og skjema over folden på én side per tjeneste), 3) mål henvendelser, ikke klikk, 4) bli husket lokalt før behovet oppstår (Facebook/Instagram med ekte innhold innen 10–30 km, retargeting), og 5) regn ut hva en kunde kan koste før du skalerer. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026).
 ## 1. Vær der når de søker
-De fleste tjenester kjøpes i det øyeblikket behovet oppstår: lampen lyser, taket lekker, brevet fra Vegvesenet kommer. Kunden åpner Google og skriver «[tjeneste] [by]». Den bedriften som står der med pris, telefon og «ledig i morgen», får jobben. Det er den billigste kunden du noen gang kommer til å kjøpe, fordi du ikke måtte overbevise dem om noe — de hadde bestemt seg.
+De fleste tjenester kjøpes i det øyeblikket behovet oppstår: lampen lyser, taket lekker, brevet fra Vegvesenet kommer. Kunden åpner Google og skriver «[tjeneste] [by]». Den bedriften som står der med pris, telefon og «ledig i morgen», får jobben. Det er den billigste kunden du noen gang kommer til å kjøpe, fordi du ikke måtte overbevise dem om noe. De hadde bestemt seg.
 To ting gir deg den plassen: Google Ads på tjeneste + by (raskt, målbart, skalerbart) og en komplett Google Business Profile med anmeldelser, åpningstider og telefon (gratis, og det er den som vises i kartet). Har du bare råd til én ting, er det disse to.
 ## 2. Gjør det lett å ta kontakt
 Den vanligste grunnen til at annonser «ikke funker» er ikke annonsene. Det er siden de lander på. Kunden som søkte «bytte sikringsskap» og lander på en forside med «Vi er din lokale totalleverandør innen elektro» leser to sider til før de ringer noen andre.
 Det som konverterer: én side per tjeneste , pris eller prisanslag, telefonnummer som kan klikkes, tre–fire anmeldelser, og et skjema med maks fire felter — alt over folden på mobil. I kontoene våre gir det 10–13 % konvertering på klikkene for lokale tjenester. Under 5 % betyr nesten alltid at siden er problemet.
 ## 3. Mål henvendelser, ikke klikk
-Uten sporing på skjema og telefon vet du ikke hva som virker, og Google og Meta vet det heller ikke — de optimaliserer mot det du ber dem om. Ber du om klikk, får du klikk. Sporing settes opp én gang (Google Ads, Meta Pixel, GA4, samtalesporing) og tar en dag. Det er det første vi gjør med hver eneste kunde, og det er kjedelig, og det er ikke valgfritt.
+Uten sporing på skjema og telefon vet du ikke hva som virker, og Google og Meta vet det heller ikke. De optimaliserer mot det du ber dem om. Ber du om klikk, får du klikk. Sporing settes opp én gang (Google Ads, Meta Pixel, GA4, samtalesporing) og tar en dag. Det er det første vi gjør med hver eneste kunde, og det er kjedelig, og det er ikke valgfritt.
 ## 4. Bli husket før de trenger deg
-Noen tjenester søkes ikke etter før noen har fått ideen: utvendig maling, tannbleking, nytt bad, treningssenter. Der må du vise deg først. Facebook og Instagram med ekte bilder og video av deres arbeid, til folk innen 10–30 km, gjør akkurat det — og retargeting mot de som besøkte siden din holder deg synlig de ukene beslutningen tar. Boost-knappen er ikke det samme; her er forskjellen .
+Noen tjenester søkes ikke etter før noen har fått ideen: utvendig maling, tannbleking, nytt bad, treningssenter. Der må du vise deg først. Facebook og Instagram med ekte bilder og video av deres arbeid, til folk innen 10–30 km, gjør akkurat det, og retargeting mot de som besøkte siden din holder deg synlig de ukene beslutningen tar. Boost-knappen er ikke det samme; her er forskjellen .
 ## 5. Regn ut hva en kunde kan koste
-Alt over koster penger, og spørsmålet er ikke «er 400 kr per henvendelse dyrt?» — det er hva en kunde er verdt. Regnestykket:
-Maks-pris per henvendelse = verdi per ny kunde (margin) × andel av henvendelser som blir kunder. Er en kunde verdt 5 000 kr i margin og hver tredje henvendelse kjøper, tåler du 1 600 kr per henvendelse. Da er 400 kr et røverkjøp, og du bør bruke mer. Er en kunde verdt 800 kr og hver tiende kjøper, tåler du 80 kr — og bør kanskje ikke annonsere på Google i det hele tatt.
+Alt over koster penger, og spørsmålet er ikke «er 400 kr per henvendelse dyrt?». Det er hva en kunde er verdt. Regnestykket:
+Maks-pris per henvendelse = verdi per ny kunde (margin) × andel av henvendelser som blir kunder. Er en kunde verdt 5 000 kr i margin og hver tredje henvendelse kjøper, tåler du 1 600 kr per henvendelse. Da er 400 kr et røverkjøp, og du bør bruke mer. Er en kunde verdt 800 kr og hver tiende kjøper, tåler du 80 kr, og bør kanskje ikke annonsere på Google i det hele tatt.
 I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Hele tabellen med forbehold.
 ## Det som ikke gir flere kunder
  - «Synlighet» uten måling. Visninger og likes betaler ingen lønn.
@@ -3266,13 +3266,13 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Hva er den raskeste måten å få flere kunder på?+ Google Ads på «tjeneste + by» med en landingsside som har pris, telefon og skjema. Live på 48 timer, første henvendelser samme uke. Det forutsetter at folk søker etter tjenesten din.
 Hvordan får jeg flere kunder uten å bruke penger på annonser?+ Komplett Google Business Profile med anmeldelser (be hver fornøyd kunde), én side per tjeneste på nettsiden med pris, og svar på alle henvendelser innen en time. Det er gratis og gir effekt, men det skalerer ikke — annonser gjør.
-Hvor mange henvendelser trenger jeg for å få én kunde?+ I lokale tjenester ser vi typisk at hver andre til hver fjerde henvendelse blir kunde, avhengig av hvor fort det svares og om prisen sto på siden. Måles det ikke, vet du ikke — og det er tallet som avgjør hva du kan betale per henvendelse.
+Hvor mange henvendelser trenger jeg for å få én kunde?+ I lokale tjenester ser vi typisk at hver andre til hver fjerde henvendelse blir kunde, avhengig av hvor fort det svares og om prisen sto på siden. Måles det ikke, vet du ikke, og det er tallet som avgjør hva du kan betale per henvendelse.
 Google eller Facebook for å få flere kunder?+ Google når kunden søker etter tjenesten (rørlegger, tannlege, flyttevask). Facebook når kunden må se deg før behovet oppstår (maling, bleking, treningssenter). De fleste bør ha begge, Google først.
  Gratis videoanalyse
 ## Vil du se hva vi ville gjort med kontoen din?
@@ -3306,7 +3306,7 @@ Profilen som vises i kartet når noen søker «[tjeneste] [by]». Fyll ut alt: t
 ### Én side per tjeneste
 Ikke «tjenester» som en liste på forsiden — én side per tjeneste, med pris eller prisanslag, telefon som kan klikkes, tre anmeldelser og et kort skjema. Det er disse sidene Google rangerer, og det er disse sidene annonsene skal lande på. Kan bygges i det verktøyet du allerede har (WordPress, Squarespace, Wix); designet betyr mindre enn at prisen står der.
 ### Google Ads i din radius
-Annonser på «tjeneste + by» til folk innen der du faktisk kjører. Det er raskeste vei til kunder som allerede har bestemt seg. Budsjettet bestemmer du selv — men under 5 000 kr i måneden får ikke Google nok data til å lære, så start med én tjeneste i én by og gjør den lønnsom. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026).
+Annonser på «tjeneste + by» til folk innen der du faktisk kjører. Det er raskeste vei til kunder som allerede har bestemt seg. Budsjettet bestemmer du selv, men under 5 000 kr i måneden får ikke Google nok data til å lære, så start med én tjeneste i én by og gjør den lønnsom. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026).
 ### Facebook og Instagram — lokalt og ekte
 Bilder og korte videoer av ditt arbeid, dine folk og dine kunder, vist til folk innen 10–30 km. Ikke boost-knappen (derfor ), men en ordentlig kampanje med et mål (skjema, booking, samtale). Fungerer best for tjenester folk må se før de vil ha dem: maling, bad, bleking, trening, salong.
 ## Gjør selv, kjøp, eller dropp?
@@ -3321,7 +3321,7 @@ Bilder og korte videoer av ditt arbeid, dine folk og dine kunder, vist til folk 
  | «Synlighetspakker», SEO-abonnement uten tall | Dropp | Hvis leverandøren ikke kan si hva en henvendelse koster, selger de timer.
  | TikTok, LinkedIn, YouTube, podcast — samtidig | Dropp | Én kanal til lønnsomhet, så neste.
 ## Hva det koster
-Annonsebudsjettet setter du selv; realistisk start for en lokal tjenestebedrift er 5 000–15 000 kr i måneden på Google. Hjelp til drift koster i Norge typisk 15 000–50 000 kr i måneden i fast honorar — som ofte er mer enn annonsebudsjettet, og som betales uansett resultat. Det er derfor vi valgte resultatbasert honorar : vi tar en andel av det annonsene skaper, og ingenting hvis de ikke skaper noe. Ærlig ulempe: vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss, så vi passer ikke for de aller minste — og da sier vi det, og anbefaler lista over i stedet.
+Annonsebudsjettet setter du selv; realistisk start for en lokal tjenestebedrift er 5 000–15 000 kr i måneden på Google. Hjelp til drift koster i Norge typisk 15 000–50 000 kr i måneden i fast honorar — som ofte er mer enn annonsebudsjettet, og som betales uansett resultat. Det er derfor vi valgte resultatbasert honorar : vi tar en andel av det annonsene skaper, og ingenting hvis de ikke skaper noe. Ærlig ulempe: vi må skape mer enn 25 000 kr i måneden i verdi for at det skal lønne seg for oss, så vi passer ikke for de aller minste, og da sier vi det, og anbefaler lista over i stedet.
 ## Rekkefølgen for en liten bedrift
  - Google Business Profile komplett + be om anmeldelser (denne uka).
  - Én side per tjeneste med pris og telefon (neste to uker).
@@ -3342,13 +3342,13 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Hva er den beste markedsføringen for en liten bedrift?+ Google Business Profile med anmeldelser, én side per tjeneste med pris, og Google Ads på «tjeneste + by» i din radius. Det er billigst, raskest og målbart. Facebook lokalt når Google er lønnsomt.
 Hvor mye bør en liten bedrift bruke på markedsføring?+ Nok til 20–30 henvendelser i måneden i ett område — med 300 kr per henvendelse er det 6 000–9 000 kr. Under 5 000 kr i måneden på Google får ikke kontoen nok data til å lære.
-Bør en liten bedrift bruke byrå?+ Til sporing (én gang) og til ukentlig drift av annonsekontoen hvis du ikke har 2–3 timer i uka selv. Ikke til logo, «synlighet» eller innhold — det gjør du bedre selv, med mobilen.
+Bør en liten bedrift bruke byrå?+ Til sporing (én gang) og til ukentlig drift av annonsekontoen hvis du ikke har 2–3 timer i uka selv. Ikke til logo, «synlighet» eller innhold. Det gjør du bedre selv, med mobilen.
 Er Facebook-annonsering verdt det for små bedrifter?+ Ja, med ekte innhold, stram geografi og et mål som kan måles (skjema, booking). Boost-knappen er ikke annonsering. For tjenester folk søker aktivt etter, er Google likevel første valg.
  Gratis videoanalyse
 ## Vil du se hva vi ville gjort med kontoen din?
@@ -3375,7 +3375,7 @@ Annonsering på nett: hva det koster og hvor du bør starte (2026) | Arcads
 # Annonsering på nett: hvor bør du starte?
  Google, Facebook, Instagram, Snapchat, LinkedIn, YouTube, TikTok. Alle vil ha annonsekronene dine, og alle sier de virker. Her er hva de faktisk gjør, hva de koster i Norge, og rekkefølgen vi anbefaler etter å ha driftet noen hundre kontoer.
  Av Victor Skretteberg , Arcads · Oppdatert 7. september 2026
- Kort svar: Annonsering på nett gjør én av to jobber: fanger etterspørsel som finnes (Google-søk) eller skaper etterspørsel som ikke gjør det (Facebook, Instagram, Snapchat, YouTube, TikTok). Start med Google hvis folk søker etter det du selger; start med Meta hvis produktet må vises før noen vil ha det. Klikk koster 2–30 kr på Google for de fleste tjenester (50+ for konkurranseutsatte), og det finnes ingen minstepris på noen plattform. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Rigg sporing før første krone, og mål alt på salg eller henvendelser — ikke klikk.
+ Kort svar: Annonsering på nett gjør én av to jobber: fanger etterspørsel som finnes (Google-søk) eller skaper etterspørsel som ikke gjør det (Facebook, Instagram, Snapchat, YouTube, TikTok). Start med Google hvis folk søker etter det du selger; start med Meta hvis produktet må vises før noen vil ha det. Klikk koster 2–30 kr på Google for de fleste tjenester (50+ for konkurranseutsatte), og det finnes ingen minstepris på noen plattform. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Rigg sporing før første krone, og mål alt på salg eller henvendelser, ikke klikk.
 ## Kanalene, ærlig sammenlignet
  | | Kanal | Jobben den gjør | Passer når | Typisk kostnad i Norge
  | Google Søk | Fanger folk som søker nå | Folk søker etter tjenesten/produktet ditt | 2–30 kr per klikk, 50–150 kr for advokat/finans
@@ -3388,10 +3388,10 @@ Annonsering på nett: hva det koster og hvor du bør starte (2026) | Arcads
 ## Det ene spørsmålet som velger kanal
 Søker folk etter det du selger? Ja: start med Google, fordi kunden allerede har bestemt seg og bare skal velge hvem. Nei — fordi produktet er nytt, visuelt eller kjøpes på impuls: start med Meta, fordi etterspørselen må skapes. Lengre versjon her. Alt annet (Snapchat, YouTube, TikTok, LinkedIn) er lag nummer to eller tre, når det første er lønnsomt.
 ## Hva det koster — egentlig
-Det finnes ingen minstepris på noen plattform. Google og Meta annonserer for akkurat det du gir dem. Kostnaden som betyr noe er ikke klikkprisen, men prisen per salg eller henvendelse — og den bestemmes av hvor mange av klikkene som konverterer på siden din. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tabellen med forbehold.
+Det finnes ingen minstepris på noen plattform. Google og Meta annonserer for akkurat det du gir dem. Kostnaden som betyr noe er ikke klikkprisen, men prisen per salg eller henvendelse , og den bestemmes av hvor mange av klikkene som konverterer på siden din. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Tabellen med forbehold.
 Den andre kostnaden er driften: annonsekontoer må vaskes og justeres hver uke. Gjør du det selv, koster det 2–3 timer i uka. Kjøper du det, koster det i Norge typisk 15 000–50 000 kr i måneden i fast honorar — eller en andel av resultatet hos resultatbaserte byråer .
 ## Synlighet på nett uten annonser
-Annonser er raskest, men ikke det eneste. Tre ting gir synlighet uten annonsebudsjett: en komplett Google Business Profile med anmeldelser (vises i kartet), én side per tjeneste på nettsiden som svarer på det folk søker (det er SEO, i praksis), og innhold på sosiale medier som viser arbeidet ditt. Alle tre tar tid før de virker — måneder, ikke dager — og de skalerer ikke. Kombinasjonen er det som funker: annonser nå, organisk over tid.
+Annonser er raskest, men ikke det eneste. Tre ting gir synlighet uten annonsebudsjett: en komplett Google Business Profile med anmeldelser (vises i kartet), én side per tjeneste på nettsiden som svarer på det folk søker (det er SEO, i praksis), og innhold på sosiale medier som viser arbeidet ditt. Alle tre tar tid før de virker — måneder, ikke dager, og de skalerer ikke. Kombinasjonen er det som funker: annonser nå, organisk over tid.
 ## Rekkefølgen vi anbefaler
  - Sporing først. Google Ads-konvertering, Meta Pixel, GA4, samtalesporing. Uten det optimaliserer du i blinde.
  - Én kanal til lønnsomhet. Google hvis folk søker, Meta hvis ikke.
@@ -3416,14 +3416,14 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Hva koster det å annonsere på nett?+ Det finnes ingen minstepris. Klikk på Google koster 2–30 kr for de fleste tjenester i Norge (50–150 kr for advokat/finans); på Meta setter du dagsbudsjettet selv. Det som betyr noe er pris per salg eller henvendelse: I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026).
 Hvilken annonseplattform er best?+ Den som matcher etterspørselen: Google når folk søker etter det du selger, Meta når produktet må vises først. Snapchat og TikTok for målgrupper under 30, LinkedIn for B2B med svært høy kundeverdi.
 Hvordan blir bedriften min synlig på nett?+ Raskest: Google Ads på «tjeneste + by». Gratis, men sakte: komplett Google Business Profile, én side per tjeneste på nettsiden, og innhold på sosiale medier. Kombiner: annonser nå, organisk over tid.
-Kan jeg annonsere på nett selv?+ Ja. Google og Meta har verktøyene åpne for alle. Det som krever tid er ukentlig drift: søketermer, budsjett, nye annonser. Har du ikke 2–3 timer i uka, kjøp driften — men eier alltid kontoen selv.
+Kan jeg annonsere på nett selv?+ Ja. Google og Meta har verktøyene åpne for alle. Det som krever tid er ukentlig drift: søketermer, budsjett, nye annonser. Har du ikke 2–3 timer i uka, kjøp driften, men eier alltid kontoen selv.
  Gratis videoanalyse
 ## Vil du se hva vi ville gjort med kontoen din?
  Victor spiller inn en video der han går gjennom annonsene og nettsiden din, og viser tre konkrete grep vi ville gjort først. Den er din uansett.
@@ -3450,7 +3450,7 @@ Leadgenerering: slik får tjenestebedrifter henvendelser som blir kunder | Arcad
  «Leadgenerering» høres ut som noe et B2B-selskap med salgsavdeling gjør. I praksis er det det en rørlegger gjør når telefonen ringer fra en Google-annonse. Her er hvordan det fungerer, hva det koster, og hvorfor du bør eie leadsene dine i stedet for å kjøpe dem.
  Av Victor Skretteberg , Arcads · Oppdatert 7. september 2026
  Kort svar: Leadgenerering er å skape henvendelser fra folk som vil kjøpe: skjema, telefon eller booking. For tjenestebedrifter gjøres det best med Google Ads på «tjeneste + by» (kunden søker allerede), én landingsside per tjeneste med pris og et kort skjema, sporing som teller skjema og samtaler hver for seg, og retargeting mot de som ikke tok kontakt. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Kjøpte leads fra portaler deles med tre–fem konkurrenter; egne leads eier du alene. Svartid under en time dobler andelen som blir kunder.
-## Hva et lead er — og ikke er
+## Hva et lead er, og ikke er
 Et lead er en henvendelse fra noen som vurderer å kjøpe: et innsendt skjema, en samtale, en booking. Det er ikke et klikk, en visning eller en «engasjert bruker». Skillet betyr noe fordi plattformene optimaliserer mot det du måler: måler du klikk, får du billige klikk fra folk som aldri kjøper.
 Og et lead er ikke en kunde. I lokale tjenester blir typisk hver andre til hver fjerde henvendelse kunde — avhengig av hvor fort det svares, om prisen sto på siden, og om annonsen lovte noe siden ikke holdt.
 ## Kanalene som gir leads, rangert
@@ -3460,7 +3460,7 @@ Og et lead er ikke en kunde. I lokale tjenester blir typisk hver andre til hver 
  - Meta med ekte innhold, lokalt. Skaper leads for tjenester folk ikke søker etter ennå (maling, bad, bleking), og for salonger og treningssentre der beslutningen er visuell.
  - Portaler (Mittanbud, Byggstart o.l.). Leads som deles med tre–fem konkurrenter, der du konkurrerer på pris. Supplement, ikke grunnmur.
 ## Skjemaet avgjør kvaliteten
-Et skjema med navn og telefon gir flest leads og lavest kvalitet. Et skjema som spør om det dere trenger for å prise (adresse, type jobb, tidsramme, for B2B: selskapsform og omsetning) gir færre leads — og dobbelt så mange kunder per lead. Regelen: spør om det som lar dere prioritere, ikke mer. For byggfirma og advokater med høy saksverdi er kvalifisering viktigere enn volum; for rørleggere og renhold er telefonnummer og «ring meg» nok.
+Et skjema med navn og telefon gir flest leads og lavest kvalitet. Et skjema som spør om det dere trenger for å prise (adresse, type jobb, tidsramme, for B2B: selskapsform og omsetning) gir færre leads, og dobbelt så mange kunder per lead. Regelen: spør om det som lar dere prioritere, ikke mer. For byggfirma og advokater med høy saksverdi er kvalifisering viktigere enn volum; for rørleggere og renhold er telefonnummer og «ring meg» nok.
 ## Hva et lead koster
 I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Klikkprisen forklarer ikke prisen: badstuer har de billigste klikkene (9 kr) og den dyreste prisen per lead (~940 kr), fordi under 1 % av klikkene sender skjema. Konverteringsraten på siden er spaken. Hele tabellen.
 Maks-pris per lead = verdi per ny kunde (margin) × andel leads som blir kunder. Regn det ut før du skrur på. Alt under taket skaleres, alt over pauses.
@@ -3494,9 +3494,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Hva koster leadgenerering?+ Annonsebudsjettet setter du selv. I Google Ads-kontoene vi drifter koster et lead 163 kr for fasade- og takvask, 202 kr for flyttevask, 413 kr for et flyttebyrå og 406 kr for B2B-leasing (juni–september 2026). Drift koster enten din tid (2–3 timer i uka) eller et byrå — fast honorar 15 000–50 000 kr/mnd, eller resultatbasert som hos oss.
 Er det bedre å kjøpe leads fra Mittanbud og lignende?+ Som supplement, ja. Som grunnmur, nei: leadet deles med 3–5 konkurrenter, du konkurrerer på pris, og portalen eier dataene. Egne leads fra annonser og egen side kommer til deg alene og blir billigere over tid.
@@ -3525,22 +3525,22 @@ B2B-markedsføring for små og mellomstore bedrifter: det som gir leads | Arcads
 ★★★★★ Anbefalt av kundene våre · 100% av kundene fikk større bunnlinje · 100% resultatbasert
  Artikkel
 # B2B-markedsføring som gir leads.
- B2B-markedsføring er blitt synonymt med LinkedIn, webinarer og «thought leadership». For de fleste små og mellomstore B2B-bedrifter i Norge er det bortkastet. Bedriftskunder googler også — og de søker med høyere intensjon enn privatpersoner.
+ B2B-markedsføring er blitt synonymt med LinkedIn, webinarer og «thought leadership». For de fleste små og mellomstore B2B-bedrifter i Norge er det bortkastet. Bedriftskunder googler også, og de søker med høyere intensjon enn privatpersoner.
  Av Victor Skretteberg , Arcads · Oppdatert 7. september 2026
  Kort svar: For små og mellomstore B2B-bedrifter gir Google Ads på det bedriftskunder faktisk søker etter («regnskapsfører [by]», «leasing maskiner», «kontorrenhold [by]») flest leads per krone — klikkene er dyre (74 kr i vår leasing-konto), men konverteringsraten er høy (18 %). LinkedIn passer bare når en kunde er verdt 100 000 kr og oppover. Bruk kvalifiserende skjema (selskapsform, omsetning, tidsramme), retargeting over 30–90 dager, og mål på booket møte, ikke nedlastinger. I kontoen vi drifter koster et B2B-lead 406 kr.
 ## Bedriftskunder googler
-Den som skal leie en gravemaskin, bytte regnskapsfører eller finne kontorrenhold til 40 ansatte, starter i Google. Søkene er færre enn i privatmarkedet, klikkene dyrere — og intensjonen høyere: ingen søker «leasing traktor» av nysgjerrighet. I kontoen vi drifter for næringsleasing koster et klikk 74 kr, men 18 % av klikkene sender skjema, og leadet lander på 406 kr. Med leasingavtaler på flere hundre tusen er det marginalt.
+Den som skal leie en gravemaskin, bytte regnskapsfører eller finne kontorrenhold til 40 ansatte, starter i Google. Søkene er færre enn i privatmarkedet, klikkene dyrere, og intensjonen høyere: ingen søker «leasing traktor» av nysgjerrighet. I kontoen vi drifter for næringsleasing koster et klikk 74 kr, men 18 % av klikkene sender skjema, og leadet lander på 406 kr. Med leasingavtaler på flere hundre tusen er det marginalt.
 ## Google først, LinkedIn kanskje
 Google Søk fanger bedriftskunden i det de har et behov. Det er der budsjettet skal starte, med annonser og sider som snakker bedriftsspråk: pris eks. mva., leveringstid, referansekunder, hvem som er kontaktperson.
-LinkedIn kan målrette etter tittel og bedrift, og det er verdifullt — men klikkene koster 50–150 kr, konverteringen er lav, og beslutningen tar måneder. Det lønner seg når en kunde er verdt 100 000 kr og oppover og du kan følge opp i uker. For de fleste SMB-B2B er det for dyrt som første kanal.
+LinkedIn kan målrette etter tittel og bedrift, og det er verdifullt, men klikkene koster 50–150 kr, konverteringen er lav, og beslutningen tar måneder. Det lønner seg når en kunde er verdt 100 000 kr og oppover og du kan følge opp i uker. For de fleste SMB-B2B er det for dyrt som første kanal.
 Meta undervurderes i B2B: bedriftseiere og innkjøpere scroller Facebook som alle andre. Retargeting mot de som besøkte tjenestesiden din, med et konkret budskap, er billig og fungerer.
 ## Skjemaet skal kvalifisere
-B2B-leads varierer enormt i verdi. Et skjema med navn og e-post gir mange henvendelser fra studenter, leverandører og folk som «bare sjekker». Spør om det som lar dere prioritere: selskapsform, antall ansatte eller omsetning, hva de trenger, og når. Det halverer antall leads og dobler andelen som blir møter. I leasing-kontoen spør vi om objekt og beløp — det gir leads selgeren kan ringe med et tilbud.
+B2B-leads varierer enormt i verdi. Et skjema med navn og e-post gir mange henvendelser fra studenter, leverandører og folk som «bare sjekker». Spør om det som lar dere prioritere: selskapsform, antall ansatte eller omsetning, hva de trenger, og når. Det halverer antall leads og dobler andelen som blir møter. I leasing-kontoen spør vi om objekt og beløp. Det gir leads selgeren kan ringe med et tilbud.
 ## Mål på møter, ikke nedlastinger
 B2B-markedsføring har en tendens til å måle det som er lett: nedlastinger av en guide, webinarpåmeldinger, «MQL-er». Ingenting av det betaler lønn. Mål på det som er ett steg fra salg: booket møte, tilbudsforespørsel, samtale over to minutter. Sett konverteringsverdi på hvert av dem i annonsekontoen, så optimaliserer Google mot det som blir kunder.
 ## Beslutningen tar tid — planlegg for det
  - Retargeting i 30–90 dager mot de som besøkte tjenestesiden, med ulike budskap over tid (referanse → pris → «book et møte»).
- - Innhold som svarer på spørsmålene i prosessen («hva koster leasing vs. kjøp», «hvordan bytte regnskapsfører») — det er SEO og annonseinnhold på én gang.
+ - Innhold som svarer på spørsmålene i prosessen («hva koster leasing vs. kjøp», «hvordan bytte regnskapsfører»). Det er SEO og annonseinnhold på én gang.
  - Oppfølging som eies av noen. Et B2B-lead som ikke får svar innen en arbeidsdag er tapt til den som svarte.
 ## Sesong i B2B
 Budsjettår (januar), etter årsoppgjør (mai–juni) og før høstsesongen (august) er de tre vinduene der bedrifter bytter leverandør. Annonser tyngst der, ikke jevnt.
@@ -3564,9 +3564,9 @@ Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
  Marlow Dental
 Før 0 bookinger fra annonser
 Etter 11 bookinger i uka, £17 per lead
- Leid.no
-Før Ødelagt sporing, ingen visste hva som virket
-Etter 4,73x ROAS og 100 000+ kr/mnd fra annonser
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
 ## Spørsmål og svar.
  Fungerer Google Ads for B2B?+ Ja, ofte bedre enn privatmarkedet: færre søk, men høy intensjon. I leasing-kontoen vi drifter konverterer 18 % av klikkene til skjema, og et lead koster 406 kr.
 Bør en liten B2B-bedrift bruke LinkedIn-annonser?+ Bare når en kunde er verdt 100 000 kr og oppover og dere kan følge opp i uker. Klikkene koster 50–150 kr og beslutningen tar måneder. Google Søk og retargeting først.
