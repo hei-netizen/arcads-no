@@ -227,6 +227,22 @@ Hver mandag ser du hva du brukte og hva du tjente. Resultatene avgjør fakturaen
  Hva gjør dere den første måneden?+ Sporing først: konverteringsmåling som teller faktiske salg og leads, ikke sidevisninger. Deretter struktur som skiller merkevaresøk fra nykundesøk, søketerm-vasking med negative søkeord, og de første annonsene live innen 48 timer.
  Eier jeg Google Ads-kontoen selv?+ Ja, alltid. Kontoen, dataene og historikken er dine. Vi jobber i din konto — slutter du hos oss, mister du ingenting.
  Hvorfor gir ikke Google Ads resultater for meg?+ De tre vanligste årsakene vi finner i kontoer vi tar over: sporingen måler feil ting (klikk og sidevisninger i stedet for salg), merkevaresøk blåser opp tallene så nykundeannonsene ser bedre ut enn de er, og søketermene er aldri vasket — så budsjettet brenner på søk som aldri kommer til å kjøpe. Alle tre er fiksbare.
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Få en ærlig gjennomgang av Google-kontoen din.
  30 minutter på video med Victor. Du får vite hva som funker, hva som brenner penger, og hva vi ville gjort — analysen er din uansett.
@@ -306,6 +322,22 @@ leads på én uke · 9 lokasjoner
  Hva med sporing og iOS-begrensninger?+ Vi rigger Meta Pixel og hendelsene riktig før vi bruker en krone, og måler mot faktiske salg og leads i GA4 og skjema-data — ikke bare det Meta selv rapporterer. Da vet du hva annonsene faktisk skaper.
  Hva koster et Meta Ads-byrå?+ Hos oss er honoraret 100% resultatbasert: vi må tjene deg mer enn minimum 25 000 kr i måneden for at samarbeidet skal lønne seg for oss. Leverer vi ikke, betaler du ikke. Annonsebudsjettet betaler du direkte til Meta. Les mer om modellen vår .
  Kjører dere Snapchat også?+ Ja, der det gir mening. Noen norske målgrupper er billigere å nå på Snapchat enn på Meta — vi tester begge og lar tallene bestemme hvor budsjettet går.
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Få en ærlig gjennomgang av Meta-kontoen din.
  30 minutter på video. Du får vite hva som funker, hva som brenner penger, og hva vi ville gjort — analysen er din uansett.
@@ -363,6 +395,22 @@ Det som leverer, skaleres og videreutvikles. Sånn bygger vi en voksende katalog
  Kan vi kjøpe kreativt innhold uten annonsedrift?+ Primært lager vi innhold som del av annonsedriften — det er sånn vi kan stå bak resultatene og prise oss resultatbasert. Send oss en melding på victor@arcads.no , så finner vi ut om det passer.
  Hvordan bruker dere AI i produksjonen?+ Tyngre enn noe annet norsk byrå vi kjenner til — i research, klipp, varianter og analyse. Men hooks, konsepter og kvalitetskontroll er håndverk. AI gjør oss raskere, ikke likere.
  Hva gjør en annonse god?+ De første sekundene. En god hook stopper tommelen, én tydelig beskjed holder på oppmerksomheten, og ekte folk og ekte tall bygger tilliten som selger. Derfor tester vi 10+ varianter i uka i stedet for å satse alt på én idé.
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Se hva vi ville laget for merkevaren din.
  30 minutter på video. Vi viser konkret hvilke annonser vi ville testet for deg — og hvorfor.
@@ -429,6 +477,22 @@ profitt år over år — Mokki
  Hvilke kanaler jobber dere med?+ Google Ads (Search, Shopping, Performance Max), Meta (Facebook og Instagram) og Snapchat — pluss landingssider, konverteringssporing og kreativ produksjon som får kanalene til å levere.
  Passer performance marketing for små bedrifter?+ Ja — hvis økonomien i produktet tåler annonsering. Marginene og livstidsverdien må være store nok til at betalt trafikk kan bli lønnsom. Det regner vi ut i den gratis analysen, og vi sier ærlig ifra hvis tallene ikke henger sammen.
  Hvordan måler dere resultatene?+ Sporing rigges før vi bruker en krone: Google Ads, Meta Pixel og GA4, målt mot faktiske salg og leads. Hver mandag får du rapporten med det du brukte, det du tjente, og hva vi gjør med det denne uka.
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Finn ut om tallene dine henger sammen.
  30 minutter på video med Victor. Vi regner på marginene dine og viser hva som skal til for at annonsering blir lønnsomt — analysen er din uansett.
@@ -491,6 +555,22 @@ fra brief til ferdig
  JA Joonas Andersson Elevate Productions På vegne av Elevate Productions gir vi Victor og Jona våre beste anbefalinger. Disse leverer på et høyt nivå og skaper ekte resultater. Anbefales!
  CC Catherina Castro Oslotattoo Very nice people to work with! They really help you grow. Super comfortable to work together as a team and plan the best solutions.
  Se tallene bak — alle caser →
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Ta en prat med oss.
  30 minutter på video med Victor. Ingen pitch, ingen selgere — bare en ærlig gjennomgang av hva vi ville gjort for deg.
@@ -740,6 +820,22 @@ UGC, statics og motion graphics — typisk 48 timer fra brief til ferdig annonse
  Finnes det et markedsføringsbyrå i Skien?+ Ja — Arcads ANS holder til i Jonas Lies gate 1 i Skien sentrum. Vi drifter Google Ads og Meta Ads og produserer alt annonseinnhold selv, med 100% resultatbasert honorar: leverer ikke annonsene, betaler du ikke.
  Jobber dere bare med bedrifter i Skien og Telemark?+ Nei. Vi er bygget i Skien, men jobber digitalt med kunder over hele Norge — og i utlandet. Lokale bedrifter i Grenland er alltid velkomne til en kaffe på kontoret; alle andre tar vi på video.
  Hva koster det?+ Honoraret er 100% resultatbasert — vi må tjene deg mer enn minimum 25 000 kr i måneden for at samarbeidet skal lønne seg for oss. Leverer vi ikke, betaler du ikke, og det er ingen bindingstid. Les om modellen.
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Ta en kaffe med oss i Skien.
  Eller en videoprat, hvis du er lenger unna. 30 minutter med Victor — du får en ærlig gjennomgang av annonsene dine, uansett.
@@ -828,6 +924,22 @@ Artikler — ærlige svar om annonsering | Arcads
 ### Hvordan velge markedsføringsbyrå
  10 spørsmål som avslører om byrået leverer resultater eller rapporter — pluss honorarmodellene forklart.
  Les artikkelen →
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Heller snakke enn å lese?
  30 minutter med Victor. Vi går gjennom tallene dine og svarer på alt du lurer på — analysen er din uansett.
@@ -874,10 +986,35 @@ Google Ads pris: hva koster Google Ads i Norge? (2026) | Arcads
 ## Hva du bør gjøre nå
  Før du bruker en krone: regn ut breakeven. Hva er marginen din, hva tåler et salg å koste, og hvor mange klikk gir det deg råd til? Det regnestykket tar 10 minutter og redder deg fra 90 % av dyre Google Ads-feil.
  Vil du ha noen til å regne på det med deg? få en gratis videoanalyse — vi går gjennom tallene dine og sender deg en video med tre konkrete grep.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Finn ut hva Google Ads vil koste — og gi — deg.
  30 minutter med Victor. Vi regner breakeven for din økonomi og viser hva vi ville gjort. Analysen er din uansett.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -911,10 +1048,35 @@ Hva er en god ROAS? Formelen de fleste bruker feil | Arcads
 ## Oppsummert
  1) Regn ut bruttomarginen din. 2) Breakeven ROAS = 1/margin. 3) Sikt komfortabelt over. 4) Styr på POAS hvis marginene varierer. 5) Stol aldri på en ROAS du ikke har verifisert mot banken.
  Usikker på hva tallene dine egentlig sier? få en gratis videoanalyse — vi regner breakeven for din økonomi i praten.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Få regnet ut din breakeven ROAS.
  30 minutter med Victor. Vi går gjennom marginene og tallene dine — og sier ærlig ifra om annonsene tjener penger eller bare ser ut som de gjør det.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -951,10 +1113,35 @@ Google Ads eller Meta Ads — hva bør bedriften din velge? | Arcads
  - Lønnsom på én kanal og vil vokse → legg til den andre
  - Usikker? Regnestykket avgjør — ikke magefølelsen
  få en gratis videoanalyse , så ser vi på tallene dine og sier ærlig hvilken kanal vi ville startet med for akkurat din bedrift.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Hvilken kanal bør du starte med?
  30 minutter med Victor. Vi ser på søkevolumet, marginene og innholdet ditt — og gir deg et konkret svar.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -995,10 +1182,35 @@ Hvordan velge markedsføringsbyrå — 10 spørsmål du bør stille | Arcads
  - Garantier om resultater før de har sett tallene dine
 ## Til slutt
  Still de 10 spørsmålene til alle du vurderer — også oss. få en gratis videoanalyse , så svarer vi på alle ti, og du får en gratis gjennomgang av kontoen din uansett hvem du velger.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Still oss de 10 spørsmålene.
  30 minutter med Victor. Du får svar på alle ti — og en ærlig gjennomgang av kontoen din, uansett hvem du ender opp med å velge.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -1031,10 +1243,35 @@ Hva er UGC? Og hvorfor annonsene dine trenger det | Arcads
 ## Én ting til, siden du har lest helt hit
  UGC er ikke svaret på alt. Har du ødelagt sporing eller en landingsside som lekker, hjelper det ikke hvor ekte videoen føles — du bare taper penger mer autentisk. Fiks målingen først, så innholdet. Det er kjedelig rekkefølge, men det er den som virker.
  Lurer du på om UGC hadde flyttet noe for dere? Ta en prat med oss — vi viser deg hva vi ville testet, helt konkret.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Se hvilke UGC-annonser vi ville laget for deg.
  30 minutter på video. Vi viser konkrete konsepter for merkevaren din — og hva vi tror de gjør med tallene.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -1067,10 +1304,35 @@ Facebook-annonsering: pris, oppsett og det som faktisk funker | Arcads
 Håndverkere, salonger, klinikker, treningssentre og verksted får mest ut av Facebook når tre ting er på plass: stram geografi (10–30 km rundt der dere leverer, ikke fylket), ekte innhold (bilder og video av deres arbeid og folk, filmet med mobil) og et mål som kan måles (skjema, booking eller samtale — ikke likes). For tjenester folk søker aktivt etter (rørlegger, tannlege, flyttevask) bør Google være første kanal, og Facebook brukes til retargeting og til å bli husket lokalt. For visuelle og planlagte tjenester (maling, bad, bleking, salong, trening) kan Facebook være hovedkanalen. Bransje for bransje: markedsføring for tjenestebedrifter .
 ## Kom i gang — eller la noen andre gjøre det
  Alt over kan du gjøre selv, og for små budsjetter bør du kanskje det en stund. Men hvis du heller vil bruke tiden på bedriften din: dette er jobben vår , og modellen er 100 % resultatbasert — leverer ikke annonsene, betaler du oss ikke. få en gratis videoanalyse , så ser vi på kontoen din sammen og sier ærlig ifra hva vi ville gjort. Den er din uansett.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Få en ærlig titt på Facebook-annonsene dine.
  30 minutter på video. Vi viser hva som lekker, hva som funker, og hvilke annonser vi ville testet — analysen er din uansett.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -1098,10 +1360,35 @@ Annonsere på Google: slik kommer du i gang uten å brenne penger | Arcads
  Mokki brukte knapt Google da vi tok over. Vi bygde Search og Shopping fra bunnen, målte alt mot lønnsomhet, og kontoen står nå i 9x ROAS med 115 kr per ordre — tallene ligger her . Ikke fordi vi har en hemmelig innstilling, men fordi grunnarbeidet ble gjort i riktig rekkefølge: måling, struktur, vasking, skalering.
 ## Gjør det selv — eller ikke
  Alt dette kan læres, og med lite budsjett kan det være riktig å prøve selv en stund. Men vit hva jobben er: det er ikke å sette opp kampanjen, det er de ukentlige rutinene etterpå. Hvis du heller vil slippe: dette er det vi driver med , honoraret er 100 % resultatbasert, og den første gjennomgangen er gratis — vi viser deg hvor kontoen din lekker, så kan du fikse det selv eller la oss gjøre det. Din data, ditt valg.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Vil du vite hvor Google-kontoen din lekker?
  30 minutter med Victor. Vi går gjennom kontoen sammen — du får se nøyaktig hva vi ville endret, og analysen er din uansett.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -1155,6 +1442,22 @@ Ny til begrepet? Vi har skrevet en ærlig innføring — inkludert det bransjen 
  Finner dere creators for oss?+ Ja. Vi rekrutterer creators som passer merkevaren, skriver detaljerte manus så budskapet sitter, og avtaler bruksrett før produksjon. For Mokki kjørte vi også partnership ads med creator-identitet — en av byggeklossene bak +127% profitt år over år.
  Trenger vi å levere eget råmateriale?+ Nei, men det hjelper. Har du produktvideo, kundeklipp eller bilder, klipper vi gull av det. Har du ingenting, ordner vi creators og produksjon fra bunnen. Typisk 48 timer fra brief til første ferdige annonse.
  Er du creator og vil samarbeide?+ Hyggelig! Vi jobber løpende med norske UGC-creators og betaler per oppdrag. Alt om hvordan du søker her.
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Se hvilke UGC-annonser vi ville laget for deg.
  30 minutter på video. Vi viser konkrete konsepter for merkevaren din — hooks, vinkler og formater — og hva vi tror de gjør med tallene.
@@ -1201,10 +1504,35 @@ Digital markedsføring: hva som faktisk flytter tall i 2026 | Arcads
  Annonsebudsjettet setter du selv — det finnes ingen minstepris hos Google eller Meta. Hjelpen er den variable kostnaden: norske byråer tar typisk 15 000–50 000 kr i måneden i fast honorar, uansett resultat. Vi valgte en annen modell: 100 % resultatbasert — leverer ikke annonsene, betaler du ikke. Ikke fordi vi er snille, men fordi det tvinger oss til å jobbe som om kontoen din var vår egen.
 ## Kortversjonen
  Digital markedsføring er ikke tolv kanaler du «må være på». Det er to jobber, en håndfull verktøy, og en rekkefølge: mål først, én kanal til lønnsomhet, så neste. Vil du ha hjelp til å finne rekkefølgen for akkurat din bedrift? få en gratis videoanalyse — 30 minutter, og planen er din uansett.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Få kartet for din bedrift.
  30 minutter med Victor. Vi ser på tallene dine og gir deg rekkefølgen vi ville fulgt — helt konkret, helt gratis.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -1236,10 +1564,35 @@ Google Shopping for nettbutikker: slik blir det lønnsomt | Arcads
  - Breakeven-ROAS regnet ut — og kampanjene målt mot den
  - Merkevaresøk skilt ut, så du ser hva Shopping faktisk skaper av nysalg
  Vil du ha noen til å gå gjennom feeden og kontoen din? få en gratis videoanalyse — vi viser deg hvor det lekker, og analysen er din uansett.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis & uforpliktende
 ## Få en ærlig gjennomgang av Shopping-oppsettet ditt.
  30 minutter med Victor. Feed, struktur og lønnsomhet — du får se nøyaktig hva vi ville endret.
- Få gratis videoanalyse Video på e-post innen 24 timer
+ Victor spiller inn videoen selv. 5–10 minutter på skjerm: tre konkrete grep vi ville gjort først. Ingen pitch, ingen forpliktelser.
+ Navn *
+ Nettside *
+ E-post *
+ Telefon *
+ Omsetning i åretVelg (valgfritt)Under 2 mill2–10 mill10–50 millOver 50 mill
+ Få min gratis videoanalyse Video på e-post innen 24 timer
+ Gratis · ingen binding · vi deler aldri infoen din
+ Vil du heller ta praten direkte? Book 30 minutter i kalenderen → · victor@arcads.no
 
 ---
 
@@ -1283,6 +1636,23 @@ Null krav til noen av delene. Vi lærer deg det tekniske, og mobilen din er utst
  Trenger jeg profesjonelt utstyr?+ Nei — en nyere mobil med god lyd og dagslys er alt. UGC skal nettopp ikke se studioprodusert ut. Vi tar redigering, captions og formater.
  Hvor mye tjener jeg?+ Honoraret avtales per oppdrag, før du filmer — det avhenger av omfang (antall videoer, manuslengde, rettigheter). Du får betalt i penger, ikke i «eksponering» eller kun produkter.
  Hvordan søker jeg?+ Send en e-post til victor@arcads.no med navn, hvor du bor, og 1–2 korte eksempelklipp der du snakker i selfie-kamera — om hva som helst, mobilkvalitet holder. Vi svarer alle, men tar bare inn creators vi har oppdrag til.
+ Noen av dem vi jobber med
+ Før / etter
+## Dette lager creatorene våre annonser for.
+Fire av kundene våre, før og etter. Klippene dine havner i kontoer som dette.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Frilans · per oppdrag · hele Norge
 ## Send oss et klipp. Det er hele søknaden.
  Navn, hvor du bor, og 1–2 korte selfie-videoer der du snakker om hva som helst. Vi ser etter fjeset og stemmen — ikke CV-en.
@@ -1817,6 +2187,22 @@ Ingen modell er uærlig i seg selv, men bare én gjør at byrået taper penger n
  | Verdi skapt (120 × 2 000 kr) | 240 000 kr
  | Arcads-honorar | Avtalt andel av de 240 000, og 0 kr hvis henvendelsene uteblir
  Tallene er et regneeksempel, ikke et løfte. Det er derfor vi alltid starter med en gratis analyse: da får du et anslag for din bedrift før du bestemmer deg. Vil du se hva et lead faktisk koster i bransjen din, har vi tallene fra kontoene våre her .
+ Før / etter
+## Hva honoraret faktisk kjøper.
+Fire kontoer vi drifter, før og etter. Tallene er fra kundenes egne annonsekontoer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
 ## Det folk lurer på om prisen.
  Hva koster Arcads?+ Honoraret er 100 % resultatbasert. Vi må skape mer enn 25 000 kr i måneden i verdi for kunden for at samarbeidet skal lønne seg for oss. Den nøyaktige modellen (andel av verdiskapingen, målt i din egen konto) avtaler vi i den første praten. Annonsebudsjettet betaler du direkte til Google og Meta.
 Hva skjer i en dårlig måned?+ Da tjener vi mindre — eller ingenting. Det er hele poenget med modellen: vi taper penger når du gjør det, så vi jobber som om kontoen var vår egen.
@@ -2048,6 +2434,22 @@ Regiontabellen er uten brand-kampanjen (95 leads til 47 kr). Med brand er totale
 Budsjettet per region ble økt fra 100 til 300 kr/dag i august. Vestfold/Telemark-kampanjen venter aktivering, og Drammen-kampanjen fikk geografien speilet mot Meta i september. Rapporten kommer hver mandag, per region.
 «Bra jobba boys! Very good.» — Jonathan, daglig leder, Utvendigrenhold
 Har du avdelinger i flere byer? Slik strukturerer vi flere lokasjoner — eller Google Ads for renholdsbedrifter spesifikt.
+ Før / etter
+## Flere kontoer, samme metode.
+Utvendigrenhold er ett av dem. Her er tre til, før og etter.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis videoanalyse
 ## Har du flere avdelinger og én Google-konto?
  30 minutter på video med Victor. Vi går gjennom kontoen din region for region og viser hvor budsjettet lekker — analysen er din uansett.
@@ -2088,6 +2490,23 @@ Han skriver mandagsrapporten til hver kunde selv: hva som ble brukt, hva som ble
  - Annonsere på Google
  - Resultatbasert eller fastpris?
 Victor bor i Skien og driver Arcads sammen med Jona Helgen . Kontakt: victor@arcads.no .
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis videoanalyse
 ## Ta en prat med oss.
  30 minutter på video. Du får vite hva vi ville gjort med kontoen din — analysen er din uansett.
@@ -2124,6 +2543,23 @@ Han drifter Meta-kontoene med samme regel som Victor på Google: sporing først,
  - Hva er UGC?
  - Facebook-annonsering: pris, oppsett og det som faktisk funker
 Jona bor i Skien og driver Arcads sammen med Victor Skretteberg . Vil du lage UGC for oss? Bli UGC-creator.
+ Noen av dem vi jobber med
+ Før / etter
+## Før og etter Arcads.
+Ekte kontoer, ekte tall fra kundenes egne annonsekontoer. Dette er forskjellen på en konto som «går» og en som leverer.
+ Utvendigrenhold
+Før Én nasjonal kampanje, ingen oversikt per by
+Etter 9 regioner, 549 leads på 90 dager, 163 kr per lead
+ Mokki
+Før Google Ads knapt i bruk
+Etter 9x ROAS på Google, +127 % profitt år over år, i tre land
+ Marlow Dental
+Før 0 bookinger fra annonser
+Etter 11 bookinger i uka, £17 per lead
+ Raskflytting
+Før Retargeting lekket til apper, 557 kr per booking
+Etter 310 kr per booking på retargeting, 413 kr i snitt
+ Se også: Google Ads-byrå · Meta Ads-byrå · Performance marketing-byrå · Hva er UGC? · Google Ads-byrå Oslo
  Gratis videoanalyse
 ## Ta en prat med oss.
  30 minutter på video. Du får vite hva vi ville gjort med kontoen din — analysen er din uansett.
