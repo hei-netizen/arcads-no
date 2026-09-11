@@ -121,12 +121,15 @@ header{position:sticky;top:0;z-index:20;background:rgba(252,251,249,.85);backdro
 .logo-cells{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .logo-cell{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-card);display:grid;place-items:center;min-height:120px;padding:24px}
 .logo-cell img{max-height:40px;width:auto;max-width:150px}
-.logo-tile{position:relative;border-radius:var(--r-card);overflow:hidden;min-height:252px}
-.logo-tile img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-.logo-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(7,24,18,.65),rgba(7,24,18,0) 55%)}
-.logo-tile .cap{position:absolute;left:20px;bottom:18px;color:#fff;z-index:1;text-shadow:0 2px 14px rgba(0,0,0,.4)}
-.logo-tile .cap b{display:block;font-size:34px;font-weight:600;letter-spacing:-.02em;line-height:1}
-.logo-tile .cap small{font-size:13px;opacity:.9}
+.logo-tile{position:relative;border-radius:var(--r-card);overflow:hidden;min-height:252px;background:var(--deep);color:#fff;display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:22px 22px 22px 26px}
+.logo-tile::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 100% 0%,rgba(255,255,255,.10),rgba(255,255,255,0) 60%);pointer-events:none}
+.logo-tile .cap{position:relative;z-index:1}
+.logo-tile .cap b{display:block;font-size:44px;font-weight:600;letter-spacing:-.03em;line-height:1}
+.logo-tile .cap small{display:block;font-size:14px;opacity:.85;margin-top:8px;line-height:1.35}
+.logo-tile .cap em{display:inline-block;font-style:normal;font-size:12px;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.22);border-radius:var(--r-pill);padding:3px 10px;margin-top:16px}
+.ad-stack{position:relative;z-index:1;width:166px;aspect-ratio:4/5;border-radius:12px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.35),0 0 0 1px rgba(255,255,255,.12);transform:rotate(3deg)}
+.ad-stack img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .9s cubic-bezier(.16,1,.3,1)}
+.ad-stack img.on{opacity:1}
 
 /* reviews */
 .score{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;padding:10px 18px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--paper)}
@@ -295,7 +298,9 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .panel-body{grid-template-columns:1fr}
   .panel-col + .panel-col{border-left:0;border-top:1px solid var(--line-soft)}
   .logo-grid{grid-template-columns:1fr}
-  .logo-tile{min-height:220px}
+  .logo-tile{min-height:220px;padding:20px}
+  .ad-stack{width:148px}
+  .logo-tile .cap b{font-size:38px}
   .revs{grid-template-columns:1fr 1fr}
   .how-grid,.contact-grid,.mgrid,.people{grid-template-columns:1fr;gap:40px}
   .people{gap:12px}
@@ -427,8 +432,13 @@ fbq('track','PageView');
         <div class="logo-cell"><img src="/logos/frifor.png" alt="Frifor" width="564" height="182" loading="lazy"></div>
       </div>
       <div class="logo-tile">
-        <img src="/img/wall/bg-3.webp" alt="Badstugutta-annonse laget av Arcads" width="480" height="600" loading="lazy">
-        <div class="cap"><b>5000+</b><small>annonser levert</small></div>
+        <div class="cap"><b>5000+</b><small>annonser laget for<br>norske merkevarer</small><em>Meta og Google</em></div>
+        <div class="ad-stack" id="adStack" aria-label="Eksempler på annonser laget av Arcads">
+          <img src="/img/wall/bg-3.webp" alt="Badstugutta-annonse laget av Arcads" width="480" height="600" loading="lazy" class="on">
+          <img src="/img/wall/ur-1.webp" alt="Utvendigrenhold-annonse laget av Arcads" width="480" height="600" loading="lazy">
+          <img src="/img/wall/mokki-2.webp" alt="Mokki-annonse laget av Arcads" width="480" height="600" loading="lazy">
+          <img src="/img/wall/leid-2.webp" alt="Leid-annonse laget av Arcads" width="480" height="600" loading="lazy">
+        </div>
       </div>
     </div>
   </div>
@@ -764,5 +774,6 @@ fbq('track','PageView');
   });
 })();
 </script>
+<script>(function(){var st=document.getElementById('adStack');if(!st)return;var im=st.querySelectorAll('img'),i=0;if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;setInterval(function(){im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},3200)})();</script>
 </body>
 </html>
