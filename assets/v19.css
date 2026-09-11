@@ -1,0 +1,59 @@
+/* v19-overstyring for sider med egen inline-CSS (/caser/, /analyse/, 404).
+   Lastes ETTER inline-stilen og bytter tokens, font og felles chrome. */
+:root{
+  --bg:#FCFBF9; --paper:#FFFFFF; --surface:#F3F6F2;
+  --ink:#071812; --ink2:#1F2A25; --muted:#5C5F5A; --faint:#8A8D87;
+  --line:#E9E7E0; --line-2:#DDDAD1;
+  --dark:#11271F; --deep:#11271F; --on-dark-dim:rgba(255,255,255,.72);
+  --accent:#00C96F; --accent-deep:#0E7A48; --accent-text:#0E7A48; --accent-ink:#06231a;
+  --accent-soft:#F3F6F2; --accent-line:#E4EBE3; --gold:#D9A441;
+  --sans:"Geist",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; --disp:var(--sans);
+  --r:16px; --rs:12px; --sh:0 30px 80px -40px rgba(17,39,31,.25); --sh-sm:0 20px 50px -30px rgba(17,39,31,.2);
+}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.55}
+h1,h2,h3,h4{font-family:var(--sans);font-weight:600;letter-spacing:-0.025em}
+.eyebrow{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--muted)}
+.topstrip{display:none}
+.nav{background:rgba(252,251,249,.85);border-bottom:1px solid #F1EFE9}
+.nav-inner{height:68px}
+.nav .brand img{height:26px}
+.nav-links a.lnk{font-size:15px;font-weight:500;color:var(--ink);opacity:.85}
+.nav-links a.lnk.on,.nav-links a.lnk:hover{opacity:1}
+.nav-cta{display:inline-flex;align-items:center;gap:10px;background:var(--deep);color:#fff;border-radius:999px;padding:6px 18px 6px 6px;font-weight:500;font-size:14px}
+.nav-cta::before{content:"";width:30px;height:30px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2311271F' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14M13 6l6 6-6 6'/%3E%3C/svg%3E") center/14px no-repeat;flex:none}
+.nav-cta:hover{background:#071812}
+.cta{background:var(--deep);color:#fff;box-shadow:none;padding:8px 24px 8px 8px;gap:1px;text-align:left;line-height:1.2}
+.cta:hover{background:#071812;color:#fff;transform:translateY(-1px)}
+.cta .t{flex-direction:row-reverse;gap:12px;font-weight:500;font-size:16px}
+.cta .t .arw{width:38px;height:38px;background:#fff;color:var(--deep)}
+.cta .t .arw svg{width:16px;height:16px}
+.cta .sub,.cta span.sub{font-size:12px;font-weight:400;opacity:.72;color:#fff;padding-left:50px}
+.cta.lg{padding:10px 28px 10px 10px}
+#leadForm .cta{align-items:center}
+#leadForm .cta .sub,#leadForm .cta span.sub{padding-left:0}
+.btn-white{background:#fff;color:var(--deep);padding:8px 24px 8px 8px;gap:1px;text-align:left}
+.btn-white .t{flex-direction:row-reverse;gap:12px;font-weight:500;font-size:16px}
+.btn-white .t .arw{width:38px;height:38px;background:var(--deep);color:#fff}
+.btn-white span.sub{font-size:12px;color:var(--muted);padding-left:50px}
+.final{background:var(--deep);border-radius:20px;box-shadow:none}
+.final .eyebrow{border-color:rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.85)}
+.final p{color:rgba(255,255,255,.75)}
+.model{background:var(--deep)}
+.model .lbl{display:inline-flex;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:6px 14px;font-size:13px;font-weight:500;letter-spacing:0;text-transform:none;color:rgba(255,255,255,.85)}
+.model h2 .dim{color:rgba(255,255,255,.55)}
+.footer{background:var(--bg);color:var(--muted);border-top:1px solid #F1EFE9}
+.footer .flogo{filter:none;height:22px}
+.footer .ftag{color:var(--muted)}
+.footer .fsoc a{border:0;padding:0;color:var(--muted);font-weight:400;font-size:14px}
+.footer .fsoc a:hover{color:var(--ink)}
+.footer .fh2{color:var(--ink);font-weight:600;font-size:13px;letter-spacing:0;text-transform:none}
+.footer .fcol a{color:var(--muted);font-weight:400}
+.footer .fcol a:hover{color:var(--ink)}
+.footer .fcol span{color:var(--muted)}
+.footer .fbot{border-top:1px solid #F1EFE9;color:var(--faint);text-align:left}
+.faq details{background:transparent;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:0;box-shadow:none}
+.faq summary{font-weight:600;font-size:17px}
+.faq summary .pm{background:transparent;border:1px solid var(--line);color:var(--muted)}
+.faq details[open] summary .pm{background:transparent;color:var(--muted)}
+.field input,.field select{border-radius:10px;height:46px;padding:0 14px;font-family:var(--sans)}
+.field input:focus,.field select:focus{outline:2px solid var(--deep);border-color:var(--deep)}
