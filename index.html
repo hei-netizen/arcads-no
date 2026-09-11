@@ -296,8 +296,40 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   html{scroll-behavior:auto}
 }
 
+
+/* tips: dette funker nå */
+.tips{padding-top:72px}
+.tips-grid{display:grid;grid-template-columns:.9fr 2fr;gap:40px;align-items:start}
+.tips-intro{position:sticky;top:calc(var(--nav) + 24px)}
+.tips-intro h2{font-size:clamp(26px,3vw,34px);margin:14px 0 14px}
+.tips-intro p{color:var(--muted);font-size:16px;max-width:38ch}
+.tips-intro .note{font-size:13px;color:var(--faint);margin-top:18px}
+.fbs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fb{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-card);overflow:hidden;box-shadow:0 8px 30px rgba(7,24,18,.05);font-size:13px;display:flex;flex-direction:column}
+.fb-head{display:flex;align-items:center;gap:10px;padding:12px 14px 10px}
+.fb-head .fb-av{width:36px;height:36px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;flex:none;overflow:hidden}
+.fb-head .fb-av img{width:26px;height:auto;max-height:22px;object-fit:contain}
+.fb-head b{display:block;font-size:13px;line-height:1.2}
+.fb-head small{color:var(--faint);font-size:11px}
+.fb-body{padding:0 14px 10px;line-height:1.4;color:var(--ink)}
+.fb-body span{color:var(--faint)}
+.fb-img{aspect-ratio:4/5;background:#eee;overflow:hidden}
+.fb-img img{width:100%;height:100%;object-fit:cover;display:block}
+.fb-cta{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:#f0f2f5;border-top:1px solid var(--line-soft)}
+.fb-cta small{color:var(--faint);font-size:11px;display:block}
+.fb-cta b{font-size:13px}
+.fb-cta em{font-style:normal;background:#e4e6eb;border-radius:6px;padding:7px 12px;font-weight:600;font-size:12px;white-space:nowrap}
+.fb-why{padding:14px 14px 16px;border-top:1px solid var(--line-soft);background:var(--bg);flex:1}
+.fb-why .kpi{display:flex;gap:14px;margin-bottom:8px}
+.fb-why .kpi b{display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;line-height:1.1}
+.fb-why .kpi small{color:var(--faint);font-size:11px}
+.fb-why p{color:var(--muted);font-size:13px;line-height:1.45}
+
 /* mobile */
 @media (max-width:960px){
+  .tips-grid{grid-template-columns:1fr;gap:28px}
+  .tips-intro{position:static}
+  .fbs{grid-template-columns:1fr;gap:14px;max-width:420px}
   .tiles{grid-template-columns:repeat(2,1fr)}
   .tile:nth-child(2){border-right:0}
   .tile:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}
@@ -444,6 +476,43 @@ fbq('track','PageView');
           <img src="/img/wall/mokki-2.webp" alt="Mokki-annonse laget av Arcads" width="480" height="600" loading="lazy">
           <img src="/img/wall/leid-2.webp" alt="Leid-annonse laget av Arcads" width="480" height="600" loading="lazy">
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tips" id="tips">
+  <div class="wrap">
+    <div class="tips-grid">
+      <div class="tips-intro rv">
+        <span class="eyebrow">Et lite tips</span>
+        <h2>Dette funker veldig bra akkurat nå.</h2>
+        <p>Tre annonser vi kjører for kundene våre i dag. Ingen av dem ser ut som annonser. Ekte bilder, ekte folk, og teksten sier det kunden faktisk lurer på.</p>
+        <p>Vi deler dem fordi de fleste bruker for mye tid på å polere, og for lite tid på å teste. Stjel gjerne prinsippene.</p>
+        <p class="note">Tall fra Meta Ads Manager, siste 14 dager per september 2026. Lead = utfylt skjema.</p>
+      </div>
+      <div class="fbs rv">
+        <article class="fb">
+          <div class="fb-head"><div class="fb-av"><img src="/logos/badstugutta.png" alt="" width="311" height="162" loading="lazy"></div><div><b>Badstugutta</b><small>Sponset · 🌐</small></div></div>
+          <p class="fb-body">Har du spørsmål om utebadstue til hytta?<br>Ca. 4 uker fra du tar praten til den står ferdig. <span>… Se mer</span></p>
+          <div class="fb-img"><img src="/img/tips/bg-svaberg.webp" alt="Badstugutta-annonse: badstue på svaberget" width="640" height="800" loading="lazy"></div>
+          <div class="fb-cta"><div><small>badstugutta.no</small><b>Ta kontakt med oss!</b></div><em>Send melding</em></div>
+          <div class="fb-why"><div class="kpi"><div><b>69 kr</b><small>per lead</small></div><div><b>5,5 %</b><small>CTR</small></div></div><p>Ett bilde, null tekst på bildet. Badstua står på svaberget der kunden drømmer om å ha den. Teksten svarer på det første spørsmålet alle stiller: hvor lang tid tar det.</p></div>
+        </article>
+        <article class="fb">
+          <div class="fb-head"><div class="fb-av"><img src="/logos/badstugutta.png" alt="" width="311" height="162" loading="lazy"></div><div><b>Badstugutta</b><small>Sponset · 🌐</small></div></div>
+          <p class="fb-body">Har du spørsmål om utebadstue til hytta?<br>Ca. 4 uker fra du tar praten til den står ferdig. <span>… Se mer</span></p>
+          <div class="fb-img"><img src="/img/tips/bg-ugc.webp" alt="Badstugutta-annonse: kunde viser fram badstua" width="640" height="800" loading="lazy"></div>
+          <div class="fb-cta"><div><small>badstugutta.no</small><b>Snakk med Mattis</b></div><em>Send melding</em></div>
+          <div class="fb-why"><div class="kpi"><div><b>93 kr</b><small>per lead</small></div><div><b>5,3 %</b><small>CTR</small></div></div><p>Filmet på mobil av en kunde, med tekst lagt på som en story. Ser ut som noe en venn har delt. Knappen sier «Snakk med Mattis», ikke «Kontakt oss», fordi Mattis faktisk svarer.</p></div>
+        </article>
+        <article class="fb">
+          <div class="fb-head"><div class="fb-av"><img src="/logos/utvendigrenhold.png" alt="" width="589" height="169" loading="lazy"></div><div><b>Utvendig Renhold</b><small>Sponset · 🌐</small></div></div>
+          <p class="fb-body">Et tak fullt av mose sliter på taksteinen og ser ikke bra ut. Vask og impregnering øker levetiden. <span>… Se mer</span></p>
+          <div class="fb-img"><img src="/img/tips/ur-daniel.webp" alt="Utvendig Renhold-annonse: Daniel snakker rett i kamera" width="640" height="800" loading="lazy"></div>
+          <div class="fb-cta"><div><small>utvendigrenhold.no</small><b>Få pristilbud på 24 timer</b></div><em>Finn ut mer</em></div>
+          <div class="fb-why"><div class="kpi"><div><b>17</b><small>leads på 14 dager</small></div><div><b>159 kr</b><small>per lead</small></div></div><p>Daniel fra kundeservice snakker rett i kamera i et vanlig møterom. Ingen studio, ingen musikk. Et ekte ansikt fra firmaet slår en polert produksjonsvideo, gang på gang.</p></div>
+        </article>
       </div>
     </div>
   </div>
