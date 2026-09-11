@@ -297,6 +297,9 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
 .fsoc svg{width:15px;height:15px}
 .fbot{margin-top:40px;padding-top:20px;border-top:1px solid var(--line-soft);font-size:12px;color:var(--faint)}
 
+.qual{margin-top:14px;font-size:14px;color:var(--muted);max-width:52ch}
+.qual b{color:var(--ink);font-weight:600}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
 .rv.in{opacity:1;transform:none}
@@ -730,6 +733,7 @@ fbq('track','PageView');
     <div class="center"><h2 class="rv">Det folk spør oss om før de sender skjemaet.</h2></div>
     <div class="faq rv">
       <details open><summary>Hva får jeg i det gratis forslaget?<span class="pm">+</span></summary><div class="ans">Vi ser på bedriften din og lager et konkret forslag: annonser og en landingsside slik de ville sett ut for deg, med din merkevare og dine kunder. Du får det på e-post i løpet av et par dager. Ingen pitch, ingen forpliktelser. Liker du det ikke, har du ikke tapt annet enn to minutter i skjemaet.</div></details>
+      <details><summary>Hvem passer forslaget for?<span class="pm">+</span></summary><div class="ans">Etablerte bedrifter som allerede bruker 30 000 kr eller mer på annonsering i måneden, eller som har kapasitet og lyst til å gjøre det. Vi tar oss tid til hvert forslag, så vi prioriterer bedrifter der annonsering faktisk kan flytte bunnlinja. Er du mindre enn det, les gjerne artiklene våre først.</div></details>
       <details><summary>Hva betyr «100 % resultatbasert»?<span class="pm">+</span></summary><div class="ans">At regningen henger på resultatene, ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten.</div></details>
       <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">Helt transparent: vi må tjene minimum 25 000 kr i måneden per kunde for at det skal lønne seg for oss. Siden honoraret er 100 % resultatbasert, betyr det at vi først må tjene deg enda mer enn det.</div></details>
       <details><summary>Hvordan vet jeg at det er dere som skapte salget?<span class="pm">+</span></summary><div class="ans">Det første vi gjør er å rigge sporingen skikkelig (Google Ads, Meta Pixel og GA4). Da slipper du å ta vårt ord for noe som helst. Du ser hvert salg og hvert lead svart på hvitt i mandagsrapporten.</div></details>
@@ -745,6 +749,7 @@ fbq('track','PageView');
     <div class="rv">
       <h2>Se hvordan det ville sett ut for deg, før du bestemmer deg.</h2>
       <p>Fyll inn skjemaet, så lager vi et konkret forslag til annonser og landingsside for din bedrift. Ikke en generell presentasjon, men slik det faktisk ville sett ut med din merkevare og dine kunder. Helt uforpliktende, og forslaget er ditt uansett.</p>
+      <p class="qual"><b>Hvem det passer for:</b> etablerte bedrifter som allerede bruker 30 000 kr eller mer på annonsering i måneden, eller som har kapasitet til det. Er du ikke der ennå, er artiklene våre et bedre sted å starte.</p>
       <ol class="next">
         <li><div><b>Vi setter oss inn i bedriften din</b><span>Nettsiden, kundene og hva konkurrentene gjør. Så forslaget handler om deg, ikke om oss.</span></div></li>
         <li><div><b>Du får forslaget på e-post</b><span>Annonser og landingsside slik de ville sett ut for deg. I løpet av et par dager, og ditt å beholde selv om du aldri snakker med oss igjen.</span></div></li>
@@ -763,10 +768,10 @@ fbq('track','PageView');
         </div>
         <div class="two">
           <div class="field"><label for="l_site">Nettside</label><input type="text" id="l_site" name="website" placeholder="bedriften.no (valgfritt)" autocomplete="url"></div>
-          <div class="field"><label for="l_budget">Omsetning i året</label><select id="l_budget" name="budget"><option value="">Velg (valgfritt)</option><option>Under 2 mill</option><option>2-10 mill</option><option>10-50 mill</option><option>Over 50 mill</option></select></div>
+          <div class="field"><label for="l_budget">Annonsebudsjett i måneden</label><select id="l_budget" name="budget" required><option value="">Velg</option><option>Annonserer ikke ennå</option><option>Under 30 000 kr</option><option>30 000 til 100 000 kr</option><option>Over 100 000 kr</option></select></div>
         </div>
         <button type="submit" class="btn wide" id="leadBtn"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Vis meg hvordan det ville sett ut</span></button>
-        <p class="fine">Forslaget kommer på e-post i løpet av et par dager. Ingen binding, vi deler aldri infoen din.</p>
+        <p class="fine">Forslaget kommer på e-post i løpet av et par dager. For etablerte bedrifter med 30 000 kr+ i månedlig annonsebudsjett. Ingen binding, vi deler aldri infoen din.</p>
         <p class="fine">Vil du heller ta praten direkte? <a href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book 30 minutter i kalenderen</a></p>
       </form>
       <div class="thanks">
@@ -828,6 +833,7 @@ fbq('track','PageView');
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Hva får jeg i det gratis forslaget?","acceptedAnswer":{"@type":"Answer","text":"Vi ser på bedriften din og lager et konkret forslag: annonser og en landingsside slik de ville sett ut for deg, med din merkevare og dine kunder. Du får det på e-post i løpet av et par dager. Ingen pitch, ingen forpliktelser."}},
+{"@type":"Question","name":"Hvem passer forslaget for?","acceptedAnswer":{"@type":"Answer","text":"Etablerte bedrifter som allerede bruker 30 000 kr eller mer på annonsering i måneden, eller som har kapasitet til det. Vi tar oss tid til hvert forslag, så vi prioriterer bedrifter der annonsering faktisk kan flytte bunnlinja."}},
 {"@type":"Question","name":"Hva betyr «100 % resultatbasert»?","acceptedAnswer":{"@type":"Answer","text":"At regningen henger på resultatene, ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten."}},
 {"@type":"Question","name":"Hva koster det?","acceptedAnswer":{"@type":"Answer","text":"Vi må tjene minimum 25 000 kr i måneden per kunde for at det skal lønne seg for oss. Siden honoraret er 100 % resultatbasert, betyr det at vi først må tjene deg enda mer enn det."}},
 {"@type":"Question","name":"Hvordan vet jeg at det er dere som skapte salget?","acceptedAnswer":{"@type":"Answer","text":"Det første vi gjør er å rigge sporingen skikkelig (Google Ads, Meta Pixel og GA4). Da ser du hvert salg og hvert lead svart på hvitt i mandagsrapporten."}},
