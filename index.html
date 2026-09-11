@@ -69,7 +69,15 @@ section{padding:96px 0}
 .btn.light .ic{background:var(--deep)}
 .btn.light .ic svg{stroke:#fff}
 .btn.light:hover{background:#F3F6F2}
-.btn-sub{display:block;font-size:13px;color:var(--faint);margin-top:10px}
+.micro{font-size:13px;color:var(--faint);margin-top:12px}
+.ctarow{text-align:center;margin-top:44px}
+.ctarow .micro{margin-top:10px}
+.lbl-s{display:none}
+section{scroll-margin-top:72px}
+.fwho{display:flex;gap:14px;align-items:center;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--line-soft);font-size:14px;color:var(--muted);line-height:1.5}
+.fwho b{color:var(--ink);font-weight:600}
+.fwho img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
+.fine a{color:var(--ink);font-weight:500;text-decoration:underline;text-underline-offset:2px}
 
 /* nav */
 header{position:sticky;top:0;z-index:20;background:rgba(252,251,249,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft)}
@@ -253,8 +261,6 @@ td.us{border-bottom-color:#E4EBE3}
 .next b{display:block;font-weight:600}
 .next span{font-size:15px;color:var(--muted)}
 .formcard{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:28px}
-.formcard h3{font-size:22px;margin-bottom:4px}
-.formcard .fl{font-size:14px;margin-bottom:20px}
 .field{display:grid;gap:6px;margin-bottom:14px}
 .field label{font-size:13px;font-weight:500}
 .field input,.field select{width:100%;height:46px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font:inherit;font-size:15px;color:var(--ink)}
@@ -316,7 +322,7 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .hero{padding:56px 0 24px}
   .nav ul{display:none}
   .nav .btn .lbl{display:none}
-  .nav .btn{padding:6px}
+  .nav .btn .lbl-s{display:inline}
   .logo-cells{grid-template-columns:repeat(2,1fr)}
   .logo-cell{min-height:90px;padding:16px}
   .revs{grid-template-columns:1fr}
@@ -368,7 +374,7 @@ fbq('track','PageView');
       <li><a href="#resultater">Resultater</a></li>
       <li><a href="#omoss">Om oss</a></li>
     </ul>
-    <a class="btn sm" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Få gratis videoanalyse</span></a>
+    <a class="btn sm" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Få gratis videoanalyse</span><span class="lbl-s">Gratis analyse</span></a>
   </div>
 </header>
 
@@ -378,6 +384,7 @@ fbq('track','PageView');
     <h1 class="rv">Annonser som betaler for seg selv.</h1>
     <p class="lede rv">To karer fra Skien som bygger Google- og Meta-kampanjene, annonsene og landingssidene selv. Tjener du ikke mer, tjener ikke vi noe.</p>
     <a class="btn rv" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Få gratis videoanalyse</a>
+    <p class="micro rv">Video på e-post innen 24 timer. Ingen binding, ingen selgere.</p>
     <div class="strip rv">
       <span><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>10+</b> nye annonser hver uke</span>
       <span><b>5000+</b> annonser levert</span>
@@ -457,6 +464,7 @@ fbq('track','PageView');
       <div class="rev hide-m"><p>«Very nice people to work with! They really help you grow. Super comfortable to work together as a team.»</p><div class="who"><i>CC</i><div><b>Catherina Castro</b><small>Oslotattoo</small></div></div></div>
       <div class="rev hide-m"><p>«På vegne av Elevate Productions gir vi Victor og Jona våre beste anbefalinger. Disse leverer på et høyt nivå og skaper ekte resultater.»</p><div class="who"><i>JA</i><div><b>Joonas Andersson</b><small>Elevate Productions</small></div></div></div>
     </div>
+    <div class="ctarow rv"><a class="btn" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Få gratis videoanalyse</a><p class="micro">Bli den neste på lista. Video på e-post innen 24 timer.</p></div>
   </div>
 </section>
 
@@ -524,6 +532,7 @@ fbq('track','PageView');
       <div class="b b-t"><h3>Sporing</h3><p>Google Ads, Meta Pixel og GA4 rigget riktig først. Da ser du hvert salg og hvert lead selv.</p></div>
       <div class="b b-t"><h3>Mandagsrapporten</h3><p>Tall du forstår, hver mandag. Hva som ble gjort, hva det ga, hva vi gjør neste uke.</p></div>
     </div>
+    <div class="ctarow rv"><a class="btn" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Få gratis videoanalyse</a><p class="micro">Vi ser på kontoene dine før du har betalt en krone.</p></div>
   </div>
 </section>
 
@@ -654,8 +663,7 @@ fbq('track','PageView');
     </div>
     <div class="formcard rv" id="formcard">
       <form id="leadForm" novalidate>
-        <h3>Få gratis videoanalyse</h3>
-        <p class="fl">Fyll inn, så er videoen på vei.</p>
+        <div class="fwho"><img src="/img/victor-hero.webp" alt="Victor" width="240" height="240" loading="lazy"><div><b>Victor spiller inn videoen selv.</b> 5-10 minutter på skjerm med tre konkrete grep. Ingen pitch, ingen forpliktelser.</div></div>
         <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field"><label for="l_name">Navn</label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
         <div class="two">
@@ -667,7 +675,8 @@ fbq('track','PageView');
           <div class="field"><label for="l_budget">Omsetning i året</label><select id="l_budget" name="budget"><option value="">Velg (valgfritt)</option><option>Under 2 mill</option><option>2-10 mill</option><option>10-50 mill</option><option>Over 50 mill</option></select></div>
         </div>
         <button type="submit" class="btn wide" id="leadBtn"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Få min gratis videoanalyse</span></button>
-        <p class="fine">Video på e-post innen 24 timer. Ingen binding, ingen selgere.</p>
+        <p class="fine">Video på e-post innen 24 timer. Ingen binding, vi deler aldri infoen din.</p>
+        <p class="fine">Vil du heller ta praten direkte? <a href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book 30 minutter i kalenderen</a></p>
       </form>
       <div class="thanks">
         <h3 id="thanksH">Takk!</h3>
