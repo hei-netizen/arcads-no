@@ -143,13 +143,13 @@ header{position:sticky;top:0;z-index:20;background:rgba(252,251,249,.85);backdro
 .score{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;padding:10px 18px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--paper)}
 .score .n{font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--green-text)}
 .score small{font-size:13px;color:var(--muted)}
-.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px}
-.rev{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-card);padding:22px;display:flex;flex-direction:column;gap:14px}
-.rev p{color:var(--ink);font-size:15px;line-height:1.5}
-.rev .who{display:flex;align-items:center;gap:10px;margin-top:auto}
-.rev .who i{width:34px;height:34px;border-radius:50%;background:var(--tint);color:var(--green-text);font:600 12px/34px "Geist",sans-serif;text-align:center;font-style:normal;flex:0 0 auto}
-.rev .who b{display:block;font-size:14px;font-weight:600}
-.rev .who small{font-size:12px;color:var(--faint)}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:44px}
+.rev{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:end}
+.rev i{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--green-text);font:600 13px/38px "Geist",sans-serif;text-align:center;font-style:normal;flex:0 0 auto;margin-bottom:22px}
+.rev .bub{position:relative;background:#EEF0EC;border-radius:18px 18px 18px 6px;padding:12px 16px;color:var(--ink);font-size:15px;line-height:1.45}
+.rev .bub::before{content:"";position:absolute;left:-6px;bottom:0;width:14px;height:14px;background:#EEF0EC;border-radius:0 0 14px 0;clip-path:polygon(0 100%,100% 100%,100% 0)}
+.rev .who{display:flex;gap:6px;align-items:baseline;margin-top:6px;padding-left:6px;font-size:12px;color:var(--faint)}
+.rev .who b{font-weight:600;color:var(--muted)}
 
 /* how it works */
 .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:56px}
@@ -234,6 +234,11 @@ td.us{border-bottom-color:#E4EBE3}
 .mgrid ul{list-style:none;margin-top:24px;display:grid;gap:12px}
 .mgrid li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,.9)}
 .mgrid li svg{width:18px;height:18px;flex:0 0 auto;stroke:var(--green);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+.nogo{margin-top:26px;max-width:460px;border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.nogo-h{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:10px;font-weight:600}
+.nogo ul{margin:0}
+.nogo li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,.82);margin-bottom:8px}
+.nogo li svg{width:16px;height:16px;flex:none;margin-top:3px;stroke:rgba(255,255,255,.45);fill:none;stroke-width:2.2;stroke-linecap:round}
 .msteps{display:grid;gap:10px}
 .mstep{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-card);padding:20px 22px;display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:start}
 .mstep .n{width:34px;height:34px;border-radius:50%;background:var(--green);color:var(--deep);font-weight:600;font-size:14px;display:grid;place-items:center}
@@ -276,6 +281,11 @@ td.us{border-bottom-color:#E4EBE3}
 
 /* footer */
 footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;color:var(--muted)}
+.fnote{display:grid;grid-template-columns:56px 1fr;gap:18px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-card);padding:24px 26px;margin-bottom:48px;max-width:720px}
+.fnote img{width:56px;height:56px;border-radius:50%;object-fit:cover}
+.fnote small{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:8px}
+.fnote p{color:var(--ink);font-size:15px;line-height:1.55;max-width:none}
+.fnote b{display:block;margin-top:12px;font-size:15px;color:var(--ink);font-style:italic;font-weight:500}
 .fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr .8fr;gap:32px}
 .fgrid img{height:22px;width:auto;margin-bottom:14px}
 .fgrid .fh{font-weight:600;color:var(--ink);margin-bottom:12px;font-size:13px}
@@ -340,6 +350,8 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .ad-stack{width:148px}
   .logo-tile .cap b{font-size:38px}
   .revs{grid-template-columns:1fr 1fr}
+  .fnote{grid-template-columns:44px 1fr;padding:20px}
+  .fnote img{width:44px;height:44px}
   .how-grid,.contact-grid,.mgrid,.people{grid-template-columns:1fr;gap:40px}
   .people{gap:12px}
   .bento{grid-template-columns:1fr 1fr}
@@ -458,7 +470,7 @@ fbq('track','PageView');
 
 <section class="logos">
   <div class="wrap">
-    <h2 class="rv">Merkevarene vi vokser sammen med</h2>
+    <h2 class="rv">Kundene vi jobber for.</h2>
     <div class="logo-grid rv">
       <div class="logo-cells">
         <div class="logo-cell"><img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold" width="589" height="169" loading="lazy"></div>
@@ -521,17 +533,17 @@ fbq('track','PageView');
 <section id="resultater">
   <div class="wrap">
     <div class="center">
-      <h2 class="rv">Ikke ta vårt ord for det.</h2>
-      <p class="lede rv">Ekte meldinger, rett fra chatten vår. Vi har ikke pyntet på dem, derfor ser de sånn ut.</p>
+      <h2 class="rv">Det kundene skriver til oss.</h2>
+      <p class="lede rv">Limt inn fra chatten med kundene våre, akkurat som de kom. Ingen pynt, ingen omskriving.</p>
       <div class="score rv"><span class="n">94 %</span><small>får større bunnlinje innen 3 måneder</small></div>
     </div>
     <div class="revs rv">
-      <div class="rev"><p>«Disse leverer above and beyond! Jeg har jobbet med 6-7 andre byråer før vi ble anbefalt Arcads. Det er en tidsepoke før og etter vi startet samarbeidet.»</p><div class="who"><i>TT</i><div><b>Thommy Tellefsen</b><small>Leid.no</small></div></div></div>
-      <div class="rev"><p>«Veldig nice, vi får flere leads enn noensinne, vi får flere clicks enn noensinne!! Amazing.»</p><div class="who"><i>EL</i><div><b>Elliot</b><small>Co-Founder, Badstugutta</small></div></div></div>
-      <div class="rev"><p>«Vi har samarbeidet med Arcads på flere konsepter over tid, og samarbeider fremdeles. Kreative, profesjonelle og raske. En partner vi stoler på.»</p><div class="who"><i>NA</i><div><b>Nathaniel Ayeh</b><small>Veldigrent og Raskflytting</small></div></div></div>
-      <div class="rev hide-m"><p>«Bra jobba boys! Very good.»</p><div class="who"><i>JR</i><div><b>Jonathan Rothe</b><small>Daglig leder, Utvendigrenhold</small></div></div></div>
-      <div class="rev hide-m"><p>«Very nice people to work with! They really help you grow. Super comfortable to work together as a team.»</p><div class="who"><i>CC</i><div><b>Catherina Castro</b><small>Oslotattoo</small></div></div></div>
-      <div class="rev hide-m"><p>«På vegne av Elevate Productions gir vi Victor og Jona våre beste anbefalinger. Disse leverer på et høyt nivå og skaper ekte resultater.»</p><div class="who"><i>JA</i><div><b>Joonas Andersson</b><small>Elevate Productions</small></div></div></div>
+      <div class="rev"><i>TT</i><div><div class="bub">Disse leverer above and beyond! Jeg har jobbet med 6-7 andre byråer før vi ble anbefalt Arcads. Det er en tidsepoke før og etter vi startet samarbeidet.</div><div class="who"><b>Thommy Tellefsen</b><span>Leid.no</span></div></div></div>
+      <div class="rev"><i>EL</i><div><div class="bub">Veldig nice, vi får flere leads enn noensinne, vi får flere clicks enn noensinne!! Amazing.</div><div class="who"><b>Elliot</b><span>Co-Founder, Badstugutta</span></div></div></div>
+      <div class="rev"><i>NA</i><div><div class="bub">Vi har samarbeidet med Arcads på flere konsepter over tid, og samarbeider fremdeles. Kreative, profesjonelle og raske. En partner vi stoler på.</div><div class="who"><b>Nathaniel Ayeh</b><span>Veldigrent og Raskflytting</span></div></div></div>
+      <div class="rev hide-m"><i>JR</i><div><div class="bub">Bra jobba boys! Very good.</div><div class="who"><b>Jonathan Rothe</b><span>Daglig leder, Utvendigrenhold</span></div></div></div>
+      <div class="rev hide-m"><i>CC</i><div><div class="bub">Very nice people to work with! They really help you grow. Super comfortable to work together as a team.</div><div class="who"><b>Catherina Castro</b><span>Oslotattoo</span></div></div></div>
+      <div class="rev hide-m"><i>JA</i><div><div class="bub">På vegne av Elevate Productions gir vi Victor og Jona våre beste anbefalinger. Disse leverer på et høyt nivå og skaper ekte resultater.</div><div class="who"><b>Joonas Andersson</b><span>Elevate Productions</span></div></div></div>
     </div>
     <div class="ctarow rv"><a class="btn" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a><p class="micro">Bli den neste på lista. Forslaget er gratis og uforpliktende.</p></div>
   </div>
@@ -643,7 +655,7 @@ fbq('track','PageView');
 <section class="compare" id="sammenlign">
   <div class="wrap">
     <div class="center">
-      <h2 class="rv">Derfor bytter folk til oss.</h2>
+      <h2 class="rv">Hvorfor folk går fra byrået sitt til to karer i Skien.</h2>
       <p class="lede rv">Én partner i stedet for et tregt byrå, en frilanser du må følge opp, eller enda en kveld foran annonsekontoen selv.</p>
     </div>
     <div class="table rv">
@@ -691,6 +703,16 @@ fbq('track','PageView');
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>10+ nye annonser testet hver eneste uke.</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>Sporing som måler salg og leads, ikke klikk og visninger.</li>
         </ul>
+        <div class="nogo">
+          <div class="nogo-h">Det vi ikke gjør</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Ingen account manager mellom deg og oss</li>
+            <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Ingen kvartalsrapport på 40 sider</li>
+            <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Ingen selgere, du snakker med dem som gjør jobben</li>
+            <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Ingen «strategi-workshop» til 30 000 kr</li>
+            <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Ingen binding</li>
+          </ul>
+        </div>
         <p style="margin-top:24px;max-width:460px;font-size:14px">Helt transparent: vi må tjene minimum 25 000 kr i måneden per kunde for at det skal lønne seg for oss. Siden vi kun tar betalt av resultater, må vi tjene deg enda mer enn det. Det er insentivet vårt.</p>
         <a class="btn light" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a>
       </div>
@@ -705,7 +727,7 @@ fbq('track','PageView');
 
 <section id="faq">
   <div class="wrap">
-    <div class="center"><h2 class="rv">Det folk lurer på før de booker.</h2></div>
+    <div class="center"><h2 class="rv">Det folk spør oss om før de sender skjemaet.</h2></div>
     <div class="faq rv">
       <details open><summary>Hva får jeg i det gratis forslaget?<span class="pm">+</span></summary><div class="ans">Vi ser på bedriften din og lager et konkret forslag: annonser og en landingsside slik de ville sett ut for deg, med din merkevare og dine kunder. Du får det på e-post i løpet av et par dager. Ingen pitch, ingen forpliktelser. Liker du det ikke, har du ikke tapt annet enn to minutter i skjemaet.</div></details>
       <details><summary>Hva betyr «100 % resultatbasert»?<span class="pm">+</span></summary><div class="ans">At regningen henger på resultatene, ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten.</div></details>
@@ -757,6 +779,14 @@ fbq('track','PageView');
 
 <footer>
   <div class="wrap">
+    <div class="fnote rv">
+      <img src="/img/victor-hero.webp" alt="Victor" width="240" height="240" loading="lazy">
+      <div>
+        <small>Et lite notat fra Victor</small>
+        <p>Takk for at du leste helt ned hit. Jona og jeg startet Arcads fordi vi var lei av byråer som sender faktura uansett hvordan det går. Så vi laget et der regningen henger på resultatene. Det betyr at vi sier nei til en del bedrifter, og at vi jobber litt hardere for dem vi sier ja til. Passer vi ikke for deg, sier vi det i den første praten. Forslaget beholder du uansett.</p>
+        <b>Victor</b>
+      </div>
+    </div>
     <div class="fgrid">
       <div>
         <img src="/logos/arcads-logo.png" alt="Arcads" width="800" height="132" loading="lazy">
