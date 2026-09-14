@@ -1,0 +1,58 @@
+[
+ {
+  "fil": "resepsjon.webp",
+  "kilde": "https://www.byes.no/uploads/d5ijjG6a/767x0_2560x0/img-0366__msi___jpg.webp",
+  "bredde": 2048,
+  "hoyde": 1394,
+  "alt": "to ansatte ved skiltet i resepsjonen",
+  "side": "https://www.byes.no"
+ },
+ {
+  "fil": "moterom.webp",
+  "kilde": "https://www.byes.no/uploads/XH6Kfaff/767x0_2560x0/IMG_5403__msi___jpg.webp",
+  "bredde": 1600,
+  "hoyde": 1200,
+  "alt": "møterom",
+  "side": "https://www.byes.no"
+ },
+ {
+  "fil": "samtalerom.webp",
+  "kilde": "https://www.byes.no/uploads/FD9belou/767x0_2560x0/IMG_5407__msi___jpg.webp",
+  "bredde": 1600,
+  "hoyde": 1200,
+  "alt": "samtalerom",
+  "side": "https://www.byes.no"
+ },
+ {
+  "fil": "lokalene.webp",
+  "kilde": "https://www.byes.no/uploads/XzzIq5qN/767x0_2560x0/IMG_5413__msi___jpg.webp",
+  "bredde": 1600,
+  "hoyde": 1200,
+  "alt": "lokalene",
+  "side": "https://www.byes.no"
+ },
+ {
+  "fil": "iris-nordstrand.jpg",
+  "kilde": "https://www.byes.no/uploads/ONUBcL6R/Bilde-til-nettside-1-I_846__msi___jpeg.jpeg",
+  "bredde": 1560,
+  "hoyde": 2218,
+  "alt": "Iris Cathrin Nordstrand",
+  "side": "https://www.byes.no/om-oss"
+ },
+ {
+  "fil": "ayla-nordstrand.jpg",
+  "kilde": "https://www.byes.no/uploads/o9dwf7nb/Bilde-til-nettside-1-A_189_452_200__msi___jpeg.jpeg",
+  "bredde": 1574,
+  "hoyde": 2238,
+  "alt": "Ayla Victoria Nordstrand",
+  "side": "https://www.byes.no/om-oss"
+ },
+ {
+  "fil": "kamila-kaczynka.jpg",
+  "kilde": "https://www.byes.no/uploads/H5CFGaFu/Bilde-til-nettside-1-K_153__msi___jpeg.jpeg",
+  "bredde": 1588,
+  "hoyde": 2115,
+  "alt": "Kamila Kaczynka",
+  "side": "https://www.byes.no/om-oss"
+ }
+]
