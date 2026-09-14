@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- forslag til Gården Rørleggerservice — skal ikke indekseres -->
+<title>R&oslash;rlegger i Bergen &mdash; gratis befaring | G&aring;rden R&oslash;rleggerservice AS</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235EB3C0'/><text y='.9em' x='50%25' text-anchor='middle' font-size='52' font-family='Helvetica,Arial' font-weight='700' fill='%23fff'>G</text></svg>">
+<meta name="description" content="Skal du pusse opp badet eller trenger du r&oslash;rlegger i Bergen? G&aring;rden R&oslash;rleggerservice kommer p&aring; gratis befaring. Godkjent v&aring;tromsbedrift (FFV), del av Bademilj&oslash;, r&oslash;rleggermestere siden 1989. Ring 55 27 36 00.">
+<!-- ============================================================
+     GÅRDEN RØRLEGGERSERVICE AS — landingsside for gratis befaring (forslag fra Arcads, 14.09.2026)
+     Bygget i FRØYD/AVE-MALEN: samme struktur, klassenavn, karusell, dark band, inc-card,
+     timed popup og takkeside. Palett byttet til firmaets turkis/oransje/mørkblå
+     (#5eb3c0 / #e07c2d / #26303c fra gaardenror.no sitt Astra-tema).
+
+     ALT INNHOLD ER VERIFISERT MOT gaardenror.no 14.09.2026 (se data/prospects/demo/2026-09-14-garden-rorleggerservice-fakta.md):
+       · «Vi svarer gjerne på dine spørsmål eller kommer på gratis befaring. Kontakt oss på telefon
+         +47 55 27 36 00 for en uforpliktende prat.» (/tilbud) + «Jeg ønsker gratis befaring» i skjemaet (/kontakt-oss)
+       · «Godkjent Våtromsbedrift fra Fagrådet for Våtrom … sertifisert fra FFV til å være totalentreprenør
+         på bad og øvrige våtrom» (forsiden, /om-oss, footer)
+       · «Vi er en del av Bademiljø … garanterer at det nye badet holder tett i 10 år» — «må vi bygge
+         rommet fra bunnen av» / «ved totalrenovering av bad» (/om-oss, /baderomsbutikk)
+       · «etablert i 1989 av rørleggermesterne Geir Ove Øybost og Bjørn Simonsen» (/om-oss)
+       · «Din rørlegger i Bergen og omegn … alle typer rørleggertjenester … totalleverandør av komplette bad» (forsiden)
+       · tjenester og sitater fra /tjenester/* (bad, rørleggertjenester, varmepumpe, vannbåren varme, nybygg)
+       · butikk i Lindealléen 1 med åpningstider (forsiden, /apningstider)
+       · «Omtaler 4.4 · Over 34 omtaler» + tre omtaler ordrett med navn fra Google-widgeten (/omtaler)
+       · folk med titler fra /om-oss (Kent-Ove, Reidar, Martin, Geir Ove)
+       · Lindealléen 1, 5072 Bergen · 55 27 36 00 · postmaster@gaardenror.no
+     IKKE OPPGITT NOE STED, og derfor ikke brukt: priser, timepris, rabatter, døgnvakt/responstid,
+     antall bad/kunder, Enova-beløp. 10-årsgarantien nevnes kun med sidens eget forbehold (totalrenovering).
+
+     BILDER: alle fra gaardenror.no (team.webp = gruppebildet ved butikken, butikk-kunde.webp, bygget.webp,
+     utstilling.webp, referansebilder av ferdige bad, portretter fra /om-oss). Leverandørenes produktfoto er ikke brukt.
+     Ingen før/etter-par på siden → seksjonen droppet med kommentar i body.
+
+     SKJEMA: MAKE_WEBHOOK_URL er tom med vilje. Går til takk.html, sender ingenting. Ingen pixel.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  /* ===== Gården-palett (turkis #5eb3c0 + oransje #e07c2d + mørk #26303c fra gaardenror.no sitt Astra-tema; turkisen er mørknet litt for lesbar kontrast på hvit) ===== */
+  --cream:#F2F5F7; --sand:#F9FBFC; --white:#fff;
+  --ink:#1A232B; --ink2:#26303C; --muted:#5B6873; --line:#D9E2E7;
+  --clay:#2F8E9B; --clay-deep:#1F6B76; --clay-soft:#8FCBD3; --clay-tint:#E3F4F6;
+  --dark:#26303C; --dark-deep:#1A222B;
+  --gold:#E07C2D; --red:#C0584A;
+  --mont:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --r:18px; --rs:14px; --pill:999px;
+  --sh:0 24px 54px -32px rgba(26,34,43,.42);
+  --sh-sm:0 14px 30px -22px rgba(26,34,43,.32);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:var(--mont);color:var(--ink);background:var(--cream);font-size:1.02rem;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spacing:-0.01em;overflow-wrap:break-word}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:64px 0}
+@media(max-width:760px){.section{padding:44px 0}}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--clay-deep)}
+.eyebrow.muted{color:var(--muted)}
+.h-xl{font-size:clamp(1.95rem,4.4vw,3.0rem)}
+.h-lg{font-size:clamp(1.6rem,3.1vw,2.3rem)}
+.lede{font-size:1.0rem;color:var(--muted);max-width:58ch}
+.center{text-align:center}
+
+/* ---- buttons (malens pill: aksentfarge, hvit bold + sirkulær pil, subtekst) ---- */
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--clay);color:#fff;border:0;cursor:pointer;border-radius:var(--pill);padding:16px 40px;line-height:1.15;transition:.2s;box-shadow:0 16px 30px -18px rgba(26,34,43,.55)}
+.cta:hover{background:var(--clay-deep);transform:translateY(-2px)}
+.cta .t{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+.cta .t .arw{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center}
+.cta .t .arw svg{width:13px;height:13px}
+.cta .sub{font-size:0.74rem;font-weight:500;opacity:.85}
+.cta.lg{padding:18px 48px}
+.cta.lg .t{font-size:1.14rem}
+.btn-soft{display:inline-flex;align-items:center;gap:9px;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:var(--pill);padding:13px 24px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:.2s}
+.btn-soft:hover{border-color:var(--clay);color:var(--clay-deep)}
+.btn-soft svg{width:16px;height:16px}
+
+/* ---- top bar (wordmark + rating) ---- */
+.topbar{background:var(--cream);text-align:center;padding:16px 16px 11px}
+.topbar .wordmark{display:inline-block;font-size:1.32rem;letter-spacing:.42em;color:var(--ink);line-height:1;margin-bottom:9px;font-weight:600;text-indent:.42em}
+.topbar .rate{display:flex;align-items:center;justify-content:center;gap:7px;font-size:0.92rem;font-weight:600;color:var(--ink)}
+.topbar .stars{color:var(--gold);letter-spacing:1px;font-size:0.98rem}
+.topbar .rate small{color:var(--muted);font-weight:500}
+/* ---- campaign strip ---- */
+.strip{background:var(--dark);color:#fff;text-align:center;padding:13px 16px;font-size:1.0rem;font-weight:700;letter-spacing:.02em}
+.strip .hl{color:#F2A45C}
+@media(max-width:600px){.strip{font-size:0.88rem}}
+/* ---- hero ---- */
+.hero{position:relative;padding:34px 0 56px;background:url('img/team.webp') center 40%/cover no-repeat;background-color:var(--dark)}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(26,34,43,.95) 0%,rgba(26,34,43,.90) 34%,rgba(26,34,43,.66) 60%,rgba(26,34,43,.40) 82%,rgba(26,34,43,.26) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{color:#fff;text-shadow:0 2px 16px rgba(26,34,43,.55)}
+/* grid-areas: på mobil skal skjemaet ligge RETT under H1 (above the fold —
+   Victors krav 17.08.2026); checkliste + tilbuds-tiles flyttes under skjemaet */
+.hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr;grid-template-areas:"head form" "rest form";gap:0 40px;align-items:start}
+.hero-head{grid-area:head}
+.hero-form{grid-area:form}
+.hero-rest{grid-area:rest}
+.hero h1{margin:4px 0 18px}
+.hero .blist{list-style:none;display:grid;gap:11px;margin:0 0 22px}
+.hero .blist li{display:flex;align-items:center;gap:11px;font-size:1.0rem;font-weight:600;color:#fff;text-shadow:0 1px 10px rgba(18,14,12,.6)}
+.chk{width:22px;height:22px;border-radius:50%;background:var(--clay);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.chk svg{width:12px;height:12px;stroke:#fff}
+
+/* ---- offer visual (behandlingen + kampanjeprisen = tilbudet) ---- */
+.offer{display:flex;align-items:stretch;gap:12px;max-width:440px}
+.offer .tile{position:relative;flex:1;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 12px 13px;text-align:center;box-shadow:var(--sh-sm)}
+.offer .tile img{height:104px;width:100%;object-fit:cover;object-position:center 30%;border-radius:10px;margin:0 auto 9px}
+.offer .tile .big{display:flex;align-items:center;justify-content:center;height:104px;margin:0 auto 9px;font-size:2.2rem;font-weight:800;letter-spacing:-0.03em;color:var(--clay-deep)}
+.offer .tile b{display:block;font-size:0.9rem;font-weight:700;line-height:1.25}
+.offer .tile .pr{display:block;font-size:0.8rem;color:var(--muted);margin-top:2px}
+.offer .tile .pr s{color:var(--red);white-space:nowrap}
+.offer .plus{align-self:center;width:34px;height:34px;border-radius:50%;background:var(--clay);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh-sm)}
+.offer .freebadge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--clay);color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--pill);padding:4px 12px;white-space:nowrap}
+.offer-note{font-size:0.86rem;font-weight:600;color:#F2A45C;margin-top:12px;text-shadow:0 1px 8px rgba(18,14,12,.5)}
+.offer-note span{color:rgba(255,255,255,.85);font-weight:500}
+@media(max-width:480px){.offer{gap:9px}.offer .tile img,.offer .tile .big{height:84px}.offer .tile .big{font-size:1.8rem}.offer .plus{width:28px;height:28px;font-size:1.05rem}}
+
+/* hero form card — GF-malens native skjema (Victors beslutning 17.08.2026:
+   GHL-embedden så rotete ut; native felter + stram spacing som Generalfinans) */
+.formcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px 18px;box-shadow:var(--sh)}
+.formcard .fhead b{display:block;font-size:1.14rem;font-weight:800;letter-spacing:-0.01em}
+.formcard .fhead span{display:block;font-size:0.82rem;color:var(--muted);margin:5px 0 14px}
+.field{margin-bottom:11px}
+.field label{display:block;font-size:0.78rem;font-weight:700;margin-bottom:4px}
+.field label .req{color:var(--clay-deep)}
+.field .inp{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);overflow:hidden}
+.field .inp:focus-within{border-color:var(--clay);background:#fff}
+.field .flag{padding:0 10px;font-size:1.05rem;border-right:1px solid var(--line);align-self:stretch;display:flex;align-items:center}
+.field input{flex:1;width:100%;padding:11px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.95rem;color:var(--ink)}
+.field input:focus{outline:none}
+.formcard .cta{width:100%;margin-top:6px;padding:14px 32px}
+.fmsg{display:none;background:var(--clay-tint);border:1px solid var(--clay-soft);color:var(--clay-deep);padding:13px 15px;border-radius:12px;font-size:0.9rem;margin-bottom:14px;font-weight:600}
+.formcard .fine{display:block;font-size:0.74rem;color:var(--muted);margin-top:11px;text-align:center}
+@media(max-width:900px){
+  .hero{padding:22px 0 42px}
+  .hero-grid{grid-template-columns:1fr;grid-template-areas:"head" "form" "rest";gap:0}
+  .hero-head h1{margin-bottom:14px}
+  .hero-form{margin-bottom:24px}
+}
+@media(max-width:480px){
+  .h-xl{font-size:1.75rem}
+}
+
+/* ---- split (image + text) ---- */
+.split{display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:center}
+.split.rev .s-media{order:2}
+@media(max-width:880px){.split{grid-template-columns:1fr;gap:30px}.split.rev .s-media{order:0}}
+.s-media{position:relative}
+.s-media img{width:100%;height:100%;min-height:340px;max-height:460px;object-fit:cover;border-radius:var(--r);box-shadow:var(--sh)}
+/* carousel */
+.caro{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.caro .track{display:flex;transition:transform .5s cubic-bezier(.4,.1,.2,1)}
+.caro .track img{min-width:100%;height:430px;object-fit:cover;border-radius:0}
+.caro .track img.pos-top{object-position:center 22%}
+.caro .ar{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);border:0;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-sm);z-index:2}
+.caro .ar.l{left:14px}.caro .ar.r{right:14px}
+.caro .ar svg{width:16px;height:16px;stroke:var(--ink)}
+.caro .dots{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:7px;z-index:2}
+.caro .dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s}
+.caro .dots b.on{background:#fff;width:20px;border-radius:5px}
+.feat{list-style:none;display:grid;gap:22px}
+.feat li{display:flex;gap:14px;align-items:flex-start}
+.feat .chk{margin-top:2px}
+.feat h4{font-size:1.12rem;font-weight:700;margin-bottom:3px}
+.feat p{font-size:0.95rem;color:var(--muted)}
+
+/* ---- pain points (rød X) ---- */
+.pain{display:grid;gap:14px;max-width:680px;margin:40px auto 0}
+.pain .row{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--line);border-radius:var(--rs);padding:16px 20px;font-weight:600;font-size:1.02rem;box-shadow:var(--sh-sm);text-align:left}
+.pain .x{color:var(--red);font-size:1.2rem;font-weight:800;flex:none}
+
+/* ---- dark CTA band ---- */
+.darkband{background:var(--dark);color:#fff;border-radius:var(--r);padding:48px 40px;text-align:center;box-shadow:var(--sh)}
+.darkband .eyebrow{color:#F2A45C}
+.darkband h2{color:#fff;max-width:26ch;margin:14px auto 12px}
+.darkband p{color:rgba(255,255,255,.82);max-width:52ch;margin:0 auto;font-size:1.04rem}
+.darkband .codebox{margin-top:22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;background:rgba(143,203,211,.18);border:1px dashed var(--clay-soft);border-radius:13px;padding:11px 20px}
+.darkband .codebox b{font-size:1.06rem;letter-spacing:.04em;color:#fff}
+.darkband .codebox .hl{color:#F2A45C;font-weight:700}
+.darkband .cta{margin-top:26px;background:#fff;color:var(--dark)}
+.darkband .cta:hover{background:var(--clay-tint)}
+.darkband .cta .arw{background:rgba(26,21,19,.14)}
+.darkband .cta .arw svg{stroke:var(--dark)}
+.darkband .micro{font-size:0.8rem;color:rgba(255,255,255,.55);margin-top:14px}
+@media(max-width:620px){.darkband{padding:42px 24px}}
+
+/* ---- included card ---- */
+.inc-card{background:var(--white);border:1px solid var(--line);border-radius:24px;display:grid;grid-template-columns:1.1fr 1fr;gap:0;overflow:hidden;box-shadow:var(--sh)}
+.inc-card .body{padding:42px 40px}
+/* .pic er absolutt-fylt: tekstkolonnen styrer korthøyden — ellers strekker
+   portrettbildets egenhøyde kortet til et digert tomrom på brede skjermer */
+.inc-card .pic{position:relative;min-height:440px}
+.inc-card .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.inc-list{list-style:none;display:grid;gap:14px;margin:22px 0 26px}
+.inc-list li{display:flex;gap:13px;align-items:flex-start;font-size:1rem}
+.inc-list .chk{margin-top:1px}
+.pricebar{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.pricebar .ord{font-size:0.94rem;color:var(--muted)}
+.pricebar .ord s{color:var(--red)}
+.pricebar .now{font-size:1.55rem;font-weight:800;color:var(--clay-deep);letter-spacing:-0.02em}
+.pricebar .now small{font-size:0.86rem;font-weight:600;color:var(--muted);letter-spacing:0}
+@media(max-width:880px){.inc-card{grid-template-columns:1fr}.inc-card .pic{order:-1;min-height:280px}.inc-card .body{padding:34px 26px}}
+
+/* ---- reviews ---- */
+.rev-head{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center;flex-direction:column}
+.rev-score{display:inline-flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:var(--pill);padding:10px 20px;box-shadow:var(--sh-sm)}
+.rev-score .n{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em}
+.rev-score .stars{color:var(--gold);letter-spacing:1.5px}
+.rev-score small{color:var(--muted);font-weight:500}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+@media(max-width:880px){.rev-grid{grid-template-columns:1fr}}
+.rev-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh-sm)}
+.rev-card .top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.rev-card .stars{color:var(--gold);letter-spacing:1.5px;font-size:0.96rem}
+.rev-card .g{font-size:0.72rem;font-weight:700;color:var(--muted);display:inline-flex;align-items:center;gap:5px}
+.rev-card p{font-size:0.97rem;color:var(--ink2);line-height:1.55}
+.rev-by{margin-top:16px;border-top:1px solid var(--line);padding-top:13px}
+.rev-by b{font-weight:700;font-size:0.95rem;display:block}
+.rev-by span{font-size:0.74rem;color:var(--muted)}
+
+/* ---- faq ---- */
+.faq{display:grid;gap:11px;max-width:840px;margin:42px auto 0}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--rs);padding:4px 22px;transition:.2s}
+.faq details[open]{box-shadow:var(--sh-sm)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:1.06rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:28px;height:28px;border-radius:50%;background:var(--clay-tint);color:var(--clay-deep);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:none;transition:.3s}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--clay);color:#fff}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:0.97rem;max-width:72ch}
+
+/* ---- lokasjon-kort ---- */
+.locard{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);background:var(--white)}
+.locard .mapimg img{width:100%;height:260px;object-fit:cover}
+.locard .head{padding:26px 30px 8px;text-align:center}
+.locard .nm{font-weight:800;font-size:1.28rem;color:var(--ink)}
+.locard .ad{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.locard .ad small{display:block;color:var(--muted);opacity:.75;font-size:0.8rem;margin-top:3px}
+.locard .foot{padding:18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+/* ---- footer ---- */
+.footer{background:var(--dark);color:rgba(255,255,255,.6);font-size:0.88rem;text-align:center;padding:48px 0 36px}
+.footer .wordmark{display:inline-block;font-size:1.15rem;letter-spacing:.42em;text-indent:.42em;color:#fff;line-height:1;margin-bottom:14px;font-weight:600}
+.footer .rate{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600}
+.footer .rate .stars{color:var(--gold);letter-spacing:1.5px}
+.footer .reg{margin-top:16px;font-size:0.8rem;color:rgba(255,255,255,.45);line-height:1.7}
+
+/* ---- modal popup ---- */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(18,14,12,.55);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.3s}
+.modal-overlay.show{opacity:1;pointer-events:auto}
+.modal{background:var(--cream);border-radius:24px;max-width:520px;width:100%;overflow:auto;max-height:92vh;box-shadow:0 50px 100px -30px rgba(0,0,0,.55);transform:translateY(20px) scale(.97);transition:.35s cubic-bezier(.2,.7,.2,1)}
+.modal-overlay.show .modal{transform:none}
+.modal .mbody{padding:34px 32px;position:relative}
+.modal .mbody h3{font-size:2.0rem;line-height:1.03;margin:4px 0 4px;text-align:center}
+.modal .close{position:absolute;top:13px;right:15px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:0.95rem;color:var(--muted);transition:.2s}
+.modal .close:hover{background:var(--dark);color:#fff}
+@media(max-width:620px){.modal .mbody{padding:28px 22px}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* ===== FØR/ETTER (tillegg til malen — Victors regel: alltid før/etter) ===== */
+.ba{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);
+  border:1px solid var(--line);background:var(--white);aspect-ratio:16/10;
+  user-select:none;touch-action:none;cursor:ew-resize}
+.ba .lag{position:absolute;inset:0}
+.ba .lag img{width:100%;height:100%;object-fit:cover}
+.ba .etter{clip-path:inset(0 0 0 var(--x,50%))}
+.ba .tag{position:absolute;top:14px;padding:6px 14px;border-radius:var(--pill);
+  font-size:0.74rem;font-weight:800;letter-spacing:0.07em;text-transform:uppercase;
+  background:rgba(26,34,43,.82);color:#fff}
+.ba .tag.f{left:14px}
+.ba .tag.e{right:14px;background:var(--clay)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--x,50%);width:3px;background:#fff;
+  box-shadow:0 0 0 1px rgba(26,34,43,.2);pointer-events:none}
+.ba .handle::after{content:'\2039 \203A';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;
+  color:var(--clay);display:grid;place-items:center;font-size:1.05rem;font-weight:800;
+  box-shadow:0 6px 18px -6px rgba(26,34,43,.5)}
+.folk{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+.split.tre{margin-top:34px;grid-template-columns:1fr 1fr 1fr;gap:20px}
+@media(max-width:880px){.split.tre{grid-template-columns:1fr}}
+.folk figure{margin:0}
+.folk img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r);
+  border:1px solid var(--line);box-shadow:var(--sh-sm)}
+.folk figcaption{margin-top:11px;font-size:0.92rem;color:var(--muted);font-weight:600}
+@media(max-width:820px){.folk{grid-template-columns:1fr}}
+
+.hero{background-image:url('img/team.webp');background-position:center 42%}
+.folk img{object-position:center 20%}
+.hero::before{background:linear-gradient(100deg,rgba(26,34,43,.96) 0%,rgba(26,34,43,.91) 34%,rgba(26,34,43,.70) 60%,rgba(26,34,43,.44) 82%,rgba(26,34,43,.30) 100%)}
+.hero h1{text-shadow:0 2px 16px rgba(26,34,43,.6)}
+.rev-card blockquote{margin:0;font-size:0.97rem;color:var(--ink2);line-height:1.55;font-style:italic}
+</style>
+</head>
+<body id="top">
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="wrap">
+    <span class="wordmark">g&aring;rden r&oslash;r</span>
+    <div><span class="rate"><a href="tel:55273600" style="color:var(--clay);font-weight:800;text-decoration:none">55 27 36 00</a> <small>Lindeall&eacute;en 1, Bergen &middot; hele Bergen og omegn</small></span></div>
+  </div>
+</header>
+
+<!-- ===== STRIP ===== -->
+<div class="strip">Godkjent v&aring;tromsbedrift (FFV) &middot; r&oslash;rleggermestere i Bergen siden 1989 &nbsp;&middot;&nbsp; <span class="hl">Gratis befaring &mdash; vi kommer hjem til deg for en uforpliktende prat</span></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-head">
+        <h1 class="h-xl">Skal du pusse opp badet? Vi kommer hjem til deg p&aring; gratis befaring.</h1>
+      </div>
+      <div class="hero-rest">
+        <ul class="blist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Godkjent v&aring;tromsbedrift &mdash; totalentrepren&oslash;r p&aring; bad og v&aring;trom</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Del av Bademilj&oslash;: badet holder tett i 10 &aring;r ved totalrenovering</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Alle typer r&oslash;rleggertjenester &mdash; fra dryppende kran til varmepumpe</li>
+        </ul>
+        <div class="offer">
+          <div class="tile">
+            <img src="img/bad-badekar.webp" alt="Bad renovert av G&aring;rden R&oslash;rleggerservice">
+            <b>Gratis befaring</b>
+            <span class="pr">hjemme hos deg, uforpliktende</span>
+          </div>
+          <div class="plus">+</div>
+          <div class="tile">
+            <span class="freebadge">Bademilj&oslash;-garanti</span>
+            <span class="big">10 &aring;r</span>
+            <b>Tett bad</b>
+            <span class="pr">ved totalrenovering</span>
+          </div>
+        </div>
+        <p class="offer-note">Befaringen koster ingenting &mdash; <span>du bestemmer selv om du vil g&aring; videre</span></p>
+      </div>
+
+      <!-- LEAD-SKJEMA (nativt, samme oppsett som Frøyd/Generalfinans) -->
+      <div class="hero-form">
+        <div class="formcard">
+          <div class="fhead">
+            <b>Be om gratis befaring</b>
+            <span>Fyll ut, s&aring; ringer vi deg og avtaler tid. Tar 30 sekunder.</span>
+          </div>
+          <div class="fmsg" id="formMsg">Takk! Vi har mottatt henvendelsen din og ringer deg.</div>
+          <form id="leadForm" novalidate>
+            <div class="field">
+              <label for="a-navn">Fornavn og etternavn <span class="req">*</span></label>
+              <div class="inp"><input type="text" id="a-navn" name="full_name" placeholder="Ditt navn" autocomplete="name" required></div>
+            </div>
+            <div class="field">
+              <label for="a-tlf">Telefonnummer <span class="req">*</span></label>
+              <div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="a-tlf" name="phone" placeholder="Telefonnummer" autocomplete="tel" required></div>
+            </div>
+            <div class="field">
+              <label for="a-epost">E-post <span class="req">*</span></label>
+              <div class="inp"><input type="email" id="a-epost" name="email" placeholder="E-post" autocomplete="email" required></div>
+            </div>
+            <div class="field">
+              <label for="a-post">Postnummer <span class="req">*</span></label>
+              <div class="inp"><input type="text" id="a-post" name="postnr" placeholder="F.eks. 5072" inputmode="numeric" autocomplete="postal-code" required></div>
+            </div>
+            <button type="submit" class="cta" id="leadBtn"><span class="t">Be om gratis befaring<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Uforpliktende</span></button>
+          </form>
+          <span class="fine">Vi deler aldri opplysningene dine med andre. Du kan ogs&aring; ringe 55 27 36 00.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HVORFOR (karusell + features) ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="split">
+      <div class="s-media reveal">
+        <div class="caro" id="caro">
+          <div class="track">
+            <img src="img/butikk-kunde.webp" alt="R&oslash;rlegger hjelper familie i baderomsbutikken til G&aring;rden R&oslash;rleggerservice">
+            <img src="img/bad-dusj.webp" alt="Ferdig bad med dusj, renovert av G&aring;rden R&oslash;rleggerservice">
+            <img src="img/utstilling.webp" alt="Utstillingen i baderomsbutikken i Lindeall&eacute;en 1">
+            <img src="img/bygget.webp" alt="Butikken til G&aring;rden R&oslash;rleggerservice i Lindeall&eacute;en 1, Bergen">
+          </div>
+          <button class="ar l" aria-label="Forrige"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="ar r" aria-label="Neste"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M9 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <div class="dots"></div>
+        </div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Hvorfor G&aring;rden R&oslash;rleggerservice?</span>
+        <h2 class="h-lg" style="margin:12px 0 8px">Best p&aring; bad &mdash; og r&oslash;rlegger p&aring; alt det andre</h2>
+        <p class="lede" style="margin-bottom:30px">Fra planlegging og befaring til et fiks ferdig dr&oslash;mmebad. Eller bare en kran som drypper.</p>
+        <ul class="feat">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Gratis befaring hjemme hos deg</h4><p>Vi ser p&aring; rommet, h&oslash;rer hva du &oslash;nsker, og svarer p&aring; det du lurer p&aring;. Helt uforpliktende.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Godkjent v&aring;tromsbedrift</h4><p>Sertifisert fra Fagr&aring;det for V&aring;trom til &aring; v&aelig;re totalentrepren&oslash;r p&aring; bad. Vi vet hva som er s&oslash;knadspliktig, og b&aring;de utf&oslash;relsen og dokumentasjonen blir korrekt.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Ett sted &aring; forholde seg til</h4><p>Totalleveranse fra oss sparer deg for massevis av tid, og sikrer fremdrift og kvalitet i alle ledd. Egen butikk med utstillinger, og r&oslash;rleggere du kan sp&oslash;rre direkte.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>R&oslash;rleggermestere i Bergen siden 1989</h4><p>Etablert av r&oslash;rleggermesterne Geir Ove &Oslash;ybost og Bj&oslash;rn Simonsen. Siden starten har forn&oslash;yde kunder v&aelig;rt v&aring;r h&oslash;yeste prioritet.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow">Kjenner du deg igjen?</span>
+    <h2 class="h-lg" style="margin-top:12px">Dette pleier &aring; stoppe folk&hellip;</h2>
+    <div class="pain">
+      <div class="row"><span class="x">&#10005;</span> Du vil pusse opp badet, men vet ikke hvor du skal starte i jungelen av trender, materialer og l&oslash;sninger</div>
+      <div class="row"><span class="x">&#10005;</span> Du er usikker p&aring; om prosjektet er s&oslash;knadspliktig, og hvem som har ansvaret for papirene</div>
+      <div class="row"><span class="x">&#10005;</span> Flere h&aring;ndverkere som skal koordineres, og ingen som holder i helheten</div>
+      <div class="row"><span class="x">&#10005;</span> Tett avl&oslash;p, &oslash;delagt toalett eller kraner som drypper &mdash; og du utsetter det uke etter uke</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DARK CTA BAND ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="darkband reveal">
+      <span class="eyebrow">Gratis befaring</span>
+      <h2 class="h-lg">Dr&oslash;mmer du om nytt bad i Bergen?</h2>
+      <p>Legg igjen navn og nummer, s&aring; ringer vi deg og avtaler befaring. Vi svarer gjerne p&aring; sp&oslash;rsm&aring;lene dine, og du bestemmer selv om du vil g&aring; videre.</p>
+      <a href="#top" class="cta lg jump"><span class="t">Be om gratis befaring<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tar 30 sekunder</span></a>
+      <p class="micro">Vil du heller ringe? 55 27 36 00.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLIK GJØR DU DET (inc-card) ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:0;padding-bottom:72px">
+  <div class="wrap">
+    <div class="center" style="max-width:42rem;margin:0 auto 34px">
+      <span class="eyebrow">Slik gj&oslash;r du det</span>
+      <h2 class="h-lg" style="margin-top:12px">Tre steg fra tanke til ferdig bad</h2>
+    </div>
+    <div class="inc-card reveal">
+      <div class="body">
+        <h3 class="h-lg" style="font-size:1.5rem">Du trenger ikke ha planene klare</h3>
+        <ul class="inc-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>1. Du fyller ut skjemaet.</b> Navn, nummer og postnummer. Vi ringer deg og avtaler tid for befaring.</div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>2. Gratis befaring hjemme hos deg.</b> Vi ser p&aring; rommet og h&oslash;rer hva du &oslash;nsker. Vil du ha inspirasjon f&oslash;rst, er du velkommen innom butikken i Lindeall&eacute;en 1.</div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>3. Du bestemmer.</b> Vil du g&aring; videre, tar vi hele jobben fra A til &Aring; som totalleverand&oslash;r. Vil du ikke, er det helt greit.</div></li>
+        </ul>
+        <div class="pricebar">
+          <span class="ord">Befaring</span>
+          <span class="now">Gratis <small>og uforpliktende</small></span>
+          <span class="ord">Totalrenovert bad</span>
+          <span class="now">Tett i 10 &aring;r <small>Bademilj&oslash;-garanti</small></span>
+        </div>
+      </div>
+      <div class="pic"><img src="img/bad-servant.webp" alt="Bad med badekar og servant, renovert av G&aring;rden R&oslash;rleggerservice"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FØR / ETTER =====
+     Droppet med vilje: gaardenror.no har referansebilder av ferdige bad, men ingen «før»-bilder,
+     og utstilling-mot-ferdig-bad er ikke et ærlig før/etter. Malens seksjon settes inn igjen
+     så snart firmaet har et ekte par fra en badrenovering. -->
+
+<!-- ===== HVEM PASSER DET FOR ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center" style="max-width:42rem;margin:0 auto">
+      <span class="eyebrow">Det folk i Bergen oftest trenger oss til</span>
+      <h2 class="h-lg" style="margin:12px 0 10px">Tre typer jobber &mdash; og hvem du snakker med</h2>
+      <p class="lede">Sm&aring; og store oppdrag i tilknytning til vann, avl&oslash;p og varme. Hver tjeneste har sin egen r&oslash;rleggermester.</p>
+    </div>
+    <div class="split tre">
+      <div class="rev-card">
+        <img src="img/reidar.webp" alt="Reidar Langeland, r&oslash;rleggermester bad og v&aring;trom" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 15%;border-radius:var(--rs);margin-bottom:14px">
+        <h4 style="font-size:1.08rem;margin-bottom:7px">Bad og v&aring;trom</h4>
+        <p>Alt fra utskifting av utstyr til totalrenovering og bygging av komplette bad. Godkjent v&aring;tromsbedrift, og 10 &aring;rs tetthetsgaranti n&aring;r vi bygger rommet fra bunnen av. Reidar Langeland, r&oslash;rleggermester.</p>
+      </div>
+      <div class="rev-card">
+        <img src="img/martin.webp" alt="Martin &Oslash;ybost, r&oslash;rleggermester r&oslash;rleggertjenester" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 15%;border-radius:var(--rs);margin-bottom:14px">
+        <h4 style="font-size:1.08rem;margin-bottom:7px">R&oslash;rleggertjenester</h4>
+        <p>Fikse toaletter, skifte blandebatterier og varmtvannsbereder, reparere r&oslash;rbrudd, tette avl&oslash;p og kraner som drypper. Mindre reparasjoner og st&oslash;rre installasjoner. Martin &Oslash;ybost, r&oslash;rleggermester.</p>
+      </div>
+      <div class="rev-card">
+        <img src="img/kent-ove.webp" alt="Kent-Ove &Oslash;ybost, daglig leder og VVS-ingeni&oslash;r" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center 15%;border-radius:var(--rs);margin-bottom:14px">
+        <h4 style="font-size:1.08rem;margin-bottom:7px">Varmepumpe, vannb&aring;ren varme og nybygg</h4>
+        <p>Vi hjelper deg &aring; velge rett varmepumpe, leverer vannb&aring;ren gulvvarme og prosjekterer VVS-anlegget i nytt hus eller fritidsbolig. Hjelp med Enova-dokumentasjon. Kent-Ove &Oslash;ybost, VVS-ingeni&oslash;r.</p>
+      </div>
+    </div>
+    <p class="lede center" style="margin-top:26px">Vi tar ogs&aring; sanit&aelig;r-, varme- og kj&oslash;leanlegg i st&oslash;rre bygg og n&aelig;ringsbygg.</p>
+  </div>
+</section>
+
+<!-- ===== ANMELDELSER =====
+     Tre omtaler gjengitt ORDRETT (én som utdrag) fra Google-widgeten på gaardenror.no/omtaler, med navn slik de står der.
+     Score «4.4 · Over 34 omtaler» står på forsiden og /omtaler — gjengitt som tall, ikke som stjernerad. -->
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="max-width:42rem;margin:0 auto">
+      <span class="eyebrow">Vi er opptatt av forn&oslash;yde kunder</span>
+      <h2 class="h-lg" style="margin:12px 0 10px">«Det vi har blitt enig om har de holdt»</h2>
+      <p class="lede">Tilbakemeldinger fra kunder i Fana, &Aring;sane, Ytrebygda, Fyllingsdalen og Bergen sentrum, slik de st&aring;r p&aring; gaardenror.no.</p>
+      <div class="rev-head" style="margin-top:22px">
+        <div class="rev-score"><span class="n">4.4</span> <small>&middot; Over 34 omtaler p&aring; Google</small></div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-card">
+        <blockquote>&laquo;Ringte ang&aring;ende en liten vannlekkasje under vasken klokken 09:30, og allerede 10:30 var det fikset. Super service, hyggelige og flinke folk. Takk for hjelpen!&raquo;</blockquote>
+        <div class="rev-by"><b>Philip Aubert</b><span>Google-omtale, gaardenror.no/omtaler</span></div>
+      </div>
+      <div class="rev-card">
+        <blockquote>&laquo;Ekte h&aring;ndtverk. Jeg har benyttet dem siden 2019 og har total renovert et bad og flere sm&aring; jobber. &hellip; Pris: norsk kvalitet koster, f&oslash;ler ikke at de er overpriset. Det vi har blitt enig om har de holdt.&raquo;</blockquote>
+        <div class="rev-by"><b>Vidar Laurits Kloster</b><span>Google-omtale (utdrag), gaardenror.no/omtaler</span></div>
+      </div>
+      <div class="rev-card">
+        <blockquote>&laquo;Storforn&oslash;yd etter service fra G&aring;rden R&oslash;rleggerservice AS. Problemet jeg hadde med varmtvannet i leiligheten bl.a ble fikset med en gang jeg ringte inn etter hjelp. Anbefaler 10/10&raquo;</blockquote>
+        <div class="rev-by"><b>Casper Crook</b><span>Google-omtale, gaardenror.no/omtaler</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOLKENE ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" style="max-width:42rem;margin:0 auto">
+      <span class="eyebrow">Hvem som kommer hjem til deg</span>
+      <h2 class="h-lg" style="margin:12px 0 10px">R&oslash;rleggermestere, r&oslash;rleggere og l&aelig;rlinger &mdash; og en butikk full av bad</h2>
+      <p class="lede">G&aring;rden R&oslash;rleggerservice ble etablert i 1989 og holder til i Lindeall&eacute;en 1 i Bergen. I butikken m&oslash;ter du baderomskonsulenter og r&oslash;rleggere som svarer p&aring; det du lurer p&aring;.</p>
+    </div>
+    <div class="folk reveal">
+      <figure><img src="img/team.webp" alt="De ansatte hos G&aring;rden R&oslash;rleggerservice utenfor butikken" style="object-position:center 40%"><figcaption>Hele gjengen utenfor butikken i Lindeall&eacute;en</figcaption></figure>
+      <figure><img src="img/butikk-kunde.webp" alt="R&oslash;rlegger viser familie servant i butikken"><figcaption>I butikken kan du m&oslash;te r&oslash;rleggere som svarer p&aring; sp&oslash;rsm&aring;l</figcaption></figure>
+      <figure><img src="img/geir-ove.webp" alt="Geir Ove &Oslash;ybost, r&oslash;rleggermester og grunnlegger" style="object-position:center 12%"><figcaption>Geir Ove &Oslash;ybost &middot; r&oslash;rleggermester, etablerte firmaet i 1989</figcaption></figure>
+    </div>
+    <div class="rev-head" style="margin-top:38px">
+      <div class="rev-score"><span class="n">1989</span> <small>&middot; etablert i Bergen &middot; godkjent v&aring;tromsbedrift &middot; del av Bademilj&oslash;</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BAND ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap center">
+    <h2 class="h-lg" style="margin:12px 0 24px">F&aring; en r&oslash;rlegger hjem p&aring; gratis befaring</h2>
+    <a href="#top" class="cta lg jump"><span class="t">Be om gratis befaring<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Vi ringer deg</span></a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line)">
+  <div class="wrap" style="max-width:820px">
+    <div class="center">
+      <span class="eyebrow">Sp&oslash;rsm&aring;l og svar</span>
+      <h2 class="h-lg" style="margin-top:12px">Det folk lurer p&aring; f&oslash;r de tar kontakt</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Hva koster befaringen?</summary><p>Ingenting. Vi svarer gjerne p&aring; sp&oslash;rsm&aring;lene dine eller kommer p&aring; gratis befaring, og praten er uforpliktende. Skal du pusse opp bad, hjelper det oss om du har tenkt litt p&aring; romst&oslash;rrelse og &oslash;nsket budsjett f&oslash;r vi kommer.</p></details>
+      <details><summary>M&aring; jeg s&oslash;ke kommunen for &aring; pusse opp badet?</summary><p>Etter dagens lover og regler er det generelt ikke behov for &aring; s&oslash;ke ved rehabilitering av bad, men noen prosjekter er fortsatt s&oslash;knadspliktige, og mange &oslash;nsker uansett at det s&oslash;kes s&aring; alle papirer er i orden. Vi vet hva som er s&oslash;knadspliktig, og s&oslash;rger for at b&aring;de utf&oslash;relsen og dokumentasjonen blir korrekt.</p></details>
+      <details><summary>Hva betyr «tett i 10 &aring;r»?</summary><p>Vi er en del av Bademilj&oslash;, som garanterer at det nye badet holder tett i 10 &aring;r. Garantien gjelder konstruksjon og oppbygging av vegger og gulv, og gir deg rettigheter utover den lovbestemte reklamasjonsretten p&aring; 5 &aring;r. Skulle det oppst&aring; lekkasje i l&oslash;pet av 10 &aring;r, utbedrer vi den og eventuelle fuktskader uten ekstra kostnad. For at vi skal kunne garantere det, m&aring; vi bygge rommet fra bunnen av.</p></details>
+      <details><summary>Tar dere sm&aring; jobber ogs&aring;?</summary><p>Ja. Alt fra &aring; fikse toaletter og skifte blandebatterier, til &aring; reparere r&oslash;rbrudd, skifte varmtvannsbereder og erstatte gamle fyrkjeler. Ring 55 27 36 00, s&aring; ser vi p&aring; det.</p></details>
+      <details><summary>Kan dere hjelpe med varmepumpe og Enova-st&oslash;tte?</summary><p>Ja. Vi hjelper deg &aring; velge rett varmepumpe for ditt behov, og med n&oslash;dvendig dokumentasjon og veiledning i Enova-s&oslash;knaden. Husk at du som regel m&aring; s&oslash;ke om tilsagn f&oslash;r installasjonen starter. Ved &aring; installere varmepumpe kan du redusere energibehovet med 50&ndash;80 %, avhengig av systeml&oslash;sning.</p></details>
+      <details><summary>Kan jeg komme innom og se p&aring; bad f&oslash;rst?</summary><p>Gjerne. Butikken i Lindeall&eacute;en 1 har utstillinger av baderomsl&oslash;sninger i mange prisklasser og stiler. &Aring;pent mandag&ndash;onsdag og fredag 09&ndash;17, torsdag 09&ndash;19, l&oslash;rdag 09&ndash;14.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HER FINNER DU OSS ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="split" style="align-items:center">
+      <div class="reveal">
+        <span class="eyebrow">Her finner du oss</span>
+        <h2 class="h-lg" style="margin:12px 0 12px">Lindeall&eacute;en 1, Bergen</h2>
+        <p class="lede">Butikk og r&oslash;rleggere under samme tak. Vi kj&oslash;rer ut i hele Bergen og omegn: Fana, &Aring;sane, Ytrebygda, Fyllingsdalen og sentrum.</p>
+        <div style="margin-top:24px"><a href="#top" class="cta jump"><span class="t">Be om gratis befaring<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Uforpliktende</span></a></div>
+      </div>
+      <div class="locard reveal">
+        <div class="mapimg"><img src="img/bygget.webp" alt="Butikken til G&aring;rden R&oslash;rleggerservice i Lindeall&eacute;en 1"></div>
+        <div class="head">
+          <div class="nm">G&aring;rden R&oslash;rleggerservice AS</div>
+          <div class="ad">Lindeall&eacute;en 1, 5072 Bergen<small>Man&ndash;ons og fre 09&ndash;17 &middot; tor 09&ndash;19 &middot; l&oslash;r 09&ndash;14 &middot; s&oslash;n stengt</small></div>
+        </div>
+        <div class="foot">
+          <a href="tel:55273600" class="btn-soft" style="background:var(--dark);color:#fff;border-color:var(--dark)">Ring 55 27 36 00 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <span class="wordmark">g&aring;rden r&oslash;r</span>
+    <div><span class="rate"><small>Godkjent v&aring;tromsbedrift (FFV) &middot; del av Bademilj&oslash; &middot; etablert 1989</small></span></div>
+    <div class="reg">&copy; 2026 G&aring;rden R&oslash;rleggerservice AS &middot; Lindeall&eacute;en 1, 5072 Bergen<br>Telefon 55 27 36 00 &middot; postmaster@gaardenror.no</div>
+  </div>
+</footer>
+
+<!-- ===== TIMED POPUP (kun snarvei til skjemaet — aldri eget skjema) ===== -->
+<div class="modal-overlay" id="popup" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Be om gratis befaring">
+    <div class="mbody">
+      <button class="close" id="popupClose" aria-label="Lukk">&#10005;</button>
+      <div style="text-align:center">
+        <h3>F&oslash;r du g&aring;r!</h3>
+        <p style="font-size:1.02rem;color:var(--muted);margin:8px 0 20px">Det tar 30 sekunder &aring; be om gratis befaring</p>
+      </div>
+      <ul style="list-style:none;display:grid;gap:11px;margin:0 auto 22px;max-width:380px;text-align:left">
+        <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Vi kommer hjem til deg &mdash; <b>helt gratis</b></span></li>
+        <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Du bestemmer selv om du vil g&aring; videre</span></li>
+      </ul>
+      <div style="text-align:center">
+        <button type="button" class="cta lg" id="popupGo" style="width:100%"><span class="t">G&aring; til skjemaet<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tar 30 sekunder</span></button>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px">Vi deler aldri opplysningene dine med noen andre.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- karusell ---- */
+(function(){
+  var c=document.getElementById('caro'); if(!c)return;
+  var track=c.querySelector('.track'), imgs=track.children, dotsWrap=c.querySelector('.dots'), i=0;
+  for(var k=0;k<imgs.length;k++){var b=document.createElement('b'); if(k===0)b.className='on'; dotsWrap.appendChild(b);}
+  var dots=dotsWrap.children;
+  function go(n){i=(n+imgs.length)%imgs.length; track.style.transform='translateX(-'+(i*100)+'%)'; for(var k=0;k<dots.length;k++)dots[k].className=(k===i?'on':'');}
+  c.querySelector('.ar.l').addEventListener('click',function(){go(i-1);});
+  c.querySelector('.ar.r').addEventListener('click',function(){go(i+1);});
+  var auto=setInterval(function(){go(i+1);},4500);
+  c.addEventListener('mouseenter',function(){clearInterval(auto);});
+})();
+
+/* ---- smooth scroll ---- */
+function scrollToY(y,dur){var s=window.pageYOffset,d=y-s,t0=null;function f(t){if(t0===null)t0=t;var p=Math.min((t-t0)/dur,1);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;window.scrollTo(0,s+d*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(!h||h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-10),500);});});
+
+/* ---- scroll reveal ---- */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* ---- før/etter-slider (ingen #ba på denne siden — beholdt fra malen) ---- */
+(function(){
+  var ba=document.getElementById('ba'); if(!ba)return; var nede=false;
+  function sett(x){var r=ba.getBoundingClientRect();var p=((x-r.left)/r.width)*100;ba.style.setProperty('--x',Math.max(0,Math.min(100,p))+'%');}
+  ba.addEventListener('pointerdown',function(e){nede=true;ba.setPointerCapture(e.pointerId);sett(e.clientX);});
+  ba.addEventListener('pointermove',function(e){if(nede)sett(e.clientX);});
+  ba.addEventListener('pointerup',function(){nede=false;});
+  ba.addEventListener('pointercancel',function(){nede=false;});
+})();
+
+/* ---- timed popup (15s, én gang per økt) ---- */
+var overlay=document.getElementById('popup');
+if(overlay){
+  var sett=function(){try{return sessionStorage.getItem('garden-rorleggerservice_popup_done')||sessionStorage.getItem('garden-rorleggerservice_lead_done');}catch(e){return false;}};
+  var apne=function(){if(sett())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
+  var lukk=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('garden-rorleggerservice_popup_done','1');}catch(e){}};
+  setTimeout(apne,15000);
+  document.getElementById('popupClose').addEventListener('click',lukk);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)lukk();});
+  document.getElementById('popupGo').addEventListener('click',function(){lukk();var t=document.getElementById('a-navn');if(t){scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-90),500);setTimeout(function(){t.focus();},520);}});
+}
+
+/* ===== LEAD-SKJEMA =====
+   MAKE_WEBHOOK_URL er TOM med vilje: dette er et forslag, ikke en
+   produksjonsside. Skjemaet validerer og går til takkesiden, men sender
+   ingenting. Sett webhooken når bedriften har sagt ja, så virker resten som i
+   Frøyd-malen (urlencoded + sendBeacon). */
+var MAKE_WEBHOOK_URL='';
+var TAKK_URL='takk.html';
+
+function grNormTlf(p){var d=(p||'').replace(/[^0-9+]/g,'');
+  if(/^[49][0-9]{7}$/.test(d))return '+47'+d;
+  if(/^0047/.test(d))return '+47'+d.slice(4); return d;}
+
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault(); var f=e.target;
+  if(!f.full_name.value.trim()||!f.phone.value.trim()||!f.email.value.trim()||!f.postnr.value.trim()){f.reportValidity();return;}
+  var btn=document.getElementById('leadBtn'); btn.disabled=true; btn.style.opacity='.7';
+  var params=new URLSearchParams(window.location.search);
+  var data={full_name:f.full_name.value.trim(),phone:grNormTlf(f.phone.value),
+    email:f.email.value.trim(),postnr:f.postnr.value.trim(),
+    tjeneste:'Gratis befaring',kilde:'arcads.no/garden-rorleggerservice',
+    side_url:window.location.href,gclid:params.get('gclid')||''};
+  if(MAKE_WEBHOOK_URL){
+    var body=new URLSearchParams();
+    for(var k in data){if(data.hasOwnProperty(k))body.append(k,data[k]==null?'':data[k]);}
+    try{if(!(navigator.sendBeacon&&navigator.sendBeacon(MAKE_WEBHOOK_URL,body)))
+      fetch(MAKE_WEBHOOK_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()});
+    }catch(err){}
+  }
+  try{sessionStorage.setItem('garden-rorleggerservice_lead_done','1');}catch(err){}
+  var msg=document.getElementById('formMsg'); if(msg)msg.style.display='block';
+  setTimeout(function(){window.location.href=TAKK_URL;},500);
+});
+
+</script>
+</body>
+</html>
