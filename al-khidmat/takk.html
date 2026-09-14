@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Takk! &mdash; Al-Khidmat Begravelsesbyrå</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%231e3e76'/><text y='.9em' x='50%25' text-anchor='middle' font-size='40' font-family='Helvetica,Arial' font-weight='700' fill='%23fff'>ak</text></svg>">
+<!-- Demo-takkeside (forslag fra Arcads). Ingen pixel, ingen webhook. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* ===== Al-Khidmat-palett (mørkeblå fra logoen) ===== */
+  --cream:#F2F3F6; --sand:#FAFBFC; --white:#fff;
+  --ink:#161D2B; --ink2:#1B2A44; --muted:#5B6578; --line:#DDE1E9;
+  --clay:#1e3e76; --clay-deep:#142B55; --clay-soft:#5C7BB3; --clay-tint:#E8EDF6;
+  --dark:#1B2A44; --dark-deep:#101A2E;
+  --gold:#C9A24A; --red:#B25B4F;
+  --mont:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --r:18px; --rs:14px; --pill:999px;
+  --sh:0 24px 54px -32px rgba(16,26,46,.42);
+  --sh-sm:0 14px 30px -22px rgba(16,26,46,.32);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.wordmark{font-size:1.32rem;letter-spacing:.42em;text-indent:.42em;font-weight:600;margin-bottom:6px}
+.sub{color:var(--muted);font-size:0.9rem;margin-bottom:38px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:44px 34px;max-width:480px;width:100%;box-shadow:var(--sh)}
+.chk{width:58px;height:58px;border-radius:50%;background:var(--clay);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px}
+.chk svg{width:28px;height:28px;stroke:#fff}
+h1{font-weight:800;font-size:1.7rem;letter-spacing:-0.01em;line-height:1.15;margin-bottom:12px}
+p{color:var(--muted);font-size:1.0rem;max-width:38ch;margin:0 auto}
+.back{display:inline-block;margin-top:26px;font-weight:700;font-size:0.9rem;color:var(--clay-deep);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:11px 24px;transition:.2s}
+.back:hover{border-color:var(--clay);color:var(--clay)}
+.callbox{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.callbox .lede{font-size:0.95rem;color:var(--ink);font-weight:600;margin-bottom:14px}
+.call{display:inline-flex;align-items:center;gap:10px;background:var(--clay);color:#fff;text-decoration:none;font-weight:800;font-size:1.12rem;letter-spacing:.01em;border-radius:999px;padding:16px 30px;box-shadow:var(--sh-sm);transition:.2s}
+.call:hover{background:var(--clay-deep);transform:translateY(-1px)}
+.call svg{width:19px;height:19px;fill:#fff}
+.hours{margin-top:14px;font-size:0.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="wordmark">AL-KHIDMAT</div>
+  <div class="sub">Grønland 26, Oslo</div>
+  <div class="card">
+    <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <h1>Takk! Vi har mottatt henvendelsen din</h1>
+    <p>Vi ringer deg så snart vi kan. Trenger du hjelp nå, er telefonen betjent hele døgnet.</p>
+    <div class="callbox">
+      <div class="lede" id="callLede">Vi svarer hele døgnet</div>
+      <a class="call" id="callBtn" href="tel:+4740833333">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+        Ring 408 33 333
+      </a>
+      <div class="hours" id="callHours">Telefonvaktene våre er utdannede gravferdskonsulenter med lokalkunnskap.</div>
+    </div>
+    <a class="back" href="https://alkhidmat.no">G&aring; til alkhidmat.no</a>
+  </div>
+</body>
+</html>
