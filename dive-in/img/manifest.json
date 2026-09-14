@@ -1,0 +1,82 @@
+[
+ {
+  "fil": "01-vaskegate-3.jpg",
+  "kilde": "https://divein.no/vaskegate_3.jpeg",
+  "bredde": 1024,
+  "hoyde": 1467,
+  "alt": "og:image",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "02-vaskegate-3.jpg",
+  "kilde": "https://www.divein.no/vaskegate_3.jpeg",
+  "bredde": 1024,
+  "hoyde": 1467,
+  "alt": "Bil i vaskegate hos Dive In Carwash",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "03-selvvask-krs-1.jpg",
+  "kilde": "https://www.divein.no/selvvask_krs_1.jpeg",
+  "bredde": 1024,
+  "hoyde": 683,
+  "alt": "Selvvask hos Dive In Carwash",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "04-stovsuger-2.jpg",
+  "kilde": "https://www.divein.no/stovsuger_2.jpeg",
+  "bredde": 1024,
+  "hoyde": 683,
+  "alt": "",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "05-mattevask-1.jpg",
+  "kilde": "https://www.divein.no/mattevask_1.jpg",
+  "bredde": 887,
+  "hoyde": 529,
+  "alt": "Mattevasker",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "06-tiller-1.png",
+  "kilde": "https://www.divein.no/tiller_1.png",
+  "bredde": 939,
+  "hoyde": 529,
+  "alt": "Trondheim",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "07-kristiansand-1.png",
+  "kilde": "https://www.divein.no/kristiansand_1.png",
+  "bredde": 1024,
+  "hoyde": 683,
+  "alt": "Kristiansand",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "08-haugesund-1.png",
+  "kilde": "https://www.divein.no/haugesund_1.png",
+  "bredde": 1604,
+  "hoyde": 944,
+  "alt": "Haugesund",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "09-dyreparken-1.jpg",
+  "kilde": "https://www.divein.no/dyreparken_1.jpeg",
+  "bredde": 1024,
+  "hoyde": 683,
+  "alt": "Kristiansand",
+  "side": "https://www.divein.no"
+ },
+ {
+  "fil": "10-stavanger.jpg",
+  "kilde": "https://www.divein.no/Stavanger.jpg",
+  "bredde": 1024,
+  "hoyde": 576,
+  "alt": "Stavanger",
+  "side": "https://www.divein.no"
+ }
+]
