@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Takk! — E-Tech Elektro Installasjon</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23161616'/><text y='.9em' x='50%25' text-anchor='middle' font-size='56' font-family='Helvetica,Arial' font-weight='700' fill='%23F78F1E'>E</text></svg>">
+<!-- Forslag fra Arcads til E-Tech Elektro Installasjon AS (sep 2026). Ingen pixel, ingen webhook — demoside.
+     Åpningstider man–fre 07–15 og telefon 51 54 61 00 står på etech.as/kontakt. Ingen SMS-nummer på siden → ingen SMS-knapp. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F6F3EE;--ink:#161616;--muted:#5F5850;--line:#E6E0D8;--clay:#E07A0E;--clay-deep:#B8600A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.wordmark{font-size:1.32rem;letter-spacing:.42em;text-indent:.42em;font-weight:600;margin-bottom:6px}
+.sub{color:var(--muted);font-size:0.9rem;margin-bottom:38px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:44px 34px;max-width:480px;width:100%;box-shadow:0 24px 54px -32px rgba(0,0,0,.35)}
+.chk{width:58px;height:58px;border-radius:50%;background:var(--clay);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px}
+.chk svg{width:28px;height:28px;stroke:#fff}
+h1{font-weight:800;font-size:1.7rem;letter-spacing:-0.01em;line-height:1.15;margin-bottom:12px}
+p{color:var(--muted);font-size:1.0rem;max-width:38ch;margin:0 auto}
+.back{display:inline-block;margin-top:26px;font-weight:700;font-size:0.9rem;color:var(--clay-deep);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:11px 24px;transition:.2s}
+.back:hover{border-color:var(--clay);color:var(--clay)}
+.callbox{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.callbox .lede{font-size:0.95rem;color:var(--ink);font-weight:600;margin-bottom:14px}
+.call{display:inline-flex;align-items:center;gap:10px;background:var(--clay);color:#fff;text-decoration:none;font-weight:800;font-size:1.12rem;border-radius:999px;padding:16px 30px;transition:.2s}
+.call:hover{background:var(--clay-deep);transform:translateY(-1px)}
+.call svg{width:19px;height:19px;fill:#fff}
+.hours{margin-top:14px;font-size:0.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="wordmark">E·TECH</div>
+  <div class="sub">Auglendsmyrå 4, Stavanger</div>
+  <div class="card">
+    <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <h1>Takk! Vi har mottatt henvendelsen din</h1>
+    <p>Vi ringer deg for å avtale et tidspunkt for gratis og uforpliktende befaring hjemme hos deg.</p>
+    <div class="callbox">
+      <div class="lede" id="callLede">Haster det? Ring oss direkte</div>
+      <a class="call" id="callBtn" href="tel:+4751546100">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+        Ring 51 54 61 00
+      </a>
+      <div class="hours" id="callHours">Telefonen er betjent man&ndash;fre 07&ndash;15 &middot; post@etech.as</div>
+    </div>
+    <a class="back" href="https://www.etech.as">Gå til etech.as</a>
+  </div>
+<script>
+/* Tidsstyrt tekst: åpningstidene man-fre 07-15 står på etech.as/kontakt.
+   Utenfor åpningstid beholdes ring-knappen (ingen SMS-nummer på siden), men teksten sier når vi åpner. */
+(function(){
+  var f=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Oslo',weekday:'short',hour:'2-digit',hour12:false});
+  var p={}; f.formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+  var dager={Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:0};
+  var dag=dager[p.weekday], time=parseInt(p.hour,10);
+  var apent = dag>=1 && dag<=5 && time>=7 && time<15;
+  if(apent) return;
+  var neste = (dag===5&&time>=15)||dag===6||dag===0 ? 'mandag' : (time>=15 ? 'i morgen' : 'i dag');
+  document.getElementById('callLede').textContent='Telefonen er stengt akkurat nå';
+  document.getElementById('callHours').innerHTML='Vi åpner igjen '+neste+' kl. 07:00 &mdash; da ringer vi deg opp. Du kan også sende e-post til post@etech.as.';
+})();
+</script>
+</body>
+</html>

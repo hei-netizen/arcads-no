@@ -1,0 +1,34 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://www.etech.as/images/5d232c46be88271bedad0a2d_s4.jpg",
+  "bredde": 2000,
+  "hoyde": 667,
+  "alt": "Folkene i E-Tech foran kontoret i Auglendsmyrå 4",
+  "side": "https://www.etech.as/om-oss"
+ },
+ {
+  "fil": "team.jpg",
+  "kilde": "https://www.etech.as/images/5d232c46be88271bedad0a2d_s4.jpg",
+  "bredde": 2000,
+  "hoyde": 667,
+  "alt": "Folkene i E-Tech foran kontoret",
+  "side": "https://www.etech.as/om-oss"
+ },
+ {
+  "fil": "elektriker.jpg",
+  "kilde": "https://etech2025.objects.frb.io//slides/9jun25-desk1.png (høyre halvdel, uten tekst)",
+  "bredde": 1104,
+  "hoyde": 1004,
+  "alt": "Elektriker fra E-Tech med drill",
+  "side": "https://www.etech.as"
+ },
+ {
+  "fil": "ladestasjon.jpg",
+  "kilde": "https://etech2025.objects.frb.io//slides/9jun25-desk3.png (høyre halvdel, uten tekst)",
+  "bredde": 1152,
+  "hoyde": 1004,
+  "alt": "Ladestasjoner E-Tech monterer",
+  "side": "https://www.etech.as"
+ }
+]
