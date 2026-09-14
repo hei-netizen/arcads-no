@@ -1,0 +1,66 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2020/03/effektbilde1.jpg",
+  "bredde": 1080,
+  "hoyde": 709,
+  "alt": "og:image",
+  "side": "https://www.advocate.no"
+ },
+ {
+  "fil": "team-kontor.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2021/08/20210305_AnjaS.BjC3B8rsvikYO_167A4447-1-768x511.jpg",
+  "bredde": 768,
+  "hoyde": 511,
+  "alt": "Advokatfirma Ringberg, Crogh, Warth & Bjørsvik AS | Tromsø",
+  "side": "https://www.advocate.no"
+ },
+ {
+  "fil": "gruppebilde.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2020/03/Gruppebilde.jpg",
+  "bredde": 1080,
+  "hoyde": 497,
+  "alt": "og:image",
+  "side": "https://www.advocate.no/om-oss/#ansatte"
+ },
+ {
+  "fil": "erik-ringberg.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2021/04/FISK1500-2048x1365.jpg",
+  "bredde": 2048,
+  "hoyde": 1365,
+  "alt": "Advokat Erik Ringberg - RCWB Tromsø",
+  "side": "https://www.advocate.no/om-oss/#ansatte"
+ },
+ {
+  "fil": "sven-crogh.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2021/04/FISK1674-2048x1365.jpg",
+  "bredde": 2048,
+  "hoyde": 1365,
+  "alt": "Advokat Sven Crogh | RCWB Tromsø",
+  "side": "https://www.advocate.no/om-oss/#ansatte"
+ },
+ {
+  "fil": "ken-olav-warth.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2021/04/FISK1644-2048x1365.jpg",
+  "bredde": 2048,
+  "hoyde": 1365,
+  "alt": "Advokat Ken Olav Warth | RCWB Tromsø",
+  "side": "https://www.advocate.no/om-oss/#ansatte"
+ },
+ {
+  "fil": "anja-stoback-bjorsvik.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2021/04/FISK1775-2048x1365.jpg",
+  "bredde": 2048,
+  "hoyde": 1365,
+  "alt": "Advokat Anja Støback Bjørsvik | RCWB Tromsø",
+  "side": "https://www.advocate.no/om-oss/#ansatte"
+ },
+ {
+  "fil": "eva-fiske.jpg",
+  "kilde": "https://advocate.no/wp-content/uploads/2021/04/FISK1593-2048x1365.jpg",
+  "bredde": 2048,
+  "hoyde": 1365,
+  "alt": "Eva Fiske - Sekretær | RCWB Tromsø",
+  "side": "https://www.advocate.no/om-oss/#ansatte"
+ }
+]
