@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Takk! — Moss Rørleggerservice</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230076C8'/><text y='.9em' x='50%25' text-anchor='middle' font-size='52' font-family='Helvetica,Arial' font-weight='700' fill='%23fff'>M</text></svg>">
+<!-- Forslag fra Arcads til Moss Rørleggerservice AS (sep 2026). Ingen pixel, ingen webhook — demoside.
+     Åpningstidene og telefonnummeret under står i footer på mossrorlegger.no (hverdager 09–16:30, torsdag 09–18, lørdag 10–14, 69 25 42 90).
+     Utenfor åpningstid vises e-post (post@mrl.no) i stedet for ring-knappen. Ingen SMS-nummer, for det står ikke på siden. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#EEF3F8;--ink:#0E1F2E;--muted:#586C7E;--line:#D9E3EC;--clay:#0076C8;--clay-deep:#005BA5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',-apple-system,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center}
+.wordmark{font-size:1.32rem;letter-spacing:.42em;text-indent:.42em;font-weight:600;margin-bottom:6px}
+.sub{color:var(--muted);font-size:0.9rem;margin-bottom:38px}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:44px 34px;max-width:480px;width:100%;box-shadow:0 24px 54px -32px rgba(0,66,103,.42)}
+.chk{width:58px;height:58px;border-radius:50%;background:var(--clay);display:inline-flex;align-items:center;justify-content:center;margin-bottom:20px}
+.chk svg{width:28px;height:28px;stroke:#fff}
+h1{font-weight:800;font-size:1.7rem;letter-spacing:-0.01em;line-height:1.15;margin-bottom:12px}
+p{color:var(--muted);font-size:1.0rem;max-width:38ch;margin:0 auto}
+.back{display:inline-block;margin-top:26px;font-weight:700;font-size:0.9rem;color:var(--clay-deep);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:11px 24px;transition:.2s}
+.back:hover{border-color:var(--clay);color:var(--clay)}
+.callbox{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.callbox .lede{font-size:0.95rem;color:var(--ink);font-weight:600;margin-bottom:14px}
+.call{display:inline-flex;align-items:center;gap:10px;background:var(--clay);color:#fff;text-decoration:none;font-weight:800;font-size:1.12rem;border-radius:999px;padding:16px 30px;transition:.2s}
+.call:hover{background:var(--clay-deep);transform:translateY(-1px)}
+.call svg{width:19px;height:19px;fill:#fff}
+.mail{display:inline-flex;align-items:center;gap:9px;color:var(--clay-deep);text-decoration:none;font-weight:700;font-size:0.95rem;border:1px solid var(--line);border-radius:999px;padding:13px 26px;transition:.2s}
+.mail:hover{border-color:var(--clay);color:var(--clay)}
+.hours{margin-top:14px;font-size:0.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+  <div class="wordmark">MOSS RØRLEGGERSERVICE</div>
+  <div class="sub">Varnaveien 34, 1523 Moss</div>
+  <div class="card">
+    <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <h1>Takk! Vi har mottatt forespørselen din</h1>
+    <p>Vi ringer deg for å avtale et tidspunkt for befaring, og gir deg et prisoverslag på jobben.</p>
+    <div class="callbox">
+      <div class="lede" id="callLede">Haster det? Ring oss direkte</div>
+      <a class="call" id="callBtn" href="tel:+4769254290">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+        Ring 69 25 42 90
+      </a>
+      <div class="hours" id="callHours">Hverdager 09:00&ndash;16:30 &middot; torsdag 09:00&ndash;18:00 &middot; l&oslash;rdag 10:00&ndash;14:00</div>
+    </div>
+    <a class="back" href="https://www.mossrorlegger.no">Gå til mossrorlegger.no</a>
+  </div>
+<script>
+/* Tidsstyrt kontakt-CTA: ring-knapp kun naar butikken er aapen (aapningstider fra mossrorlegger.no:
+   hverdager 09:00-16:30, torsdag 09:00-18:00, loerdag 10:00-14:00, Oslo-tid). Utenfor aapningstid
+   vises e-post i stedet, slik at ingen ringer inn til stengt butikk. */
+(function(){
+  var f=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Oslo',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false});
+  var p={}; f.formatToParts(new Date()).forEach(function(x){p[x.type]=x.value;});
+  var dager={Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6,Sun:0};
+  var dag=dager[p.weekday], t=parseInt(p.hour,10)*60+parseInt(p.minute,10);
+  var apent=false;
+  if(dag>=1&&dag<=5){apent = t>=9*60 && t<(dag===4?18*60:16*60+30);}
+  else if(dag===6){apent = t>=10*60 && t<14*60;}
+  if(apent) return;
+  var neste;
+  if(dag===0) neste='mandag kl. 09:00';
+  else if(dag===6) neste=(t<10*60?'i dag kl. 10:00':'mandag kl. 09:00');
+  else if(dag===5&&t>=16*60+30) neste='lørdag kl. 10:00';
+  else neste=(t<9*60?'i dag kl. 09:00':'i morgen kl. 09:00');
+  document.getElementById('callLede').textContent='Butikken er stengt akkurat nå';
+  var btn=document.getElementById('callBtn');
+  btn.className='mail';
+  btn.href='mailto:post@mrl.no';
+  btn.innerHTML='Send oss en e-post: post@mrl.no';
+  document.getElementById('callHours').innerHTML='Vi åpner igjen '+neste+' &mdash; da ringer vi deg opp.';
+})();
+</script>
+</body>
+</html>
