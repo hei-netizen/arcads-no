@@ -1,0 +1,42 @@
+[
+ {
+  "fil": "blomster.webp",
+  "kilde": "https://www.abbedissen.no/framside.webp",
+  "bredde": 1501,
+  "hoyde": 412,
+  "alt": "bakgrunnsbildet av blomster",
+  "side": "https://www.abbedissen.no"
+ },
+ {
+  "fil": "baarebil-hvit.webp",
+  "kilde": "https://www.abbedissen.no/bil/hvit-bil-1.webp",
+  "bredde": 1600,
+  "hoyde": 960,
+  "alt": "hvit bårebil",
+  "side": "https://www.abbedissen.no/barebil"
+ },
+ {
+  "fil": "baarebil-el.webp",
+  "kilde": "https://www.abbedissen.no/bil/svart-el-bil-2.webp",
+  "bredde": 1277,
+  "hoyde": 828,
+  "alt": "svart elektrisk bårebil",
+  "side": "https://www.abbedissen.no/barebil"
+ },
+ {
+  "fil": "kiste-nordica.webp",
+  "kilde": "https://www.abbedissen.no/kister/nordica-65.webp",
+  "bredde": 800,
+  "hoyde": 562,
+  "alt": "Nordica 65",
+  "side": "https://www.abbedissen.no/kister"
+ },
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://www.abbedissen.no/framside.webp",
+  "bredde": 1501,
+  "hoyde": 412,
+  "alt": "hero = blomster.webp som jpg",
+  "side": "https://www.abbedissen.no"
+ }
+]
