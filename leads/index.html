@@ -3,30 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arcads — Flere henvendelser til bedriften din. Du betaler først når de kommer.</title>
+<title>Arcads — Flere kunder til bedriften din. Du betaler først når de kommer.</title>
 <!-- ============================================================
      ARCADS.NO /leads — ads-LP for LEADSBEDRIFTER (håndverk, klinikk, tjeneste)
-     Bygget 06.09.2026 på /analyse-strukturen (Frøyd-DR). Kilde-kopi i
-     arcads-claude-brain/clients/arcads/landing/arcads-leads-v1.preview.html
-     Kvalifisering: bransje + annonsebudsjett i skjemaet. Pixel: Lead kun
-     ved budsjett >= 20 000 og bransje != nettbutikk, ellers SubmitApplication.
+     OG NETTBUTIKKER (v4, 16.09.2026). Bygget 06.09.2026 på /analyse-strukturen.
+     Kilde-kopi i arcads-claude-brain/clients/arcads/landing/arcads-leads-v1.preview.html
+     Siden har tre «modus»: nøytral (standard), lead (?b=handverk|klinikk|
+     flytting-renhold|finans|tjeneste, eller valgt i skjemaet) og shop
+     (?b=nettbutikk, eller «Nettbutikk» valgt i skjemaet). Modus bytter copy,
+     proof-tall, caser og sitater via JS (se MODE_TEXT nederst).
+     Kvalifisering: annonsebudsjett >= 20 000 = Meta «Lead», ellers
+     «SubmitApplication». Nettbutikk teller nå som kvalifisert.
      ============================================================ -->
-<meta name="description" content="Vi bygger annonsene og landingssiden som gjør klikk om til henvendelser. For håndverkere, klinikker og tjenestebedrifter. 100% resultatbasert — du betaler først når det kommer leads.">
+<meta name="description" content="Vi bygger annonsene og alt rundt som gjør klikk om til henvendelser og salg. For tjenestebedrifter og nettbutikker. 100% resultatbasert — du betaler først når resultatene kommer.">
 <link rel="canonical" href="https://arcads.no/leads/">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arcads.no/leads/">
 <meta property="og:site_name" content="Arcads">
 <meta property="og:locale" content="nb_NO">
-<meta property="og:title" content="Flere henvendelser til bedriften din. Du betaler først når de kommer.">
-<meta property="og:description" content="Annonser + landingsside som gjør klikk om til henvendelser. For håndverk, klinikker og tjenestebedrifter. 0 kr før det kommer leads.">
+<meta property="og:title" content="Flere kunder til bedriften din. Du betaler først når de kommer.">
+<meta property="og:description" content="Annonser + landingsside eller nettbutikk-oppsett som gjør klikk om til kunder. For tjenestebedrifter og nettbutikker. 0 kr før resultatene kommer.">
 <meta property="og:image" content="https://arcads.no/img/founders.jpg">
 <meta property="og:image:width" content="1100">
 <meta property="og:image:height" content="819">
 <meta property="og:image:alt" content="Victor og Jona, gründerne i Arcads">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Flere henvendelser til bedriften din. Du betaler først når de kommer.">
-<meta name="twitter:description" content="Annonser + landingsside som gjør klikk om til henvendelser. 0 kr før det kommer leads.">
+<meta name="twitter:title" content="Flere kunder til bedriften din. Du betaler først når de kommer.">
+<meta name="twitter:description" content="Annonser som gjør klikk om til henvendelser og salg. 0 kr før resultatene kommer.">
 <meta name="twitter:image" content="https://arcads.no/img/founders.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
@@ -135,9 +139,8 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .fquote{margin:14px 6px 0;font-size:0.86rem;color:var(--muted);text-align:center;line-height:1.45}
 .fquote b{color:var(--ink);font-weight:700}
 .fquote .stars{color:var(--gold);letter-spacing:1px;margin-right:6px}
-/* hint når nettbutikk velges */
-.qhint{display:none;background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:12px;padding:11px 14px;font-size:0.86rem;margin-top:8px}
-.qhint a{color:var(--accent-deep);font-weight:700;text-decoration:underline}
+[hidden]{display:none!important}
+.mode-fade{animation:wfade .3s ease}
 /* hero form card */
 .formcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh)}
 .formcard .fhead b{display:block;font-family:var(--disp);font-size:1.28rem;font-weight:800;letter-spacing:-0.01em}
@@ -349,24 +352,24 @@ fbq('track','PageView');
 </div>
 
 <!-- ===== CAMPAIGN STRIP ===== -->
-<div class="strip">&ndash; <b>100% resultatbasert</b> &middot; du betaler først når telefonen ringer &ndash;</div>
+<div class="strip">&ndash; <b>100% resultatbasert</b> &middot; <span id="stripTxt">du betaler først når resultatene kommer</span> &ndash;</div>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1 class="h-xl">Flere henvendelser til bedriften din &mdash; du betaler først når de kommer</h1>
+        <h1 class="h-xl" id="heroH1">Flere kunder til bedriften din &mdash; du betaler først når de kommer</h1>
         <ul class="blist">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Annonser + egen landingsside &mdash; hele maskinen</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Hvert lead rett på mobilen din, samme minutt</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> For håndverk, klinikker og tjenestebedrifter</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="bl1">Google + Meta-annonser &mdash; 10+ nye i uka, alt lager vi selv</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="bl2">Landingsside eller nettbutikk-oppsett som gjør klikk om til kunder</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="bl3">For tjenestebedrifter og nettbutikker</span></li>
         </ul>
         <div class="priceblock">
           <span class="ord">Andre byråer: <s>fast honorar uansett</s></span>
-          <span class="now">Hos oss: 0 kr før leadsene kommer</span>
+          <span class="now" id="priceNow">Hos oss: 0 kr før resultatene kommer</span>
         </div>
-        <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t">Få gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tre raske spørsmål &middot; 30 sekunder</span></a></div>
+        <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Få gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tre raske spørsmål &middot; 30 sekunder</span></a></div>
         <div class="faces">
           <div class="pics">
             <img src="/img/victor.webp" alt="Victor" width="44" height="44">
@@ -379,15 +382,14 @@ fbq('track','PageView');
       <div class="hero-form">
         <div class="formcard" id="book">
           <div id="leadStep">
-            <div class="fhead"><b>Få en gratis lead-analyse</b><span>Tre raske spørsmål &mdash; så ringer Victor deg. Helt uforpliktende.</span></div>
+            <div class="fhead"><b id="fhB">Få en gratis analyse</b><span>Tre raske spørsmål &mdash; så ringer Victor deg. Helt uforpliktende.</span></div>
             <div class="fmsg" id="formMsg">Takk! Du kan booke tid med en gang under.</div>
             <form id="leadForm" novalidate>
               <div class="wprog"><span class="wtxt" id="wTxt">1 av 3</span><span class="bar"><i id="wBar" style="width:33%"></i></span></div>
               <div class="wstep on">
                 <div class="qual" data-key="industry">
                   <div class="q">Hva driver du med?</div>
-                  <div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button></div>
-                  <div class="qhint" id="shopHint">Nettbutikk? Da har vi en egen side for deg: <a href="/analyse/">arcads.no/analyse</a>. Du kan også fortsette her.</div>
+                  <div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button></div>
                 </div>
               </div>
               <div class="wstep">
@@ -397,7 +399,7 @@ fbq('track','PageView');
                 </div>
                 <div class="qual" data-key="goal">
                   <div class="q">Hva vil du ha mer av?</div>
-                  <div class="opts"><button type="button" class="opt" data-v="henvendelser">Henvendelser / tilbud</button><button type="button" class="opt" data-v="bookinger">Bookinger</button><button type="button" class="opt" data-v="telefoner">Telefoner</button><button type="button" class="opt" data-v="usikker">Usikker</button></div>
+                  <div class="opts" id="goalOpts"><button type="button" class="opt" data-v="henvendelser">Henvendelser / tilbud</button><button type="button" class="opt" data-v="bookinger">Bookinger</button><button type="button" class="opt" data-v="salg">Salg i nettbutikken</button><button type="button" class="opt" data-v="usikker">Usikker</button></div>
                 </div>
               </div>
               <div class="wstep">
@@ -407,7 +409,7 @@ fbq('track','PageView');
                 <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" inputmode="tel" required></div></div>
                 <div class="field"><label for="h_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="h_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div></div>
                 <div class="ferr" id="formErr"></div>
-                <button type="submit" class="cta"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
+                <button type="submit" class="cta"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
               </div>
               <button type="button" class="wback" id="wBack" style="display:none">&larr; Tilbake</button>
               <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal">
@@ -420,25 +422,27 @@ fbq('track','PageView');
             <div class="fine"><span>Victor ringer deg uansett &mdash; bookingen er bare for å gå raskere.</span></div>
           </div>
         </div>
-        <p class="fquote"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&laquo;Vi får flere leads enn noensinne&raquo; &mdash; <b>Elliot, Badstugutta</b></p>
+        <p class="fquote" id="fQuote"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&laquo;Vi får flere leads enn noensinne&raquo; &mdash; <b>Elliot, Badstugutta</b></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROOF BAND (tall fra lead-kontoer) ===== -->
+<!-- ===== PROOF BAND (tall fra ekte kontoer — bytter med modus) ===== -->
 <div class="proofband">
-  <div class="stats">
+  <div class="stats" id="stats">
     <div class="s"><div class="n">142</div><div class="t">leads på én uke for én kunde</div></div>
-    <div class="s"><div class="n">165 kr</div><div class="t">per lead på Meta &middot; Badstugutta</div></div>
+    <div class="s"><div class="n">4,73x</div><div class="t">ROAS &middot; Leid.no</div></div>
     <div class="s"><div class="n">94%</div><div class="t">får større bunnlinje innen 3 mnd</div></div>
     <div class="s"><div class="n">10+</div><div class="t">nye annonser i uka</div></div>
   </div>
   <div class="logowall">
-    <div class="lbl">Bedrifter som lever av henvendelser &mdash; og jobber med oss</div>
+    <div class="lbl" id="logoLbl">Tjenestebedrifter og nettbutikker som jobber med oss</div>
     <div class="row">
       <img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold" loading="lazy">
+      <img src="/logos/mokki.png" alt="Mokki" loading="lazy">
       <img src="/logos/veldigrent.png" alt="Veldigrent.no" loading="lazy">
+      <img src="/logos/leid.svg" alt="Leid.no" loading="lazy">
       <img src="/logos/raskflytting.png" alt="Rask Flytting" loading="lazy">
       <img src="/logos/badstugutta.png" alt="Badstugutta" loading="lazy">
       <img src="/logos/frifor.png" alt="Frifor.app" loading="lazy">
@@ -454,14 +458,14 @@ fbq('track','PageView');
         <img src="/img/founders.webp" alt="Victor og Jona, gründerne i Arcads" width="1100" height="819">
       </div>
       <div class="reveal">
-        <span class="eyebrow">Hvorfor velger tjenestebedrifter Arcads?</span>
-        <h2 class="h-lg" style="margin:12px 0 8px">Flere jobber i innboksen er enklere enn du tror&hellip;</h2>
-        <p class="lede" style="margin-bottom:30px">&hellip; og det starter med en gratis lead-analyse.</p>
+        <span class="eyebrow" id="whyEye">Hvorfor velger bedrifter Arcads?</span>
+        <h2 class="h-lg" style="margin:12px 0 8px" id="whyH2">Flere kunder er enklere enn du tror&hellip;</h2>
+        <p class="lede" style="margin-bottom:30px">&hellip; og det starter med en gratis analyse.</p>
         <ul class="feat">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>100% resultatbasert</h4><p>Kommer det ikke henvendelser, betaler du ikke.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Vi bygger hele maskinen</h4><p>Landingsside, annonser, sporing og varsling.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>100% resultatbasert</h4><p id="f1p">Leverer vi ikke, betaler du ikke.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 id="f2h">Vi bygger hele maskinen</h4><p id="f2p">Annonser, landingsside, sporing og rapport.</p></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Ingen mellomledd</h4><p>Du snakker med de to som gjør jobben.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Mandagsrapport hver uke</h4><p>Brukt, henvendelser, pris per henvendelse. Ferdig.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Mandagsrapport hver uke</h4><p id="f4p">Brukt, resultater, hva det kostet. Ferdig.</p></div></li>
         </ul>
       </div>
     </div>
@@ -473,21 +477,23 @@ fbq('track','PageView');
   <div class="wrap">
     <div class="center" style="max-width:640px;margin:0 auto">
       <span class="eyebrow">Sånn funker det</span>
-      <h2 class="h-lg" style="margin-top:12px">Klikk inn. Henvendelse ut. Samme minutt.</h2>
+      <h2 class="h-lg" style="margin-top:12px" id="mH2">Klikk inn. Kunde ut. Samme dag.</h2>
     </div>
     <div class="machine">
       <ol class="steps reveal">
-        <li><span class="num"></span><div><h4>Egen landingsside for tjenesten din</h4><p>Ikke forsiden. Én side, ett skjema. Lokal? Én per by.</p></div></li>
-        <li><span class="num"></span><div><h4>Annonser på Google og Meta</h4><p>10+ nye i uka. Alt lager vi selv.</p></div></li>
-        <li><span class="num"></span><div><h4>Leadet lander hos deg med en gang</h4><p>Navn, telefon og hva de trenger. Den som ringer først, får jobben.</p></div></li>
+        <li><span class="num"></span><div><h4 id="st1h">Egen landingsside &mdash; eller nettbutikken din</h4><p id="st1p">Tjeneste? Én side, ett skjema. Nettbutikk? Vi fikser sporing og feed først.</p></div></li>
+        <li><span class="num"></span><div><h4 id="st2h">Annonser på Google og Meta</h4><p id="st2p">10+ nye i uka. Alt lager vi selv.</p></div></li>
+        <li><span class="num"></span><div><h4 id="st3h">Resultatet lander hos deg med en gang</h4><p id="st3p">Lead på mobilen, eller ordre i butikken. Mandagsrapporten viser hva det kostet.</p></div></li>
       </ol>
       <div class="reveal">
-        <div class="phone" aria-label="Illustrasjon av lead-varsler på mobil">
-          <div class="ph-top"><b>Lead-varsler</b><span>i dag</span></div>
+        <div class="phone" aria-label="Illustrasjon av varsler på mobil">
+          <div class="ph-top"><b id="phLbl">Varsler</b><span>i dag</span></div>
+          <div id="phList">
           <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>09:12</span></div><div class="nt">Takvask &middot; Drammen</div><div class="nb">Enebolig, ønsker befaring denne uka</div></div>
-          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>10:47</span></div><div class="nt">Flyttevask &middot; Oslo vest</div><div class="nb">3-roms, utflytting 28.</div></div>
+          <div class="notif"><div class="nh"><b><i></i>Ny ordre</b><span>10:47</span></div><div class="nt">Nettbutikk &middot; 1&nbsp;490 kr</div><div class="nb">2 produkter, ny kunde fra Meta</div></div>
           <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>13:05</span></div><div class="nt">Konsultasjon &middot; klinikk</div><div class="nb">Vil booke time</div></div>
-          <div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>15:31</span></div><div class="nt">Fasadevask &middot; Skien</div><div class="nb">Næringsbygg, ønsker tilbud</div></div>
+          <div class="notif"><div class="nh"><b><i></i>Ny ordre</b><span>15:31</span></div><div class="nt">Nettbutikk &middot; 2&nbsp;980 kr</div><div class="nb">Google Shopping, tilbakevendende kunde</div></div>
+          </div>
           <div class="ph-cap">Illustrasjon. Ekte tall står i casene under.</div>
         </div>
       </div>
@@ -501,9 +507,9 @@ fbq('track','PageView');
     <span class="eyebrow">Kjenner du deg igjen?</span>
     <h2 class="h-lg" style="margin-top:12px">Dette slipper du hos oss&hellip;</h2>
     <div class="pain">
-      <div class="row reveal"><span class="x">&#10005;</span> Slutt på trafikk til forsiden &mdash; uten at noen ringer</div>
-      <div class="row reveal"><span class="x">&#10005;</span> Slutt på rapporter med klikk &mdash; uten henvendelser</div>
-      <div class="row reveal"><span class="x">&#10005;</span> Slutt på fakturaer i måneder uten leads</div>
+      <div class="row reveal"><span class="x">&#10005;</span> <span id="p1">Slutt på rapporter med klikk &mdash; uten kunder</span></div>
+      <div class="row reveal"><span class="x">&#10005;</span> <span id="p2">Slutt på annonser som ser ut som alle andres</span></div>
+      <div class="row reveal"><span class="x">&#10005;</span> <span id="p3">Slutt på fakturaer i måneder uten resultater</span></div>
     </div>
   </div>
 </section>
@@ -512,12 +518,12 @@ fbq('track','PageView');
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="darkband reveal">
-      <span class="eyebrow">&mdash; Gratis lead-analyse &mdash;</span>
-      <h2 class="h-lg">Vi viser deg hvor henvendelsene lekker. Gratis.</h2>
+      <span class="eyebrow">&mdash; Gratis analyse &mdash;</span>
+      <h2 class="h-lg" id="dbH2">Vi viser deg hvor pengene lekker. Gratis.</h2>
       <p>30 minutter med Victor. Vi viser hva vi ville bygget for din bedrift &mdash; analysen er din uansett.</p>
-      <div class="codebox"><b>Gratis lead-analyse</b> <span class="hl">&rarr; 30 minutter &middot; uforpliktende &middot; ingen binding</span></div>
-      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
-      <p class="micro">100% resultatbasert &middot; du betaler først når henvendelsene kommer</p>
+      <div class="codebox"><b>Gratis analyse</b> <span class="hl">&rarr; 30 minutter &middot; uforpliktende &middot; ingen binding</span></div>
+      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+      <p class="micro">100% resultatbasert &middot; <span id="dbMicro">du betaler først når resultatene kommer</span></p>
     </div>
   </div>
 </section>
@@ -532,14 +538,14 @@ fbq('track','PageView');
     <div class="inc-card reveal">
       <div class="body">
         <ul class="inc-list">
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>Landingsside</b> per tjeneste &mdash; og per by</span></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Google + Meta-annonser &mdash; 10+ nye i uka</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Lead-varsling til mobilen samme minutt</li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Sporing som teller henvendelser &mdash; ikke klikk</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="inc1"><b>Landingsside</b> per tjeneste &mdash; eller oppsett i nettbutikken din</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="inc2">Google + Meta-annonser &mdash; 10+ nye i uka</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="inc3">Varsling: lead på mobilen, eller ordre i butikken</span></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="inc4">Sporing som teller kunder &mdash; ikke klikk</span></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>0 kr oppstart</b> &middot; ingen binding</span></li>
         </ul>
         <div class="pricebar">
-          <span class="ord">Første steg er en gratis lead-analyse:</span>
+          <span class="ord">Første steg er en gratis analyse:</span>
           <span class="now">Gratis <small>&middot; 30 min &middot; uforpliktende</small></span>
         </div>
       </div>
@@ -548,15 +554,15 @@ fbq('track','PageView');
   </div>
 </section>
 
-<!-- ===== CASER ===== -->
+<!-- ===== CASER (pool på 6 kort; modus velger 4 og rekkefølge) ===== -->
 <section class="section">
   <div class="wrap">
     <div class="center" style="max-width:620px;margin:0 auto">
       <span class="eyebrow">Caser</span>
-      <h2 class="h-lg" style="margin-top:12px">Tall fra bedrifter som lever av henvendelser.</h2>
+      <h2 class="h-lg" style="margin-top:12px" id="caseH2">Tall fra ekte kontoer.</h2>
     </div>
-    <div class="casegrid">
-      <div class="casecard reveal">
+    <div class="casegrid" id="caseGrid">
+      <div class="casecard reveal" data-case="ur">
         <img class="clogo" src="/logos/utvendigrenhold.png" alt="Utvendigrenhold">
         <div class="metric">142</div>
         <div class="ms">leads p&aring; &eacute;n uke &middot; 194 kr per lead</div>
@@ -564,7 +570,15 @@ fbq('track','PageView');
         <div class="desc">Tak- og fasadevask, 9 lokasjoner i Norge.</div>
         <div class="tag">Utvendigrenhold &middot; Franchise</div>
       </div>
-      <div class="casecard reveal">
+      <div class="casecard reveal" data-case="leid">
+        <img class="clogo" src="/logos/leid.svg" alt="Leid.no">
+        <div class="metric">4,73<span class="u">x</span></div>
+        <div class="ms">ROAS &middot; 100&nbsp;000+ kr/mnd</div>
+        <div class="ch">Fra &oslash;delagt sporing til l&oslash;nnsom skalering</div>
+        <div class="desc">Vi fikset sporingen, &oslash;kte tempoet p&aring; nye annonser &mdash; og skalerte uten &aring; gamble.</div>
+        <div class="tag">Leid.no &middot; Nettbutikk / utleie</div>
+      </div>
+      <div class="casecard reveal" data-case="badstugutta">
         <img class="clogo" src="/logos/badstugutta.png" alt="Badstugutta">
         <div class="metric">165 <span class="u">kr</span></div>
         <div class="ms">per lead p&aring; Meta &middot; 13 leads p&aring; &eacute;n uke</div>
@@ -572,7 +586,15 @@ fbq('track','PageView');
         <div class="desc">Egen side for Meta-trafikken. Pris per lead: en br&oslash;kdel av Google.</div>
         <div class="tag">Badstugutta &middot; H&aring;ndverk</div>
       </div>
-      <div class="casecard reveal">
+      <div class="casecard reveal" data-case="mokki">
+        <img class="clogo" src="/logos/mokki.png" alt="Mokki">
+        <div class="metric"><span class="u">+</span>127<span class="u">%</span></div>
+        <div class="ms">profitt &aring;r-over-&aring;r</div>
+        <div class="ch">L&oslash;nnsomt i tre land</div>
+        <div class="desc">Prisvinnende barnesolbriller i Norge, Tyskland og Danmark &mdash; og Google fra null til 9x ROAS.</div>
+        <div class="tag">Mokki &middot; Nettbutikk</div>
+      </div>
+      <div class="casecard reveal" data-case="marlow">
         <div class="clogo-b">M</div>
         <div class="metric">0 <span class="u">&rarr;</span> 11</div>
         <div class="ms">leads i uka &middot; CPL &pound;17</div>
@@ -580,7 +602,7 @@ fbq('track','PageView');
         <div class="desc">Kontoen hadde aldri m&aring;lt ett lead. Vi bygde alt fra bunnen.</div>
         <div class="tag">Marlow &middot; Tannklinikk (UK)</div>
       </div>
-      <div class="casecard reveal">
+      <div class="casecard reveal" data-case="veldigrent">
         <img class="clogo" src="/logos/veldigrent.png" alt="Veldigrent">
         <div class="metric">181 <span class="u">kr</span></div>
         <div class="ms">per lead &middot; m&aring;l var 300</div>
@@ -589,9 +611,9 @@ fbq('track','PageView');
         <div class="tag">Veldigrent &middot; Renhold</div>
       </div>
     </div>
-    <div class="gallery reveal">
+    <div class="gallery reveal" id="gallery">
       <figure><img src="/img/caser/ur-1.jpg" alt="Annonse for Utvendigrenhold" loading="lazy"><figcaption>Utvendigrenhold</figcaption></figure>
-      <figure><img src="/img/caser/marlow-1.jpg" alt="Annonse for Marlow" loading="lazy"><figcaption>Marlow</figcaption></figure>
+      <figure><img src="/img/caser/mokki-1.jpg" alt="Annonse for Mokki" loading="lazy"><figcaption>Mokki</figcaption></figure>
       <figure><img src="/img/caser/ur-2.jpg" alt="Annonse for Utvendigrenhold" loading="lazy"><figcaption>Utvendigrenhold</figcaption></figure>
     </div>
     <div class="center" style="margin-top:36px">
@@ -608,23 +630,33 @@ fbq('track','PageView');
       <h2 class="h-lg center" style="margin:6px 0 16px">Dette sier kundene våre:</h2>
       <div class="rev-score"><span class="n">94%</span><small>får større bunnlinje innen 3 måneder</small></div>
     </div>
-    <div class="rev-grid">
-      <div class="rev-card reveal">
+    <div class="rev-grid" id="revGrid">
+      <div class="rev-card reveal" data-rev="elliot">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;Veldig nice, vi får flere leads enn noensinne, vi får flere clicks enn noensinne!! Amazing&rdquo;</p>
         <div class="rev-by"><b>Elliot</b><span>Co-Founder, Badstugutta</span></div>
       </div>
-      <div class="rev-card reveal">
+      <div class="rev-card reveal" data-rev="mattis">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;Wow, selv statics som fungerer så bra! Super jobb dere, fantastisk.&rdquo;</p>
+        <div class="rev-by"><b>Mattis Ohana Goksøyr</b><span>CMO, Mokki</span></div>
+      </div>
+      <div class="rev-card reveal" data-rev="nathaniel">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;Vi har samarbeidet med Arcads på flere konsepter over tid &mdash; og samarbeider fremdeles. Kreative, profesjonelle og raske med tilbakemeldinger, og resultatene har hatt stor verdi. En partner vi stoler på.&rdquo;</p>
         <div class="rev-by"><b>Nathaniel Ayeh</b><span>Veldigrent.no &amp; Raskflytting.no</span></div>
       </div>
-      <div class="rev-card reveal">
+      <div class="rev-card reveal" data-rev="thommy">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p>&ldquo;Disse leverer above and beyond! Jeg har jobbet med 6-7 andre byråer før vi ble anbefalt Arcads. Det er en tidsepoke før og etter vi startet samarbeidet.&rdquo;</p>
+        <div class="rev-by"><b>Thommy Tellefsen</b><span>Leid.no</span></div>
+      </div>
+      <div class="rev-card reveal" data-rev="jonathan">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;Bra jobba boys! Very good.&rdquo;</p>
         <div class="rev-by"><b>Jonathan Rothe</b><span>Daglig leder, Utvendigrenhold</span></div>
       </div>
-      <div class="rev-card reveal">
+      <div class="rev-card reveal" data-rev="erle">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <p>&ldquo;Supert, dere er flinke &#128522; Nå synes jeg det ser veldig bra ut &#128522;&rdquo;</p>
         <div class="rev-by"><b>Erle Fjeldsaa</b><span>Daglig leder, Frøyd</span></div>
@@ -642,12 +674,11 @@ fbq('track','PageView');
       <p class="lede" style="margin:0 auto 28px">Vi tjener bare n&aring;r du tjener. Derfor passer vi sammen hvis du:</p>
     </div>
     <ul class="feat reveal" style="max-width:560px;margin:0 auto;text-align:left">
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Lever av henvendelser &mdash; h&aring;ndverk, klinikk, tjenester</h4></div></li>
-      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Har kapasitet til flere jobber n&aring;</h4></div></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 id="pf1">Lever av henvendelser &mdash; eller selger p&aring; nett</h4></div></li>
+      <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 id="pf2">Har kapasitet til &aring; vokse n&aring;</h4></div></li>
       <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Bruker 20&nbsp;000+ kr/mnd p&aring; annonser &mdash; eller er klar for det</h4></div></li>
     </ul>
-    <div class="notfor reveal">Nettbutikk? <a href="/analyse/">Denne siden</a> er for deg.</div>
-    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#book" class="cta jump"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
+    <div style="margin-top:34px;text-align:center" class="reveal"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a></div>
   </div>
 </section>
 
@@ -660,10 +691,10 @@ fbq('track','PageView');
     </div>
     <div class="faq reveal">
       <details open><summary>Hva skjer i den første praten?<span class="pm">+</span></summary><div class="ans">30 minutter med Victor. Vi viser hva vi ville bygget for deg. Ingen pitch. Analysen er din uansett.</div></details>
-      <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">0 kr oppstart, ingen binding. Vi tar betalt n&aring;r henvendelsene kommer. Modellen avtaler vi i den f&oslash;rste praten.</div></details>
-      <details><summary>Trenger jeg ny nettside?<span class="pm">+</span></summary><div class="ans">Nei. Vi bygger en egen landingsside. Nettsiden din st&aring;r ur&oslash;rt.</div></details>
-      <details><summary>Hvor fort kommer de f&oslash;rste henvendelsene?<span class="pm">+</span></summary><div class="ans">Annonser p&aring; 48 timer, side i l&oslash;pet av f&oslash;rste uke. Google gir som regel leads innen f&aring; dager.</div></details>
-      <details><summary>Hvordan vet jeg at det er dere som skaffet leadet?<span class="pm">+</span></summary><div class="ans">Hvert lead g&aring;r rett til deg med navn og telefon, og du ser alt i mandagsrapporten.</div></details>
+      <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">0 kr oppstart, ingen binding. Vi tar betalt n&aring;r resultatene kommer &mdash; henvendelser eller salg. Modellen avtaler vi i den f&oslash;rste praten.</div></details>
+      <details><summary>Trenger jeg ny nettside?<span class="pm">+</span></summary><div class="ans">Nei. Tjenestebedrift: vi bygger en egen landingsside, nettsiden din st&aring;r ur&oslash;rt. Nettbutikk: vi jobber i butikken du allerede har.</div></details>
+      <details><summary>Hvor fort ser jeg resultater?<span class="pm">+</span></summary><div class="ans">Annonser p&aring; 48 timer, landingsside i l&oslash;pet av f&oslash;rste uke. Google gir som regel de f&oslash;rste henvendelsene eller salgene innen f&aring; dager.</div></details>
+      <details><summary>Hvordan vet jeg at det er dere som skaffet kunden?<span class="pm">+</span></summary><div class="ans">Hvert lead g&aring;r rett til deg med navn og telefon. Salg spores i nettbutikken. Alt st&aring;r i mandagsrapporten.</div></details>
       <details><summary>Er det binding?<span class="pm">+</span></summary><div class="ans">Nei. Vi vinner deg på resultater, ikke på kontrakter.</div></details>
     </div>
   </div>
@@ -673,8 +704,8 @@ fbq('track','PageView');
 <section class="section" style="padding-top:0">
   <div class="wrap center reveal">
     <span class="eyebrow">Gratis &amp; uforpliktende</span>
-    <h2 class="h-lg" style="margin:12px 0 24px">Klar for at telefonen ringer oftere?</h2>
-    <a href="#book" class="cta lg jump"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
+    <h2 class="h-lg" style="margin:12px 0 24px" id="finH2">Klar for flere kunder?</h2>
+    <a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></a>
     <p style="font-size:0.86rem;color:var(--muted);margin-top:16px">Foretrekker du e-post? <a href="mailto:victor@arcads.no" style="color:var(--accent-deep);font-weight:600">victor@arcads.no</a></p>
   </div>
 </section>
@@ -684,20 +715,20 @@ fbq('track','PageView');
   <div class="wrap">
     <img src="/logos/arcads-logo.png" alt="Arcads" style="filter:brightness(0) invert(1)">
     <div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 fra kundene våre</div>
-    <div class="reg">Bygget i Skien av Victor &amp; Jona &middot; <a href="mailto:victor@arcads.no">victor@arcads.no</a> &middot; Arcads ANS<br>100% resultatbasert &mdash; du betaler først når henvendelsene kommer.</div>
+    <div class="reg">Bygget i Skien av Victor &amp; Jona &middot; <a href="mailto:victor@arcads.no">victor@arcads.no</a> &middot; Arcads ANS<br>100% resultatbasert &mdash; <span id="ftTxt">du betaler først når resultatene kommer</span>.</div>
   </div>
 </footer>
 
 <!-- ===== TIMED POPUP ===== -->
 <div class="modal-overlay" id="popup" aria-hidden="true">
-  <div class="modal" role="dialog" aria-modal="true" aria-label="Få en gratis lead-analyse">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Få en gratis analyse">
     <div class="mbody">
       <button class="close" id="popupClose" aria-label="Lukk">&#10005;</button>
       <div class="center">
         <h3 style="font-size:2rem;line-height:1.05;margin:4px 0 4px">Før du går!</h3>
-        <p style="font-size:1.02rem;color:var(--muted);margin-bottom:20px">Få en gratis lead-analyse av bedriften din</p>
+        <p style="font-size:1.02rem;color:var(--muted);margin-bottom:20px" id="ppP">Få en gratis analyse av bedriften din</p>
         <ul style="list-style:none;display:grid;gap:11px;justify-items:center;margin-bottom:22px">
-          <li style="display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:var(--ink2)"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; <b>0 kr før leadsene kommer</b></li>
+          <li style="display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:var(--ink2)"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; <b id="ppB">0 kr før resultatene kommer</b></li>
         </ul>
       </div>
       <div class="fmsg" id="formMsgModal">Takk! Victor ringer deg innen 1 virkedag.</div>
@@ -707,11 +738,11 @@ fbq('track','PageView');
           <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" inputmode="tel" required></div></div>
           <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
         </div>
-        <div class="qual" data-key="industry"><div class="q">Hva driver du med?</div><div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button></div></div>
+        <div class="qual" data-key="industry"><div class="q">Hva driver du med?</div><div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button></div></div>
         <div class="qual" data-key="budget"><div class="q">Annonsebudsjett i måneden?</div><div class="opts"><button type="button" class="opt" data-v="ingen">Ingen ennå</button><button type="button" class="opt" data-v="under-10k">Under 10 000</button><button type="button" class="opt" data-v="10-20k">10&ndash;20 000</button><button type="button" class="opt" data-v="20-50k">20&ndash;50 000</button><button type="button" class="opt" data-v="50k+">Over 50 000</button></div></div>
         <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal">
         <div class="ferr" id="formErrModal"></div>
-        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t">Få min gratis lead-analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
+        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
         <p style="font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center">Vi deler aldri detaljene dine med noen andre.</p>
       </form>
     </div>
@@ -722,7 +753,7 @@ fbq('track','PageView');
 /* ===== Konfig ===== */
 var ARCADS_LEAD_WEBHOOK = 'https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi'; // Make: scenario "Arcads LP leads" (6202084) → data store 133291 + Telegram
 var LEAD_SOURCE = 'arcads-leads';
-/* Kvalifisering: disse budsjettene + bransje != nettbutikk = kvalifisert lead (Meta-pixel «Lead»). Resten = «SubmitApplication». */
+/* Kvalifisering: disse budsjettene = kvalifisert lead (Meta-pixel «Lead»), uansett bransje (nettbutikk teller fra 16.09.2026). Resten = «SubmitApplication». */
 var QUALIFIED_BUDGETS = {'20-50k':1,'50k+':1};
 var QUALIFIED_MIN_LABEL = '20 000 kr/mnd';
 
@@ -738,7 +769,7 @@ document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 /* ===== lead submit → Make (+ on-device backup) ===== */
 function postTo(url,obj){if(!url)return;var b=new URLSearchParams();for(var k in obj){if(obj.hasOwnProperty(k)&&k.charAt(0)!=='_')b.append(k,obj[k]);}try{if(navigator.sendBeacon&&navigator.sendBeacon(url,b))return;}catch(e){}try{fetch(url,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()});}catch(e){}}
 function storeLead(o){try{var a=JSON.parse(localStorage.getItem('arcads_leads')||'[]');a.push(o);localStorage.setItem('arcads_leads',JSON.stringify(a.slice(-50)));}catch(e){}}
-function isQualified(industry,budget){return !!QUALIFIED_BUDGETS[budget] && industry!=='nettbutikk';}
+function isQualified(industry,budget){return !!QUALIFIED_BUDGETS[budget];}
 /* Steg 2: vis cal.com-bookingen i hero-kortet ETTER at leaden er sendt */
 function revealBooking(name){
   var lead=document.getElementById('leadStep');
@@ -760,7 +791,7 @@ function submitLead(f,msgEl,extraSource,onDone){
   var nameVal=f.name.value;
   var industry=f.industry.value, budget=f.budget.value;
   var qualified=isQualified(industry,budget);
-  var p={subject:'Nytt lead — Arcads LP (leads)',lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
+  var p={subject:'Nytt lead — Arcads LP (leads)'+(industry==='nettbutikk'?' · nettbutikk':''),lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
   /* Meta: kun kvalifiserte leads sendes som «Lead» — det er dét Meta skal lære av. Resten som «SubmitApplication». */
   try{if(window.fbq){if(qualified){fbq('track','Lead',{content_name:p.lead_source,content_category:industry});}else{fbq('track','SubmitApplication',{content_name:p.lead_source,content_category:industry,status:budget});}}}catch(e){}
@@ -787,16 +818,133 @@ if(overlay){
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
 }
 
-/* ---- URL-prefill fra annonsene: ?b=handverk|klinikk|flytting-renhold|finans|tjeneste (bransje) ---- */
+/* ---- MODUS: nøytral (standard) / lead / shop. Styres av ?b=… i annonse-URL-en eller bransjevalget i skjemaet ---- */
 var HERO_BY_INDUSTRY={
-  'handverk':'Flere jobber til håndverksbedriften din \u2014 du betaler først når de kommer',
-  'klinikk':'Flere bookinger til klinikken din \u2014 du betaler først når de kommer',
-  'flytting-renhold':'Flere oppdrag til flytte- eller renholdsbedriften din \u2014 du betaler først når de kommer',
-  'finans':'Flere kvalifiserte henvendelser \u2014 du betaler først når de kommer',
-  'tjeneste':'Flere henvendelser til bedriften din \u2014 du betaler først når de kommer'
+  'handverk':'Flere jobber til håndverksbedriften din — du betaler først når de kommer',
+  'klinikk':'Flere bookinger til klinikken din — du betaler først når de kommer',
+  'flytting-renhold':'Flere oppdrag til flytte- eller renholdsbedriften din — du betaler først når de kommer',
+  'finans':'Flere kvalifiserte henvendelser — du betaler først når de kommer',
+  'tjeneste':'Flere henvendelser til bedriften din — du betaler først når de kommer',
+  'nettbutikk':'Flere lønnsomme salg i nettbutikken din — du betaler først når de kommer'
 };
+var MODE_TEXT={
+  lead:{
+    stripTxt:'du betaler først når telefonen ringer',
+    bl1:'Annonser + egen landingsside — hele maskinen',
+    bl2:'Hvert lead rett på mobilen din, samme minutt',
+    bl3:'For håndverk, klinikker og tjenestebedrifter',
+    priceNow:'Hos oss: 0 kr før leadsene kommer',
+    fhB:'Få en gratis lead-analyse',
+    fQuote:'<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&laquo;Vi får flere leads enn noensinne&raquo; &mdash; <b>Elliot, Badstugutta</b>',
+    stats:'<div class="s"><div class="n">142</div><div class="t">leads på én uke for én kunde</div></div><div class="s"><div class="n">165 kr</div><div class="t">per lead på Meta &middot; Badstugutta</div></div><div class="s"><div class="n">94%</div><div class="t">får større bunnlinje innen 3 mnd</div></div><div class="s"><div class="n">10+</div><div class="t">nye annonser i uka</div></div>',
+    logoLbl:'Bedrifter som lever av henvendelser — og jobber med oss',
+    whyEye:'Hvorfor velger tjenestebedrifter Arcads?',
+    whyH2:'Flere jobber i innboksen er enklere enn du tror&hellip;',
+    f1p:'Kommer det ikke henvendelser, betaler du ikke.',
+    f2h:'Vi bygger hele maskinen', f2p:'Landingsside, annonser, sporing og varsling.',
+    f4p:'Brukt, henvendelser, pris per henvendelse. Ferdig.',
+    mH2:'Klikk inn. Henvendelse ut. Samme minutt.',
+    st1h:'Egen landingsside for tjenesten din', st1p:'Ikke forsiden. Én side, ett skjema. Lokal? Én per by.',
+    st2h:'Annonser på Google og Meta', st2p:'10+ nye i uka. Alt lager vi selv.',
+    st3h:'Leadet lander hos deg med en gang', st3p:'Navn, telefon og hva de trenger. Den som ringer først, får jobben.',
+    phLbl:'Lead-varsler',
+    phList:'<div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>09:12</span></div><div class="nt">Takvask &middot; Drammen</div><div class="nb">Enebolig, ønsker befaring denne uka</div></div><div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>10:47</span></div><div class="nt">Flyttevask &middot; Oslo vest</div><div class="nb">3-roms, utflytting 28.</div></div><div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>13:05</span></div><div class="nt">Konsultasjon &middot; klinikk</div><div class="nb">Vil booke time</div></div><div class="notif"><div class="nh"><b><i></i>Nytt lead</b><span>15:31</span></div><div class="nt">Fasadevask &middot; Skien</div><div class="nb">Næringsbygg, ønsker tilbud</div></div>',
+    p1:'Slutt på trafikk til forsiden — uten at noen ringer',
+    p2:'Slutt på rapporter med klikk — uten henvendelser',
+    p3:'Slutt på fakturaer i måneder uten leads',
+    dbH2:'Vi viser deg hvor henvendelsene lekker. Gratis.',
+    dbMicro:'du betaler først når henvendelsene kommer',
+    inc1:'<b>Landingsside</b> per tjeneste — og per by',
+    inc2:'Google + Meta-annonser — 10+ nye i uka',
+    inc3:'Lead-varsling til mobilen samme minutt',
+    inc4:'Sporing som teller henvendelser — ikke klikk',
+    caseH2:'Tall fra bedrifter som lever av henvendelser.',
+    pf1:'Lever av henvendelser — håndverk, klinikk, tjenester',
+    pf2:'Har kapasitet til flere jobber nå',
+    finH2:'Klar for at telefonen ringer oftere?',
+    ftTxt:'du betaler først når henvendelsene kommer',
+    ppP:'Få en gratis lead-analyse av bedriften din', ppB:'0 kr før leadsene kommer',
+    cta:'Få min gratis lead-analyse', ctaShort:'Få gratis lead-analyse',
+    cases:['ur','badstugutta','marlow','veldigrent'],
+    gallery:[['/img/caser/ur-1.jpg','Utvendigrenhold'],['/img/caser/marlow-1.jpg','Marlow'],['/img/caser/ur-2.jpg','Utvendigrenhold']],
+    revs:['elliot','nathaniel','jonathan','erle'],
+    goals:[['henvendelser','Henvendelser / tilbud'],['bookinger','Bookinger'],['telefoner','Telefoner'],['usikker','Usikker']]
+  },
+  shop:{
+    stripTxt:'du betaler først når salget kommer',
+    bl1:'Google Shopping, PMax og Meta — 10+ nye annonser i uka',
+    bl2:'Vi fikser sporingen først, så du ser hva som faktisk selger',
+    bl3:'Mandagsrapport: brukt, omsatt, ROAS',
+    priceNow:'Hos oss: 0 kr før salget kommer',
+    fhB:'Få en gratis nettbutikk-analyse',
+    fQuote:'<span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&laquo;Wow, selv statics som fungerer så bra!&raquo; &mdash; <b>Mattis, CMO Mokki</b>',
+    stats:'<div class="s"><div class="n">4,73x</div><div class="t">ROAS &middot; Leid.no</div></div><div class="s"><div class="n">+127%</div><div class="t">profitt år-over-år &middot; Mokki</div></div><div class="s"><div class="n">94%</div><div class="t">får større bunnlinje innen 3 mnd</div></div><div class="s"><div class="n">10+</div><div class="t">nye annonser i uka</div></div>',
+    logoLbl:'Nettbutikker og bedrifter som jobber med oss',
+    whyEye:'Hvorfor velger nettbutikker Arcads?',
+    whyH2:'Lønnsom skalering er enklere enn du tror&hellip;',
+    f1p:'Kommer det ikke salg, betaler du ikke.',
+    f2h:'Vi eier hele prosessen', f2p:'Creatives, kampanjer, sporing og produktfeed.',
+    f4p:'Brukt, omsatt, ROAS. Ferdig.',
+    mH2:'Klikk inn. Ordre ut. Lønnsomt.',
+    st1h:'Sporing og feed som faktisk stemmer', st1p:'Uten riktige tall skalerer ingen. Vi fikser det først.',
+    st2h:'Shopping, PMax og Meta-annonser', st2p:'10+ nye creatives i uka. Alt lager vi selv.',
+    st3h:'Skalering uten å gamble', st3p:'Vi øker budsjettet når tallene tåler det — ikke før. Du ser alt i mandagsrapporten.',
+    phLbl:'Ordre-varsler',
+    phList:'<div class="notif"><div class="nh"><b><i></i>Ny ordre</b><span>09:12</span></div><div class="nt">1&nbsp;490 kr &middot; Meta</div><div class="nb">2 produkter, ny kunde</div></div><div class="notif"><div class="nh"><b><i></i>Ny ordre</b><span>10:47</span></div><div class="nt">890 kr &middot; Google Shopping</div><div class="nb">1 produkt, ny kunde</div></div><div class="notif"><div class="nh"><b><i></i>Ny ordre</b><span>13:05</span></div><div class="nt">2&nbsp;980 kr &middot; PMax</div><div class="nb">3 produkter, tilbakevendende kunde</div></div><div class="notif"><div class="nh"><b><i></i>Ny ordre</b><span>15:31</span></div><div class="nt">1&nbsp;190 kr &middot; Meta</div><div class="nb">1 produkt, ny kunde</div></div>',
+    p1:'Slutt på ROAS-tall du ikke kan stole på',
+    p2:'Slutt på annonser som ser ut som alle andres',
+    p3:'Slutt på fakturaer i måneder uten salg',
+    dbH2:'Vi viser deg hvor pengene lekker i nettbutikken. Gratis.',
+    dbMicro:'du betaler først når salget kommer',
+    inc1:'<b>Google Shopping, PMax og Meta</b> — 10+ nye annonser i uka',
+    inc2:'Statics og video — alt lager vi selv',
+    inc3:'Sporing og produktfeed som stemmer',
+    inc4:'Mandagsrapport: brukt, omsatt, ROAS',
+    caseH2:'Tall fra ekte nettbutikker.',
+    pf1:'Driver nettbutikk med produkter som allerede selger',
+    pf2:'Har margin til å skalere lønnsomt',
+    finH2:'Klar for å skalere lønnsomt?',
+    ftTxt:'du betaler først når salget kommer',
+    ppP:'Få en gratis analyse av nettbutikken din', ppB:'0 kr før salget kommer',
+    cta:'Få min gratis nettbutikk-analyse', ctaShort:'Få gratis nettbutikk-analyse',
+    cases:['leid','mokki','ur','badstugutta'],
+    gallery:[['/img/caser/mokki-1.jpg','Mokki'],['/img/caser/mokki-2.jpg','Mokki'],['/img/caser/mokki-3.jpg','Mokki']],
+    revs:['mattis','thommy','elliot','nathaniel'],
+    goals:[['salg','Mer salg'],['nykunder','Nye kunder'],['roas','Bedre ROAS'],['usikker','Usikker']]
+  }
+};
+/* nøytral standard = det som ligger i HTML-en; fanges ved lasting */
+var NEUTRAL={cases:['ur','leid','badstugutta','mokki'],revs:['elliot','mattis','nathaniel','jonathan'],cta:'Få min gratis analyse',ctaShort:'Få gratis analyse',
+  goals:[['henvendelser','Henvendelser / tilbud'],['bookinger','Bookinger'],['salg','Salg i nettbutikken'],['usikker','Usikker']]};
+(function(){var m=MODE_TEXT.lead;for(var k in m){if(k==='cases'||k==='revs'||k==='cta'||k==='ctaShort'||k==='goals'||k==='gallery')continue;var el=document.getElementById(k);if(el)NEUTRAL[k]=el.innerHTML;}
+  var g=document.getElementById('gallery');if(g){NEUTRAL.gallery=[];g.querySelectorAll('figure').forEach(function(f){NEUTRAL.gallery.push([f.querySelector('img').getAttribute('src'),f.querySelector('figcaption').textContent]);});}
+  NEUTRAL.heroH1=document.getElementById('heroH1').innerHTML;})();
+var CURRENT_MODE=null;
+function orderPool(gridId,attr,order){var grid=document.getElementById(gridId);if(!grid)return;var all={};grid.querySelectorAll('['+attr+']').forEach(function(c){all[c.getAttribute(attr)]=c;c.hidden=true;});
+  order.forEach(function(k){var c=all[k];if(c){c.hidden=false;c.classList.add('in');grid.appendChild(c);}});}
+function setMode(mode,industry){
+  if(mode!=='lead'&&mode!=='shop')mode='';
+  var t=mode?MODE_TEXT[mode]:NEUTRAL;
+  /* H1: bransjespesifikk i lead-modus, nettbutikk i shop, nøytral ellers */
+  var h1=document.getElementById('heroH1');
+  if(h1){var txt=mode==='shop'?HERO_BY_INDUSTRY.nettbutikk:(mode==='lead'&&HERO_BY_INDUSTRY[industry]?HERO_BY_INDUSTRY[industry]:(mode==='lead'?HERO_BY_INDUSTRY.tjeneste:null));
+    if(txt)h1.textContent=txt;else h1.innerHTML=NEUTRAL.heroH1;}
+  if(mode===CURRENT_MODE)return;
+  CURRENT_MODE=mode;
+  for(var k in t){if(!t.hasOwnProperty(k))continue;if(k==='cases'||k==='revs'||k==='cta'||k==='ctaShort'||k==='goals'||k==='gallery'||k==='heroH1')continue;var el=document.getElementById(k);if(el&&typeof t[k]==='string'){el.innerHTML=t[k];el.classList.remove('mode-fade');void el.offsetWidth;el.classList.add('mode-fade');}}
+  document.querySelectorAll('.ctxt').forEach(function(c){c.textContent=(c.closest('.hero-mcta')?t.ctaShort:t.cta);});
+  orderPool('caseGrid','data-case',t.cases);
+  orderPool('revGrid','data-rev',t.revs);
+  var g=document.getElementById('gallery');if(g&&t.gallery){var figs=g.querySelectorAll('figure');t.gallery.forEach(function(x,i){if(!figs[i])return;figs[i].querySelector('img').src=x[0];figs[i].querySelector('img').alt='Annonse for '+x[1];figs[i].querySelector('figcaption').textContent=x[1];});}
+  var go=document.getElementById('goalOpts');if(go&&t.goals){var f=document.getElementById('leadForm');var keep=f&&f.goal?f.goal.value:'';go.innerHTML='';t.goals.forEach(function(x){var b=document.createElement('button');b.type='button';b.className='opt'+(x[0]===keep?' on':'');b.setAttribute('data-v',x[0]);b.textContent=x[1];go.appendChild(b);});
+    if(f&&f.goal&&keep&&!go.querySelector('.opt.on'))f.goal.value='';}
+  document.body.className=mode?'mode-'+mode:'';
+  try{if(window.gtag)gtag('event','lp_mode',{mode:mode||'neutral',industry:industry||''});}catch(e){}
+}
+function modeFor(industry){return industry==='nettbutikk'?'shop':(industry?'lead':'');}
 var PRESET_INDUSTRY=(function(){try{return new URLSearchParams(location.search).get('b')||'';}catch(e){return '';}})();
-if(PRESET_INDUSTRY&&HERO_BY_INDUSTRY[PRESET_INDUSTRY]){var h1=document.querySelector('.hero h1');if(h1)h1.textContent=HERO_BY_INDUSTRY[PRESET_INDUSTRY];}
+if(PRESET_INDUSTRY&&!HERO_BY_INDUSTRY[PRESET_INDUSTRY])PRESET_INDUSTRY='';
+setMode(modeFor(PRESET_INDUSTRY),PRESET_INDUSTRY);
 
 /* ---- wizard i hero (Badstugutta-stil): ett steg om gangen, auto-videre ---- */
 (function(){
@@ -824,22 +972,22 @@ if(PRESET_INDUSTRY&&HERO_BY_INDUSTRY[PRESET_INDUSTRY]){var h1=document.querySele
     g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
     b.classList.add('on');
     if(form[key])form[key].value=b.getAttribute('data-v')||b.textContent;
-    var hint=document.getElementById('shopHint');if(hint&&key==='industry')hint.style.display=(form[key].value==='nettbutikk')?'block':'none';
+    if(key==='industry')setMode(modeFor(form.industry.value),form.industry.value);
   }
   form.querySelectorAll('.qual').forEach(function(g){
-    g.querySelectorAll('.opt').forEach(function(b){
-      b.addEventListener('click',function(){
-        pick(g,b);
-        var st=g.closest('.wstep'),qs=st?st.querySelectorAll('.qual'):[],done=true;
-        for(var i=0;i<qs.length;i++){if(!qs[i].querySelector('.opt.on')){done=false;break;}}
-        if(done)setTimeout(function(){show(cur+1);},form.industry.value==='nettbutikk'&&cur===0?900:250);
-      });
+    g.addEventListener('click',function(e){
+      var b=e.target.closest('.opt');if(!b||!g.contains(b))return;
+      pick(g,b);
+      var st=g.closest('.wstep'),qs=st?st.querySelectorAll('.qual'):[],done=true;
+      for(var i=0;i<qs.length;i++){if(!qs[i].querySelector('.opt.on')){done=false;break;}}
+      if(done)setTimeout(function(){show(cur+1);},250);
     });
   });
   if(back)back.addEventListener('click',function(){show(cur-1);});
   show(0);
   /* forhåndsvalgt bransje fra URL → hopp rett til steg 2 */
   if(PRESET_INDUSTRY){var g=form.querySelector('.qual[data-key="industry"]');var b=g?g.querySelector('.opt[data-v="'+PRESET_INDUSTRY+'"]'):null;if(b){pick(g,b);show(1);}}
+  /* reset() etter innsending nullstiller ikke pills/modus — det er greit, siden booking-steget tar over */
 })();
 /* ---- popup-pills (uten steg) ---- */
 (function(){
@@ -851,6 +999,7 @@ if(PRESET_INDUSTRY&&HERO_BY_INDUSTRY[PRESET_INDUSTRY]){var h1=document.querySele
         g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
         b.classList.add('on');
         if(f[key])f[key].value=b.getAttribute('data-v')||b.textContent;
+        if(key==='industry')setMode(modeFor(f.industry.value),f.industry.value);
       });
     });
   });
@@ -885,10 +1034,10 @@ Cal.config.forwardQueryParams = true;
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Hva skjer i den første praten?","acceptedAnswer":{"@type":"Answer","text":"30 minutter med Victor. Vi viser hva vi ville bygget for deg. Ingen pitch. Analysen er din uansett."}},
-{"@type":"Question","name":"Hva koster det?","acceptedAnswer":{"@type":"Answer","text":"0 kr oppstart, ingen binding. Vi tar betalt når henvendelsene kommer. Modellen avtaler vi i den første praten."}},
-{"@type":"Question","name":"Trenger jeg ny nettside?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi bygger en egen landingsside. Nettsiden din står urørt."}},
-{"@type":"Question","name":"Hvor fort kommer de første henvendelsene?","acceptedAnswer":{"@type":"Answer","text":"Annonser på 48 timer, side i løpet av første uke. Google gir som regel leads innen få dager."}},
-{"@type":"Question","name":"Hvordan vet jeg at det er dere som skaffet leadet?","acceptedAnswer":{"@type":"Answer","text":"Hvert lead går rett til deg med navn og telefon, og du ser alt i mandagsrapporten."}},
+{"@type":"Question","name":"Hva koster det?","acceptedAnswer":{"@type":"Answer","text":"0 kr oppstart, ingen binding. Vi tar betalt når resultatene kommer — henvendelser eller salg. Modellen avtaler vi i den første praten."}},
+{"@type":"Question","name":"Trenger jeg ny nettside?","acceptedAnswer":{"@type":"Answer","text":"Nei. Tjenestebedrift: vi bygger en egen landingsside, nettsiden din står urørt. Nettbutikk: vi jobber i butikken du allerede har."}},
+{"@type":"Question","name":"Hvor fort ser jeg resultater?","acceptedAnswer":{"@type":"Answer","text":"Annonser på 48 timer, landingsside i løpet av første uke. Google gir som regel de første henvendelsene eller salgene innen få dager."}},
+{"@type":"Question","name":"Hvordan vet jeg at det er dere som skaffet kunden?","acceptedAnswer":{"@type":"Answer","text":"Hvert lead går rett til deg med navn og telefon. Salg spores i nettbutikken. Alt står i mandagsrapporten."}},
 {"@type":"Question","name":"Er det binding?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi vinner deg på resultater, ikke på kontrakter."}}
 ]}
 </script>
