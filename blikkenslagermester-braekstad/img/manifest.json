@@ -1,0 +1,74 @@
+[
+ {
+  "fil": "hero.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1418302049912-V91ROMGSVWN00CXD9AHN/tonstad.jpg",
+  "bredde": 1700,
+  "hoyde": 1275,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/kontakt",
+  "brukt": true
+ },
+ {
+  "fil": "oppdal-montor.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1666173225230-JNWHMV2YCJV8OB4V4TR6/DJI_0445.JPG",
+  "bredde": 1800,
+  "hoyde": 1350,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/privatkunde-p-oppdal",
+  "brukt": true
+ },
+ {
+  "fil": "kobbertaarn.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1666269414208-N1BEJI1VPOYOIMG23UQF/photo%2B4.jpg",
+  "bredde": 1800,
+  "hoyde": 1350,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/omoss",
+  "brukt": true
+ },
+ {
+  "fil": "oppdal-tak.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1666173170446-TJK3LBRW0KM4YBJ5W234/saulens.JPG",
+  "bredde": 1800,
+  "hoyde": 1350,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/privatkunde-p-oppdal",
+  "brukt": true
+ },
+ {
+  "fil": "taarn.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1418030326382-L9O1K8CFRSI7KPU0USRV/tak_01.jpg",
+  "bredde": 1800,
+  "hoyde": 1184,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/",
+  "brukt": true
+ },
+ {
+  "fil": "teamet.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1667980391074-VF9IY38D5GIXCB250PFH/IMG_5641.JPG",
+  "bredde": 1800,
+  "hoyde": 1350,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/omoss",
+  "brukt": true
+ },
+ {
+  "fil": "verksted.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1667980948031-V6YCEU68SXO8K5ASFPBU/Verksted.jpeg",
+  "bredde": 1000,
+  "hoyde": 750,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/omoss",
+  "brukt": true
+ },
+ {
+  "fil": "klaebu.webp",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/548568dce4b0e99ec57a8163/1668167311386-3O8ARJJCJBLYX8I7L4UI/IMG_5631.JPG",
+  "bredde": 1800,
+  "hoyde": 1350,
+  "alt": "",
+  "side": "https://www.blikkenslagermestern.no/omoss",
+  "brukt": true
+ }
+]
