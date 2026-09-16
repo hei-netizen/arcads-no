@@ -1,0 +1,58 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/09/Bygg-1-scaled.jpg",
+  "bredde": 1920,
+  "hoyde": 1030,
+  "alt": "Auto Nord AS i Kongsveien 39, Harstad",
+  "side": "https://www.autonordas.no/om-oss/"
+ },
+ {
+  "fil": "bygg.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/09/Bygg-1-scaled.jpg",
+  "bredde": 1920,
+  "hoyde": 1030,
+  "alt": "Auto Nord AS i Kongsveien 39, Harstad",
+  "side": "https://www.autonordas.no/om-oss/"
+ },
+ {
+  "fil": "verksted.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/09/Bygg-1-scaled.jpg (beskåret høyre del, verkstedinngangen)",
+  "bredde": 922,
+  "hoyde": 855,
+  "alt": "Verkstedinngangen hos Auto Nord",
+  "side": "https://www.autonordas.no/om-oss/"
+ },
+ {
+  "fil": "dragracer.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/10/10362782_778521022193041_1871199001121039006_o-min-768x512-1.jpg",
+  "bredde": 768,
+  "hoyde": 512,
+  "alt": "Verksmester Vidar på tur til en kunde (dragracer med Auto Nord-logo)",
+  "side": "https://www.autonordas.no/verkstedtjenester/"
+ },
+ {
+  "fil": "vidar.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/09/Ansatt7.jpg",
+  "bredde": 680,
+  "hoyde": 800,
+  "alt": "Vidar M. Pettersen, verksmester / teknisk leder",
+  "side": "https://www.autonordas.no/ansatte/"
+ },
+ {
+  "fil": "daniel.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/09/Daniel-G.jpg",
+  "bredde": 383,
+  "hoyde": 500,
+  "alt": "Daniel Gjerdin, verkstedformann / tekniker og kundemottak",
+  "side": "https://www.autonordas.no/ansatte/"
+ },
+ {
+  "fil": "toni.jpg",
+  "kilde": "https://www.autonordas.no/wp-content/uploads/2022/09/Toni.jpg",
+  "bredde": 680,
+  "hoyde": 824,
+  "alt": "Toni Jensen, kundemottak / deler",
+  "side": "https://www.autonordas.no/ansatte/"
+ }
+]
