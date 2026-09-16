@@ -1,0 +1,12 @@
+[
+ {"fil":"hero.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/2025/10/bryne-bil-fasade.jpg","side":"https://www.brynebil.no/om-oss/","bruk":"hero (fasaden i Vesthagen 11 med verkstedportene)"},
+ {"fil":"butikk.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/2025/10/bryne-bil-butikk.jpg","side":"https://www.brynebil.no/om-oss/ (og:image)","bruk":"karusell (kundemottak/butikk innvendig)"},
+ {"fil":"verksted.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/2026/01/bryne-bil-bilverksted.jpg","side":"https://www.brynebil.no/ (og:image)","bruk":"karusell + tilbuds-tile (mekaniker i verkstedet)"},
+ {"fil":"porsche.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/2025/10/IMG_4252-scaled-1.jpg","side":"https://www.brynebil.no/eu-kontroll/","bruk":"inc-card (mekaniker i verkstedet, eget foto)"},
+ {"fil":"jorgen.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/bb-plugin/cache/Jorgen-Abelsnes-square-*.jpg","side":"https://www.brynebil.no/kontakt/","bruk":"folkene (verksmester bilskade)"},
+ {"fil":"heidi.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/bb-plugin/cache/Heidi-Marlen-Dahl-square-*.jpg","side":"https://www.brynebil.no/kontakt/","bruk":"folkene (servicerådgiver)"},
+ {"fil":"siri.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/bb-plugin/cache/20260518_1218431-square-*.jpg","side":"https://www.brynebil.no/kontakt/","bruk":"folkene (servicerådgiver)"},
+ {"fil":"morten.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/bb-plugin/cache/Morten-Abelsnes--square-*.jpg","side":"https://www.brynebil.no/kontakt/","bruk":"ikke brukt på siden (daglig leder)"},
+ {"fil":"rune.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/bb-plugin/cache/rune-haaland-square-*.jpg","side":"https://www.brynebil.no/kontakt/","bruk":"ikke brukt (koordinator)"},
+ {"fil":"anniren.jpg","kilde":"https://www.brynebil.no/wp-content/uploads/bb-plugin/cache/Ann-Iren-Dale-square-*.jpg","side":"https://www.brynebil.no/kontakt/","bruk":"ikke brukt (koordinator)"}
+]
