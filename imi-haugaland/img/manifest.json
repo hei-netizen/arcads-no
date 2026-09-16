@@ -1,0 +1,90 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08185.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Gravferdskonsulent hos iMi tenner lys i kapellet",
+  "side": "https://imibb.no/"
+ },
+ {
+  "fil": "kapell-kiste.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08080.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Hvit kiste med blomster i kapellet hos iMi",
+  "side": "https://imibb.no/"
+ },
+ {
+  "fil": "konsulent-kapell.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08109.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Gravferdskonsulent hos iMi i kapellet",
+  "side": "https://imibb.no/"
+ },
+ {
+  "fil": "musikk-kapell.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08142.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Gravferdskonsulent hos iMi ved instrument i kapellet",
+  "side": "https://imibb.no/"
+ },
+ {
+  "fil": "konsulent-smil.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08099.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Gravferdskonsulent hos iMi i kapellet",
+  "side": "https://imibb.no/om-oss.html"
+ },
+ {
+  "fil": "lys.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08153.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Lys tennes i kapellet hos iMi",
+  "side": "https://imibb.no/informasjon.html"
+ },
+ {
+  "fil": "blomster.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08046.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Blomsterdekorasjon til seremoni",
+  "side": "https://imibb.no/produkter.html"
+ },
+ {
+  "fil": "kiste-blomster.jpg",
+  "kilde": "https://imibb.no/assets/images/EFA08175.jpg",
+  "bredde": 2000,
+  "hoyde": 1333,
+  "alt": "Kiste med blomsterdekorasjon",
+  "side": "https://imibb.no/priser.html"
+ },
+ {
+  "fil": "team-sigurd.jpg",
+  "kilde": "https://imibb.no/assets/images/sigurd.jpg",
+  "bredde": 500,
+  "hoyde": 500,
+  "alt": "Sigurd Johan Mevik, byråleder",
+  "side": "https://imibb.no/kontakt.html"
+ },
+ {
+  "fil": "team-dag.jpg",
+  "kilde": "https://imibb.no/assets/images/dag.jpg",
+  "bredde": 500,
+  "hoyde": 501,
+  "alt": "Dag Vister Hansen, gravferdskonsulent",
+  "side": "https://imibb.no/kontakt.html"
+ },
+ {
+  "fil": "team-norfrid.jpg",
+  "kilde": "https://imibb.no/assets/images/norfrid.jpg",
+  "bredde": 500,
+  "hoyde": 500,
+  "alt": "Norfrid Helen Lønning, gravferdskonsulent",
+  "side": "https://imibb.no/kontakt.html"
+ }
+]
