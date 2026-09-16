@@ -1,0 +1,50 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://www.energitec.no/bilder/boxContent4/fellesBilde2.jpg",
+  "bredde": 2000,
+  "hoyde": 972,
+  "alt": "Rørlegger fra Energitec monterer ventil på verkstedet i Skoppum",
+  "side": "https://www.energitec.no/"
+ },
+ {
+  "fil": "team.jpg",
+  "kilde": "https://www.energitec.no/bilder/slider/FellesbildeCropped.jpg",
+  "bredde": 1600,
+  "hoyde": 733,
+  "alt": "Folkene i Energitec AS",
+  "side": "https://www.energitec.no/"
+ },
+ {
+  "fil": "arbeid.jpg",
+  "kilde": "https://www.energitec.no/bilder/tjenester/Service/Service 2.jpg",
+  "bredde": 795,
+  "hoyde": 500,
+  "alt": "Rørlegger fra Energitec i arbeid",
+  "side": "https://www.energitec.no/"
+ },
+ {
+  "fil": "ferdig-bad.jpg",
+  "kilde": "https://www.energitec.no/bilder/tjenester/KomplettSaniteranlegg/1 Ferdig Bad.jpg",
+  "bredde": 795,
+  "hoyde": 500,
+  "alt": "Ferdig bad levert av Energitec",
+  "side": "https://www.energitec.no/"
+ },
+ {
+  "fil": "rorinspeksjon.jpg",
+  "kilde": "https://www.energitec.no/bilder/tjenester/Rorinspeksjon/Inspeksjon 2 795 500.jpg",
+  "bredde": 794,
+  "hoyde": 500,
+  "alt": "Rørkamera i bruk ved rørinspeksjon",
+  "side": "https://www.energitec.no/"
+ },
+ {
+  "fil": "fasade.jpg",
+  "kilde": "https://www.energitec.no/bilder/slider/Fasade Solnedgang.jpg",
+  "bredde": 1600,
+  "hoyde": 597,
+  "alt": "Energitec sine lokaler i Tverrmyra 7B på Skoppum",
+  "side": "https://www.energitec.no/"
+ }
+]
