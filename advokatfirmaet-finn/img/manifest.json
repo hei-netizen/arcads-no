@@ -1,0 +1,50 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://cdn.prod.website-files.com/63bd4a4642b19a463ef5bba1/69a1a95c3c228f28ac055327_julie%20og%20Even%20test.jpg",
+  "bredde": 1800,
+  "hoyde": 1243,
+  "alt": "Julie Opgård Olsen og Even Ramstad foran FINN-banneret",
+  "side": "https://www.advokatfirmaetfinn.no"
+ },
+ {
+  "fil": "team.jpg",
+  "kilde": "https://cdn.prod.website-files.com/63bd4a4642b19a7324f5bb8d/69dd37605f46654fd436c93b_6968a0149a1d61d8ec79f777_bilde%20-20250930-072847-ce44dd25.jpeg",
+  "bredde": 1080,
+  "hoyde": 1440,
+  "alt": "Folkene i Advokatfirmaet FINN",
+  "side": "https://www.advokatfirmaetfinn.no"
+ },
+ {
+  "fil": "advokat-portrett.jpg",
+  "kilde": "https://cdn.prod.website-files.com/63bd4a4642b19a463ef5bba1/69ef48df7b61a0a0d163ea85_bilde%20-20250930-073248-f77b1498.jpeg",
+  "bredde": 1350,
+  "hoyde": 1800,
+  "alt": "Medarbeider i Advokatfirmaet FINN",
+  "side": "https://www.advokatfirmaetfinn.no"
+ },
+ {
+  "fil": "kollegaer.jpg",
+  "kilde": "https://cdn.prod.website-files.com/63bd4a4642b19a7324f5bb8d/66f26c83e56c7076c6be36d4_IMG_8047.jpg",
+  "bredde": 1350,
+  "hoyde": 1800,
+  "alt": "To av medarbeiderne i Advokatfirmaet FINN",
+  "side": "https://www.advokatfirmaetfinn.no/om-oss"
+ },
+ {
+  "fil": "harstad-kontor.jpg",
+  "kilde": "https://cdn.prod.website-files.com/63bd4a4642b19a7324f5bb8d/66f26fa37564404dbfc9ebc3_harstad%202.jpg",
+  "bredde": 1350,
+  "hoyde": 1800,
+  "alt": "Kontoret i Harstad, Hans Egedes gate 19",
+  "side": "https://www.advokatfirmaetfinn.no/om-oss"
+ },
+ {
+  "fil": "tromso-kontor.jpg",
+  "kilde": "https://cdn.prod.website-files.com/63bd4a4642b19a7324f5bb8d/671a54d973fcda5e0711b3ac_tromsm%C3%B8%20kontor%202.jpg",
+  "bredde": 1350,
+  "hoyde": 1800,
+  "alt": "Venterommet på kontoret i Tromsø, Grønnegata 72",
+  "side": "https://www.advokatfirmaetfinn.no/om-oss"
+ }
+]
