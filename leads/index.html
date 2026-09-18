@@ -1030,7 +1030,14 @@ Cal.config.forwardQueryParams = true;
     if(window.__arcadsCalMounted) return; window.__arcadsCalMounted = true;
     Cal.ns["30min"]("inline", {
       elementOrSelector:"#my-cal-inline-30min",
-      config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+      config: (function(){
+        /* Prefill fra skjemaet (sessionStorage arcads_form_v1) — navn/e-post/telefon skal ikke skrives inn på nytt i bookingen */
+        var c={"layout":"month_view","useSlotsViewOnSmallScreen":"true"},o={};
+        try{o=JSON.parse(sessionStorage.getItem('arcads_form_v1')||'{}');}catch(e){}
+        if(o.name)c.name=o.name;
+        if(o.email)c.email=o.email;
+        if(o.phone){c.attendeePhoneNumber=o.phone;c.phone=o.phone;}
+        return c;})(),
       calLink: "arcads/30min",
     });
   };
