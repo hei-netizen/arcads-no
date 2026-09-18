@@ -692,7 +692,7 @@ var overlay=document.getElementById('popup');
 function closePopup(){if(!overlay)return;overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('arcads_popup_done','1');}catch(e){}}
 if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('arcads_popup_done')||sessionStorage.getItem('arcads_lead_done');}catch(e){return false;}};
-  var openPopup=function(){if(popupSeen())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
+  var openPopup=function(){if(popupSeen()||(window.arcadsPopupBlocked&&window.arcadsPopupBlocked()))return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
   setTimeout(openPopup,20000);
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
@@ -735,6 +735,55 @@ Cal.config.forwardQueryParams = true;
 {"@type":"Question","name":"Er det binding?","acceptedAnswer":{"@type":"Answer","text":"Nei. Vi vinner deg på resultater, ikke på kontrakter."}},
 {"@type":"Question","name":"Hvor raskt er dere i gang?","acceptedAnswer":{"@type":"Answer","text":"Typisk 48 timer fra brief til første ferdige annonse. Vi lager alt selv, så det er ingen freelancere eller byråpartnere å vente på."}}
 ]}
+</script>
+
+<!-- ===== SKJEMA-MINNE + POPUP-SPERRE (18.09.2026) =====
+     1) Alt brukeren fyller inn (pills + felter) lagres i sessionStorage og fylles inn igjen ved reload / i popup-skjemaet.
+     2) Popupen («Før du går») åpnes ALDRI mens brukeren jobber i skjemaet eller har skjemaet på skjermen. -->
+<script>
+(function(){
+  var KEY='arcads_form_v1',forms=[].slice.call(document.querySelectorAll('form#leadForm,form#leadFormModal'));
+  if(!forms.length)return;
+  var hero=document.getElementById('leadForm')||forms[0];
+  function load(){try{return JSON.parse(sessionStorage.getItem(KEY)||'{}');}catch(e){return {};}}
+  function save(o){try{sessionStorage.setItem(KEY,JSON.stringify(o));}catch(e){}}
+  function touch(){window.arcadsFormTouched=true;try{sessionStorage.setItem('arcads_form_touched','1');}catch(e){}}
+  try{if(sessionStorage.getItem('arcads_form_touched'))window.arcadsFormTouched=true;}catch(e){}
+  /* --- lagre --- */
+  function collect(f){var o=load();[].forEach.call(f.querySelectorAll('input[name],select[name],textarea[name]'),function(el){
+    if(el.type==='hidden'||el.classList.contains('hp')||el.name==='company')return;
+    if(el.type==='checkbox'||el.type==='radio'){if(el.checked)o[el.name]=el.value;return;}
+    if(el.value)o[el.name]=el.value;});
+    [].forEach.call(f.querySelectorAll('.qual[data-key]'),function(g){var on=g.querySelector('.opt.on');if(on)o[g.getAttribute('data-key')]=on.getAttribute('data-v')||on.textContent;});
+    save(o);return o;}
+  /* --- fyll inn tekstfelt (aldri overskriv noe brukeren har skrevet) --- */
+  function fillText(f,o){[].forEach.call(f.querySelectorAll('input[name],select[name],textarea[name]'),function(el){
+    if(el.type==='hidden'||el.classList.contains('hp')||el.name==='company')return;
+    var v=o[el.name];if(v==null)return;
+    if(el.type==='checkbox'||el.type==='radio'){el.checked=(el.value===v);return;}
+    if(!el.value)el.value=v;});}
+  /* --- fyll inn pills sekvensielt (klikk → siden sin egen wizard-logikk kjører, inkl. modusbytte) --- */
+  function fillPills(f,o){var groups=[].slice.call(f.querySelectorAll('.qual[data-key]')),i=0;
+    (function next(){if(i>=groups.length)return;var g=groups[i++],v=o[g.getAttribute('data-key')];
+      if(v&&!g.querySelector('.opt.on')){var b=g.querySelector('.opt[data-v="'+v.replace(/"/g,'')+'"]');if(b){b.click();setTimeout(next,320);return;}}
+      next();})();}
+  var saved=load();
+  forms.forEach(function(f){
+    fillText(f,saved);
+    f.addEventListener('input',function(){collect(f);touch();forms.forEach(function(g){if(g!==f)fillText(g,load());});});
+    f.addEventListener('change',function(){collect(f);touch();});
+    f.addEventListener('focusin',touch);
+    f.addEventListener('click',function(e){if(e.target.closest('.opt,button,input,select,label'))touch();if(e.target.closest('.opt'))setTimeout(function(){collect(f);},0);});
+  });
+  var hasPills=Object.keys(saved).some(function(k){return hero.querySelector('.qual[data-key="'+k+'"]');});
+  if(hasPills){var t=window.arcadsFormTouched;fillPills(hero,saved);}
+  /* --- popup-sperre: åpne aldri når skjemaet er berørt eller synlig --- */
+  function formVisible(){var r=hero.getBoundingClientRect();return r.bottom>0&&r.top<window.innerHeight;}
+  window.arcadsPopupBlocked=function(){return !!window.arcadsFormTouched||formVisible();};
+  /* speil hero-verdier inn i popup-skjemaet i det popupen åpnes */
+  var ov=document.getElementById('popup');
+  if(ov&&window.MutationObserver){new MutationObserver(function(){if(ov.classList.contains('show'))forms.forEach(function(g){fillText(g,load());});}).observe(ov,{attributes:true,attributeFilter:['class']});}
+})();
 </script>
 </body>
 </html>
