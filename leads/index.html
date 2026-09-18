@@ -90,7 +90,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .topbar .rate small{color:var(--muted);font-weight:500}
 .strip{background:var(--dark);color:#fff;text-align:center;padding:13px 16px;font-size:1.02rem;font-weight:700;letter-spacing:.02em}
 .strip b{color:var(--accent)}
-@media(max-width:600px){.strip{font-size:0.88rem}}
+@media(max-width:600px){.strip{font-size:0.88rem}.strip .dash{display:none}}
 
 /* ---- hero ---- */
 .hero{padding:36px 0 56px}
@@ -171,7 +171,38 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 }
 @media(max-width:480px){
   .h-xl{font-size:1.8rem}
-  .strip{font-size:0.8rem}
+  .h-lg{font-size:1.45rem}
+  .strip{font-size:0.82rem;padding:10px 14px}.strip b,.strip .sep{display:none}#stripTxt::first-letter{text-transform:uppercase}
+  .topbar{padding:14px 16px 8px}.topbar img{height:32px;margin-bottom:6px}
+  .hero{padding:22px 0 34px}
+  .hero h1{margin:0 0 12px}
+  .blist{gap:8px;margin-bottom:16px}
+  .blist li{font-size:0.92rem;font-weight:500}
+  .blist .chk{width:19px;height:19px}.blist .chk svg{width:10px;height:10px}
+  .priceblock{margin-bottom:16px;gap:1px}
+  .priceblock .ord{font-size:0.72rem}
+  .priceblock .now{font-size:1.15rem}
+  .hero-mcta{margin-bottom:14px}
+  .hero-mcta .cta{width:100%;padding:14px 24px}
+  .faces{display:none}
+  .hero-grid{gap:18px}
+  .formcard{padding:20px 18px}
+  .formcard .fhead b{font-size:1.15rem}
+  .formcard .fhead span{margin:4px 0 12px;font-size:0.82rem}
+  .qual .opt{padding:8px 13px;font-size:0.84rem}
+  .fquote{margin-top:10px;font-size:0.8rem}
+  .stats .s{padding:18px 8px}.stats .n{font-size:1.6rem}.stats .t{font-size:0.74rem}
+  .logowall{padding:20px 16px}.logowall .lbl{font-size:0.64rem;margin-bottom:12px}
+  .logowall img{height:24px}.logowall .row{gap:12px 22px}
+  .section{padding:40px 0}
+  .machine{margin-top:26px;gap:22px}
+  .steps li{padding:14px 16px}
+  .pain{margin-top:26px;gap:10px}.pain .row{padding:13px 16px;font-size:0.94rem}
+  .darkband{padding:36px 20px}.darkband .codebox{padding:9px 14px}.darkband .codebox b{font-size:0.95rem}
+  .casegrid{margin-top:26px;gap:12px}.casecard{padding:22px 20px;min-height:0}
+  .rev-grid{margin-top:26px;gap:12px}.rev-card{padding:20px 18px}
+  .faq{margin-top:26px}
+  .cta.lg{padding:16px 30px}.cta.lg .t{font-size:1.02rem}
 }
 
 /* ---- proof band ---- */
@@ -309,10 +340,15 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .modal{background:var(--bg);border-radius:24px;max-width:520px;width:100%;overflow:auto;max-height:92vh;box-shadow:0 50px 100px -30px rgba(0,0,0,.55);transform:translateY(20px) scale(.97);transition:.35s cubic-bezier(.2,.7,.2,1)}
 .modal-overlay.show .modal{transform:none}
 .modal .mbody{padding:34px 32px;position:relative}
-.modal .mbody h3{font-size:1.7rem;margin:12px 0 8px}
+.modal .mbody h3{font-size:1.6rem;margin:10px auto 10px;max-width:18ch;line-height:1.1}
+.modal .mbody p{font-size:0.98rem;color:var(--muted);margin:0 auto 20px;max-width:34ch;line-height:1.5}
+.modal .mbody p b{color:var(--ink)}
+.modal .mbody .cta{width:100%}
+.modal .pfine{font-size:0.76rem!important;margin:12px 0 0!important;color:var(--faint)!important}
 .modal .close{position:absolute;top:13px;right:15px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:0.95rem;color:var(--muted);transition:.2s}
 .modal .close:hover{background:var(--ink);color:#fff}
-@media(max-width:620px){.modal .mbody{padding:28px 22px}}
+@media(max-width:620px){.modal .mbody{padding:30px 22px 24px}.modal .mbody h3{font-size:1.4rem}}
+.modal{max-width:440px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.7,.2,1)}
@@ -352,7 +388,7 @@ fbq('track','PageView');
 </div>
 
 <!-- ===== CAMPAIGN STRIP ===== -->
-<div class="strip">&ndash; <b>100% resultatbasert</b> &middot; <span id="stripTxt">du betaler først når resultatene kommer</span> &ndash;</div>
+<div class="strip"><span class="dash">&ndash; </span><b>100% resultatbasert</b><span class="sep"> &middot; </span><span id="stripTxt">du betaler først når resultatene kommer</span><span class="dash"> &ndash;</span></div>
 
 <!-- ===== HERO ===== -->
 <section class="hero">
@@ -719,32 +755,16 @@ fbq('track','PageView');
   </div>
 </footer>
 
-<!-- ===== TIMED POPUP ===== -->
+<!-- ===== TIMED POPUP (kun knapp → hovedskjemaet) ===== -->
 <div class="modal-overlay" id="popup" aria-hidden="true">
   <div class="modal" role="dialog" aria-modal="true" aria-label="Få en gratis analyse">
-    <div class="mbody">
+    <div class="mbody center">
       <button class="close" id="popupClose" aria-label="Lukk">&#10005;</button>
-      <div class="center">
-        <h3 style="font-size:2rem;line-height:1.05;margin:4px 0 4px">Før du går!</h3>
-        <p style="font-size:1.02rem;color:var(--muted);margin-bottom:20px" id="ppP">Få en gratis analyse av bedriften din</p>
-        <ul style="list-style:none;display:grid;gap:11px;justify-items:center;margin-bottom:22px">
-          <li style="display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:var(--ink2)"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; <b id="ppB">0 kr før resultatene kommer</b></li>
-        </ul>
-      </div>
-      <div class="fmsg" id="formMsgModal">Takk! Victor ringer deg innen 1 virkedag.</div>
-      <form id="leadFormModal" novalidate>
-        <div class="field"><label for="m_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Fornavn og etternavn" required></div></div>
-        <div class="f2">
-          <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" inputmode="tel" required></div></div>
-          <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
-        </div>
-        <div class="qual" data-key="industry"><div class="q">Hva driver du med?</div><div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button></div></div>
-        <div class="qual" data-key="budget"><div class="q">Annonsebudsjett i måneden?</div><div class="opts"><button type="button" class="opt" data-v="ingen">Ingen ennå</button><button type="button" class="opt" data-v="under-10k">Under 10 000</button><button type="button" class="opt" data-v="10-20k">10&ndash;20 000</button><button type="button" class="opt" data-v="20-50k">20&ndash;50 000</button><button type="button" class="opt" data-v="50k+">Over 50 000</button></div></div>
-        <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal">
-        <div class="ferr" id="formErrModal"></div>
-        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
-        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center">Vi deler aldri detaljene dine med noen andre.</p>
-      </form>
+      <span class="eyebrow">Før du går</span>
+      <h3 id="ppH">Få en gratis analyse av bedriften din</h3>
+      <p id="ppP">30 minutter med Victor. 100% resultatbasert &mdash; <b id="ppB">0 kr før resultatene kommer</b>.</p>
+      <a href="#book" class="cta jump" id="popupGo"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tre raske spørsmål &middot; 30 sekunder</span></a>
+      <p class="pfine">Gratis &middot; uforpliktende &middot; ingen binding</p>
     </div>
   </div>
 </div>
@@ -759,7 +779,7 @@ var QUALIFIED_MIN_LABEL = '20 000 kr/mnd';
 
 /* ---- smooth scroll ---- */
 function scrollToY(y,dur){var s=window.pageYOffset,d=y-s,t0=null;function f(t){if(t0===null)t0=t;var p=Math.min((t-t0)/dur,1);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;window.scrollTo(0,s+d*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
-document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(!h||h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-10),500);});});
+document.querySelectorAll('a[href^="#"]:not(#popupGo)').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(!h||h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-10),500);});});
 
 /* ---- scroll reveal ---- */
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
@@ -863,7 +883,7 @@ var MODE_TEXT={
     pf2:'Har kapasitet til flere jobber nå',
     finH2:'Klar for at telefonen ringer oftere?',
     ftTxt:'du betaler først når henvendelsene kommer',
-    ppP:'Få en gratis lead-analyse av bedriften din', ppB:'0 kr før leadsene kommer',
+    ppH:'Få en gratis lead-analyse av bedriften din', ppB:'0 kr før leadsene kommer',
     cta:'Få min gratis lead-analyse', ctaShort:'Få gratis lead-analyse',
     cases:['ur','badstugutta','marlow','veldigrent'],
     gallery:[['/img/caser/ur-1.jpg','Utvendigrenhold'],['/img/caser/marlow-1.jpg','Marlow'],['/img/caser/ur-2.jpg','Utvendigrenhold']],
@@ -905,7 +925,7 @@ var MODE_TEXT={
     pf2:'Har margin til å skalere lønnsomt',
     finH2:'Klar for å skalere lønnsomt?',
     ftTxt:'du betaler først når salget kommer',
-    ppP:'Få en gratis analyse av nettbutikken din', ppB:'0 kr før salget kommer',
+    ppH:'Få en gratis analyse av nettbutikken din', ppB:'0 kr før salget kommer',
     cta:'Få min gratis nettbutikk-analyse', ctaShort:'Få gratis nettbutikk-analyse',
     cases:['leid','mokki','ur','badstugutta'],
     gallery:[['/img/caser/mokki-1.jpg','Mokki'],['/img/caser/mokki-2.jpg','Mokki'],['/img/caser/mokki-3.jpg','Mokki']],
@@ -989,25 +1009,11 @@ setMode(modeFor(PRESET_INDUSTRY),PRESET_INDUSTRY);
   if(PRESET_INDUSTRY){var g=form.querySelector('.qual[data-key="industry"]');var b=g?g.querySelector('.opt[data-v="'+PRESET_INDUSTRY+'"]'):null;if(b){pick(g,b);show(1);}}
   /* reset() etter innsending nullstiller ikke pills/modus — det er greit, siden booking-steget tar over */
 })();
-/* ---- popup-pills (uten steg) ---- */
-(function(){
-  var f=document.getElementById('leadFormModal');if(!f)return;
-  f.querySelectorAll('.qual').forEach(function(g){
-    var key=g.getAttribute('data-key');
-    g.querySelectorAll('.opt').forEach(function(b){
-      b.addEventListener('click',function(){
-        g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});
-        b.classList.add('on');
-        if(f[key])f[key].value=b.getAttribute('data-v')||b.textContent;
-        if(key==='industry')setMode(modeFor(f.industry.value),f.industry.value);
-      });
-    });
-  });
-})();
+/* (popup-skjemaet er fjernet — popupen har bare én knapp som går til hovedskjemaet) */
 
 /* Hero-skjema → avslør booking i samme kort. Popup-skjema → «Takk!», lukk popup, avslør booking i hero + scroll opp. */
 bindForm('leadForm','formMsg','',function(name){revealBooking(name);});
-bindForm('leadFormModal','formMsgModal','-popup',function(name){setTimeout(function(){closePopup();revealBooking(name);var b=document.getElementById('book');if(b)scrollToY(Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-10),500);},1100);});
+(function(){var g=document.getElementById('popupGo');if(!g)return;g.addEventListener('click',function(e){e.preventDefault();closePopup();var b=document.getElementById('book');if(b)scrollToY(Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-10),500);try{if(window.gtag)gtag('event','popup_cta_click');}catch(x){}});})();
 </script>
 
 <!-- Cal inline embed code begins -->
