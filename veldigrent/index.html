@@ -847,7 +847,7 @@ if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('vr_popup_done')||sessionStorage.getItem('vr_lead_done');}catch(e){return false;}};
   var openPopup=function(){if(popupSeen()||(window.arcadsPopupBlocked&&window.arcadsPopupBlocked()))return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
   var closePopup=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('vr_popup_done','1');}catch(e){}};
-  setTimeout(openPopup,15000);
+  /* timer styres av SKJEMA-MINNE-blokken nederst (30 s uten berøring + skjema ute av syne) */
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
   var pg=document.getElementById('popupGo');
   if(pg)pg.addEventListener('click',function(){
@@ -914,6 +914,11 @@ if(overlay){
   /* --- popup-sperre: åpne aldri når skjemaet er berørt eller synlig --- */
   function formVisible(){var r=hero.getBoundingClientRect();return r.bottom>0&&r.top<window.innerHeight;}
   window.arcadsPopupBlocked=function(){return !!window.arcadsFormTouched||formVisible();};
+  /* --- 30 s uten berøring → popup, men først når skjemaet er scrollet ut av syne --- */
+  setTimeout(function(){
+    function tryOpen(){if(window.arcadsFormTouched)return true;if(!formVisible()){if(typeof openPopup==='function')openPopup();return true;}return false;}
+    if(!tryOpen()){var h=function(){if(tryOpen())window.removeEventListener('scroll',h);};window.addEventListener('scroll',h,{passive:true});}
+  },30000);
   /* speil hero-verdier inn i popup-skjemaet i det popupen åpnes */
   var ov=document.getElementById('popup');
   if(ov&&window.MutationObserver){new MutationObserver(function(){if(ov.classList.contains('show'))forms.forEach(function(g){fillText(g,load());});}).observe(ov,{attributes:true,attributeFilter:['class']});}

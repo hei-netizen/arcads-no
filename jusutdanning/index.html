@@ -614,15 +614,11 @@ gtag('config', 'G-XRR38FQQH7');
         <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Hvilken av de 5 utdanningene som passer deg</span></li>
         <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Opptakssjekk + L&aring;nekassen-regnestykket &mdash; <b>p&aring; &eacute;n telefon</b></span></li>
       </ul>
-      <div class="fmsg" id="formMsgModal">Takk! Vi ringer deg innen &eacute;n virkedag. Haster det? Ring oss direkte p&aring; <a href="tel:+4722644555">22 64 45 55</a>.</div>
-      <form id="leadFormModal" novalidate>
-        <div class="field"><label for="m_name">Fornavn og etternavn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Navnet ditt" required></div></div>
-        <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="m_phone" name="phone" placeholder="S&aring; vi kan ringe deg om veiledningen" required></div></div>
-        <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
-        <input type="hidden" name="interest" value="Popup — Gratis studieveiledning">
-        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t">F&aring; gratis studieveiledning<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis og helt uforpliktende</span></button>
-        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center">Vi deler aldri opplysningene dine med noen andre.</p>
-      </form>
+      <!-- Popupen har ikke eget skjema — den sender kun brukeren til hovedskjemaet i hero -->
+      <div style="text-align:center">
+        <button type="button" class="cta" id="popupGo" style="width:100%"><span class="t">F&aring; gratis studieveiledning<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Ta meg til skjemaet &middot; under ett minutt</span></button>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px">Vi deler aldri opplysningene dine med noen andre.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -688,7 +684,6 @@ function submitLead(form,msgEl,extraSource){
 }
 function bindForm(id,msgId,src){var f=document.getElementById(id);if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();submitLead(e.target,document.getElementById(msgId),src);});}
 bindForm('leadForm','formMsg','');
-bindForm('leadFormModal','formMsgModal','-popup');
 flushStoredLeads();
 
 /* ---- timed popup (15s, én gang per økt) ---- */
@@ -697,8 +692,16 @@ if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('ju_popup_done')||sessionStorage.getItem('ju_lead_done');}catch(e){return false;}};
   var openPopup=function(){if(popupSeen()||(window.arcadsPopupBlocked&&window.arcadsPopupBlocked()))return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
   var closePopup=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('ju_popup_done','1');}catch(e){}};
-  setTimeout(openPopup,15000);
+  /* timer styres av SKJEMA-MINNE-blokken nederst (30 s uten berøring + skjema ute av syne) */
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
+  var pg=document.getElementById('popupGo');
+  if(pg)pg.addEventListener('click',function(){
+    closePopup();
+    var fc=document.getElementById('book')||document.querySelector('.formcard');
+    if(fc){scrollToY(Math.max(0,fc.getBoundingClientRect().top+window.pageYOffset-20),500);
+      var first=fc.querySelector('input:not([type=hidden]):not(.hp)');if(first)setTimeout(function(){first.focus();},550);}
+    try{if(window.gtag)gtag('event','popup_cta_click');}catch(x){}
+  });
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
 }
@@ -757,6 +760,11 @@ if(overlay){
   /* --- popup-sperre: åpne aldri når skjemaet er berørt eller synlig --- */
   function formVisible(){var r=hero.getBoundingClientRect();return r.bottom>0&&r.top<window.innerHeight;}
   window.arcadsPopupBlocked=function(){return !!window.arcadsFormTouched||formVisible();};
+  /* --- 30 s uten berøring → popup, men først når skjemaet er scrollet ut av syne --- */
+  setTimeout(function(){
+    function tryOpen(){if(window.arcadsFormTouched)return true;if(!formVisible()){if(typeof openPopup==='function')openPopup();return true;}return false;}
+    if(!tryOpen()){var h=function(){if(tryOpen())window.removeEventListener('scroll',h);};window.addEventListener('scroll',h,{passive:true});}
+  },30000);
   /* speil hero-verdier inn i popup-skjemaet i det popupen åpnes */
   var ov=document.getElementById('popup');
   if(ov&&window.MutationObserver){new MutationObserver(function(){if(ov.classList.contains('show'))forms.forEach(function(g){fillText(g,load());});}).observe(ov,{attributes:true,attributeFilter:['class']});}

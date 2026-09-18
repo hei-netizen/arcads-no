@@ -830,7 +830,7 @@ function closePopup(){if(!overlay)return;overlay.classList.remove('show');overla
 if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('arcads_popup_done')||sessionStorage.getItem('arcads_lead_done');}catch(e){return false;}};
   var openPopup=function(){if(popupSeen()||(window.arcadsPopupBlocked&&window.arcadsPopupBlocked()))return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
-  setTimeout(openPopup,20000);
+  /* timer styres av SKJEMA-MINNE-blokken nederst (30 s uten berøring + skjema ute av syne) */
   /* exit-intent på desktop: musa forlater vinduet i toppen */
   document.addEventListener('mouseout',function(e){if(!e.relatedTarget&&e.clientY<=0&&window.innerWidth>900)openPopup();});
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
@@ -1091,6 +1091,11 @@ Cal.config.forwardQueryParams = true;
   /* --- popup-sperre: åpne aldri når skjemaet er berørt eller synlig --- */
   function formVisible(){var r=hero.getBoundingClientRect();return r.bottom>0&&r.top<window.innerHeight;}
   window.arcadsPopupBlocked=function(){return !!window.arcadsFormTouched||formVisible();};
+  /* --- 30 s uten berøring → popup, men først når skjemaet er scrollet ut av syne --- */
+  setTimeout(function(){
+    function tryOpen(){if(window.arcadsFormTouched)return true;if(!formVisible()){if(typeof openPopup==='function')openPopup();return true;}return false;}
+    if(!tryOpen()){var h=function(){if(tryOpen())window.removeEventListener('scroll',h);};window.addEventListener('scroll',h,{passive:true});}
+  },30000);
   /* speil hero-verdier inn i popup-skjemaet i det popupen åpnes */
   var ov=document.getElementById('popup');
   if(ov&&window.MutationObserver){new MutationObserver(function(){if(ov.classList.contains('show'))forms.forEach(function(g){fillText(g,load());});}).observe(ov,{attributes:true,attributeFilter:['class']});}

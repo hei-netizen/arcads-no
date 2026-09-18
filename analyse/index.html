@@ -632,14 +632,11 @@ fbq('track','PageView');
           <li style="display:flex;align-items:center;gap:11px;font-size:1.02rem;font-weight:600;color:var(--ink2)"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> 100% resultatbasert &mdash; <b>0 kr før vi leverer</b></li>
         </ul>
       </div>
-      <div class="fmsg" id="formMsgModal">Takk! Victor ringer deg innen 1 virkedag.</div>
-      <form id="leadFormModal" novalidate>
-        <div class="field"><label for="m_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="m_name" name="name" placeholder="Fornavn og etternavn" required></div></div>
-        <div class="field"><label for="m_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="m_phone" name="phone" placeholder="Så vi kan ringe deg" required></div></div>
-        <div class="field"><label for="m_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="m_email" name="email" placeholder="din@epost.no" required></div></div>
-        <button type="submit" class="cta" style="width:100%;margin-top:4px"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende</span></button>
-        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px;text-align:center">Vi deler aldri detaljene dine med noen andre.</p>
-      </form>
+      <!-- Popupen har ikke eget skjema — den sender kun brukeren til hovedskjemaet i hero -->
+      <div style="text-align:center">
+        <button type="button" class="cta" id="popupGo" style="width:100%"><span class="t">Få min gratis analyse<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Ta meg til skjemaet &middot; 30 sekunder</span></button>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px">Vi deler aldri opplysningene dine med noen andre.</p>
+      </div>
     </div>
   </div>
 </div>
@@ -693,15 +690,22 @@ function closePopup(){if(!overlay)return;overlay.classList.remove('show');overla
 if(overlay){
   var popupSeen=function(){try{return sessionStorage.getItem('arcads_popup_done')||sessionStorage.getItem('arcads_lead_done');}catch(e){return false;}};
   var openPopup=function(){if(popupSeen()||(window.arcadsPopupBlocked&&window.arcadsPopupBlocked()))return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
-  setTimeout(openPopup,20000);
+  /* timer styres av SKJEMA-MINNE-blokken nederst (30 s uten berøring + skjema ute av syne) */
   var pc=document.getElementById('popupClose');if(pc)pc.addEventListener('click',closePopup);
+  var pg=document.getElementById('popupGo');
+  if(pg)pg.addEventListener('click',function(){
+    closePopup();
+    var fc=document.getElementById('book')||document.querySelector('.formcard');
+    if(fc){scrollToY(Math.max(0,fc.getBoundingClientRect().top+window.pageYOffset-20),500);
+      var first=fc.querySelector('input:not([type=hidden]):not(.hp)');if(first)setTimeout(function(){first.focus();},550);}
+    try{if(window.gtag)gtag('event','popup_cta_click');}catch(x){}
+  });
   overlay.addEventListener('click',function(e){if(e.target===overlay)closePopup();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&overlay.classList.contains('show'))closePopup();});
 }
 
 /* Hero-skjema → avslør booking i samme kort. Popup-skjema → «Takk!», lukk popup, avslør booking i hero + scroll opp. */
 bindForm('leadForm','formMsg','',function(name){revealBooking(name);});
-bindForm('leadFormModal','formMsgModal','-popup',function(name){setTimeout(function(){closePopup();revealBooking(name);var b=document.getElementById('book');if(b)scrollToY(Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-10),500);},1100);});
 </script>
 
 <!-- Cal inline embed code begins -->
@@ -780,6 +784,11 @@ Cal.config.forwardQueryParams = true;
   /* --- popup-sperre: åpne aldri når skjemaet er berørt eller synlig --- */
   function formVisible(){var r=hero.getBoundingClientRect();return r.bottom>0&&r.top<window.innerHeight;}
   window.arcadsPopupBlocked=function(){return !!window.arcadsFormTouched||formVisible();};
+  /* --- 30 s uten berøring → popup, men først når skjemaet er scrollet ut av syne --- */
+  setTimeout(function(){
+    function tryOpen(){if(window.arcadsFormTouched)return true;if(!formVisible()){if(typeof openPopup==='function')openPopup();return true;}return false;}
+    if(!tryOpen()){var h=function(){if(tryOpen())window.removeEventListener('scroll',h);};window.addEventListener('scroll',h,{passive:true});}
+  },30000);
   /* speil hero-verdier inn i popup-skjemaet i det popupen åpnes */
   var ov=document.getElementById('popup');
   if(ov&&window.MutationObserver){new MutationObserver(function(){if(ov.classList.contains('show'))forms.forEach(function(g){fillText(g,load());});}).observe(ov,{attributes:true,attributeFilter:['class']});}
