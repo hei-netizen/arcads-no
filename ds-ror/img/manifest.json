@@ -1,0 +1,65 @@
+[
+ {
+  "fil": "biler.jpg",
+  "kilde": "https://dsrv.no/wp-content/uploads/2020/03/image2.jpg",
+  "bredde": 886,
+  "hoyde": 375,
+  "alt": "Tre DS Rør & Varme-biler med logo (bakgrunnsbilde på /om-oss)",
+  "side": "https://dsrv.no/om-oss/",
+  "brukt": true,
+  "hvor": "hero + inc-card"
+ },
+ {
+  "fil": "kristian.jpg",
+  "kilde": "https://dsrv.no/wp-content/uploads/2023/09/Kristian-1152x1536.jpg",
+  "bredde": 1152,
+  "hoyde": 1536,
+  "alt": "Kristian Dahl, daglig leder / rørleggermester",
+  "side": "https://dsrv.no/om-oss/",
+  "brukt": true,
+  "hvor": "karusell + folk"
+ },
+ {
+  "fil": "stian.jpg",
+  "kilde": "https://dsrv.no/wp-content/uploads/2023/09/Stian.jpg",
+  "bredde": 480,
+  "hoyde": 640,
+  "alt": "Stian Sivertsen, prosjektleder / rørlegger",
+  "side": "https://dsrv.no/om-oss/",
+  "brukt": true,
+  "hvor": "karusell + folk"
+ },
+ {
+  "fil": "celine.jpg",
+  "kilde": "https://dsrv.no/wp-content/uploads/2023/09/Celine.jpg",
+  "bredde": 480,
+  "hoyde": 640,
+  "alt": "Celine Knutsen, salg og markedsansvarlig",
+  "side": "https://dsrv.no/om-oss/",
+  "brukt": true,
+  "hvor": "folk"
+ },
+ {
+  "fil": "tobias.jpg",
+  "kilde": "https://dsrv.no/wp-content/uploads/2023/09/Tobias.jpg",
+  "bredde": 480,
+  "hoyde": 640,
+  "alt": "Tobias Tellugen, rørlegger",
+  "side": "https://dsrv.no/om-oss/",
+  "brukt": true,
+  "hvor": "karusell"
+ },
+ {
+  "fil": "morten.jpg",
+  "kilde": "https://dsrv.no/wp-content/uploads/2023/09/Morten.jpg",
+  "bredde": 480,
+  "hoyde": 640,
+  "alt": "Morten Lien, rørlegger",
+  "side": "https://dsrv.no/om-oss/",
+  "brukt": true,
+  "hvor": "karusell"
+ },
+ {
+  "_slettet": "baderom-forside.jpg, serviceoppdrag.jpg, HYSS-bolig-web2.jpg, toalett.jpg, vannslange-utendors.jpg (stock/produsentbilder), astrance-restaurant (blogg), OSO_Saga (produsentbilde), logoer. hent_bilder.py fant kun Kristian x2 (WP-bakgrunnsbilder ligger i Elementor-CSS); resten hentet manuelt fra dsrv.no/wp-content/uploads."
+ }
+]
