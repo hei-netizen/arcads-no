@@ -8,8 +8,8 @@
      ARCADS.NO /leads — ads-LP for LEADSBEDRIFTER (håndverk, klinikk, tjeneste)
      OG NETTBUTIKKER (v4, 16.09.2026). Bygget 06.09.2026 på /analyse-strukturen.
      Kilde-kopi i arcads-claude-brain/clients/arcads/landing/arcads-leads-v1.preview.html
-     Siden har tre «modus»: nøytral (standard), lead (?b=handverk|klinikk|
-     flytting-renhold|finans|tjeneste, eller valgt i skjemaet) og shop
+     Siden har tre «modus»: nøytral (standard), lead (?b=tjeneste|klinikk|handverk,
+     eller valgt i skjemaet; finans/flytting-renhold er alias for tjeneste) og shop
      (?b=nettbutikk, eller «Nettbutikk» valgt i skjemaet). Modus bytter copy,
      proof-tall, caser og sitater via JS (se MODE_TEXT nederst).
      Kvalifisering: annonsebudsjett >= 20 000 = Meta «Lead», ellers
@@ -426,7 +426,7 @@ fbq('track','PageView');
               <div class="wstep on">
                 <div class="qual" data-key="industry">
                   <div class="q">Hva driver du med?</div>
-                  <div class="opts"><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="flytting-renhold">Flytting / renhold</button><button type="button" class="opt" data-v="finans">Finans</button><button type="button" class="opt" data-v="tjeneste">Annen tjeneste</button></div>
+                  <div class="opts"><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button><button type="button" class="opt" data-v="tjeneste">Tjenestebedrift</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button></div>
                 </div>
               </div>
               <div class="wstep">
@@ -845,8 +845,6 @@ if(overlay){
 var HERO_BY_INDUSTRY={
   'handverk':'Flere jobber til håndverksbedriften din — du betaler først når de kommer',
   'klinikk':'Flere bookinger til klinikken din — du betaler først når de kommer',
-  'flytting-renhold':'Flere oppdrag til flytte- eller renholdsbedriften din — du betaler først når de kommer',
-  'finans':'Flere kvalifiserte henvendelser — du betaler først når de kommer',
   'tjeneste':'Flere henvendelser til bedriften din — du betaler først når de kommer',
   'nettbutikk':'Flere lønnsomme salg i nettbutikken din — du betaler først når de kommer'
 };
@@ -965,7 +963,8 @@ function setMode(mode,industry){
   try{if(window.gtag)gtag('event','lp_mode',{mode:mode||'neutral',industry:industry||''});}catch(e){}
 }
 function modeFor(industry){return industry==='nettbutikk'?'shop':(industry?'lead':'');}
-var PRESET_INDUSTRY=(function(){try{return new URLSearchParams(location.search).get('b')||'';}catch(e){return '';}})();
+var INDUSTRY_ALIAS={'finans':'tjeneste','flytting-renhold':'tjeneste','renhold':'tjeneste','flytting':'tjeneste','bygg':'handverk','helse':'klinikk','ecom':'nettbutikk'}; /* gamle annonse-URL-er (?b=finans osv.) skal fortsatt virke */
+var PRESET_INDUSTRY=(function(){try{var b=new URLSearchParams(location.search).get('b')||'';return INDUSTRY_ALIAS[b]||b;}catch(e){return '';}})();
 if(PRESET_INDUSTRY&&!HERO_BY_INDUSTRY[PRESET_INDUSTRY])PRESET_INDUSTRY='';
 setMode(modeFor(PRESET_INDUSTRY),PRESET_INDUSTRY);
 
