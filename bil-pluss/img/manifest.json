@@ -1,0 +1,74 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/b262a1b2-3d70-4e25-939a-ddc69d8b32f4/Verksted+Tommy+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1800,
+  "hoyde": 1198,
+  "alt": "Tekniker ved åpent panser i verkstedet hos Bilalliansen (hero)",
+  "side": "https://www.bilalliansen.no/"
+ },
+ {
+  "fil": "verksted-tommy.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/b262a1b2-3d70-4e25-939a-ddc69d8b32f4/Verksted+Tommy+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1800,
+  "hoyde": 1198,
+  "alt": "Tekniker ved åpent panser i verkstedet hos Bilalliansen",
+  "side": "https://www.bilalliansen.no/ (og /serviceavdelingen)"
+ },
+ {
+  "fil": "verkstedgjengen.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/614947b3-0a9e-4994-815b-5419ff30a49d/Verkstedgjengen+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1212,
+  "hoyde": 854,
+  "alt": "Verkstedgjengen foran Bilalliansen i Blåbærveien 8",
+  "side": "https://www.bilalliansen.no/serviceavdelingen"
+ },
+ {
+  "fil": "verksted-trond-sebastian.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/ecdbac94-b881-46eb-bff0-125b149c7221/Verksted+Trond+Sebastian+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1800,
+  "hoyde": 1198,
+  "alt": "To teknikere under en bil på løftebukk",
+  "side": "https://www.bilalliansen.no/eu-kontroll"
+ },
+ {
+  "fil": "verksted-stian.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/33f7f78c-dcba-4869-9129-133f9946a6ae/Verksted+Stian+Roger+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1800,
+  "hoyde": 1198,
+  "alt": "To fra serviceavdelingen ved en bil med åpent panser",
+  "side": "https://www.bilalliansen.no/5pluss"
+ },
+ {
+  "fil": "kundemottak.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/13d12a8e-aa5c-4a26-a252-33197d5e76c2/Kundemottak+Frode+Tuva+og+kunde+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1800,
+  "hoyde": 1233,
+  "alt": "Kundemottaket i serviceavdelingen: rådgiver leverer nøkkel til kunde",
+  "side": "https://www.bilalliansen.no/kontakt/serviceavdelingen"
+ },
+ {
+  "fil": "stian-olsen.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/ae8d5fc6-6a02-46dd-a15c-ec6923f0f664/Stian+Olsen+Roger.jpg",
+  "bredde": 1000,
+  "hoyde": 1333,
+  "alt": "Stian Olsen, leder serviceavdelingen",
+  "side": "https://www.bilalliansen.no/kontakt-oss"
+ },
+ {
+  "fil": "tommy-groneng.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/90c2cae3-cf69-4cf2-9909-1549d9a9ed4d/Tommy+Gr%C3%B8neng+Roger+Kruta%CC%8A.jpg",
+  "bredde": 1000,
+  "hoyde": 1333,
+  "alt": "Tommy Grøneng, teknisk leder",
+  "side": "https://www.bilalliansen.no/kontakt-oss"
+ },
+ {
+  "fil": "frode-remmen.jpg",
+  "kilde": "https://images.squarespace-cdn.com/content/v1/646b50c57302b77de237b9cf/36dc07c0-6338-438f-b004-b71bc998ce85/Frode+Remmen+Roger.jpg",
+  "bredde": 1000,
+  "hoyde": 1333,
+  "alt": "Frode Remmen, kunderådgiver verksted",
+  "side": "https://www.bilalliansen.no/kontakt-oss"
+ }
+]
