@@ -1,0 +1,38 @@
+[
+ {
+  "fil": "hero-fasade.jpg",
+  "kilde": "https://www.auto-industri.no/wp-content/uploads/2018/10/Screen-Shot-2018-10-04-at-6.06.47-PM.png",
+  "bredde": 2000,
+  "hoyde": 1162,
+  "alt": "Auto Industri AS sin fasade i Leirvik sentrum med verkstedport og skilt",
+  "side": "https://www.auto-industri.no/ (revslider slide 1 + og:image)",
+  "brukt": true
+ },
+ {
+  "fil": "lakkboks.jpg",
+  "kilde": "https://www.auto-industri.no/wp-content/uploads/2018/10/Screen-Shot-2018-10-04-at-6.09.06-PM.png",
+  "bredde": 2000,
+  "hoyde": 1160,
+  "alt": "Bil maskert for lakkering i lakkboksen hos Auto Industri",
+  "side": "https://www.auto-industri.no/ (revslider slide 2)",
+  "brukt": true
+ },
+ {
+  "fil": "verksted-lift.jpg",
+  "kilde": "https://www.auto-industri.no/wp-content/uploads/2018/10/Screen-Shot-2018-10-04-at-6.09.21-PM.png",
+  "bredde": 2000,
+  "hoyde": 1166,
+  "alt": "Bil på lift i verkstedet hos Auto Industri, mekaniker i arbeid",
+  "side": "https://www.auto-industri.no/ (revslider slide 3)",
+  "brukt": true
+ },
+ {
+  "fil": "fasade-portrett.jpg",
+  "kilde": "https://www.auto-industri.no/wp-content/uploads/2018/10/bg.png",
+  "bredde": 1400,
+  "hoyde": 1396,
+  "alt": "Bygget til Auto Industri AS i Leirvik på Stord",
+  "side": "https://www.auto-industri.no/ (css-bakgrunn)",
+  "brukt": true
+ }
+]
