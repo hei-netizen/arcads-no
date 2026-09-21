@@ -66,6 +66,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .eyebrow{display:inline-block;font-size:0.74rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-deep)}
 .eyebrow.muted{color:var(--muted)}
 .h-xl{font-size:clamp(2rem,4.6vw,3.2rem)}
+.h-sub{display:block;font-family:var(--sans);font-size:0.42em;font-weight:600;letter-spacing:0;color:var(--muted);margin-top:12px;line-height:1.35}
 .h-lg{font-size:clamp(1.6rem,3.1vw,2.3rem)}
 .lede{font-size:1.06rem;color:var(--ink2);max-width:56ch;line-height:1.6}
 .center{text-align:center}
@@ -103,6 +104,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .blist li{display:flex;align-items:flex-start;gap:11px;font-size:0.99rem;font-weight:600;color:var(--ink2);line-height:1.45}
 .chk{width:22px;height:22px;border-radius:50%;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;flex:none;margin-top:2px}
 .chk svg{width:12px;height:12px;stroke:var(--accent-ink)}
+.blist .chk{background:var(--ink);width:20px;height:20px}.blist .chk svg{stroke:#fff;width:11px;height:11px}
 .priceblock{display:inline-flex;flex-direction:column;gap:3px;margin-bottom:22px}
 .priceblock .ord{font-size:0.82rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
 .priceblock .ord s{opacity:.75}
@@ -385,27 +387,20 @@ fbq('track','PageView');
 <!-- ===== TOP BAR ===== -->
 <div class="topbar" id="top">
   <img src="/logos/arcads-logo.png" alt="Arcads">
-  <div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 <small>fra kundene våre</small></div>
 </div>
 
-<!-- ===== CAMPAIGN STRIP ===== -->
-<div class="strip"><span class="dash">&ndash; </span><b>100% resultatbasert</b><span class="sep"> &middot; </span><span id="stripTxt">du betaler først når resultatene kommer</span><span class="dash"> &ndash;</span></div>
+<!-- (kampanjestripe fjernet 21.09.2026 — løftet står i H1) -->
 
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1 class="h-xl" id="heroH1">Flere kunder til bedriften din &mdash; du betaler først når de kommer</h1>
+        <h1 class="h-xl" id="heroH1">Flere kunder til bedriften din<span class="h-sub">Du betaler først når de kommer</span></h1>
         <ul class="blist">
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="bl1">Google + Meta-annonser &mdash; 10+ nye i uka, alt lager vi selv</span></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="bl2">Landingsside eller nettbutikk-oppsett som gjør klikk om til kunder</span></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span id="bl3">For tjenestebedrifter og nettbutikker</span></li>
         </ul>
-        <div class="priceblock">
-          <span class="ord">Andre byråer: <s>fast honorar uansett</s></span>
-          <span class="now" id="priceNow">Hos oss: 0 kr før resultatene kommer</span>
-        </div>
         <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Få gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tre raske spørsmål &middot; 30 sekunder</span></a></div>
         <div class="faces">
           <div class="pics">
@@ -499,7 +494,11 @@ fbq('track','PageView');
       <div class="reveal">
         <span class="eyebrow" id="whyEye">Hvorfor velger bedrifter Arcads?</span>
         <h2 class="h-lg" style="margin:12px 0 8px" id="whyH2">Flere kunder er enklere enn du tror&hellip;</h2>
-        <p class="lede" style="margin-bottom:30px">&hellip; og det starter med en gratis analyse.</p>
+        <p class="lede" style="margin-bottom:22px">&hellip; og det starter med en gratis analyse.</p>
+        <div class="priceblock">
+          <span class="ord">Andre byråer: <s>fast honorar uansett</s></span>
+          <span class="now" id="priceNow">Hos oss: 0 kr før resultatene kommer</span>
+        </div>
         <ul class="feat">
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>100% resultatbasert</h4><p id="f1p">Leverer vi ikke, betaler du ikke.</p></div></li>
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4 id="f2h">Vi bygger hele maskinen</h4><p id="f2p">Annonser, landingsside, sporing og rapport.</p></div></li>
@@ -950,7 +949,7 @@ function setMode(mode,industry){
   /* H1: bransjespesifikk i lead-modus, nettbutikk i shop, nøytral ellers */
   var h1=document.getElementById('heroH1');
   if(h1){var txt=mode==='shop'?HERO_BY_INDUSTRY.nettbutikk:(mode==='lead'&&HERO_BY_INDUSTRY[industry]?HERO_BY_INDUSTRY[industry]:(mode==='lead'?HERO_BY_INDUSTRY.tjeneste:null));
-    if(txt)h1.textContent=txt;else h1.innerHTML=NEUTRAL.heroH1;}
+    if(txt){var parts=txt.split(' — ');var sub=parts[1]?parts[1].charAt(0).toUpperCase()+parts[1].slice(1):'';h1.innerHTML=parts[0]+(sub?'<span class="h-sub">'+sub+'</span>':'');}else h1.innerHTML=NEUTRAL.heroH1;}
   if(mode===CURRENT_MODE)return;
   CURRENT_MODE=mode;
   for(var k in t){if(!t.hasOwnProperty(k))continue;if(k==='cases'||k==='revs'||k==='cta'||k==='ctaShort'||k==='goals'||k==='gallery'||k==='heroH1')continue;var el=document.getElementById(k);if(el&&typeof t[k]==='string'){el.innerHTML=t[k];el.classList.remove('mode-fade');void el.offsetWidth;el.classList.add('mode-fade');}}
