@@ -1,0 +1,92 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_a8a609b0740743f5b1b42f1385c087fc~mv2.jpg",
+  "bredde": 2000,
+  "hoyde": 1500,
+  "alt": "Acom Elektro-bil under opplyst tak ved sjøen i Stavanger",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "solceller-drone.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_342968f7bb194238af0f28678fef9c37~mv2.jpg",
+  "bredde": 1800,
+  "hoyde": 1013,
+  "alt": "Solcelleanlegg på flatt tak, dronebilde over Stavanger",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "kjokkenbelysning.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_8fd7d9bd261e4e86ba2e7071978876fc~mv2.jpg",
+  "bredde": 1600,
+  "hoyde": 1200,
+  "alt": "Kjøkkenbelysning med lysskinne i tak (referanse)",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "spotskinner.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_72527f2b3bf94327830225e7cae14c54~mv2.jpg",
+  "bredde": 1600,
+  "hoyde": 1200,
+  "alt": "Spotskinner i tak (referanse)",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "solceller-montering.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_f5893d6db915468e9ae70d1afb3a2859~mv2.jpg",
+  "bredde": 1144,
+  "hoyde": 1400,
+  "alt": "Elektrikere fra Acom monterer solceller på tak",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "smarthus-mobil.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_871d599f1fd846b49bc82eb799d6643b~mv2.jpg",
+  "bredde": 683,
+  "hoyde": 1200,
+  "alt": "Smarthus-styring fra mobilen",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "takvindu-belysning.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_ebcbf1aa66d347f3bbfcb8eda76a3ffa~mv2.jpg",
+  "bredde": 1800,
+  "hoyde": 811,
+  "alt": "Belysning ved takvindu (referanse)",
+  "side": "https://www.acomelektro.no/",
+  "brukt": false
+ },
+ {
+  "fil": "rune.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_526ba2d7ca164bed8ab107eb0d16631f~mv2.png",
+  "bredde": 900,
+  "hoyde": 900,
+  "alt": "Rune, daglig leder i Acom Elektro",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "andreas.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_5b606bd950b64f06844add15ccd6cd8e~mv2.png",
+  "bredde": 900,
+  "hoyde": 900,
+  "alt": "Andreas, prosjektleder i Acom Elektro",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ },
+ {
+  "fil": "stian.jpg",
+  "kilde": "https://static.wixstatic.com/media/b8f166_008c64e0755a45cc986a5adc2965ba7f~mv2.png",
+  "bredde": 900,
+  "hoyde": 900,
+  "alt": "Stian, installatør i Acom Elektro",
+  "side": "https://www.acomelektro.no/",
+  "brukt": true
+ }
+]
