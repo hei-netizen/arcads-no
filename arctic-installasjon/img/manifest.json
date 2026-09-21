@@ -1,0 +1,29 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://res.cloudinary.com/rubics/image/upload/h_900/f_auto/6a391d3c754e586beaa290a2-Arctic%2011.jpg",
+  "bredde": 1600,
+  "hoyde": 1065,
+  "alt": "To elektrikere fra Arctic Installasjon ved firmabilen",
+  "side": "https://www.arcticinstallasjon.no/",
+  "brukt": true
+ },
+ {
+  "fil": "montor-firmabil.jpg",
+  "kilde": "https://res.cloudinary.com/rubics/image/upload/w_1376/f_auto/68c7e26877384931bd5a6b09-Michal.jpg",
+  "bredde": 1600,
+  "hoyde": 1065,
+  "alt": "Elektriker fra Arctic Installasjon på vei inn til oppdrag, firmabil i forgrunnen",
+  "side": "https://www.arcticinstallasjon.no/",
+  "brukt": true
+ },
+ {
+  "fil": "varmepumpe-montering.jpg",
+  "kilde": "https://res.cloudinary.com/rubics/image/upload/w_720/f_auto/68c7e34dc1e1d6730005f5f8-20240814_085246029_iOS.jpg",
+  "bredde": 1600,
+  "hoyde": 2133,
+  "alt": "Montør fra Arctic Installasjon monterer varmepumpe-utedel på husvegg i Tromsø",
+  "side": "https://www.arcticinstallasjon.no/er-du-en-dyktig-elektriker-eller-varmepumpemontor-pa-jakt-etter-nye-utfordringer",
+  "brukt": true
+ }
+]
