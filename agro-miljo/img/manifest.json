@@ -1,0 +1,44 @@
+[
+ {
+  "fil": "hero.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2018/05/sogard-seljelid2.jp_.jpg (serviceavtale-pumpestasjon-siden)",
+  "bredde": 1140,
+  "hoyde": 760
+ },
+ {
+  "fil": "ansatte.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2018/05/agro-miljo-ansatte.jpg (forsiden)",
+  "bredde": 750,
+  "hoyde": 889
+ },
+ {
+  "fil": "lars-erik-ute.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2018/05/rorleggermester-lars-erik-josefsen.jpg (/rorlegger/)",
+  "bredde": 1057,
+  "hoyde": 1500
+ },
+ {
+  "fil": "lars-erik-butikk.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2018/05/rorleggermester-lars-erik-josefsen-2.jpg (/rorlegger/)",
+  "bredde": 1056,
+  "hoyde": 1500
+ },
+ {
+  "fil": "jan-petter.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2018/05/Jan-Petter2.png (/om-oss/hvem-er-vi/)",
+  "bredde": 654,
+  "hoyde": 979
+ },
+ {
+  "fil": "lars-erik.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2018/05/Lars-erik2.png (/om-oss/hvem-er-vi/)",
+  "bredde": 654,
+  "hoyde": 979
+ },
+ {
+  "fil": "rene.jpg",
+  "kilde": "https://www.agro-miljo.no/wp-content/uploads/2025/12/rene-dubec-agro-miljo.jpg (/om-oss/hvem-er-vi/)",
+  "bredde": 654,
+  "hoyde": 979
+ }
+]
