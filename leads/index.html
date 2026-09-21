@@ -151,7 +151,8 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .field label .opt{color:var(--faint);font-weight:500}
 .field .inp{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden;position:relative}
 .field .inp:focus-within{border-color:var(--accent);background:#fff}
-.field input,.field select{flex:1;width:100%;padding:13px 14px;border:0;background:transparent;font-family:var(--sans);font-size:0.96rem;color:var(--ink)}
+.field input,.field select,.field textarea{flex:1;width:100%;padding:13px 14px;border:0;background:transparent;font-family:var(--sans);font-size:0.96rem;color:var(--ink)}
+.field textarea{min-height:84px;resize:vertical;line-height:1.45}
 .field select{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:pointer}
 .field select:invalid,.field select.empty{color:var(--faint)}
 .field .inp.sel::after{content:"";position:absolute;right:15px;top:50%;width:9px;height:9px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-70%) rotate(45deg);pointer-events:none}
@@ -442,8 +443,10 @@ fbq('track','PageView');
                 <div class="qsum" id="qSum"></div>
                 <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
                 <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Navnet ditt" autocomplete="name" required></div></div>
+                <div class="field"><label for="h_firma">Bedrift <span class="req">*</span></label><div class="inp"><input type="text" id="h_firma" name="firma" placeholder="Firmanavn eller nettside" autocomplete="organization" required></div></div>
                 <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" inputmode="tel" required></div></div>
                 <div class="field"><label for="h_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="h_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div></div>
+                <div class="field"><label for="h_kommentar">Kort om situasjonen <span class="opt">(valgfritt)</span></label><div class="inp"><textarea id="h_kommentar" name="kommentar" rows="3" placeholder="Hva selger dere, hva vil du ha hjelp med, hva har du prøvd før?"></textarea></div></div>
                 <div class="ferr" id="formErr"></div>
                 <button type="submit" class="cta"><span class="t"><span class="ctxt">Få min gratis analyse</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Gratis &middot; uforpliktende &middot; ingen binding</span></button>
               </div>
@@ -806,12 +809,12 @@ function submitLead(f,msgEl,extraSource,onDone){
   if(f.company&&f.company.value){if(msgEl)msgEl.style.display='block';f.reset();return;} /* honeypot */
   var err=f.querySelector('.ferr');
   if(!f.industry.value||!f.budget.value){if(err){err.textContent='Velg bransje og budsjett først.';err.style.display='block';}return;}
-  if(!f.name.value||!f.phone.value||!f.email.value){f.reportValidity();return;}
+  if(!f.name.value||!(f.firma&&f.firma.value)||!f.phone.value||!f.email.value){f.reportValidity();return;}
   if(err)err.style.display='none';
   var nameVal=f.name.value;
   var industry=f.industry.value, budget=f.budget.value;
   var qualified=isQualified(industry,budget);
-  var p={subject:'Nytt lead — Arcads LP (leads)'+(industry==='nettbutikk'?' · nettbutikk':''),lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
+  var p={subject:'Nytt lead — Arcads LP (leads)'+(industry==='nettbutikk'?' · nettbutikk':''),lead_source:LEAD_SOURCE+(extraSource||''),name:nameVal,company_name:(f.firma?f.firma.value:''),comment:(f.kommentar?f.kommentar.value:''),phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
   /* Meta: kun kvalifiserte leads sendes som «Lead» — det er dét Meta skal lære av. Resten som «SubmitApplication». */
   try{if(window.fbq){if(qualified){fbq('track','Lead',{content_name:p.lead_source,content_category:industry});}else{fbq('track','SubmitApplication',{content_name:p.lead_source,content_category:industry,status:budget});}}}catch(e){}
