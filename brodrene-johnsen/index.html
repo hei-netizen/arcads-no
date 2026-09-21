@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow"><!-- forslag til Brødrene Johnsen Elektroservice — skal ikke indekseres -->
+<title>Elektriker i Skien &mdash; timeprisen st&aring;r p&aring; nettsiden | Br&oslash;drene Johnsen Elektroservice</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23F8C800'/><text y='.9em' x='50%25' text-anchor='middle' font-size='40' font-family='Helvetica,Arial' font-weight='700' fill='%231D1D1B'>bj</text></svg>">
+<meta name="description" content="Br&oslash;drene Johnsen Elektroservice p&aring; R&oslash;dmyrjordet i Skien: din familieelektriker i Telemark. Timepris 1 118 kr inkl. mva p&aring; dagtid, elkontroll etter avhendingsloven, elbillading og varmepumpe i Grenland og omegn.">
+<!-- ============================================================
+     BRØDRENE JOHNSEN ELEKTROSERVICE AS — landingsside for privatkunder (forslag fra Arcads, 21.09.2026)
+     Bygget i FRØYD-MALEN (samme struktur og klassenavn som AVE/Bjelland-demoene).
+     Palett byttet til logo-gul #F8C800 + nettsidens mørke #1D1D1B / lyse #F7F6F4.
+
+     ALT INNHOLD ER VERIFISERT MOT trikkeren.no 21.09.2026
+     (se data/prospects/demo/2026-09-21-brodrene-johnsen-fakta.md for tabell med kilde-URL):
+       · «Din familie elektriker i Telemark» · «alle typer elektrikertjenester i området Grenland og omegn,
+          fra store prosjekter til små serviceoppdrag» · «kun produkter fra kjente merker»
+       · Timepriser fra /priser: hverdager 08–16: 1.118 kr inkl. mva · 16–21: 1.677 kr · natt/helg/helligdag: 2.236 kr
+       · «Vi tar elkontroll bolig etter avhendingsloven» · Elkonor-elektrikere laster opp dokumentasjon i Boligmappa
+       · Zaptec Go (NAF best i test 2022, passer alle elbiler) · Panasonic luft-til-luft varmepumper
+       · Elsikkerhet: EL-sjekk-lista og «hva gjør jeg hvis en automatsikring slår ut»
+       · Rødmyrjordet 5, 3735 Skien · 45007007 · kontor@trikkeren.no
+       · Skjema: «Bestill elektriker — Fyll ut skjema så tar vi kontakt med deg så snart som mulig»
+     IKKE OPPGITT (eller Elkonor-fellesinnhold) og derfor IKKE brukt: etablert-år, navn på folkene,
+     varmepumpe-sparetall («40 %», «20–35 000 kr»), rating/anmeldelser, garantitid, responstid, telefontid.
+
+     BILDER: to bilder av eget bygg på Rødmyrjordet 5 (hero + «her finner du oss»). Øvrige bilder på
+     trikkeren.no er Elkonor-fellesbilder — ikke brukt. Ingen karusell (godkjenningskort i stedet),
+     ingen portretter. Før/etter DROPPET (ingen ekte par).
+
+     SKJEMA: MAKE_WEBHOOK_URL er tom med vilje. Skjemaet går til takk.html men
+     sender ingenting, så demoen kan vises fram uten å lage falske leads.
+     Ingen Meta-pixel — dette er ikke Brødrene Johnsens eiendom ennå.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  /* ===== Brødrene Johnsen-palett (logo-gul #F8C800 + nettsidens mørke #1D1D1B og lyse #F7F6F4) ===== */
+  --cream:#F7F6F4; --sand:#FCFBF9; --white:#fff;
+  --ink:#1D1D1B; --ink2:#2E2D29; --muted:#5E5B55; --line:#E6E2D8;
+  --clay:#A67C00; --clay-deep:#7A5B00; --clay-soft:#F8C800; --clay-tint:#FFF7D6;
+  --dark:#1D1D1B; --dark-deep:#111110;
+  --gold:#F8C800; --red:#C0584A;
+  --mont:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --r:18px; --rs:14px; --pill:999px;
+  --sh:0 24px 54px -32px rgba(29,29,27,.42);
+  --sh-sm:0 14px 30px -22px rgba(29,29,27,.32);
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+body{font-family:var(--mont);color:var(--ink);background:var(--cream);font-size:1.02rem;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spacing:-0.01em;overflow-wrap:break-word}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.section{padding:64px 0}
+@media(max-width:760px){.section{padding:44px 0}}
+.eyebrow{display:inline-block;font-size:0.74rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--clay-deep)}
+.eyebrow.muted{color:var(--muted)}
+.h-xl{font-size:clamp(1.95rem,4.4vw,3.0rem)}
+.h-lg{font-size:clamp(1.6rem,3.1vw,2.3rem)}
+.lede{font-size:1.0rem;color:var(--muted);max-width:58ch}
+.center{text-align:center}
+
+.cta{display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:var(--clay);color:#fff;border:0;cursor:pointer;border-radius:var(--pill);padding:16px 40px;line-height:1.15;transition:.2s;box-shadow:0 16px 30px -18px rgba(122,91,0,.6)}
+.cta:hover{background:var(--clay-deep);transform:translateY(-2px)}
+.cta .t{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem}
+.cta .t .arw{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.22);display:inline-flex;align-items:center;justify-content:center}
+.cta .t .arw svg{width:13px;height:13px}
+.cta .sub{font-size:0.74rem;font-weight:500;opacity:.85}
+.cta.lg{padding:18px 48px}
+.cta.lg .t{font-size:1.14rem}
+.btn-soft{display:inline-flex;align-items:center;gap:9px;background:var(--white);color:var(--ink);border:1px solid var(--line);border-radius:var(--pill);padding:13px 24px;font-weight:600;font-size:0.9rem;cursor:pointer;transition:.2s}
+.btn-soft:hover{border-color:var(--clay);color:var(--clay-deep)}
+.btn-soft svg{width:16px;height:16px}
+
+.topbar{background:var(--cream);text-align:center;padding:16px 16px 11px}
+.topbar .wordmark{display:inline-block;font-size:1.32rem;letter-spacing:.42em;color:var(--ink);line-height:1;margin-bottom:9px;font-weight:600;text-indent:.42em}
+.topbar .rate{display:flex;align-items:center;justify-content:center;gap:7px;font-size:0.92rem;font-weight:600;color:var(--ink);flex-wrap:wrap}
+.topbar .rate small{color:var(--muted);font-weight:500}
+.strip{background:var(--dark);color:#fff;text-align:center;padding:13px 16px;font-size:1.0rem;font-weight:700;letter-spacing:.02em}
+.strip .hl{color:#F8C800}
+@media(max-width:600px){.strip{font-size:0.88rem}}
+/* hero med bilde: Brødrene Johnsens eget bygg på Rødmyrjordet 5 (fra trikkeren.no) + mørk overlay */
+.hero{position:relative;padding:34px 0 56px;background:url('img/hero.jpg') center 40%/cover no-repeat;background-color:var(--dark)}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(17,17,16,.95) 0%,rgba(17,17,16,.90) 34%,rgba(17,17,16,.70) 60%,rgba(17,17,16,.48) 82%,rgba(17,17,16,.36) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.55)}
+.hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr;grid-template-areas:"head form" "rest form";gap:0 40px;align-items:start}
+.hero-head{grid-area:head}
+.hero-form{grid-area:form}
+.hero-rest{grid-area:rest}
+.hero h1{margin:4px 0 18px}
+.hero .blist{list-style:none;display:grid;gap:11px;margin:0 0 22px}
+.hero .blist li{display:flex;align-items:center;gap:11px;font-size:1.0rem;font-weight:600;color:#fff;text-shadow:0 1px 10px rgba(18,14,12,.6)}
+.chk{width:22px;height:22px;border-radius:50%;background:var(--clay);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.chk svg{width:12px;height:12px;stroke:#fff}
+
+.offer{display:flex;align-items:stretch;gap:12px;max-width:440px}
+.offer .tile{position:relative;flex:1;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:16px 12px 13px;text-align:center;box-shadow:var(--sh-sm)}
+.offer .tile .big{display:flex;align-items:center;justify-content:center;height:104px;margin:0 auto 9px;font-size:2.2rem;font-weight:800;letter-spacing:-0.03em;color:var(--clay-deep)}
+.offer .tile .big.sm{font-size:1.5rem}
+.offer .tile b{display:block;font-size:0.9rem;font-weight:700;line-height:1.25}
+.offer .tile .pr{display:block;font-size:0.8rem;color:var(--muted);margin-top:2px}
+.offer .plus{align-self:center;width:34px;height:34px;border-radius:50%;background:var(--clay);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh-sm)}
+.offer .freebadge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--clay);color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--pill);padding:4px 12px;white-space:nowrap}
+.offer-note{font-size:0.86rem;font-weight:600;color:#F8C800;margin-top:12px;text-shadow:0 1px 8px rgba(18,14,12,.5)}
+.offer-note span{color:rgba(255,255,255,.85);font-weight:500}
+@media(max-width:480px){.offer{gap:9px}.offer .tile .big{height:84px;font-size:1.8rem}.offer .tile .big.sm{font-size:1.25rem}.offer .plus{width:28px;height:28px;font-size:1.05rem}}
+
+.formcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px 20px 18px;box-shadow:var(--sh)}
+.formcard .fhead b{display:block;font-size:1.14rem;font-weight:800;letter-spacing:-0.01em}
+.formcard .fhead span{display:block;font-size:0.82rem;color:var(--muted);margin:5px 0 14px}
+.field{margin-bottom:11px}
+.field label{display:block;font-size:0.78rem;font-weight:700;margin-bottom:4px}
+.field label .req{color:var(--clay-deep)}
+.field .inp{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--sand);overflow:hidden}
+.field .inp:focus-within{border-color:var(--clay);background:#fff}
+.field .flag{padding:0 10px;font-size:1.05rem;border-right:1px solid var(--line);align-self:stretch;display:flex;align-items:center}
+.field input{flex:1;width:100%;padding:11px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.95rem;color:var(--ink)}
+.field input:focus{outline:none}
+.formcard .cta{width:100%;margin-top:6px;padding:14px 32px}
+.fmsg{display:none;background:var(--clay-tint);border:1px solid var(--clay-soft);color:var(--clay-deep);padding:13px 15px;border-radius:12px;font-size:0.9rem;margin-bottom:14px;font-weight:600}
+.formcard .fine{display:block;font-size:0.74rem;color:var(--muted);margin-top:11px;text-align:center}
+@media(max-width:900px){
+  .hero{padding:22px 0 42px}
+  .hero-grid{grid-template-columns:1fr;grid-template-areas:"head" "form" "rest";gap:0}
+  .hero-head h1{margin-bottom:14px}
+  .hero-form{margin-bottom:24px}
+}
+@media(max-width:480px){.h-xl{font-size:1.75rem}}
+
+.split{display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:center}
+@media(max-width:880px){.split{grid-template-columns:1fr;gap:30px}}
+.feat{list-style:none;display:grid;gap:22px}
+.feat li{display:flex;gap:14px;align-items:flex-start}
+.feat .chk{margin-top:2px}
+.feat h4{font-size:1.12rem;font-weight:700;margin-bottom:3px}
+.feat p{font-size:0.95rem;color:var(--muted)}
+/* godkjenningskort (erstatter karusellen når vi ikke har egne bilder) */
+.certcard{background:var(--dark);color:#fff;border-radius:var(--r);padding:36px 34px;box-shadow:var(--sh)}
+.certcard .eyebrow{color:#F8C800}
+.certcard h3{color:#fff;font-size:1.4rem;margin:10px 0 18px}
+.certcard ul{list-style:none;display:grid;gap:12px}
+.certcard li{display:flex;gap:11px;align-items:flex-start;font-size:0.97rem;color:rgba(255,255,255,.9)}
+.certcard li .chk{margin-top:3px;background:#fff}
+.certcard li .chk svg{stroke:var(--dark)}
+.certcard .yr{margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);font-size:0.86rem;color:rgba(255,255,255,.6)}
+.certcard .yr b{display:block;font-size:2rem;color:#fff;letter-spacing:-0.02em;line-height:1.1}
+
+.pain{display:grid;gap:14px;max-width:680px;margin:40px auto 0}
+.pain .row{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--line);border-radius:var(--rs);padding:16px 20px;font-weight:600;font-size:1.02rem;box-shadow:var(--sh-sm);text-align:left}
+.pain .x{color:var(--red);font-size:1.2rem;font-weight:800;flex:none}
+
+.darkband{background:var(--dark);color:#fff;border-radius:var(--r);padding:48px 40px;text-align:center;box-shadow:var(--sh)}
+.darkband .eyebrow{color:#F8C800}
+.darkband h2{color:#fff;max-width:26ch;margin:14px auto 12px}
+.darkband p{color:rgba(255,255,255,.82);max-width:52ch;margin:0 auto;font-size:1.04rem}
+.darkband .cta{margin-top:26px;background:#fff;color:var(--dark)}
+.darkband .cta:hover{background:var(--clay-tint)}
+.darkband .cta .arw{background:rgba(26,21,19,.14)}
+.darkband .cta .arw svg{stroke:var(--dark)}
+.darkband .micro{font-size:0.8rem;color:rgba(255,255,255,.55);margin-top:14px}
+@media(max-width:620px){.darkband{padding:42px 24px}}
+
+.inc-card{background:var(--white);border:1px solid var(--line);border-radius:24px;display:grid;grid-template-columns:1fr;gap:0;overflow:hidden;box-shadow:var(--sh);max-width:820px;margin:0 auto}
+.inc-card .body{padding:42px 40px}
+.inc-list{list-style:none;display:grid;gap:14px;margin:22px 0 26px}
+.inc-list li{display:flex;gap:13px;align-items:flex-start;font-size:1rem}
+.inc-list .chk{margin-top:1px}
+.pricebar{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;background:var(--sand);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+.pricebar .ord{font-size:0.94rem;color:var(--muted)}
+.pricebar .now{font-size:1.55rem;font-weight:800;color:var(--clay-deep);letter-spacing:-0.02em}
+.pricebar .now small{font-size:0.86rem;font-weight:600;color:var(--muted);letter-spacing:0}
+@media(max-width:880px){.inc-card .body{padding:34px 26px}}
+
+.rev-head{display:flex;align-items:center;gap:30px;flex-wrap:wrap;justify-content:center;text-align:center;flex-direction:column}
+.rev-score{display:inline-flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:var(--pill);padding:10px 20px;box-shadow:var(--sh-sm)}
+.rev-score .n{font-size:1.5rem;font-weight:800;letter-spacing:-0.02em}
+.rev-score small{color:var(--muted);font-weight:500}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:34px}
+@media(max-width:880px){.rev-grid{grid-template-columns:1fr}}
+.rev-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;box-shadow:var(--sh-sm)}
+.rev-card p{font-size:0.97rem;color:var(--ink2);line-height:1.55}
+.rev-card .who{display:flex;align-items:center;gap:14px}
+.rev-card .ini{width:52px;height:52px;border-radius:50%;background:var(--clay-tint);color:var(--clay-deep);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;flex:none}
+.rev-card .who b{display:block;font-size:1.0rem}
+.rev-card .who span{font-size:0.8rem;color:var(--muted)}
+
+.faq{display:grid;gap:11px;max-width:840px;margin:42px auto 0}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:var(--rs);padding:4px 22px;transition:.2s}
+.faq details[open]{box-shadow:var(--sh-sm)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:1.06rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .pm{width:28px;height:28px;border-radius:50%;background:var(--clay-tint);color:var(--clay-deep);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex:none;transition:.3s}
+.faq details[open] summary .pm{transform:rotate(45deg);background:var(--clay);color:#fff}
+.faq .ans{padding:0 0 20px;color:var(--muted);font-size:0.97rem;max-width:72ch}
+
+.locard{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh);background:var(--white)}
+.locard .head{padding:26px 30px 8px;text-align:center}
+.locard .nm{font-weight:800;font-size:1.28rem;color:var(--ink)}
+.locard .ad{color:var(--muted);font-size:0.95rem;margin-top:6px}
+.locard .ad small{display:block;color:var(--muted);opacity:.75;font-size:0.8rem;margin-top:3px}
+.locard .foot{padding:18px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+.footer{background:var(--dark);color:rgba(255,255,255,.6);font-size:0.88rem;text-align:center;padding:48px 0 36px}
+.footer .wordmark{display:inline-block;font-size:1.15rem;letter-spacing:.42em;text-indent:.42em;color:#fff;line-height:1;margin-bottom:14px;font-weight:600}
+.footer .rate{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600}
+.footer .reg{margin-top:16px;font-size:0.8rem;color:rgba(255,255,255,.45);line-height:1.7}
+
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(18,14,12,.55);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.3s}
+.modal-overlay.show{opacity:1;pointer-events:auto}
+.modal{background:var(--cream);border-radius:24px;max-width:520px;width:100%;overflow:auto;max-height:92vh;box-shadow:0 50px 100px -30px rgba(0,0,0,.55);transform:translateY(20px) scale(.97);transition:.35s cubic-bezier(.2,.7,.2,1)}
+.modal-overlay.show .modal{transform:none}
+.modal .mbody{padding:34px 32px;position:relative}
+.modal .mbody h3{font-size:2.0rem;line-height:1.03;margin:4px 0 4px;text-align:center}
+.modal .close{position:absolute;top:13px;right:15px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;font-size:0.95rem;color:var(--muted);transition:.2s}
+.modal .close:hover{background:var(--dark);color:#fff}
+@media(max-width:620px){.modal .mbody{padding:28px 22px}}
+
+.reveal{opacity:0;transform:translateY(22px);transition:.65s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+.locard .mapimg img{width:100%;height:260px;object-fit:cover;object-position:center 60%}
+.pricebar .now{font-size:1.35rem}
+</style>
+<!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y2br1kx6o7");
+</script>
+</head>
+<body id="top">
+
+<!-- ===== TOP BAR ===== -->
+<header class="topbar">
+  <div class="wrap">
+    <span class="wordmark">br&oslash;drene johnsen</span>
+    <div><span class="rate"><a href="tel:45007007" style="color:var(--clay-deep);font-weight:800;text-decoration:none">45 00 70 07</a> <small>&middot; R&oslash;dmyrjordet 5, Skien &middot; Grenland og omegn</small></span></div>
+  </div>
+</header>
+
+<!-- ===== STRIP ===== -->
+<div class="strip">Din familieelektriker i Telemark &nbsp;&middot;&nbsp; <span class="hl">Timeprisen st&aring;r p&aring; nettsiden: 1 118 kr inkl. mva p&aring; dagtid</span></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-head">
+        <h1 class="h-xl">Trenger du elektriker i Grenland, og vil vite timeprisen f&oslash;r du bestiller?</h1>
+      </div>
+      <div class="hero-rest">
+        <ul class="blist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Timepris 1 118 kr inkl. mva, hverdager 08&ndash;16</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Elkontroll av bolig etter avhendingsloven</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Kun produkter fra kjente merker</li>
+        </ul>
+        <div class="offer">
+          <div class="tile">
+            <span class="freebadge">Hverdager 08&ndash;16</span>
+            <span class="big">1 118 kr</span>
+            <b>per time, inkl. mva</b>
+            <span class="pr">kveld 16&ndash;21: 1 677 kr &middot; natt og helg: 2 236 kr</span>
+          </div>
+          <div class="plus">+</div>
+          <div class="tile">
+            <span class="big sm">Boligmappa</span>
+            <b>Dokumentasjon p&aring; jobben</b>
+            <span class="pr">lastes opp etter utf&oslash;rt oppdrag</span>
+          </div>
+        </div>
+        <p class="offer-note">Fra store prosjekter til sm&aring; serviceoppdrag &mdash; <span>i Grenland og omegn</span></p>
+      </div>
+
+      <!-- LEAD-SKJEMA (nativt, samme oppsett som Frøyd/Generalfinans) -->
+      <div class="hero-form">
+        <div class="formcard">
+          <div class="fhead">
+            <b>Bestill elektriker</b>
+            <span>Beskriv hva du &oslash;nsker utf&oslash;rt, s&aring; tar vi kontakt s&aring; snart som mulig. Tar 30 sekunder.</span>
+          </div>
+          <div class="fmsg" id="formMsg">Takk! Vi har mottatt bestillingen din og tar kontakt s&aring; snart som mulig.</div>
+          <form id="leadForm" novalidate>
+            <div class="field">
+              <label for="a-navn">Fornavn og etternavn <span class="req">*</span></label>
+              <div class="inp"><input type="text" id="a-navn" name="full_name" placeholder="Ditt navn" autocomplete="name" required></div>
+            </div>
+            <div class="field">
+              <label for="a-tlf">Telefonnummer <span class="req">*</span></label>
+              <div class="inp"><span class="flag">&#127475;&#127476;</span><input type="tel" id="a-tlf" name="phone" placeholder="Telefonnummer" autocomplete="tel" required></div>
+            </div>
+            <div class="field">
+              <label for="a-epost">E-post <span class="req">*</span></label>
+              <div class="inp"><input type="email" id="a-epost" name="email" placeholder="E-post" autocomplete="email" required></div>
+            </div>
+            <div class="field">
+              <label for="a-post">Hva &oslash;nsker du utf&oslash;rt? <span class="req">*</span></label>
+              <div class="inp"><input type="text" id="a-post" name="postnr" placeholder="F.eks. elbillader, nytt sikringsskap, elkontroll" required></div>
+            </div>
+            <button type="submit" class="cta" id="leadBtn"><span class="t">Bestill elektriker<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Vi tar kontakt s&aring; snart som mulig</span></button>
+          </form>
+          <span class="fine">Vi deler aldri opplysningene dine med andre.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HVORFOR (godkjenningskort + features; karusellen droppet — kun byggbilder finnes) ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="split">
+      <div class="certcard reveal">
+        <span class="eyebrow">For din trygghet</span>
+        <h3>Dette f&aring;r du hos oss</h3>
+        <ul>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> &Aring;pne timepriser p&aring; nettsiden &mdash; dag, kveld og helg</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Elkontroll bolig etter avhendingsloven</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Dokumentasjon lastet opp i Boligmappa etter utf&oslash;rt oppdrag</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Kun produkter fra kjente merker</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Energir&aring;dgivning for boligen din</li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Medlem av Elkonor</li>
+        </ul>
+        <div class="yr"><b>Telemark</b>Kontor og lager p&aring; R&oslash;dmyrjordet 5 i Skien. Vi kj&oslash;rer ut i Grenland og omegn, fra store prosjekter til sm&aring; serviceoppdrag.</div>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Hvorfor velger folk oss?</span>
+        <h2 class="h-lg" style="margin:12px 0 8px">En kvalitetsbevisst elektriker i Telemark</h2>
+        <p class="lede" style="margin-bottom:30px">Alle typer elektrikertjenester i Grenland og omegn. Du f&aring;r h&oslash;y kvalitet og service fra v&aring;re elektrikere, og du vet hva timen koster f&oslash;r vi kommer.</p>
+        <ul class="feat">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Du vet timeprisen f&oslash;r vi kommer</h4><p>1 118 kr inkl. mva p&aring; hverdager 08&ndash;16. Kveld og helg st&aring;r ogs&aring; p&aring; nettsiden, s&aring; det er ingen overraskelser p&aring; fakturaen.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Skal du selge boligen?</h4><p>Vi tar elkontroll bolig etter avhendingsloven. En elkontroll gir deg b&aring;de tryggere bolig og papirene du trenger hvis du skal selge.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Elbilen skal lades hjemme</h4><p>Zaptec Go passer alle elbiler og alle hjem, oppfyller alle sikkerhetskrav og vant NAFs best i test i 2022.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Str&oslash;mregningen er for h&oslash;y</h4><p>Oppvarming st&aring;r for den st&oslash;rste delen av str&oslash;mkostnadene. Luft-til-luft varmepumpe fra Panasonic, smarthus og str&oslash;msparing, eller solceller p&aring; taket. Vi gir r&aring;d om hva som l&oslash;nner seg for din bolig.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="section">
+  <div class="wrap center">
+    <span class="eyebrow">Kjenner du deg igjen?</span>
+    <h2 class="h-lg" style="margin-top:12px">Dette pleier &aring; stoppe folk&hellip;</h2>
+    <div class="pain">
+      <div class="row"><span class="x">&#10005;</span> Du ringer rundt, og ingen vil si hva timen koster f&oslash;r de har v&aelig;rt hos deg</div>
+      <div class="row"><span class="x">&#10005;</span> Sikringen sl&aring;r ut stadig vekk, og du vet ikke om det er farlig</div>
+      <div class="row"><span class="x">&#10005;</span> Du skal selge boligen og mangler dokumentasjon p&aring; det elektriske</div>
+      <div class="row"><span class="x">&#10005;</span> Elbilen lades fra en vanlig stikkontakt i garasjen</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DARK CTA BAND ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="darkband reveal">
+      <span class="eyebrow">&Aring;pne priser</span>
+      <h2 class="h-lg">Timeprisen st&aring;r p&aring; nettsiden, ikke bare p&aring; fakturaen</h2>
+      <p>1 118 kr inkl. mva per time p&aring; hverdager mellom 08 og 16. Trenger du oss p&aring; kveld eller i helgen, st&aring;r de prisene der ogs&aring;.</p>
+      <a href="#top" class="cta lg jump"><span class="t">Bestill elektriker<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tar 30 sekunder</span></a>
+      <p class="micro">Hverdager 16&ndash;21: 1 677 kr &middot; natt, helg og helligdag: 2 236 kr inkl. mva per time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLIK GJØR DU DET (inc-card, uten bilde) ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-top:0;padding-bottom:72px">
+  <div class="wrap">
+    <div class="center" style="max-width:42rem;margin:0 auto 34px">
+      <span class="eyebrow">Slik gj&oslash;r du det</span>
+      <h2 class="h-lg" style="margin-top:12px">Tre steg, s&aring; er elektrikeren p&aring; vei</h2>
+    </div>
+    <div class="inc-card reveal">
+      <div class="body">
+        <h3 class="h-lg" style="font-size:1.5rem">Beskriv jobben, s&aring; tar vi resten</h3>
+        <ul class="inc-list">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>1. Du fyller ut skjemaet.</b> Skriv kort hva du &oslash;nsker utf&oslash;rt, gjerne med adresse.</div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>2. Vi tar kontakt s&aring; snart som mulig.</b> Vi avtaler tid, og du vet timeprisen p&aring; forh&aring;nd.</div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>3. Vi gj&oslash;r jobben.</b> Dokumentasjonen lastes opp i Boligmappa etter utf&oslash;rt oppdrag, og f&oslash;lger boligen n&aring;r du selger.</div></li>
+        </ul>
+        <div class="pricebar">
+          <span class="ord">Hverdager 08&ndash;16</span>
+          <span class="now">1 118 kr <small>per time inkl. mva</small></span>
+          <span class="ord">Hverdager 16&ndash;21</span>
+          <span class="now">1 677 kr</span>
+          <span class="ord">Natt, helg og helligdag</span>
+          <span class="now">2 236 kr</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FØR / ETTER =====
+     DROPPET med vilje: trikkeren.no har ingen egne jobb-bilder (kun to bilder av bygget
+     og Elkonor-fellesbilder). Legg inn malens .ba-slider her når Brødrene Johnsen sender
+     bilder fra et sikringsskap eller en ladeinstallasjon før og etter. -->
+
+<!-- ===== HVEM PASSER DET FOR ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="center" style="max-width:42rem;margin:0 auto">
+      <span class="eyebrow">Hva trenger du?</span>
+      <h2 class="h-lg" style="margin:12px 0 10px">Tre ting vi gj&oslash;r mest av for private i Grenland</h2>
+      <p class="lede">Vet du ikke hvilken som gjelder deg, s&aring; bestill likevel og beskriv problemet.</p>
+    </div>
+    <div class="split" style="margin-top:34px;grid-template-columns:1fr 1fr 1fr;gap:20px">
+      <div class="rev-card">
+        <h4 style="font-size:1.08rem;margin-bottom:7px">Elkontroll og elsikkerhet</h4>
+        <p>Elkontroll bolig etter avhendingsloven, med papirene du trenger n&aring;r du skal selge. Sjekk av sikringsskap, jordfeilbryter og overspenningsvern n&aring;r sikringer sl&aring;r ut oftere enn de skal.</p>
+      </div>
+      <div class="rev-card">
+        <h4 style="font-size:1.08rem;margin-bottom:7px">Elbillading</h4>
+        <p>Zaptec Go hjemmelader som passer alle elbiler og alle hjem, i seks farger. Vi hjelper deg &aring; velge ladel&oslash;sning og monterer den.</p>
+      </div>
+      <div class="rev-card">
+        <h4 style="font-size:1.08rem;margin-bottom:7px">Varme, belysning og str&oslash;msparing</h4>
+        <p>Luft-til-luft varmepumpe fra Panasonic i ulike modeller og farger, belysning, smarthus og str&oslash;msparing, og solceller. Vi gir energir&aring;d for boligen din.</p>
+      </div>
+    </div>
+    <p class="lede center" style="margin-top:26px;max-width:none">Vi gj&oslash;r ogs&aring; sikkerhet og alarm som beskytter boligen mot brann, innbrudd og vannlekkasje.</p>
+  </div>
+</section>
+
+<!-- ===== FOLKENE: DROPPET — trikkeren.no navngir ingen ansatte og har ingen portretter.
+     Kun «Din familie elektriker», som brukes i strip og topp. Ingen anmeldelser finnes på siden. -->
+
+<!-- ===== CTA BAND ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap center">
+    <span class="eyebrow">Din familieelektriker i Telemark</span>
+    <h2 class="h-lg" style="margin:12px 0 24px">Fortell oss hva du &oslash;nsker utf&oslash;rt, s&aring; tar vi kontakt</h2>
+    <a href="#top" class="cta lg jump"><span class="t">Bestill elektriker<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Timepris 1 118 kr inkl. mva p&aring; dagtid</span></a>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section">
+  <div class="wrap" style="max-width:820px">
+    <div class="center">
+      <span class="eyebrow">Sp&oslash;rsm&aring;l og svar</span>
+      <h2 class="h-lg" style="margin-top:12px">Ofte stilte sp&oslash;rsm&aring;l</h2>
+    </div>
+    <div class="faq">
+      <details open><summary>Hva koster det?<span class="pm">+</span></summary><p class="ans">Timeprisen st&aring;r p&aring; nettsiden v&aring;r. Hverdager 08:00&ndash;16:00: 1 118 kr inkl. mva per time. Hverdager 16:00&ndash;21:00 (50 % overtid): 1 677 kr. Hverdager fra 21:00 til 07:30, samt helg og helligdager (100 % overtid): 2 236 kr.</p></details>
+      <details><summary>Hvor kommer dere?<span class="pm">+</span></summary><p class="ans">Vi holder til p&aring; R&oslash;dmyrjordet 5 i Skien og hjelper deg med alle typer elektrikertjenester i Grenland og omegn.</p></details>
+      <details><summary>Hva er en elkontroll, og trenger jeg det?<span class="pm">+</span></summary><p class="ans">En elkontroll gir deg b&aring;de tryggere bolig og papirene du trenger hvis du skal selge. Vi tar elkontroll bolig etter avhendingsloven.</p></details>
+      <details><summary>F&aring;r jeg dokumentasjon p&aring; jobben?<span class="pm">+</span></summary><p class="ans">Ja. Som Elkonor-elektrikere laster vi opp dokumentasjon i Boligmappa etter utf&oslash;rt oppdrag. Den lagres i hele boligens levetid og f&oslash;lger med til neste eier n&aring;r du selger.</p></details>
+      <details><summary>Hvilken elbillader anbefaler dere?<span class="pm">+</span></summary><p class="ans">Zaptec Go. Den passer alle elbiler og alle hjem, oppfyller alle sikkerhetskrav og vant NAFs best i test i 2022. Den finnes i seks farger.</p></details>
+      <details><summary>Hva gj&oslash;r jeg hvis en sikring sl&aring;r ut?<span class="pm">+</span></summary><p class="ans">Ta ut alt utstyr som er plugget i stikkontaktene p&aring; kursen, sett p&aring; sikringen, og sett inn ett og ett apparat for &aring; finne problemet. Sl&aring;r sikringen ut unormalt ofte, eller mer enn to ganger, b&oslash;r du kontakte elektriker for en sjekk.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HER FINNER DU OSS ===== -->
+<section class="section" style="background:var(--white);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="split" style="align-items:center">
+      <div class="reveal">
+        <span class="eyebrow">Her finner du oss</span>
+        <h2 class="h-lg" style="margin:12px 0 12px">R&oslash;dmyrjordet 5 i Skien</h2>
+        <p class="lede">Din familieelektriker i Telemark. Vi kj&oslash;rer ut i Grenland og omegn, fra store prosjekter til sm&aring; serviceoppdrag.</p>
+        <div style="margin-top:24px"><a href="#top" class="cta jump"><span class="t">Bestill elektriker<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Vi tar kontakt s&aring; snart som mulig</span></a></div>
+      </div>
+      <div class="locard reveal">
+        <div class="mapimg"><img src="img/bygg-rodmyrjordet.jpg" alt="Br&oslash;drene Johnsen Elektroservice sitt bygg p&aring; R&oslash;dmyrjordet 5 i Skien" loading="lazy"></div>
+        <div class="head">
+          <div class="nm">Br&oslash;drene Johnsen Elektroservice AS</div>
+          <div class="ad">R&oslash;dmyrjordet 5, 3735 Skien<small>kontor@trikkeren.no</small></div>
+        </div>
+        <div class="foot">
+          <a href="tel:45007007" class="btn-soft" style="background:var(--dark);color:#fff;border-color:var(--dark)">Ring 45 00 70 07 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a href="mailto:kontor@trikkeren.no" class="btn-soft">Send e-post</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <span class="wordmark">br&oslash;drene johnsen</span>
+    <div><span class="rate"><small>Din familieelektriker i Telemark &middot; Elkontroll etter avhendingsloven &middot; Medlem av Elkonor</small></span></div>
+    <div class="reg">&copy; 2026 Br&oslash;drene Johnsen Elektroservice AS &middot; R&oslash;dmyrjordet 5, 3735 Skien<br>Telefon 45 00 70 07 &middot; kontor@trikkeren.no</div>
+  </div>
+</footer>
+
+<!-- ===== TIMED POPUP (kun snarvei til skjemaet — aldri eget skjema) ===== -->
+<div class="modal-overlay" id="popup" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Bestill elektriker">
+    <div class="mbody">
+      <button class="close" id="popupClose" aria-label="Lukk">&#10005;</button>
+      <div style="text-align:center">
+        <h3>F&oslash;r du g&aring;r!</h3>
+        <p style="font-size:1.02rem;color:var(--muted);margin:8px 0 20px">Det tar 30 sekunder &aring; bestille elektriker</p>
+      </div>
+      <ul style="list-style:none;display:grid;gap:11px;margin:0 auto 22px;max-width:380px;text-align:left">
+        <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span><b>Timepris 1 118 kr</b> inkl. mva p&aring; dagtid</span></li>
+        <li style="display:flex;align-items:flex-start;gap:11px;font-size:0.98rem;font-weight:600;color:var(--ink2)"><span class="chk" style="margin-top:2px"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span>Vi tar kontakt s&aring; snart som mulig</span></li>
+      </ul>
+      <div style="text-align:center">
+        <button type="button" class="cta lg" id="popupGo" style="width:100%"><span class="t">G&aring; til skjemaet<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Tar 30 sekunder</span></button>
+        <p style="font-size:0.78rem;color:var(--muted);margin-top:14px">Vi deler aldri opplysningene dine med noen andre.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+/* ---- smooth scroll ---- */
+function scrollToY(y,dur){var s=window.pageYOffset,d=y-s,t0=null;function f(t){if(t0===null)t0=t;var p=Math.min((t-t0)/dur,1);var e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;window.scrollTo(0,s+d*e);if(p<1)requestAnimationFrame(f);}requestAnimationFrame(f);}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var h=a.getAttribute('href');if(!h||h.length<2)return;var t=document.querySelector(h);if(!t)return;e.preventDefault();scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-10),500);});});
+
+/* ---- scroll reveal ---- */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* ---- timed popup (15s, én gang per økt) ---- */
+var overlay=document.getElementById('popup');
+if(overlay){
+  var sett=function(){try{return sessionStorage.getItem('bj_popup_done')||sessionStorage.getItem('bj_lead_done');}catch(e){return false;}};
+  var apne=function(){if(sett())return;overlay.classList.add('show');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';};
+  var lukk=function(){overlay.classList.remove('show');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';try{sessionStorage.setItem('bj_popup_done','1');}catch(e){}};
+  setTimeout(apne,15000);
+  document.getElementById('popupClose').addEventListener('click',lukk);
+  overlay.addEventListener('click',function(e){if(e.target===overlay)lukk();});
+  document.getElementById('popupGo').addEventListener('click',function(){lukk();var t=document.getElementById('a-navn');if(t){scrollToY(Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-90),500);setTimeout(function(){t.focus();},520);}});
+}
+
+/* ===== LEAD-SKJEMA =====
+   MAKE_WEBHOOK_URL er TOM med vilje: dette er et forslag til Brødrene Johnsen Elektroservice, ikke en
+   produksjonsside. Skjemaet validerer og går til takkesiden, men sender ingenting. */
+var MAKE_WEBHOOK_URL='';
+var TAKK_URL='takk.html';
+
+function bjNormTlf(p){var d=(p||'').replace(/[^0-9+]/g,'');
+  if(/^[49][0-9]{7}$/.test(d))return '+47'+d;
+  if(/^0047/.test(d))return '+47'+d.slice(4); return d;}
+
+document.getElementById('leadForm').addEventListener('submit',function(e){
+  e.preventDefault(); var f=e.target;
+  if(!f.full_name.value.trim()||!f.phone.value.trim()||!f.email.value.trim()||!f.postnr.value.trim()){f.reportValidity();return;}
+  var btn=document.getElementById('leadBtn'); btn.disabled=true; btn.style.opacity='.7';
+  var params=new URLSearchParams(window.location.search);
+  var data={full_name:f.full_name.value.trim(),phone:bjNormTlf(f.phone.value),
+    email:f.email.value.trim(),postnr:f.postnr.value.trim(),
+    tjeneste:'Bestill elektriker',kilde:'arcads.no/brodrene-johnsen',
+    side_url:window.location.href,gclid:params.get('gclid')||''};
+  if(MAKE_WEBHOOK_URL){
+    var body=new URLSearchParams();
+    for(var k in data){if(data.hasOwnProperty(k))body.append(k,data[k]==null?'':data[k]);}
+    try{if(!(navigator.sendBeacon&&navigator.sendBeacon(MAKE_WEBHOOK_URL,body)))
+      fetch(MAKE_WEBHOOK_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()});
+    }catch(err){}
+  }
+  try{sessionStorage.setItem('bj_lead_done','1');}catch(err){}
+  var msg=document.getElementById('formMsg'); if(msg)msg.style.display='block';
+  setTimeout(function(){window.location.href=TAKK_URL;},500);
+});
+</script>
+</body>
+</html>
