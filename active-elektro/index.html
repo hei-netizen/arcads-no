@@ -140,6 +140,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 
 .split{display:grid;grid-template-columns:1fr 1.05fr;gap:46px;align-items:center}
 @media(max-width:880px){.split{grid-template-columns:1fr;gap:30px}}
+@media(max-width:880px){.split[style*="1fr 1fr 1fr"],.rev-grid[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
 .feat{list-style:none;display:grid;gap:22px}
 .feat li{display:flex;gap:14px;align-items:flex-start}
 .feat .chk{margin-top:2px}
