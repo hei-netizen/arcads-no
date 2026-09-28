@@ -57,3 +57,18 @@ h1,h2,h3,h4{font-family:var(--sans);font-weight:600;letter-spacing:-0.025em}
 .faq details[open] summary .pm{background:transparent;color:var(--muted)}
 .field input,.field select{border-radius:10px;height:46px;padding:0 14px;font-family:var(--sans)}
 .field input:focus,.field select:focus{outline:2px solid var(--deep);border-color:var(--deep)}
+.fwho{display:flex;gap:14px;align-items:center;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--line-soft,var(--line));font-size:14px;color:var(--muted);line-height:1.5}
+.fwho b{color:var(--ink);font-weight:600}
+.fwho img{width:88px;height:66px;object-fit:cover;border-radius:12px;flex:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.frow{grid-template-columns:1fr}}
+.field{margin-bottom:12px}
+.field label{display:block;font-size:13px;font-weight:500;margin-bottom:6px;color:var(--ink)}
+.field label .req{color:var(--accent-text,#1f7a4d)}
+.field input,.field select{width:100%;height:46px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font-family:var(--sans);font-size:15px;color:var(--ink)}
+.field input:focus,.field select:focus{outline:2px solid var(--deep);outline-offset:1px;border-color:var(--deep)}
+.field input::placeholder{color:#9A9C97}
+#leadForm .cta{width:100%;margin-top:6px;align-items:center}
+#leadForm .cta span.sub{padding-left:0}
+#leadForm .cta[disabled]{opacity:.65;cursor:progress}
