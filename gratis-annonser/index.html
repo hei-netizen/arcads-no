@@ -839,7 +839,7 @@ fbq('track','PageView');
 /* ===== Konfig ===== */
 var ARCADS_LEAD_WEBHOOK = 'https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi'; // Make: scenario "Arcads LP leads" (6202084) → data store 133291 + Telegram + sheet + autosvar
 var LEAD_SOURCE = 'arcads-gratis-annonser';
-/* Kvalifisering (samme som /leads): 20k+ = Meta «Lead», resten = «SubmitApplication». */
+/* 20k+ = qualified-flagg i Make/Telegram. Meta får «Lead» for ALLE innsendinger (Victor 28.09.2026). */
 var QUALIFIED_BUDGETS = {'20-50k':1,'50k+':1};
 
 /* ---- smooth scroll ---- */
@@ -873,8 +873,9 @@ function submitLead(f,msgEl,onDone){
   var nameVal=f.name.value, industry=f.industry.value, budget=f.budget.value, qualified=isQualified(budget);
   var p={subject:'Nytt lead — Arcads gratis annonser (leadmagnet)',lead_source:LEAD_SOURCE,name:nameVal,company_name:f.firma.value,website:f.website.value,comment:'[3 gratis annonser + LP] '+(f.kommentar?f.kommentar.value:''),phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
-  try{if(window.fbq){if(qualified){fbq('track','Lead',{content_name:LEAD_SOURCE,content_category:industry});}else{fbq('track','SubmitApplication',{content_name:LEAD_SOURCE,content_category:industry,status:budget});}}}catch(e){}
-  try{if(window.gtag)gtag('event',qualified?'generate_lead':'submit_application',{method:'leadmagnet-form',industry:industry,budget:budget});}catch(e){}
+  /* Victor 28.09.2026: ALLE innsendinger telles som «Lead» i Meta på denne siden (budsjett sendes med som info). */
+  try{if(window.fbq)fbq('track','Lead',{content_name:LEAD_SOURCE,content_category:industry,status:budget,qualified:qualified?'ja':'nei'});}catch(e){}
+  try{if(window.gtag)gtag('event','generate_lead',{method:'leadmagnet-form',industry:industry,budget:budget,qualified:qualified});}catch(e){}
   try{sessionStorage.setItem('arcads_lead_done','1');}catch(e){}
   if(msgEl)msgEl.style.display='block';
   f.reset();
