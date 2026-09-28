@@ -94,13 +94,51 @@ fbq('track','PageView');
         <tr><td>70 %</td><td>1,43x</td><td>1,79x</td><td>Godt overskudd</td></tr>
       </table></div>
       <p>Legg merke til 30 %-raden. Uten mva ser 4x ut som et lite overskudd. Med mva i verdien er det tap. Bruk marginen etter varekost, frakt, betalingsgebyr og returer, ikke bare innkjøpspris, og sikt godt over breakeven, fordi tallene svinger fra uke til uke.</p>
+      <div class="chart"><div class="ct">Breakeven-ROAS når verdien i kontoen er inkl. mva</div><div class="cs">Søyler over den stiplede linja betyr at 4x ROAS gir tap.</div><svg viewBox="0 0 600 260" role="img" aria-label="Breakeven-ROAS inkl. mva per bruttomargin sammenlignet med 4x ROAS"><line x1="40" x2="594" y1="226.0" y2="226.0" stroke="#F1EFE9"/><text x="32" y="230.0" text-anchor="end" font-size="11" fill="#8A8D87">0x</text><line x1="40" x2="594" y1="196.9" y2="196.9" stroke="#F1EFE9"/><text x="32" y="200.9" text-anchor="end" font-size="11" fill="#8A8D87">1x</text><line x1="40" x2="594" y1="167.7" y2="167.7" stroke="#F1EFE9"/><text x="32" y="171.7" text-anchor="end" font-size="11" fill="#8A8D87">2x</text><line x1="40" x2="594" y1="138.6" y2="138.6" stroke="#F1EFE9"/><text x="32" y="142.6" text-anchor="end" font-size="11" fill="#8A8D87">3x</text><line x1="40" x2="594" y1="109.4" y2="109.4" stroke="#F1EFE9"/><text x="32" y="113.4" text-anchor="end" font-size="11" fill="#8A8D87">4x</text><line x1="40" x2="594" y1="80.3" y2="80.3" stroke="#F1EFE9"/><text x="32" y="84.3" text-anchor="end" font-size="11" fill="#8A8D87">5x</text><line x1="40" x2="594" y1="51.1" y2="51.1" stroke="#F1EFE9"/><text x="32" y="55.1" text-anchor="end" font-size="11" fill="#8A8D87">6x</text><line x1="40" x2="594" y1="22.0" y2="22.0" stroke="#F1EFE9"/><text x="32" y="26.0" text-anchor="end" font-size="11" fill="#8A8D87">7x</text><rect x="57.8" y="43.9" width="56" height="182.1" rx="6" fill="#E8705F"/><text x="85.8" y="37.9" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">6,25x</text><text x="85.8" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">20 %</text><rect x="149.5" y="104.6" width="56" height="121.4" rx="6" fill="#E8705F"/><text x="177.5" y="98.6" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">4,17x</text><text x="177.5" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">30 %</text><rect x="241.2" y="134.9" width="56" height="91.1" rx="6" fill="#0E7A48"/><text x="269.2" y="128.9" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">3,13x</text><text x="269.2" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">40 %</text><rect x="332.8" y="153.1" width="56" height="72.9" rx="6" fill="#0E7A48"/><text x="360.8" y="147.1" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">2,50x</text><text x="360.8" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">50 %</text><rect x="424.5" y="165.3" width="56" height="60.7" rx="6" fill="#0E7A48"/><text x="452.5" y="159.3" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">2,08x</text><text x="452.5" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">60 %</text><rect x="516.2" y="174.0" width="56" height="52.0" rx="6" fill="#0E7A48"/><text x="544.2" y="168.0" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">1,79x</text><text x="544.2" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">70 %</text><line x1="40" x2="594" y1="109.4" y2="109.4" stroke="#071812" stroke-width="2" stroke-dasharray="6 5"/><text x="592" y="102.4" text-anchor="end" font-size="12" font-weight="600" fill="#071812">Din ROAS: 4x</text></svg><div class="lg"><span style="--c:#E8705F">4x gir tap</span><span style="--c:#0E7A48">4x gir overskudd</span><span style="--c:#8A8D87">x-akse: bruttomargin</span></div></div>
+      <div class="calc" id="roas-kalkulator">
+        <div class="ch">Kalkulator</div>
+        <h3>Er din ROAS lønnsom?</h3>
+        <div class="row">
+          <div><label for="c-m">Bruttomargin (etter varekost, frakt og gebyrer)</label><div class="val"><span id="c-mv">40</span> %</div><input type="range" id="c-m" min="10" max="80" step="1" value="40"></div>
+          <div><label for="c-r">ROAS i annonsekontoen</label><div class="val"><span id="c-rv">4,0</span>x</div><input type="range" id="c-r" min="0.5" max="12" step="0.1" value="4"></div>
+        </div>
+        <label style="margin-top:16px">Verdien i kontoen er</label>
+        <div class="tog" role="group" aria-label="Mva"><button type="button" id="c-inkl" aria-pressed="true">inkl. mva</button><button type="button" id="c-eks" aria-pressed="false">eks. mva</button></div>
+        <div class="bar" aria-hidden="true"><i id="c-bar"></i><u id="c-be"></u></div>
+        <div style="font-size:12px;color:var(--on-dark-dim)">Grønn stripe: din ROAS &middot; hvit strek: breakeven</div>
+        <div class="out">
+          <div><small>Breakeven-ROAS</small><b id="c-o1">3,13x</b></div>
+          <div><small>POAS</small><b id="c-o2">1,28</b></div>
+          <div><small>Per 10 000 kr i annonser</small><b id="c-o3">+2 800 kr</b></div>
+        </div>
+        <div class="verdict" id="c-v"></div>
+      </div>
+      <script>
+      (function(){var m=document.getElementById('c-m'),r=document.getElementById('c-r'),bi=document.getElementById('c-inkl'),be=document.getElementById('c-eks'),inkl=true;
+      function f(n,d){return n.toFixed(d).replace('.',',')}
+      function kr(n){var s=Math.round(n/100)*100;return (s>=0?'+':'−')+Math.abs(s).toLocaleString('nb-NO').replace(/,/g,' ')+' kr'}
+      function u(){var mg=m.value/100,ro=+r.value,real=inkl?ro/1.25:ro,brk=(1/mg)*(inkl?1.25:1),poas=real*mg,res=10000*(poas-1);
+      document.getElementById('c-mv').textContent=m.value;document.getElementById('c-rv').textContent=f(ro,1);
+      document.getElementById('c-o1').textContent=f(brk,2)+'x';document.getElementById('c-o2').textContent=f(poas,2);document.getElementById('c-o3').textContent=kr(res);
+      var sc=12,bar=document.getElementById('c-bar');bar.style.width=Math.min(100,ro/sc*100)+'%';bar.className=ro<brk?'neg':'';document.getElementById('c-be').style.left=Math.min(100,brk/sc*100)+'%';
+      var p=ro/brk;document.getElementById('c-v').textContent=ro<brk?'Under breakeven: annonsene taper penger før du har betalt for noe annet.':(p<1.25?'Så vidt over breakeven. Lite rom når tallene svinger.':'Godt over breakeven. Annonsene tjener penger.');}
+      function t(v){inkl=v;bi.setAttribute('aria-pressed',v);be.setAttribute('aria-pressed',!v);u()}
+      m.oninput=u;r.oninput=u;bi.onclick=function(){t(true)};be.onclick=function(){t(false)};u();})();
+      </script>
 
       <h2>Mva er den vanligste regnefeilen</h2>
-      <p>Mange nettbutikker sender ordreverdien inkl. mva til Google Ads og Meta. En ordre på 1 250 kr er da 1 000 kr i omsetning for deg, og en rapportert ROAS på 4x er egentlig 3,2x. Du har to valg: send verdien eks. mva (og gjerne eks. frakt) til annonsekontoene, eller gang breakeven med 1,25. Sjekk hva som sendes ved å legge inn en testordre og sammenligne verdien i Google Ads med ordren i nettbutikken.</p>
+      <p>Mange nettbutikker sender ordreverdien inkl. mva til Google Ads og Meta. En ordre på 1 250 kr er da 1 000 kr i omsetning for deg, og en rapportert ROAS på 4x er egentlig 3,2x.</p>
+      <div class="receipt">
+        <div class="rc"><small>Ordren i nettbutikken</small><div class="rl"><span>Ordreverdi</span><span>1 250 kr</span></div><div class="rl"><span>Mva 25 %</span><span>−250 kr</span></div><div class="rl t"><span>Din omsetning</span><span>1 000 kr</span></div></div>
+        <div class="ar">→</div>
+        <div class="rc hl"><small>ROAS på 4x i Google Ads er egentlig</small><div class="big">3,2x</div><small style="margin:6px 0 0">fordi Google regner med 1 250 kr</small></div>
+      </div>
+      <p> Du har to valg: send verdien eks. mva (og gjerne eks. frakt) til annonsekontoene, eller gang breakeven med 1,25. Sjekk hva som sendes ved å legge inn en testordre og sammenligne verdien i Google Ads med ordren i nettbutikken.</p>
 
       <h2>Dobbelttelling og merkevaresøk</h2>
+      <div class="acct"><div class="al">Fra kontoene våre</div><p>Da vi startet med Leid.no, telte sporingen langt flere kjøp enn det som faktisk skjedde. I en annen nettbutikk vi drifter, telte to konverteringshandlinger det samme kjøpet. ROAS-en i Google så dobbelt så god ut som den var.</p></div>
       <ul>
-        <li><b>Dobbelttelling.</b> Da vi startet med Leid.no, telte sporingen langt flere kjøp enn det som faktisk skjedde. I en annen nettbutikk-konto vi drifter, telte to primære konverteringshandlinger det samme kjøpet, så ROAS-en i Google var omtrent dobbelt så høy som den reelle. Sjekk alltid antall kjøp og omsetning i Google Ads mot nettbutikken eller regnskapet.</li>
+        <li><b>Dobbelttelling.</b> Sporingen kan telle samme kjøp flere ganger. Sjekk alltid antall kjøp og omsetning i Google Ads mot nettbutikken eller regnskapet.</li>
         <li><b>Merkevaresøk.</b> Folk som søker på navnet ditt, hadde stort sett kjøpt uansett. Blandes de inn, ser annonsene for nye kunder bedre ut enn de er. Legg merkevaresøk i en egen kampanje og vurder den for seg.</li>
         <li><b>Flere kanaler tar æren for samme salg.</b> Google og Meta teller begge salget hvis kunden har vært innom begge. Summen av ROAS i hver kanal blir da høyere enn virkeligheten. Mål også samlet omsetning delt på samlet annonsekostnad (ofte kalt MER). Da vi drev Leid.no, lå ROAS-en på 4,73x på tvers av kanalene.</li>
       </ul>
@@ -108,10 +146,14 @@ fbq('track','PageView');
       <h2>POAS: når marginene varierer</h2>
       <p><b>POAS (Profit On Ad Spend) = bruttofortjeneste / annonsekostnad.</b> Over 1 betyr at annonsene tjener penger. Det er et bedre mål når marginen varierer mye mellom produktene.</p>
       <p>Et tenkt eksempel: en nettbutikk har én kampanje med produkter på 20 % margin og 5x ROAS, og én med produkter på 60 % margin og 3x ROAS. Den første har POAS 1,0 og går i null. Den andre har POAS 1,8 og tjener penger, selv om ROAS-en er lavere. Styrer du bare på ROAS, flytter du budsjettet feil vei.</p>
+      <div class="vs">
+        <div class="vc bad"><small>Kampanje A</small><div class="k"><span>Margin</span><b>20 %</b></div><div class="k"><span>ROAS</span><b>5,0x</b></div><div class="k"><span>POAS</span><b>1,0</b></div><div class="res">Går i null</div></div>
+        <div class="vc good"><small>Kampanje B</small><div class="k"><span>Margin</span><b>60 %</b></div><div class="k"><span>ROAS</span><b>3,0x</b></div><div class="k"><span>POAS</span><b>1,8</b></div><div class="res">Tjener penger</div></div>
+      </div>
       <p>For å styre på POAS må annonsekontoen få bruttofortjeneste som konverteringsverdi i stedet for omsetning, for eksempel via et tilpasset oppsett i nettbutikken. Alternativet er å dele produktene i kampanjer etter margin med ulike ROAS-mål. Det er beskrevet i <a href="/artikler/google-shopping/">artikkelen om Google Shopping</a>.</p>
 
       <h2>Oppsummert</h2>
-      <ol>
+      <ol class="checklist">
         <li>Regn ut bruttomarginen etter varekost, frakt og gebyrer.</li>
         <li>Breakeven-ROAS = 1 / margin. Gang med 1,25 hvis verdien i kontoen er inkl. mva.</li>
         <li>Sikt godt over breakeven.</li>
