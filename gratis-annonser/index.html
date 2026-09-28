@@ -459,6 +459,11 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .fn.no li::before{content:"\2715";position:absolute;left:0;top:0;color:var(--red);font-weight:900}
 .hero.dk .formcard{color:var(--ink)}
 @media(max-width:480px){.topl .rate{display:none}}
+.qual .qh{font-size:0.78rem;color:var(--muted);margin:-3px 0 8px}
+.shead{font-weight:800;font-size:1rem;margin-bottom:12px}.shead span{display:block;font-weight:500;font-size:0.8rem;color:var(--muted);margin-top:2px}
+.wnext{width:100%;margin-top:4px}
+.dq{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 8px}
+.dq b{display:block;font-size:1.02rem;margin-bottom:8px}.dq p{font-size:0.9rem;color:var(--muted);margin-bottom:8px;line-height:1.5}
 /* finale */
 .finale{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--sh)}
 .finale img{width:100%;border-radius:18px;object-fit:cover;aspect-ratio:4/3}
@@ -507,7 +512,7 @@ fbq('track','PageView');
           <span><b>142</b> leads på én uke &middot; Utvendig Renhold</span>
           <span><b>4,73x</b> ROAS &middot; Leid.no</span>
         </div>
-        <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">30 sekunder &middot; 0 kr</span></a></div>
+        <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">2 minutter &middot; 0 kr</span></a></div>
         <div class="faces">
           <div class="pics">
             <img src="/img/victor.webp" alt="Victor" width="44" height="44">
@@ -520,20 +525,21 @@ fbq('track','PageView');
       <div class="hero-form">
         <div class="formcard" id="book">
           <div id="leadStep">
-            <div class="fhead"><b>Få annonsene dine gratis</b><span>3 raske spørsmål. Vi er to, så vi tar et begrenset antall hver uke, og sier fra innen 24 timer.</span></div>
+            <div class="fhead"><b>Få annonsene dine gratis</b><span>Tar 2 minutter. Jo mer du forteller, jo bedre blir annonsene. Vi sier fra innen 24 timer.</span></div>
             <div class="fmsg" id="formMsg">Takk! Vi ser på bedriften din og sier fra innen 24 timer.</div>
             <form id="leadForm" novalidate>
-              <div class="wprog"><span class="wtxt" id="wTxt">1 av 3</span><span class="bar"><i id="wBar" style="width:33%"></i></span></div>
-              <div class="wstep on">
+              <div class="wprog"><span class="wtxt" id="wTxt">1 av 5</span><span class="bar"><i id="wBar" style="width:20%"></i></span></div>
+              <div class="wstep on" data-auto>
                 <div class="qual" data-key="industry">
                   <div class="q">Hva driver du med?</div>
                   <div class="opts"><button type="button" class="opt" data-v="nettbutikk">Nettbutikk</button><button type="button" class="opt" data-v="tjeneste">Tjenestebedrift</button><button type="button" class="opt" data-v="klinikk">Klinikk / helse</button><button type="button" class="opt" data-v="handverk">Håndverk / bygg</button><button type="button" class="opt" data-v="annet">Annet</button></div>
                 </div>
               </div>
-              <div class="wstep">
+              <div class="wstep" data-auto>
                 <div class="qual" data-key="budget">
-                  <div class="q">Hvor mye bruker du på annonser i måneden?</div>
-                  <div class="opts"><button type="button" class="opt" data-v="ingen">Annonserer ikke ennå</button><button type="button" class="opt" data-v="under-10k">Under 10 000</button><button type="button" class="opt" data-v="10-20k">10&ndash;20 000</button><button type="button" class="opt" data-v="20-50k">20&ndash;50 000</button><button type="button" class="opt" data-v="50k+">Over 50 000</button></div>
+                  <div class="q">Hvor mye kan du bruke på annonser i måneden?</div>
+                  <div class="qh">Det du betaler til Meta, ikke til oss.</div>
+                  <div class="opts"><button type="button" class="opt" data-v="under-5k">Under 5 000</button><button type="button" class="opt" data-v="5-10k">5&ndash;10 000</button><button type="button" class="opt" data-v="10-20k">10&ndash;20 000</button><button type="button" class="opt" data-v="20-50k">20&ndash;50 000</button><button type="button" class="opt" data-v="50k+">Over 50 000</button></div>
                 </div>
                 <div class="qual" data-key="goal">
                   <div class="q">Hva vil du ha mer av?</div>
@@ -541,23 +547,51 @@ fbq('track','PageView');
                 </div>
               </div>
               <div class="wstep">
+                <div class="shead">Om bedriften <span>Dette bygger vi annonsene på.</span></div>
+                <div class="field"><label for="h_web">Nettside <span class="req">*</span></label><div class="inp"><input type="text" id="h_web" name="website" placeholder="dinbedrift.no" autocomplete="url" inputmode="url" required></div></div>
+                <div class="field"><label for="h_service">Hva vil du ha flere kunder på? <span class="req">*</span></label><div class="inp"><input type="text" id="h_service" name="service" placeholder="F.eks. takvask og impregnering" required></div></div>
+                <div class="field"><label for="h_area">Hvor er kundene dine? <span class="req">*</span></label><div class="inp"><input type="text" id="h_area" name="area" placeholder="F.eks. Drammen og omegn" required></div></div>
+                <div class="qual" data-key="customer_value">
+                  <div class="q" id="cvQ">Hva er en ny kunde verdt for deg?</div>
+                  <div class="opts" id="cvOpts"></div>
+                </div>
+                <div class="ferr"></div>
+                <button type="button" class="cta wnext"><span class="t">Neste <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
+              </div>
+              <div class="wstep">
+                <div class="shead">Gjør annonsene bedre <span>Valgfritt, men jo mer du skriver, jo bedre treffer vi.</span></div>
+                <div class="field"><label for="h_usp">Hvorfor velger kundene deg, og ikke konkurrenten?</label><div class="inp"><textarea id="h_usp" name="usp" rows="2" placeholder="F.eks. gratis befaring, fast pris, 10 års garanti, svarer samme dag"></textarea></div></div>
+                <div class="field"><label for="h_offer">Har du et tilbud eller en kampanje nå?</label><div class="inp"><input type="text" id="h_offer" name="offer" placeholder="F.eks. 20 % på takvask ut oktober"></div></div>
+                <div class="field"><label for="h_social">Facebook- eller Instagram-side</label><div class="inp"><input type="text" id="h_social" name="social" placeholder="Lenke eller @navn"></div></div>
+                <div class="qual" data-key="images">
+                  <div class="q">Har du bilder eller video vi kan bruke?</div>
+                  <div class="opts"><button type="button" class="opt" data-v="nettsiden">Ja, på nettsiden</button><button type="button" class="opt" data-v="kan-sende">Ja, kan sende</button><button type="button" class="opt" data-v="nei">Nei</button></div>
+                </div>
+                <button type="button" class="cta wnext"><span class="t">Neste <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
+              </div>
+              <div class="wstep">
                 <div class="qsum" id="qSum"></div>
+                <div class="shead">Hvor sender vi annonsene? <span>Siste steg.</span></div>
                 <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-                <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Navnet ditt" autocomplete="name" required></div></div>
                 <div class="f2">
+                  <div class="field"><label for="h_name">Navn <span class="req">*</span></label><div class="inp"><input type="text" id="h_name" name="name" placeholder="Navnet ditt" autocomplete="name" required></div></div>
                   <div class="field"><label for="h_firma">Bedrift <span class="req">*</span></label><div class="inp"><input type="text" id="h_firma" name="firma" placeholder="Firmanavn" autocomplete="organization" required></div></div>
-                  <div class="field"><label for="h_web">Nettside <span class="req">*</span></label><div class="inp"><input type="text" id="h_web" name="website" placeholder="dinbedrift.no" autocomplete="url" inputmode="url" required></div></div>
                 </div>
                 <div class="f2">
                   <div class="field"><label for="h_phone">Telefon <span class="req">*</span></label><div class="inp"><input type="tel" id="h_phone" name="phone" placeholder="Så vi kan ringe deg" autocomplete="tel" inputmode="tel" required></div></div>
                   <div class="field"><label for="h_email">E-post <span class="req">*</span></label><div class="inp"><input type="email" id="h_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div></div>
                 </div>
-                <div class="field"><label for="h_kommentar">Hva vil du ha flere av? <span class="opt">(valgfritt)</span></label><div class="inp"><textarea id="h_kommentar" name="kommentar" rows="2" placeholder="F.eks. flere takvask-jobber, eller mer salg av én produktgruppe"></textarea></div></div>
                 <div class="ferr" id="formErr"></div>
                 <button type="submit" class="cta"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">0 kr &middot; ingen binding &middot; du beholder alt</span></button>
               </div>
+              <div class="dq" id="dqBox" hidden>
+                <b>Ærlig talt: da er vi ikke riktig match ennå.</b>
+                <p>Med under 5&nbsp;000 kr i måneden får Meta for lite data til at annonsene får vist hva de kan. Vi vil ikke lage noe som ikke får en ærlig sjanse.</p>
+                <p>Når budsjettet er på plass, er du hjertelig velkommen tilbake.</p>
+                <button type="button" class="wback" id="dqBack" style="display:block">&larr; Jeg kan bruke mer, gå tilbake</button>
+              </div>
               <button type="button" class="wback" id="wBack" style="display:none">&larr; Tilbake</button>
-              <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal">
+              <input type="hidden" name="industry"><input type="hidden" name="budget"><input type="hidden" name="goal"><input type="hidden" name="customer_value"><input type="hidden" name="images">
             </form>
             <div class="fine"><span>Vi deler aldri opplysningene dine med noen andre.</span></div>
           </div>
@@ -621,7 +655,7 @@ fbq('track','PageView');
       <div class="price">
         <div class="po">Vanlig byrå: <s>1&nbsp;000&ndash;2&nbsp;000 kr timen</s></div>
         <div class="pn2">Din pris: <b>0 kr</b></div>
-        <a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">30 sekunder &middot; du beholder alt</span></a>
+        <a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">2 minutter &middot; du beholder alt</span></a>
       </div>
     </div>
   </div>
@@ -760,6 +794,7 @@ fbq('track','PageView');
         <li>Du vil ha likes, ikke kunder</li>
         <li>Du ikke har tid til å svare på henvendelsene som kommer</li>
         <li>Du bare vil ha gratis design uten å kjøre noe</li>
+        <li>Du har under 5&nbsp;000 kr i måneden til annonser</li>
       </ul></div>
     </div>
   </div>
@@ -772,7 +807,7 @@ fbq('track','PageView');
       <span class="eyebrow">&mdash; Null risiko &mdash;</span>
       <h2 class="h-lg">Liker du ikke annonsene? Behold dem likevel.</h2>
       <p>Du betaler ingenting, du binder deg ikke til noe, og du gir oss ikke kortet ditt. Det verste som kan skje: du får tre gratis annonser og en landingsside.</p>
-      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">30 sekunder &middot; 0 kr</span></a></div>
+      <div style="margin-top:26px"><a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">2 minutter &middot; 0 kr</span></a></div>
       <p class="micro">Begrenset antall hver uke &middot; vi lager dem selv</p>
     </div>
   </div>
@@ -791,7 +826,7 @@ fbq('track','PageView');
       <details><summary>Hvor lang tid tar det?<span class="pm">+</span></summary><div class="ans">Vi sier fra innen 24 timer om vi kan lage pakken til deg. Annonsene og siden er klare innen en uke.</div></details>
       <details><summary>Hvorfor bare Facebook og Instagram?<span class="pm">+</span></summary><div class="ans">Fordi det er der vi ser de billigste leadsene akkurat nå, og der gode annonser utgjør størst forskjell. Google tar vi gjerne i praten.</div></details>
       <details><summary>Hva om jeg ikke har gode bilder?<span class="pm">+</span></summary><div class="ans">Vi bruker bildene fra nettsiden din. Mangler de, sier vi fra, og du kan sende noen fra mobilen. Mobilbilder slår ofte proffe bilder på Facebook.</div></details>
-      <details><summary>Hvorfor spør dere om budsjett?<span class="pm">+</span></summary><div class="ans">Fordi vi lager et begrenset antall hver uke, og vil bruke tiden der annonsene faktisk blir kjørt. Annonserer du ikke ennå, kan du fortsatt søke.</div></details>
+      <details><summary>Hvorfor spør dere om budsjett?<span class="pm">+</span></summary><div class="ans">Fordi annonser trenger penger bak seg for å virke. Under 5&nbsp;000 kr i måneden får Meta for lite data, og da får ikke annonsene en ærlig sjanse. Vi lager et begrenset antall hver uke, og bruker tiden der de faktisk blir kjørt.</div></details>
     </div>
   </div>
 </section>
@@ -805,7 +840,7 @@ fbq('track','PageView');
         <span class="eyebrow">Fra oss to</span>
         <h2 class="h-lg" style="margin:10px 0 12px">Du har ingenting å tape. Bare tre annonser å vinne.</h2>
         <p class="lede" style="margin-bottom:22px">Fyll ut skjemaet, så lager vi dem. Hilsen Victor &amp; Jona.</p>
-        <a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">30 sekunder &middot; 0 kr</span></a>
+        <a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">2 minutter &middot; 0 kr</span></a>
         <p style="font-size:0.86rem;color:var(--muted);margin-top:14px">Heller e-post? <a href="mailto:victor@arcads.no" style="color:var(--accent-deep);font-weight:600">victor@arcads.no</a></p>
       </div>
     </div>
@@ -829,7 +864,7 @@ fbq('track','PageView');
       <span class="eyebrow">Vent litt</span>
       <h3>3 gratis Facebook-annonser + landingsside. Du beholder alt.</h3>
       <p>Ingen kort, ingen binding. <b>Det verste som kan skje er at du får tre gratis annonser.</b></p>
-      <a href="#book" class="cta jump" id="popupGo"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">30 sekunder &middot; 0 kr</span></a>
+      <a href="#book" class="cta jump" id="popupGo"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">2 minutter &middot; 0 kr</span></a>
       <p class="pfine">Gratis &middot; ingen binding &middot; ingen kortinfo</p>
     </div>
   </div>
@@ -864,19 +899,28 @@ function revealBooking(name){
   if(th)th.textContent=first?('Takk, '+first+'!'):'Takk!';
   if(window.arcadsInitCal)window.arcadsInitCal();
 }
+function val(f,n){return f[n]&&f[n].value?f[n].value.trim():'';}
 function submitLead(f,msgEl,onDone){
   if(f.company&&f.company.value){if(msgEl)msgEl.style.display='block';f.reset();return;} /* honeypot */
-  var err=f.querySelector('.ferr');
-  if(!f.industry.value||!f.budget.value){if(err){err.textContent='Velg bransje og budsjett først.';err.style.display='block';}return;}
-  if(!f.name.value||!f.firma.value||!f.website.value||!f.phone.value||!f.email.value){f.reportValidity();return;}
+  var err=document.getElementById('formErr');
+  if(!f.industry.value||!f.budget.value||f.budget.value==='under-5k'){if(err){err.textContent='Velg bransje og budsjett først.';err.style.display='block';}return;}
+  if(!val(f,'name')||!val(f,'firma')||!val(f,'phone')||!val(f,'email')){f.reportValidity();return;}
   if(err)err.style.display='none';
-  var nameVal=f.name.value, industry=f.industry.value, budget=f.budget.value, qualified=isQualified(budget);
-  var p={subject:'Nytt lead — Arcads gratis annonser (leadmagnet)',lead_source:LEAD_SOURCE,name:nameVal,company_name:f.firma.value,website:f.website.value,comment:'[3 gratis annonser + LP] '+(f.kommentar?f.kommentar.value:''),phone:f.phone.value,email:f.email.value,industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
+  var nameVal=val(f,'name'), industry=f.industry.value, budget=f.budget.value, qualified=isQualified(budget);
+  /* Alt byggegrunnlaget samles i comment, så det vises i Telegram og CRM-arket uten endringer i Make */
+  var brief=['[3 gratis annonser + LP]',
+    'Selger: '+val(f,'service')+' | Område: '+val(f,'area')+' | Kundeverdi: '+(f.customer_value.value||'-'),
+    'Skiller seg ut: '+(val(f,'usp')||'-'),
+    'Tilbud nå: '+(val(f,'offer')||'-'),
+    'FB/IG: '+(val(f,'social')||'-')+' | Bilder: '+(f.images.value||'-')].join('\n');
+  var p={subject:'Nytt lead — Arcads gratis annonser (leadmagnet)',lead_source:LEAD_SOURCE,name:nameVal,company_name:val(f,'firma'),website:val(f,'website'),comment:brief,
+    service:val(f,'service'),area:val(f,'area'),customer_value:f.customer_value.value,usp:val(f,'usp'),offer:val(f,'offer'),social:val(f,'social'),images:f.images.value,
+    phone:val(f,'phone'),email:val(f,'email'),industry:industry,budget:budget,goal:(f.goal?f.goal.value:''),qualified:qualified?'ja':'nei',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()};
   postTo(ARCADS_LEAD_WEBHOOK,p);storeLead(p);
-  /* Victor 28.09.2026: ALLE innsendinger telles som «Lead» i Meta på denne siden (budsjett sendes med som info). */
+  /* Victor 28.09.2026: ALLE innsendinger telles som «Lead» i Meta (under 5 000 kr/mnd slipper aldri gjennom skjemaet). */
   try{if(window.fbq)fbq('track','Lead',{content_name:LEAD_SOURCE,content_category:industry,status:budget,qualified:qualified?'ja':'nei'});}catch(e){}
   try{if(window.gtag)gtag('event','generate_lead',{method:'leadmagnet-form',industry:industry,budget:budget,qualified:qualified});}catch(e){}
-  try{sessionStorage.setItem('arcads_lead_done','1');}catch(e){}
+  try{sessionStorage.setItem('arcads_lead_done','1');sessionStorage.removeItem('arcads_form_v1');}catch(e){}
   if(msgEl)msgEl.style.display='block';
   f.reset();
   f.querySelectorAll('.opt.on').forEach(function(o){o.classList.remove('on');});
@@ -896,15 +940,27 @@ if(overlay){
   document.getElementById('popupGo').addEventListener('click',function(e){e.preventDefault();closePopup();var b=document.getElementById('book');if(b)scrollToY(Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-10),500);try{if(window.gtag)gtag('event','popup_cta_click');}catch(x){}});
 }
 
-/* ---- wizard: ett steg om gangen, auto-videre ---- */
+/* ---- wizard: 5 steg. Pill-steg går videre av seg selv, tekst-steg har «Neste». Under 5 000 kr/mnd = avvist (ingenting sendes). ---- */
 var INDUSTRY_ALIAS={'finans':'tjeneste','renhold':'tjeneste','flytting':'tjeneste','bygg':'handverk','helse':'klinikk','ecom':'nettbutikk'};
 var PRESET_INDUSTRY=(function(){try{var b=new URLSearchParams(location.search).get('b')||'';return INDUSTRY_ALIAS[b]||b;}catch(e){return '';}})();
+var PH={nettbutikk:['F.eks. barnesolbriller','Hele Norge'],tjeneste:['F.eks. flyttevask','F.eks. Oslo og omegn'],klinikk:['F.eks. skinbooster-behandling','F.eks. Lillestrøm og omegn'],handverk:['F.eks. takvask og impregnering','F.eks. Drammen og omegn'],annet:['Det du selger mest av','F.eks. Bergen, eller hele Norge']};
+var CV={shop:['Hva er en snittordre hos deg?',[['under-500','Under 500 kr'],['500-1500','500&ndash;1 500 kr'],['1500-5000','1 500&ndash;5 000 kr'],['5000+','Over 5 000 kr']]],
+        lead:['Hva er en ny kunde verdt for deg?',[['under-2k','Under 2 000 kr'],['2-10k','2&ndash;10 000 kr'],['10-50k','10&ndash;50 000 kr'],['50k+','Over 50 000 kr'],['vet-ikke','Vet ikke']]]};
 (function(){
   var form=document.getElementById('leadForm');if(!form)return;
-  var steps=form.querySelectorAll('.wstep');
+  var steps=form.querySelectorAll('.wstep'),dq=document.getElementById('dqBox');
   var bar=document.getElementById('wBar'),txt=document.getElementById('wTxt'),back=document.getElementById('wBack'),qSum=document.getElementById('qSum');
   var cur=0,startFired=false;
+  function setIndustry(ind){
+    var ph=PH[ind]||PH.annet,sv=document.getElementById('h_service'),ar=document.getElementById('h_area');
+    if(sv)sv.placeholder=ph[0];if(ar)ar.placeholder=ph[1];
+    var c=CV[ind==='nettbutikk'?'shop':'lead'],box=document.getElementById('cvOpts'),keep=form.customer_value.value;
+    document.getElementById('cvQ').textContent=c[0];
+    if(box.getAttribute('data-mode')!==c[0]){box.setAttribute('data-mode',c[0]);box.innerHTML=c[1].map(function(x){return '<button type="button" class="opt'+(x[0]===keep?' on':'')+'" data-v="'+x[0]+'">'+x[1]+'</button>';}).join('');if(!box.querySelector('.on'))form.customer_value.value='';}
+  }
+  setIndustry('');
   function show(i){
+    if(dq)dq.hidden=true;
     cur=Math.max(0,Math.min(i,steps.length-1));
     for(var k=0;k<steps.length;k++)steps[k].classList.toggle('on',k===cur);
     if(bar)bar.style.width=Math.round((cur+1)/steps.length*100)+'%';
@@ -918,17 +974,28 @@ var PRESET_INDUSTRY=(function(){try{var b=new URLSearchParams(location.search).g
         try{if(window.gtag)gtag('event','lead_start',{industry:form.industry.value,budget:form.budget.value,qualified:q});}catch(e){}}
     }
   }
-  function pick(g,b){var key=g.getAttribute('data-key');g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});b.classList.add('on');if(form[key])form[key].value=b.getAttribute('data-v')||b.textContent;}
-  form.querySelectorAll('.qual').forEach(function(g){
-    g.addEventListener('click',function(e){
-      var b=e.target.closest('.opt');if(!b||!g.contains(b))return;
-      pick(g,b);
-      var st=g.closest('.wstep'),qs=st?st.querySelectorAll('.qual'):[],done=true;
-      for(var i=0;i<qs.length;i++){if(!qs[i].querySelector('.opt.on')){done=false;break;}}
-      if(done)setTimeout(function(){show(cur+1);},250);
-    });
+  function disqualify(){
+    for(var k=0;k<steps.length;k++)steps[k].classList.remove('on');
+    if(back)back.style.display='none';if(dq)dq.hidden=false;
+    try{if(window.gtag)gtag('event','lead_disqualified',{reason:'budget-under-5k',industry:form.industry.value});}catch(e){}
+  }
+  function pick(g,b){var key=g.getAttribute('data-key');g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});b.classList.add('on');if(form[key])form[key].value=b.getAttribute('data-v')||b.textContent;if(key==='industry')setIndustry(form.industry.value);}
+  form.addEventListener('click',function(e){
+    var b=e.target.closest('.opt');if(!b)return;var g=b.closest('.qual');if(!g)return;
+    pick(g,b);
+    var st=g.closest('.wstep');if(!st||!st.hasAttribute('data-auto'))return;
+    if(g.getAttribute('data-key')==='budget'&&b.getAttribute('data-v')==='under-5k'){setTimeout(disqualify,250);return;}
+    var qs=st.querySelectorAll('.qual'),done=true;
+    for(var i=0;i<qs.length;i++){if(!qs[i].querySelector('.opt.on')){done=false;break;}}
+    if(done)setTimeout(function(){show(cur+1);},250);
   });
+  form.querySelectorAll('.wnext').forEach(function(btn){btn.addEventListener('click',function(){
+    var st=steps[cur],req=st.querySelectorAll('[required]');
+    for(var i=0;i<req.length;i++){if(!req[i].value.trim()){req[i].reportValidity();req[i].focus();return;}}
+    show(cur+1);
+  });});
   if(back)back.addEventListener('click',function(){show(cur-1);});
+  var db=document.getElementById('dqBack');if(db)db.addEventListener('click',function(){var g=form.querySelector('.qual[data-key="budget"]');g.querySelectorAll('.opt').forEach(function(o){o.classList.remove('on');});form.budget.value='';show(1);});
   show(0);
   if(PRESET_INDUSTRY){var g=form.querySelector('.qual[data-key="industry"]');var b=g?g.querySelector('.opt[data-v="'+PRESET_INDUSTRY+'"]'):null;if(b){pick(g,b);show(1);}}
 })();
