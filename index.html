@@ -6,7 +6,7 @@
 <title>Arcads - Bedre resultater på Meta og Google Ads. 100 % resultatbasert</title>
 <!-- ARCADS.NO v19 - FORSIDEN. Kilde: arcads-claude-brain/clients/arcads/landing/arcads-forside-v19.html
      Bygges til prod (arcads-no/index.html) og test (arcads-test/marketer/index.html) av build-forside-v19.py -->
-<meta name="description" content="Bedre resultater på Meta og Google Ads, 100 % resultatbasert. Norsk performance marketing-byrå: Google Ads, Meta Ads, annonser og landingssider laget av oss selv. 100 % resultatbasert. Vi viser deg hvordan det ville sett ut for din bedrift, helt uforpliktende.">
+<meta name="description" content="Norsk performance marketing-byrå for nettbutikker og tjenestebedrifter. Google Ads, Meta Ads, annonser og landingssider laget av oss selv, 100 % resultatbasert. Vi viser deg hvordan det ville sett ut for din bedrift, helt uforpliktende.">
 <link rel="canonical" href="https://arcads.no/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arcads.no/">
@@ -172,6 +172,28 @@ header{position:sticky;top:0;z-index:20;background:rgba(252,251,249,.85);backdro
 .chat-live .cm.in .cm-av,.chat-live .cm.in .cm-main,.chat-live .cm.in .cm-res{opacity:1;transform:none}
 @media (max-width:640px){.chat-body{padding:18px 14px 22px}.cm-av{margin-top:40px}.cm-typing{top:46px}.cm-who{flex-direction:column;gap:0}.chat-top small{display:none}}
 @media (prefers-reduced-motion:reduce){.cm-typing i{animation:none}.chat-live .cm .cm-av,.chat-live .cm .cm-main,.chat-live .cm .cm-res{transform:none;transition:opacity .3s ease}}
+
+/* To målgrupper (29.09.2026) */
+.aud{padding-top:24px}
+.aud-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.aud-c{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-card);padding:28px;color:var(--ink);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s cubic-bezier(.16,1,.3,1)}
+@media (hover:hover) and (pointer:fine){.aud-c:hover{transform:translateY(-3px);box-shadow:0 24px 60px -34px rgba(17,39,31,.35)}}
+.aud-c:first-child{background:var(--deep);color:#fff;border-color:var(--deep)}
+.aud-k{display:inline-block;width:max-content;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:var(--tint);color:var(--green-text)}
+.aud-c:first-child .aud-k{background:rgba(255,255,255,.1);color:var(--green)}
+.aud-c h3{font-size:24px;letter-spacing:-.02em;margin:18px 0 16px;max-width:20ch}
+.aud-c:first-child h3{color:#fff}
+.aud-c ul{list-style:none;display:grid;gap:10px;margin:0 0 24px;padding:0}
+.aud-c li{position:relative;padding-left:22px;font-size:15px;color:var(--muted)}
+.aud-c:first-child li{color:rgba(255,255,255,.75)}
+.aud-c li::before{content:"";position:absolute;left:0;top:.55em;width:8px;height:8px;border-radius:50%;background:var(--green)}
+.aud-f{margin-top:auto;padding-top:18px;border-top:1px solid var(--line-soft);display:flex;flex-direction:column;gap:4px}
+.aud-c:first-child .aud-f{border-color:rgba(255,255,255,.12)}
+.aud-f span{font-size:13px;color:var(--faint)}
+.aud-c:first-child .aud-f span{color:rgba(255,255,255,.55)}
+.aud-f em{font-style:normal;font-weight:600;font-size:14px;color:var(--green-text)}
+.aud-c:first-child .aud-f em{color:var(--green)}
+@media (max-width:760px){.aud-grid{grid-template-columns:1fr}.aud-c{padding:22px}}
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:44px}
 .rev{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:end}
 .rev i{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--green-text);font:600 13px/38px "Geist",sans-serif;text-align:center;font-style:normal;flex:0 0 auto;margin-bottom:22px}
@@ -517,7 +539,7 @@ fbq('track','PageView');
   <div class="wrap">
     <span class="eyebrow faces rv"><span class="av"><img src="/img/victor-hero.webp" alt="Victor" width="240" height="240"><img src="/img/jona-hero.webp" alt="Jona" width="240" height="240"></span>Hei, vi er Victor og Jona</span>
     <h1 class="rv">Vi gir deg bedre resultater på Meta og Google Ads.<br><span class="dim">100 % resultatbasert.</span></h1>
-    <p class="lede rv">Vi tar over kontoene dine, lager annonsene og landingssidene selv, og fakturerer en andel av verdien annonsene skaper. For etablerte bedrifter som bruker 30 000 kr+ i måneden.</p>
+    <p class="lede rv">Mer salg for nettbutikker og flere leads for tjenestebedrifter. Vi tar over kontoene, lager annonsene og landingssidene selv, og fakturerer en andel av verdien annonsene skaper. For etablerte bedrifter som bruker 30 000 kr+ i måneden.</p>
     <a class="btn rv" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a>
     <p class="micro rv">Gratis og uforpliktende. Ingen binding, ingen selgere.</p>
     <div class="strip rv">
@@ -582,6 +604,25 @@ fbq('track','PageView');
           <img src="/img/wall/leid-2.webp" alt="Leid-annonse laget av Arcads" width="480" height="600" loading="lazy">
         </div>
       </div>
+    </div>
+  </div>
+</section>
+<section class="aud" id="for-hvem">
+  <div class="wrap">
+    <div class="center"><h2 class="rv">To typer kunder, to ulike mål.</h2><p class="lede rv">Vi jobber mest med nettbutikker og bedrifter som lever av henvendelser. Oppsettet er ganske forskjellig, så vi bygger det forskjellig.</p></div>
+    <div class="aud-grid">
+      <a class="aud-c rv" href="/artikler/google-shopping/">
+        <span class="aud-k">Nettbutikk</span>
+        <h3>Mer salg, med lønnsomhet per produkt.</h3>
+        <ul><li>Shopping og Performance Max på en ryddig produktfeed</li><li>Styrt mot margin og POAS, ikke bare omsetning</li><li>Kampanjer for salg, nyheter og sesong på Meta</li><li>Sporing som teller hvert kjøp én gang</li></ul>
+        <div class="aud-f"><span>Mokki · Leid.no · QualiPet · Redz</span><em>+127 % profitt år over år for Mokki</em></div>
+      </a>
+      <a class="aud-c rv" href="/markedsforing-for-tjenestebedrifter/">
+        <span class="aud-k">Leads</span>
+        <h3>Flere henvendelser, til en pris som går opp.</h3>
+        <ul><li>Egne kampanjer per by eller avdeling</li><li>Landingssider med skjema bygget for annonsetrafikk</li><li>Merkevaresøk holdt for seg, så tallene er ærlige</li><li>Vi teller innsendte skjemaer og samtaler, ikke klikk</li></ul>
+        <div class="aud-f"><span>Utvendig Renhold · Veldigrent · Badstugutta</span><em>549 leads på 90 dager for Utvendig Renhold</em></div>
+      </a>
     </div>
   </div>
 </section>
@@ -705,10 +746,10 @@ fbq('track','PageView');
           <div class="wk-chips">
             <span style="--i:0"><small>Søk</small>takvask pris</span>
             <span style="--i:1"><small>Kommentar</small>«Blir taket ødelagt av høytrykk?»</span>
-            <span style="--i:2"><small>Søk</small>badstue levert ferdig</span>
+            <span style="--i:2"><small>Søk</small>solbriller baby uv</span>
             <span style="--i:3"><small>Anmeldelse</small>«Kom som avtalt, rent og ryddig»</span>
-            <span style="--i:4"><small>Kommentar</small>«Hvor ofte bør man vaske taket?»</span>
-            <span style="--i:5"><small>Konkurrent</small>«Gratis befaring»</span>
+            <span style="--i:4"><small>Kommentar</small>«Sitter de på en ettåring?»</span>
+            <span style="--i:5"><small>Konkurrent</small>«Fri frakt over 499 kr»</span>
           </div>
           <div class="wk-angles"><div class="wk-arrow" style="--i:6">↓ blir til vinkler vi lager annonser på</div><div class="wk-ang"><span style="--i:7">Tvil</span><span style="--i:8">Tid</span><span style="--i:9">Pris</span><span style="--i:10">Anbefaling</span></div></div>
         </div>
@@ -744,7 +785,7 @@ fbq('track','PageView');
     </div>
     <div class="bento rv">
       <div class="b b-lp">
-        <div class="b-head"><h3>Landingssider</h3><p>Egne sider bygget for annonsetrafikk, ikke for menyen på nettsiden. Vi tegner, skriver og publiserer dem, og de er dine.</p></div>
+        <div class="b-head"><h3>Landingssider</h3><p>Kampanjesider for nettbutikken og landingssider med skjema for leads. Bygget for annonsetrafikk, ikke for menyen på nettsiden, og de er dine.</p></div>
         <div class="lps">
           <img src="/img/lp/froyd.webp" alt="Landingsside Arcads har laget for Frøyd" width="500" height="625" loading="lazy">
           <img src="/img/lp/generalfinans.webp" alt="Landingsside Arcads har laget for Generalfinans" width="500" height="625" loading="lazy">
@@ -836,9 +877,9 @@ fbq('track','PageView');
       <p class="lede rv">Tallene er hentet fra kundenes egne annonsekontoer.</p>
     </div>
     <div class="cases rv">
-      <a class="case" href="/caser/"><img src="/img/caser/ur-1.jpg" alt="Utvendigrenhold-case" width="450" height="800" loading="lazy"><div class="cap"><b>549 leads</b><span>Utvendig Renhold, 90 dager</span><small>163 kr per lead inkl. merkevaresøk</small></div></a>
-      <a class="case" href="/caser/"><img src="/img/wall/leid-3.webp" alt="Leid.no-case" width="480" height="600" loading="lazy"><div class="cap"><b>4,73x</b><span>Leid.no, ROAS</span><small>Fra ødelagt sporing til lønnsom skalering</small></div></a>
       <a class="case" href="/caser/"><img src="/img/caser/mokki-2.jpg" alt="Mokki-case" width="450" height="800" loading="lazy"><div class="cap"><b>+127 %</b><span>Mokki, profitt år over år</span><small>Google Ads i Norge, Tyskland og Danmark</small></div></a>
+      <a class="case" href="/caser/"><img src="/img/wall/leid-3.webp" alt="Leid.no-case" width="480" height="600" loading="lazy"><div class="cap"><b>4,73x</b><span>Leid.no, ROAS</span><small>Fra ødelagt sporing til lønnsom skalering</small></div></a>
+      <a class="case" href="/caser/"><img src="/img/caser/ur-1.jpg" alt="Utvendigrenhold-case" width="450" height="800" loading="lazy"><div class="cap"><b>549 leads</b><span>Utvendig Renhold, 90 dager</span><small>163 kr per lead inkl. merkevaresøk</small></div></a>
       <a class="case" href="/caser/"><img src="/img/caser/marlow-3.jpg" alt="Marlow-case" width="450" height="800" loading="lazy"><div class="cap"><b>£17</b><span>Marlow, pris per lead beste uke</span><small>Utgangspunkt: leads ble ikke målt</small></div></a>
     </div>
     <div class="center"><a class="more-link" href="/caser/">Les hele casene</a></div>
@@ -852,6 +893,7 @@ fbq('track','PageView');
     <div class="faq rv">
       <details open><summary>Hva får jeg i det gratis forslaget?<span class="pm">+</span></summary><div class="ans">Vi ser på bedriften din og lager et konkret forslag: annonser og en landingsside slik de ville sett ut for deg, med din merkevare og dine kunder. Du får det på e-post i løpet av et par dager. Ingen pitch, ingen forpliktelser. Liker du det ikke, har du ikke tapt annet enn to minutter i skjemaet.</div></details>
       <details><summary>Hvem passer forslaget for?<span class="pm">+</span></summary><div class="ans">Etablerte bedrifter som allerede bruker 30 000 kr eller mer på annonsering i måneden, eller som har kapasitet og lyst til å gjøre det. Vi tar oss tid til hvert forslag, så vi prioriterer bedrifter der annonsering faktisk kan flytte bunnlinja. Er du mindre enn det, les gjerne artiklene våre først.</div></details>
+      <details><summary>Jobber dere med nettbutikker?<span class="pm">+</span></summary><div class="ans">Ja, flere av kundene våre er nettbutikker, blant dem Mokki, Leid.no, QualiPet og Redz. Der styrer vi mot lønnsomhet, ikke bare omsetning: ryddig produktfeed, Shopping og Performance Max, kampanjer på Meta, og sporing som teller hvert kjøp én gang. For bedrifter som lever av leads bygger vi i stedet egne kampanjer og landingssider per tjeneste eller by.</div></details>
       <details><summary>Hva betyr «100 % resultatbasert»?<span class="pm">+</span></summary><div class="ans">At regningen henger på resultatene, ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten.</div></details>
       <details><summary>Hva koster det?<span class="pm">+</span></summary><div class="ans">Vi tar en andel av verdien vi skaper for deg, ikke en fast månedspris. For at det skal gå opp for begge, må annonsene kunne skape nok til at andelen vår blir rundt 20–30 000 kr i måneden. Tjener du ikke mer, betaler du oss ingenting.</div></details>
       <details><summary>Hvordan vet jeg at det er dere som skapte salget?<span class="pm">+</span></summary><div class="ans">Det første vi gjør er å rigge sporingen skikkelig (Google Ads, Meta Pixel og GA4). Da slipper du å ta vårt ord for noe som helst. Du ser hvert salg og hvert lead svart på hvitt i mandagsrapporten.</div></details>
@@ -953,6 +995,7 @@ fbq('track','PageView');
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type": "Question", "name": "Hva får jeg i det gratis forslaget?", "acceptedAnswer": {"@type": "Answer", "text": "Vi ser på bedriften din og lager et konkret forslag: annonser og en landingsside slik de ville sett ut for deg, med din merkevare og dine kunder. Du får det på e-post i løpet av et par dager. Ingen pitch, ingen forpliktelser. Liker du det ikke, har du ikke tapt annet enn to minutter i skjemaet."}},
 {"@type": "Question", "name": "Hvem passer forslaget for?", "acceptedAnswer": {"@type": "Answer", "text": "Etablerte bedrifter som allerede bruker 30 000 kr eller mer på annonsering i måneden, eller som har kapasitet og lyst til å gjøre det. Vi tar oss tid til hvert forslag, så vi prioriterer bedrifter der annonsering faktisk kan flytte bunnlinja. Er du mindre enn det, les gjerne artiklene våre først."}},
+{"@type": "Question", "name": "Jobber dere med nettbutikker?", "acceptedAnswer": {"@type": "Answer", "text": "Ja, flere av kundene våre er nettbutikker, blant dem Mokki, Leid.no, QualiPet og Redz. Der styrer vi mot lønnsomhet, ikke bare omsetning: ryddig produktfeed, Shopping og Performance Max, kampanjer på Meta, og sporing som teller hvert kjøp én gang. For bedrifter som lever av leads bygger vi i stedet egne kampanjer og landingssider per tjeneste eller by."}},
 {"@type": "Question", "name": "Hva betyr «100 % resultatbasert»?", "acceptedAnswer": {"@type": "Answer", "text": "At regningen henger på resultatene, ikke på timer, møter eller fine rapporter. Leverer vi ikke, betaler du ikke. Den nøyaktige modellen avtaler vi i den første praten."}},
 {"@type": "Question", "name": "Hva koster det?", "acceptedAnswer": {"@type": "Answer", "text": "Vi tar en andel av verdien vi skaper for deg, ikke en fast månedspris. For at det skal gå opp for begge, må annonsene kunne skape nok til at andelen vår blir rundt 20–30 000 kr i måneden. Tjener du ikke mer, betaler du oss ingenting."}},
 {"@type": "Question", "name": "Hvordan vet jeg at det er dere som skapte salget?", "acceptedAnswer": {"@type": "Answer", "text": "Det første vi gjør er å rigge sporingen skikkelig (Google Ads, Meta Pixel og GA4). Da slipper du å ta vårt ord for noe som helst. Du ser hvert salg og hvert lead svart på hvitt i mandagsrapporten."}},
