@@ -368,6 +368,44 @@ td.us{border-bottom-color:#E4EBE3}
 .next b{display:block;font-weight:600}
 .next span{font-size:15px;color:var(--muted)}
 .formcard{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:28px}
+/* Leadskjema v2 (29.09.2026) */
+.contact-grid{align-items:center}
+.ct-left h2{max-width:14ch}
+.ct-left>p{font-size:18px;color:var(--muted)}
+.ct-ticks{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:10px}
+.ct-ticks li{position:relative;padding-left:30px;font-size:16px}
+.ct-ticks li::before{content:"";position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:var(--tint) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230E7A48' stroke-width='3'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/12px no-repeat}
+.ct-faces{display:flex;align-items:center;margin-top:28px}
+.ct-faces img{width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
+.ct-faces img+img{margin-left:-10px}
+.ct-faces span{margin-left:12px;font-size:14px;color:var(--muted)}
+.formcard{padding:32px;background:var(--bg);box-shadow:0 30px 70px -45px rgba(17,39,31,.35)}
+.lf-prog{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--faint);margin-bottom:22px}
+.lf-prog i{flex:1;height:4px;border-radius:99px;background:var(--line);overflow:hidden}
+.lf-prog b{display:block;height:100%;width:100%;background:var(--green-text);transform:scaleX(.5);transform-origin:left;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.lf-step{display:none}
+.lf-step.on{display:block;animation:lfIn .35s cubic-bezier(.16,1,.3,1)}
+@keyframes lfIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.field.big{margin-bottom:16px}
+.field.big label{font-size:15px;font-weight:600}
+.field.big input{height:56px;font-size:17px;padding:0 16px;border-radius:12px}
+.lf-budget{border:0;margin:6px 0 18px;padding:0}
+.lf-budget legend{font-size:15px;font-weight:600;margin-bottom:10px}
+.lf-budget{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lf-budget legend{grid-column:1/-1}
+.lf-budget label{position:relative;cursor:pointer}
+.lf-budget input{position:absolute;opacity:0;pointer-events:none}
+.lf-budget span{display:flex;align-items:center;justify-content:center;height:52px;border:1px solid var(--line);border-radius:12px;background:var(--paper);font-size:15px;font-weight:500;transition:border-color .15s ease,background-color .15s ease,color .15s ease}
+.lf-budget input:checked+span{border-color:var(--deep);background:var(--deep);color:#fff}
+.lf-budget input:focus-visible+span{outline:2px solid var(--deep);outline-offset:2px}
+@media (hover:hover) and (pointer:fine){.lf-budget label:hover span{border-color:var(--deep)}}
+.lf-err{color:#B42318;font-size:14px;min-height:0;margin:0 0 10px}
+.lf-err:empty{display:none}
+.field input.bad{border-color:#B42318}
+.lf-back{display:block;margin:12px auto 0;background:none;border:0;font:inherit;font-size:14px;color:var(--muted);cursor:pointer}
+@media (max-width:640px){.formcard{padding:22px 18px}.ct-left>p{font-size:16px}}
+@media (prefers-reduced-motion:reduce){.lf-step.on{animation:none}.lf-prog b{transition:none}}
+
 .field{display:grid;gap:6px;margin-bottom:14px}
 .field label{font-size:13px;font-weight:500}
 .field input,.field select{width:100%;height:46px;padding:0 14px;border:1px solid var(--line);border-radius:10px;background:var(--paper);font:inherit;font-size:15px;color:var(--ink)}
@@ -906,33 +944,40 @@ fbq('track','PageView');
 
 <section class="contact" id="book">
   <div class="wrap contact-grid">
-    <div class="rv">
-      <h2>Se hvordan det ville sett ut for deg, før du bestemmer deg.</h2>
-      <p>Fyll inn skjemaet, så lager vi et konkret forslag til annonser og landingsside for din bedrift. Ikke en generell presentasjon, men slik det faktisk ville sett ut med din merkevare og dine kunder. Helt uforpliktende, og forslaget er ditt uansett.</p>
-      <p class="qual"><b>Hvem det passer for:</b> etablerte bedrifter som allerede bruker 30 000 kr eller mer på annonsering i måneden, eller som har kapasitet til det. Er du ikke der ennå, er artiklene våre et bedre sted å starte.</p>
-      <ol class="next">
-        <li><div><b>Vi setter oss inn i bedriften din</b><span>Nettsiden, kundene og hva konkurrentene gjør. Så forslaget handler om deg, ikke om oss.</span></div></li>
-        <li><div><b>Du får forslaget på e-post</b><span>Annonser og landingsside slik de ville sett ut for deg. I løpet av et par dager, og ditt å beholde selv om du aldri snakker med oss igjen.</span></div></li>
-        <li><div><b>Ærlig svar</b><span>Kan vi ikke tjene deg penger, sier vi det. Vi er selektive, og det er derfor det funker.</span></div></li>
-        <li><div><b>I gang første uke</b><span>Sporingen settes opp først. Deretter går de første annonsene live, vanligvis i løpet av første uke. Ingen binding.</span></div></li>
-      </ol>
+    <div class="rv ct-left">
+      <h2>Se hvordan det ville sett ut for deg.</h2>
+      <p>Send oss nettsiden din. Du får et forslag til annonser og landingsside på e-post innen et par dager.</p>
+      <ul class="ct-ticks">
+        <li>Laget av Victor og Jona, ikke en mal</li>
+        <li>Gratis, og ditt å beholde</li>
+        <li>Ingen binding, ingen selgere</li>
+      </ul>
+      <div class="ct-faces"><img src="/img/victor-hero.webp" alt="Victor" width="240" height="240" loading="lazy"><img src="/img/jona-hero.webp" alt="Jona" width="240" height="240" loading="lazy"><span>Victor og Jona svarer selv.</span></div>
     </div>
     <div class="formcard rv" id="formcard">
       <form id="leadForm" novalidate>
-        <div class="fwho"><img src="/img/victor-hero.webp" alt="Victor" width="240" height="240" loading="lazy"><div><b>Victor og Jona lager forslaget selv.</b> Annonser og landingsside slik de ville sett ut for deg. For etablerte bedrifter med 30 000 kr+ i månedlig annonsebudsjett. Ingen pitch, ingen forpliktelser.</div></div>
         <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field"><label for="l_name">Navn</label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
-        <div class="two">
-          <div class="field"><label for="l_email">E-post</label><input type="email" id="l_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div>
-          <div class="field"><label for="l_phone">Telefon</label><input type="tel" id="l_phone" name="phone" placeholder="Så vi får tak i deg" autocomplete="tel" required></div>
+        <div class="lf-prog"><span id="lfStepTxt">Steg 1 av 2</span><i><b id="lfBar"></b></i></div>
+        <div class="lf-step on" data-step="1">
+          <div class="field big"><label for="l_site">Hva er nettsiden din?</label><input type="text" id="l_site" name="website" placeholder="bedriften.no" autocomplete="url" inputmode="url" autocapitalize="off" spellcheck="false" required></div>
+          <fieldset class="lf-budget"><legend>Hvor mye bruker dere på annonser i måneden?</legend>
+            <label><input type="radio" name="budget" value="Annonserer ikke ennå"><span>Ikke ennå</span></label>
+            <label><input type="radio" name="budget" value="Under 30 000 kr"><span>Under 30 000</span></label>
+            <label><input type="radio" name="budget" value="30 000 til 100 000 kr"><span>30–100 000</span></label>
+            <label><input type="radio" name="budget" value="Over 100 000 kr"><span>Over 100 000</span></label>
+          </fieldset>
+          <p class="lf-err" id="lfErr1" role="alert"></p>
+          <button type="button" class="btn wide" id="lfNext"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Neste</span></button>
         </div>
-        <div class="two">
-          <div class="field"><label for="l_site">Nettside</label><input type="text" id="l_site" name="website" placeholder="bedriften.no (valgfritt)" autocomplete="url"></div>
-          <div class="field"><label for="l_budget">Annonsebudsjett i måneden</label><select id="l_budget" name="budget" required><option value="">Velg</option><option>Annonserer ikke ennå</option><option>Under 30 000 kr</option><option>30 000 til 100 000 kr</option><option>Over 100 000 kr</option></select></div>
+        <div class="lf-step" data-step="2">
+          <div class="field big"><label for="l_name">Navn</label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
+          <div class="field big"><label for="l_email">E-post</label><input type="email" id="l_email" name="email" placeholder="din@epost.no" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required></div>
+          <div class="field big"><label for="l_phone">Telefon</label><input type="tel" id="l_phone" name="phone" placeholder="Så vi får tak i deg" autocomplete="tel" inputmode="tel" required></div>
+          <p class="lf-err" id="lfErr2" role="alert"></p>
+          <button type="submit" class="btn wide" id="leadBtn"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Send meg forslaget</span></button>
+          <button type="button" class="lf-back" id="lfBack">← Tilbake</button>
         </div>
-        <button type="submit" class="btn wide" id="leadBtn"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Vis meg hvordan det ville sett ut</span></button>
-        <p class="fine">Forslaget kommer på e-post i løpet av et par dager. For etablerte bedrifter med 30 000 kr+ i månedlig annonsebudsjett. Ingen binding, vi deler aldri infoen din.</p>
-        <p class="fine">Vil du heller ta praten direkte? <a href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book 30 minutter i kalenderen</a></p>
+        <p class="fine">Vi deler aldri infoen din. Vil du heller snakke direkte? <a href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book 30 min</a></p>
       </form>
       <div class="thanks">
         <h3 id="thanksH">Takk!</h3>
@@ -1043,17 +1088,35 @@ fbq('track','PageView');
     if(REDIRECT){location.href='/takk/';return;}
     document.getElementById('thanksH').textContent='Takk, '+f.name.value.trim().split(' ')[0]+'!';card.classList.add('sent');
   }
+  var st1=f.querySelector('[data-step="1"]'),st2=f.querySelector('[data-step="2"]'),e1=document.getElementById('lfErr1'),e2=document.getElementById('lfErr2');
+  function go(n){st1.classList.toggle('on',n===1);st2.classList.toggle('on',n===2);document.getElementById('lfStepTxt').textContent='Steg '+n+' av 2';document.getElementById('lfBar').style.transform='scaleX('+(n/2)+')';var fi=(n===1?f.website:f.name);if(window.innerWidth>640)fi.focus();}
+  function bad(el,on){el.classList.toggle('bad',on);}
+  document.getElementById('lfNext').addEventListener('click',function(){
+    var w=f.website.value.trim(),b=f.querySelector('input[name=budget]:checked');
+    bad(f.website,!/\.[a-z]{2,}/i.test(w));
+    if(!/\.[a-z]{2,}/i.test(w)){e1.textContent='Skriv inn nettsiden, for eksempel bedriften.no';f.website.focus();return;}
+    if(!b){e1.textContent='Velg omtrent hvor mye dere bruker på annonser.';return;}
+    e1.textContent='';go(2);
+  });
+  f.website.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();document.getElementById('lfNext').click();}});
+  document.getElementById('lfBack').addEventListener('click',function(){go(1);});
   f.addEventListener('submit',function(ev){
     ev.preventDefault();
     if(sent)return;
+    if(st1.classList.contains('on')){document.getElementById('lfNext').click();return;}
     if(f.company.value){sent=true;ok();return;}
-    if(!f.name.value.trim()||!f.email.value.includes('@')||!f.phone.value.trim()){if(f.reportValidity)f.reportValidity();return;}
+    var nm=f.name.value.trim(),em=f.email.value.trim(),ph=f.phone.value.replace(/\s/g,'');
+    bad(f.name,!nm);bad(f.email,!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em));bad(f.phone,ph.replace(/\D/g,'').length<8);
+    if(!nm||!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em)||ph.replace(/\D/g,'').length<8){e2.textContent='Sjekk feltene som er markert.';return;}
+    e2.textContent='';
+    var bv=(f.querySelector('input[name=budget]:checked')||{}).value||'';
     sent=true;btn.disabled=true;btn.querySelector('.lbl').textContent='Sender...';
-    var p=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:LEAD_SOURCE,name:f.name.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),website:f.website.value.trim(),budget:f.budget.value,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
+    var p=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:LEAD_SOURCE,name:nm,email:em,phone:f.phone.value.trim(),website:f.website.value.trim(),budget:bv,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
     try{if(navigator.sendBeacon&&navigator.sendBeacon(HOOK,p)){ok();return;}}catch(e){}
     fetch(HOOK,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:p.toString()})
-      .then(ok,function(){sent=false;btn.disabled=false;btn.querySelector('.lbl').textContent='Vis meg hvordan det ville sett ut';alert('Noe gikk galt. Prøv igjen, eller send en mail til victor@arcads.no');});
+      .then(ok,function(){sent=false;btn.disabled=false;btn.querySelector('.lbl').textContent='Send meg forslaget';alert('Noe gikk galt. Prøv igjen, eller send en mail til victor@arcads.no');});
   });
+  [f.name,f.email,f.phone,f.website].forEach(function(i){i.addEventListener('input',function(){i.classList.remove('bad');});});
 })();
 </script>
 <script>(function(){var st=document.getElementById('adStack');if(!st)return;var im=st.querySelectorAll('img'),i=0;if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;setInterval(function(){im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},3200)})();</script>
