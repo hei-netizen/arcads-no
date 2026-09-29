@@ -540,6 +540,25 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
 .lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line,#E9E7E0);border-radius:999px;font-size:12px;font-weight:600;line-height:1;flex:none}.lang-sw a{padding:6px 9px;border-radius:999px;color:var(--muted,#5C5F5A);opacity:1!important;text-decoration:none}.lang-sw a.on{background:var(--deep,#11271F);color:#fff}@media (hover:hover) and (pointer:fine){.lang-sw a:not(.on):hover{color:var(--ink,#071812)}}.nav-r{justify-self:end;display:flex;align-items:center;gap:12px}
 @media (max-width:640px){.lang-sw{padding:0;border:0}.lang-sw a.on{display:none}.lang-sw a{border:1px solid var(--line,#E9E7E0);padding:8px 10px}}@media (max-width:400px){.nav .logo img,.nav .brand img{height:22px}}.nav .logo,.nav .brand{flex:none}
 @media (max-width:420px){header .nav{gap:8px}.nav-r{gap:6px}.nav .btn.sm{padding-right:14px}}
+
+/* Kortere mobil (29.09.2026) */
+@media (max-width:640px){
+  section{padding-top:52px;padding-bottom:52px}
+  .fbs,.aud-grid,.lps{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-left:-24px;margin-right:-24px;padding:0 24px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .fbs::-webkit-scrollbar,.aud-grid::-webkit-scrollbar,.lps::-webkit-scrollbar{display:none}
+  .fbs>.fb{flex:0 0 82%;scroll-snap-align:center}
+  .aud-grid>.aud-c{flex:0 0 86%;scroll-snap-align:center}
+  .lps>*{flex:0 0 58%;scroll-snap-align:start}
+  .aud-c li:nth-child(n+3){display:none}
+  .tips-intro p:nth-of-type(2){display:none}
+  #kundechat .cm:nth-child(n+4){display:none}
+  .table th:nth-child(n+4),.table td:nth-child(n+4){display:none}
+  .fgrid{grid-template-columns:1fr 1fr!important;gap:20px 16px!important}
+  .fgrid>div:first-child{grid-column:1/-1}
+  .swipe-hint{display:block}
+}
+@media (max-width:640px){.bento{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px}.bento>.b{padding:16px}.bento>.b-lp,.bento>.b:last-child{grid-column:1/-1}.bento>.b:not(.b-lp) p{font-size:13px}.bento>.b:not(.b-lp) h3{font-size:16px}.omoss .bio img,.omoss img.av{max-width:72px}}
+.swipe-hint{display:none;font-size:12px;color:var(--faint);text-align:center;margin-top:6px}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -668,6 +687,7 @@ fbq('track','PageView');
         <div class="aud-f"><span>Utvendig Renhold · Veldigrent · Badstugutta</span><em>549 leads på 90 dager for Utvendig Renhold</em></div>
       </a>
     </div>
+    <p class="swipe-hint">Sveip for flere →</p>
   </div>
 </section>
 
@@ -697,6 +717,7 @@ fbq('track','PageView');
           <div class="fb-why"><p>Ser ut som et notat på mobilen. Én påstand, noen korte punkter og én oppfordring. Ingen logo i bildet og ingen reklameslogan, bare det huseieren burde vite.</p></div>
         </article>
       </div>
+      <p class="swipe-hint">Sveip for flere →</p>
     </div>
   </div>
 </section>
