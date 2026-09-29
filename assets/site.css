@@ -331,7 +331,11 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:600;line-height:1.08;letter-spac
 .realads-cap{grid-column:1/-1;font-size:13px;color:var(--muted);text-align:center;margin:4px 0 0}
 .prose .realads,.artbody .realads{margin:28px 0}
 /* ===== Artikkel-komponenter (28.09.2026) ===== */
-.prose .calc{background:var(--deep);color:#fff;border-radius:20px;padding:26px 24px;margin:30px 0}
+.calc{background:var(--deep);color:#fff;border-radius:20px;padding:26px 24px;margin:30px 0}
+.phero .calc{margin:0;box-shadow:0 30px 70px -35px rgba(7,24,18,.45)}
+.roas-hero{align-items:start}
+.roas-hero h1{max-width:14ch}
+@media(max-width:900px){.roas-hero>div:first-child{display:contents}.roas-hero .calc{order:2;margin:4px 0 0}.roas-hero .artmeta{order:3;margin:0}.roas-hero .kortsvar{order:4;margin:0}.roas-hero h1,.roas-hero .lede{margin-bottom:0}.roas-hero .eyebrow{justify-self:start}}
 .calc .ch{font-size:13px;color:var(--on-dark-dim);margin-bottom:4px}
 .calc h3{color:#fff;margin:0 0 18px;font-size:22px}
 .calc .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
