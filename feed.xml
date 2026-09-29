@@ -5,8 +5,15 @@
   <link href="https://arcads.no/feed.xml" rel="self"/>
   <link href="https://arcads.no/artikler/"/>
   <id>https://arcads.no/artikler/</id>
-  <updated>2026-08-18T15:00:00Z</updated>
+  <updated>2026-09-29T12:00:00Z</updated>
   <author><name>Victor Skretteberg</name><email>hei@arcads.no</email></author>
+  <entry>
+    <title>Slik lager vi motion-annonser med AI: hele oppskriften</title>
+    <link href="https://arcads.no/artikler/motion-annonser-med-ai/"/>
+    <id>https://arcads.no/artikler/motion-annonser-med-ai/</id>
+    <updated>2026-09-29T12:00:00Z</updated>
+    <summary>Åtte steg, seks maler du kan kopiere og ti feil vi har gjort. Norsk voiceover, musikk og animasjon i Remotion.</summary>
+  </entry>
   <entry>
     <title>Digital markedsføring: hva som faktisk flytter tall i 2026</title>
     <link href="https://arcads.no/artikler/digital-markedsforing/"/>

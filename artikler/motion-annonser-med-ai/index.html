@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slik lager vi motion-annonser med AI: hele oppskriften | Arcads</title>
+<meta name="description" content="Hele arbeidsflyten vi bruker for motion-annonser med norsk voiceover, musikk og animasjon i Remotion. Åtte steg, seks maler du kan kopiere, sjekkliste og ti feil vi har gjort.">
+<link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/motion-annonser-med-ai/">
+<link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/motion-annonser-med-ai/">
+<link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/motion-annonser-med-ai/">
+<link rel="canonical" href="https://arcads.no/artikler/motion-annonser-med-ai/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://arcads.no/artikler/motion-annonser-med-ai/">
+<meta property="og:site_name" content="Arcads">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:title" content="Slik lager vi motion-annonser med AI">
+<meta property="og:description" content="Åtte steg, seks maler du kan kopiere og ti feil vi har gjort. Gratis.">
+<meta property="og:image" content="https://arcads.no/img/founders.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"></noscript>
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Article", "@id": "https://arcads.no/artikler/motion-annonser-med-ai/#article", "headline": "Slik lager vi motion-annonser med AI", "description": "Hele arbeidsflyten vi bruker for motion-annonser med norsk voiceover, musikk og animasjon i Remotion. Åtte steg, seks maler du kan kopiere, sjekkliste og ti feil vi har gjort.", "inLanguage": "nb", "datePublished": "2026-09-29", "dateModified": "2026-09-29", "author": {"@type": "Person", "name": "Victor Skretteberg", "url": "https://arcads.no/om-oss/victor-skretteberg/", "sameAs": ["https://www.linkedin.com/in/victor-skretteberg-b7a562299/"]}, "publisher": {"@id": "https://arcads.no/#org"}, "mainEntityOfPage": "https://arcads.no/artikler/motion-annonser-med-ai/", "image": "https://arcads.no/img/founders.jpg"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Hjem", "item": "https://arcads.no/"}, {"@type": "ListItem", "position": 2, "name": "Artikler", "item": "https://arcads.no/artikler/"}, {"@type": "ListItem", "position": 3, "name": "Motion-annonser med AI", "item": "https://arcads.no/artikler/motion-annonser-med-ai/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Trenger jeg å kunne kode for å bruke dette?", "acceptedAnswer": {"@type": "Answer", "text": "Nei, men det hjelper å være komfortabel med å kjøre kommandoer. Claude Code skriver koden, og du styrer med vanlig tekst. Du trenger Node og Python installert, en ElevenLabs-konto og tilgang til Claude Code."}}, {"@type": "Question", "name": "Hvor lang tid tar det å lage én annonse?", "acceptedAnswer": {"@type": "Answer", "text": "Første gang går det med en del tid på oppsett. Når malene er på plass, går mesteparten av tiden til manus, å lytte på stemmen og finjustere, ikke til selve animasjonen."}}, {"@type": "Question", "name": "Fungerer norsk voiceover fra AI godt nok til annonser?", "acceptedAnswer": {"@type": "Answer", "text": "Med riktig modell og riktig manus, ja. Bruk eleven_v4 med språkkode no, skriv få og flytende setninger, lag flere versjoner og hør alltid selv før du publiserer. Den eldre multilingual-modellen glir over i dansk på norsk tekst."}}, {"@type": "Question", "name": "Hvilket format fungerer best for motion-annonser?", "acceptedAnswer": {"@type": "Answer", "text": "Av det vi har testet: problem og løsning, speilet. Fem konkrete problemer som små scener, et vendepunkt, og fem løsninger i samme rekkefølge der det gamle problemet står strøket over."}}, {"@type": "Question", "name": "Hva er sikker sone i en 9:16-video?", "acceptedAnswer": {"@type": "Answer", "text": "På en 1080×1920-video bør all tekst ligge mellom y=400 og y=1520. Reels, Stories og TikTok dekker toppen og bunnen med profilnavn, knapper og tekst."}}]}]}
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y2br1kx6o7");
+</script>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRR38FQQH7"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XRR38FQQH7');
+</script>
+<!-- Meta Pixel (Pixel - Arcads) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1573565776638708');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1573565776638708&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+
+<div class="topstrip"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Anbefalt av kundene våre <span class="ts-x">&middot; 100% av kundene fikk større bunnlinje</span> <span>&middot; 100% resultatbasert</span></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/" class="brand" aria-label="Arcads"><img src="/logos/arcads-logo.png" alt="Arcads"></a>
+    <nav class="nav-links">
+      <a href="/google-ads/" class="lnk">Google Ads</a>
+      <a href="/meta-ads/" class="lnk">Meta Ads</a>
+      <a href="/markedsforing-for-tjenestebedrifter/" class="lnk">Bransjer</a>
+      <a href="/caser/" class="lnk">Caser</a>
+      <a href="/om-oss/" class="lnk">Om oss</a>
+      <div class="lang-sw" role="group" aria-label="Språk"><a href="/artikler/motion-annonser-med-ai/" hreflang="nb" lang="nb" class="on" aria-current="true">NO</a><a href="/en/artikler/motion-annonser-med-ai/" hreflang="en" lang="en">EN</a></div>
+      <a href="#book" class="nav-cta"><span class="full">Se hvordan det ville sett ut for deg</span><span class="short">Gratis forslag</span></a>
+    </nav>
+  </div>
+</header>
+
+<style>
+/* Motion-guide (artikler/motion-annonser-med-ai). Bygger på /assets/site.css-tokens. Alt scoped med .mg- */
+.mg-hero{padding:56px 0 72px;border-bottom:1px solid var(--line);background:radial-gradient(circle at 1px 1px,var(--line-2) 1px,transparent 0) 0 0/22px 22px,var(--bg)}
+.mg-hero .crumbs{font-size:13px;color:var(--faint);margin-bottom:28px}
+.mg-hero .crumbs a{color:var(--faint)}
+.mg-hero .crumbs a:hover{color:var(--ink)}
+.mg-hgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:center}
+@media(max-width:900px){.mg-hgrid{grid-template-columns:minmax(0,1fr);gap:40px}}
+.mg-hero h1{font-size:clamp(38px,5.6vw,68px);letter-spacing:-.035em;margin:18px 0 20px;text-wrap:balance}
+.mg-hero h1 em{font-style:normal;color:var(--accent-text)}
+.mg-hero .lede{font-size:19px;max-width:52ch}
+.mg-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;margin-top:22px;font-size:14px;color:var(--muted)}
+.mg-meta img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.mg-meta .who{display:flex;align-items:center;gap:10px;color:var(--ink)}
+.mg-meta .who a{text-decoration:underline;text-underline-offset:3px}
+.mg-hcta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.mg-btn{display:inline-flex;align-items:center;gap:10px;border-radius:var(--pill);padding:13px 20px;font-weight:500;font-size:15px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font-family:inherit}
+.mg-btn.ghost{background:var(--paper);color:var(--ink);border-color:var(--line-2)}
+.mg-btn:hover{transform:translateY(-1px)}
+.mg-btn:focus-visible,.mg-copy:focus-visible,.mg-play:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mg-gets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:36px;background:var(--line);border:1px solid var(--line);border-radius:var(--rs);overflow:hidden;max-width:620px}
+.mg-gets div{background:var(--paper);padding:14px 16px;font-size:13.5px;color:var(--muted);line-height:1.4}
+.mg-gets b{display:block;font-size:22px;color:var(--ink);font-weight:600;letter-spacing:-.02em}
+@media(max-width:520px){.mg-gets div{padding:12px;font-size:12.5px}.mg-gets b{font-size:19px}}
+
+/* Demo-spiller */
+.mg-player{justify-self:center;width:100%;max-width:330px}
+.mg-phone{position:relative;aspect-ratio:9/16;border-radius:34px;background:#0c1a14;padding:10px;box-shadow:0 40px 90px -40px rgba(17,39,31,.55),0 0 0 1px rgba(0,0,0,.08)}
+.mg-screen{position:relative;width:100%;height:100%;border-radius:26px;overflow:hidden;background:#11271F;color:#fff;container-type:inline-size}
+.mg-sz{position:absolute;left:0;right:0;top:20.83%;bottom:20.83%;border-block:1px dashed rgba(0,201,111,.0);pointer-events:none;transition:border-color .3s}
+.mg-player.show-sz .mg-sz{border-color:rgba(0,201,111,.7)}
+.mg-lay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:0 9cqw}
+.mg-lay .tag{font-size:3.6cqw;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:4cqw}
+.mg-lay .hl{font-size:9.6cqw;font-weight:600;line-height:1.04;letter-spacing:-.03em}
+.mg-lay .hl span{display:inline-block;margin-right:.22em;will-change:transform,opacity,filter}
+.mg-bars{display:flex;align-items:flex-end;gap:2.6cqw;height:26cqw;margin-top:8cqw}
+.mg-bars i{flex:1;background:rgba(255,255,255,.22);border-radius:1.4cqw 1.4cqw 0 0;transform-origin:bottom}
+.mg-bars+.lbl{font-size:3.4cqw;opacity:.55;margin-top:2.4cqw}
+.mg-old{position:relative;display:inline-block;font-size:4.6cqw;color:#5C5F5A;margin-bottom:4cqw}
+.mg-old svg{position:absolute;left:-2%;top:48%;width:104%;height:1.6em;transform:translateY(-50%);overflow:visible}
+.mg-rows{margin-top:7cqw;display:grid;gap:2.6cqw}
+.mg-rows div{display:flex;align-items:center;gap:3cqw;background:#fff;border:1px solid #E9E7E0;border-radius:3cqw;padding:3.4cqw 4cqw;font-size:4.4cqw;font-weight:500;color:#071812}
+.mg-rows b{width:6cqw;height:6cqw;border-radius:50%;background:#00C96F;display:grid;place-items:center;flex:none}
+.mg-rows b svg{width:3.6cqw;height:3.6cqw}
+.mg-wipe{position:absolute;left:50%;top:50%;width:10px;height:10px;border-radius:50%;background:#FCFBF9;transform:translate(-50%,-50%) scale(0)}
+.mg-mark{position:absolute;inset:0;display:grid;place-items:center}
+.mg-mark svg{width:34cqw;height:34cqw}
+.mg-end{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:3cqw;padding:0 9cqw;color:#071812}
+.mg-end .big{font-size:9cqw;font-weight:600;letter-spacing:-.03em;line-height:1.05}
+.mg-end .url{font-size:4.4cqw;background:#071812;color:#fff;border-radius:99px;padding:2.4cqw 5cqw}
+.mg-cap{position:absolute;left:0;right:0;bottom:24%;text-align:center;font-size:4.4cqw;font-weight:600;padding:0 8cqw}
+.mg-cap span{background:rgba(0,0,0,.55);padding:1.2cqw 2.6cqw;border-radius:2cqw;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.mg-ctrl{display:flex;align-items:center;gap:12px;margin-top:16px}
+.mg-play{width:40px;height:40px;border-radius:50%;border:1px solid var(--line-2);background:var(--paper);display:grid;place-items:center;cursor:pointer;flex:none}
+.mg-play svg{width:14px;height:14px}
+.mg-scrub{flex:1;min-width:0;accent-color:#0E7A48}
+.mg-fc{font:500 12px/1.3 ui-monospace,Menlo,monospace;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.mg-pnote{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.5}
+.mg-pnote label{display:inline-flex;align-items:center;gap:6px;cursor:pointer;color:var(--ink)}
+
+/* Stack */
+.mg-stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px}
+@media(max-width:860px){.mg-stack{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.mg-stack{grid-template-columns:minmax(0,1fr)}}
+.mg-tool{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.mg-tool .n{font-size:17px;font-weight:600}
+.mg-tool .r{font-size:12px;color:var(--accent-text);font-weight:500;margin-top:2px}
+.mg-tool p{font-size:14.5px;color:var(--muted);margin-top:10px;line-height:1.5}
+.mg-key{margin-top:26px;display:flex;gap:16px;align-items:flex-start;background:var(--deep);color:#fff;border-radius:var(--r);padding:24px 26px}
+.mg-key .k{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;white-space:nowrap;padding-top:3px}
+.mg-key p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.88);max-width:62ch}
+@media(max-width:560px){.mg-key{flex-direction:column;gap:8px}}
+
+/* Guide-layout */
+.mg-guide{display:grid;grid-template-columns:220px minmax(0,1fr);gap:64px;align-items:start}
+@media(max-width:980px){.mg-guide{grid-template-columns:minmax(0,1fr)}.mg-toc{display:none}}
+.mg-toc{position:sticky;top:96px;font-size:14px}
+.mg-toc .t{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:10px;font-weight:500}
+.mg-toc a{display:flex;gap:10px;padding:6px 0 6px 14px;border-left:2px solid var(--line);color:var(--muted)}
+.mg-toc a span{font-variant-numeric:tabular-nums;color:var(--faint);min-width:1.4em}
+.mg-toc a.on,.mg-toc a:hover{color:var(--ink);border-color:var(--accent)}
+.mg-toc a.on span{color:var(--accent-text)}
+.mg-body{min-width:0;max-width:760px}
+.mg-body>section{scroll-margin-top:90px}
+.mg-h2{font-size:clamp(28px,3.4vw,40px);margin:0 0 14px;text-wrap:balance}
+.mg-body p{font-size:17px;line-height:1.7;color:var(--ink2);max-width:66ch}
+.mg-body p+p{margin-top:14px}
+.mg-part{padding:0 0 88px}
+.mg-kick{font-size:13px;font-weight:600;color:var(--accent-text);letter-spacing:.02em;margin-bottom:10px;display:block}
+
+.mg-steps{counter-reset:s;display:grid;gap:14px;margin-top:28px}
+.mg-step{display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px 24px 22px}
+.mg-step .num{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums}
+.mg-step h3{font-size:21px;margin:8px 0 6px}
+.mg-step p{font-size:16px}
+.mg-step ul{list-style:none;margin-top:12px;display:grid;gap:8px}
+.mg-step li{position:relative;padding-left:22px;font-size:15.5px;line-height:1.55;color:var(--ink2)}
+.mg-step li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.mg-step li b{color:var(--ink)}
+@media(max-width:560px){.mg-step{grid-template-columns:minmax(0,1fr);gap:6px;padding:20px}}
+.mg-why{margin-top:14px;font-size:14px!important;color:var(--muted)!important;border-top:1px dashed var(--line-2);padding-top:12px}
+.mg-why b{color:var(--ink)}
+
+/* Tidslinje */
+.mg-tl{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;margin-top:26px}
+.mg-tlbar{display:flex;gap:3px;height:54px}
+.mg-tlbar div{border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:#fff;min-width:0;overflow:hidden;white-space:nowrap}
+.mg-tlbar .p{background:#3A4A42}.mg-tlbar .t{background:var(--accent);color:var(--accent-ink)}.mg-tlbar .s{background:#CFEBDB;color:var(--accent-ink)}.mg-tlbar .e{background:var(--ink)}
+.mg-tlax{position:relative;height:20px;margin-top:8px;font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums}
+.mg-tlax span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.mg-tlax span:first-child{transform:none}.mg-tlax span:last-child{transform:translateX(-100%)}
+.mg-tllab{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+@media(max-width:640px){.mg-tllab{grid-template-columns:repeat(2,minmax(0,1fr))}.mg-tlbar div{font-size:0}}
+.mg-tllab div{font-size:13.5px;color:var(--muted);line-height:1.45}
+.mg-tllab b{display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:600;margin-bottom:2px}
+.mg-tllab i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.mg-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+@media(max-width:760px){.mg-three{grid-template-columns:minmax(0,1fr)}}
+.mg-three div{border:1px solid var(--line);border-radius:var(--r);padding:20px;background:var(--paper)}
+.mg-three .n{font-size:13px;color:var(--accent-text);font-weight:600}
+.mg-three h3{font-size:18px;margin:6px 0 8px}
+.mg-three p{font-size:14.5px!important;color:var(--muted)!important;line-height:1.55}
+.mg-strike{position:relative;color:var(--muted);white-space:nowrap}
+.mg-strike::after{content:"";position:absolute;left:-2px;right:-2px;top:55%;height:2px;background:#D23C2E;transform:rotate(-2deg)}
+
+/* Kode */
+.mg-code{margin-top:22px;border-radius:var(--r);overflow:hidden;background:#0d1f18;border:1px solid #0d1f18}
+.mg-codeh{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px 12px 18px;border-bottom:1px solid rgba(255,255,255,.08)}
+.mg-codeh .l{color:#fff;font-size:14px;font-weight:500}
+.mg-codeh .l small{display:block;color:rgba(255,255,255,.55);font-size:12.5px;font-weight:400;margin-top:1px}
+.mg-copy{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:99px;padding:7px 14px;font:500 13px var(--sans);cursor:pointer;white-space:nowrap}
+.mg-copy.ok{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.mg-code pre{margin:0;padding:18px;overflow-x:auto;font:13px/1.65 ui-monospace,"SF Mono",Menlo,Consolas,monospace;color:#dfe8e3;max-height:520px}
+.mg-code .c{color:#7f9a8c}.mg-code .s{color:#8fe3b5}.mg-code .k{color:#ffd28a}
+
+/* Nivåmåler */
+.mg-mix{margin-top:22px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:8px 22px}
+.mg-mrow{display:grid;grid-template-columns:190px minmax(0,1fr) 64px;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.mg-mrow:last-child{border-bottom:0}
+.mg-mrow .n{font-size:15px;font-weight:500}
+.mg-mrow .n small{display:block;font-weight:400;color:var(--muted);font-size:13px}
+.mg-meter{height:10px;border-radius:99px;background:var(--surface);position:relative;overflow:hidden}
+.mg-meter i{position:absolute;left:0;top:0;bottom:0;border-radius:99px;background:var(--accent)}
+.mg-meter i.dim{background:#A9D9BF}
+.mg-mrow .v{font:500 14px ui-monospace,Menlo,monospace;text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:600px){.mg-mrow{grid-template-columns:minmax(0,1fr) 56px}.mg-mrow .mg-meter{grid-column:1/-1;grid-row:2}}
+
+/* Safe zone */
+.mg-safe{display:flex;gap:28px;align-items:center;margin-top:22px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.mg-sfone{width:118px;aspect-ratio:9/16;border-radius:16px;border:2px solid var(--ink);position:relative;flex:none;background:repeating-linear-gradient(135deg,var(--surface) 0 6px,var(--paper) 6px 12px)}
+.mg-sfone .z{position:absolute;left:0;right:0;top:20.83%;bottom:20.83%;background:#E3F5EB;border-block:1.5px dashed var(--accent-deep)}
+.mg-sfone .lb{position:absolute;right:-8px;transform:translate(100%,-50%);font:500 11px ui-monospace,Menlo,monospace;color:var(--muted);white-space:nowrap}
+.mg-safe p{font-size:15.5px!important;padding-left:56px}
+@media(max-width:560px){.mg-safe{flex-direction:column;align-items:flex-start}.mg-safe p{padding-left:0}}
+
+/* Sjekkliste */
+.mg-check{margin-top:22px;display:grid;gap:10px}
+.mg-check label{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--rs);padding:14px 16px;cursor:pointer;font-size:15.5px;line-height:1.5}
+.mg-check input{width:20px;height:20px;accent-color:#0E7A48;flex:none;margin-top:1px}
+.mg-check label:has(input:checked){background:var(--surface);color:var(--muted)}
+.mg-prog{margin-top:14px;font-size:14px;color:var(--muted)}
+
+/* Feil-tabell */
+.mg-err{margin-top:22px;display:grid;gap:10px}
+.mg-err div{display:grid;grid-template-columns:36px minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start;background:var(--paper);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px;font-size:15px;line-height:1.5}
+.mg-err .i{font-weight:600;color:var(--faint);font-variant-numeric:tabular-nums}
+.mg-err .f{color:var(--muted)}
+.mg-err .r{color:var(--ink);font-weight:500}
+.mg-err .r::before{content:"Nå: ";color:var(--accent-text)}
+@media(max-width:620px){.mg-err div{grid-template-columns:28px minmax(0,1fr)}.mg-err .r{grid-column:2}}
+@media (prefers-reduced-motion:reduce){.mg-btn:hover{transform:none}}
+</style>
+
+<section class="mg-hero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Brødsmulesti"><a href="/">Hjem</a> / <a href="/artikler/">Artikler</a> / Motion-annonser med AI</nav>
+    <div class="mg-hgrid">
+      <div>
+        <span class="eyebrow">Gratis guide &middot; Hele oppskriften</span>
+        <h1>Slik lager vi <em>motion-annonser</em> med AI.</h1>
+        <p class="lede">Norsk voiceover, musikk og animasjon, uten designer, uten filming og uten After Effects. Dette er den nøyaktige arbeidsflyten vi bruker, med malene vi kopierer fra hver gang. Hver regel her finnes fordi noe gikk galt første gang.</p>
+        <div class="mg-meta">
+          <span class="who"><img src="/img/victor-hero.webp" alt="" width="34" height="34"><span>Av <a href="/om-oss/victor-skretteberg/">Victor Skretteberg</a>, Arcads</span></span>
+          <span>29. september 2026</span>
+          <span>Ca. 12 minutter</span>
+        </div>
+        <div class="mg-hcta">
+          <a class="mg-btn" href="#maler">Gå rett til malene</a>
+          <a class="mg-btn ghost" href="#steg">Les arbeidsflyten</a>
+        </div>
+        <div class="mg-gets">
+          <div><b>8</b>steg fra idé til ferdig video</div>
+          <div><b>6</b>maler du kan kopiere</div>
+          <div><b>10</b>feil vi har gjort, så du slipper</div>
+        </div>
+      </div>
+
+      <figure class="mg-player" id="mgPlayer" aria-label="Animert eksempel på en problem-til-løsning-annonse">
+        <div class="mg-phone">
+          <div class="mg-screen" id="mgScreen">
+            <div class="mg-lay" id="scA">
+              <div class="tag">Den gamle måten</div>
+              <div class="hl" id="hlA"><span>Rapporten</span><span>er</span><span>full</span><span>av</span><span>klikk</span><span>og</span><span>visninger.</span></div>
+              <div class="mg-bars" id="barsA"><i style="height:38%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:84%"></i><i style="height:70%"></i><i style="height:100%"></i></div>
+              <div class="lbl">Visninger og klikk, uke for uke</div>
+            </div>
+            <div class="mg-wipe" id="wipe"></div>
+            <div class="mg-mark" id="mark"><svg viewBox="0 0 100 100" fill="none"><circle id="markC" cx="50" cy="50" r="42" stroke="#0E7A48" stroke-width="5" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" transform="rotate(-90 50 50)"/><path id="markP" d="M32 52l12 12 24-28" stroke="#0E7A48" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
+            <div class="mg-lay" id="scB" style="color:#071812">
+              <div><span class="mg-old" id="oldB">Rapport full av klikk og visninger<svg viewBox="0 0 100 10" preserveAspectRatio="none"><path id="strikeB" d="M0 6 C 30 3, 60 8, 100 4" stroke="#D23C2E" stroke-width="2.4" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></span></div>
+              <div class="hl" id="hlB"><span>Én</span><span>side.</span><span>Bare</span><span>tallene</span><span>som</span><span>betyr</span><span>noe.</span></div>
+              <div class="mg-rows" id="rowsB">
+                <div><b><svg viewBox="0 0 24 24" fill="none" stroke="#06231a" stroke-width="3.2"><path d="M5 12l5 5 9-10" stroke-linecap="round" stroke-linejoin="round"/></svg></b>Nye leads</div>
+                <div><b><svg viewBox="0 0 24 24" fill="none" stroke="#06231a" stroke-width="3.2"><path d="M5 12l5 5 9-10" stroke-linecap="round" stroke-linejoin="round"/></svg></b>Kostnad per lead</div>
+                <div><b><svg viewBox="0 0 24 24" fill="none" stroke="#06231a" stroke-width="3.2"><path d="M5 12l5 5 9-10" stroke-linecap="round" stroke-linejoin="round"/></svg></b>Salg fra annonsene</div>
+              </div>
+            </div>
+            <div class="mg-end" id="scE"><div class="big">Annonser som betaler for seg selv.</div><div class="url">arcads.no</div></div>
+            <div class="mg-cap" id="cap"><span></span></div>
+            <div class="mg-sz"></div>
+          </div>
+        </div>
+        <div class="mg-ctrl">
+          <button class="mg-play" id="mgPlay" type="button" aria-label="Pause"><svg viewBox="0 0 16 16" fill="currentColor" id="mgIco"><rect x="3" y="2" width="3.4" height="12" rx="1"/><rect x="9.6" y="2" width="3.4" height="12" rx="1"/></svg></button>
+          <input class="mg-scrub" id="mgScrub" type="range" min="0" max="359" value="0" aria-label="Spol i animasjonen">
+          <span class="mg-fc" id="mgFc">f 000 / 360</span>
+        </div>
+        <figcaption class="mg-pnote">Alt i videoen er en funksjon av bildenummeret, akkurat som i Remotion. Dra i linja for å se hver frame. <label><input type="checkbox" id="mgSz"> Vis sikker sone</label></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-bottom:64px">
+  <div class="wrap">
+    <span class="eyebrow">Verktøyene</span>
+    <h2 class="h-lg" style="margin-top:14px;max-width:22ch">Seks verktøy. Ingen av dem krever at du kan designe.</h2>
+    <div class="mg-stack">
+      <div class="mg-tool"><div class="n">Claude Code</div><div class="r">Regissør og utvikler</div><p>Skriver manus, planlegger scenene og koder hele animasjonen.</p></div>
+      <div class="mg-tool"><div class="n">Remotion</div><div class="r">Video fra kode</div><p>Gjør React-kode om til MP4. Én fil gir både 9:16 og 1:1.</p></div>
+      <div class="mg-tool"><div class="n">ElevenLabs tale</div><div class="r">Voiceover</div><p>Norsk stemme med tidsstempel for hver eneste bokstav.</p></div>
+      <div class="mg-tool"><div class="n">ElevenLabs Music</div><div class="r">Musikk</div><p>Et spor laget til nøyaktig lengde og stemning, ingen lisensjakt.</p></div>
+      <div class="mg-tool"><div class="n">ElevenLabs Scribe</div><div class="r">Kontroll</div><p>Tale til tekst. Sjekker at stemmen faktisk sa det som står i manus.</p></div>
+      <div class="mg-tool"><div class="n">ffmpeg</div><div class="r">Lyd og kontroll</div><p>Riktig lydnivå, stillbilder til kontroll og siste finpuss.</p></div>
+    </div>
+    <div class="mg-key"><div class="k">Hovedtrikset</div><p>Stemmen lages først, med tidsstempler. Så låses hver eneste animasjon til ordet den hører til. Det er derfor tekst, bilde og lyd treffer helt presist, uten at noen sitter og justerer i et redigeringsprogram.</p></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:24px;background:var(--bg)">
+  <div class="wrap mg-guide">
+    <nav class="mg-toc" aria-label="Innhold">
+      <div class="t">Innhold</div>
+      <a href="#steg"><span>1</span>Arbeidsflyten</a>
+      <a href="#format"><span>2</span>Formatet som funker</a>
+      <a href="#maler"><span>3</span>Malene</a>
+      <a href="#sjekkliste"><span>4</span>Sjekkliste</a>
+      <a href="#feil"><span>5</span>10 feil</a>
+    </nav>
+
+    <div class="mg-body">
+
+      <section id="steg" class="mg-part">
+        <span class="mg-kick">Del 1</span>
+        <h2 class="mg-h2">Arbeidsflyten i åtte steg</h2>
+        <p>Rekkefølgen er viktig. Mange starter med animasjonen og legger på stemme til slutt. Vi gjør det motsatt, fordi stemmen bestemmer tempoet i alt annet.</p>
+
+        <div class="mg-steps">
+          <div class="mg-step"><div class="num">01</div><div>
+            <h3>Brief og vinkel</h3>
+            <p>Bestem først om det er en annonse for kald trafikk eller en merkevarefilm. Pen typografi på en tom bakgrunn stopper ingen i feeden.</p>
+            <ul>
+              <li>En annonse for kald trafikk trenger noe konkret i <b>første 1,5 sekund</b>: et ekte produkt, et ekte skjermbilde, en situasjon folk kjenner seg igjen i, eller et tall.</li>
+              <li>Hent alle påstander fra bedriftens egen nettside. Ikke finn på tall.</li>
+              <li>Bruk ekte skjermbilder og produktbilder. Tegnede mockups ser ut som de er laget i et script.</li>
+              <li>Vis aldri en person som ikke er den som snakker.</li>
+            </ul>
+          </div></div>
+
+          <div class="mg-step"><div class="num">02</div><div>
+            <h3>Manus</h3>
+            <ul>
+              <li>Skriv <b>få, lange setninger</b> bundet sammen med komma, «og», «for» og «så».</li>
+              <li>Generer hele manuset i <b>ett kall</b>. Aldri setning for setning.</li>
+              <li>Forkortelser skrives med bindestrek, som «C-R-M». Ellers blir de ofte uttalt som ett ord.</li>
+              <li>Skriv ut valuta og tegn: «200 kroner», ikke «200 kr».</li>
+              <li>Rundt 20 sekunder tale for en vanlig annonse, 40 til 45 sekunder for problem og løsning.</li>
+            </ul>
+            <p class="mg-why"><b>Hvorfor:</b> Mange korte setninger får AI-stemmen til å starte tonefallet på nytt hver gang. Det er det som gjør at den høres hakkete ut, ikke pausene.</p>
+          </div></div>
+
+          <div class="mg-step"><div class="num">03</div><div>
+            <h3>Stemme</h3>
+            <ul>
+              <li>Modell <b>eleven_v4</b> med språkkode «no». Den eldre multilingual-modellen glir over i dansk på norsk tekst.</li>
+              <li>Bruk endepunktet <b>with-timestamps</b>. Da vet du nøyaktig når hvert ord starter.</li>
+              <li>Lag 3 til 6 versjoner og velg på målinger: kjør tale til tekst på hver, sjekk at alle ord er riktige, og velg den med jevnest tempo.</li>
+              <li>For treg? Øk <b>speed</b> til 1,05 til 1,15, eller kort ned manuset.</li>
+              <li>Hør alltid på stemmen selv før du publiserer.</li>
+            </ul>
+            <p class="mg-why"><b>Hvorfor:</b> Vi prøvde å speede opp lydfila i etterkant én gang. Alle hørte det med en gang, selv om ingen kunne si hva som var galt.</p>
+          </div></div>
+
+          <div class="mg-step"><div class="num">04</div><div>
+            <h3>Musikk</h3>
+            <ul>
+              <li>Generer musikken til nøyaktig samme lengde som videoen.</li>
+              <li>Har annonsen et vendepunkt, be om <b>to deler</b>: urolig og i moll før, varm og i dur etter.</li>
+              <li>Unngå generisk «inspirerende bedriftsmusikk». Det er det første folk scroller forbi.</li>
+            </ul>
+            <p class="mg-why"><b>Hvorfor:</b> Når musikken skifter i samme øyeblikk som løsningen kommer, føles hele annonsen gjennomtenkt. Seeren merker det uten å vite hvorfor.</p>
+          </div></div>
+
+          <div class="mg-step"><div class="num">05</div><div>
+            <h3>Storyboard og timing</h3>
+            <ul>
+              <li>Lag en scenetabell i frames (30 per sekund) der hver scene starter på et bestemt ord i stemmen.</li>
+              <li>Noe nytt skal skje minst hvert 1,5 til 3 sekund.</li>
+              <li>Start med et forsprang på ca. 0,4 sekunder før stemmen.</li>
+            </ul>
+          </div></div>
+
+          <div class="mg-step"><div class="num">06</div><div>
+            <h3>Animasjon i Remotion</h3>
+            <ul>
+              <li>Én komponent per annonse. Samme kode gir 9:16 og 1:1.</li>
+              <li>Inn-animasjoner 15 til 20 frames, ut-animasjoner kortere, 10 til 15 frames.</li>
+              <li>Overskrifter kommer inn <b>ord for ord</b>, i takt med stemmen.</li>
+              <li>Én stor visuell hendelse slår ti små ikoner i hjørnet.</li>
+              <li>Rolig og nordisk: luft, tynne linjer, dempede farger. Ingen konfetti, spinnende stjerner eller store SALE-merker.</li>
+            </ul>
+            <div class="mg-safe">
+              <div class="mg-sfone" aria-hidden="true"><div class="z"></div><span class="lb" style="top:20.83%">y 400</span><span class="lb" style="top:79.17%">y 1520</span></div>
+              <p><b>Sikker sone i 9:16.</b> All tekst ligger mellom y=400 og y=1520 på en 1080×1920-video. Reels, Stories og TikTok dekker toppen og bunnen med knapper og tekst. Bakgrunn og bilder kan gå helt ut, og teksten skal være 25 til 30 prosent større enn i 1:1.</p>
+            </div>
+          </div></div>
+
+          <div class="mg-step"><div class="num">07</div><div>
+            <h3>Lydmiks</h3>
+            <p>Stemmen skal alltid ligge over. Musikken er et teppe.</p>
+            <div class="mg-mix">
+              <div class="mg-mrow"><div class="n">Stemme</div><div class="mg-meter"><i style="width:95%"></i></div><div class="v">0.95</div></div>
+              <div class="mg-mrow"><div class="n">Musikk alene<small>uten stemme</small></div><div class="mg-meter"><i class="dim" style="width:55%"></i></div><div class="v">0.55</div></div>
+              <div class="mg-mrow"><div class="n">Musikk, utgangspunkt<small>i video med stemme</small></div><div class="mg-meter"><i class="dim" style="width:30%"></i></div><div class="v">0.30</div></div>
+              <div class="mg-mrow"><div class="n">Musikk på sluttbildet</div><div class="mg-meter"><i class="dim" style="width:16%"></i></div><div class="v">0.16</div></div>
+              <div class="mg-mrow"><div class="n">Musikk under stemmen<small>jevnt, hele veien</small></div><div class="mg-meter"><i class="dim" style="width:9%"></i></div><div class="v">0.09</div></div>
+            </div>
+            <p class="mg-why"><b>Hvorfor jevnt:</b> Senker du musikken for hver setning, pumper den opp i hver lille pause. Da virker stemmen hakkete selv om den ikke er det. Til slutt normaliseres hele videoen til -15 LUFS.</p>
+          </div></div>
+
+          <div class="mg-step"><div class="num">08</div><div>
+            <h3>Render og kontroll</h3>
+            <ul>
+              <li>Render 9:16 og 1:1 fra samme komponent.</li>
+              <li>Ta ut stillbilder på nøkkelpunkter og sjekk at teksten ligger innenfor sikker sone.</li>
+              <li>Gå gjennom <a href="#sjekkliste" style="text-decoration:underline">sjekklisten</a> før noe publiseres.</li>
+            </ul>
+          </div></div>
+        </div>
+      </section>
+
+      <section id="format" class="mg-part">
+        <span class="mg-kick">Del 2</span>
+        <h2 class="mg-h2">Formatet som funker best: problem og løsning, speilet</h2>
+        <p>Av alt vi har testet er dette formatet det som har fått best respons. Rundt 45 sekunder, bygget slik:</p>
+        <div class="mg-tl" role="img" aria-label="Tidslinje på 47 sekunder: hook og fem problemer frem til 20 sekunder, vendepunkt, fem løsninger frem til 41 sekunder, deretter sluttbilde">
+          <div class="mg-tlbar">
+            <div class="p" style="flex:6">Hook</div><div class="p" style="flex:2.8">P1</div><div class="p" style="flex:2.8">P2</div><div class="p" style="flex:2.8">P3</div><div class="p" style="flex:2.8">P4</div><div class="p" style="flex:2.8">P5</div>
+            <div class="t" style="flex:2">↻</div>
+            <div class="s" style="flex:3.8">L1</div><div class="s" style="flex:3.8">L2</div><div class="s" style="flex:3.8">L3</div><div class="s" style="flex:3.8">L4</div><div class="s" style="flex:3.8">L5</div>
+            <div class="e" style="flex:6">Slutt</div>
+          </div>
+          <div class="mg-tlax"><span style="left:0">0 s</span><span style="left:21.3%">10 s</span><span style="left:42.6%">20 s</span><span style="left:63.8%">30 s</span><span style="left:85.1%">40 s</span><span style="left:100%">47 s</span></div>
+          <div class="mg-tllab">
+            <div><b><i style="background:#3A4A42"></i>Hook og 5 problemer</b>0 til 20 s. Hverdagen til målgruppen, i moll.</div>
+            <div><b><i style="background:var(--accent)"></i>Vendepunkt</b>20 til 22 s. Logoen tegner seg, musikken går til dur.</div>
+            <div><b><i style="background:#CFEBDB"></i>5 løsninger</b>22 til 41 s. Samme rekkefølge som problemene.</div>
+            <div><b><i style="background:var(--ink)"></i>Sluttbilde</b>41 til 47 s. Slagord, tilbud, nettadresse.</div>
+          </div>
+        </div>
+        <div class="mg-three">
+          <div><span class="n">1</span><h3>Scener, ikke ikoner</h3><p>Ikke «dårlig kommunikasjon», men chatten som flommer over til den viktige beskjeden forsvinner ut av skjermen. Ikke «tidkrevende», men klokka som går fra 21:47 til 23:12.</p></div>
+          <div><span class="n">2</span><h3>Speilet 1:1</h3><p>Problem 3 får løsning 3. Seeren trenger ikke tenke, bare kjenne igjen.</p></div>
+          <div><span class="n">3</span><h3>Det gamle strøket over</h3><p>Over hver løsning står problemet med rød strek: <span class="mg-strike">rapport full av klikk</span>. Da ser man direkte hva som er fikset.</p></div>
+        </div>
+      </section>
+
+      <section id="maler" class="mg-part">
+        <span class="mg-kick">Del 3</span>
+        <h2 class="mg-h2">Malene. Kopier, lim inn, bytt ut det i klammer.</h2>
+        <p>Dette er de samme malene vi selv starter fra. Du trenger en ElevenLabs-konto og en Mac eller PC med Node og Python.</p>
+
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Prompt til Claude Code<small>Start her. Resten av malene bruker Claude selv underveis.</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>Lag en motion graphic-annonse i Remotion for [bedrift].
+Målgruppe: [hvem]. Tilbud: [hva]. Nettside: [url].
+Hent alle påstander fra nettsiden, ikke finn på tall.
+
+Format: problem og løsning, ca. 45 sekunder, 30 fps, 9:16 og 1:1 fra samme komponent.
+- 5 konkrete problemer som små scener (ikke ikonlister), deretter et vendepunkt
+  der logoen tegner seg, deretter 5 løsninger i samme rekkefølge.
+  Over hver løsning: det gamle problemet strøket over i rødt.
+- Manus: få, sammenhengende setninger. Forkortelser med bindestrek. Valuta skrevet ut.
+- Stemme: ElevenLabs eleven_v4, language_code "no", endepunktet with-timestamps.
+  Lag 4 takes, sjekk hver med tale til tekst mot manus,
+  velg den med riktig tekst og jevnest tempo.
+- Musikk: ElevenLabs Music i to halvdeler (urolig moll, så varm dur),
+  skiftet på vendepunktet.
+- Bygg en scenetabell i frames øverst i fila, låst til ordtidene fra stemmen.
+- All tekst i 9:16 mellom y=400 og y=1520.
+- Lydmiks: stemme 0.95, musikk 0.30 senket jevnt til 0.09 under hele stemmen.
+- Render begge formater og normaliser til -15 LUFS.
+
+Vis meg manus og scenetabell før du genererer stemme.</code></pre></div>
+
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Stemmeinnstillinger<small>POST /v1/text-to-speech/{voice_id}/with-timestamps</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>{
+  <span class="k">"model_id"</span>: <span class="s">"eleven_v4"</span>,
+  <span class="k">"language_code"</span>: <span class="s">"no"</span>,
+  <span class="k">"voice_settings"</span>: {
+    <span class="k">"stability"</span>: 0.5,
+    <span class="k">"similarity_boost"</span>: 0.78,
+    <span class="k">"style"</span>: 0.0,
+    <span class="k">"use_speaker_boost"</span>: true,
+    <span class="k">"speed"</span>: 1.0
+  }
+}</code></pre></div>
+
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Fra tidsstempler til frames<small>Python. Gir words.json med start og slutt for hvert ord.</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>import json, base64
+
+r = json.load(open(<span class="s">"resp.json"</span>))
+open(<span class="s">"vo.mp3"</span>, <span class="s">"wb"</span>).write(base64.b64decode(r[<span class="s">"audio_base64"</span>]))
+
+a = r.get(<span class="s">"alignment"</span>) or r[<span class="s">"normalized_alignment"</span>]
+chars = a[<span class="s">"characters"</span>]
+starts = a[<span class="s">"character_start_times_seconds"</span>]
+ends = a[<span class="s">"character_end_times_seconds"</span>]
+
+words, cur, t0, prev = [], <span class="s">""</span>, None, 0
+for c, s, e in zip(chars, starts, ends):
+    if c.strip() == <span class="s">""</span>:
+        if cur:
+            words.append({<span class="s">"word"</span>: cur, <span class="s">"start"</span>: round(t0 * 30), <span class="s">"end"</span>: round(prev * 30)})
+        cur, t0 = <span class="s">""</span>, None
+    else:
+        if t0 is None:
+            t0 = s
+        cur += c
+    prev = e
+if cur:
+    words.append({<span class="s">"word"</span>: cur, <span class="s">"start"</span>: round(t0 * 30), <span class="s">"end"</span>: round(prev * 30)})
+
+json.dump(words, open(<span class="s">"words.json"</span>, <span class="s">"w"</span>), ensure_ascii=False, indent=1)</code></pre></div>
+
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Musikkprompt<small>ElevenLabs Music. Bytt lengde og tidspunkt for vendepunktet.</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>{
+  <span class="k">"prompt"</span>: <span class="s">"Instrumental bed for a 47 second Scandinavian software ad in two halves. First 20 seconds: sparse, slightly tense and restless, muted plucked strings and a ticking clock-like pulse, minor key, unresolved. Then at 20 seconds a clear warm turn: soft felt piano and gentle brushed percussion, major key, hopeful, calm, building subtly to a clean resolved ending. 96 BPM, no vocals, no drops, understated."</span>,
+  <span class="k">"music_length_ms"</span>: 47000,
+  <span class="k">"force_instrumental"</span>: true
+}</code></pre></div>
+
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Fade inn og ut<small>Remotion. Brukes på nesten alle elementer.</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>import { Easing, interpolate } from <span class="s">"remotion"</span>;
+
+const clamp = { extrapolateLeft: <span class="s">"clamp"</span>, extrapolateRight: <span class="s">"clamp"</span> } as const;
+
+<span class="c">// Synlig fra frame a til b: 16 frames inn, 14 frames ut</span>
+export const inOut = (f: number, a: number, b: number, fi = 16, fo = 14) =>
+  Math.min(
+    interpolate(f, [a, a + fi], [0, 1], { ...clamp, easing: Easing.out(Easing.exp) }),
+    interpolate(f, [b - fo, b], [1, 0], clamp)
+  );</code></pre></div>
+
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Lydnivå til -15 LUFS<small>Python og ffmpeg, to runder. Kjør: python3 ln.py inn.mp4 ut.mp4</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>import json, subprocess, sys
+
+src, dst = sys.argv[1], sys.argv[2]
+o = subprocess.run(
+    [<span class="s">"ffmpeg"</span>, <span class="s">"-hide_banner"</span>, <span class="s">"-i"</span>, src, <span class="s">"-af"</span>,
+     <span class="s">"loudnorm=I=-15:TP=-1.5:LRA=11:print_format=json"</span>, <span class="s">"-f"</span>, <span class="s">"null"</span>, <span class="s">"-"</span>],
+    capture_output=True, text=True).stderr
+d = json.loads(o[o.rindex(<span class="s">"{"</span>):o.rindex(<span class="s">"}"</span>) + 1])
+af = (f<span class="s">"loudnorm=I=-15:TP=-1.5:LRA=11:measured_I={d['input_i']}:measured_TP={d['input_tp']}"</span>
+      f<span class="s">":measured_LRA={d['input_lra']}:measured_thresh={d['input_thresh']}"</span>
+      f<span class="s">":offset={d['target_offset']}:linear=true"</span>)
+subprocess.run([<span class="s">"ffmpeg"</span>, <span class="s">"-y"</span>, <span class="s">"-i"</span>, src, <span class="s">"-c:v"</span>, <span class="s">"copy"</span>, <span class="s">"-af"</span>, af,
+                <span class="s">"-ar"</span>, <span class="s">"48000"</span>, <span class="s">"-c:a"</span>, <span class="s">"aac"</span>, <span class="s">"-b:a"</span>, <span class="s">"192k"</span>, dst], check=True)</code></pre></div>
+
+        <div class="mg-step" style="margin-top:22px"><div class="num">+</div><div>
+          <h3>Bonus: bytt stemme uten å bygge animasjonen på nytt</h3>
+          <p>Har du laget hele animasjonen og vil teste en annen stemme? Match ordene i gammel og ny versjon, lagre to lister med frame-tall (<b>OLD</b> og <b>NEW</b>), og la komposisjonen oversette hver frame til «gammel tid». Da flytter hele animasjonen seg ord for ord etter den nye stemmen. Vi tester flere stemmer på samme video på noen minutter på denne måten.</p>
+        </div></div>
+        <div class="mg-code"><div class="mg-codeh"><div class="l">Tidsforskyvning<small>Remotion. OLD og NEW er like lange lister med ord-starttider i frames.</small></div><button class="mg-copy" type="button">Kopier</button></div>
+<pre><code>import { interpolate, useCurrentFrame } from <span class="s">"remotion"</span>;
+
+const extend = { extrapolateLeft: <span class="s">"extend"</span>, extrapolateRight: <span class="s">"extend"</span> } as const;
+const toOld = (f: number) => interpolate(f, NEW, OLD, extend);
+
+<span class="c">// Bruk denne i stedet for useCurrentFrame() i hele komposisjonen</span>
+export const useWarpedFrame = () => toOld(useCurrentFrame());</code></pre></div>
+      </section>
+
+      <section id="sjekkliste" class="mg-part">
+        <span class="mg-kick">Del 4</span>
+        <h2 class="mg-h2">Sjekkliste før du publiserer</h2>
+        <div class="mg-check" id="mgCheck">
+          <label><input type="checkbox">Hver påstand finnes på bedriftens egen nettside</label>
+          <label><input type="checkbox">All tekst i 9:16 ligger mellom y=400 og y=1520</label>
+          <label><input type="checkbox">Teksten kan leses på mobil og står minst 2 sekunder</label>
+          <label><input type="checkbox">Du har hørt på stemmen selv, og navn og forkortelser uttales riktig</label>
+          <label><input type="checkbox">Musikken ligger under stemmen uten å pumpe</label>
+          <label><input type="checkbox">Lydnivået er -15 LUFS</label>
+          <label><input type="checkbox">Både 9:16 og 1:1 er klare</label>
+        </div>
+        <p class="mg-prog" id="mgProg" aria-live="polite">0 av 7 sjekket</p>
+      </section>
+
+      <section id="feil" class="mg-part" style="padding-bottom:0">
+        <span class="mg-kick">Del 5</span>
+        <h2 class="mg-h2">10 feil vi har gjort, så du slipper</h2>
+        <div class="mg-err">
+          <div><span class="i">01</span><span class="f">Tekst og lyd var ute av synk</span><span class="r">Tidsstempler fra stemmen, aldri anslåtte tider</span></div>
+          <div><span class="i">02</span><span class="f">Stemmen hørtes hakkete ut</span><span class="r">Lange, flytende setninger og jevn musikkdemping</span></div>
+          <div><span class="i">03</span><span class="f">Stemmen ble speedet opp i etterkant</span><span class="r">Speed-innstillingen, eller kortere manus</span></div>
+          <div><span class="i">04</span><span class="f">Norsk ble uttalt som dansk</span><span class="r">eleven_v4 med språkkode «no»</span></div>
+          <div><span class="i">05</span><span class="f">Forkortelsen ble uttalt som ett ord</span><span class="r">Bindestrek mellom bokstavene</span></div>
+          <div><span class="i">06</span><span class="f">Musikken var for høy</span><span class="r">0.30 som utgangspunkt, 0.09 under stemmen</span></div>
+          <div><span class="i">07</span><span class="f">Tegnet animasjon ble avvist</span><span class="r">Ekte skjermbilder og produktbilder i bunn</span></div>
+          <div><span class="i">08</span><span class="f">Teksten havnet under Reels-knappene</span><span class="r">Sikker sone y=400 til 1520</span></div>
+          <div><span class="i">09</span><span class="f">Stemmen ble laget setning for setning</span><span class="r">Hele manuset i ett kall</span></div>
+          <div><span class="i">10</span><span class="f">Pen typografi-intro stoppet ingen</span><span class="r">Noe konkret i første 1,5 sekund</span></div>
+        </div>
+
+        <div class="vnote" style="margin-top:40px">
+          <img src="/img/victor-hero.webp" alt="Victor Skretteberg" width="64" height="64" loading="lazy">
+          <div>
+            <p><b>Hei, Victor her.</b> Dette er den samme oppskriften vi bruker når vi lager motion-annonser for kundene våre. Den blir oppdatert hver gang vi lærer noe nytt, så lagre lenken.</p>
+            <p>Vil du heller at vi lager annonsene for deg? Send oss nettsiden din nederst på siden, så får du et gratis forslag.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  /* Kopier-knapper */
+  document.querySelectorAll('.mg-copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var pre=b.closest('.mg-code').querySelector('pre'); var txt=pre.innerText;
+      function done(){b.textContent='Kopiert';b.classList.add('ok');setTimeout(function(){b.textContent='Kopier';b.classList.remove('ok');},1800);}
+      function fallback(){var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy');done();}catch(e){}}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,fallback);}else{fallback();}
+    });
+  });
+
+  /* Sjekkliste */
+  var boxes=document.querySelectorAll('#mgCheck input'),prog=document.getElementById('mgProg');
+  boxes.forEach(function(x){x.addEventListener('change',function(){var n=0;boxes.forEach(function(y){if(y.checked)n++;});prog.textContent=n===boxes.length?'Alt sjekket. Klar for publisering.':n+' av '+boxes.length+' sjekket';});});
+
+  /* Innholdsfortegnelse */
+  var toc=document.querySelectorAll('.mg-toc a');
+  if('IntersectionObserver' in window){
+    var tio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){toc.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('.mg-body>section').forEach(function(s){tio.observe(s);});
+  }
+
+  /* Demo-spiller: alt er en funksjon av frame-nummeret, som i Remotion */
+  var FPS=30,DUR=360;
+  var $=function(id){return document.getElementById(id);};
+  var A=$('scA'),B=$('scB'),E=$('scE'),wipe=$('wipe'),mark=$('mark'),cap=$('cap').firstChild;
+  var wA=[].slice.call($('hlA').children),wB=[].slice.call($('hlB').children);
+  var bars=[].slice.call($('barsA').children),rows=[].slice.call($('rowsB').children);
+  var strike=$('strikeB'),mC=$('markC'),mP=$('markP'),scrub=$('mgScrub'),fc=$('mgFc'),play=$('mgPlay'),ico=$('mgIco');
+  function ip(f,a,b,x,y,ease){var t=Math.min(1,Math.max(0,(f-a)/(b-a)));if(ease)t=1-Math.pow(2,-10*t);return x+(y-x)*t;}
+  var CAPS=[[8,48,'Rapporten er full av klikk'],[48,100,'og visninger.'],[150,196,'Én side.'],[196,260,'Bare tallene som betyr noe.'],[300,360,'Annonser som betaler for seg selv.']];
+  var atA=[8,16,22,30,36,48,54],atB=[176,188,200,212,222,230,240];
+  function render(f){
+    var aOut=ip(f,104,116,1,0);
+    A.style.opacity=aOut;
+    wA.forEach(function(w,i){var p=ip(f,atA[i],atA[i]+10,0,1,true);w.style.opacity=p;w.style.filter='blur('+((1-p)*6)+'px)';w.style.transform='translateY('+((1-p)*26)+'%)';});
+    bars.forEach(function(b,i){b.style.transform='scaleY('+ip(f,58+i*4,74+i*4,0,1,true)+')';});
+    var w=ip(f,112,136,0,1,true); wipe.style.transform='translate(-50%,-50%) scale('+(w*260)+')';
+    var mOp=Math.min(ip(f,118,124,0,1),ip(f,150,160,1,0)); mark.style.opacity=mOp;
+    mC.style.strokeDashoffset=1-ip(f,120,142,0,1,true); mP.style.strokeDashoffset=1-ip(f,134,150,0,1,true);
+    var bIn=Math.min(ip(f,154,166,0,1),ip(f,288,300,1,0)); B.style.opacity=bIn;
+    strike.style.strokeDashoffset=1-ip(f,164,180,0,1,true);
+    wB.forEach(function(w,i){var p=ip(f,atB[i],atB[i]+10,0,1,true);w.style.opacity=p;w.style.filter='blur('+((1-p)*6)+'px)';w.style.transform='translateY('+((1-p)*26)+'%)';});
+    rows.forEach(function(r,i){var p=ip(f,248+i*9,262+i*9,0,1,true);r.style.opacity=p;r.style.transform='translateX('+((1-p)*-18)+'%)';});
+    var e=ip(f,298,312,0,1,true); E.style.opacity=e; E.style.transform='scale('+(0.96+0.04*e)+')';
+    var c=''; CAPS.forEach(function(k){if(f>=k[0]&&f<k[1])c=k[2];}); cap.textContent=c; cap.style.display=c?'':'none';
+    fc.textContent='f '+String(f).padStart(3,'0')+' / '+DUR+' · '+(f/FPS).toFixed(2).replace('.',',')+' s';
+    scrub.value=f;
+  }
+  var playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,start=null,frame=playing?0:250;
+  function setIcon(){ico.innerHTML=playing?'<rect x="3" y="2" width="3.4" height="12" rx="1"/><rect x="9.6" y="2" width="3.4" height="12" rx="1"/>':'<path d="M4 2.2v11.6c0 .6.7 1 1.2.7l9-5.8c.5-.3.5-1.1 0-1.4l-9-5.8C4.7 1.2 4 1.6 4 2.2z"/>';play.setAttribute('aria-label',playing?'Pause':'Spill av');}
+  function tick(ts){if(!playing)return;if(start===null)start=ts-frame*1000/FPS;frame=Math.floor((ts-start)*FPS/1000)%DUR;render(frame);requestAnimationFrame(tick);}
+  play.addEventListener('click',function(){playing=!playing;setIcon();if(playing){start=null;requestAnimationFrame(tick);}});
+  scrub.addEventListener('input',function(){playing=false;setIcon();frame=+scrub.value;render(frame);});
+  $('mgSz').addEventListener('change',function(){$('mgPlayer').classList.toggle('show-sz',this.checked);});
+  setIcon();render(frame);if(playing)requestAnimationFrame(tick);
+})();
+</script>
+
+<section class="logowall"><div class="wrap">
+  <div class="lbl">Noen av dem vi jobber med</div>
+  <div class="row">
+    <img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold" loading="lazy" width="589" height="169">
+    <img src="/logos/veldigrent.png" alt="Veldigrent.no" loading="lazy" width="785" height="182">
+    <img src="/logos/raskflytting.png" alt="Rask Flytting" loading="lazy" width="250" height="58">
+    <img src="/logos/mokki.png" alt="Mokki" loading="lazy" width="700" height="188">
+    <img src="/logos/badstugutta.png" alt="Badstugutta" loading="lazy" width="305" height="54">
+    <img src="/logos/frifor.png" alt="Frifor.app" loading="lazy" width="564" height="182">
+  </div>
+</div></section>
+<section class="section" style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center" style="max-width:640px;margin:0 auto"><span class="eyebrow">Før / etter</span><h2 class="h-lg" style="margin-top:12px">Før og etter Arcads.</h2><p class="lede" style="margin:14px auto 0">Tallene er hentet fra kundenes egne annonsekontoer.</p></div>
+    <div class="bagrid"><a class="ba reveal" href="/caser/utvendigrenhold/">
+        <img src="/img/caser/ur-1.jpg" alt="Utvendig Renhold" loading="lazy" width="640" height="480">
+        <div class="bab"><div class="ban">Utvendig Renhold</div><div class="bar"><span class="k">Før</span>Én nasjonal kampanje, ingen oversikt per by</div><div class="bar"><span class="k on">Etter</span>9 regioner med egne kampanjer, 549 leads på 90 dager (juni–sept. 2026)</div></div>
+      </a><a class="ba reveal" href="/caser/#mokki">
+        <img src="/img/caser/mokki-2.jpg" alt="Mokki" loading="lazy" width="640" height="480">
+        <div class="bab"><div class="ban">Mokki</div><div class="bar"><span class="k">Før</span>Google Ads knapt i bruk</div><div class="bar"><span class="k on">Etter</span>+127 % profitt år over år, med annonser i Norge, Tyskland og Danmark</div></div>
+      </a><a class="ba reveal" href="/caser/#leid">
+        <img src="/img/wall/leid-1.webp" alt="Annonse for Leid.no" loading="lazy" width="480" height="600">
+        <div class="bab"><div class="ban">Leid.no</div><div class="bar"><span class="k">Før</span>Sporing som telte langt flere kjøp enn det som skjedde</div><div class="bar"><span class="k on">Etter</span>4,73x ROAS på tvers av kanalene, over 100 000 kr i måneden i annonser</div></div>
+      </a></div>
+    <p class="fine" style="text-align:center;color:var(--muted);margin-top:26px">Se også: <a href="/google-ads/">Google Ads-byrå</a> &middot; <a href="/meta-ads/">Meta Ads-byrå</a> &middot; <a href="/performance-marketing-byra/">Performance marketing-byrå</a> &middot; <a href="/artikler/hva-er-ugc/">Hva er UGC?</a> &middot; <a href="/google-ads-byra-oslo/">Google Ads-byrå Oslo</a></p>
+  </div>
+</section>
+<section class="section" style="background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="center" style="max-width:560px;margin:0 auto"><h2 class="h-lg">Spørsmål og svar.</h2></div>
+    <div class="faq reveal"><details open><summary>Trenger jeg å kunne kode for å bruke dette?<span class="pm">+</span></summary><div class="ans">Nei, men det hjelper å være komfortabel med å kjøre kommandoer. Claude Code skriver koden, og du styrer med vanlig tekst. Du trenger Node og Python installert, en ElevenLabs-konto og tilgang til Claude Code.</div></details><details><summary>Hvor lang tid tar det å lage én annonse?<span class="pm">+</span></summary><div class="ans">Første gang går det med en del tid på oppsett. Når malene er på plass, går mesteparten av tiden til manus, å lytte på stemmen og finjustere, ikke til selve animasjonen.</div></details><details><summary>Fungerer norsk voiceover fra AI godt nok til annonser?<span class="pm">+</span></summary><div class="ans">Med riktig modell og riktig manus, ja. Bruk eleven_v4 med språkkode no, skriv få og flytende setninger, lag flere versjoner og hør alltid selv før du publiserer. Den eldre multilingual-modellen glir over i dansk på norsk tekst.</div></details><details><summary>Hvilket format fungerer best for motion-annonser?<span class="pm">+</span></summary><div class="ans">Av det vi har testet: problem og løsning, speilet. Fem konkrete problemer som små scener, et vendepunkt, og fem løsninger i samme rekkefølge der det gamle problemet står strøket over.</div></details><details><summary>Hva er sikker sone i en 9:16-video?<span class="pm">+</span></summary><div class="ans">På en 1080×1920-video bør all tekst ligge mellom y=400 og y=1520. Reels, Stories og TikTok dekker toppen og bunnen med profilnavn, knapper og tekst.</div></details></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="final reveal" id="book">
+      <span class="eyebrow">Gratis &amp; uforpliktende</span>
+      <h2>Vil du heller at vi lager annonsene for deg?</h2>
+      <p>Send oss nettsiden din, så lager vi et konkret forslag til annonser og landingsside for bedriften din, slik det ville sett ut med din merkevare. Du får det på e-post innen et par dager, og det er ditt uansett.</p>
+            <div class="calcard">
+        <div class="fwho"><img src="/img/founders.webp" alt="Victor og Jona, Arcads" width="1100" height="819" loading="lazy"><div><b>Victor og Jona lager forslaget selv.</b> Annonser og landingsside slik de ville sett ut for deg. For etablerte bedrifter med 30 000 kr+ i månedlig annonsebudsjett. Ingen pitch, ingen forpliktelser.</div></div>
+        <form id="leadForm" novalidate>
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="frow">
+            <div class="field"><label for="l_name">Navn <span class="req">*</span></label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
+            <div class="field"><label for="l_site">Nettside <span class="req">*</span></label><input type="text" id="l_site" name="website" placeholder="bedriften.no" autocomplete="url" required></div>
+            <div class="field"><label for="l_email">E-post <span class="req">*</span></label><input type="email" id="l_email" name="email" placeholder="din@epost.no" autocomplete="email" required></div>
+            <div class="field"><label for="l_phone">Telefon <span class="req">*</span></label><input type="tel" id="l_phone" name="phone" placeholder="Så vi får tak i deg" autocomplete="tel" required></div>
+          </div>
+          <div class="field"><label for="l_budget">Annonsebudsjett i måneden</label><select id="l_budget" name="budget" required><option value="">Velg</option><option>Annonserer ikke ennå</option><option>Under 30 000 kr</option><option>30 000 til 100 000 kr</option><option>Over 100 000 kr</option></select></div>
+          <button type="submit" class="cta" id="leadBtn"><span class="t">Vis meg hvordan det ville sett ut<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Forslag på e-post i løpet av et par dager</span></button>
+        </form>
+      </div>
+      <p class="fine">Gratis &middot; ingen binding &middot; vi deler aldri infoen din</p>
+      <p class="fine" style="margin-top:8px">Vil du heller ta praten direkte? <a href="https://cal.com/arcads/30min">Book 30 minutter i kalenderen &rarr;</a> &middot; <a href="mailto:victor@arcads.no">victor@arcads.no</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img src="/logos/arcads-logo.png" alt="Arcads" class="flogo">
+        <p class="ftag">Norsk performance marketing-byrå. 100% resultatbasert — du betaler først når vi leverer.</p>
+        <div class="fsoc">
+          <a href="https://www.instagram.com/arcads.no/" target="_blank" rel="noopener" aria-label="Arcads på Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor" stroke="none"/></svg>Instagram</a>
+          <a href="https://www.linkedin.com/company/arcads/" target="_blank" rel="noopener" aria-label="Arcads på LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Arcads</a>
+          <a href="https://www.linkedin.com/in/victor-skretteberg-b7a562299/" target="_blank" rel="noopener" aria-label="Victor på LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Victor</a>
+          <a href="https://www.linkedin.com/in/jona-helgen-9a1a37244/" target="_blank" rel="noopener" aria-label="Jona på LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Jona</a>
+        </div>
+      </div>
+      <div class="fcol">
+        <div class="fh2">Tjenester</div>
+        <a href="/google-ads/">Google Ads-byrå</a>
+        <a href="/meta-ads/">Meta Ads-byrå</a>
+        <a href="/kreativ-produksjon/">Kreativ produksjon</a>
+        <a href="/ugc-byra/">UGC-byrå</a>
+        <a href="/performance-marketing-byra/">Performance marketing-byrå</a>
+        <a href="/markedsforing-for-tjenestebedrifter/">Markedsføring for tjenestebedrifter</a>
+      </div>
+      <div class="fcol">
+        <div class="fh2">Selskap</div>
+        <a href="/om-oss/">Om oss</a>
+        <a href="/pris/">Pris</a>
+        <a href="/caser/">Caser</a>
+        <a href="/markedsforingsbyra-skien/">Markedsføringsbyrå i Skien</a>
+        <a href="/google-ads-byra-oslo/">Google Ads-byrå Oslo</a>
+        <a href="/artikler/">Artikler</a>
+        <a href="/bli-ugc-creator/">Bli UGC-creator</a>
+        <a href="#book">Se hvordan det ville sett ut for deg</a>
+      </div>
+      <div class="fcol">
+        <div class="fh2">Kontakt</div>
+        <a href="mailto:victor@arcads.no">victor@arcads.no</a>
+        <span>Jonas Lies gate 1<br>3717 Skien</span>
+      </div>
+    </div>
+    <div class="fbot">&copy; 2026 Arcads ANS &middot; Org.nr. 935 795 990 MVA &middot; Bygget i Skien av Victor &amp; Jona &middot; 100% resultatbasert — du betaler først når vi leverer.</div>
+  </div>
+</footer>
+
+<script>
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+<script>
+(function(){
+  var HOOK='https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi';
+  var f=document.getElementById('leadForm'); if(!f)return;
+  var btn=document.getElementById('leadBtn'); var sent=false;
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault(); if(sent)return;
+    if(f.company.value){sent=true;location.href='/takk/';return;}
+    if(!f.name.value.trim()||!f.email.value.includes('@')||!f.phone.value.trim()||!f.website.value.trim()){ if(f.reportValidity)f.reportValidity(); return; }
+    sent=true; btn.disabled=true; btn.querySelector('.t').childNodes[0].nodeValue='Sender…';
+    var b=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:'arcads-'+location.pathname.replace(/\//g,'-').replace(/^-|-$/g,''),name:f.name.value.trim(),email:f.email.value.trim(),phone:f.phone.value.trim(),website:f.website.value.trim(),budget:f.budget.value,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
+    function go(){location.href='/takk/';}
+    try{ if(navigator.sendBeacon && navigator.sendBeacon(HOOK,b)){ go(); return; } }catch(e){}
+    fetch(HOOK,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b.toString()}).then(go,function(){ sent=false; btn.disabled=false; alert('Noe gikk galt - prøv igjen, eller send en mail til victor@arcads.no'); });
+  });
+})();
+</script>
+</body>
+</html>
