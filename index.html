@@ -146,6 +146,32 @@ header{position:sticky;top:0;z-index:20;background:rgba(252,251,249,.85);backdro
 .score{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;padding:10px 18px;border:1px solid var(--line);border-radius:var(--r-pill);background:var(--paper)}
 .score .n{font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--green-text)}
 .score small{font-size:13px;color:var(--muted)}
+
+/* Kundechat (29.09.2026) */
+.chatwin{max-width:720px;margin:44px auto 0;background:var(--paper);border:1px solid var(--line-soft);border-radius:24px;box-shadow:0 30px 80px -40px rgba(17,39,31,.28);overflow:hidden;text-align:left}
+.chat-top{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line-soft);font-size:14px}
+.chat-top small{margin-left:auto;color:var(--faint);font-size:12px;display:flex;align-items:center;gap:6px}
+.chat-top small em{width:7px;height:7px;border-radius:50%;background:var(--green,#1FA463);display:inline-block}
+.chat-dots{display:flex;gap:5px}.chat-dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.chat-body{padding:24px 22px 28px;display:flex;flex-direction:column;gap:22px}
+.cm{position:relative;display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start}
+.cm-av{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--green-text);font:600 13px/38px "Geist",sans-serif;text-align:center;margin-top:20px}
+.cm-who{display:flex;gap:8px;align-items:baseline;font-size:13px;margin:0 0 6px 4px}
+.cm-who b{font-weight:600}.cm-who span{color:var(--faint);font-size:12px}
+.cm-bub{position:relative;background:#EEF0EC;border-radius:6px 18px 18px 18px;padding:12px 16px;font-size:15px;line-height:1.5;color:var(--ink);max-width:560px;width:fit-content}
+.cm-res{display:inline-flex;align-items:center;gap:7px;margin:8px 0 0 4px;padding:5px 12px 5px 10px;border:1px solid var(--line-soft);border-radius:999px;font-size:12px;font-weight:600;color:var(--green-text);background:var(--paper)}
+.cm-res::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.cm-typing{position:absolute;left:50px;top:26px;display:flex;gap:4px;background:#EEF0EC;border-radius:6px 16px 16px 16px;padding:11px 14px;opacity:0;transform:translateY(6px);transition:opacity .25s cubic-bezier(.16,1,.3,1),transform .25s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.cm-typing i{width:6px;height:6px;border-radius:50%;background:#9A9D97;animation:cmdot 1s ease-in-out infinite}
+.cm-typing i:nth-child(2){animation-delay:.15s}.cm-typing i:nth-child(3){animation-delay:.3s}
+@keyframes cmdot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-3px);opacity:1}}
+.chat-live .cm .cm-av,.chat-live .cm .cm-main{opacity:0;transform:translateY(10px) scale(.98);transform-origin:left top;transition:opacity .45s cubic-bezier(.16,1,.3,1),transform .45s cubic-bezier(.16,1,.3,1)}
+.chat-live .cm .cm-res{opacity:0;transform:translateY(4px);transition:opacity .4s cubic-bezier(.16,1,.3,1) .25s,transform .4s cubic-bezier(.16,1,.3,1) .25s}
+.chat-live .cm.typing .cm-typing{opacity:1;transform:none}
+.chat-live .cm.typing .cm-av{opacity:1;transform:none}
+.chat-live .cm.in .cm-av,.chat-live .cm.in .cm-main,.chat-live .cm.in .cm-res{opacity:1;transform:none}
+@media (max-width:640px){.chat-body{padding:18px 14px 22px}.cm-av{margin-top:40px}.cm-typing{top:46px}.cm-who{flex-direction:column;gap:0}.chat-top small{display:none}}
+@media (prefers-reduced-motion:reduce){.cm-typing i{animation:none}.chat-live .cm .cm-av,.chat-live .cm .cm-main,.chat-live .cm .cm-res{transform:none;transition:opacity .3s ease}}
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin-top:44px}
 .rev{display:grid;grid-template-columns:38px 1fr;gap:10px;align-items:end}
 .rev i{width:38px;height:38px;border-radius:50%;background:var(--tint);color:var(--green-text);font:600 13px/38px "Geist",sans-serif;text-align:center;font-style:normal;flex:0 0 auto;margin-bottom:22px}
@@ -545,13 +571,55 @@ fbq('track','PageView');
     <div class="center">
       <h2 class="rv">Hør fra våre kunder.</h2>
     </div>
-    <div class="revs rv">
-      <div class="rev"><i>TT</i><div><div class="bub">Disse leverer above and beyond! Jeg har jobbet med 6-7 andre byråer før vi ble anbefalt Arcads. Det er en tidsepoke før og etter vi jobbet med dere.</div><div class="who"><b>Thommy Tellefsen</b><span>Leid.no</span></div></div></div>
-      <div class="rev"><i>EL</i><div><div class="bub">Veldig nice, vi får flere leads enn noensinne, vi får flere clicks enn noensinne!! Amazing.</div><div class="who"><b>Elliot</b><span>Co-Founder, Badstugutta</span></div></div></div>
-      <div class="rev"><i>NA</i><div><div class="bub">Vi har samarbeidet med Arcads på flere konsepter over tid, og samarbeider fremdeles. Kreative, profesjonelle og raske. En partner vi stoler på.</div><div class="who"><b>Nathaniel Ayeh</b><span>Veldigrent og Raskflytting</span></div></div></div>
-      <div class="rev hide-m"><i>JR</i><div><div class="bub">Bra jobba boys! Very good.</div><div class="who"><b>Jonathan Rothe</b><span>Daglig leder, Utvendigrenhold</span></div></div></div>
-      <div class="rev hide-m"><i>CC</i><div><div class="bub">Very nice people to work with! They really help you grow. Super comfortable to work together as a team.</div><div class="who"><b>Catherina Castro</b><span>Oslotattoo</span></div></div></div>
-      <div class="rev hide-m"><i>JA</i><div><div class="bub">På vegne av Elevate Productions gir vi Victor og Jona våre beste anbefalinger. Disse leverer på et høyt nivå og skaper ekte resultater.</div><div class="who"><b>Joonas Andersson</b><span>Elevate Productions</span></div></div></div>
+    <div class="chatwin rv" id="kundechat">
+      <div class="chat-top"><span class="chat-dots"><i></i><i></i><i></i></span><b>Kundene våre</b><small><em></em>5 deltakere</small></div>
+      <div class="chat-body">
+        <div class="cm">
+          <span class="cm-av">TT</span>
+          <div class="cm-main">
+            <div class="cm-who"><b>Thommy Tellefsen</b><span>Daglig leder, Leid.no</span></div>
+            <div class="cm-bub">Disse leverer above and beyond! Jeg har jobbet med 6-7 andre byråer før vi ble anbefalt Arcads. Det er en tidsepoke før og etter vi jobbet med dere.</div>
+            <div class="cm-res"><span>4,73x ROAS på tvers av kanaler</span></div>
+          </div>
+          <span class="cm-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="cm">
+          <span class="cm-av">MG</span>
+          <div class="cm-main">
+            <div class="cm-who"><b>Mattis Ohana Goksøyr</b><span>CMO, Mokki</span></div>
+            <div class="cm-bub">Wow, selv statics som fungerer så bra! Super jobb dere, fantastisk</div>
+            <div class="cm-res"><span>+127 % profitt år over år</span></div>
+          </div>
+          <span class="cm-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="cm">
+          <span class="cm-av">JR</span>
+          <div class="cm-main">
+            <div class="cm-who"><b>Jonathan Rothe</b><span>Daglig leder, Utvendig Renhold</span></div>
+            <div class="cm-bub">Bra jobba boys! Very good.</div>
+            <div class="cm-res"><span>549 leads på 90 dager</span></div>
+          </div>
+          <span class="cm-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="cm">
+          <span class="cm-av">EL</span>
+          <div class="cm-main">
+            <div class="cm-who"><b>Elliot</b><span>Co-founder, Badstugutta</span></div>
+            <div class="cm-bub">Veldig nice, vi får flere leads enn noensinne, vi får flere clicks enn noensinne!! Amazing.</div>
+            <div class="cm-res"><span>Leads fra Google og Meta</span></div>
+          </div>
+          <span class="cm-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="cm">
+          <span class="cm-av">NA</span>
+          <div class="cm-main">
+            <div class="cm-who"><b>Nathaniel Ayeh</b><span>Veldigrent og Raskflytting</span></div>
+            <div class="cm-bub">Vi har samarbeidet med Arcads på flere konsepter over tid, og samarbeider fremdeles. Kreative, profesjonelle og raske. En partner vi stoler på.</div>
+            <div class="cm-res"><span>202 kr per lead, flyttevask Oslo</span></div>
+          </div>
+          <span class="cm-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+      </div>
     </div>
     <div class="ctarow rv"><a class="btn" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a><p class="micro">Bli den neste på lista. Forslaget er gratis og uforpliktende.</p></div>
   </div>
@@ -893,5 +961,15 @@ fbq('track','PageView');
 })();
 </script>
 <script>(function(){var st=document.getElementById('adStack');if(!st)return;var im=st.querySelectorAll('img'),i=0;if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;setInterval(function(){im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},3200)})();</script>
+<script>
+(function(){var w=document.getElementById('kundechat');if(!w||!('IntersectionObserver' in window))return;
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,ms=[].slice.call(w.querySelectorAll('.cm'));
+w.classList.add('chat-live');
+var io=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;io.disconnect();
+ if(rm){ms.forEach(function(m){m.classList.add('in')});return;}
+ var i=0;(function next(){if(i>=ms.length)return;var m=ms[i++];m.classList.add('typing');
+  setTimeout(function(){m.classList.remove('typing');m.classList.add('in');setTimeout(next,320);},i===1?550:750);})();
+},{threshold:.35});io.observe(w);})();
+</script>
 </body>
 </html>
