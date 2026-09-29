@@ -318,31 +318,6 @@ td.us{border-bottom-color:#E4EBE3}
 .nogo ul{margin:0}
 .nogo li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:rgba(255,255,255,.82);margin-bottom:8px}
 .nogo li svg{width:16px;height:16px;flex:none;margin-top:3px;stroke:rgba(255,255,255,.45);fill:none;stroke-width:2.2;stroke-linecap:round}
-
-/* Priskalkulator (29.09.2026) */
-.pcalc{align-self:center;background:#fff;color:var(--ink);border-radius:24px;padding:28px;box-shadow:0 40px 90px -40px rgba(0,0,0,.6)}
-.pc-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
-.pc-top span{font-weight:600;font-size:15px}
-.pc-top small{font-size:12px;color:var(--faint);border:1px solid var(--line);border-radius:999px;padding:3px 10px}
-.pcalc label{display:block;font-size:13px;color:var(--muted)}
-.pc-big{font-size:clamp(34px,4vw,46px);font-weight:600;letter-spacing:-.03em;margin:4px 0 10px;font-variant-numeric:tabular-nums}
-.pcalc input[type=range]{width:100%;accent-color:var(--green-text)}
-.pc-row{display:flex;justify-content:space-between;align-items:center;margin:18px 0 20px;font-size:13px;color:var(--muted)}
-.pc-seg{display:flex;gap:4px;background:var(--tint);border-radius:999px;padding:4px}
-.pc-seg button{border:0;background:transparent;font:inherit;font-size:13px;color:var(--muted);padding:6px 14px;border-radius:999px;cursor:pointer;transition:background-color .2s ease,color .2s ease}
-.pc-seg button[aria-pressed=true]{background:var(--deep);color:#fff;font-weight:600}
-.pc-bar{position:relative;height:14px;border-radius:99px;background:var(--green);overflow:hidden}
-.pc-bar i{position:absolute;top:0;right:0;bottom:0;width:100%;background:var(--deep);transform-origin:right;transform:scaleX(.07);transition:transform .45s cubic-bezier(.16,1,.3,1)}
-.pc-bar.zero{background:var(--line)}
-.pc-out{display:grid;grid-template-columns:1fr auto;gap:12px;margin-top:14px}
-.pc-out small{display:block;font-size:12px;color:var(--muted);margin-bottom:2px}
-.pc-out b{font-size:24px;font-weight:600;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--green-text)}
-.pc-out .us{text-align:right}.pc-out .us b{color:var(--ink)}
-.pc-msg{margin-top:18px;padding:12px 14px;border-radius:12px;background:var(--tint);color:var(--ink)!important;font-size:14px;line-height:1.45;min-height:3.2em}
-.pc-msg.warn{background:#FFF4E5}
-.pc-fine{margin-top:10px;font-size:12px;color:var(--faint)!important}
-@media (max-width:900px){.pcalc{padding:22px 18px}}
-@media (prefers-reduced-motion:reduce){.pc-bar i{transition:none}}
 .msteps{display:grid;gap:10px}
 .mstep{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-card);padding:20px 22px;display:grid;grid-template-columns:34px 1fr;gap:16px;align-items:start}
 .mstep .n{width:34px;height:34px;border-radius:50%;background:var(--green);color:var(--deep);font-weight:600;font-size:14px;display:grid;place-items:center}
@@ -891,21 +866,13 @@ fbq('track','PageView');
             <li><svg viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>Ingen binding</li>
           </ul>
         </div>
+        <p style="margin-top:24px;max-width:460px;font-size:14px">Vi tar en andel av verdien vi skaper for deg, ikke en fast månedspris. For at det skal gå opp for begge, må annonsene kunne skape nok til at andelen vår blir rundt 20–30 000 kr i måneden. Tjener du ikke mer, betaler du oss ingenting.</p>
         <a class="btn light" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a>
       </div>
-      <div class="pcalc rv" id="pcalc">
-        <div class="pc-top"><span>Regn på det</span><small>Eksempel</small></div>
-        <label for="pc-v">Det annonsene skaper ekstra i måneden</label>
-        <div class="pc-big"><span id="pc-vv">400 000</span> kr</div>
-        <input type="range" id="pc-v" min="0" max="1000000" step="10000" value="400000" aria-label="Verdi annonsene skaper per måned">
-        <div class="pc-row"><span>Vår andel</span><div class="pc-seg" role="group" aria-label="Andel"><button type="button" data-p="5">5 %</button><button type="button" data-p="7" aria-pressed="true">7 %</button><button type="button" data-p="10">10 %</button></div></div>
-        <div class="pc-bar" aria-hidden="true"><i id="pc-ours"></i></div>
-        <div class="pc-out">
-          <div><small>Du beholder</small><b id="pc-you">372 000 kr</b></div>
-          <div class="us"><small>Arcads får</small><b id="pc-us">28 000 kr</b></div>
-        </div>
-        <p class="pc-msg" id="pc-msg"></p>
-        <p class="pc-fine">Andelen avtales per kunde. Annonsebudsjettet betaler du direkte til Google og Meta.</p>
+      <div class="msteps rv">
+        <div class="mstep"><span class="n">1</span><div><h3>Se hvordan det ville sett ut for deg</h3><p>Vi lager et konkret forslag til annonser og landingsside for din bedrift, så du ser det med egne øyne. Helt uforpliktende, før du har betalt en krone.</p></div></div>
+        <div class="mstep"><span class="n">2</span><div><h3>Vi bygger og lanserer</h3><p>Sporingen settes opp først, så den måler salg. Deretter går de første annonsene live, vanligvis i løpet av første uke.</p></div></div>
+        <div class="mstep"><span class="n">3</span><div><h3>Du betaler når det leverer</h3><p>Hver mandag ser du hva du brukte og hva du tjente. Resultatene avgjør fakturaen, ikke timene våre.</p></div></div>
       </div>
     </div>
   </div>
@@ -1088,18 +1055,6 @@ var io=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;io.
  var i=0;(function next(){if(i>=ms.length)return;var m=ms[i++];m.classList.add('typing');
   setTimeout(function(){m.classList.remove('typing');m.classList.add('in');setTimeout(next,320);},i===1?550:750);})();
 },{threshold:.35});io.observe(w);})();
-</script>
-<script>
-(function(){var r=document.getElementById('pc-v');if(!r)return;var p=7,bs=[].slice.call(document.querySelectorAll('#pcalc .pc-seg button')),rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-var el={v:document.getElementById('pc-vv'),you:document.getElementById('pc-you'),us:document.getElementById('pc-us'),bar:document.getElementById('pc-ours'),msg:document.getElementById('pc-msg')},shown={you:372000,us:28000};
-function fmt(n){return Math.round(n).toLocaleString('nb-NO').replace(/\u00a0|,/g,' ')}
-function tween(k,to){if(rm){shown[k]=to;el[k].textContent=fmt(to)+' kr';return;}var from=shown[k],t0=null;cancelAnimationFrame(el[k]._r);
- (function step(ts){if(!t0)t0=ts;var q=Math.min(1,(ts-t0)/320),e=1-Math.pow(1-q,3),v=from+(to-from)*e;el[k].textContent=fmt(v)+' kr';shown[k]=v;if(q<1)el[k]._r=requestAnimationFrame(step);})(performance.now());}
-function u(){var v=+r.value,us=v*p/100,you=v-us;el.v.textContent=fmt(v);tween('you',you);tween('us',us);
- el.bar.style.transform='scaleX('+(v?p/100:0)+')';el.bar.parentNode.classList.toggle('zero',!v);
- var w=false,t;if(!v)t='Skaper annonsene ingenting ekstra, betaler du oss 0 kr.';else if(us<20000){t='Under 20 000 kr til oss i måneden. Da er vi neppe riktig byrå for dere ennå, og det sier vi rett ut.';w=true}else t='Innenfor det vi ser etter. Du beholder '+Math.round(100-p)+' % av det annonsene skaper.';
- el.msg.textContent=t;el.msg.classList.toggle('warn',w);}
-r.addEventListener('input',u);bs.forEach(function(b){b.addEventListener('click',function(){p=+b.dataset.p;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});u();});});u();})();
 </script>
 </body>
 </html>
