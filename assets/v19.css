@@ -72,3 +72,7 @@ h1,h2,h3,h4{font-family:var(--sans);font-weight:600;letter-spacing:-0.025em}
 #leadForm .cta{width:100%;margin-top:6px;align-items:center}
 #leadForm .cta span.sub{padding-left:0}
 #leadForm .cta[disabled]{opacity:.65;cursor:progress}
+
+/* Språkvelger (29.09.2026) */
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line,#E9E7E0);border-radius:999px;font-size:12px;font-weight:600;line-height:1;flex:none}.lang-sw a{padding:6px 9px;border-radius:999px;color:var(--muted,#5C5F5A);opacity:1!important;text-decoration:none}.lang-sw a.on{background:var(--deep,#11271F);color:#fff}@media (hover:hover) and (pointer:fine){.lang-sw a:not(.on):hover{color:var(--ink,#071812)}}
+@media (max-width:640px){.lang-sw{padding:0;border:0}.lang-sw a.on{display:none}.lang-sw a{border:1px solid var(--line,#E9E7E0);padding:8px 10px}}@media (max-width:400px){.nav .logo img,.nav .brand img{height:22px}}.nav .logo,.nav .brand{flex:none}

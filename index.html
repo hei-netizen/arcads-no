@@ -7,6 +7,9 @@
 <!-- ARCADS.NO v19 - FORSIDEN. Kilde: arcads-claude-brain/clients/arcads/landing/arcads-forside-v19.html
      Bygges til prod (arcads-no/index.html) og test (arcads-test/marketer/index.html) av build-forside-v19.py -->
 <meta name="description" content="Norsk performance marketing-byrå for nettbutikker og tjenestebedrifter. Google Ads, Meta Ads, annonser og landingssider laget av oss selv, 100 % resultatbasert. Vi viser deg hvordan det ville sett ut for din bedrift, helt uforpliktende.">
+<link rel="alternate" hreflang="nb" href="https://arcads.no/">
+<link rel="alternate" hreflang="en" href="https://arcads.no/en/">
+<link rel="alternate" hreflang="x-default" href="https://arcads.no/">
 <link rel="canonical" href="https://arcads.no/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://arcads.no/">
@@ -534,6 +537,9 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .strip{gap:14px 20px}
   .fgrid{grid-template-columns:1fr}
 }
+.lang-sw{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line,#E9E7E0);border-radius:999px;font-size:12px;font-weight:600;line-height:1;flex:none}.lang-sw a{padding:6px 9px;border-radius:999px;color:var(--muted,#5C5F5A);opacity:1!important;text-decoration:none}.lang-sw a.on{background:var(--deep,#11271F);color:#fff}@media (hover:hover) and (pointer:fine){.lang-sw a:not(.on):hover{color:var(--ink,#071812)}}.nav-r{justify-self:end;display:flex;align-items:center;gap:12px}
+@media (max-width:640px){.lang-sw{padding:0;border:0}.lang-sw a.on{display:none}.lang-sw a{border:1px solid var(--line,#E9E7E0);padding:8px 10px}}@media (max-width:400px){.nav .logo img,.nav .brand img{height:22px}}.nav .logo,.nav .brand{flex:none}
+@media (max-width:420px){header .nav{gap:8px}.nav-r{gap:6px}.nav .btn.sm{padding-right:14px}}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -569,7 +575,7 @@ fbq('track','PageView');
       <li><a href="#resultater">Resultater</a></li>
       <li><a href="#omoss">Om oss</a></li>
     </ul>
-    <a class="btn sm" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Se hvordan det ville sett ut for deg</span><span class="lbl-s">Gratis forslag</span></a>
+    <div class="nav-r"><div class="lang-sw" role="group" aria-label="Språk"><a href="/" hreflang="nb" lang="nb" class="on" aria-current="true">NO</a><a href="/en/" hreflang="en" lang="en">EN</a></div><a class="btn sm" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Se hvordan det ville sett ut for deg</span><span class="lbl-s">Gratis forslag</span></a></div>
   </div>
 </header>
 

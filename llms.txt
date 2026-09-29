@@ -89,3 +89,6 @@ Arcads (arcads.no) — norsk performance marketing-byrå, Skien / hele Norge. Ik
 - Ocast (byråkatalog): https://ocast.com/arcads
 - Instagram: https://www.instagram.com/arcads.no/
 - LinkedIn: https://www.linkedin.com/in/victor-skretteberg-b7a562299/ (Victor) og https://www.linkedin.com/in/jona-helgen-9a1a37244/ (Jona)
+
+## English
+- [Arcads in English](https://arcads.no/en/): Full English version of the site — every page has an English counterpart under /en/ (e.g. https://arcads.no/en/google-ads/).

@@ -1,163 +1,563 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://arcads.no/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/google-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/google-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/meta-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/meta-ads/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/meta-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/meta-ads/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/kreativ-produksjon/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/kreativ-produksjon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/kreativ-produksjon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/kreativ-produksjon/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/kreativ-produksjon/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/kreativ-produksjon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/kreativ-produksjon/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/kreativ-produksjon/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/performance-marketing-byra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/performance-marketing-byra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/performance-marketing-byra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/performance-marketing-byra/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/performance-marketing-byra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/performance-marketing-byra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/performance-marketing-byra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/performance-marketing-byra/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/om-oss/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/om-oss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/om-oss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/om-oss/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/om-oss/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/om-oss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/om-oss/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/om-oss/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/caser/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/caser/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/caser/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/caser/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/caser/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/caser/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/caser/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/caser/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/markedsforingsbyra-skien/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforingsbyra-skien/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforingsbyra-skien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforingsbyra-skien/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/markedsforingsbyra-skien/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforingsbyra-skien/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforingsbyra-skien/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforingsbyra-skien/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/hva-koster-google-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-koster-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-koster-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-koster-google-ads/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/hva-koster-google-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-koster-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-koster-google-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-koster-google-ads/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/hva-er-en-god-roas/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-er-en-god-roas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-er-en-god-roas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-er-en-god-roas/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/hva-er-en-god-roas/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-er-en-god-roas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-er-en-god-roas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-er-en-god-roas/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/google-ads-eller-meta-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/google-ads-eller-meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/google-ads-eller-meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/google-ads-eller-meta-ads/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/google-ads-eller-meta-ads/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/google-ads-eller-meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/google-ads-eller-meta-ads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/google-ads-eller-meta-ads/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/velge-markedsforingsbyra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/velge-markedsforingsbyra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/velge-markedsforingsbyra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/velge-markedsforingsbyra/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/velge-markedsforingsbyra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/velge-markedsforingsbyra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/velge-markedsforingsbyra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/velge-markedsforingsbyra/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/hva-er-ugc/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-er-ugc/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-er-ugc/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-er-ugc/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/hva-er-ugc/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-er-ugc/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-er-ugc/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-er-ugc/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/facebook-annonsering/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/facebook-annonsering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/facebook-annonsering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/facebook-annonsering/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/facebook-annonsering/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/facebook-annonsering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/facebook-annonsering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/facebook-annonsering/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/annonsere-pa-google/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/annonsere-pa-google/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/annonsere-pa-google/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/annonsere-pa-google/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/annonsere-pa-google/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/annonsere-pa-google/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/annonsere-pa-google/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/annonsere-pa-google/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/ugc-byra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/ugc-byra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/ugc-byra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/ugc-byra/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/ugc-byra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/ugc-byra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/ugc-byra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/ugc-byra/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/digital-markedsforing/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/digital-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/digital-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/digital-markedsforing/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/digital-markedsforing/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/digital-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/digital-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/digital-markedsforing/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/google-shopping/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/google-shopping/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/google-shopping/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/google-shopping/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/google-shopping/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/google-shopping/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/google-shopping/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/google-shopping/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/bli-ugc-creator/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/bli-ugc-creator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/bli-ugc-creator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/bli-ugc-creator/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/bli-ugc-creator/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/bli-ugc-creator/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/bli-ugc-creator/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/bli-ugc-creator/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/google-ads-for-tjenestebedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-tjenestebedrifter/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/google-ads-for-tjenestebedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-tjenestebedrifter/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/google-ads-for-renholdsbedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-renholdsbedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-renholdsbedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-renholdsbedrifter/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/google-ads-for-renholdsbedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-renholdsbedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-renholdsbedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-renholdsbedrifter/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/google-ads-for-flyttebyra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-flyttebyra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-flyttebyra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-flyttebyra/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/google-ads-for-flyttebyra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-flyttebyra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-flyttebyra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-flyttebyra/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/annonsering-for-klinikker/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/annonsering-for-klinikker/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/annonsering-for-klinikker/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/annonsering-for-klinikker/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/annonsering-for-klinikker/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/annonsering-for-klinikker/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/annonsering-for-klinikker/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/annonsering-for-klinikker/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/google-ads-for-flere-lokasjoner/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-flere-lokasjoner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-flere-lokasjoner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-flere-lokasjoner/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/google-ads-for-flere-lokasjoner/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-for-flere-lokasjoner/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-for-flere-lokasjoner/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-for-flere-lokasjoner/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/pris/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/pris/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/pris/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/pris/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/pris/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/pris/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/pris/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/pris/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/hva-koster-et-lead-i-norge/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-koster-et-lead-i-norge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-koster-et-lead-i-norge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-koster-et-lead-i-norge/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/hva-koster-et-lead-i-norge/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/hva-koster-et-lead-i-norge/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/hva-koster-et-lead-i-norge/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/hva-koster-et-lead-i-norge/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/resultatbasert-vs-fastpris-byra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/resultatbasert-vs-fastpris-byra/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/resultatbasert-vs-fastpris-byra/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/resultatbasert-vs-fastpris-byra/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/caser/utvendigrenhold/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/caser/utvendigrenhold/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/caser/utvendigrenhold/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/caser/utvendigrenhold/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/caser/utvendigrenhold/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/caser/utvendigrenhold/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/caser/utvendigrenhold/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/caser/utvendigrenhold/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/om-oss/victor-skretteberg/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/om-oss/victor-skretteberg/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/om-oss/victor-skretteberg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/om-oss/victor-skretteberg/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/om-oss/victor-skretteberg/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/om-oss/victor-skretteberg/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/om-oss/victor-skretteberg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/om-oss/victor-skretteberg/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/om-oss/jona-helgen/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/om-oss/jona-helgen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/om-oss/jona-helgen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/om-oss/jona-helgen/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/om-oss/jona-helgen/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/om-oss/jona-helgen/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/om-oss/jona-helgen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/om-oss/jona-helgen/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/markedsforing-for-tjenestebedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-tjenestebedrifter/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/markedsforing-for-tjenestebedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-tjenestebedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-tjenestebedrifter/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/markedsforing-for-handverkere/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-handverkere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-handverkere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-handverkere/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/markedsforing-for-handverkere/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-handverkere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-handverkere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-handverkere/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/markedsforing-for-regnskapsforere/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-regnskapsforere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-regnskapsforere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-regnskapsforere/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/markedsforing-for-regnskapsforere/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-regnskapsforere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-regnskapsforere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-regnskapsforere/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/markedsforing-for-advokater/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-advokater/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-advokater/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-advokater/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/markedsforing-for-advokater/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-advokater/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-advokater/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-advokater/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/markedsforing-for-eiendomsmeglere/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-eiendomsmeglere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-eiendomsmeglere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-eiendomsmeglere/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/markedsforing-for-eiendomsmeglere/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/markedsforing-for-eiendomsmeglere/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/markedsforing-for-eiendomsmeglere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/markedsforing-for-eiendomsmeglere/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/markedsforing-for-sma-bedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/markedsforing-for-sma-bedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/markedsforing-for-sma-bedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/markedsforing-for-sma-bedrifter/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/markedsforing-for-sma-bedrifter/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/markedsforing-for-sma-bedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/markedsforing-for-sma-bedrifter/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/markedsforing-for-sma-bedrifter/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/leadgenerering/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/leadgenerering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/leadgenerering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/leadgenerering/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/leadgenerering/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/leadgenerering/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/leadgenerering/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/leadgenerering/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/artikler/b2b-markedsforing/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/b2b-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/b2b-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/b2b-markedsforing/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/artikler/b2b-markedsforing/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/artikler/b2b-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/artikler/b2b-markedsforing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/artikler/b2b-markedsforing/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
   <url>
     <loc>https://arcads.no/google-ads-byra-oslo/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-byra-oslo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-byra-oslo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-byra-oslo/"/>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://arcads.no/en/google-ads-byra-oslo/</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://arcads.no/google-ads-byra-oslo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://arcads.no/en/google-ads-byra-oslo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://arcads.no/google-ads-byra-oslo/"/>
     <lastmod>2026-09-28</lastmod>
   </url>
 </urlset>
