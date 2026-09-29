@@ -93,10 +93,11 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 @media(max-width:600px){.strip{font-size:0.88rem}}
 /* ---- hero ---- */
 .hero{position:relative;padding:34px 0 56px;background:url('../img/hero.jpg') center 30%/cover no-repeat;background-color:var(--dark)}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,11,13,.95) 0%,rgba(18,11,13,.9) 34%,rgba(18,11,13,.66) 60%,rgba(18,11,13,.42) 82%,rgba(18,11,13,.3) 100%);pointer-events:none}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,11,13,.96) 0%,rgba(18,11,13,.93) 40%,rgba(18,11,13,.8) 62%,rgba(18,11,13,.68) 100%);pointer-events:none}
+@media(max-width:900px){.hero::before{background:linear-gradient(180deg,rgba(18,11,13,.93) 0%,rgba(18,11,13,.88) 100%)}}
 .hero .wrap{position:relative;z-index:1}
-.hero h1{color:#fff;text-shadow:0 2px 16px rgba(18,11,13,.5)}
-.hero h1 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--gold-soft)}
+.hero h1{color:#fff;text-shadow:0 2px 18px rgba(18,11,13,.75)}
+.hero h1 em{font-style:normal;font-weight:800;color:#F4C872}
 /* grid-areas: på mobil skal skjemaet ligge RETT under H1 (above the fold — Victors krav) */
 .hero-grid{display:grid;grid-template-columns:1.04fr 0.96fr;grid-template-areas:"head form" "rest form";gap:0 40px;align-items:start}
 .hero-head{grid-area:head}
@@ -104,7 +105,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .hero-rest{grid-area:rest}
 .hero h1{margin:4px 0 18px}
 .hero .blist{list-style:none;display:grid;gap:11px;margin:0 0 22px}
-.hero .blist li{display:flex;align-items:center;gap:11px;font-size:1.0rem;font-weight:600;color:#fff;text-shadow:0 1px 10px rgba(18,11,13,.6)}
+.hero .blist li{display:flex;align-items:center;gap:11px;font-size:1.05rem;font-weight:600;color:#fff;text-shadow:0 1px 10px rgba(18,11,13,.8)}
 .chk{width:22px;height:22px;border-radius:50%;background:var(--wine);display:inline-flex;align-items:center;justify-content:center;flex:none}
 .chk svg{width:12px;height:12px;stroke:#fff}
 
@@ -117,7 +118,7 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .offer .tile .pr{display:block;font-size:0.8rem;color:var(--muted);margin-top:2px}
 .offer .plus{align-self:center;width:34px;height:34px;border-radius:50%;background:var(--wine);color:#fff;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center;flex:none;box-shadow:var(--sh-sm)}
 .offer .freebadge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--wine);color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:var(--pill);padding:4px 12px;white-space:nowrap}
-.offer-note{font-size:0.86rem;font-weight:600;color:var(--gold-soft);margin-top:12px;text-shadow:0 1px 8px rgba(18,11,13,.5)}
+.offer-note{font-size:0.92rem;font-weight:600;color:#F4C872;margin-top:12px;text-shadow:0 1px 8px rgba(18,11,13,.5)}
 .offer-note span{color:rgba(255,255,255,.85);font-weight:500}
 @media(max-width:480px){.offer{gap:9px}.offer .tile img,.offer .tile .big{height:84px}.offer .tile .big{font-size:1.9rem}.offer .plus{width:28px;height:28px;font-size:1.05rem}}
 
