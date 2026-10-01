@@ -10,6 +10,8 @@
      Bygget på /leads (samme CSS, wizard, Make-webhook 6202084, pixel-logikk,
      SKJEMA-MINNE + POPUP-SPERRE). lead_source = arcads-gratis-annonser.
      ?b=tjeneste|klinikk|handverk|nettbutikk hopper rett til steg 2.
+     Nettbutikk-modus (01.10.2026): ?b=nettbutikk, «Nettbutikk» i skjemaet eller bryteren i «Dette får du»
+     bytter alt med data-shop="…" + .only-shop/.only-lead (setMode i hovedscriptet).
      Kilde-kopi: arcads-claude-brain/clients/arcads/landing/arcads-gratis-annonser-v1.preview.html
      ============================================================ -->
 <meta name="description" content="Vi lager 3 Facebook-annonser og landingssiden de skal sende folk til. Gratis. Du beholder alt, også om du aldri jobber med oss.">
@@ -505,6 +507,16 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .g-cmp td.k{color:var(--muted);font-weight:600;width:30%}
 @media(max-width:860px){.g-steps{grid-template-columns:1fr}.g-people{grid-template-columns:1fr}.g-tiles{grid-template-columns:1fr 1fr}.g-rep-list{grid-template-columns:1fr}}
 @media(max-width:520px){.g-person{flex-direction:column;gap:12px}.g-person img{width:72px;height:72px}.g-cmp th,.g-cmp td{padding:11px 10px;font-size:0.86rem}.g-cmp td.k{width:28%}}
+/* nettbutikk-modus (01.10.2026): [data-shop] bytter innhold, .only-shop/.only-lead vises per modus */
+.only-shop{display:none!important}
+body.shop .only-shop{display:revert!important}
+body.shop .only-lead{display:none!important}
+body.shop .casegrid .c-mokki,body.shop .casegrid .only-shop{order:-1}
+.modesw{display:inline-flex;flex-wrap:wrap;align-items:center;gap:6px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--pill);padding:5px;margin:0 0 22px}
+.modesw span{font-size:0.82rem;color:rgba(255,255,255,.62);padding:0 8px 0 10px}
+.modesw button{border:0;background:transparent;color:rgba(255,255,255,.82);font:600 0.9rem var(--sans);padding:9px 16px;border-radius:var(--pill);cursor:pointer;transition:.15s}
+.modesw button.on{background:var(--accent);color:var(--accent-ink)}
+@media(max-width:520px){.modesw{display:flex}.modesw span{display:none}.modesw button{flex:1;padding:10px 8px}}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -542,12 +554,13 @@ fbq('track','PageView');
     <div class="hero-grid">
       <div class="hero-copy">
         <span class="sticker">100% gratis</span>
-        <h1 class="h-xl" id="heroH1">Vi lager <em>3 Facebook-annonser</em> + landingssiden de skal sende folk til. <em>Gratis.</em></h1>
-        <p class="hsub">Laget for akkurat din bedrift. Kjør dem selv, med oss, eller ikke i det hele tatt. <b>De er dine uansett.</b></p>
-        <div class="chips">
+        <h1 class="h-xl" id="heroH1" data-shop="Vi lager &lt;em&gt;3 Facebook-annonser&lt;/em&gt; til nettbutikken din + siden de skal sende kjøperne til. &lt;em&gt;Gratis.&lt;/em&gt;">Vi lager <em>3 Facebook-annonser</em> + landingssiden de skal sende folk til. <em>Gratis.</em></h1>
+        <p class="hsub">Laget for akkurat din bedrift eller nettbutikk. Kjør dem selv, med oss, eller ikke i det hele tatt. <b>De er dine uansett.</b></p>
+        <div class="chips" data-shop="&lt;span&gt;&lt;b&gt;4,88x&lt;/b&gt; ROAS på Meta &amp;middot; Mokki&lt;/span&gt;&lt;span&gt;&lt;b&gt;+127 %&lt;/b&gt; profitt år over år &amp;middot; Mokki&lt;/span&gt;&lt;span&gt;&lt;b&gt;4,73x&lt;/b&gt; ROAS &amp;middot; Leid.no&lt;/span&gt;">
           <span><b>69 kr</b> per lead på beste annonse &middot; Badstugutta</span>
           <span><b>549</b> leads på 90 dager &middot; Utvendig Renhold</span>
           <span><b>202 kr</b> per lead &middot; Veldigrent</span>
+          <span><b>4,88x</b> ROAS på Meta &middot; Mokki</span>
         </div>
         <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">1 minutt &middot; 0 kr</span></a></div>
         <div class="faces">
@@ -586,9 +599,9 @@ fbq('track','PageView');
               <div class="wstep">
                 <div class="shead">Om bedriften <span>Dette bygger vi annonsene på.</span></div>
                 <div class="field"><label for="h_web">Nettside <span class="req">*</span></label><div class="inp"><input type="text" id="h_web" name="website" placeholder="dinbedrift.no" autocomplete="url" inputmode="url" required></div></div>
-                <div class="field"><label for="h_service">Hva vil du ha flere kunder på? <span class="req">*</span></label><div class="inp"><input type="text" id="h_service" name="service" placeholder="F.eks. takvask og impregnering" required></div></div>
-                <div class="field"><label for="h_area">Hvor er kundene dine? <span class="opt">(valgfritt)</span></label><div class="inp"><input type="text" id="h_area" name="area" placeholder="F.eks. Drammen og omegn"></div></div>
-                <div class="field"><label for="h_usp">Hvorfor velger kundene deg? <span class="opt">(valgfritt)</span></label><div class="inp"><textarea id="h_usp" name="usp" rows="2" placeholder="F.eks. gratis befaring, fast pris, et tilbud du kjører nå"></textarea></div></div>
+                <div class="field"><label for="h_service"><span data-shop="Hvilke produkter vil du selge mer av?">Hva vil du ha flere kunder på?</span> <span class="req">*</span></label><div class="inp"><input type="text" id="h_service" name="service" placeholder="F.eks. takvask og impregnering" required></div></div>
+                <div class="field"><label for="h_area"><span data-shop="Hvem kjøper hos deg?">Hvor er kundene dine?</span> <span class="opt">(valgfritt)</span></label><div class="inp"><input type="text" id="h_area" name="area" placeholder="F.eks. Drammen og omegn"></div></div>
+                <div class="field"><label for="h_usp"><span data-shop="Hvorfor kjøper de hos deg?">Hvorfor velger kundene deg?</span> <span class="opt">(valgfritt)</span></label><div class="inp"><textarea id="h_usp" name="usp" rows="2" placeholder="F.eks. gratis befaring, fast pris, et tilbud du kjører nå"></textarea></div></div>
                 <button type="button" class="cta wnext"><span class="t">Neste <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></button>
               </div>
               <div class="wstep">
@@ -623,7 +636,7 @@ fbq('track','PageView');
             <div class="fine"><span>Ingen stress: Victor tar kontakt uansett.</span></div>
           </div>
         </div>
-        <p class="fquote">&laquo;Vi får flere leads enn noensinne&raquo; &mdash; <b>Elliot, Badstugutta</b></p>
+        <p class="fquote" data-shop="&amp;laquo;Selv statics som fungerer så bra!&amp;raquo; &amp;mdash; &lt;b&gt;Mattis, CMO i Mokki&lt;/b&gt;">&laquo;Vi får flere leads enn noensinne&raquo; &mdash; <b>Elliot, Badstugutta</b></p>
       </div>
     </div>
   </div>
@@ -665,12 +678,13 @@ fbq('track','PageView');
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="stack reveal">
-      <div class="stack-h"><span class="eyebrow" style="color:var(--accent)">Dette får du</span><h2 class="h-lg">Alt du trenger for å starte på Meta i morgen.</h2></div>
+      <div class="stack-h"><span class="eyebrow" style="color:var(--accent)">Dette får du</span><h2 class="h-lg">Alt du trenger for å starte på Meta i morgen.</h2>
+        <div class="modesw" role="group" aria-label="Hva selger du?"><span>Jeg selger:</span><button type="button" data-mode="">Tjenester</button><button type="button" data-mode="shop">Nettbutikk</button></div></div>
       <ul class="sl">
-        <li><span class="si">1</span><div><b>Nabolag-annonsen</b><p>Ser ut som et innlegg i en Facebook-gruppe: noen spør etter anbefaling, og kundene dine svarer. Formatet som har vunnet for Utvendig Renhold og Badstugutta.</p></div></li>
-        <li><span class="si">2</span><div><b>Bildeannonsen</b><p>Ett ekte bilde fra deg. Teksten svarer på det første kundene lurer på. Samme oppskrift som gir Badstugutta leads til 69 kr.</p></div></li>
-        <li><span class="si">3</span><div><b>Tilbudsannonsen</b><p>Ditt beste tilbud, laget for story og reels. Rett på sak, én knapp.</p></div></li>
-        <li class="bonus"><span class="si">+</span><div><b>Landingssiden vi ville sendt folk til</b><p>Ikke forsiden din. Én side, ett tilbud, ett skjema. Med spørsmål som sorterer bort dem som bare kikker, så du får leads som faktisk vil kjøpe, og ikke 40 tullete henvendelser.</p></div></li>
+        <li><span class="si">1</span><div data-shop="&lt;b&gt;Anbefalings-annonsen&lt;/b&gt;&lt;p&gt;Ser ut som et innlegg i en Facebook-gruppe: noen spør om tips, og kundene svarer med produktet ditt. Folk stoler mer på andre kunder enn på reklame.&lt;/p&gt;"><b>Nabolag-annonsen</b><p>Ser ut som et innlegg i en Facebook-gruppe: noen spør etter anbefaling, og kundene dine svarer. Formatet som har vunnet for Utvendig Renhold og Badstugutta.</p></div></li>
+        <li><span class="si">2</span><div data-shop="&lt;b&gt;Produktannonsen&lt;/b&gt;&lt;p&gt;Produktet som allerede selger best, med ekte bilder fra deg. Teksten svarer på det kjøperen lurer på før de legger i handlekurven.&lt;/p&gt;"><b>Bildeannonsen</b><p>Ett ekte bilde fra deg. Teksten svarer på det første kundene lurer på. Samme oppskrift som gir Badstugutta leads til 69 kr.</p></div></li>
+        <li><span class="si">3</span><div data-shop="&lt;b&gt;Tilbudsannonsen&lt;/b&gt;&lt;p&gt;Kampanjen, pakketilbudet eller fri frakt-grensen din, laget for story og reels. Rett på sak, én knapp.&lt;/p&gt;"><b>Tilbudsannonsen</b><p>Ditt beste tilbud, laget for story og reels. Rett på sak, én knapp.</p></div></li>
+        <li class="bonus"><span class="si">+</span><div data-shop="&lt;b&gt;Produktsiden vi ville sendt folk til&lt;/b&gt;&lt;p&gt;Ikke forsiden, og ikke en kategori med 200 produkter. Én side for produktet eller pakken som selger best, med det kjøperen trenger å vite og én knapp rett til handlekurven i nettbutikken din.&lt;/p&gt;"><b>Landingssiden vi ville sendt folk til</b><p>Ikke forsiden din. Én side, ett tilbud, ett skjema. Med spørsmål som sorterer bort dem som bare kikker, så du får leads som faktisk vil kjøpe, og ikke 40 tullete henvendelser.</p></div></li>
         <li class="bonus"><span class="si">+</span><div><b>All tekst ferdig skrevet</b><p>Primærtekst, overskrift og knapp. Lim rett inn i Ads Manager.</p></div></li>
         <li class="bonus"><span class="si">+</span><div><b>20 min med Victor</b><p>Hvilke målgrupper og hvilket budsjett vi ville startet med. Ditt å bruke, uansett.</p></div></li>
       </ul>
@@ -692,9 +706,9 @@ fbq('track','PageView');
       <p class="lede" style="margin:12px auto 0">Vi kjenner ikke bedriften din ennå. Det gjør kundene dine. Så det er der vi begynner.</p>
     </div>
     <div class="g-steps">
-      <div class="g-step reveal"><span class="when">Steg 1</span><h3>Vi graver i det kundene dine allerede sier</h3><p>Nettsiden din, anmeldelsene dine og konkurrentenes annonser. Der ligger spørsmålene og innvendingene folk har før de tar kontakt.</p></div>
-      <div class="g-step reveal"><span class="when">Steg 2</span><h3>Hver vinkel blir en egen annonse</h3><p>Vi lager ikke tre varianter av det samme. Hver annonse svarer på sin egen grunn til å nøle.</p><div class="g-tags"><span>Tvil</span><span>Tid</span><span>Pris</span><span>Anbefaling</span></div></div>
-      <div class="g-step reveal"><span class="when">Innen en uke</span><h3>Du får alt, klart til bruk</h3><p>Tre annonser, landingssiden og all tekst. Så tar vi 20 minutter der Victor viser hvordan han ville startet.</p></div>
+      <div class="g-step reveal"><span class="when">Steg 1</span><h3>Vi graver i det kundene dine allerede sier</h3><p data-shop="Nettbutikken din, produktanmeldelsene og konkurrentenes annonser. Der ligger spørsmålene og innvendingene folk har før de kjøper.">Nettsiden din, anmeldelsene dine og konkurrentenes annonser. Der ligger spørsmålene og innvendingene folk har før de tar kontakt.</p></div>
+      <div class="g-step reveal"><span class="when">Steg 2</span><h3>Hver vinkel blir en egen annonse</h3><p>Vi lager ikke tre varianter av det samme. Hver annonse svarer på sin egen grunn til å nøle.</p><div class="g-tags" data-shop="&lt;span&gt;Tvil&lt;/span&gt;&lt;span&gt;Pris&lt;/span&gt;&lt;span&gt;Frakt&lt;/span&gt;&lt;span&gt;Anbefaling&lt;/span&gt;"><span>Tvil</span><span>Tid</span><span>Pris</span><span>Anbefaling</span></div></div>
+      <div class="g-step reveal"><span class="when">Innen en uke</span><h3>Du får alt, klart til bruk</h3><p><span data-shop="Tre annonser, produktsiden">Tre annonser, landingssiden</span> og all tekst. Så tar vi 20 minutter der Victor viser hvordan han ville startet.</p></div>
     </div>
   </div>
 </section>
@@ -753,14 +767,21 @@ fbq('track','PageView');
         <div class="ch">Ny landingsside ble lead-motoren</div>
         <div class="tag">Badstugutta &middot; H&aring;ndverk</div>
       </div>
-      <div class="casecard reveal">
+      <div class="casecard reveal only-shop">
+        <img class="clogo" src="/logos/leid.svg" alt="Leid.no">
+        <div class="metric">4,73<span class="u">x</span></div>
+        <div class="ms">ROAS &middot; 100&nbsp;000+ kr i måneden</div>
+        <div class="ch">Fra ødelagt sporing til lønnsom skalering</div>
+        <div class="tag">Leid.no &middot; Nettbutikk</div>
+      </div>
+      <div class="casecard reveal only-lead">
         <img class="clogo" src="/logos/veldigrent.png" alt="Veldigrent">
         <div class="metric">202 <span class="u">kr</span></div>
         <div class="ms">per lead, 90 dager &middot; m&aring;l var 300</div>
         <div class="ch">Flyttevask i Oslo</div>
         <div class="tag">Veldigrent &middot; Renhold</div>
       </div>
-      <div class="casecard reveal">
+      <div class="casecard reveal c-mokki">
         <img class="clogo" src="/logos/mokki.png" alt="Mokki">
         <div class="metric"><span class="u">+</span>127<span class="u">%</span></div>
         <div class="ms">profitt &aring;r-over-&aring;r</div>
@@ -833,13 +854,13 @@ fbq('track','PageView');
   <div class="wrap">
     <div class="split">
       <div class="reveal">
-        <span class="eyebrow">Hvorfor landingssiden er med</span>
-        <h2 class="h-lg" style="margin:12px 0 14px">En god annonse som sender folk til forsiden din er bortkastede penger.</h2>
-        <p class="lede" style="margin-bottom:22px">Forsiden har meny, ti tjenester og &laquo;om oss&raquo;. Folk går seg bort. Landingssiden har én jobb: gjøre klikket om til en henvendelse.</p>
+        <span class="eyebrow" data-shop="Hvorfor produktsiden er med">Hvorfor landingssiden er med</span>
+        <h2 class="h-lg" style="margin:12px 0 14px" data-shop="En god annonse som sender folk til forsiden av nettbutikken er bortkastede penger.">En god annonse som sender folk til forsiden din er bortkastede penger.</h2>
+        <p class="lede" style="margin-bottom:22px" data-shop="Forsiden har meny, kategorier og hundrevis av produkter. Folk går seg bort. Produktsiden har én jobb: få klikket helt til handlekurven.">Forsiden har meny, ti tjenester og &laquo;om oss&raquo;. Folk går seg bort. Landingssiden har én jobb: gjøre klikket om til en henvendelse.</p>
         <ul class="feat">
           <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Samme budskap som annonsen</h4><p>Den som klikker, lander på akkurat det de klikket på.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Spørsmål som sorterer</h4><p>Du får færre &laquo;bare lurte&raquo;, og flere som faktisk vil kjøpe.</p></div></li>
-          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><h4>Badstugutta: 165 kr per lead</h4><p>Egen side for Meta-trafikken ble lead-motoren deres.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div data-shop="&lt;h4&gt;Svar før de spør&lt;/h4&gt;&lt;p&gt;Det folk lurer på før de kjøper står på siden, så færre forlater handlekurven.&lt;/p&gt;"><h4>Spørsmål som sorterer</h4><p>Du får færre &laquo;bare lurte&raquo;, og flere som faktisk vil kjøpe.</p></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div data-shop="&lt;h4&gt;QualiPet: egen side per pakke&lt;/h4&gt;&lt;p&gt;Godbitpakka og Tyggepakka fikk hver sin side, med ekte omtaler og én vei til kassen.&lt;/p&gt;"><h4>Badstugutta: 165 kr per lead</h4><p>Egen side for Meta-trafikken ble lead-motoren deres.</p></div></li>
         </ul>
       </div>
       <div class="lpshots reveal">
@@ -859,14 +880,14 @@ fbq('track','PageView');
     </div>
     <div class="fornot">
       <div class="fn yes reveal"><h3>Dette er for deg hvis&hellip;</h3><ul>
-        <li>Du lever av henvendelser, bookinger eller salg på nett</li>
-        <li>Du har kapasitet til flere kunder nå</li>
+        <li data-shop="Du driver nettbutikk med produkter som allerede selger">Du lever av henvendelser, bookinger eller salg på nett</li>
+        <li data-shop="Du har varer nok til å sende flere ordre nå">Du har kapasitet til flere kunder nå</li>
         <li>Du kan bruke minst 10&nbsp;000 kr i måneden på annonser</li>
         <li>Du vil se noe konkret, ikke høre en pitch</li>
       </ul></div>
       <div class="fn no reveal"><h3>Ikke for deg hvis&hellip;</h3><ul>
-        <li>Du vil ha likes, ikke kunder</li>
-        <li>Du ikke har tid til å svare på henvendelsene som kommer</li>
+        <li data-shop="Du vil ha likes, ikke salg">Du vil ha likes, ikke kunder</li>
+        <li data-shop="Du ikke klarer å sende flere ordre enn i dag">Du ikke har tid til å svare på henvendelsene som kommer</li>
         <li>Du bare vil ha gratis design uten å kjøre noe</li>
         <li>Du har under 10&nbsp;000 kr i måneden til annonser</li>
       </ul></div>
@@ -896,9 +917,10 @@ fbq('track','PageView');
     </div>
     <div class="faq reveal">
       <details open><summary>Er det virkelig gratis? Hva er haken?<span class="pm">+</span></summary><div class="ans">Ingen hake. Ingen kortinfo, ingen binding. Vi håper selvsagt at du vil at vi kjører dem for deg. Men det er annonsene som skal overbevise deg, ikke oss.</div></details>
+      <details><summary>Funker dette for nettbutikker?<span class="pm">+</span></summary><div class="ans">Ja. Da bygger vi annonsene rundt produktene som allerede selger, og i stedet for en side med skjema får du en produktside med knapp rett til handlekurven i nettbutikken din. Mokki og Leid.no er nettbutikker vi kjører for: 4,88x og 4,73x ROAS.</div></details>
       <details><summary>Kan jeg kjøre annonsene selv?<span class="pm">+</span></summary><div class="ans">Ja. De er dine. Kjør dem selv, gi dem til et annet byrå, eller la dem ligge. Vil du at vi kjører dem, er vi 100% resultatbasert: du betaler først når resultatene kommer.</div></details>
       <details><summary>Hvor lang tid tar det?<span class="pm">+</span></summary><div class="ans">Vi sier fra innen 24 timer om vi kan lage pakken til deg. Annonsene og siden er klare innen en uke.</div></details>
-      <details><summary>Hvorfor bare Facebook og Instagram?<span class="pm">+</span></summary><div class="ans">Fordi det er der flere av kundene våre får de billigste leadsene akkurat nå. Hos Badstugutta koster et lead fra Meta en brøkdel av Google. Google tar vi gjerne i praten.</div></details>
+      <details><summary>Hvorfor bare Facebook og Instagram?<span class="pm">+</span></summary><div class="ans" data-shop="Fordi det er der folk oppdager produkter de ikke visste de ville ha. Hos Mokki gir Meta 4,88x ROAS. Google Shopping tar vi gjerne i praten.">Fordi det er der flere av kundene våre får de billigste leadsene akkurat nå. Hos Badstugutta koster et lead fra Meta en brøkdel av Google. Google tar vi gjerne i praten.</div></details>
       <details><summary>Hva om jeg ikke har gode bilder?<span class="pm">+</span></summary><div class="ans">Vi bruker bildene fra nettsiden din. Mangler de, sier vi fra, og du kan sende noen fra mobilen. Mobilbilder slår ofte proffe bilder på Facebook.</div></details>
       <details><summary>Hvorfor spør dere om budsjett?<span class="pm">+</span></summary><div class="ans">Fordi annonser trenger penger bak seg for å virke. Under 10&nbsp;000 kr i måneden får Meta for lite data, og da får ikke annonsene en ærlig sjanse. Vi lager et begrenset antall hver uke, og bruker tiden der de faktisk blir kjørt.</div></details>
     </div>
@@ -1014,10 +1036,25 @@ if(overlay){
   document.getElementById('popupGo').addEventListener('click',function(e){e.preventDefault();closePopup();var b=document.getElementById('book');if(b)scrollToY(Math.max(0,b.getBoundingClientRect().top+window.pageYOffset-10),500);try{if(window.gtag)gtag('event','popup_cta_click');}catch(x){}});
 }
 
+/* ---- nettbutikk-modus (Victor 01.10.2026: «litt lite fokus på nettbutikker»): bytter [data-shop]-innhold. Settes av bransjevalget, ?b=nettbutikk eller bryteren i «Dette får du». ---- */
+var MODE='';
+function setMode(m){
+  m=m==='shop'?'shop':'';if(m===MODE)return;MODE=m;
+  document.body.classList.toggle('shop',m==='shop');
+  document.querySelectorAll('[data-shop]').forEach(function(el){
+    if(el._lead===undefined)el._lead=el.innerHTML;
+    el.innerHTML=m==='shop'?el.getAttribute('data-shop'):el._lead;
+  });
+  document.querySelectorAll('.modesw button').forEach(function(b){b.classList.toggle('on',(b.getAttribute('data-mode')||'')===m);});
+  try{if(window.gtag)gtag('event','mode_'+(m||'lead'));}catch(e){}
+}
+document.querySelectorAll('.modesw button').forEach(function(b){b.addEventListener('click',function(){setMode(b.getAttribute('data-mode')||'');});});
+document.querySelectorAll('.modesw button[data-mode=""]').forEach(function(b){b.classList.add('on');});
+
 /* ---- wizard: 4 steg. Pill-steg går videre av seg selv, tekst-steg har «Neste». «Ingen budsjett» og 5–10k = avvist (ingenting sendes). Victor 30.09.2026. ---- */
 var INDUSTRY_ALIAS={'finans':'tjeneste','renhold':'tjeneste','flytting':'tjeneste','bygg':'handverk','helse':'klinikk','ecom':'nettbutikk'};
 var PRESET_INDUSTRY=(function(){try{var b=new URLSearchParams(location.search).get('b')||'';return INDUSTRY_ALIAS[b]||b;}catch(e){return '';}})();
-var PH={nettbutikk:['F.eks. barnesolbriller','Hele Norge'],tjeneste:['F.eks. flyttevask','F.eks. Oslo og omegn'],klinikk:['F.eks. skinbooster-behandling','F.eks. Lillestrøm og omegn'],handverk:['F.eks. takvask og impregnering','F.eks. Drammen og omegn'],annet:['Det du selger mest av','F.eks. Bergen, eller hele Norge']};
+var PH={nettbutikk:['F.eks. godbiter til hund','F.eks. hundeeiere i hele Norge','F.eks. fri frakt over 500 kr, norskprodusert, rask levering'],tjeneste:['F.eks. flyttevask','F.eks. Oslo og omegn'],klinikk:['F.eks. skinbooster-behandling','F.eks. Lillestrøm og omegn'],handverk:['F.eks. takvask og impregnering','F.eks. Drammen og omegn'],annet:['Det du selger mest av','F.eks. Bergen, eller hele Norge']};
 
 (function(){
   var form=document.getElementById('leadForm');if(!form)return;
@@ -1027,6 +1064,8 @@ var PH={nettbutikk:['F.eks. barnesolbriller','Hele Norge'],tjeneste:['F.eks. fly
   function setIndustry(ind){
     var ph=PH[ind]||PH.annet,sv=document.getElementById('h_service'),ar=document.getElementById('h_area');
     if(sv)sv.placeholder=ph[0];if(ar)ar.placeholder=ph[1];
+    var us=document.getElementById('h_usp');if(us)us.placeholder=ph[2]||'F.eks. gratis befaring, fast pris, et tilbud du kjører nå';
+    if(ind)setMode(ind==='nettbutikk'?'shop':'');
   }
   setIndustry('');
   function show(i){
