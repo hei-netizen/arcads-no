@@ -468,6 +468,43 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:800;line-height:1.08;letter-spac
 .finale{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--sh)}
 .finale img{width:100%;border-radius:18px;object-fit:cover;aspect-ratio:4/3}
 @media(max-width:820px){.finale{grid-template-columns:1fr;gap:22px;padding:18px}}
+
+/* ---- tillegg 01.10.2026: prosess, mandagsrapport, folk, sammenligning (hentet fra forsiden) ---- */
+.g-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.g-step{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px;box-shadow:var(--sh-sm)}
+.g-step .when{font-size:0.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-deep)}
+.g-step h3{font-size:1.12rem;margin:8px 0 8px}
+.g-step p{font-size:0.94rem;color:var(--muted);line-height:1.55}
+.g-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.g-tags span{font-size:0.74rem;font-weight:700;padding:4px 10px;border-radius:var(--pill);background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent-ink)}
+.g-rep{max-width:760px;margin:34px auto 0;background:var(--dark);color:#fff;border-radius:var(--r);padding:22px;box-shadow:var(--sh)}
+.g-rep-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}
+.g-rep-top b{font-size:1rem}
+.g-rep-top span{font-size:0.74rem;font-weight:600;padding:4px 10px;border-radius:var(--pill);background:rgba(255,255,255,.08);color:var(--on-dark-dim)}
+.g-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.g-tile{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--rs);padding:14px}
+.g-tile small{display:block;font-size:0.74rem;color:var(--on-dark-dim);line-height:1.3;min-height:2.6em}
+.g-tile .v{font-size:1.45rem;font-weight:800;letter-spacing:-0.02em;color:var(--accent);margin-top:4px}
+.g-rep-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;font-size:0.86rem;color:var(--on-dark-dim)}
+.g-rep-list b{display:block;color:#fff;font-size:0.9rem}
+.g-people{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:900px;margin:34px auto 0}
+.g-person{display:flex;gap:18px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;box-shadow:var(--sh-sm)}
+.g-person img{width:92px;height:92px;border-radius:50%;object-fit:cover;object-position:50% 28%;flex:none}
+.g-person h3{font-size:1.1rem}
+.g-person .role{font-size:0.8rem;font-weight:600;color:var(--accent-deep);margin:3px 0 8px}
+.g-person p{font-size:0.93rem;color:var(--muted);line-height:1.55}
+.g-person .li{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:0.84rem;font-weight:600;color:var(--ink2)}
+.g-person .li svg{width:15px;height:15px}
+.g-cmp{max-width:760px;margin:30px auto 0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--paper);box-shadow:var(--sh-sm)}
+.g-cmp table{width:100%;border-collapse:collapse;font-size:0.94rem}
+.g-cmp th,.g-cmp td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.g-cmp tr:last-child td{border-bottom:0}
+.g-cmp thead th{font-size:0.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--surface)}
+.g-cmp thead th.us{color:var(--accent-ink);background:var(--accent-soft)}
+.g-cmp td.us{font-weight:700;color:var(--ink);background:rgba(0,201,111,.05)}
+.g-cmp td.k{color:var(--muted);font-weight:600;width:30%}
+@media(max-width:860px){.g-steps{grid-template-columns:1fr}.g-people{grid-template-columns:1fr}.g-tiles{grid-template-columns:1fr 1fr}.g-rep-list{grid-template-columns:1fr}}
+@media(max-width:520px){.g-person{flex-direction:column;gap:12px}.g-person img{width:72px;height:72px}.g-cmp th,.g-cmp td{padding:11px 10px;font-size:0.86rem}.g-cmp td.k{width:28%}}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -508,9 +545,9 @@ fbq('track','PageView');
         <h1 class="h-xl" id="heroH1">Vi lager <em>3 Facebook-annonser</em> + landingssiden de skal sende folk til. <em>Gratis.</em></h1>
         <p class="hsub">Laget for akkurat din bedrift. Kjør dem selv, med oss, eller ikke i det hele tatt. <b>De er dine uansett.</b></p>
         <div class="chips">
-          <span><b>69 kr</b> per lead &middot; Badstugutta</span>
+          <span><b>69 kr</b> per lead på beste annonse &middot; Badstugutta</span>
           <span><b>549</b> leads på 90 dager &middot; Utvendig Renhold</span>
-          <span><b>4,73x</b> ROAS &middot; Leid.no</span>
+          <span><b>202 kr</b> per lead &middot; Veldigrent</span>
         </div>
         <div class="hero-mcta"><a href="#book" class="cta jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">1 minutt &middot; 0 kr</span></a></div>
         <div class="faces">
@@ -604,7 +641,7 @@ fbq('track','PageView');
     <img src="/img/wall/bg-4.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/ur-4.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/mokki-4.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/leid-3.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/bg-5.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/ur-5.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/mokki-5.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/leid-4.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/bg-6.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/ur-6.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/mokki-6.webp" alt="" loading="lazy" aria-hidden="true"><img src="/img/wall/mokki-7.webp" alt="" loading="lazy" aria-hidden="true">
   </div></div>
   <div class="logorow">
-    <img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold" loading="lazy"><img src="/logos/mokki.png" alt="Mokki" loading="lazy"><img src="/logos/veldigrent.png" alt="Veldigrent.no" loading="lazy"><img src="/logos/leid.svg" alt="Leid.no" loading="lazy"><img src="/logos/raskflytting.png" alt="Rask Flytting" loading="lazy"><img src="/logos/badstugutta.png" alt="Badstugutta" loading="lazy"><img src="/logos/frifor.png" alt="Frifor.app" loading="lazy">
+    <img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold" loading="lazy"><img src="/logos/mokki.png" alt="Mokki" loading="lazy"><img src="/logos/qualipet.svg" alt="QualiPet" loading="lazy"><img src="/logos/veldigrent.png" alt="Veldigrent.no" loading="lazy"><img src="/logos/leid.svg" alt="Leid.no" loading="lazy"><img src="/logos/raskflytting.png" alt="Rask Flytting" loading="lazy"><img src="/logos/badstugutta.png" alt="Badstugutta" loading="lazy"><img src="/logos/frifor.png" alt="Frifor.app" loading="lazy">
   </div>
 </div>
 
@@ -642,6 +679,22 @@ fbq('track','PageView');
         <div class="pn2">Din pris: <b>0 kr</b></div>
         <a href="#book" class="cta lg jump"><span class="t"><span class="ctxt">Ja, lag annonsene mine</span><span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">1 minutt &middot; du beholder alt</span></a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLIK LAGER VI DINE TRE (fra forsidens «Sånn ser en uke ut») ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" style="max-width:680px;margin:0 auto">
+      <span class="eyebrow">Ingen mal</span>
+      <h2 class="h-lg" style="margin-top:12px">Sånn lager vi de tre annonsene dine.</h2>
+      <p class="lede" style="margin:12px auto 0">Vi kjenner ikke bedriften din ennå. Det gjør kundene dine. Så det er der vi begynner.</p>
+    </div>
+    <div class="g-steps">
+      <div class="g-step reveal"><span class="when">Steg 1</span><h3>Vi graver i det kundene dine allerede sier</h3><p>Nettsiden din, anmeldelsene dine og konkurrentenes annonser. Der ligger spørsmålene og innvendingene folk har før de tar kontakt.</p></div>
+      <div class="g-step reveal"><span class="when">Steg 2</span><h3>Hver vinkel blir en egen annonse</h3><p>Vi lager ikke tre varianter av det samme. Hver annonse svarer på sin egen grunn til å nøle.</p><div class="g-tags"><span>Tvil</span><span>Tid</span><span>Pris</span><span>Anbefaling</span></div></div>
+      <div class="g-step reveal"><span class="when">Innen en uke</span><h3>Du får alt, klart til bruk</h3><p>Tre annonser, landingssiden og all tekst. Så tar vi 20 minutter der Victor viser hvordan han ville startet.</p></div>
     </div>
   </div>
 </section>
@@ -702,8 +755,8 @@ fbq('track','PageView');
       </div>
       <div class="casecard reveal">
         <img class="clogo" src="/logos/veldigrent.png" alt="Veldigrent">
-        <div class="metric">181 <span class="u">kr</span></div>
-        <div class="ms">per lead &middot; m&aring;l var 300</div>
+        <div class="metric">202 <span class="u">kr</span></div>
+        <div class="ms">per lead, 90 dager &middot; m&aring;l var 300</div>
         <div class="ch">Flyttevask i Oslo</div>
         <div class="tag">Veldigrent &middot; Renhold</div>
       </div>
@@ -715,6 +768,18 @@ fbq('track','PageView');
         <div class="tag">Mokki &middot; Nettbutikk</div>
       </div>
     </div>
+
+    <div class="g-rep reveal">
+      <div class="g-rep-top"><b>Mandagsrapporten</b><span>Mokki, mars 2026</span></div>
+      <div class="g-tiles">
+        <div class="g-tile"><small>Profitt år over år</small><div class="v">+127 %</div></div>
+        <div class="g-tile"><small>Meta POAS (etter varekost)</small><div class="v">2,55x</div></div>
+        <div class="g-tile"><small>Meta ROAS</small><div class="v">4,88x</div></div>
+        <div class="g-tile"><small>Meta CPA</small><div class="v">214 kr</div></div>
+      </div>
+      <ul class="g-rep-list"><li><b>Hva vi gjorde</b>Nye annonser, nye tester, hva som ble skrudd av</li><li><b>Hva det ga</b>Leads, salg og pris per kunde</li><li><b>Hva vi gjør neste uke</b>Ingen overraskelser</li></ul>
+    </div>
+    <p class="note center">Blir du kunde, får du en sånn rapport hver mandag. Ekte tall fra Mokki-kontoen.</p>
   </div>
 </section>
 
@@ -734,6 +799,31 @@ fbq('track','PageView');
       <div class="rv2 reveal"><i>CC</i><div><div class="bub">Very nice people to work with! They really help you grow. Super comfortable to work together as a team.</div><div class="who"><b>Catherina Castro</b><span>Oslotattoo</span></div></div></div>
       <div class="rv2 reveal"><i>JR</i><div><div class="bub">Bra jobba boys! Very good.</div><div class="who"><b>Jonathan Rothe</b><span>Daglig leder, Utvendigrenhold</span></div></div></div>
       <div class="rv2 reveal"><i>EF</i><div><div class="bub">Supert, dere er flinke &#128522; Nå synes jeg det ser veldig bra ut &#128522;</div><div class="who"><b>Erle Fjeldsaa</b><span>Daglig leder, Frøyd</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HVEM LAGER ANNONSENE (fra forsidens «Bak Arcads») ===== -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="center" style="max-width:640px;margin:0 auto">
+      <span class="eyebrow">Hvem du får</span>
+      <h2 class="h-lg" style="margin-top:12px">Ingen selgere. Ingen juniorer. Bare oss to.</h2>
+    </div>
+    <div class="g-people">
+      <div class="g-person reveal"><img src="/img/victor-hero.webp" alt="Victor Skretteberg, daglig leder i Arcads" width="240" height="240" loading="lazy"><div><h3>Victor Skretteberg</h3><div class="role">Daglig leder og Google Performance</div><p>Det er Victor som ser på bedriften din og tar de 20 minuttene med deg. Han graver i tallene.</p><a class="li" href="https://www.linkedin.com/in/victor-skretteberg-b7a562299/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Victor på LinkedIn</a></div></div>
+      <div class="g-person reveal"><img src="/img/jona-hero.webp" alt="Jona Helgen, kreativ ansvarlig i Arcads" width="240" height="240" loading="lazy"><div><h3>Jona Helgen</h3><div class="role">Creative og Sosiale Medier Performance</div><p>Jona lager annonsene du ser på denne siden. Det er også Jona som lager dine tre.</p><a class="li" href="https://www.linkedin.com/in/jona-helgen-9a1a37244/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Jona på LinkedIn</a></div></div>
+    </div>
+    <div class="g-cmp reveal">
+      <table>
+        <thead><tr><th></th><th class="us">Arcads</th><th>Vanlig byrå</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Betaling</td><td class="us">100 % resultatbasert</td><td>Fast honorar</td></tr>
+          <tr><td class="k">Nye annonser</td><td class="us">10+ i uka</td><td>Noen i måneden</td></tr>
+          <tr><td class="k">Hvem du snakker med</td><td class="us">Victor og Jona</td><td>Account manager</td></tr>
+          <tr><td class="k">Binding</td><td class="us">Ingen</td><td>Ofte 6–12 måneder</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
