@@ -309,8 +309,12 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .field select{width:100%;border:0;background:transparent;font:inherit;font-weight:600;color:var(--ink);padding:14px 2px;outline:none}
 /* Mobil-vakt (01.10.2026): lange norske ord skal aldri presse siden bredere enn skjermen */
 .hero-grid>*,.split>*,.inc-card>*,.rev-grid>*,.folk>*{min-width:0}
-h1,h2,h3,.big,.pr{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{overflow-wrap:break-word}
 @media(max-width:880px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+/* Hero-vakt (01.10.2026): ekstra høyde fra skjemaet går til nedre rad, ikke luke under H1. Store tall-felt skal være korte (0 kr, 4 uker). */
+.hero-grid{grid-template-rows:auto 1fr}
+.offer .tile .big{height:auto;min-height:104px;line-height:1.05;hyphens:manual;overflow-wrap:normal;word-break:keep-all}
+@media(max-width:480px){.offer .tile .big{min-height:84px}}
 </style>
 <!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
 <script type="text/javascript">
@@ -350,14 +354,14 @@ h1,h2,h3,.big,.pr{overflow-wrap:break-word;hyphens:auto}
         <div class="offer">
           <div class="tile">
             <span class="freebadge">Steg 1</span>
-            <span class="big">Gratis konsultasjon</span>
-            <span class="pr">vi finner riktig modell sammen</span>
+            <span class="big">0&nbsp;kr</span>
+            <b>Badstukonsultasjon</b><span class="pr">vi finner riktig modell sammen</span>
           </div>
           <div class="plus">+</div>
           <div class="tile">
             <span class="freebadge">Steg 2</span>
-            <span class="big">Ferdig montert</span>
-            <span class="pr">frakt og kraning er med</span>
+            <span class="big">4&nbsp;uker</span>
+            <b>Ferdig montert</b><span class="pr">ca. 4 uker, frakt og kraning er med</span>
           </div>
         </div>
         <p class="offer-note">&laquo;Vi tar h&aring;nd om hele prosessen, <span>bortsett fra svettingen.</span>&raquo;</p>
