@@ -307,6 +307,10 @@ h1,h2,h3,h4{font-family:var(--mont);font-weight:800;line-height:1.08;letter-spac
 .gal figcaption{margin-top:10px;font-size:0.9rem;color:var(--muted);font-weight:600}
 @media(max-width:820px){.gal{grid-template-columns:1fr}}
 .field select{width:100%;border:0;background:transparent;font:inherit;font-weight:600;color:var(--ink);padding:14px 2px;outline:none}
+/* Mobil-vakt (01.10.2026): lange norske ord skal aldri presse siden bredere enn skjermen */
+.hero-grid>*,.split>*,.inc-card>*,.rev-grid>*,.folk>*{min-width:0}
+h1,h2,h3,.big,.pr{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:880px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
 </style>
 <!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
 <script type="text/javascript">
