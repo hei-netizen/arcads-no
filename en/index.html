@@ -262,7 +262,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(252,251,249,.85);backdro
 .wk-row.off .wk-bar i{background:rgba(255,255,255,.35)}.wk-row.off em{color:rgba(255,255,255,.6)}
 .wk-row:not(.win):not(.off) em{color:rgba(255,255,255,.75)}
 .wk-note{margin-top:auto;font-size:12px;color:var(--on-dark-dim,rgba(255,255,255,.6))}
-@media (max-width:900px){.wk-stage{min-height:430px;order:-1}.wk-fan figure{width:48%}.wk-p{padding:22px 18px}.wk-chips{gap:8px;margin-top:18px}.wk-chips span{font-size:13px;padding:8px 11px}.wk-chips span:nth-child(n+5){display:none}.wk-ang span{font-size:13px;padding:6px 12px}.wk-race{gap:8px;margin-top:16px}.wk-row{grid-template-columns:40px 1fr auto;padding:8px 10px 8px 8px}.wk-row img{width:40px;height:50px}.wk-row b{margin-bottom:6px;font-size:13px}.wk-row em{font-size:11px}.wk-note{font-size:11px}.step{padding:16px 18px}.step .sbar{left:18px;right:18px}}
+@media (max-width:900px){.wk-stage{min-height:430px}.wk-fan figure{width:48%}.wk-p{padding:22px 18px}.wk-chips{gap:8px;margin-top:18px}.wk-chips span{font-size:13px;padding:8px 11px}.wk-chips span:nth-child(n+5){display:none}.wk-ang span{font-size:13px;padding:6px 12px}.wk-race{gap:8px;margin-top:16px}.wk-row{grid-template-columns:40px 1fr auto;padding:8px 10px 8px 8px}.wk-row img{width:40px;height:50px}.wk-row b{margin-bottom:6px;font-size:13px}.wk-row em{font-size:11px}.wk-note{font-size:11px}.step{padding:16px 18px}.step .sbar{left:18px;right:18px}}
 @media (prefers-reduced-motion:reduce){.wk-p *{transition:none!important;animation:none!important}.wk-p.on .wk-fan figure{transition:none}.step.on .sbar i{transition:none}}
 .how-visual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .how-visual img{border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%}
@@ -595,6 +595,24 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .people .person img{width:64px!important;height:64px!important;margin:0!important}
   .people .person h3{font-size:18px}
 }
+
+/* Uke-seksjon mobil v2 (30.09.2026): faner øverst, panel, tekst under */
+.wk-cap{display:none}
+@media (max-width:900px){
+  .how-grid{gap:14px!important}
+  .how-grid .steps{order:0;display:grid!important;grid-template-columns:repeat(3,1fr);gap:6px}
+  .how-grid .wk-stage{order:1}
+  .how-grid .wk-cap{order:2;display:block;min-height:118px;padding:4px 2px 0}
+  .how-grid .step{padding:12px 6px 14px!important;text-align:center;border-radius:12px}
+  .how-grid .step h3,.how-grid .step p{display:none!important}
+  .how-grid .step small{margin:0;font-size:11px;letter-spacing:.06em}
+  .how-grid .step:not(.on) small{opacity:.6}
+  .how-grid .step .sbar{left:10px;right:10px}
+  .wk-cap b{display:block;font-size:18px;line-height:1.3;margin-bottom:6px}
+  .wk-cap span{display:block;font-size:15px;color:var(--muted);line-height:1.5}
+  .wk-cap{transition:opacity .25s ease}
+  .wk-cap.fade{opacity:0}
+}
 </style>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -872,6 +890,7 @@ fbq('track','PageView');
           <div class="wk-note">Illustration. We replace what doesn't deliver, every week.</div>
         </div>
       </div>
+      <div class="wk-cap" id="wkCap" aria-live="polite"><b></b><span></span></div>
     </div>
   </div>
 </section>
@@ -1126,7 +1145,7 @@ fbq('track','PageView');
 
   var steps=[].slice.call(document.querySelectorAll('#steps .step')),panes=[].slice.call(document.querySelectorAll('.wk-p')),cur=0,t=null,DUR=5000;
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function show(k){cur=k;steps.forEach(function(s,j){s.classList.remove('on');s.style.setProperty('--dur',DUR+'ms');});void document.body.offsetWidth;steps[k].classList.add('on');panes.forEach(function(p,j){p.classList.toggle('on',j===k);});}
+  function show(k){cur=k;var cp=document.getElementById('wkCap');if(cp){cp.classList.add('fade');setTimeout(function(){cp.querySelector('b').textContent=steps[k].querySelector('h3').textContent;cp.querySelector('span').textContent=steps[k].querySelector('p').textContent;cp.classList.remove('fade');},cp.textContent.trim()?180:0);}steps.forEach(function(s,j){s.classList.remove('on');s.style.setProperty('--dur',DUR+'ms');});void document.body.offsetWidth;steps[k].classList.add('on');panes.forEach(function(p,j){p.classList.toggle('on',j===k);});}
   function tick(){show((cur+1)%steps.length);}
   function start(){if(reduce)return;clearInterval(t);t=setInterval(tick,DUR);}
   function stop(){clearInterval(t);t=null;}
@@ -1137,7 +1156,7 @@ fbq('track','PageView');
     s.addEventListener('mouseleave',function(){if(window.matchMedia('(hover: hover)').matches){s.classList.remove('hold');show(cur);start();}});
   });
   if('IntersectionObserver' in window){
-    new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){if(!t){show(cur);start();}}else stop();});},{threshold:.35}).observe(document.getElementById('steps'));
+    new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){if(!t){show(cur);start();}}else stop();});},{threshold:.35}).observe(document.getElementById('slik'));
   }
 
   /* leadskjema -> Make-webhook. Prod: redirect til /takk/ (konvertering fires der). Test: inline takk. */
