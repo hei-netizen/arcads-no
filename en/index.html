@@ -778,6 +778,54 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
 @media (max-width:900px){.lpws{grid-template-columns:repeat(2,1fr)}.lpws>.lpw:nth-child(n+3){display:none}.lpw-v{height:200px}.lpw-v img{animation-name:lpscrollm}@keyframes lpscrollm{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 200px))}}}
 @media (max-width:640px){.bv{height:104px;margin-bottom:12px}.ph{height:132px}.admq{height:220px}.gr span{font-size:11px}.ev small{display:none}.ev{font-size:11px;white-space:nowrap}}
 @media (prefers-reduced-motion:reduce){#altbento *{animation:none!important}.gq-t{width:auto;border:0}.gr,.gpop,.ev,.rp-area,.rp-dot{opacity:1;transform:none}.rp-line{stroke-dashoffset:0}}
+
+/* Resten av forsiden i bevegelse (02.10.2026) */
+.mv *{animation-play-state:paused}.mv.play *{animation-play-state:running}
+/* To typer kunder: ticker */
+.aud-tick{position:relative;height:46px;margin:16px 0 4px;overflow:hidden}
+.aud-tick span{position:absolute;left:0;top:0;display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap;opacity:0;animation:audTick 8s cubic-bezier(.16,1,.3,1) infinite;animation-delay:calc(var(--i)*2s)}
+.aud-c:first-child .aud-tick span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff}
+.aud-c:not(:first-child) .aud-tick span{background:var(--tint);border:1px solid var(--line-soft);color:var(--ink)}
+.aud-tick span i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(0,201,111,.2)}
+.aud-tick span b{color:var(--green);font-weight:700}
+.aud-c:not(:first-child) .aud-tick span b{color:var(--green-text)}
+@keyframes audTick{0%{opacity:0;transform:translateY(18px)}4%{opacity:1;transform:none}22%{opacity:1;transform:none}27%,100%{opacity:0;transform:translateY(-18px)}}
+/* Tips: kjører nå */
+.fb{position:relative}
+.fb-live{position:absolute;right:12px;top:62px;z-index:2;display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:999px;background:var(--deep);color:#fff;font-size:11px;font-weight:600}
+.fb-live i{width:7px;height:7px;border-radius:50%;background:var(--green);animation:fbPulse 1.6s ease-out infinite}
+@keyframes fbPulse{0%{box-shadow:0 0 0 0 rgba(0,201,111,.6)}100%{box-shadow:0 0 0 8px rgba(0,201,111,0)}}
+/* Logoer kommer inn én etter én */
+.logo-cells .logo-cell{opacity:0;transform:translateY(12px) scale(.98);transition:opacity .6s cubic-bezier(.16,1,.3,1),transform .6s cubic-bezier(.16,1,.3,1)}
+.logo-cells.in .logo-cell,.logo-cells.lgo .logo-cell{opacity:1;transform:none}
+.logo-cells .logo-cell:nth-child(1){transition-delay:.05s}.logo-cells .logo-cell:nth-child(2){transition-delay:.12s}.logo-cells .logo-cell:nth-child(3){transition-delay:.19s}.logo-cells .logo-cell:nth-child(4){transition-delay:.26s}.logo-cells .logo-cell:nth-child(5){transition-delay:.33s}.logo-cells .logo-cell:nth-child(6){transition-delay:.40s}.logo-cells .logo-cell:nth-child(7){transition-delay:.47s}.logo-cells .logo-cell:nth-child(8){transition-delay:.54s}
+@media (hover:hover) and (pointer:fine){.logo-cell{transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}.logo-cells.in .logo-cell:hover{transform:translateY(-3px);box-shadow:0 16px 36px -24px rgba(17,39,31,.35)}}
+/* Bak Arcads: roterende ord */
+.rot{display:block;margin-top:8px;font-size:14px;color:var(--muted);height:22px;overflow:hidden}
+.rot span{position:relative;display:inline-block;height:22px;vertical-align:top;overflow:hidden;min-width:9ch}
+.rot span b{position:absolute;left:0;top:0;white-space:nowrap;color:var(--green-text);font-weight:600;opacity:0;animation:rotW 8s cubic-bezier(.16,1,.3,1) infinite;animation-delay:calc(var(--i)*2s)}
+@keyframes rotW{0%{opacity:0;transform:translateY(14px)}5%,22%{opacity:1;transform:none}27%,100%{opacity:0;transform:translateY(-14px)}}
+/* Tabell: Arcads-kolonnen lyser opp */
+.table td.us,.table th.us{position:relative;transition:background-color .6s ease}
+.table.tgo td.us,.table.tgo th.us{background:rgba(0,201,111,.07)}
+.table td.us{opacity:.001;transform:translateX(-8px);transition:opacity .5s cubic-bezier(.16,1,.3,1),transform .5s cubic-bezier(.16,1,.3,1),background-color .6s ease}
+.table.tgo td.us{opacity:1;transform:none}
+.table tbody tr:nth-child(1) td.us{transition-delay:.05s}.table tbody tr:nth-child(2) td.us{transition-delay:.13s}.table tbody tr:nth-child(3) td.us{transition-delay:.21s}.table tbody tr:nth-child(4) td.us{transition-delay:.29s}.table tbody tr:nth-child(5) td.us{transition-delay:.37s}.table tbody tr:nth-child(6) td.us{transition-delay:.45s}.table tbody tr:nth-child(7) td.us{transition-delay:.53s}
+.table td.us::before{content:"";display:inline-block;width:14px;height:14px;margin-right:7px;vertical-align:-2px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306231a' stroke-width='3.5'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/9px no-repeat;transform:scale(0);transition:transform .45s cubic-bezier(.34,1.56,.64,1)}
+.table.tgo td.us::before{transform:scale(1)}
+.table tbody tr:nth-child(n) td.us::before{transition-delay:inherit}
+/* Caser: sakte zoom */
+.case img{animation:kb 14s ease-in-out infinite alternate;animation-play-state:paused}
+.cases.kgo .case img{animation-play-state:running}
+.case:nth-child(2) img{animation-delay:-4s}.case:nth-child(3) img{animation-delay:-8s}.case:nth-child(4) img{animation-delay:-11s}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.08)}}
+@media (prefers-reduced-motion:reduce){
+  .aud-tick span,.rot span b{animation:none!important}.aud-tick span:first-child,.rot span b:first-child{opacity:1;transform:none}
+  .fb-live i,.case img{animation:none!important}
+  .logo-cells .logo-cell,.table td.us{opacity:1!important;transform:none!important;transition:none!important}
+  .table td.us::before{transform:scale(1);transition:none}
+}
+@media (max-width:640px){.aud-tick{height:40px;margin:10px 0 0}.aud-tick span{font-size:12px}.table td.us::before{display:none}}
 </style>
     <noscript><style>.rv,.stg{opacity:1!important;transform:none!important}.tile svg polyline{animation:none!important;stroke-dashoffset:0!important}</style></noscript>
 <!-- Microsoft Clarity -->
@@ -895,13 +943,13 @@ fbq('track','PageView');
     <div class="center"><h2 class="rv">Two types of clients, two different goals.</h2><p class="lede rv">We mostly work with online stores and businesses that live on inquiries. The setup is quite different, so we build it differently.</p></div>
     <div class="aud-grid">
       <a class="aud-c rv" href="/en/artikler/google-shopping/">
-        <span class="aud-k">Online store</span>
+        <span class="aud-k">Online store</span><div class="aud-tick" aria-hidden="true"><span style="--i:0"><i></i>New order <b>NOK 689</b></span><span style="--i:1"><i></i>New order <b>NOK 1,249</b></span><span style="--i:2"><i></i>New order <b>NOK 412</b></span><span style="--i:3"><i></i>New order <b>NOK 896</b></span></div>
         <h3>More sales, with profitability per product.</h3>
         <ul><li>Shopping and Performance Max on a clean product feed</li><li>Optimized for margin and POAS, not just revenue</li><li>Campaigns for sales, new arrivals and seasons on Meta</li><li>Tracking that counts every purchase once</li></ul>
         <div class="aud-f"><span>Mokki · Leid.no · QualiPet · Redz</span><em>+127% profit year over year for Mokki</em></div>
       </a>
       <a class="aud-c rv" href="/en/markedsforing-for-tjenestebedrifter/">
-        <span class="aud-k">Leads</span>
+        <span class="aud-k">Leads</span><div class="aud-tick" aria-hidden="true"><span style="--i:0"><i></i>New lead · <b>Oslo</b></span><span style="--i:1"><i></i>New lead · <b>Bergen</b></span><span style="--i:2"><i></i>New lead · <b>Trondheim</b></span><span style="--i:3"><i></i>New lead · <b>Kristiansand</b></span></div>
         <h3>More inquiries, at a price that adds up.</h3>
         <ul><li>Separate campaigns per city or branch</li><li>Landing pages with forms built for ad traffic</li><li>Branded searches kept separate, so the numbers are honest</li><li>We count submitted forms and calls, not clicks</li></ul>
         <div class="aud-f"><span>Utvendig Renhold · Veldigrent · Badstugutta</span><em>549 leads in 90 days for Utvendig Renhold</em></div>
@@ -920,17 +968,17 @@ fbq('track','PageView');
         <p>We're sharing them because most people spend too much time polishing and too little time testing. Feel free to steal the principles.</p>
       </div>
       <div class="fbs">
-        <article class="fb stg rv" style="--i:0">
+        <article class="fb stg rv" style="--i:0"><span class="fb-live" aria-hidden="true"><i></i>Running now</span>
           <div class="fb-tagline"><b>Facebook comments</b><small>Utvendig Renhold</small></div>
           <div class="fb-img sq"><img src="/img/tips/ur-kommentar.webp" alt="Facebook comments ad for Utvendig Renhold" width="900" height="793" loading="lazy"></div>
           <div class="fb-why"><p>Looks like an ordinary thread where neighbors ask for advice. Customers recommend, and the business replies in the comments itself. People stop because it looks like something they could have written.</p></div>
         </article>
-        <article class="fb stg rv" style="--i:1">
+        <article class="fb stg rv" style="--i:1"><span class="fb-live" aria-hidden="true"><i></i>Running now</span>
           <div class="fb-tagline"><b>Facebook comments</b><small>Mokki</small></div>
           <div class="fb-img sq"><img src="/img/tips/mokki-kommentar.webp" alt="Facebook comments ad for Mokki" width="900" height="759" loading="lazy"></div>
           <div class="fb-why"><p>The same format for an online store. The question is what the customer actually wonders about, and the recommendations do the job a product ad would otherwise do.</p></div>
         </article>
-        <article class="fb stg rv" style="--i:2">
+        <article class="fb stg rv" style="--i:2"><span class="fb-live" aria-hidden="true"><i></i>Running now</span>
           <div class="fb-tagline"><b>Notes ad</b><small>Utvendig Renhold</small></div>
           <div class="fb-img sq"><img src="/img/tips/ur-notat.webp" alt="Notes ad for Utvendig Renhold" width="800" height="800" loading="lazy"></div>
           <div class="fb-why"><p>Looks like a note on a phone. One claim, a few short points and one call to action. No logo in the image and no ad slogan, just what the homeowner ought to know.</p></div>
@@ -1060,7 +1108,7 @@ fbq('track','PageView');
         <img src="/img/victor-hero.webp" alt="Victor Skretteberg, managing director of Arcads" width="240" height="240" loading="lazy">
         <div>
           <h3>Victor Skretteberg</h3>
-          <div class="role">Managing director and Google Performance</div>
+          <div class="role">Managing director and Google Performance</div><span class="rot" aria-hidden="true">Works on <span><b style="--i:0">Google Ads</b><b style="--i:1">tracking</b><b style="--i:2">numbers</b><b style="--i:3">structure</b></span></span>
           <p>Victor is the one you meet on the first call. He builds your Google account and digs into the numbers. You get a report every Monday.</p>
           <a class="li" href="https://www.linkedin.com/in/victor-skretteberg-b7a562299/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Victor on LinkedIn</a>
         </div>
@@ -1069,7 +1117,7 @@ fbq('track','PageView');
         <img src="/img/jona-hero.webp" alt="Jona Helgen, creative lead at Arcads" width="240" height="240" loading="lazy">
         <div>
           <h3>Jona Helgen</h3>
-          <div class="role">Creative and Social Media Performance</div>
+          <div class="role">Creative and Social Media Performance</div><span class="rot" aria-hidden="true">Makes <span><b style="--i:0">UGC</b><b style="--i:1">statics</b><b style="--i:2">motion</b><b style="--i:3">concepts</b></span></span>
           <p>Jona makes the ads you see on this page. Videos, statics and concepts. 10+ new ones a week don't make themselves.</p>
           <a class="li" href="https://www.linkedin.com/in/jona-helgen-9a1a37244/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Jona on LinkedIn</a>
         </div>
@@ -1263,6 +1311,8 @@ fbq('track','PageView');
     els.forEach(function(e){io.observe(e);});
   }else{els.forEach(function(e){e.classList.add('in');});}
 
+  [['aud-grid','play'],['people','play']].forEach(function(p){var el=document.querySelector('.'+p[0]);if(!el)return;el.classList.add('mv');if('IntersectionObserver' in window){new IntersectionObserver(function(en){en.forEach(function(e){el.classList.toggle('play',e.isIntersecting);});},{threshold:.2}).observe(el);}else el.classList.add('play');});
+  [['.logo-cells','lgo'],['.table','tgo'],['.cases','kgo']].forEach(function(p){var el=document.querySelector(p[0]);if(!el)return;if(!('IntersectionObserver' in window)){el.classList.add(p[1]);return;}new IntersectionObserver(function(en,o){en.forEach(function(e){if(e.isIntersecting){el.classList.add(p[1]);if(p[1]!=='kgo')o.disconnect();}else if(p[1]==='kgo'){el.classList.remove('kgo');}});},{threshold:.25}).observe(el);});
   var ab=document.getElementById('altbento');
   if(ab&&'IntersectionObserver' in window){new IntersectionObserver(function(en){en.forEach(function(e){ab.classList.toggle('play',e.isIntersecting);});},{threshold:.15}).observe(ab);}else if(ab){ab.classList.add('play');}
   var wk=document.getElementById('wk3');
