@@ -612,7 +612,47 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .wk-cap{transition:opacity .25s ease}
   .wk-cap.fade{opacity:0}
 }
-</style>
+
+    /* === motion-test (Motion AI Kit-prinsipper) === */
+    :root{--spring:linear(0,0.0281,0.1006,0.2019,0.3188,0.441,0.5604,0.6715,0.7706,0.8555,0.9254,0.9808,1.0224,1.0517,1.0704,1.0804,1.0834,1.0812,1.0752,1.0668,1.0571,1.0469,1.0369,1.0276,1.0193,1.0122,1.0063,1.0017,0.9982,0.9957,0.9942,0.9933,0.993,0.9932,0.9937,0.9944,0.9952,0.9961,0.9969,0.9977,0.9984);--spring-t:0.62s;--out:cubic-bezier(.16,1,.3,1)}
+    /* 1. hero: CSS-animasjon ved last, venter ikke på JS/scroll */
+    .hero .rv{opacity:1;transform:none;transition:none;animation:heroIn .8s var(--out) both;animation-delay:calc(var(--d,0) * 70ms)}
+    @keyframes heroIn{from{opacity:0;transform:translateY(14px)}}
+    .hero h1.rv{animation-name:heroInH1}
+    @keyframes heroInH1{from{opacity:.001;transform:translateY(10px)}}
+    .panel.hi{opacity:1;transform:none;animation:panelIn 1s var(--out) .35s both}
+    @keyframes panelIn{from{opacity:0;transform:translateY(28px) scale(.985)}}
+    .tile svg polyline{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.2s var(--out) forwards;animation-delay:calc(.2s + var(--d,0) * 120ms);animation-play-state:paused}
+    .tiles.go svg polyline{animation-play-state:running}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    .tile .v,.case .cap b,.kpi b{font-variant-numeric:tabular-nums}
+    /* 3. stagger */
+    .stg{opacity:0;transform:translateY(18px);transition:opacity .7s var(--out),transform .7s var(--out);transition-delay:calc(var(--i,0) * 80ms)}
+    .stg.in{opacity:1;transform:none}
+    /* 5. fjær på knapper og kort */
+    .btn{transition:transform var(--spring-t) var(--spring),background .2s}
+    .btn .ic svg{transition:transform var(--spring-t) var(--spring)}
+    .btn:hover .ic svg{transform:translateX(3px)}
+    .btn:active{transform:scale(.97);transition-duration:.12s}
+    .case img{transition:transform .9s var(--out)}
+    .case .cap{transition:transform var(--spring-t) var(--spring)}
+    .case:hover .cap{transform:translateY(-4px)}
+    /* 4. FAQ myk åpning (Chrome/Edge; andre nettlesere: som før) */
+    @supports (interpolate-size:allow-keywords){
+      .faq{interpolate-size:allow-keywords}
+      .faq details::details-content{block-size:0;overflow:hidden;transition:block-size .4s var(--out),content-visibility .4s allow-discrete}
+      .faq details[open]::details-content{block-size:auto}
+      .faq .ans{opacity:0;transition:opacity .3s}
+      .faq details[open] .ans{opacity:1;transition-delay:.08s}
+    }
+    .faq summary .pm{transition:transform var(--spring-t) var(--spring)}
+    @media (prefers-reduced-motion:reduce){
+      .hero .rv,.panel.hi,.tile svg polyline{animation:none;stroke-dashoffset:0}
+      .stg{opacity:1;transform:none;transition:none}
+      .btn,.btn .ic svg,.case .cap{transition:none}
+    }
+    </style>
+    <noscript><style>.rv,.stg{opacity:1!important;transform:none!important}.tile svg polyline{animation:none!important;stroke-dashoffset:0!important}</style></noscript>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
@@ -653,12 +693,12 @@ fbq('track','PageView');
 
 <section class="hero center" id="top">
   <div class="wrap">
-    <span class="eyebrow faces rv"><span class="av"><img src="/img/victor-hero.webp" alt="Victor" width="240" height="240"><img src="/img/jona-hero.webp" alt="Jona" width="240" height="240"></span>Hei, vi er Victor og Jona</span>
-    <h1 class="rv">Vi gir deg bedre resultater på Meta og Google Ads.<br><span class="dim">100 % resultatbasert.</span></h1>
-    <p class="lede rv">Mer salg for nettbutikker og flere leads for tjenestebedrifter. <span class="m-hide">Vi tar over kontoene, lager annonsene og landingssidene selv, og fakturerer en andel av verdien annonsene skaper. For etablerte bedrifter som bruker 30 000 kr+ i måneden.</span></p>
-    <a class="btn rv" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a>
-    <p class="micro rv">Gratis og uforpliktende. Ingen binding, ingen selgere.</p>
-    <div class="strip rv">
+    <span class="eyebrow faces rv" style="--d:0"><span class="av"><img src="/img/victor-hero.webp" alt="Victor" width="240" height="240"><img src="/img/jona-hero.webp" alt="Jona" width="240" height="240"></span>Hei, vi er Victor og Jona</span>
+    <h1 class="rv" style="--d:1">Vi gir deg bedre resultater på Meta og Google Ads.<br><span class="dim">100 % resultatbasert.</span></h1>
+    <p class="lede rv" style="--d:2">Mer salg for nettbutikker og flere leads for tjenestebedrifter. <span class="m-hide">Vi tar over kontoene, lager annonsene og landingssidene selv, og fakturerer en andel av verdien annonsene skaper. For etablerte bedrifter som bruker 30 000 kr+ i måneden.</span></p>
+    <a class="btn rv" style="--d:3" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a>
+    <p class="micro rv" style="--d:4">Gratis og uforpliktende. Ingen binding, ingen selgere.</p>
+    <div class="strip rv" style="--d:5">
       <span><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><b>10+</b> nye annonser hver uke</span>
       <span><b>5000+</b> annonser levert</span>
       <span><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5z"/></svg><b>100 %</b> resultatbasert</span>
@@ -668,13 +708,13 @@ fbq('track','PageView');
 
 <div class="panel-wrap">
   <div class="wrap">
-    <div class="panel rv">
+    <div class="panel hi" style="--d:6">
       <div class="panel-top"><b>Mandagsrapporten</b><span class="chip">Mokki, mars 2026</span></div>
       <div class="tiles">
-        <div class="tile"><small>Profitt år over år</small><div class="v">+127 %<svg viewBox="0 0 44 18"><polyline points="1,15 8,13 15,14 22,9 29,10 36,5 43,3"/></svg></div></div>
-        <div class="tile"><small>Meta POAS (etter varekost)</small><div class="v">2,55x<svg viewBox="0 0 44 18"><polyline points="1,14 8,12 15,13 22,8 29,9 36,6 43,4"/></svg></div></div>
-        <div class="tile"><small>Meta ROAS</small><div class="v">4,88x<svg viewBox="0 0 44 18"><polyline points="1,13 8,14 15,10 22,11 29,7 36,8 43,4"/></svg></div></div>
-        <div class="tile"><small>Meta CPA</small><div class="v">214 kr<svg viewBox="0 0 44 18"><polyline points="1,4 8,6 15,5 22,9 29,10 36,13 43,14"/></svg></div></div>
+        <div class="tile"><small>Profitt år over år</small><div class="v">+127 %<svg viewBox="0 0 44 18"><polyline pathLength="1" style="--d:0" points="1,15 8,13 15,14 22,9 29,10 36,5 43,3"/></svg></div></div>
+        <div class="tile"><small>Meta POAS (etter varekost)</small><div class="v">2,55x<svg viewBox="0 0 44 18"><polyline pathLength="1" style="--d:1" points="1,14 8,12 15,13 22,8 29,9 36,6 43,4"/></svg></div></div>
+        <div class="tile"><small>Meta ROAS</small><div class="v">4,88x<svg viewBox="0 0 44 18"><polyline pathLength="1" style="--d:2" points="1,13 8,14 15,10 22,11 29,7 36,8 43,4"/></svg></div></div>
+        <div class="tile"><small>Meta CPA</small><div class="v">214 kr<svg viewBox="0 0 44 18"><polyline pathLength="1" style="--d:3" points="1,4 8,6 15,5 22,9 29,10 36,13 43,14"/></svg></div></div>
       </div>
       <div class="panel-body">
         <div class="panel-col">
@@ -700,8 +740,8 @@ fbq('track','PageView');
 <section class="logos">
   <div class="wrap">
     <h2 class="rv">Noen av kundene våre.</h2>
-    <div class="logo-grid rv">
-      <div class="logo-cells">
+    <div class="logo-grid">
+      <div class="logo-cells stg rv" style="--i:0">
         <div class="logo-cell"><img src="/logos/utvendigrenhold.png" alt="Utvendigrenhold" width="589" height="169" loading="lazy"></div>
         <div class="logo-cell"><img src="/logos/mokki.png" alt="Mokki" width="700" height="188" loading="lazy"></div>
         <div class="logo-cell"><img src="/logos/leid.svg" alt="Leid.no" width="1633" height="300" loading="lazy"></div>
@@ -711,7 +751,7 @@ fbq('track','PageView');
         <div class="logo-cell"><img src="/logos/raskflytting.png" alt="Raskflytting" width="250" height="58" loading="lazy"></div>
         <div class="logo-cell"><img src="/logos/frifor.png" alt="Frifor" width="564" height="182" loading="lazy"></div>
       </div>
-      <div class="logo-tile">
+      <div class="logo-tile stg rv" style="--i:1">
         <div class="cap"><b>5000+</b><small>annonser laget for<br>norske merkevarer</small><em>Meta og Google</em></div>
         <div class="ad-stack" id="adStack" aria-label="Eksempler på annonser laget av Arcads">
           <img src="/img/wall/bg-3.webp" alt="Badstugutta-annonse laget av Arcads" width="480" height="600" loading="lazy" class="on">
@@ -752,18 +792,18 @@ fbq('track','PageView');
         <p>Annonser som ser organiske ut slår polerte annonser akkurat nå. Her er tre vi kjører for kundene våre nå, i to formater: Facebook-kommentarer og notater på mobilen. Ingen av dem ser ut som reklame.</p>
         <p>Vi deler dem fordi de fleste bruker for mye tid på å polere, og for lite tid på å teste. Stjel gjerne prinsippene.</p>
       </div>
-      <div class="fbs rv">
-        <article class="fb">
+      <div class="fbs">
+        <article class="fb stg rv" style="--i:0">
           <div class="fb-tagline"><b>Facebook-kommentarer</b><small>Utvendig Renhold</small></div>
           <div class="fb-img sq"><img src="/img/tips/ur-kommentar.webp" alt="Facebook-kommentarer-annonse for Utvendig Renhold" width="900" height="793" loading="lazy"></div>
           <div class="fb-why"><p>Ser ut som en vanlig tråd der naboer spør om råd. Kunder anbefaler, og bedriften svarer selv i kommentarfeltet. Folk stopper fordi det ser ut som noe de kunne skrevet selv.</p></div>
         </article>
-        <article class="fb">
+        <article class="fb stg rv" style="--i:1">
           <div class="fb-tagline"><b>Facebook-kommentarer</b><small>Mokki</small></div>
           <div class="fb-img sq"><img src="/img/tips/mokki-kommentar.webp" alt="Facebook-kommentarer-annonse for Mokki" width="900" height="759" loading="lazy"></div>
           <div class="fb-why"><p>Samme format for en nettbutikk. Spørsmålet er det kunden faktisk lurer på, og anbefalingene gjør jobben en produktannonse ellers skulle gjort.</p></div>
         </article>
-        <article class="fb">
+        <article class="fb stg rv" style="--i:2">
           <div class="fb-tagline"><b>Notat-annonse</b><small>Utvendig Renhold</small></div>
           <div class="fb-img sq"><img src="/img/tips/ur-notat.webp" alt="Notat-annonse-annonse for Utvendig Renhold" width="800" height="800" loading="lazy"></div>
           <div class="fb-why"><p>Ser ut som et notat på mobilen. Én påstand, noen korte punkter og én oppfordring. Ingen logo i bildet og ingen reklameslogan, bare det huseieren burde vite.</p></div>
@@ -900,8 +940,8 @@ fbq('track','PageView');
       <h2 class="rv">Vi lager alt selv. Ikke bare annonsene.</h2>
       <p class="lede rv">Kampanjer, annonser, landingssider og sporing. Én partner, ingen mellomledd, ingen freelancere å vente på.</p>
     </div>
-    <div class="bento rv">
-      <div class="b b-lp">
+    <div class="bento">
+      <div class="b b-lp stg rv" style="--i:0">
         <div class="b-head"><h3>Landingssider</h3><p>Kampanjesider for nettbutikken og landingssider med skjema for leads. Bygget for annonsetrafikk, ikke for menyen på nettsiden, og de er dine.</p></div>
         <div class="lps">
           <img src="/img/lp/froyd.webp" alt="Landingsside Arcads har laget for Frøyd" width="500" height="625" loading="lazy">
@@ -910,7 +950,7 @@ fbq('track','PageView');
           <img src="/img/lp/veldigrent.webp" alt="Landingsside Arcads har laget for Veldigrent" width="500" height="625" loading="lazy">
         </div>
       </div>
-      <a class="b b-ads" href="/kreativ-produksjon/">
+      <a class="b b-ads stg rv" style="--i:1" href="/kreativ-produksjon/">
         <div class="b-head"><h3>Annonser</h3><p>UGC-video, statics og motion graphics. 10+ nye i uka, alt laget hos oss.</p></div>
         <div class="adgrid">
           <img src="/img/wall/ur-4.webp" alt="UGC-annonse laget av Arcads" width="480" height="600" loading="lazy">
@@ -919,10 +959,10 @@ fbq('track','PageView');
           <img src="/img/wall/leid-4.webp" alt="Annonse laget av Arcads" width="480" height="600" loading="lazy">
         </div>
       </a>
-      <a class="b b-t" href="/google-ads/"><h3>Google Ads</h3><p>Search, Shopping og Performance Max. Struktur, negative søkeord og skalering etter lønnsomhet, ikke klikk.</p><span class="more">Google Ads-byrå</span></a>
-      <a class="b b-t" href="/meta-ads/"><h3>Meta Ads</h3><p>Facebook, Instagram og Snapchat med løpende testing av nye annonser hver uke.</p><span class="more">Meta Ads-byrå</span></a>
-      <div class="b b-t"><h3>Sporing</h3><p>Google Ads, Meta Pixel og GA4 rigget riktig først. Da ser du hvert salg og hvert lead selv.</p></div>
-      <div class="b b-t"><h3>Mandagsrapporten</h3><p>Tall du forstår, hver mandag. Hva som ble gjort, hva det ga, hva vi gjør neste uke.</p></div>
+      <a class="b b-t stg rv" style="--i:2" href="/google-ads/"><h3>Google Ads</h3><p>Search, Shopping og Performance Max. Struktur, negative søkeord og skalering etter lønnsomhet, ikke klikk.</p><span class="more">Google Ads-byrå</span></a>
+      <a class="b b-t stg rv" style="--i:3" href="/meta-ads/"><h3>Meta Ads</h3><p>Facebook, Instagram og Snapchat med løpende testing av nye annonser hver uke.</p><span class="more">Meta Ads-byrå</span></a>
+      <div class="b b-t stg rv" style="--i:4"><h3>Sporing</h3><p>Google Ads, Meta Pixel og GA4 rigget riktig først. Da ser du hvert salg og hvert lead selv.</p></div>
+      <div class="b b-t stg rv" style="--i:5"><h3>Mandagsrapporten</h3><p>Tall du forstår, hver mandag. Hva som ble gjort, hva det ga, hva vi gjør neste uke.</p></div>
     </div>
     <div class="ctarow rv"><a class="btn" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Se hvordan det ville sett ut for deg</a><p class="micro">Du ser forslaget før du har betalt en krone.</p></div>
   </div>
@@ -934,8 +974,8 @@ fbq('track','PageView');
       <h2 class="rv">Bak Arcads.</h2>
       <p class="lede rv" style="max-width:640px">Arcads er et norsk performance marketing-byrå i Skien som drifter Google Ads og Meta Ads og lager annonsene selv, for kunder i hele Norge. Vi jobber mest med nettbutikker og tjenestebedrifter som lever av leads, gjerne med flere lokasjoner.</p>
     </div>
-    <div class="people rv">
-      <div class="person">
+    <div class="people">
+      <div class="person stg rv" style="--i:0">
         <img src="/img/victor-hero.webp" alt="Victor Skretteberg, daglig leder i Arcads" width="240" height="240" loading="lazy">
         <div>
           <h3>Victor Skretteberg</h3>
@@ -944,7 +984,7 @@ fbq('track','PageView');
           <a class="li" href="https://www.linkedin.com/in/victor-skretteberg-b7a562299/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.13c0-1.7-.03-3.89-2.37-3.89-2.37 0-2.73 1.85-2.73 3.76V23H8.34z"/></svg>Victor på LinkedIn</a>
         </div>
       </div>
-      <div class="person">
+      <div class="person stg rv" style="--i:1">
         <img src="/img/jona-hero.webp" alt="Jona Helgen, kreativ ansvarlig i Arcads" width="240" height="240" loading="lazy">
         <div>
           <h3>Jona Helgen</h3>
@@ -993,11 +1033,11 @@ fbq('track','PageView');
       <h2 class="rv">Sånn ser det ut når annonsene betaler for seg selv.</h2>
       <p class="lede rv">Tallene er hentet fra kundenes egne annonsekontoer.</p>
     </div>
-    <div class="cases rv">
-      <a class="case" href="/caser/"><img src="/img/caser/mokki-2.jpg" alt="Mokki-case" width="450" height="800" loading="lazy"><div class="cap"><b>+127 %</b><span>Mokki, profitt år over år</span><small>Google Ads i Norge, Tyskland og Danmark</small></div></a>
-      <a class="case" href="/caser/"><img src="/img/wall/leid-3.webp" alt="Leid.no-case" width="480" height="600" loading="lazy"><div class="cap"><b>4,73x</b><span>Leid.no, ROAS</span><small>Fra ødelagt sporing til lønnsom skalering</small></div></a>
-      <a class="case" href="/caser/"><img src="/img/caser/ur-1.jpg" alt="Utvendigrenhold-case" width="450" height="800" loading="lazy"><div class="cap"><b>549 leads</b><span>Utvendig Renhold, 90 dager</span><small>163 kr per lead inkl. merkevaresøk</small></div></a>
-      <a class="case" href="/caser/"><img src="/img/caser/marlow-3.jpg" alt="Marlow-case" width="450" height="800" loading="lazy"><div class="cap"><b>£17</b><span>Marlow, pris per lead beste uke</span><small>Utgangspunkt: leads ble ikke målt</small></div></a>
+    <div class="cases">
+      <a class="case stg rv" style="--i:0" href="/caser/"><img src="/img/caser/mokki-2.jpg" alt="Mokki-case" width="450" height="800" loading="lazy"><div class="cap"><b>+127 %</b><span>Mokki, profitt år over år</span><small>Google Ads i Norge, Tyskland og Danmark</small></div></a>
+      <a class="case stg rv" style="--i:1" href="/caser/"><img src="/img/wall/leid-3.webp" alt="Leid.no-case" width="480" height="600" loading="lazy"><div class="cap"><b>4,73x</b><span>Leid.no, ROAS</span><small>Fra ødelagt sporing til lønnsom skalering</small></div></a>
+      <a class="case stg rv" style="--i:2" href="/caser/"><img src="/img/caser/ur-1.jpg" alt="Utvendigrenhold-case" width="450" height="800" loading="lazy"><div class="cap"><b>549 leads</b><span>Utvendig Renhold, 90 dager</span><small>163 kr per lead inkl. merkevaresøk</small></div></a>
+      <a class="case stg rv" style="--i:3" href="/caser/"><img src="/img/caser/marlow-3.jpg" alt="Marlow-case" width="450" height="800" loading="lazy"><div class="cap"><b>£17</b><span>Marlow, pris per lead beste uke</span><small>Utgangspunkt: leads ble ikke målt</small></div></a>
     </div>
     <div class="center"><a class="more-link" href="/caser/">Les hele casene</a></div>
   </div>
@@ -1198,7 +1238,28 @@ fbq('track','PageView');
   [f.name,f.email,f.phone,f.website].forEach(function(i){i.addEventListener('input',function(){i.classList.remove('bad');});});
 })();
 </script>
-<script>(function(){var st=document.getElementById('adStack');if(!st)return;var im=st.querySelectorAll('img'),i=0;if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;setInterval(function(){im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},3200)})();</script>
+<script>
+    (function(){
+    var rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    /* 2. tall teller opp */
+    function parse(t){var m=t.match(/^([^\d]*)(\d+(?:[  ]\d{3})*(?:[.,]\d{1,2}(?!\d))?)(.*)$/);if(!m)return null;var raw=m[2].replace(/\s/g,''),ds=(raw.match(/[.,]/)||[','])[0],dec=(raw.split(ds)[1]||'').length;return{pre:m[1],val:parseFloat(raw.replace(',','.')),dec:dec,ds:ds,suf:m[3],grp:/\d\s\d/.test(m[2])};}
+    function fmt(p,v){var t=v.toFixed(p.dec).replace('.',p.ds);if(p.grp)t=t.replace(/\B(?=(\d{3})+(?!\d))/g,' ');return p.pre+t+p.suf;}
+    function prep(el){var n=el.firstChild;if(!n||n.nodeType!==3)return;var p=parse(n.nodeValue.trim());if(!p)return;el._c={n:n,p:p,fin:n.nodeValue};n.nodeValue=fmt(p,0);}
+    function run(el,delay){var c=el._c;if(!c)return;var D=1400,t0=null;
+     setTimeout(function(){requestAnimationFrame(function f(ts){if(!t0)t0=ts;var x=Math.min((ts-t0)/D,1),e=1-Math.pow(1-x,4);c.n.nodeValue=x<1?fmt(c.p,c.p.val*e):c.fin;if(x<1)requestAnimationFrame(f);});},delay||0);}
+    var SEL='.tile .v,.cap b,.kpi b';
+    if(!rm&&'IntersectionObserver' in window){
+     var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);e.target.classList.add('go');e.target.querySelectorAll(SEL).forEach(function(b,i){run(b,150+i*110);});});},{threshold:.4});
+     document.querySelectorAll('.tiles,.cases,.fbs').forEach(function(c){
+      if(c.getBoundingClientRect().top<innerHeight*.6){c.classList.add('go');return;} /* allerede synlig (reload midt på siden): ikke tell */
+      c.querySelectorAll(SEL).forEach(prep);io.observe(c);});
+    }
+    /* 6. «5000+»-rotasjon kun når synlig */
+    var st=document.getElementById('adStack');
+    if(st&&!rm&&'IntersectionObserver' in window){var im=st.querySelectorAll('img'),i=0,t=null;
+     new IntersectionObserver(function(en){if(en[0].isIntersecting){if(!t)t=setInterval(function(){if(document.hidden)return;im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on');},3200);}else{clearInterval(t);t=null;}}).observe(st);}
+    })();
+    </script>
 <script>
 (function(){var w=document.getElementById('kundechat');if(!w||!('IntersectionObserver' in window))return;
 var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches,ms=[].slice.call(w.querySelectorAll('.cm'));
