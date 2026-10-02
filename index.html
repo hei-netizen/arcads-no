@@ -651,7 +651,75 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
       .stg{opacity:1;transform:none;transition:none}
       .btn,.btn .ic svg,.case .cap{transition:none}
     }
-    </style>
+    
+/* Uke-seksjon v3 (02.10.2026): tre kort med looping motion */
+.wk3{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:stretch;margin-top:48px}
+.wk3-card{background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-card);padding:14px 14px 22px;box-shadow:0 24px 60px -40px rgba(17,39,31,.3)}
+.wk3-card small{display:block;margin:18px 6px 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-text);font-weight:600}
+.wk3-card h3{margin:0 6px 6px;font-size:19px;letter-spacing:-.01em}
+.wk3-card p{margin:0 6px;font-size:15px;color:var(--muted)}
+.wk3-vis{position:relative;height:250px;border-radius:14px;background:var(--deep);overflow:hidden}
+.wk3-link{position:relative;align-self:center;height:2px;margin:0 6px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 12px)}
+.wk3-link i{position:absolute;top:50%;left:0;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--green);box-shadow:0 0 0 4px rgba(0,201,111,.18);animation:wk3dot 2s cubic-bezier(.65,0,.35,1) infinite}
+@keyframes wk3dot{0%{transform:translateX(0);opacity:0}15%{opacity:1}85%{opacity:1}100%{transform:translateX(calc(100% + 20px));opacity:0}}
+/* 1: chips -> vinkler */
+.wk3-chip{position:absolute;left:50%;padding:8px 12px;border-radius:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;font-size:13px;white-space:nowrap;opacity:0;animation:wk3chip 6s cubic-bezier(.16,1,.3,1) infinite;animation-delay:calc(var(--i)*.35s)}
+.wk3-chip:nth-child(1){top:18px;--x:-62%}.wk3-chip:nth-child(2){top:58px;--x:-38%}.wk3-chip:nth-child(3){top:98px;--x:-58%}.wk3-chip:nth-child(4){top:138px;--x:-44%}
+@keyframes wk3chip{0%{opacity:0;transform:translate(var(--x),14px) scale(.96)}10%{opacity:1;transform:translate(var(--x),0) scale(1)}42%{opacity:1;transform:translate(var(--x),0) scale(1)}58%{opacity:0;transform:translate(-50%,140px) scale(.5)}100%{opacity:0;transform:translate(-50%,140px) scale(.5)}}
+.wk3-funnel{position:absolute;left:50%;bottom:58px;width:44px;height:4px;margin-left:-22px;border-radius:4px;background:var(--green);opacity:.0;animation:wk3fun 6s ease infinite}
+@keyframes wk3fun{0%,45%{opacity:0;transform:scaleX(.4)}55%{opacity:1;transform:scaleX(1.6)}70%,100%{opacity:0;transform:scaleX(.4)}}
+.wk3-angs{position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:0 12px}
+.wk3-ang{padding:6px 11px;border-radius:999px;background:var(--green);color:#06231a;font-size:12px;font-weight:600;opacity:0;animation:wk3ang 6s cubic-bezier(.34,1.56,.64,1) infinite;animation-delay:calc(3.5s + var(--i)*.12s)}
+@keyframes wk3ang{0%{opacity:0;transform:translateY(10px) scale(.8)}6%{opacity:1;transform:none}30%{opacity:1;transform:none}40%,100%{opacity:0;transform:translateY(-6px)}}
+/* 2: vinkel -> annonser i vifte */
+.wk3-src{position:absolute;left:50%;top:50%;padding:8px 14px;border-radius:999px;background:var(--green);color:#06231a;font-weight:700;font-size:13px;transform:translate(-50%,-50%);animation:wk3src 6s ease infinite;z-index:3}
+@keyframes wk3src{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}8%,22%{opacity:1;transform:translate(-50%,-50%) scale(1)}32%,100%{opacity:0;transform:translate(-50%,-50%) scale(.6)}}
+.wk3-ad{position:absolute;left:50%;top:50%;width:34%;margin:0;opacity:0;transform:translate(-50%,-50%) scale(.6);animation:wk3ad 6s cubic-bezier(.16,1,.3,1) infinite;animation-delay:calc(1.6s + var(--i)*.18s)}
+.wk3-ad:nth-of-type(1){--x:-112%;--r:-12deg}.wk3-ad:nth-of-type(2){--x:-72%;--r:-4deg}.wk3-ad:nth-of-type(3){--x:-28%;--r:4deg}.wk3-ad:nth-of-type(4){--x:12%;--r:12deg}
+.wk3-ad img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block;box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.wk3-ad figcaption{position:absolute;left:6px;top:6px;background:#fff;color:var(--ink);font-size:10px;font-weight:600;border-radius:999px;padding:2px 7px}
+@keyframes wk3ad{0%{opacity:0;transform:translate(-50%,-50%) scale(.6) rotate(0)}12%{opacity:1;transform:translate(var(--x),-50%) scale(1) rotate(var(--r))}62%{opacity:1;transform:translate(var(--x),-50%) scale(1) rotate(var(--r))}74%,100%{opacity:0;transform:translate(var(--x),-40%) scale(.95) rotate(var(--r))}}
+/* 3: annonser konkurrerer */
+.wk3-live{position:absolute;left:14px;top:12px;display:flex;align-items:center;gap:7px;color:#fff;font-size:12px;font-weight:600}
+.wk3-live b{width:7px;height:7px;border-radius:50%;background:var(--green);animation:wk3pulse 1.6s ease-out infinite}
+@keyframes wk3pulse{0%{box-shadow:0 0 0 0 rgba(0,201,111,.6)}100%{box-shadow:0 0 0 9px rgba(0,201,111,0)}}
+.wk3-row{position:absolute;left:14px;right:14px;display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:6px 10px 6px 6px;border-radius:10px;background:rgba(255,255,255,.06);animation:wk3row 6s ease infinite}
+.wk3-row:nth-of-type(1){top:42px}.wk3-row:nth-of-type(2){top:92px}.wk3-row:nth-of-type(3){top:142px}.wk3-row:nth-of-type(4){top:192px}
+.wk3-row img{width:34px;height:40px;object-fit:cover;border-radius:6px}
+.wk3-bar{height:6px;border-radius:99px;background:rgba(255,255,255,.1);overflow:hidden}
+.wk3-bar i{display:block;height:100%;width:var(--w);border-radius:99px;background:var(--green);transform-origin:left;animation:wk3bar 6s cubic-bezier(.16,1,.3,1) infinite;animation-delay:calc(var(--i)*.15s)}
+@keyframes wk3bar{0%,6%{transform:scaleX(0)}40%,88%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.wk3-row em{font-style:normal;font-size:10px;font-weight:700;color:var(--green);white-space:nowrap;opacity:0;animation:wk3tag 6s ease infinite}
+.wk3-row.off em{color:rgba(255,255,255,.55)}
+@keyframes wk3tag{0%,45%{opacity:0;transform:translateX(6px)}52%,88%{opacity:1;transform:none}100%{opacity:0}}
+.wk3-row.off{animation-name:wk3off}
+@keyframes wk3off{0%,48%{opacity:1}56%,88%{opacity:.4}100%{opacity:1}}
+.wk3-row.off .wk3-bar i{background:rgba(255,255,255,.4)}
+.wk3-loop{text-align:center;margin-top:22px;font-size:14px;font-weight:600;color:var(--green-text)}
+.wk3-loop span{font-weight:400;color:var(--faint);margin-left:8px;font-size:12px}
+/* spill bare når synlig */
+.wk3 *{animation-play-state:paused}
+.wk3.play *{animation-play-state:running}
+@media (max-width:900px){
+  .wk3{grid-template-columns:1fr;gap:0;margin-top:32px}
+  .wk3-link{width:2px;height:28px;margin:0 auto;background:repeating-linear-gradient(180deg,var(--line) 0 6px,transparent 6px 12px)}
+  .wk3-link i{left:50%;top:0;margin:0 0 0 -4px;animation-name:wk3doty}
+  @keyframes wk3doty{0%{transform:translateY(0);opacity:0}15%,85%{opacity:1}100%{transform:translateY(24px);opacity:0}}
+  .wk3-vis{height:230px}
+  .wk3-card{padding:12px 12px 18px}
+  .wk3-row{padding:4px 8px 4px 4px}.wk3-row img{width:30px;height:34px}
+  .wk3-row:nth-of-type(1){top:40px}.wk3-row:nth-of-type(2){top:86px}.wk3-row:nth-of-type(3){top:132px}.wk3-row:nth-of-type(4){top:178px}
+}
+@media (prefers-reduced-motion:reduce){
+  .wk3 *{animation:none!important}
+  .wk3-chip{opacity:1;transform:translate(var(--x),0)}
+  .wk3-ang,.wk3-ad,.wk3-row em{opacity:1}
+  .wk3-src{display:none}
+  .wk3-ad{transform:translate(var(--x),-50%) rotate(var(--r))}
+  .wk3-row.off{opacity:.4}
+  .wk3-funnel,.wk3-link i{display:none}
+}
+</style>
     <noscript><style>.rv,.stg{opacity:1!important;transform:none!important}.tile svg polyline{animation:none!important;stroke-dashoffset:0!important}</style></noscript>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -878,59 +946,23 @@ fbq('track','PageView');
       <h2 class="rv">Sånn ser en uke ut hos oss.</h2>
       <p class="lede rv">Google og Meta finner kundene. Jobben vår er å gi dem nok gode annonser å velge mellom, hver eneste uke.</p>
     </div>
-    <div class="how-grid">
-      <div class="steps rv" id="steps">
-        <div class="step on" tabindex="0"><span class="sbar"><i></i></span>
-          <small>Mandag</small>
-          <h3>Vi graver i det kundene dine allerede sier</h3>
-          <p>Søketermer, kommentarfelt, anmeldelser og konkurrentenes annonser. Der ligger vinklene vi bygger annonser på. Samme dag får du mandagsrapporten.</p>
-        </div>
-        <div class="step" tabindex="0"><span class="sbar"><i></i></span>
-          <small>Midt i uka</small>
-          <h3>Hver vinkel blir en egen annonse</h3>
-          <p>Vi lager ikke én annonse og håper. Hver vinkel fra researchen skrives til den kundetypen den passer for, så vet vi hvem annonsen snakker til før Jona lager den.</p>
-        </div>
-        <div class="step" tabindex="0"><span class="sbar"><i></i></span>
-          <small>Fredag</small>
-          <h3>10+ nye annonser er live</h3>
-          <p>De som leverer får mer budsjett. De andre skrur vi av, og neste uke bygger på det vi lærte denne.</p>
-        </div>
-      </div>
-      <div class="wk-stage rv" aria-hidden="true">
-        <div class="wk-p on" data-k="0">
-          <div class="wk-h"><span class="wk-dot"></span>Hva kundene sier</div>
-          <div class="wk-chips">
-            <span style="--i:0"><small>Søk</small>takvask pris</span>
-            <span style="--i:1"><small>Kommentar</small>«Blir taket ødelagt av høytrykk?»</span>
-            <span style="--i:2"><small>Søk</small>solbriller baby uv</span>
-            <span style="--i:3"><small>Anmeldelse</small>«Kom som avtalt, rent og ryddig»</span>
-            <span style="--i:4"><small>Kommentar</small>«Sitter de på en ettåring?»</span>
-            <span style="--i:5"><small>Konkurrent</small>«Fri frakt over 499 kr»</span>
-          </div>
-          <div class="wk-angles"><div class="wk-arrow" style="--i:6">↓ blir til vinkler vi lager annonser på</div><div class="wk-ang"><span style="--i:7">Tvil</span><span style="--i:8">Tid</span><span style="--i:9">Pris</span><span style="--i:10">Anbefaling</span></div></div>
-        </div>
-        <div class="wk-p" data-k="1">
-          <div class="wk-h"><span class="wk-dot"></span>Én annonse per vinkel</div>
-          <div class="wk-fan">
-            <figure style="--i:0;--r:-9deg;--x:-44%"><img src="/img/wall/ur-2.webp" alt="" loading="lazy"><figcaption>Tvil</figcaption></figure>
-            <figure style="--i:1;--r:-3deg;--x:-15%"><img src="/img/wall/bg-1.webp" alt="" loading="lazy"><figcaption>Tid</figcaption></figure>
-            <figure style="--i:2;--r:3deg;--x:15%"><img src="/img/wall/leid-2.webp" alt="" loading="lazy"><figcaption>Pris</figcaption></figure>
-            <figure style="--i:3;--r:9deg;--x:44%"><img src="/img/wall/mokki-2.webp" alt="" loading="lazy"><figcaption>Anbefaling</figcaption></figure>
-          </div>
-        </div>
-        <div class="wk-p" data-k="2">
-          <div class="wk-h"><span class="wk-dot live"></span>Live i Meta og Google</div>
-          <div class="wk-race">
-            <div class="wk-row win" style="--i:0;--w:92%"><img src="/img/wall/ur-2.webp" alt="" loading="lazy"><div><b>Tvil</b><span class="wk-bar"><i></i></span></div><em>Mer budsjett</em></div>
-            <div class="wk-row win" style="--i:1;--w:74%"><img src="/img/wall/bg-1.webp" alt="" loading="lazy"><div><b>Tid</b><span class="wk-bar"><i></i></span></div><em>Mer budsjett</em></div>
-            <div class="wk-row" style="--i:2;--w:38%"><img src="/img/wall/leid-2.webp" alt="" loading="lazy"><div><b>Pris</b><span class="wk-bar"><i></i></span></div><em>Test videre</em></div>
-            <div class="wk-row off" style="--i:3;--w:14%"><img src="/img/wall/mokki-2.webp" alt="" loading="lazy"><div><b>Anbefaling</b><span class="wk-bar"><i></i></span></div><em>Skrudd av</em></div>
-          </div>
-          <div class="wk-note">Illustrasjon. Vi bytter ut det som ikke leverer, hver uke.</div>
-        </div>
-      </div>
-      <div class="wk-cap" id="wkCap" aria-live="polite"><b></b><span></span></div>
+    <div class="wk3" id="wk3" aria-hidden="false">
+      <article class="wk3-card rv">
+        <div class="wk3-vis v1" aria-hidden="true"><span class="wk3-chip" style="--i:0">«takvask pris»</span><span class="wk3-chip" style="--i:1">«Blir taket ødelagt?»</span><span class="wk3-chip" style="--i:2">«solbriller baby»</span><span class="wk3-chip" style="--i:3">«Kom som avtalt»</span><span class="wk3-funnel"></span><div class="wk3-angs"><span class="wk3-ang" style="--i:0">Tvil</span><span class="wk3-ang" style="--i:1">Tid</span><span class="wk3-ang" style="--i:2">Pris</span><span class="wk3-ang" style="--i:3">Anbefaling</span></div></div>
+        <small>Mandag</small><h3>Vi graver i det kundene sier</h3><p>Søk, kommentarer og anmeldelser blir til vinkler.</p>
+      </article>
+      <span class="wk3-link" aria-hidden="true"><i></i></span>
+      <article class="wk3-card rv">
+        <div class="wk3-vis v2" aria-hidden="true"><span class="wk3-src">Tvil</span><figure class="wk3-ad" style="--i:0"><img src="/img/wall/ur-2.webp" alt="" loading="lazy" width="480" height="600"><figcaption>Tvil</figcaption></figure><figure class="wk3-ad" style="--i:1"><img src="/img/wall/bg-1.webp" alt="" loading="lazy" width="480" height="600"><figcaption>Tid</figcaption></figure><figure class="wk3-ad" style="--i:2"><img src="/img/wall/leid-2.webp" alt="" loading="lazy" width="480" height="600"><figcaption>Pris</figcaption></figure><figure class="wk3-ad" style="--i:3"><img src="/img/wall/mokki-2.webp" alt="" loading="lazy" width="480" height="600"><figcaption>Anbefaling</figcaption></figure></div>
+        <small>Midt i uka</small><h3>Hver vinkel blir en annonse</h3><p>Jona lager én annonse per vinkel og kundetype.</p>
+      </article>
+      <span class="wk3-link" aria-hidden="true"><i></i></span>
+      <article class="wk3-card rv">
+        <div class="wk3-vis v3" aria-hidden="true"><span class="wk3-live"><b></b>Live</span><div class="wk3-row win" style="--i:0;--w:92%"><img src="/img/wall/ur-2.webp" alt="" loading="lazy" width="480" height="600"><span class="wk3-bar"><i></i></span><em>Mer budsjett</em></div><div class="wk3-row win" style="--i:1;--w:74%"><img src="/img/wall/bg-1.webp" alt="" loading="lazy" width="480" height="600"><span class="wk3-bar"><i></i></span><em>Mer budsjett</em></div><div class="wk3-row " style="--i:2;--w:40%"><img src="/img/wall/leid-2.webp" alt="" loading="lazy" width="480" height="600"><span class="wk3-bar"><i></i></span></div><div class="wk3-row off" style="--i:3;--w:14%"><img src="/img/wall/mokki-2.webp" alt="" loading="lazy" width="480" height="600"><span class="wk3-bar"><i></i></span><em>Skrudd av</em></div></div>
+        <small>Fredag</small><h3>10+ nye annonser er live</h3><p>Vinnerne får mer budsjett. Resten skrur vi av.</p>
+      </article>
     </div>
+    <p class="wk3-loop rv">↻ Og så igjen neste uke. <span>Illustrasjon av en vanlig uke.</span></p>
   </div>
 </section>
 
@@ -1182,21 +1214,8 @@ fbq('track','PageView');
     els.forEach(function(e){io.observe(e);});
   }else{els.forEach(function(e){e.classList.add('in');});}
 
-  var steps=[].slice.call(document.querySelectorAll('#steps .step')),panes=[].slice.call(document.querySelectorAll('.wk-p')),cur=0,t=null,DUR=5000;
-  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function show(k){cur=k;var cp=document.getElementById('wkCap');if(cp){cp.classList.add('fade');setTimeout(function(){cp.querySelector('b').textContent=steps[k].querySelector('h3').textContent;cp.querySelector('span').textContent=steps[k].querySelector('p').textContent;cp.classList.remove('fade');},cp.textContent.trim()?180:0);}steps.forEach(function(s,j){s.classList.remove('on');s.style.setProperty('--dur',DUR+'ms');});void document.body.offsetWidth;steps[k].classList.add('on');panes.forEach(function(p,j){p.classList.toggle('on',j===k);});}
-  function tick(){show((cur+1)%steps.length);}
-  function start(){if(reduce)return;clearInterval(t);t=setInterval(tick,DUR);}
-  function stop(){clearInterval(t);t=null;}
-  steps.forEach(function(s,k){
-    s.addEventListener('click',function(){show(k);start();});
-    s.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show(k);start();}});
-    s.addEventListener('mouseenter',function(){if(window.matchMedia('(hover: hover)').matches){show(k);stop();s.classList.add('hold');}});
-    s.addEventListener('mouseleave',function(){if(window.matchMedia('(hover: hover)').matches){s.classList.remove('hold');show(cur);start();}});
-  });
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){if(!t){show(cur);start();}}else stop();});},{threshold:.35}).observe(document.getElementById('slik'));
-  }
+  var wk=document.getElementById('wk3');
+  if(wk&&'IntersectionObserver' in window){new IntersectionObserver(function(en){en.forEach(function(e){wk.classList.toggle('play',e.isIntersecting);});},{threshold:.2}).observe(wk);}else if(wk){wk.classList.add('play');}
 
   /* leadskjema -> Make-webhook. Prod: redirect til /takk/ (konvertering fires der). Test: inline takk. */
   var HOOK='https://hook.eu1.make.com/ftpj27p6hovtjk94x4hzt16yc6i9oroi';
