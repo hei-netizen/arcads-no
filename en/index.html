@@ -869,6 +869,10 @@ fbq('track','PageView');
 /* Caser som tallkort */
 .csx{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:40px}
 .csx-c{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line-soft);border-radius:var(--r-card);padding:22px 22px 20px;color:var(--ink);text-decoration:none;transition:border-color .25s,transform .35s cubic-bezier(.16,1,.3,1)}
+.csx-img{margin:-10px -10px 20px;border-radius:calc(var(--r-card) - 8px);overflow:hidden;aspect-ratio:4/5;background:var(--tint)}
+.csx-img img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+@media (hover:hover){.csx-c:hover .csx-img img{transform:scale(1.04)}}
+@media (max-width:640px){.csx-img{margin:-6px -4px 14px}}
 .csx-top{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:14px}
 .csx-top b{font-weight:600}
 .csx-top span{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green-text);background:var(--tint);border-radius:999px;padding:4px 9px}
@@ -883,7 +887,7 @@ fbq('track','PageView');
 @media (max-width:640px){.csx{gap:8px}.csx-c{padding:16px 14px}.csx-top{flex-direction:column;align-items:flex-start;gap:6px}.csx-n{font-size:34px;margin-top:20px}.csx-l{font-size:13px;margin-bottom:14px}.csx-s{font-size:12px;padding-top:12px}}
 .csx-s{min-height:calc(2.9em + 23px)}
 @media (max-width:640px){.csx-s{min-height:calc(2.9em + 13px)}.csx-l{min-height:3em;line-height:1.5}}
-@media (prefers-reduced-motion:reduce){.csx-c,.csx-go svg{transition:none}}
+@media (prefers-reduced-motion:reduce){.csx-c,.csx-go svg,.csx-img img{transition:none}}
 /* Kundechat: tettere og raskere (Victor 02.10.2026: «scroller bare forbi», «unødvendig spacing») */
 #resultater{padding-top:48px}
 .chatwin{margin-top:28px}
@@ -1306,10 +1310,10 @@ fbq('track','PageView');
       <p class="lede rv">The numbers come from our clients' own ad accounts.</p>
     </div>
     <div class="csx">
-      <a class="csx-c stg rv" style="--i:0" href="/en/caser/"><div class="csx-top"><b>Mokki</b><span>Online store</span></div><div class="csx-n">+127%</div><p class="csx-l">profit year over year</p><small class="csx-s">Google Ads in Norway, Germany and Denmark</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="csx-c stg rv" style="--i:1" href="/en/caser/"><div class="csx-top"><b>Leid.no</b><span>Online store</span></div><div class="csx-n">4.73x</div><p class="csx-l">ROAS</p><small class="csx-s">From broken tracking to profitable scaling</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="csx-c stg rv" style="--i:2" href="/en/caser/"><div class="csx-top"><b>Utvendig Renhold</b><span>Leads</span></div><div class="csx-n">549</div><p class="csx-l">leads in 90 days</p><small class="csx-s">NOK 163 per lead incl. branded searches</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="csx-c stg rv" style="--i:3" href="/en/caser/"><div class="csx-top"><b>Marlow</b><span>Leads</span></div><div class="csx-n">£17</div><p class="csx-l">cost per lead, best week</p><small class="csx-s">Starting point: leads weren't being measured</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="csx-c stg rv" style="--i:0" href="/en/caser/"><div class="csx-img"><img src="/img/caser/mokki-2.jpg" alt="Ad for Mokki" width="450" height="560" loading="lazy"></div><div class="csx-top"><b>Mokki</b><span>Online store</span></div><div class="csx-n">+127%</div><p class="csx-l">profit year over year</p><small class="csx-s">Google Ads in Norway, Germany and Denmark</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="csx-c stg rv" style="--i:1" href="/en/caser/"><div class="csx-img"><img src="/img/wall/leid-3.webp" alt="Ad for Leid.no" width="450" height="560" loading="lazy"></div><div class="csx-top"><b>Leid.no</b><span>Online store</span></div><div class="csx-n">4.73x</div><p class="csx-l">ROAS</p><small class="csx-s">From broken tracking to profitable scaling</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="csx-c stg rv" style="--i:2" href="/en/caser/"><div class="csx-img"><img src="/img/caser/qualipet-1.webp" alt="Ad for QualiPet" width="450" height="560" loading="lazy"></div><div class="csx-top"><b>QualiPet</b><span>Online store</span></div><div class="csx-n">10.3x</div><p class="csx-l">ROAS on the clearance sale</p><small class="csx-s">53 sales from NOK 3,148 in Meta ads</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="csx-c stg rv" style="--i:3" href="/en/caser/"><div class="csx-img"><img src="/img/caser/ur-1.jpg" alt="Ad for Utvendig Renhold" width="450" height="560" loading="lazy"></div><div class="csx-top"><b>Utvendig Renhold</b><span>Leads</span></div><div class="csx-n">549</div><p class="csx-l">leads in 90 days</p><small class="csx-s">NOK 163 per lead incl. branded searches</small><span class="csx-go">Read the case<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
     <div class="center"><a class="more-link" href="/en/caser/">Read the full case studies</a></div>
   </div>
