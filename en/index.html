@@ -720,6 +720,64 @@ footer{padding:56px 0 32px;border-top:1px solid var(--line-soft);font-size:14px;
   .wk3-row.off{opacity:.4}
   .wk3-funnel,.wk3-link i{display:none}
 }
+
+/* Alt vi gjør v2 (02.10.2026): levende kort */
+.lpws{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:6px}
+.lpw{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--paper);box-shadow:0 20px 40px -26px rgba(17,39,31,.35)}
+.lpw-bar{display:flex;gap:4px;padding:7px 9px;background:var(--surface,#F3F6F2);border-bottom:1px solid var(--line-soft)}
+.lpw-bar i{width:6px;height:6px;border-radius:50%;background:var(--line-2,#DDDAD1)}
+.lpw-v{height:250px;overflow:hidden}
+.lpw-v img{width:100%;display:block;animation:lpscroll 9s cubic-bezier(.65,0,.35,1) infinite alternate;animation-delay:calc(var(--i)*-2.2s)}
+@keyframes lpscroll{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 250px))}}
+.b-ads{display:flex;flex-direction:column}
+.admq{height:290px;display:grid;grid-template-columns:1fr 1fr;gap:8px;overflow:hidden;border-radius:12px;-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
+.admq-c{display:flex;flex-direction:column;gap:8px;animation:admqUp 18s linear infinite}
+.admq-c.down{animation-name:admqDown}
+.admq-c img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;display:block}
+@keyframes admqUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 4px))}}
+@keyframes admqDown{from{transform:translateY(calc(-50% - 4px))}to{transform:translateY(0)}}
+.bv{position:relative;height:120px;border-radius:12px;background:var(--deep);overflow:hidden;margin-bottom:16px}
+/* Google */
+.gq{position:absolute;left:12px;right:12px;top:12px;display:flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:7px 12px;font-size:12px;color:var(--ink)}
+.gq svg{width:14px;height:14px;fill:none;stroke:#9A9D97;stroke-width:2.4;flex:none}
+.gq-t{display:inline-block;overflow:hidden;white-space:nowrap;border-right:2px solid var(--ink);width:0;animation:gtype 6s steps(20,end) infinite}
+@keyframes gtype{0%{width:0}35%,90%{width:calc(var(--n)*1ch + 2px)}100%{width:0}}
+.gr{position:absolute;left:12px;right:12px;top:52px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:8px 10px;color:#fff;opacity:0;transform:translateY(8px);animation:gres 6s cubic-bezier(.16,1,.3,1) infinite}
+.gr small{display:block;font-size:10px;color:rgba(255,255,255,.6)}.gr small b{color:#fff}
+.gr span{display:block;font-size:12px;font-weight:600;color:#8AB4F8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@keyframes gres{0%,40%{opacity:0;transform:translateY(8px)}48%,90%{opacity:1;transform:none}100%{opacity:0}}
+.gpop{position:absolute;right:12px;top:46px;font-style:normal;font-size:11px;font-weight:700;color:#06231a;background:var(--green);border-radius:999px;padding:3px 9px;opacity:0;animation:gpop 6s cubic-bezier(.34,1.56,.64,1) infinite}
+@keyframes gpop{0%,58%{opacity:0;transform:scale(.6) translateY(6px)}64%,86%{opacity:1;transform:none}92%,100%{opacity:0;transform:translateY(-8px)}}
+/* Meta */
+.ph{position:absolute;left:50%;top:10px;width:96px;height:150px;margin-left:-48px;border-radius:16px;border:3px solid #2a3b33;background:#0b1a14;overflow:hidden}
+.ph-feed{display:flex;flex-direction:column;gap:6px;padding:6px;animation:phfeed 8s cubic-bezier(.65,0,.35,1) infinite}
+.ph-post{position:relative}
+.ph-post img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;display:block}
+.ph-like{position:absolute;right:4px;bottom:4px;color:#ff4d6d;font-size:13px;opacity:0;animation:phlike 8s ease infinite}
+.ph-post:nth-child(2) .ph-like{animation-delay:2.7s}.ph-post:nth-child(3) .ph-like{animation-delay:5.4s}
+@keyframes phfeed{0%,20%{transform:translateY(0)}33%,53%{transform:translateY(-111px)}66%,86%{transform:translateY(-222px)}100%{transform:translateY(-333px)}}
+@keyframes phlike{0%,10%{opacity:0;transform:scale(.4)}14%{opacity:1;transform:scale(1.3)}18%,28%{opacity:1;transform:scale(1)}34%,100%{opacity:0}}
+/* Sporing */
+.bv-s{padding:10px 12px}
+.ev{display:flex;align-items:center;gap:8px;height:22px;margin-bottom:4px;color:#fff;font-size:12px;opacity:0;transform:translateX(-8px);animation:evin 6s cubic-bezier(.16,1,.3,1) infinite;animation-delay:calc(var(--i)*.6s)}
+.ev b{font-weight:600}.ev small{color:rgba(255,255,255,.55);margin-left:auto}
+.ev-ok{width:16px;height:16px;border-radius:50%;background:var(--green) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2306231a' stroke-width='3.5'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/10px no-repeat;flex:none}
+@keyframes evin{0%{opacity:0;transform:translateX(-8px)}8%,80%{opacity:1;transform:none}90%,100%{opacity:0}}
+/* Rapport */
+.bv-r{padding:10px 12px 0}
+.rp-top{display:flex;justify-content:space-between;color:#fff;font-size:12px}.rp-top small{color:rgba(255,255,255,.55)}
+.bv-r svg{position:absolute;left:0;right:0;bottom:0;width:100%;height:76px}
+.rp-line{fill:none;stroke:var(--green);stroke-width:2.5;stroke-dasharray:100;stroke-dashoffset:100;stroke-linecap:round;stroke-linejoin:round;animation:rpdraw 6s cubic-bezier(.65,0,.35,1) infinite}
+.rp-area{fill:rgba(0,201,111,.14);opacity:0;animation:rparea 6s ease infinite}
+.rp-dot{fill:var(--green);opacity:0;animation:rpdot 6s ease infinite}
+@keyframes rpdraw{0%{stroke-dashoffset:100}50%,90%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+@keyframes rparea{0%,40%{opacity:0}55%,90%{opacity:1}100%{opacity:0}}
+@keyframes rpdot{0%,48%{opacity:0}54%,90%{opacity:1}100%{opacity:0}}
+#altbento *{animation-play-state:paused}
+#altbento.play *{animation-play-state:running}
+@media (max-width:900px){.lpws{grid-template-columns:repeat(2,1fr)}.lpws>.lpw:nth-child(n+3){display:none}.lpw-v{height:200px}.lpw-v img{animation-name:lpscrollm}@keyframes lpscrollm{0%,12%{transform:translateY(0)}88%,100%{transform:translateY(calc(-100% + 200px))}}}
+@media (max-width:640px){.bv{height:104px;margin-bottom:12px}.ph{height:132px}.admq{height:220px}.gr span{font-size:11px}.ev small{display:none}.ev{font-size:11px;white-space:nowrap}}
+@media (prefers-reduced-motion:reduce){#altbento *{animation:none!important}.gq-t{width:auto;border:0}.gr,.gpop,.ev,.rp-area,.rp-dot{opacity:1;transform:none}.rp-line{stroke-dashoffset:0}}
 </style>
     <noscript><style>.rv,.stg{opacity:1!important;transform:none!important}.tile svg polyline{animation:none!important;stroke-dashoffset:0!important}</style></noscript>
 <!-- Microsoft Clarity -->
@@ -973,29 +1031,19 @@ fbq('track','PageView');
       <h2 class="rv">We make everything ourselves. Not just the ads.</h2>
       <p class="lede rv">Campaigns, ads, landing pages and tracking. One partner, no middlemen, no freelancers to wait on.</p>
     </div>
-    <div class="bento">
+    <div class="bento" id="altbento">
       <div class="b b-lp stg rv" style="--i:0">
         <div class="b-head"><h3>Landing pages</h3><p>Campaign pages for your online store and landing pages with forms for leads. Built for ad traffic, not for your website menu, and they're yours.</p></div>
-        <div class="lps">
-          <img src="/img/lp/froyd.webp" alt="Landing page Arcads made for Frøyd" width="500" height="625" loading="lazy">
-          <img src="/img/lp/generalfinans.webp" alt="Landing page Arcads made for Generalfinans" width="500" height="625" loading="lazy">
-          <img src="/img/lp/qualipet.webp" alt="Landing page Arcads made for QualiPet" width="500" height="625" loading="lazy">
-          <img src="/img/lp/veldigrent.webp" alt="Landing page Arcads made for Veldigrent" width="500" height="625" loading="lazy">
-        </div>
+        <div class="lpws"><div class="lpw" style="--i:0"><span class="lpw-bar"><i></i><i></i><i></i></span><div class="lpw-v"><img src="/img/lp/froyd.webp" alt="Landing page Arcads made for Frøyd" width="500" height="625" loading="lazy"></div></div><div class="lpw" style="--i:1"><span class="lpw-bar"><i></i><i></i><i></i></span><div class="lpw-v"><img src="/img/lp/generalfinans.webp" alt="Landing page Arcads made for Generalfinans" width="500" height="625" loading="lazy"></div></div><div class="lpw" style="--i:2"><span class="lpw-bar"><i></i><i></i><i></i></span><div class="lpw-v"><img src="/img/lp/qualipet.webp" alt="Landing page Arcads made for QualiPet" width="500" height="625" loading="lazy"></div></div><div class="lpw" style="--i:3"><span class="lpw-bar"><i></i><i></i><i></i></span><div class="lpw-v"><img src="/img/lp/veldigrent.webp" alt="Landing page Arcads made for Veldigrent" width="500" height="625" loading="lazy"></div></div></div>
       </div>
       <a class="b b-ads stg rv" style="--i:1" href="/en/kreativ-produksjon/">
         <div class="b-head"><h3>Ads</h3><p>UGC video, statics and motion graphics. 10+ new ones a week, all made in-house.</p></div>
-        <div class="adgrid">
-          <img src="/img/wall/ur-4.webp" alt="UGC ad made by Arcads" width="480" height="600" loading="lazy">
-          <img src="/img/wall/mokki-5.webp" alt="Static ad made by Arcads" width="480" height="600" loading="lazy">
-          <img src="/img/wall/bg-2.webp" alt="Ad made by Arcads" width="480" height="600" loading="lazy">
-          <img src="/img/wall/leid-4.webp" alt="Ad made by Arcads" width="480" height="600" loading="lazy">
-        </div>
+        <div class="admq" aria-hidden="true"><div class="admq-c up"><img src="/img/wall/ur-4.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/mokki-5.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/bg-2.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/leid-4.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/ur-4.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/mokki-5.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/bg-2.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/leid-4.webp" alt="" width="480" height="600" loading="lazy"></div><div class="admq-c down"><img src="/img/wall/mokki-2.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/ur-1.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/bg-5.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/leid-1.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/mokki-2.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/ur-1.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/bg-5.webp" alt="" width="480" height="600" loading="lazy"><img src="/img/wall/leid-1.webp" alt="" width="480" height="600" loading="lazy"></div></div>
       </a>
-      <a class="b b-t stg rv" style="--i:2" href="/en/google-ads/"><h3>Google Ads</h3><p>Search, Shopping and Performance Max. Structure, negative keywords and scaling based on profitability, not clicks.</p><span class="more">Google Ads agency</span></a>
-      <a class="b b-t stg rv" style="--i:3" href="/en/meta-ads/"><h3>Meta Ads</h3><p>Facebook, Instagram and Snapchat, with ongoing testing of new ads every week.</p><span class="more">Meta Ads agency</span></a>
-      <div class="b b-t stg rv" style="--i:4"><h3>Tracking</h3><p>Google Ads, Meta Pixel and GA4 set up correctly first. Then you see every sale and every lead yourself.</p></div>
-      <div class="b b-t stg rv" style="--i:5"><h3>The Monday report</h3><p>Numbers you understand, every Monday. What was done, what it brought in, what we're doing next week.</p></div>
+      <a class="b b-t stg rv" style="--i:2" href="/en/google-ads/"><div class="bv bv-g" aria-hidden="true"><div class="gq"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="gq-t" style="--n:19">roof cleaning price</span></div><div class="gr"><small><b>Sponsored</b> · utvendigrenhold.no</small><span>Roof cleaning at a fixed price in 10 regions</span></div><em class="gpop">+1 lead</em></div><h3>Google Ads</h3><p>Search, Shopping and Performance Max. Structure, negative keywords and scaling based on profitability, not clicks.</p><span class="more">Google Ads agency</span></a>
+      <a class="b b-t stg rv" style="--i:3" href="/en/meta-ads/"><div class="bv bv-m" aria-hidden="true"><div class="ph"><div class="ph-feed"><div class="ph-post"><img src="/img/wall/bg-1.webp" alt="" loading="lazy" width="480" height="600"><span class="ph-like">♥</span></div><div class="ph-post"><img src="/img/wall/mokki-3.webp" alt="" loading="lazy" width="480" height="600"><span class="ph-like">♥</span></div><div class="ph-post"><img src="/img/wall/ur-2.webp" alt="" loading="lazy" width="480" height="600"><span class="ph-like">♥</span></div><div class="ph-post"><img src="/img/wall/bg-1.webp" alt="" loading="lazy" width="480" height="600"><span class="ph-like">♥</span></div></div></div></div><h3>Meta Ads</h3><p>Facebook, Instagram and Snapchat, with ongoing testing of new ads every week.</p><span class="more">Meta Ads agency</span></a>
+      <div class="b b-t stg rv" style="--i:4"><div class="bv bv-s" aria-hidden="true"><div class="ev" style="--i:0"><span class="ev-ok"></span><b>Purchase</b><small>NOK 1,249</small></div><div class="ev" style="--i:1"><span class="ev-ok"></span><b>Form sent</b><small>roof cleaning</small></div><div class="ev" style="--i:2"><span class="ev-ok"></span><b>Call</b><small>2 min</small></div><div class="ev" style="--i:3"><span class="ev-ok"></span><b>Purchase</b><small>NOK 689</small></div></div><h3>Tracking</h3><p>Google Ads, Meta Pixel and GA4 set up correctly first. Then you see every sale and every lead yourself.</p></div>
+      <div class="b b-t stg rv" style="--i:5"><div class="bv bv-r" aria-hidden="true"><div class="rp-top"><b>Leads</b><small>Week 40</small></div><svg viewBox="0 0 200 70" preserveAspectRatio="none"><path class="rp-area" d="M0 62 L25 56 L50 58 L75 46 L100 48 L125 34 L150 30 L175 18 L200 10 L200 70 L0 70Z"/><path class="rp-line" pathLength="100" d="M0 62 L25 56 L50 58 L75 46 L100 48 L125 34 L150 30 L175 18 L200 10"/><circle class="rp-dot" cx="200" cy="10" r="4"/></svg></div><h3>The Monday report</h3><p>Numbers you understand, every Monday. What was done, what it brought in, what we're doing next week.</p></div>
     </div>
     <div class="ctarow rv"><a class="btn" href="#book"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>See what it would look like for you</a><p class="micro">You see the proposal before you've paid a single krone.</p></div>
   </div>
@@ -1215,6 +1263,8 @@ fbq('track','PageView');
     els.forEach(function(e){io.observe(e);});
   }else{els.forEach(function(e){e.classList.add('in');});}
 
+  var ab=document.getElementById('altbento');
+  if(ab&&'IntersectionObserver' in window){new IntersectionObserver(function(en){en.forEach(function(e){ab.classList.toggle('play',e.isIntersecting);});},{threshold:.15}).observe(ab);}else if(ab){ab.classList.add('play');}
   var wk=document.getElementById('wk3');
   if(wk&&'IntersectionObserver' in window){new IntersectionObserver(function(en){en.forEach(function(e){wk.classList.toggle('play',e.isIntersecting);});},{threshold:.2}).observe(wk);}else if(wk){wk.classList.add('play');}
 
