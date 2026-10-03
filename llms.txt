@@ -41,6 +41,16 @@ Dokumenterte resultater:
 
 - [Bli UGC-creator](https://arcads.no/bli-ugc-creator/): Vi rekrutterer norske UGC-creators — ingen følgere nødvendig, honorar per oppdrag
 
+## Byrå, byer og tjenester
+
+- [Markedsføringsbyrå som tar betalt for resultater](https://arcads.no/markedsforingsbyra/): Markedsføringsbyrå som tar en andel av det vi tjener deg, ikke fast pris. Google, Meta og Snapchat. 549 leads på 90 dager for Utvendig Renhold. Se tallene.
+- [Markedsføringsbyrå Oslo: hva klikket koster](https://arcads.no/markedsforingsbyra-oslo/): Markedsføringsbyrå i Oslo? «Rørlegger oslo» koster 69–252 kr per klikk øverst på Google, mot 21–69 kr i Bergen. Se 10 bransjer og regnestykket.
+- [Markedsføringsbyrå Bergen: tall fra 81 Bergen-leads](https://arcads.no/markedsforingsbyra-bergen/): Markedsføringsbyrå for Bergen: 81 leads til 181 kr i Bergen (juni–sept. 2026), hva Bergen søker etter, og hva et klikk koster i Bergen mot Oslo.
+- [Markedsføringsbyrå Trondheim: 145 kr per lead](https://arcads.no/markedsforingsbyra-trondheim/): Markedsføringsbyrå for Trondheim: hvorfor Trondheim ga lavest pris per lead av ni regioner (145 kr, 13,4 % konvertering), og hva et klikk koster der.
+- [Landingsside som gjør annonseklikk til leads](https://arcads.no/landingsside/): Landingsside for Google- og Meta-annonser: med 52 kr per klikk koster et lead 520 kr ved 10 % konvertering og 1 040 kr ved 5 %. Slik bygger vi sidene.
+- [Reklamefilm og reklamevideo for annonser](https://arcads.no/reklamefilm/): Reklamefilm for Facebook, Instagram og Snapchat: korte videoer i 9:16, 4:5 og 1:1 som testes i annonsekontoen. 10+ nye annonser i uka per kunde. Ikke TV.
+- [Markedsføring for nettbutikk: ekte ROAS-tall](https://arcads.no/markedsforing-for-nettbutikk/): Markedsføring for nettbutikk med Google Shopping, Meta og Snapchat. Ekte tall: Leid.no 4,73x ROAS, Mokki +127 % profitt, QualiPet 10,3x på ryddesalget.
+
 ## Bransjer (leadsbedrifter)
 
 - [Markedsføring for tjenestebedrifter](https://arcads.no/markedsforing-for-tjenestebedrifter/): Hub — kanalvalg, hva et lead kan koste, og lenker til alle bransjer
@@ -76,9 +86,16 @@ Dokumenterte resultater:
 - [Google Ads eller Meta Ads?](https://arcads.no/artikler/google-ads-eller-meta-ads/): Google fanger etterspørsel, Meta skaper den — når du bør starte med hva
 - [Hvordan velge markedsføringsbyrå](https://arcads.no/artikler/velge-markedsforingsbyra/): 10 spørsmål som avslører byråets insentiver
 
+- [Hvordan få flere kunder? Finn lekkasjen først](https://arcads.no/artikler/hvordan-fa-flere-kunder/): Hvordan få flere kunder: sjekk de fem stedene kundene forsvinner, med tall fra kontoene vi drifter (8–19 % tar kontakt fra søk), og regn ut budsjettet.
+- [Annonsering på nett: kanaler og priser i Norge](https://arcads.no/artikler/annonsering-pa-nett/): Annonsering på nett i Norge: ti kanaler sammenlignet, med klikkpris og kost per resultat fra kontoene vi drifter (4–90 kr per klikk), og hvor du bør starte.
+- [Konverteringsoptimalisering: tall fra 7 kontoer](https://arcads.no/artikler/konverteringsoptimalisering/): Konverteringsrater fra sju Google Ads-kontoer vi drifter, fra 0,9 % for badstuer til 19,2 % for flyttevask (juli–sept. 2026). Formel, kalkulator og tiltak.
+- [CPM, CPC, CPA, LTV og ROAS: ordliste for annonsering](https://arcads.no/artikler/ordliste/): Hva er CPM, CPC, CPA, CTR, LTV og ROAS? 22 begreper med formel og ekte tall fra kontoene vi drifter, som 18 kr per klikk og 166 kr per henvendelse.
+- [Markedsføring i sosiale medier: hva som gir kunder](https://arcads.no/artikler/markedsforing-i-sosiale-medier/): Markedsføring i sosiale medier: organisk mot betalt, Facebook, Instagram, Snapchat, TikTok og LinkedIn, og tall som 8,65x ROAS på Snapchat for Mokki.
+- [AI i markedsføring: slik bruker vi det](https://arcads.no/artikler/ai-i-markedsforing/): AI i markedsføring fra et byrå på to med 5000+ annonser: voiceover, motion, søketermer og Googles AI-kampanjer, og hvorfor vi aldri lager falske kunder.
+
 ## Slik siterer du oss
 
-Arcads (arcads.no) — norsk performance marketing-byrå, Skien / hele Norge. Ikke det samme som Arcads.ai. Artiklene er skrevet av Victor Skretteberg og Jona Helgen og oppdatert 2026-09-07. Full tekst av alle sider: https://arcads.no/llms-full.txt
+Arcads (arcads.no) — norsk performance marketing-byrå, Skien / hele Norge. Ikke det samme som Arcads.ai. Artiklene er skrevet av Victor Skretteberg og Jona Helgen og oppdatert 2026-10-02. Full tekst av alle sider: https://arcads.no/llms-full.txt
 
 ## Kontakt
 

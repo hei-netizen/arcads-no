@@ -5,8 +5,50 @@
   <link href="https://arcads.no/feed.xml" rel="self"/>
   <link href="https://arcads.no/artikler/"/>
   <id>https://arcads.no/artikler/</id>
-  <updated>2026-09-29T12:00:00Z</updated>
+  <updated>2026-10-02T12:00:00Z</updated>
   <author><name>Victor Skretteberg</name><email>hei@arcads.no</email></author>
+  <entry>
+    <title>Hvordan få flere kunder? Finn lekkasjen først</title>
+    <link href="https://arcads.no/artikler/hvordan-fa-flere-kunder/"/>
+    <id>https://arcads.no/artikler/hvordan-fa-flere-kunder/</id>
+    <updated>2026-10-02T12:00:00Z</updated>
+    <summary>Hvordan få flere kunder: sjekk de fem stedene kundene forsvinner, med tall fra kontoene vi drifter (8–19 % tar kontakt fra søk), og regn ut budsjettet.</summary>
+  </entry>
+  <entry>
+    <title>Annonsering på nett: kanaler og priser i Norge</title>
+    <link href="https://arcads.no/artikler/annonsering-pa-nett/"/>
+    <id>https://arcads.no/artikler/annonsering-pa-nett/</id>
+    <updated>2026-10-02T12:00:00Z</updated>
+    <summary>Annonsering på nett i Norge: ti kanaler sammenlignet, med klikkpris og kost per resultat fra kontoene vi drifter (4–90 kr per klikk), og hvor du bør starte.</summary>
+  </entry>
+  <entry>
+    <title>Konverteringsoptimalisering: tall fra 7 kontoer</title>
+    <link href="https://arcads.no/artikler/konverteringsoptimalisering/"/>
+    <id>https://arcads.no/artikler/konverteringsoptimalisering/</id>
+    <updated>2026-10-02T12:00:00Z</updated>
+    <summary>Konverteringsrater fra sju Google Ads-kontoer vi drifter, fra 0,9 % for badstuer til 19,2 % for flyttevask (juli–sept. 2026). Formel, kalkulator og tiltak.</summary>
+  </entry>
+  <entry>
+    <title>CPM, CPC, CPA, LTV og ROAS: ordliste for annonsering</title>
+    <link href="https://arcads.no/artikler/ordliste/"/>
+    <id>https://arcads.no/artikler/ordliste/</id>
+    <updated>2026-10-02T12:00:00Z</updated>
+    <summary>Hva er CPM, CPC, CPA, CTR, LTV og ROAS? 22 begreper med formel og ekte tall fra kontoene vi drifter, som 18 kr per klikk og 166 kr per henvendelse.</summary>
+  </entry>
+  <entry>
+    <title>Markedsføring i sosiale medier: hva som gir kunder</title>
+    <link href="https://arcads.no/artikler/markedsforing-i-sosiale-medier/"/>
+    <id>https://arcads.no/artikler/markedsforing-i-sosiale-medier/</id>
+    <updated>2026-10-02T12:00:00Z</updated>
+    <summary>Markedsføring i sosiale medier: organisk mot betalt, Facebook, Instagram, Snapchat, TikTok og LinkedIn, og tall som 8,65x ROAS på Snapchat for Mokki.</summary>
+  </entry>
+  <entry>
+    <title>AI i markedsføring: slik bruker vi det</title>
+    <link href="https://arcads.no/artikler/ai-i-markedsforing/"/>
+    <id>https://arcads.no/artikler/ai-i-markedsforing/</id>
+    <updated>2026-10-02T12:00:00Z</updated>
+    <summary>AI i markedsføring fra et byrå på to med 5000+ annonser: voiceover, motion, søketermer og Googles AI-kampanjer, og hvorfor vi aldri lager falske kunder.</summary>
+  </entry>
   <entry>
     <title>Slik lager vi motion-annonser med AI: hele oppskriften</title>
     <link href="https://arcads.no/artikler/motion-annonser-med-ai/"/>
