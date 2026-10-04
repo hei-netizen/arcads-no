@@ -963,6 +963,22 @@ fbq('track','PageView');
 .hx-chips input:focus-visible+span{outline:2px solid var(--deep);outline-offset:2px}
 @media (hover:hover){.hx-chips span:hover{border-color:var(--deep)}}
 .hx-chips span:active{transform:scale(.97)}
+.hx-offer{margin:18px 0 2px;padding:18px;border-radius:16px;background:var(--tint);box-shadow:inset 0 0 0 1.5px var(--deep);animation:hxIn .5s cubic-bezier(.16,1,.3,1)}
+.hx-offer-h .hx-tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--green-text);background:#E3F5EA;border-radius:999px;padding:4px 9px}
+.hx-offer-h b{display:block;font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin-top:10px;line-height:1.25}
+.hx-offer-h p{font-size:14px;color:var(--muted);margin-top:6px;line-height:1.5}
+.hx-offer .hx-step{animation:none}
+.hx-offer #hxBudget{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.hx-offer #hxVerdict{border-top:1px solid var(--line);animation:hxIn .45s cubic-bezier(.16,1,.3,1)}
+.hx-offer .hx-q{display:flex;align-items:center;gap:8px;font-size:15px}
+.hx-n{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--deep);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:700}
+.hx-offer .hx-chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hx-offer .hx-chips label{display:block}
+.hx-offer .hx-chips span{display:block;text-align:center;background:var(--paper);padding:12px 10px;font-size:15px;font-weight:500}
+.hx-offer .hx-fields input{background:var(--paper)}
+.hx-offer .hx-v b{font-size:17px}
+.hx-offer .hx-v p{font-size:14px}
+.hx-trust{font-size:12px;color:var(--faint);text-align:center;margin-top:8px}
 .hx-v b{display:block;font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--ink)}
 .hx-v p{font-size:15px;margin-top:6px}
 .hx-v p a{color:var(--green-text);text-decoration:underline}
@@ -1026,11 +1042,13 @@ fbq('track','PageView');
         <div class="hx-ads" id="hxAds" hidden>
           <div class="hx-ads-top"><b>Dette kjører dere på Google nå</b><a id="hxAdsAll" href="https://adstransparency.google.com/" target="_blank" rel="noopener">Se alle<svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>
           <div class="hx-ads-grid" id="hxAdsGrid"></div>
-          <p class="hx-ads-cta">Vil du se hvordan vi ville laget dem? Svar på spørsmålet under, så lager vi tre nye annonser for dere, gratis.</p>
+          
         </div>
         <p class="hx-note" id="hxNote" hidden></p>
+        <div class="hx-offer" id="hxOffer" hidden>
+        <div class="hx-offer-h"><span class="hx-tag">Gratis · ingen binding</span><b>Få tre nye annonser for <span id="hxOd"></span></b><p>Vi lager tre annonser og en landingsside ut fra det vi fant. To korte steg, tar 20 sekunder.</p></div>
         <div class="hx-step" id="hxBudget" hidden>
-          <p class="hx-q">Hvor mye bruker dere på annonser i måneden?</p>
+          <p class="hx-q"><span class="hx-n">1</span>Hvor mye bruker dere på annonser i måneden?</p>
           <div class="hx-chips">
             <label><input type="radio" name="hxb" value="Annonserer ikke ennå"><span>Ikke ennå</span></label>
             <label><input type="radio" name="hxb" value="Under 30 000 kr"><span>Under 30 000</span></label>
@@ -1041,7 +1059,7 @@ fbq('track','PageView');
         <div class="hx-step" id="hxVerdict" hidden>
           <div class="hx-v"><b id="hxVh"></b><p id="hxVp"></p></div>
           <form id="hxLead" novalidate>
-            <p class="hx-q" id="hxLq"></p>
+            <p class="hx-q"><span class="hx-n">2</span><span id="hxLq"></span></p>
             <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="hx-fields">
               <input name="name" placeholder="Navn" autocomplete="name" aria-label="Navn">
@@ -1049,9 +1067,11 @@ fbq('track','PageView');
               <input name="phone" type="tel" placeholder="Telefon" autocomplete="tel" inputmode="tel" aria-label="Telefon">
             </div>
             <button class="btn wide" type="submit" id="hxSend"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Send meg forslaget</span></button>
+            <p class="hx-trust">Ingen binding. Du hører fra oss på e-post innen et par dager.</p>
             <p class="hx-err" id="hxErr2" role="alert"></p>
           </form>
           <div class="hx-thanks" id="hxThanks" hidden><b>Takk! Forslaget er på vei.</b><p>Vi ser på nettsiden og lager annonser og en landingsside for dere. Du hører fra oss på e-post i løpet av et par dager.</p></div>
+        </div>
         </div>
       </div>
     </div>
@@ -1626,7 +1646,7 @@ f.addEventListener('submit',function(e){
   var n=0;try{var log=JSON.parse(localStorage.getItem('hxlog')||'[]').filter(function(t){return Date.now()-t<6e5;});n=log.length;log.push(Date.now());localStorage.setItem('hxlog',JSON.stringify(log));}catch(x){}
   if(n>=8){err.textContent='Du har sjekket mange sider på kort tid. Prøv igjen om litt.';return;}
   err.textContent='';busy=true;host=h;R=null;G=null;btn.disabled=true;btn.querySelector('.lbl').textContent='Sjekker...';
-  $('hxDomain').textContent=h;$('hxType').textContent='';state.textContent='Sjekker';note.hidden=true;bud.hidden=true;ver.hidden=true;
+  $('hxDomain').textContent=h;$('hxType').textContent='';state.textContent='Sjekker';note.hidden=true;bud.hidden=true;ver.hidden=true;$('hxOffer').hidden=true;$('hxOd').textContent=h;
   [].forEach.call(res.querySelectorAll('li[data-k]'),function(li){li.className='';li.querySelector('em').textContent='';li.querySelector('small').textContent='';});
   [].forEach.call(document.querySelectorAll('input[name=hxb]'),function(r){r.checked=false;});
   $('hxStamp').hidden=true;$('hxAds').hidden=true;
@@ -1649,16 +1669,17 @@ f.addEventListener('submit',function(e){
       var nt=[];
       if(!R.ok)nt.push('Vi fikk ikke lest nettsiden automatisk. Sjekk at adressen er riktig. Stemmer den, ser vi på siden selv, noen sider stenger ute slike sjekker.');
       else{
-        if(R.extra.length)nt.push('Fant også: '+R.extra.join(', ')+'.');}
+        }
       if(nt.length){note.textContent=nt.join(' ');note.hidden=false;}
-      bud.hidden=false;
+      bud.hidden=false;var of=$('hxOffer');of.hidden=false;
+      setTimeout(function(){var r=of.getBoundingClientRect();if(r.top>innerHeight-160)of.scrollIntoView({behavior:rm?'auto':'smooth',block:'center'});},rm?0:350);
     },Math.max(t1,t2)+120);
   });
 });
 function verdict(b){
   var big=/30 000 til|Over/.test(b),miss=[];
   if(R.ok){if(!R.meta)miss.push('Meta-piksel');if(!R.ads)miss.push('Google Ads-sporing');}
-  var h,p,q='Vil du se hvordan annonsene ville sett ut for '+host+'?';
+  var h,p,q='Hvor skal vi sende forslaget?';
   if(!big){h='Kanskje litt tidlig for oss.';p='Vi passer best når annonsene kan bære 30&nbsp;000 kr eller mer i måneden, ellers blir andelen vår for liten til at det går opp. Les gjerne <a href="/artikler/">artiklene våre</a> først. Planlegger dere å øke, send likevel.';q='Planlegger dere å øke? Legg igjen kontaktinfo.';}
   else if(!R.ok){h='Budsjettet holder.';p='Vi fikk ikke lest siden automatisk, så vi sjekker sporingen selv før vi tar kontakt.';}
   else if(!miss.length){h='Dere er klare.';p='Sporingen er på plass, så vi kan begynne å teste nye annonser fra første uke.';}
