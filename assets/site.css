@@ -393,3 +393,6 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:600;line-height:1.08;letter-spac
 
 /* Lange norske sammensetninger (markedsføringsbyrå, konverteringsoptimalisering) skal deles riktig på smale skjermer */
 @media (max-width:600px){h1,.h-lg{-webkit-hyphens:auto;hyphens:auto;overflow-wrap:break-word}}
+
+/* Rask Flytting-logoen finnes bare i 250 px: vis maks 125 px så den er skarp på retina */
+img[src$="raskflytting.png"]{max-width:125px!important;height:auto!important}

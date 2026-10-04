@@ -215,3 +215,6 @@ section [id]{scroll-margin-top:90px}
 .ah h1{-webkit-hyphens:auto;hyphens:auto}
 .artmeta>span:not(.am-rt){flex:1 1 0;min-width:0}
 @media(min-width:961px){.artmeta>span:not(.am-rt){flex:0 1 auto}}
+/* hele annonsen synlig i mobilrammene (annonsene er 4:5, rammene 9:16) */
+.v-ph{display:flex;align-items:center;background:#0b1410}
+.v-ph img{height:auto;aspect-ratio:4/5;object-fit:contain;border-radius:14px}

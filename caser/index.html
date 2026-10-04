@@ -354,7 +354,7 @@ h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;letter-spac
 .chead .lbadge{width:46px;height:46px;border-radius:12px;background:var(--dark);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;flex-shrink:0}
 .cads{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
 .cad{position:relative;margin:0;border-radius:var(--rs);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/5;background:var(--surface);box-shadow:var(--sh-sm)}
-.cad img{width:100%;height:100%;object-fit:cover;display:block}
+.cad img{width:100%;height:100%;object-fit:contain;display:block;background:#EEF1EE}
 .cad figcaption{position:absolute;left:10px;bottom:10px;background:rgba(255,255,255,.94);border-radius:var(--pill);padding:4px 12px;font-size:0.72rem;font-weight:700;color:var(--ink)}
 @media(max-width:760px){.cads{gap:8px}.cad figcaption{left:6px;bottom:6px;padding:3px 9px;font-size:0.62rem}}
 @media(max-width:760px){.case{padding:46px 0}.cgrid2{grid-template-columns:1fr}.chgrid{grid-template-columns:1fr}.cbox{padding:22px}}
