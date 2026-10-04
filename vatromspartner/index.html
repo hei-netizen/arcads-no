@@ -310,6 +310,13 @@ h1,h2,h3{overflow-wrap:break-word}
 .offer .tile .big{height:auto;min-height:104px;line-height:1.05;hyphens:manual;overflow-wrap:normal;word-break:keep-all}
 @media(max-width:480px){.offer .tile .big{min-height:84px}}
 
+/* ---- Våtromspartner: tre kolonner som faktisk kollapser på mobil ----
+   (inline grid-template-columns slo ut malens media query og ga 33 px overflyt) */
+.split.trekol{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media(max-width:860px){.split.trekol{grid-template-columns:1fr}}
+.rev-card{min-width:0}
+.rev-card h4,.rev-card p{overflow-wrap:break-word;hyphens:auto}
+
 /* ---- Våtromspartner: galleri over ferdige bad ---- */
 .galleri{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:30px}
 .galleri figure{margin:0;border-radius:var(--rs);overflow:hidden;background:var(--sand);border:1px solid var(--line)}
@@ -519,7 +526,7 @@ h1,h2,h3{overflow-wrap:break-word}
       <h2 class="h-lg" style="margin:12px 0 10px">Tre ting, og de henger sammen</h2>
       <p class="lede">Derfor kan vi ta hele badet uten at du m&aring; hente inn flere firmaer.</p>
     </div>
-    <div class="split" style="margin-top:34px;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+    <div class="split trekol" style="margin-top:34px">
       <div class="rev-card">
         <img src="img/bad-6926.jpg" alt="Ferdig bad med flislagt dusjsone, LED-speil og vegghengt toalett" style="width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--sand);border-radius:var(--rs);margin-bottom:14px" loading="lazy">
         <h4 style="font-size:1.08rem;margin-bottom:7px">Totalrenovering av bad</h4>
