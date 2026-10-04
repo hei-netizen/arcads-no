@@ -26,6 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/blocks.css">
+<link rel="stylesheet" href="/assets/article.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://arcads.no/en/artikler/ai-i-markedsforing/#article","headline":"AI in marketing: how we use it every day, and where we don’t","description":"We are two people and have made over 5,000 ads. That doesn’t happen without AI. Here is what artificial intelligence actually does for us, where a human always checks, when Google’s own AI campaigns fool you, and what we never use AI for.","inLanguage":"en","datePublished":"2026-10-02","dateModified":"2026-10-02","author":{"@type":"Person","name":"Victor Skretteberg","url":"https://arcads.no/en/om-oss/victor-skretteberg/","sameAs":["https://www.linkedin.com/in/victor-skretteberg-b7a562299/"]},"publisher":{"@id":"https://arcads.no/#org"},"mainEntityOfPage":"https://arcads.no/en/artikler/ai-i-markedsforing/","image":"https://arcads.no/img/founders.jpg"},{"@type":"WebPage","@id":"https://arcads.no/en/artikler/ai-i-markedsforing/#webpage","url":"https://arcads.no/en/artikler/ai-i-markedsforing/","name":"AI in marketing: how we use it","inLanguage":"en","datePublished":"2026-10-02","dateModified":"2026-10-02","isPartOf":{"@id":"https://arcads.no/#website"},"primaryImageOfPage":"https://arcads.no/img/founders.jpg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arcads.no/en/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://arcads.no/en/artikler/"},{"@type":"ListItem","position":3,"name":"AI in marketing","item":"https://arcads.no/en/artikler/ai-i-markedsforing/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What can AI be used for in marketing?","acceptedAnswer":{"@type":"Answer","text":"Drafts and groundwork: voiceover, animated ads, first drafts of ad copy, sorting search terms and laying out reports. Among other tools, we use Claude Code, Remotion and ElevenLabs for motion ads with a Norwegian voice. Decisions about budget and what the ads promise are made by a human."}},{"@type":"Question","name":"Does Norwegian AI voiceover work in ads?","acceptedAnswer":{"@type":"Answer","text":"With the right model and script, yes. We use ElevenLabs eleven_v4 with language code “no”, write few and long sentences, make 3 to 6 versions and always listen ourselves before publishing. The older multilingual model drifted into Danish on Norwegian text."}},{"@type":"Question","name":"Are Performance Max and broad match AI?","acceptedAnswer":{"@type":"Answer","text":"Yes, both are run by Google’s machine learning. They can deliver good results: a PMax campaign for retargeting gave leads at NOK 116 against NOK 211 on search. But it also showed ads in mobile games and children’s videos, so placements and search terms need regular checks."}},{"@type":"Question","name":"Do you use AI-generated images of customers?","acceptedAnswer":{"@type":"Answer","text":"No. The people in our ads are real, we never show a person who isn’t the one speaking, and we don’t use fake reviews or quotes. Claims in the ads are fact-checked against the client’s own website."}},{"@type":"Question","name":"Can AI replace a marketing agency?","acceptedAnswer":{"@type":"Answer","text":"It can do much of the groundwork, which is why we can be two people. But AI guesses, and it doesn’t know whether tracking counts correctly, whether a lead became a customer or whether a claim is true. Someone still has to read the numbers and take responsibility for the decisions."}}]}]}
 </script>
@@ -53,7 +54,7 @@ fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1573565776638708&ev=PageView&noscript=1"/></noscript>
 </head>
-<body>
+<body><div class="rprog" aria-hidden="true"></div>
 <div class="topstrip"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Recommended by our clients <span class="ts-x">&middot; 100% of clients grew their bottom line</span> <span>&middot; 100% performance-based</span></div>
 <header class="nav">
   <div class="nav-inner">
@@ -72,12 +73,12 @@ fbq('track','PageView');
 <section class="phero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/artikler/">Articles</a> / AI in marketing</nav>
-    <div class="phero-grid">
+    <div class="ah"><div class="ah-t"><div class="phero-grid">
     <div>
     <span class="eyebrow">AI in marketing</span>
     <h1>AI in marketing: how we use it every day, and where we don’t</h1>
     <p class="lede">We are two people and have made over 5,000 ads. That doesn’t happen without AI. Here is what artificial intelligence actually does for us, where a human always checks, when Google’s own AI campaigns fool you, and what we never use AI for.</p>
-    <p class="artmeta">By <a href="/en/om-oss/victor-skretteberg/" style="color:inherit;text-decoration:underline">Victor Skretteberg</a>, Arcads &middot; Published October 2, 2026</p>
+    <p class="artmeta"><img class="am-av" src="/img/victor-hero.webp" alt="" width="30" height="30"><span>By <a href="/en/om-oss/victor-skretteberg/" style="color:inherit;text-decoration:underline">Victor Skretteberg</a>, Arcads &middot; Published October 2, 2026</span><span class="am-rt">5 min read</span></p>
     <div class="kortsvar"><b>Short answer:</b> AI in marketing is useful for drafts and groundwork: voiceover, animated ads, going through search terms and first drafts of ad copy. It needs human control, because AI guesses. Google’s AI campaigns are an example: a Performance Max campaign gave us leads at NOK 116 against NOK 211 on search, but also showed ads in mobile games and children’s videos on YouTube. We never use AI to create fake customers or reviews.</div>
     <div class="cta-row"><a href="#book" class="cta"><span class="t">See what it would look like for you<span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span><span class="sub">Proposal by email within a couple of days</span></a></div>
     <div class="faces">
@@ -85,8 +86,7 @@ fbq('track','PageView');
       <div class="ftxt"><b>Victor &amp; Jona</b>you talk to the two of us, not a salesperson</div>
     </div>
     </div>
-    <div class="realads"><figure><img src="/img/wall/ur-3.webp" alt="Ad we made for Utvendig Renhold" width="480" height="600" loading="lazy"><figcaption>Utvendig Renhold</figcaption></figure><figure><img src="/img/wall/mokki-5.webp" alt="Ad we made for Mokki" width="480" height="600" loading="lazy"><figcaption>Mokki</figcaption></figure><figure><img src="/img/wall/bg-4.webp" alt="Ad we made for Badstugutta" width="480" height="600" loading="lazy"><figcaption>Badstugutta</figcaption></figure><p class="realads-cap">Real ads we made for our clients</p></div>
-    </div>
+    </div></div><div class="ahv"><div class="vcard v-ai"><div class="msg"><span class="ic">VS</span><p>Review the search terms in the move-out cleaning account.</p></div><div class="sug"><span>“cheap move-out cleaning oslo”<small>NOK 298 · 0 leads → negative keyword</small></span><em class="">Approved</em></div><div class="sug"><span>PMax placements in mobile games<small>exclude from the campaign</small></span><em class="">Approved</em></div><div class="sug"><span>Raise the budget by 30%<small>suggested by AI</small></span><em class="n">Victor only</em></div></div><p class=ahv-cap>AI sorts, we decide</p></div></div>
   </div>
 </section>
 <div class="proofband"><div class="stats"><div class="s"><div class="n">2</div><div class="t">people in the agency, Victor and Jona</div></div><div class="s"><div class="n">5000+</div><div class="t">ads made for our clients</div></div><div class="s"><div class="n">10+</div><div class="t">new ads a week per client</div></div><div class="s"><div class="n">NOK 116</div><div class="t">per lead from Google’s AI campaign (PMax retargeting, June–Sept 2026)</div></div></div></div>
@@ -103,8 +103,8 @@ fbq('track','PageView');
 </div></section>
 <section class="section">
   <div class="wrap">
-    <div class="prose">
-<h2>What AI does for us, and what a human does</h2>
+    <details class="tocm"><summary>In this article</summary><ol><li><a href="#what-ai-does-for-us-and-what-a-human-does">What AI does for us, and what a human does</a></li><li><a href="#ad-production-where-ai-saves-the-most-time">Ad production: where AI saves the most time</a></li><li><a href="#analysis-ai-sorts-we-decide">Analysis: AI sorts, we decide</a></li><li><a href="#google-s-own-ai-campaigns-and-when-they-fool-you">Google’s own AI campaigns, and when they fool you</a></li><li><a href="#what-we-don-t-use-ai-for">What we don’t use AI for</a></li><li><a href="#should-you-use-ai-in-your-own-marketing">Should you use AI in your own marketing?</a></li></ol></details><div class="artbody"><aside class="toc" aria-label="Contents"><div class="th">Contents</div><ol><li><a href="#what-ai-does-for-us-and-what-a-human-does">What AI does for us, and what a human does</a></li><li><a href="#ad-production-where-ai-saves-the-most-time">Ad production: where AI saves the most time</a></li><li><a href="#analysis-ai-sorts-we-decide">Analysis: AI sorts, we decide</a></li><li><a href="#google-s-own-ai-campaigns-and-when-they-fool-you">Google’s own AI campaigns, and when they fool you</a></li><li><a href="#what-we-don-t-use-ai-for">What we don’t use AI for</a></li><li><a href="#should-you-use-ai-in-your-own-marketing">Should you use AI in your own marketing?</a></li></ol></aside><div class="prose">
+<h2 id="what-ai-does-for-us-and-what-a-human-does">What AI does for us, and what a human does</h2>
 <p>We use AI for the work that used to take the most time and the least judgement. The decisions that cost a client money, we make ourselves. This is how the work is split:</p>
 <table>
   <thead><tr><th>Task</th><th>What AI does</th><th>What we do</th></tr></thead>
@@ -118,7 +118,7 @@ fbq('track','PageView');
   </tbody>
 </table>
 <p>The last point is deliberate. We let AI suggest, but not press buttons that change something already running in a client’s account. A mistake there costs real money before anyone notices.</p>
-<h2>Ad production: where AI saves the most time</h2>
+<h2 id="ad-production-where-ai-saves-the-most-time">Ad production: where AI saves the most time</h2>
 <p>Motion ads with Norwegian voiceover are the clearest example. We make them without a designer, without filming and without After Effects, using six tools:</p>
 <ul>
   <li><b>Claude Code</b> writes the script, plans the scenes and codes the animation.</li>
@@ -135,10 +135,11 @@ fbq('track','PageView');
 </ul>
 <p>The full recipe, with the templates we use, is in <a href="/en/artikler/motion-annonser-med-ai/">how we make motion ads with AI</a>. We also make statics and UGC in-house, but the UGC videos have real people in front of the camera. <a href="/en/kreativ-produksjon/">More on creative production.</a></p>
 
-<h2>Analysis: AI sorts, we decide</h2>
+<h2 id="analysis-ai-sorts-we-decide">Analysis: AI sorts, we decide</h2>
 <p>Every week a script pulls the search terms from the Google Ads accounts we manage. AI sorts them and suggests negative keywords, placements to exclude and ads that underperform. The suggestions come to us, not straight into the account. An example of what the review finds: in the move-out cleaning account, the search “billig flyttevask oslo” (cheap move-out cleaning Oslo) cost NOK 298 in June and July without a single lead. It is now a negative keyword.</p>
 <p>The numbers in the tables on arcads.no, like the conversion rates in the <a href="/en/artikler/ordliste/">glossary</a>, are pulled the same way, straight from the Google Ads API, and read by a human before they are published.</p>
-<h2>Google’s own AI campaigns, and when they fool you</h2>
+<div class="midcta"><p><b>Want to see what we would do for you?</b> Send us your website and get a free proposal for ads and a landing page.</p><a href="#book">Get the proposal →</a></div>
+<h2 id="google-s-own-ai-campaigns-and-when-they-fool-you">Google’s own AI campaigns, and when they fool you</h2>
 <p>Much of “AI in marketing” already happens inside the ad account, whether you want it or not. Three things are now run by Google’s machine learning:</p>
 <ul>
   <li><b>Performance Max</b> chooses where ads appear: Search, Shopping, YouTube, Gmail and the Display network.</li>
@@ -148,7 +149,7 @@ fbq('track','PageView');
 <p>All three can work well. A Performance Max campaign set up for retargeting delivered leads at NOK 116 for move-out cleaning in Oslo, against NOK 211 on search, and NOK 310 against NOK 467 for the moving company (9 June–6 Sept 2026). But the same campaign also showed ads in mobile games and in children’s videos on YouTube. Nobody there books move-out cleaning. That is why we check the placement report regularly and exclude what doesn’t belong.</p>
 <p>Broad match has the same weakness: Google interprets the search, and the interpretation can be wrong. It is the search terms report that shows what you actually pay for, not the keyword list.</p>
 <div class="callout"><p><b>AI learns from what you count.</b> Smart bidding is never better than the conversions it gets. When we started with Leid.no, tracking counted far more purchases than actually happened. An algorithm optimising toward the wrong numbers just gets faster at being wrong. That is why we set up tracking before spending a single krone on ads.</p></div>
-<h2>What we don’t use AI for</h2>
+<h2 id="what-we-don-t-use-ai-for">What we don’t use AI for</h2>
 <ul>
   <li><b>Fake customers.</b> We don’t make AI images or AI video of “happy customers”. The people in our ads are real, and we never show a person who isn’t the one speaking.</li>
   <li><b>Fake reviews and quotes.</b> The quotes we use are real and named, like “We’re getting more leads than ever!! Amazing” from Elliot at Badstugutta.</li>
@@ -158,10 +159,10 @@ fbq('track','PageView');
 </ul>
 <p>The reason is simple: an ad that promises something the business can’t deliver brings expensive clicks and disappointed customers. And an AI-generated “customer” who gets exposed costs more trust than it ever won.</p>
 
-<h2>Should you use AI in your own marketing?</h2>
+<h2 id="should-you-use-ai-in-your-own-marketing">Should you use AI in your own marketing?</h2>
 <p>Yes, for drafts and groundwork, with one rule: nothing goes out until a human has read it, heard it or seen it. Start with whatever takes the most time for you today. For many, that is ad copy and images in several formats. Then go through the campaigns Google already runs with AI, and check placements and search terms.</p>
 <div class="callout"><p><b>Would you rather we did it?</b> We take a share of what we earn you, not a fixed monthly fee. If you don’t earn more, you pay us nothing. For it to work for both sides, the ads need to generate enough for our share to be around NOK 20–30,000 a month. That is why we work with established businesses with at least NOK 30,000 a month in ad budget. <a href="/en/pris/">How it is calculated.</a></p></div>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -422,5 +423,6 @@ fbq('track','PageView');
 </footer>
 
 <script src="/assets/blocks.js" defer></script>
+<script src="/assets/article.js" defer></script>
 </body>
 </html>

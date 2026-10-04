@@ -26,6 +26,7 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap"></noscript>
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/blocks.css">
+<link rel="stylesheet" href="/assets/article.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://arcads.no/en/artikler/hva-er-en-god-roas/#article","headline":"What is a good ROAS? Breakeven, VAT and POAS explained","description":"4x ROAS is a common target, but the number says nothing about whether you’re making money. That depends on your margin, whether the value in your ad account includes VAT or not, and whether purchases are counted correctly.","inLanguage":"en","datePublished":"2026-08-18","dateModified":"2026-09-28","author":{"@type":"Person","name":"Victor Skretteberg","url":"https://arcads.no/en/om-oss/victor-skretteberg/","sameAs":["https://www.linkedin.com/in/victor-skretteberg-b7a562299/"]},"publisher":{"@id":"https://arcads.no/#org"},"mainEntityOfPage":"https://arcads.no/en/artikler/hva-er-en-god-roas/","image":"https://arcads.no/img/founders.jpg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arcads.no/en/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://arcads.no/en/artikler/"},{"@type":"ListItem","position":3,"name":"What is a good ROAS?","item":"https://arcads.no/en/artikler/hva-er-en-god-roas/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is ROAS?","acceptedAnswer":{"@type":"Answer","text":"ROAS (Return On Ad Spend) is conversion value divided by ad spend. A ROAS of 4x means NOK 4 in revenue for every krone spent on ads. That’s revenue, not profit."}},{"@type":"Question","name":"What is a good ROAS?","acceptedAnswer":{"@type":"Answer","text":"It depends on your gross margin. Breakeven ROAS is 1 divided by the margin: 3.33x at 30% margin, 2.5x at 40% and 2x at 50%. If the value in your ad account includes VAT, multiply by 1.25. A good ROAS is well above your own breakeven."}},{"@type":"Question","name":"Do I need to account for VAT when I calculate ROAS?","acceptedAnswer":{"@type":"Answer","text":"Yes, if your online store sends the order value including 25% VAT to Google Ads or Meta. Then breakeven is 1.25 times higher. With a 40% margin, breakeven becomes about 3.1x instead of 2.5x. Alternatively, you can send the value excluding VAT to your ad accounts."}},{"@type":"Question","name":"What is POAS?","acceptedAnswer":{"@type":"Answer","text":"POAS (Profit On Ad Spend) is gross profit divided by ad spend. Above 1 means the ads are making money. It’s a better target than ROAS when margins vary a lot between products."}},{"@type":"Question","name":"Why does my ROAS look better than my bottom line?","acceptedAnswer":{"@type":"Answer","text":"The most common reasons are that the value includes VAT, that tracking counts the same purchase several times, that branded searches are mixed in, or that several channels take credit for the same sale. Check the numbers against your online store or your accounts."}}]}]}
 </script>
@@ -53,7 +54,7 @@ fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1573565776638708&ev=PageView&noscript=1"/></noscript>
 </head>
-<body>
+<body><div class="rprog" aria-hidden="true"></div>
 
 <div class="topstrip"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Recommended by our clients <span class="ts-x">&middot; 100% of our clients grew their bottom line</span> <span>&middot; 100% performance-based</span></div>
 
@@ -75,12 +76,12 @@ fbq('track','PageView');
 <section class="phero">
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a> / <a href="/en/artikler/">Articles</a> / What is a good ROAS?</nav>
-    <div class="phero-grid roas-hero">
+    <div class="ah"><div class="ah-t"><div class="phero-grid roas-hero">
     <div>
     <span class="eyebrow">Article and calculator</span>
     <h1>What is a good ROAS?</h1>
     <p class="lede">4x ROAS is a common target, but the number says nothing about whether you’re making money. That depends on your margin, whether the value in your ad account includes VAT or not, and whether purchases are counted correctly.</p>
-    <p class="artmeta">By <a href="/en/om-oss/victor-skretteberg/" style="color:inherit;text-decoration:underline">Victor Skretteberg</a>, Arcads &middot; Updated September 28, 2026</p>
+    <p class="artmeta"><img class="am-av" src="/img/victor-hero.webp" alt="" width="30" height="30"><span>By <a href="/en/om-oss/victor-skretteberg/" style="color:inherit;text-decoration:underline">Victor Skretteberg</a>, Arcads &middot; Updated September 28, 2026</span><span class="am-rt">3 min read</span></p>
     <div class="kortsvar"><b>Short answer:</b> ROAS (return on ad spend) is revenue from ads divided by what the ads cost: NOK 50,000 in sales on NOK 10,000 of ads is a 5x ROAS. A good ROAS is well above breakeven, and breakeven ROAS is 1 divided by your gross margin. With a 40% margin, breakeven is 2.5x. If your ad account reports revenue including 25% VAT, you need to multiply by 1.25, and breakeven becomes about 3.1x.</div>
     </div>
     <div class="calc" id="roas-kalkulator">
@@ -114,17 +115,17 @@ fbq('track','PageView');
       function t(v){inkl=v;bi.setAttribute('aria-pressed',v);be.setAttribute('aria-pressed',!v);u()}
       m.oninput=u;r.oninput=u;bi.onclick=function(){t(true)};be.onclick=function(){t(false)};u();})();
       </script>
-    </div>
+    </div></div><div class="ahv"><div class="vcard v-formula"><div class="vh"><b>ROAS</b></div><div class="fx"><span class="frac"><span>NOK 50,000 sales</span><span>NOK 10,000 ads</span></span><span>=</span><span class="eq">5x</span></div><div class="kv"><div><b>2.5x</b>breakeven at 40% margin</div><div><b>approx. 3.1x</b>breakeven incl. 25% VAT</div></div></div><p class=ahv-cap>ROAS = revenue ÷ ad spend</p></div></div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="prose">
-<h2>The formula</h2>
+    <details class="tocm"><summary>In this article</summary><ol><li><a href="#the-formula">The formula</a></li><li><a href="#breakeven-roas">Breakeven ROAS</a></li><li><a href="#vat-is-the-most-common-calculation-mistake">VAT is the most common calculation mistake</a></li><li><a href="#double-counting-and-branded-searches">Double counting and branded searches</a></li><li><a href="#poas-when-margins-vary">POAS: when margins vary</a></li><li><a href="#in-summary">In summary</a></li></ol></details><div class="artbody"><aside class="toc" aria-label="Contents"><div class="th">Contents</div><ol><li><a href="#the-formula">The formula</a></li><li><a href="#breakeven-roas">Breakeven ROAS</a></li><li><a href="#vat-is-the-most-common-calculation-mistake">VAT is the most common calculation mistake</a></li><li><a href="#double-counting-and-branded-searches">Double counting and branded searches</a></li><li><a href="#poas-when-margins-vary">POAS: when margins vary</a></li><li><a href="#in-summary">In summary</a></li></ol></aside><div class="prose">
+<h2 id="the-formula">The formula</h2>
       <p><b>ROAS = conversion value / ad spend.</b> If you get NOK 40,000 in sales from NOK 10,000 in ads, you have 4x ROAS. The problem is that ROAS measures revenue, and what you live on is what’s left after cost of goods, shipping and fees.</p>
 
-      <h2>Breakeven ROAS</h2>
+      <h2 id="breakeven-roas">Breakeven ROAS</h2>
       <div class="callout"><p><b>Breakeven ROAS = 1 / gross margin.</b> That’s the ROAS at which the ads exactly break even. If the value in your ad account includes 25% VAT, breakeven is 1.25 times higher.</p></div>
       <div class="tblwrap"><table>
         <tr><th>Gross margin</th><th>Breakeven, value excl. VAT</th><th>Breakeven, value incl. VAT</th><th>4x ROAS incl. VAT is then</th></tr>
@@ -138,7 +139,7 @@ fbq('track','PageView');
       <div class="chart"><div class="ct">Breakeven ROAS when the value in the account includes VAT</div><div class="cs">Bars above the dashed line mean 4x ROAS is a loss.</div><svg viewBox="0 0 600 260" role="img" aria-label="Breakeven ROAS incl. VAT by gross margin compared with 4x ROAS"><line x1="40" x2="594" y1="226.0" y2="226.0" stroke="#F1EFE9"/><text x="32" y="230.0" text-anchor="end" font-size="11" fill="#8A8D87">0x</text><line x1="40" x2="594" y1="196.9" y2="196.9" stroke="#F1EFE9"/><text x="32" y="200.9" text-anchor="end" font-size="11" fill="#8A8D87">1x</text><line x1="40" x2="594" y1="167.7" y2="167.7" stroke="#F1EFE9"/><text x="32" y="171.7" text-anchor="end" font-size="11" fill="#8A8D87">2x</text><line x1="40" x2="594" y1="138.6" y2="138.6" stroke="#F1EFE9"/><text x="32" y="142.6" text-anchor="end" font-size="11" fill="#8A8D87">3x</text><line x1="40" x2="594" y1="109.4" y2="109.4" stroke="#F1EFE9"/><text x="32" y="113.4" text-anchor="end" font-size="11" fill="#8A8D87">4x</text><line x1="40" x2="594" y1="80.3" y2="80.3" stroke="#F1EFE9"/><text x="32" y="84.3" text-anchor="end" font-size="11" fill="#8A8D87">5x</text><line x1="40" x2="594" y1="51.1" y2="51.1" stroke="#F1EFE9"/><text x="32" y="55.1" text-anchor="end" font-size="11" fill="#8A8D87">6x</text><line x1="40" x2="594" y1="22.0" y2="22.0" stroke="#F1EFE9"/><text x="32" y="26.0" text-anchor="end" font-size="11" fill="#8A8D87">7x</text><rect x="57.8" y="43.9" width="56" height="182.1" rx="6" fill="#E8705F"/><text x="85.8" y="37.9" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">6.25x</text><text x="85.8" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">20%</text><rect x="149.5" y="104.6" width="56" height="121.4" rx="6" fill="#E8705F"/><text x="177.5" y="98.6" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">4.17x</text><text x="177.5" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">30%</text><rect x="241.2" y="134.9" width="56" height="91.1" rx="6" fill="#0E7A48"/><text x="269.2" y="128.9" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">3.13x</text><text x="269.2" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">40%</text><rect x="332.8" y="153.1" width="56" height="72.9" rx="6" fill="#0E7A48"/><text x="360.8" y="147.1" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">2.50x</text><text x="360.8" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">50%</text><rect x="424.5" y="165.3" width="56" height="60.7" rx="6" fill="#0E7A48"/><text x="452.5" y="159.3" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">2.08x</text><text x="452.5" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">60%</text><rect x="516.2" y="174.0" width="56" height="52.0" rx="6" fill="#0E7A48"/><text x="544.2" y="168.0" text-anchor="middle" font-size="12" font-weight="600" fill="#071812">1.79x</text><text x="544.2" y="248" text-anchor="middle" font-size="12" fill="#5C5F5A">70%</text><line x1="40" x2="594" y1="109.4" y2="109.4" stroke="#071812" stroke-width="2" stroke-dasharray="6 5"/><text x="592" y="102.4" text-anchor="end" font-size="12" font-weight="600" fill="#071812">Your ROAS: 4x</text></svg><div class="lg"><span style="--c:#E8705F">4x is a loss</span><span style="--c:#0E7A48">4x is a profit</span><span style="--c:#8A8D87">x-axis: gross margin</span></div></div>
       <p>Want to run your own numbers? Use <a href="#roas-kalkulator">the calculator at the top of the page</a>.</p>
 
-      <h2>VAT is the most common calculation mistake</h2>
+      <h2 id="vat-is-the-most-common-calculation-mistake">VAT is the most common calculation mistake</h2>
       <p>Many online stores send the order value including VAT to Google Ads and Meta. An order of NOK 1,250 is then NOK 1,000 in revenue for you, and a reported ROAS of 4x is really 3.2x.</p>
       <div class="receipt">
         <div class="rc"><small>The order in your online store</small><div class="rl"><span>Order value</span><span>NOK 1,250</span></div><div class="rl"><span>VAT 25%</span><span>−NOK 250</span></div><div class="rl t"><span>Your revenue</span><span>NOK 1,000</span></div></div>
@@ -147,7 +148,8 @@ fbq('track','PageView');
       </div>
       <p> You have two options: send the value excluding VAT (and ideally excluding shipping) to your ad accounts, or multiply breakeven by 1.25. Check what’s being sent by placing a test order and comparing the value in Google Ads with the order in your online store.</p>
 
-      <h2>Double counting and branded searches</h2>
+      <div class="midcta"><p><b>Want to see what we would do for you?</b> Send us your website and get a free proposal for ads and a landing page.</p><a href="#book">Get the proposal →</a></div>
+<h2 id="double-counting-and-branded-searches">Double counting and branded searches</h2>
       <div class="acct"><div class="al">From our accounts</div><p>When we started with Leid.no, tracking counted far more purchases than actually happened. In another online store we manage, two conversion actions counted the same purchase. The ROAS in Google looked twice as good as it really was.</p></div>
       <ul>
         <li><b>Double counting.</b> Tracking can count the same purchase several times. Always check the number of purchases and revenue in Google Ads against your online store or your accounts.</li>
@@ -155,7 +157,7 @@ fbq('track','PageView');
         <li><b>Several channels take credit for the same sale.</b> Google and Meta both count the sale if the customer has been through both. The sum of ROAS across channels then ends up higher than reality. Also measure total revenue divided by total ad spend (often called MER). When we ran Leid.no, ROAS was 4.73x across channels.</li>
       </ul>
 
-      <h2>POAS: when margins vary</h2>
+      <h2 id="poas-when-margins-vary">POAS: when margins vary</h2>
       <p><b>POAS (Profit On Ad Spend) = gross profit / ad spend.</b> Above 1 means the ads are making money. It’s a better target when margins vary a lot between products.</p>
       <p>A hypothetical example: an online store has one campaign with products at 20% margin and 5x ROAS, and one with products at 60% margin and 3x ROAS. The first has a POAS of 1.0 and breaks even. The second has a POAS of 1.8 and makes money, even though its ROAS is lower. If you steer on ROAS alone, you move budget in the wrong direction.</p>
       <div class="vs">
@@ -164,7 +166,7 @@ fbq('track','PageView');
       </div>
       <p>To steer on POAS, the ad account needs to receive gross profit as the conversion value instead of revenue, for example through a custom setup in your online store. The alternative is to split products into campaigns by margin, with different ROAS targets. That’s described in <a href="/en/artikler/google-shopping/">the article on Google Shopping</a>.</p>
 
-      <h2>In summary</h2>
+      <h2 id="in-summary">In summary</h2>
       <ol class="checklist">
         <li>Calculate your gross margin after cost of goods, shipping and fees.</li>
         <li>Breakeven ROAS = 1 / margin. Multiply by 1.25 if the value in the account includes VAT.</li>
@@ -172,7 +174,7 @@ fbq('track','PageView');
         <li>If margins vary, steer on POAS or split your campaigns by margin.</li>
         <li>Check your ROAS against your online store or your accounts before you trust it.</li>
       </ol>
-    </div>
+    </div></div>
   </div>
 </section>
 
@@ -451,5 +453,6 @@ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isInter
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 </script>
 <script src="/assets/blocks.js" defer></script>
+<script src="/assets/article.js" defer></script>
 </body>
 </html>
