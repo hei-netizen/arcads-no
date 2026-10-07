@@ -101,6 +101,21 @@ section{padding:88px 0}
 .tl p{margin-top:22px;color:var(--muted)}
 .tl p b{color:var(--ink)}
 
+/* første kjøp */
+.fk{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+@media(max-width:760px){.fk{grid-template-columns:1fr}}
+.fkc{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px}
+.fkc small{font-size:13px;color:var(--faint)}
+.fkp{font-size:24px;font-weight:600;letter-spacing:-.02em;margin:6px 0 18px}
+.fkb{height:12px;border-radius:99px;background:var(--soft);overflow:hidden}
+.fkf{height:100%;width:var(--w);background:var(--green);border-radius:99px;transform:scaleX(0);transform-origin:left;transition:transform 1s var(--out) .5s}
+.fkc.in .fkf{transform:scaleX(1)}
+.fkr{display:flex;justify-content:space-between;align-items:baseline;margin-top:18px;padding-top:16px;border-top:1px solid var(--soft)}
+.fkr>span{color:var(--muted)}
+.fkr b{font-size:clamp(32px,4vw,42px);font-weight:600;letter-spacing:-.03em;color:var(--green-text)}
+.fkc.z .fkp{color:var(--muted)}.fkc.z .fkr b{color:var(--faint)}
+.fkc.z{background:var(--surface);border-color:var(--surface)}
+
 /* bevis */
 .proof{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
 @media(max-width:760px){.proof{grid-template-columns:1fr}}
@@ -145,10 +160,10 @@ footer{padding:30px 0 44px;color:var(--faint);font-size:14px;text-align:center}
 footer a{text-decoration:underline}
 
 @media (prefers-reduced-motion:reduce){
-  .rv,.bar .n,.bar .e,.panel.g .row,.fill,.mk,.pc polyline,.steps .ln,.st i{transition:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}
+  .rv,.bar .n,.bar .e,.panel.g .row,.fill,.mk,.pc polyline,.fkf,.steps .ln,.st i{transition:none!important;opacity:1!important;transform:none!important;stroke-dashoffset:0!important}
 }
 </style>
-<noscript><style>.rv,.panel.g .row{opacity:1!important;transform:none!important}.bar .n,.bar .e,.fill,.steps .ln{transform:none!important}.mk{opacity:1!important}.pc polyline{stroke-dashoffset:0!important}</style></noscript>
+<noscript><style>.rv,.panel.g .row{opacity:1!important;transform:none!important}.bar .n,.bar .e,.fill,.fkf,.steps .ln{transform:none!important}.mk{opacity:1!important}.pc polyline{stroke-dashoffset:0!important}</style></noscript>
 <!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
 <script type="text/javascript">
 (function(c,l,a,r,i,t,y){
@@ -166,12 +181,12 @@ footer a{text-decoration:underline}
   <div class="wrap">
     <span class="eyebrow rv" style="--d:0"><span class="av"><img src="/img/victor-hero.webp" alt="Victor"><img src="/img/jona-hero.webp" alt="Jona"></span>Victor og Jona, Arcads</span>
     <h1 class="rv" style="--d:1">Flere nye kunder til Acceleroot.<br><span class="dim">Dere betaler bare for dem.</span></h1>
-    <p class="lede rv" style="--d:2">Vi kjører annonsene på Meta og Google og lager alt selv. Vi tar 10 % av salget til nye kunder. Kundene dere har i dag gir oss 0 kr.</p>
+    <p class="lede rv" style="--d:2">Vi kjører annonsene på Meta og Google og lager alt selv. Vi tar 10 % av første kjøp til hver nye kunde. Kundene dere har i dag gir oss 0 kr.</p>
     <div class="ctas rv" style="--d:3"><a class="btn" href="https://cal.com/arcads/30min" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>Ta en prat med Victor</a></div>
 
     <div class="chart rv" id="chart" style="--d:4">
       <div class="chart-h"><b>Kundene deres, måned for måned</b>
-        <div class="leg"><span><i style="background:var(--grey)"></i>Eksisterende kunder · 0 kr til oss</span><span><i style="background:var(--green)"></i>Nye fra annonsene · 10 %</span></div></div>
+        <div class="leg"><span><i style="background:var(--grey)"></i>Eksisterende kunder · 0 kr til oss</span><span><i style="background:var(--green)"></i>Nye fra annonsene · 10 % av første kjøp</span></div></div>
       <div class="bars">
         <div class="bar" style="--i:0"><div class="n" style="height:4%"></div><div class="e" style="height:52%"></div></div>
         <div class="bar" style="--i:1"><div class="n" style="height:10%"></div><div class="e" style="height:52%"></div></div>
@@ -190,7 +205,7 @@ footer a{text-decoration:underline}
 <section style="padding-top:20px">
   <div class="wrap">
     <div class="stats rv">
-      <div class="stat"><b><span class="cnt" data-to="10">0</span> %</b><span>av salget til nye kunder</span></div>
+      <div class="stat"><b><span class="cnt" data-to="10">0</span> %</b><span>av første kjøp til nye kunder</span></div>
       <div class="stat"><b><span class="cnt" data-to="0">0</span> kr</b><span>i fast månedspris</span></div>
       <div class="stat"><b><span class="cnt" data-to="0">0</span> mnd</b><span>binding. Avslutt når dere vil</span></div>
     </div>
@@ -223,27 +238,23 @@ footer a{text-decoration:underline}
           <div class="row" style="--i:2">Ny kunde · klikket på annonse<em>+10 %</em></div>
           <div class="row" style="--i:3">Ny kunde · klikket på annonse<em>+10 %</em></div>
         </div>
-        <p class="pfoot">Ny e-post som ikke står på listen, og et sporet klikk på annonsene våre.</p>
+        <p class="pfoot">Ny e-post som ikke står på listen, og et sporet klikk på annonsene våre. Vi tar betalt for første kjøp, ikke mer.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TIDSLINJE -->
+<!-- FØRSTE KJØP -->
 <section style="padding-top:20px">
   <div class="wrap">
     <div class="center">
-      <h2 class="rv">Én ny kunde, <span class="dim">tolv måneder.</span></h2>
-      <p class="lede rv">Honoraret gjelder kundens kjøp det første året. Etter det er kunden helt deres.</p>
+      <h2 class="rv">Vi tar betalt <span class="dim">én gang per kunde.</span></h2>
+      <p class="lede rv">10 % av det kunden betaler første gang. Fornyelser og nye kjøp etterpå er deres.</p>
     </div>
-    <div class="tl rv" id="tl">
-      <div class="track">
-        <div class="fill"></div>
-        <div class="mk first" style="left:11px"><span>Første kjøp</span></div>
-        <div class="mk end" style="left:66.6%"><span>0 kr herfra</span></div>
-      </div>
-      <div class="tlx"><span style="left:0">Mnd 0</span><span style="left:66.6%">Mnd 12</span><span style="left:100%">Mnd 18</span></div>
-      <p><b>Eksempel:</b> En ny kunde starter abonnement til 2 499 kr. Dere betaler 250 kr. Hver fornyelse det første året: 250 kr. Etter 12 måneder: ingenting.</p>
+    <div class="fk">
+      <div class="fkc rv" style="--d:0"><small>Abonnement</small><div class="fkp">2 499 kr</div><div class="fkb"><div class="fkf" style="--w:10%"></div></div><div class="fkr"><span>Til oss</span><b><span class="cnt" data-to="249">0</span> kr</b></div></div>
+      <div class="fkc rv" style="--d:1"><small>Engangskjøp</small><div class="fkp">3 250 kr</div><div class="fkb"><div class="fkf" style="--w:10%"></div></div><div class="fkr"><span>Til oss</span><b><span class="cnt" data-to="325">0</span> kr</b></div></div>
+      <div class="fkc z rv" style="--d:2"><small>Alt etterpå</small><div class="fkp">Fornyelser og gjenkjøp</div><div class="fkb"></div><div class="fkr"><span>Til oss</span><b>0 kr</b></div></div>
     </div>
   </div>
 </section>
