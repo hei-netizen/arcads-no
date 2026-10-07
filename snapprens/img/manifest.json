@@ -1,0 +1,82 @@
+[
+ {
+  "fil": "01-snapprens-hero.webp",
+  "kilde": "https://snapprens.no/assets/snapprens-hero.webp",
+  "bredde": 1200,
+  "hoyde": 1200,
+  "alt": "og:image",
+  "side": "https://snapprens.no"
+ },
+ {
+  "fil": "02-snapprens-hjemme.webp",
+  "kilde": "https://snapprens.no/assets/snapprens-hjemme.webp",
+  "bredde": 1200,
+  "hoyde": 800,
+  "alt": "En rolig stund på sofaen med mobilen og nyvaskede skjorter",
+  "side": "https://snapprens.no"
+ },
+ {
+  "fil": "03-snapprens-bedrift.webp",
+  "kilde": "https://snapprens.no/assets/snapprens-bedrift.webp",
+  "bredde": 1200,
+  "hoyde": 800,
+  "alt": "Bedriftsleder ved en resepsjon med rene håndklær",
+  "side": "https://snapprens.no"
+ },
+ {
+  "fil": "04-snapprens-hero.webp",
+  "kilde": "https://snapprens.no/assets/snapprens-hero.webp",
+  "bredde": 1200,
+  "hoyde": 1200,
+  "alt": "og:image",
+  "side": "https://snapprens.no/om-oss"
+ },
+ {
+  "fil": "05-om-oss-hero.webp",
+  "kilde": "https://snapprens.no/assets/bilder/om-oss-hero.webp?v=1791161113",
+  "bredde": 1200,
+  "hoyde": 900,
+  "alt": "Snapprens-pose med klær ved en inngangsdør",
+  "side": "https://snapprens.no/om-oss"
+ },
+ {
+  "fil": "06-snapprens-grunnleggere.webp",
+  "kilde": "https://snapprens.no/assets/bilder/snapprens-grunnleggere.webp",
+  "bredde": 1536,
+  "hoyde": 1024,
+  "alt": "Peder Ohr til venstre og Jonas Eckhardt til høyre, gründerne av Snapprens",
+  "side": "https://snapprens.no/om-oss"
+ },
+ {
+  "fil": "07-om-oss-partner-v2.webp",
+  "kilde": "https://snapprens.no/assets/bilder/om-oss-partner-v2.webp?v=1791161113",
+  "bredde": 1200,
+  "hoyde": 1200,
+  "alt": "Illustrasjon av hender som kontrollerer stoffet på en ullkåpe",
+  "side": "https://snapprens.no/om-oss"
+ },
+ {
+  "fil": "08-snapprens-hero.webp",
+  "kilde": "https://snapprens.no/assets/snapprens-hero.webp",
+  "bredde": 1200,
+  "hoyde": 1200,
+  "alt": "og:image",
+  "side": "https://snapprens.no/om-oss"
+ },
+ {
+  "fil": "09-om-oss-hero.webp",
+  "kilde": "https://snapprens.no/assets/bilder/om-oss-hero.webp?v=1791161113",
+  "bredde": 1200,
+  "hoyde": 900,
+  "alt": "Snapprens-pose med klær ved en inngangsdør",
+  "side": "https://snapprens.no/om-oss"
+ },
+ {
+  "fil": "10-snapprens-grunnleggere.webp",
+  "kilde": "https://snapprens.no/assets/bilder/snapprens-grunnleggere.webp",
+  "bredde": 1536,
+  "hoyde": 1024,
+  "alt": "Peder Ohr til venstre og Jonas Eckhardt til høyre, gründerne av Snapprens",
+  "side": "https://snapprens.no/om-oss"
+ }
+]
