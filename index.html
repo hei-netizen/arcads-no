@@ -1370,6 +1370,7 @@ fbq('track','PageView');
           <div class="field big"><label for="l_name">Navn</label><input type="text" id="l_name" name="name" placeholder="Fornavn og etternavn" autocomplete="name" required></div>
           <div class="field big"><label for="l_email">E-post</label><input type="email" id="l_email" name="email" placeholder="din@epost.no" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required></div>
           <div class="field big"><label for="l_phone">Telefon</label><input type="tel" id="l_phone" name="phone" placeholder="Så vi får tak i deg" autocomplete="tel" inputmode="tel" required></div>
+          <div class="field big"><label for="l_msg">Hva vil du ha hjelp med?</label><input type="text" id="l_msg" name="comment" placeholder="F.eks. flere kunder på bad" autocomplete="off" maxlength="300" required></div>
           <p class="lf-err" id="lfErr2" role="alert"></p>
           <button type="submit" class="btn wide" id="leadBtn"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="lbl">Send meg forslaget</span></button>
           <button type="button" class="lf-back" id="lfBack">← Tilbake</button>
@@ -1517,18 +1518,18 @@ fbq('track','PageView');
     if(sent)return;
     if(st1.classList.contains('on')){document.getElementById('lfNext').click();return;}
     if(f.company.value){sent=true;ok();return;}
-    var nm=f.name.value.trim(),em=f.email.value.trim(),ph=f.phone.value.replace(/\s/g,'');
-    bad(f.name,!nm);bad(f.email,!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em));bad(f.phone,ph.replace(/\D/g,'').length<8);
-    if(!nm||!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em)||ph.replace(/\D/g,'').length<8){e2.textContent='Sjekk feltene som er markert.';return;}
+    var nm=f.name.value.trim(),em=f.email.value.trim(),ph=f.phone.value.replace(/\s/g,''),ms=f.comment.value.trim();
+    bad(f.name,!nm);bad(f.email,!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em));bad(f.phone,ph.replace(/\D/g,'').length<8);bad(f.comment,ms.length<3);
+    if(!nm||!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em)||ph.replace(/\D/g,'').length<8||ms.length<3){e2.textContent='Sjekk feltene som er markert.';return;}
     e2.textContent='';
     var bv=(f.querySelector('input[name=budget]:checked')||{}).value||'';
     sent=true;btn.disabled=true;btn.querySelector('.lbl').textContent='Sender...';
-    var p=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:LEAD_SOURCE,name:nm,email:em,phone:f.phone.value.trim(),website:f.website.value.trim(),budget:bv,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
+    var p=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:LEAD_SOURCE,name:nm,email:em,phone:f.phone.value.trim(),website:f.website.value.trim(),budget:bv,comment:ms,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
     try{if(navigator.sendBeacon&&navigator.sendBeacon(HOOK,p)){ok();return;}}catch(e){}
     fetch(HOOK,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:p.toString()})
       .then(ok,function(){sent=false;btn.disabled=false;btn.querySelector('.lbl').textContent='Send meg forslaget';alert('Noe gikk galt. Prøv igjen, eller send en mail til victor@arcads.no');});
   });
-  [f.name,f.email,f.phone,f.website].forEach(function(i){i.addEventListener('input',function(){i.classList.remove('bad');});});
+  [f.name,f.email,f.phone,f.website,f.comment].forEach(function(i){i.addEventListener('input',function(){i.classList.remove('bad');});});
 })();
 </script>
 <script>

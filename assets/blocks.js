@@ -55,16 +55,16 @@
     ev.preventDefault();if(sent)return;
     if(st1.classList.contains('on')){document.getElementById('lfNext').click();return;}
     if(f.company.value){sent=true;ok();return;}
-    var nm=f.name.value.trim(),em=f.email.value.trim(),ph=f.phone.value.replace(/\s/g,''),emOk=/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em),phOk=ph.replace(/\D/g,'').length>=8;
-    bad(f.name,!nm);bad(f.email,!emOk);bad(f.phone,!phOk);
-    if(!nm||!emOk||!phOk){e2.textContent=T.chk;return;}
+    var nm=f.name.value.trim(),em=f.email.value.trim(),ph=f.phone.value.replace(/\s/g,''),emOk=/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(em),phOk=ph.replace(/\D/g,'').length>=8,ms=f.comment?f.comment.value.trim():'x',msOk=ms.length>=3;
+    bad(f.name,!nm);bad(f.email,!emOk);bad(f.phone,!phOk);if(f.comment)bad(f.comment,!msOk);
+    if(!nm||!emOk||!phOk||!msOk){e2.textContent=T.chk;return;}
     e2.textContent='';
     var bv=(f.querySelector('input[name=budget]:checked')||{}).value||'';
     sent=true;btn.disabled=true;btn.querySelector('.lbl').textContent=T.sending;
-    var p=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:SRC,name:nm,email:em,phone:f.phone.value.trim(),website:f.website.value.trim(),budget:bv,page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
+    var p=new URLSearchParams({subject:'Nytt lead - Arcads LP',lead_source:SRC,name:nm,email:em,phone:f.phone.value.trim(),website:f.website.value.trim(),budget:bv,comment:f.comment?ms:'',page_url:location.href,user_agent:navigator.userAgent,_ts:Date.now()});
     try{if(navigator.sendBeacon&&navigator.sendBeacon(HOOK,p)){ok();return;}}catch(e){}
     fetch(HOOK,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:p.toString()})
       .then(ok,function(){sent=false;btn.disabled=false;btn.querySelector('.lbl').textContent=T.again;alert(T.fail);});
   });
-  [f.name,f.email,f.phone,f.website].forEach(function(i){i.addEventListener('input',function(){i.classList.remove('bad');});});
+  [f.name,f.email,f.phone,f.website,f.comment].forEach(function(i){if(i)i.addEventListener('input',function(){i.classList.remove('bad');});});
 })();
