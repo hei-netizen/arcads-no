@@ -297,9 +297,11 @@ h1,h2,h3{overflow-wrap:break-word}
 @media(max-width:480px){.offer .tile .big{min-height:84px}}
 
 /* logo i topbar/footer (ekte logo, ikke tekst-ordmerke) */
-.brandlogo{height:30px;width:auto;display:block}
-.footer .brandlogo{height:34px}
-@media(max-width:600px){.brandlogo{height:24px}}
+.brandlogo{height:40px;width:auto;display:block}
+.footer .brandlogo{height:40px}
+@media(max-width:600px){.brandlogo{height:32px}}
+.inp select{flex:1 1 auto;width:100%;min-width:0;border:0;outline:0;background:transparent;font:inherit;color:var(--ink);padding:0 4px;appearance:none;-webkit-appearance:none;cursor:pointer}
+.inp:has(select){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235C6B7A' stroke-width='2.4'%3E%3Cpath d='M6 9l6 6 6-6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:17px;padding-right:38px}
 .topbar .wrap .meta{font-size:.84rem;color:var(--muted);font-weight:600;text-align:right;min-width:0}
 
 </style>
