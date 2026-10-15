@@ -73,7 +73,7 @@ h2{font-size:clamp(1.75rem,3.2vw,2.55rem)}
 .hero{padding:64px 0 88px}
 .hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,0.95fr);grid-template-areas:"head form" "rest form";grid-template-rows:auto 1fr;gap:0 64px;align-items:start}
 .hero-head{grid-area:head}.hero-form{grid-area:form}.hero-rest{grid-area:rest}
-.hero h1{font-size:clamp(2.1rem,4.6vw,3.6rem);margin:14px 0 20px}
+.hero h1{font-size:clamp(2.05rem,4vw,3.15rem);margin:14px 0 20px}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero .lede{font-size:1.12rem;margin-bottom:28px}
 .ticks{list-style:none;display:grid;gap:12px;margin-bottom:36px}
@@ -120,6 +120,7 @@ h2{font-size:clamp(1.75rem,3.2vw,2.55rem)}
 .logos{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);padding:30px 0}
 .logos .wrap{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:20px 44px}
 .logos span{font-size:0.86rem;color:var(--muted);font-weight:500}
+@media(max-width:700px){.logos span{width:100%;text-align:center}.logos .wrap{gap:18px 28px}.logos img{height:24px}}
 .logos img{height:28px;width:auto;filter:grayscale(1);opacity:.62;transition:opacity .2s}
 .logos img:hover{opacity:1}
 
@@ -155,8 +156,8 @@ h2{font-size:clamp(1.75rem,3.2vw,2.55rem)}
 .steps p{color:var(--muted);font-size:0.98rem}
 
 /* cta-bånd med deres eget bilde */
-.band{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--dark) url('img/logo-skjerm.jpg') 60% 50%/cover no-repeat;color:#fff;padding:72px 48px;text-align:center}
-.band::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,25,22,.92),rgba(28,25,22,.78) 50%,rgba(28,25,22,.92))}
+.band{position:relative;border-radius:var(--r-lg);overflow:hidden;background:var(--dark);color:#fff;padding:72px 48px;text-align:center}
+.band::before{content:'';position:absolute;inset:0;background:radial-gradient(120% 140% at 50% 0%,rgba(217,83,26,.22),transparent 60%)}
 .band>*{position:relative}
 .band h2{max-width:22ch;margin:0 auto 14px}
 .band p{color:rgba(255,255,255,.78);max-width:48ch;margin:0 auto 30px}
