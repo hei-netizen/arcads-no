@@ -1,0 +1,34 @@
+[
+ {
+  "fil": "stue.webp",
+  "kilde": "https://midtinneklima.no/_astro/hero-stue-vinter.D-5HIBIA_Z1zgFog.webp?dpl=dpl_2UQbGPfAqGp53ho1nUWxqt8xzshc",
+  "bredde": 2000,
+  "hoyde": 1250,
+  "alt": "Varmepumpe montert i en trønderskstue med snødekt skog utenfor vinduene",
+  "side": "https://midtinneklima.no"
+ },
+ {
+  "fil": "gang.webp",
+  "kilde": "https://midtinneklima.no/_astro/luft-luft-gang-vinter.i01tFV9__lgyd7.webp?dpl=dpl_2UQbGPfAqGp53ho1nUWxqt8xzshc",
+  "bredde": 1400,
+  "hoyde": 989,
+  "alt": "Luft-luft varmepumpe montert i en lys norsk bolig med snødekt skog utenfor vinduet",
+  "side": "https://midtinneklima.no"
+ },
+ {
+  "fil": "luft-vann.webp",
+  "kilde": "https://midtinneklima.no/_astro/daikin-altherma-vinter.v9OAMwDP_Z6PEGH.webp?dpl=dpl_2UQbGPfAqGp53ho1nUWxqt8xzshc",
+  "bredde": 1400,
+  "hoyde": 990,
+  "alt": "Daikin Altherma luft-vann varmepumpe i et moderne norsk hus omgitt av snø",
+  "side": "https://midtinneklima.no"
+ },
+ {
+  "fil": "omrade.webp",
+  "kilde": "https://midtinneklima.no/_astro/dekningsomrade.Cfk2hVrZ_ZbYgQn.webp?dpl=dpl_2UQbGPfAqGp53ho1nUWxqt8xzshc",
+  "bredde": 1200,
+  "hoyde": 1221,
+  "alt": "Kart over Trøndelag der Trondheim, Melhus og Malvik er markert som Midt Inneklimas dekningsområde",
+  "side": "https://midtinneklima.no"
+ }
+]
