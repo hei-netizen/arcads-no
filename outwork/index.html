@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Fakturaoversikt Outwork AS | Arcads</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<!-- Fakturaoversikt Veldigrent + Raskflytting (Outwork AS / Namu AS / Gb Fleet AS).
+     Kilde: Fiken API + DNB transaksjoner 20.10.2025–20.10.2026. Avstemming:
+     arcads-claude-brain/docs/okonomi/avstemming-outwork-vr-rf-2026-10-20.md -->
+<style>
+  :root{--ink:#14211b;--muted:#5c6b63;--line:#e3e8e5;--bg:#f7f8f6;--card:#fff;--green:#0E3D2C;--ok:#1f7a4d;--okbg:#e7f4ec;--bad:#b42318;--badbg:#fdecea;--neu:#6b7280;--neubg:#f0f1f3}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:900px;margin:0 auto;padding:40px 16px 64px}
+  .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+  .brand{font-weight:800;letter-spacing:.02em;color:var(--green)}
+  .date{color:var(--muted);font-size:14px}
+  h1{font-size:28px;line-height:1.2;margin:0 0 6px}
+  .sub{color:var(--muted);margin:0 0 28px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:36px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+  .card .l{font-size:13px;color:var(--muted)}
+  .card .v{font-size:26px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+  .card.bad .v{color:var(--bad)} .card.ok .v{color:var(--ok)}
+  h2{font-size:18px;margin:0 0 12px}
+  .tbl{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:36px}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;background:#fbfcfb}
+  tr:last-child td{border-bottom:0}
+  td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  th.n{text-align:right}
+  .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+  .pill.ok{background:var(--okbg);color:var(--ok)} .pill.bad{background:var(--badbg);color:var(--bad)} .pill.neu{background:var(--neubg);color:var(--neu)}
+  tr.open td{background:#fffafa}
+  .small{font-size:13px;color:var(--muted)}
+  ul.notes{margin:0;padding-left:18px;color:var(--ink)} ul.notes li{margin-bottom:6px}
+  footer{margin-top:40px;font-size:13px;color:var(--muted)}
+  @media (max-width:640px){
+    .cards{grid-template-columns:1fr}
+    h1{font-size:24px}
+    thead{display:none}
+    table,tbody,tr,td{display:block;width:100%}
+    tr{border-bottom:1px solid var(--line);padding:10px 0}
+    td{border:0;padding:3px 14px;text-align:left}
+    td.n{text-align:left}
+    td[data-l]::before{content:attr(data-l) ": ";color:var(--muted);font-size:13px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">ARCADS</div>
+    <div class="date">Per 20.10.2026</div>
+  </div>
+
+  <h1>Fakturaoversikt – Veldigrent og Raskflytting</h1>
+  <p class="sub">Annonseadmin, 5 000 kr inkl. mva per måned. Sjekket mot Fiken og DNB-kontoutskrifter fra 20.10.2025 til 20.10.2026.</p>
+
+  <div class="cards">
+    <div class="card bad"><div class="l">Ubetalt</div><div class="v">15 000 kr</div><div class="small">3 fakturaer, inkl. mva</div></div>
+    <div class="card ok"><div class="l">Betalt</div><div class="v">9 av 12</div><div class="small">fakturaer okt. 2025 – sep. 2026</div></div>
+    <div class="card"><div class="l">Siste innbetaling</div><div class="v">03.09.2026</div><div class="small">Outwork AS, 5 000 kr</div></div>
+  </div>
+
+  <h2>Fakturaer</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Faktura</th><th>Måned</th><th>Kunde</th><th class="n">Beløp</th><th>Betalt i bank</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Faktura">10053</td><td data-l="Måned">Oktober 2025</td><td data-l="Kunde">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">07.11.2025</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10069</td><td data-l="Måned">November 2025</td><td data-l="Kunde">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">09.12.2025</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10078</td><td data-l="Måned">Desember 2025</td><td data-l="Kunde">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">08.01.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10092</td><td data-l="Måned">Januar 2026</td><td data-l="Kunde">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">09.02.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10104</td><td data-l="Måned">Februar 2026</td><td data-l="Kunde">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">17.03.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10117</td><td data-l="Måned">Mars 2026</td><td data-l="Kunde">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">13.04.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10128 → 10139</td><td data-l="Måned">April 2026</td><td data-l="Kunde">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">28.05.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10140</td><td data-l="Måned">Mai 2026</td><td data-l="Kunde">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">24.06.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr><td data-l="Faktura">10150</td><td data-l="Måned">Juni 2026</td><td data-l="Kunde">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">03.09.2026</td><td><span class="pill ok">Betalt</span></td></tr>
+        <tr class="open"><td data-l="Faktura">10159</td><td data-l="Måned">Juli 2026</td><td data-l="Kunde">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">–</td><td><span class="pill bad">Ubetalt</span></td></tr>
+        <tr class="open"><td data-l="Faktura">10167</td><td data-l="Måned">August 2026</td><td data-l="Kunde">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">–</td><td><span class="pill bad">Ubetalt</span></td></tr>
+        <tr class="open"><td data-l="Faktura">10175</td><td data-l="Måned">September 2026</td><td data-l="Kunde">Gb Fleet AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Betalt">–</td><td><span class="pill bad">Ubetalt</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Innbetalinger i banken</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Dato</th><th>Fra</th><th class="n">Beløp</th><th>Dekker faktura</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Dato">07.11.2025</td><td data-l="Fra">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10053</td></tr>
+        <tr><td data-l="Dato">09.12.2025</td><td data-l="Fra">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10069</td></tr>
+        <tr><td data-l="Dato">08.01.2026</td><td data-l="Fra">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10078</td></tr>
+        <tr><td data-l="Dato">09.02.2026</td><td data-l="Fra">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10092</td></tr>
+        <tr><td data-l="Dato">17.03.2026</td><td data-l="Fra">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10104</td></tr>
+        <tr><td data-l="Dato">13.04.2026</td><td data-l="Fra">Namu AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10117</td></tr>
+        <tr><td data-l="Dato">28.05.2026</td><td data-l="Fra">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10139</td></tr>
+        <tr><td data-l="Dato">24.06.2026</td><td data-l="Fra">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10140</td></tr>
+        <tr><td data-l="Dato">03.09.2026</td><td data-l="Fra">Outwork AS</td><td class="n" data-l="Beløp">5 000 kr</td><td data-l="Faktura">10150</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="small" style="margin:-24px 0 36px">12 fakturaer à 5 000 kr = 60 000 kr. 9 innbetalinger à 5 000 kr = 45 000 kr. Differanse 15 000 kr.</p>
+
+  <h2>Å følge opp</h2>
+  <ul class="notes">
+    <li>Outwork AS: 10159 og 10167, til sammen <strong>10 000 kr</strong>.</li>
+    <li>Gb Fleet AS: 10175, <strong>5 000 kr</strong>.</li>
+    <li>Ingen faktura sendt for oktober 2026 ennå.</li>
+  </ul>
+
+  <footer>Arcads ANS · org.nr 935 795 990</footer>
+</div>
+</body>
+</html>
