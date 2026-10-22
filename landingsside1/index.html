@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="description" content="Kort guide til hvordan Arcads bruker Claude Code, skills og MCP-er til å lage nettsider.">
+<meta property="og:title" content="Slik bruker vi Claude til å lage nettsider">
+<meta property="og:description" content="Oppsettet vårt, med skillsene og MCP-ene vi faktisk bruker.">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/favicon-180.png">
+<title>Slik bruker vi Claude til å lage nettsider | Arcads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: én lesekolonne, oppskrift-stil. Steg nummereres kun der rekkefølgen betyr noe. */
+:root{
+  --paper:#f5f6f4;
+  --surface:#ffffff;
+  --ink:#1b2320;
+  --muted:#5b6762;
+  --line:#dde2df;
+  --accent:#1f6b52;
+  --accent-soft:#e3efe9;
+  --code-bg:#1d2522;
+  --code-ink:#e6ece9;
+  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#121715;--surface:#1a201e;--ink:#e7ece9;--muted:#9aa8a2;--line:#2b3431;
+    --accent:#6fcfa6;--accent-soft:#1c2c26;--code-bg:#0c100f;--code-ink:#dfe7e3;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#121715;--surface:#1a201e;--ink:#e7ece9;--muted:#9aa8a2;--line:#2b3431;
+  --accent:#6fcfa6;--accent-soft:#1c2c26;--code-bg:#0c100f;--code-ink:#dfe7e3;
+}
+*{box-sizing:border-box}
+body{margin:0;
+  background:var(--paper);color:var(--ink);
+  font-family:var(--body);font-size:17px;line-height:1.65;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap{max-width:720px;margin:0 auto;padding-block:56px 80px;display:flex;flex-direction:column;gap:56px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.15;margin:0}
+h1{font-size:clamp(2.1rem,6vw,3.1rem);font-weight:700;letter-spacing:-0.02em}
+h2{font-size:1.6rem;font-weight:700;letter-spacing:-0.01em}
+h3{font-size:1.12rem;font-weight:700}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+header{display:flex;flex-direction:column;gap:18px}
+.lede{font-size:1.15rem;color:var(--muted);max-width:60ch}
+section{display:flex;flex-direction:column;gap:18px}
+section > p, li{max-width:65ch}
+code{font-family:var(--mono);font-size:.86em;background:var(--accent-soft);padding:1px 6px;border-radius:4px}
+pre{margin:0;background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:16px 18px;overflow-x:auto;font-family:var(--mono);font-size:.84rem;line-height:1.6}
+pre code{background:none;padding:0;color:inherit;font-size:inherit}
+pre .c{color:#8fa39a}
+
+/* Lagdiagram */
+.stack{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface)}
+.layer{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:16px 18px;border-top:1px solid var(--line)}
+.layer:first-child{border-top:0}
+.layer b{font-family:var(--display);font-size:1.02rem}
+.layer span{color:var(--muted);font-size:.96rem}
+@media (max-width:520px){.layer{grid-template-columns:1fr;gap:4px}}
+
+/* Steg */
+ol.steps{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:28px;counter-reset:s}
+ol.steps > li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:14px;max-width:none}
+ol.steps > li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:1rem;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:var(--paper)}
+.step-body{display:flex;flex-direction:column;gap:10px;min-width:0}
+
+/* Verktøylister */
+.tools{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.tool{display:grid;grid-template-columns:200px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tool .name{font-family:var(--mono);font-size:.9rem;font-weight:500}
+.tool .name small{display:block;font-family:var(--body);font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}
+.tool p{font-size:.98rem}
+@media (max-width:560px){.tool{grid-template-columns:1fr;gap:4px}}
+
+.lessons{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:12px}
+.lessons li::marker{color:var(--accent)}
+
+.note{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+footer{color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);padding-top:24px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">Fra Victor · Arcads</span>
+  <h1>Slik bruker vi Claude til å lage nettsider</h1>
+  <p class="lede">Kort versjon av oppsettet vårt, med skillsene og MCP-ene vi faktisk bruker. Alt her kan du sette opp på en ettermiddag.</p>
+</header>
+
+<section>
+  <h2>Hvordan det henger sammen</h2>
+  <p>Vi jobber nesten alt i <strong>Claude Code</strong> (terminal eller VS Code). Oppsettet har tre lag, og hvert lag løser sitt eget problem:</p>
+  <div class="stack">
+    <div class="layer"><b>CLAUDE.md</b><span>Én fil med reglene deres. Hvem dere er, hvordan dere vil ha ting, hva Claude aldri skal gjøre. Leses ved hver økt.</span></div>
+    <div class="layer"><b>Skills</b><span>Oppskrifter Claude henter frem ved behov. En mappe med en <code>SKILL.md</code> som forklarer hvordan en type jobb gjøres.</span></div>
+    <div class="layer"><b>MCP-er</b><span>Koblinger til verktøy utenfor: Figma, nettleser, Notion, Google Drive. Gir Claude hender, ikke bare hode.</span></div>
+  </div>
+  <p>Skills gir kvalitet. MCP-er gir rekkevidde. CLAUDE.md sørger for at det blir likt hver gang.</p>
+</section>
+
+<section>
+  <h2>Kom i gang</h2>
+  <ol class="steps">
+    <li><div class="step-body">
+      <h3>Installer Claude Code</h3>
+      <pre><code>npm install -g @anthropic-ai/claude-code
+<span class="c"># kjør i prosjektmappen din</span>
+claude</code></pre>
+    </div></li>
+    <li><div class="step-body">
+      <h3>Lag en CLAUDE.md</h3>
+      <p>Skriv <code>/init</code> i Claude Code, så lager den et utkast. Fyll på med egne regler etter hvert. Vår viktigste vane: hver gang vi retter på Claude, skrives rettelsen inn i filen samme dag.</p>
+      <pre><code><span class="c"># CLAUDE.md (eksempel)</span>
+- Landingssider bygges alltid fra templates/lp-mal/
+- Aldri AI-genererte bilder; bruk kundens ekte bilder
+- Test skjemaet i nettleseren før du sier at noe er ferdig
+- Norsk bokmål, kort og konkret</code></pre>
+    </div></li>
+    <li><div class="step-body">
+      <h3>Legg inn noen skills</h3>
+      <p>En skill er bare en mappe. Legg den i <code>~/.claude/skills/</code> (alle prosjekter) eller <code>.claude/skills/</code> (ett prosjekt). Claude oppdager dem selv og bruker dem når oppgaven passer.</p>
+      <pre><code>git clone https://github.com/Leonxlnx/taste-skill
+cp -r taste-skill/skills/* ~/.claude/skills/</code></pre>
+      <p>Sjekk README i hvert repo; mappestrukturen varierer litt.</p>
+    </div></li>
+    <li><div class="step-body">
+      <h3>Koble på MCP-er</h3>
+      <pre><code><span class="c"># nettleser, så Claude kan åpne og teste sidene selv</span>
+claude mcp add playwright npx @playwright/mcp@latest
+
+<span class="c"># Figma (offisiell)</span>
+claude mcp add --transport http figma https://mcp.figma.com/mcp</code></pre>
+      <p>Skriv <code>/mcp</code> inne i Claude Code for å se status og logge inn. Mange tjenester (Notion, Gmail, Drive, Figma) kan også kobles via Connectors på claude.ai.</p>
+    </div></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Skills vi bruker til nettsider</h2>
+  <div class="tools">
+    <div class="tool"><div class="name">taste-skill<small>Leonxlnx</small></div><p>Vår standard for nye landingssider. Holder Claude unna det generiske «AI-utseendet». Samme pakke har <code>redesign-skill</code> for å løfte eksisterende sider, pluss stilvarianter som <code>soft</code>, <code>minimalist</code> og <code>brutalist</code>.</p></div>
+    <div class="tool"><div class="name">frontend-design<small>Anthropic</small></div><p>Anthropics egen skill for frontend. God start hvis du bare vil ha én.</p></div>
+    <div class="tool"><div class="name">impeccable<small>Paul Bakaus</small></div><p>Kritikk, audit og polish av UI som allerede finnes. Vi kjører den som siste runde før noe går live.</p></div>
+    <div class="tool"><div class="name">emil-design-eng m.fl.<small>Emil Kowalski</small></div><p>Animasjon og de små detaljene som får et grensesnitt til å føles bra. Bygger på kurset hans på animations.dev.</p></div>
+    <div class="tool"><div class="name">Egne skills<small>Arcads</small></div><p>Det som gir mest: skills som beskriver <em>våre</em> regler. Vi har én for landingsside-malen vår, én for annonser, én for rapporter. Se eksempelet under.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>MCP-er vi får mest ut av</h2>
+  <div class="tools">
+    <div class="tool"><div class="name">Playwright</div><p>Claude åpner siden i en ekte nettleser, tar skjermbilder, fyller ut skjemaet og ser om det faktisk fungerer på mobil. Den viktigste for nettsider.</p></div>
+    <div class="tool"><div class="name">Figma</div><p>Les et design rett inn i kode, eller send en side tilbake til Figma for justering.</p></div>
+    <div class="tool"><div class="name">Mobbin</div><p>Søk i ekte app- og nettsideskjermer for inspirasjon før vi bygger.</p></div>
+    <div class="tool"><div class="name">Notion / Google Drive</div><p>Henter brief, tekster og bilder fra der kunden allerede har dem.</p></div>
+    <div class="tool"><div class="name">Webflow</div><p>Hvis siden skal ligge i Webflow, kan Claude publisere direkte dit.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Lag din første egne skill</h2>
+  <p>En skill er en Markdown-fil med et navn og en beskrivelse øverst. Beskrivelsen er det Claude leser for å avgjøre <em>når</em> skillen skal brukes, så skriv den konkret.</p>
+  <pre><code><span class="c"># ~/.claude/skills/landingsside/SKILL.md</span>
+---
+name: landingsside
+description: Bygg en landingsside for en kunde. Bruk når noen
+  ber om en LP, kampanjeside eller ny side for en annonse.
+---
+
+1. Les kundens nettside og hent logo, farger og ekte bilder.
+2. Bygg fra templates/lp-mal/. Ikke lag nytt design.
+3. Struktur: hero med ett tilbud, før/etter, anmeldelser, skjema.
+4. Test skjemaet og mobilvisning med Playwright.
+5. Vis meg skjermbilder før noe publiseres.</code></pre>
+  <p>Start med én skill for den jobben du gjør oftest. Forbedre den hver gang resultatet ikke blir som du ville.</p>
+</section>
+
+<section>
+  <h2>Det vi har lært</h2>
+  <ul class="lessons">
+    <li><strong>Én mal slår mange design.</strong> Vi fikk mye bedre resultater da vi sluttet å be om «noe nytt» hver gang og heller lot Claude fylle en mal vi vet konverterer.</li>
+    <li><strong>Skriv reglene ned med en gang.</strong> En rettelse du bare sier i chatten, er glemt neste økt. I CLAUDE.md eller en skill blir den permanent.</li>
+    <li><strong>La Claude teste selv.</strong> Med Playwright fanger den brukne skjemaer og mobilfeil før du ser dem.</li>
+    <li><strong>Ekte bilder.</strong> AI-bilder på en landingsside merkes, og de selger dårligere. Bruk kundens egne.</li>
+    <li><strong>Ikke installer alt.</strong> Fem skills du kjenner er bedre enn femti Claude må velge mellom.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Kilder</h2>
+  <div class="tools">
+    <div class="tool"><div class="name">Claude Code-docs</div><p><a href="https://docs.claude.com/en/docs/claude-code/overview">docs.claude.com</a>: skills, MCP og CLAUDE.md er godt forklart her.</p></div>
+    <div class="tool"><div class="name">Anthropic skills</div><p><a href="https://github.com/anthropics/skills">github.com/anthropics/skills</a></p></div>
+    <div class="tool"><div class="name">taste-skill</div><p><a href="https://github.com/Leonxlnx/taste-skill">github.com/Leonxlnx/taste-skill</a></p></div>
+    <div class="tool"><div class="name">impeccable</div><p><a href="https://impeccable.style">impeccable.style</a></p></div>
+    <div class="tool"><div class="name">Emil Kowalski</div><p><a href="https://animations.dev">animations.dev</a> og <a href="https://emilkowal.ski">emilkowal.ski</a></p></div>
+    <div class="tool"><div class="name">Playwright MCP</div><p><a href="https://github.com/microsoft/playwright-mcp">github.com/microsoft/playwright-mcp</a></p></div>
+  </div>
+</section>
+
+<footer>
+  Lykke til! Bare send meg en melding om du står fast.<br>Victor, Arcads
+</footer>
+
+</div>
+</body>
+</html>
