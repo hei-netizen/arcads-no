@@ -1686,7 +1686,7 @@ f.addEventListener('submit',function(e){
     $('hxType').textContent=R.ok?((R.shop?'Nettbutikk':R.form?'Tjenestebedrift':'Nettside')+(R.plat?', '+R.plat:'')):'';
     var x=trk(R);show('trk',x[0],x[1],x[2],150);t1=400;});
   var pG=fetchGoogle(h).then(function(d){G=gAnalyse(d);},function(){G=null;}).then(function(){var x=goo(G);show('goo',x[0],x[1],x[2],400);t2=650;setTimeout(function(){adsShow(G,h);},rm?0:700);});
-  show('met','mb','Henter …','Leser Metas annonsebibliotek, tar 15–30 sekunder',500);
+  row('met','mb','Henter …','Leser Metas annonsebibliotek, tar 15–30 sekunder');
   fetchMeta(h).then(function(m){M=m;},function(){M=null;}).then(function(){if(h!==host)return;var x=met(M);row('met',x[0],x[1],x[2]);setTimeout(function(){madsShow(M,h);},rm?0:300);logg('meta');});
   Promise.all([pS,pG]).then(function(){
     busy=false;btn.disabled=false;btn.querySelector('.lbl').textContent='Sjekk nå';
