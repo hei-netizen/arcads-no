@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Krisesikker.no · Annonsegjennomgang fra Arcads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Smal lesekolonne. Hvert funn: tekst + ekte skjermbilde. Krisesikkers egne farger (lilla/oransje/grønn). */
+:root {
+  --bg: #f4f4fb;
+  --card: #ffffff;
+  --fg: #1f1c33;
+  --muted: #5d5873;
+  --line: #e2dfec;
+  --brand: #363058;
+  --warm: #e07a2a;
+  --warm-soft: #fdebd9;
+  --good: #23864f;
+  --good-soft: #def3e6;
+  --bad: #c2412d;
+  --bad-soft: #fbe3de;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.6 var(--body); }
+img { max-width: 100%; display: block; }
+a { color: var(--brand); }
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; line-height: 1.15; }
+p { margin: 0; }
+
+.top { background: var(--brand); color: #fff; }
+.top .in { max-width: 1040px; margin: 0 auto; padding: 56px 20px 48px; display: grid; gap: 16px; }
+.eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; opacity: .75; }
+.top h1 { font-size: clamp(32px, 6vw, 54px); font-weight: 800; }
+.top p { max-width: 62ch; opacity: .9; }
+.meta-row { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 14px; opacity: .8; }
+
+main { max-width: 1040px; margin: 0 auto; padding: 0 20px 80px; display: grid; gap: 64px; }
+section { display: grid; gap: 22px; }
+.sec-head { display: grid; gap: 8px; padding-top: 8px; }
+.sec-head .eyebrow { color: var(--warm); opacity: 1; }
+.sec-head h2 { font-size: clamp(26px, 4vw, 36px); font-weight: 800; color: var(--brand); }
+.sec-head p { color: var(--muted); max-width: 66ch; }
+
+/* Sammendrag */
+.summary { margin-top: -28px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 18px; box-shadow: 0 10px 30px rgba(54,48,88,.08); }
+.summary h2 { font-size: 22px; }
+.sum-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px 28px; }
+.sum-item { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 10px; align-items: start; }
+.dot { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 14px; }
+.dot.g { background: var(--good-soft); color: var(--good); }
+.dot.b { background: var(--bad-soft); color: var(--bad); }
+.dot.w { background: var(--warm-soft); color: var(--warm); }
+
+/* Tall */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+.stat { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 2px; }
+.stat b { font-family: var(--display); font-size: 28px; color: var(--brand); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--muted); }
+
+/* Funn */
+.finding { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,380px); gap: 28px; align-items: start; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 26px; }
+.finding.rev { grid-template-columns: minmax(0,380px) minmax(0,1fr); }
+.finding.rev .txt { order: 2; }
+.txt { display: grid; gap: 12px; min-width: 0; }
+.txt h3 { font-size: 21px; font-weight: 800; }
+.txt ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.shot { border-radius: 10px; border: 1px solid var(--line); background: #fff; overflow: hidden; }
+.cap { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.tag { justify-self: start; font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 99px; }
+.tag.g { background: var(--good-soft); color: var(--good); }
+.tag.b { background: var(--bad-soft); color: var(--bad); }
+.tag.w { background: var(--warm-soft); color: var(--warm); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+/* Tabell */
+.tbl-wrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: var(--bg); }
+td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+.live { color: var(--good); font-weight: 700; }
+
+/* Statics-test */
+.statics { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+.st { display: grid; gap: 8px; }
+.st .img { aspect-ratio: 4/5; border-radius: 10px; overflow: hidden; border: 3px solid var(--good); background: #fff; }
+.st.lose .img { border-color: var(--line); opacity: .6; }
+.st img { width: 100%; height: 100%; object-fit: cover; }
+.st p { font-size: 13px; line-height: 1.4; }
+.st b { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+.st b.win { color: var(--good); }
+.st b.l { color: var(--muted); }
+.legend { font-size: 14px; color: var(--muted); }
+
+/* Konkurrenter */
+.bars { display: grid; gap: 10px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.bar { display: grid; grid-template-columns: 170px minmax(0,1fr) 34px; gap: 12px; align-items: center; font-size: 14px; }
+.bar .track { height: 14px; background: var(--bg); border-radius: 99px; overflow: hidden; }
+.bar .fill { height: 100%; background: var(--muted); border-radius: 99px; }
+.bar.ks .fill { background: var(--bad); }
+.bar.ks { font-weight: 700; }
+.bar span:last-child { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* Plan */
+.plan { display: grid; gap: 14px; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; display: grid; grid-template-columns: 54px minmax(0,1fr); gap: 16px; }
+.step .no { font-family: var(--display); font-size: 30px; font-weight: 800; color: var(--warm); line-height: 1; }
+.step h3 { font-size: 19px; margin-bottom: 6px; }
+.step ul { margin: 6px 0 0; padding-left: 20px; display: grid; gap: 4px; }
+
+.cta { background: var(--brand); color: #fff; border-radius: 18px; padding: 32px; display: grid; gap: 12px; }
+.cta h2 { font-size: 28px; }
+.cta p { max-width: 62ch; opacity: .92; }
+.cta ul { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+.btn { justify-self: start; background: var(--warm); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 99px; margin-top: 6px; }
+.note { font-size: 13px; color: var(--muted); }
+footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 20px 40px; }
+
+@media (max-width: 820px) {
+  .finding, .finding.rev { grid-template-columns: 1fr; padding: 18px; }
+  .finding.rev .txt { order: 0; }
+  .sum-grid { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .statics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .bar { grid-template-columns: 120px minmax(0,1fr) 30px; }
+  .step { grid-template-columns: 1fr; gap: 6px; }
+}
+</style>
+<!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y2br1kx6o7");
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <div class="eyebrow">Arcads · Annonsegjennomgang · 2. november 2026</div>
+    <h1>Krisesikker.no: hva annonsene gjør i dag, og hva vi ville gjort</h1>
+    <p>Vi har gått gjennom alle annonsene Krisesikker har kjørt på Google og Meta, fra første annonse i april 2025 til i dag. Gjennomgangen er laget utenfra. Vi ser hva som kjører, hvor lenge og omtrent hvor mye det vises. Kostnad, klikk og salg ser vi først med tilgang til kontoene.</p>
+    <div class="meta-row"><span>Kilder: Google Ads Transparency Center og Metas annonsebibliotek, region Norge</span><span>Hentet 2. november 2026</span></div>
+  </div>
+</header>
+
+<main>
+
+  <div class="summary">
+    <h2>Kort fortalt</h2>
+    <div class="sum-grid">
+      <div class="sum-item"><span class="dot g">+</span><p><b>Meta har et godt utgangspunkt.</b> Det ble lansert 11 nye annonser i oktober, med ulike bilder, en karusell og to UGC-videoer. Konseptene som beskriver en konkret situasjon får mest visning.</p></div>
+      <div class="sum-item"><span class="dot b">!</span><p><b>Google står mer eller mindre stille.</b> Etter juli har bare fire annonser vært i bruk, og i dag går to søkeannonser. Hovedannonsen har hatt samme tekst siden april 2025, med påstanden «Norges Beste».</p></div>
+      <div class="sum-item"><span class="dot b">!</span><p><b>Nødradioen annonseres ikke noe sted.</b> Konkurrentene har minst 25 aktive nødradio-annonser på Meta. Krisesikker har ingen.</p></div>
+      <div class="sum-item"><span class="dot w">?</span><p><b>Shopping viser mest solcellepanelet.</b> Produktet som har fått flest visninger i Shopping er et solcellepanel med 14 % rabatt, ikke beredskapspakken til 4 999,-.</p></div>
+      <div class="sum-item"><span class="dot w">?</span><p><b>All Meta-tekst er lik.</b> De 8 bildeannonsene har samme primærtekst, så bildene testes, men budskapet testes ikke.</p></div>
+      <div class="sum-item"><span class="dot b">!</span><p><b>Meta har stoppet en tidligere annonse.</b> Den gikk fra desember til mai og ble merket «kjørte uten obligatorisk erklæring». Beredskap kan bli lest som et samfunnstema, og det må håndteres.</p></div>
+    </div>
+  </div>
+
+  <!-- GOOGLE -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Google Ads</div>
+      <h2>23 annonser, men nesten all trafikk kommer fra tre av dem</h2>
+      <p>Kontoen har kjørt siden april 2025. I slutten av mai 2026 ble det testet mye på to uker: dynamiske søkeannonser, Display, nødradio og en bok. Nesten alt det ble skrudd av igjen. I dag går to søkeannonser og Shopping.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>23</b><span>annonser totalt siden apr. 2025</span></div>
+      <div class="stat"><b>4</b><span>vist etter juli 2026</span></div>
+      <div class="stat"><b>~10</b><span>testet 25. mai–5. juni 2026</span></div>
+      <div class="stat"><b>0</b><span>video- eller YouTube-annonser</span></div>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Annonse</th><th>Type</th><th>Periode</th><th>Visninger*</th></tr></thead>
+        <tbody>
+          <tr><td>«Norges Beste Beredskapsboks · Komplett Krisepakke»</td><td>Søk</td><td class="n">apr. 2025 → <span class="live">i dag</span></td><td class="n">175–200k</td></tr>
+          <tr><td>Bærbart solcellepanel 20W, −14 %</td><td>Shopping</td><td class="n">okt. 2025 → 28. okt. 2026</td><td class="n">125–150k</td></tr>
+          <tr><td>«Komplett beredskapspakke nå»</td><td>Søk</td><td class="n">okt. 2025 → <span class="live">i dag</span></td><td class="n">25–30k</td></tr>
+          <tr><td>«7 ting du må ha i ditt beredskapslager»</td><td>Søk</td><td class="n">okt. 2025 → juli 2026</td><td class="n">25–30k</td></tr>
+          <tr><td>Shopping-runde (pakke m.m.)</td><td>Shopping</td><td class="n">25. mai → 5. juni 2026</td><td class="n">20–25k</td></tr>
+          <tr><td>«Den lille beredskapsboken»</td><td>Shopping</td><td class="n">25. mai → 5. juni 2026</td><td class="n">2 × 8–9k</td></tr>
+          <tr><td>«Komplett Beredskapspakke · beredskapslager fra Krisesikker.no»</td><td>Søk</td><td class="n">okt. 2025 → juli 2026</td><td class="n">4–5k</td></tr>
+          <tr><td>Display / Demand Gen («Samme familie. Bare tryggere.»)</td><td>Display</td><td class="n">mai → sep. 2026</td><td class="n">1–4k</td></tr>
+          <tr><td>«Bærbar nødradio med sveiv og solceller DAB»</td><td>Søk</td><td class="n">mai 2026</td><td class="n">0–1k</td></tr>
+          <tr><td>«Psykisk helse i kriser · hvordan håndtere stress»</td><td>Dynamisk søk</td><td class="n">26. mai → 2. juni 2026</td><td class="n">0–1k</td></tr>
+          <tr><td>Resten, rundt 10 søke- og dynamiske annonser</td><td>Søk</td><td class="n">apr. → juni 2026</td><td class="n">0–2k hver</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">* Googles anslag i Norge, fra første visning til 4. august 2026. Visninger sier ikke noe om salg, men de viser hvor budsjettet har gått.</p>
+
+    <div class="finding">
+      <div class="txt">
+        <span class="tag b">Bør byttes</span>
+        <h3>Hovedannonsen har hatt samme tekst i 18 måneder</h3>
+        <p>Søkeannonsen «Norges Beste Beredskapsboks» står for de fleste visningene i kontoen. Det gir to problemer:</p>
+        <ul>
+          <li><b>«Norges beste» kan ikke dokumenteres.</b> Google kan avvise eller begrense superlativer som ikke kan underbygges, og kundene stoler mindre på dem.</li>
+          <li><b>Det finnes sterkere fakta.</b> 4,8 av 5 fra 187 anmeldelser, mer enn 1 500 norske hjem, DSBs liste for 7 dager, kjente merker som Stormberg og Primus, pakket for hånd i Halden, gratis frakt og 30 dagers åpent kjøp. Alt dette kan stå i annonsen og testes mot hverandre.</li>
+        </ul>
+      </div>
+      <div><img class="shot" src="img/g-norges-beste.jpg" alt="Google-søkeannonse: Norges Beste Beredskapsboks, Komplett Krisepakke"><p class="cap">Vist fra apr. 2025 til i dag · 175–200k visninger</p></div>
+    </div>
+
+    <div class="finding rev">
+      <div><img class="shot" src="img/g-solcelle.jpg" alt="Shopping-annonse for bærbart solcellepanel 20W med 14 prosent rabatt"><p class="cap">Shopping · 125–150k visninger</p></div>
+      <div class="txt">
+        <span class="tag w">Sjekk prioriteringen</span>
+        <h3>Shopping bruker mest visning på solcellepanelet</h3>
+        <p>Produktet som har fått flest visninger i Shopping er solcellepanelet, ikke beredskapspakken. Hvis panelet selger med god margin, er det greit. Hvis ikke, går en stor del av Shopping-budsjettet til et produkt med lav ordreverdi.</p>
+        <p>Med tilgang til kontoen sjekker vi hvordan produktene er gruppert, hvilken ROAS hvert produkt gir, og om pakken (4 999,-) har en egen kampanje med eget budsjett.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="txt">
+        <span class="tag b">Lærdom</span>
+        <h3>Dynamiske annonser plukket opp blogginnhold</h3>
+        <p>I testperioden i mai ble det kjørt dynamiske søkeannonser, der Google lager overskriften fra sider på nettstedet. Én av dem endte opp som «Psykisk helse i kriser · hvordan håndtere stress og usikkerhet». Det tiltrekker folk som leter etter råd, ikke etter noe å kjøpe, og det går imot ønsket om å unngå skremsel.</p>
+        <p>Hvis dynamiske annonser skal brukes igjen, bør de bare peke mot produkt- og kategorisider, og bloggen bør utelates.</p>
+      </div>
+      <div><img class="shot" src="img/g-psykisk-helse.jpg" alt="Dynamisk søkeannonse: Psykisk helse i kriser"><p class="cap">Dynamisk søkeannonse · mai–juni 2026</p></div>
+    </div>
+
+    <div class="finding rev">
+      <div class="two">
+        <img class="shot" src="img/g-nodradio.jpg" alt="Google-søkeannonse for nødradio">
+        <img class="shot" src="img/g-display.jpg" alt="Google Display-annonse: Samme familie. Bare tryggere.">
+      </div>
+      <div class="txt">
+        <span class="tag w">Testet for kort</span>
+        <h3>Nødradio og Display fikk aldri en ordentlig sjanse</h3>
+        <p>Nødradio-annonsen og Display-annonsene gikk i noen dager og fikk under 4 000 visninger. Det er for lite til å si om de virker. Folk søker aktivt etter nødradio og DAB-radio, så den bør få en egen søkekampanje med eget budsjett.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- META -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Meta (Facebook og Instagram)</div>
+      <h2>Ny satsing fra oktober med gode konsepter, men én tekst</h2>
+      <p>Fra desember 2025 til mai 2026 gikk det i praksis bare én annonse, og den brukte rundt 8–9 000 kr. 14. oktober kom 9 nye annonser, og 29. oktober kom to UGC-videoer. Alle 11 kjører nå på Facebook, Instagram, Messenger og Threads.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>11</b><span>aktive annonser</span></div>
+      <div class="stat"><b>8</b><span>bildeannonser med samme tekst</span></div>
+      <div class="stat"><b>4 av 8</b><span>har fått under 100 visninger</span></div>
+      <div class="stat"><b>0</b><span>annonser for nødradioen</span></div>
+    </div>
+
+    <div class="sec-head" style="padding-top:0">
+      <h3 style="font-size:21px">Bildetesten: konkrete situasjoner slår tillitsbudskap</h3>
+      <p>De 8 bildeannonsene har lik tekst og ulike bilder. Meta har gitt nesten all visning til fire av dem. De fire vinnerne viser en situasjon man kan se for seg. De fire som ikke får visning handler om tillit og sosialt bevis, som «1500+ hjem», en anmeldelse og «3 grunner».</p>
+    </div>
+    <div class="statics">
+      <div class="st"><div class="img"><img src="img/s-google-sok.jpg" alt="Static: Vanskelig å google seg fram når nettet er nede"></div><b class="win">Får visning</b><p>«Vanskelig å google seg fram når nettet er nede»</p></div>
+      <div class="st"><div class="img"><img src="img/s-14kg.jpg" alt="Static: 14 kg, så mye veier en uke uten strøm"></div><b class="win">Får visning</b><p>«14 kg. Så mye veier en uke uten strøm»</p></div>
+      <div class="st"><div class="img"><img src="img/s-hvor-lenge.jpg" alt="Static: Hvor lenge bør dere klare dere uten strøm?"></div><b class="win">Får visning</b><p>«Hvor lenge bør dere klare dere uten strøm?»</p></div>
+      <div class="st"><div class="img"><img src="img/s-tidslinje.jpg" alt="Static: tidslinje tirsdag til søndag"></div><b class="win">Får visning</b><p>«Alt dere trenger mellom disse to klokkeslettene»</p></div>
+      <div class="st lose"><div class="img"><img src="img/s-1500.jpg" alt="Static: 1500+ norske hjem"></div><b class="l">Under 100 visninger</b><p>«1500+ … Om nettet svikter, har du en plan B»</p></div>
+      <div class="st lose"><div class="img"><img src="img/s-anmeldelse.jpg" alt="Static: Én bekymring mindre, med kundeanmeldelse"></div><b class="l">Under 100 visninger</b><p>«Én bekymring mindre» (anmeldelse)</p></div>
+      <div class="st lose"><div class="img"><img src="img/s-3grunner.jpg" alt="Static: 3 grunner til å ha boksen klar"></div><b class="l">Under 100 visninger</b><p>«3 grunner til å ha boksen klar om nettet går»</p></div>
+      <div class="st lose"><div class="img"><img src="img/s-nettet-svikter.jpg" alt="Static: Om nettet svikter, er du forberedt?"></div><b class="l">Under 100 visninger</b><p>«Om nettet svikter, er du forberedt?»</p></div>
+    </div>
+    <p class="legend">Grønn ramme betyr at Meta har prioritert annonsen. Grå betyr at den har fått under 100 visninger siden 14. oktober.</p>
+
+    <div class="finding">
+      <div class="txt">
+        <span class="tag w">Ett budskap testes</span>
+        <h3>Alle 8 bildene bruker samme pakkebilde og samme tekst</h3>
+        <ul>
+          <li><b>Samme tekst over alle bildene.</b> «Vanskelig å google seg frem når nettet er nede» står over alle åtte, også over bilder som handler om noe annet. Teksten og bildet sier dermed ofte to forskjellige ting.</li>
+          <li><b>Samme pakkebilde går igjen.</b> Seks av åtte bruker det samme utklippet av innholdet. På mobil ser de nesten like ut, så det blir lite variasjon for Meta å teste.</li>
+          <li><b>Mye liten tekst.</b> Flere av bildene har tre til fire linjer liten tekst og knapper i selve bildet. På mobil er det vanskelig å lese på et halvt sekund.</li>
+        </ul>
+      </div>
+      <div><img class="shot" src="img/m-google-sok.jpg" alt="Meta-annonse med primærtekst og bilde"><p class="cap">Samme primærtekst ligger på alle 8 bildeannonsene</p></div>
+    </div>
+
+    <div class="finding rev">
+      <div><img class="shot" src="img/m-karusell.jpg" alt="Meta-karusell: En uke uten strøm, dag for dag"><p class="cap">Karusell · aktiv siden 14. okt.</p></div>
+      <div class="txt">
+        <span class="tag g">Beste konsept</span>
+        <h3>«En uke uten strøm» bør bygges videre på</h3>
+        <p>Karusellen går gjennom en uke dag for dag: lyset går, mobilen er på 20 %, kjøleskapet blir varmt, butikken tar ikke kort, kranen går tom, og til slutt «Dere klarte uka». Den er konkret og rolig, og den slutter med mestring. Det passer godt med «uten skremselspropaganda».</p>
+        <p>Konseptet kan bli en kort video i 9:16, en serie bildeannonser (én dag per annonse) og en søkeannonse-vinkel.</p>
+      </div>
+    </div>
+
+    <div class="finding">
+      <div class="txt">
+        <span class="tag g">Riktig retning</span>
+        <h3>UGC-videoene er et godt steg, men de er for lange</h3>
+        <p>De to videoene fra 29. oktober viser en ekte person med boksen og en unboxing. Det er den typen innhold som pleier å fungere best for et produkt som dette. Men de er på 38 og 41 sekunder, og det er lenge på Instagram og Facebook.</p>
+        <ul>
+          <li>Kutt til 15–20 sekunder, med boksen og «alt dette er i én boks» i løpet av de første 2 sekundene.</li>
+          <li>Lag flere kroker til samme opptak (3–5 ulike åpninger) og test dem mot hverandre.</li>
+          <li>Teksten under videoen er lang. Kort den ned og legg pris og gratis frakt tidlig.</li>
+        </ul>
+      </div>
+      <div class="two">
+        <img class="shot" src="img/m-video-ugc.jpg" alt="Meta UGC-video med person og boks">
+        <img class="shot" src="img/m-video-esken.jpg" alt="Meta-video med unboxing av boksen">
+      </div>
+    </div>
+
+    <div class="finding rev">
+      <div><img class="shot" src="img/m-erklaering.jpg" alt="Inaktiv Meta-annonse merket: kjørte uten obligatorisk erklæring"><p class="cap">17. des. 2025–31. mai 2026 · 8–9k kr · 50–60k visninger</p></div>
+      <div class="txt">
+        <span class="tag b">Risiko</span>
+        <h3>Meta har merket to tidligere annonser som samfunnstema</h3>
+        <p>Begge de gamle annonsene står som «kjørte uten en obligatorisk erklæring». Det betyr at Meta i ettertid klassifiserte dem som annonser om et samfunnstema, som krever egen godkjenning og en «betalt av»-merking. Den største gikk i fem måneder.</p>
+        <p>Ord som krise, krig og samfunnssikkerhet kan utløse dette. Tekstene bør handle om hjemmet og hverdagen, ikke om samfunnet. Det bør også avklares om kontoen skal godkjennes for slike annonser, så ikke vinnerne plutselig stoppes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONKURRENTER -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Konkurrenter på Meta</div>
+      <h2>Nødradio er et åpent felt for Krisesikker</h2>
+      <p>Aktive annonser i Norge som nevner søkeordet, 2. november 2026. Krisesikker er blant de største på «beredskapspakke» og «beredskapslager» på Meta, men er helt fraværende på nødradio. Der kjører konkurrentene for fullt.</p>
+    </div>
+    <div class="bars" role="img" aria-label="Antall aktive Meta-annonser som nevner nødradio, per annonsør">
+      <div class="bar"><span>Trygghetslagret</span><div class="track"><div class="fill" style="width:100%"></div></div><span>11</span></div>
+      <div class="bar"><span>Sikkerhetslageret</span><div class="track"><div class="fill" style="width:73%"></div></div><span>8</span></div>
+      <div class="bar"><span>Beredskapskompaniet</span><div class="track"><div class="fill" style="width:55%"></div></div><span>6</span></div>
+      <div class="bar"><span>Norlenka.no</span><div class="track"><div class="fill" style="width:9%"></div></div><span>1</span></div>
+      <div class="bar"><span>Beredskapsutstyr.net</span><div class="track"><div class="fill" style="width:9%"></div></div><span>1</span></div>
+      <div class="bar ks"><span>Krisesikker.no</span><div class="track"><div class="fill" style="width:0%"></div></div><span>0</span></div>
+    </div>
+    <p class="note">Søket «nødradio» gir rundt 310 annonser totalt. Tallene over gjelder de første sidene med treff. På «beredskapspakke» er det Perfekteg (9 annonser) og Krisesikker (8) som dominerer.</p>
+  </section>
+
+  <!-- PLAN -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Hva vi ville gjort</div>
+      <h2>Fem grep, i denne rekkefølgen</h2>
+      <p>Ingenting her er bygget på tall fra kontoene ennå. Når vi får tilgang, justerer vi rekkefølgen etter hva som faktisk selger.</p>
+    </div>
+    <div class="plan">
+      <div class="step"><div class="no">1</div><div>
+        <h3>Ny søketekst på Google</h3>
+        <p>Bytt ut «Norges Beste» og test fakta mot hverandre i RSA: 4,8/5 fra 187 anmeldelser, 1 500+ norske hjem, DSBs liste for 7 dager, Stormberg og Primus, gratis frakt og 30 dagers åpent kjøp. Legg inn produktpris og anmeldelser som annonseutvidelser.</p>
+      </div></div>
+      <div class="step"><div class="no">2</div><div>
+        <h3>Egen satsing på nødradioen</h3>
+        <ul>
+          <li>Google: egen søkekampanje på nødradio, DAB-radio med sveiv og liknende.</li>
+          <li>Meta: egne annonser for nødradioen (799,-), med vinkelen «1 hjemme + 1 på hytta».</li>
+          <li>Konkurrentene er store på radio, så annonsene må vinne på pris, frakt, 30 dagers åpent kjøp og norsk kundeservice.</li>
+        </ul>
+      </div></div>
+      <div class="step"><div class="no">3</div><div>
+        <h3>Rydd i Shopping</h3>
+        <p>Sjekk ROAS per produkt, del opp etter margin og gi beredskapspakken eget budsjett, så solcellepanelet ikke tar visningene. Fjern blogg-sider fra dynamiske annonser.</p>
+      </div></div>
+      <div class="step"><div class="no">4</div><div>
+        <h3>Ny runde på Meta med vinnerne som utgangspunkt</h3>
+        <ul>
+          <li>La de fire vinnerne gå, og stopp ingenting før vi har sett tallene.</li>
+          <li>Test ny primærtekst som passer til hvert bilde, i stedet for én felles tekst.</li>
+          <li>Lag nye bilder med ekte foto av boksen hjemme hos folk i stedet for samme utklipp.</li>
+          <li>Klipp UGC-videoene ned til 15–20 sekunder og lag flere kroker.</li>
+          <li>Lag «En uke uten strøm» som video, og en julegave-vinkel for november og desember.</li>
+        </ul>
+      </div></div>
+      <div class="step"><div class="no">5</div><div>
+        <h3>Sikre mot nye stopp på Meta</h3>
+        <p>Gå gjennom ordbruken så annonsene ikke leses som samfunnstema, og avklar om kontoen skal ha godkjenning for slike annonser.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Neste steg</h2>
+    <p>For å gå fra det vi ser utenfra til tall vi kan styre etter, trenger vi:</p>
+    <ul>
+      <li>Lesetilgang til Google Ads og Meta Business</li>
+      <li>Margin og snittordre per pakke (1, 2 og 3–4 personer) og for nødradioen</li>
+      <li>Tilgang til GA4 eller Shopify-rapportene, så vi ser hvilke kanaler som faktisk selger</li>
+    </ul>
+    <p>Da kan vi regne ut hvilken ROAS hver kampanje må ha for å være lønnsom, og vise hvor budsjettet gir mest.</p>
+    <a class="btn" href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book en prat</a>
+  </div>
+
+</main>
+
+<footer>Laget av Arcads · arcads.no · Alle skjermbilder er hentet fra offentlige annonsebiblioteker.</footer>
+
+</body>
+</html>
