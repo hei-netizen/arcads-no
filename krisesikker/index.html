@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Krisesikker.no · Arcads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap">
+<style>
+/* Kort, personlig side: én kolonne, tre funn med bilde, tre grep, hilsen. Krisesikkers farger. */
+:root {
+  --bg: #f4f4fb;
+  --card: #ffffff;
+  --fg: #1f1c33;
+  --muted: #5d5873;
+  --line: #e2dfec;
+  --brand: #363058;
+  --warm: #e07a2a;
+  --good: #23864f;
+  --good-soft: #def3e6;
+  --warm-soft: #fdebd9;
+  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--body); }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.15; text-wrap: balance; }
+p { margin: 0; }
+
+.top { background: var(--brand); color: #fff; }
+.top .in { max-width: 860px; margin: 0 auto; padding: 56px 20px 64px; display: grid; gap: 16px; }
+.eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; opacity: .75; }
+.top h1 { font-size: clamp(32px, 6vw, 50px); font-weight: 800; }
+.top p { max-width: 60ch; opacity: .92; }
+
+main { max-width: 860px; margin: -32px auto 0; padding: 0 20px 72px; display: grid; gap: 28px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 16px; }
+.card h2 { font-size: 26px; color: var(--brand); }
+.card h3 { font-size: 20px; }
+.tag { justify-self: start; font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 99px; }
+.tag.g { background: var(--good-soft); color: var(--good); }
+.tag.w { background: var(--warm-soft); color: var(--warm); }
+.row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,300px); gap: 24px; align-items: center; }
+.row .txt { display: grid; gap: 10px; min-width: 0; }
+.shot { border-radius: 10px; border: 1px solid var(--line); background: #fff; }
+.statics { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
+.statics div { aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+.statics img { width: 100%; height: 100%; object-fit: cover; }
+.cap { font-size: 13px; color: var(--muted); }
+ol { margin: 0; padding-left: 22px; display: grid; gap: 10px; }
+ol b { color: var(--brand); }
+
+.hello { background: var(--brand); color: #fff; border-radius: 18px; padding: 32px; display: grid; gap: 14px; }
+.hello h2 { font-size: 28px; }
+.hello p { max-width: 60ch; opacity: .93; }
+.sign { font-weight: 700; opacity: 1; }
+.btn { justify-self: start; background: var(--warm); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 99px; }
+footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 20px 40px; }
+
+@media (max-width: 720px) {
+  .row { grid-template-columns: 1fr; }
+  .statics { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .card, .hello { padding: 20px; }
+}
+</style>
+<!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y2br1kx6o7");
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="in">
+    <div class="eyebrow">Arcads × Krisesikker.no</div>
+    <h1>Hei Herman, takk for praten!</h1>
+    <p>Vi har tatt en rask titt på annonsene dere kjører på Google og Meta. Her er det vi la merke til, kort fortalt. Vi har sett på det som er offentlig synlig, så tallene for salg og kostnad ser vi først når vi får tilgang.</p>
+  </div>
+</header>
+
+<main>
+
+  <section class="card">
+    <span class="tag g">Det som funker</span>
+    <h2>Meta-annonsene som viser en konkret situasjon vinner</h2>
+    <p>Av de 8 bildeannonsene som startet 14. oktober har Meta gitt nesten all visning til disse fire. Alle viser noe man kan se for seg: nettet er nede, 14 kg, hvor lenge dere klarer dere, en uke på en tidslinje. Annonsene om «1500+ hjem» og anmeldelser har knapt fått visning.</p>
+    <div class="statics">
+      <div><img src="img/s-google-sok.jpg" alt="Annonse: Vanskelig å google seg fram når nettet er nede"></div>
+      <div><img src="img/s-14kg.jpg" alt="Annonse: 14 kg, så mye veier en uke uten strøm"></div>
+      <div><img src="img/s-hvor-lenge.jpg" alt="Annonse: Hvor lenge bør dere klare dere uten strøm?"></div>
+      <div><img src="img/s-tidslinje.jpg" alt="Annonse: tidslinje fra tirsdag til søndag"></div>
+    </div>
+    <div class="row">
+      <div class="txt">
+        <p>Karusellen «En uke uten strøm» er den sterkeste ideen dere har. Den er konkret og rolig og slutter med «Dere klarte uka», helt uten skremsel. Den fortjener å bli en video og en hel serie.</p>
+      </div>
+      <img class="shot" src="img/m-karusell.jpg" alt="Karusell: En uke uten strøm">
+    </div>
+  </section>
+
+  <section class="card">
+    <span class="tag w">Det som kan bli bedre</span>
+    <div class="row">
+      <div class="txt">
+        <h3>Google har stått stille lenge</h3>
+        <p>Hovedannonsen «Norges Beste Beredskapsboks» har gått med samme tekst siden april 2025. Dere har mye sterkere ting å si: 4,8 av 5 fra 187 anmeldelser, over 1 500 norske hjem, DSBs liste for 7 dager, gratis frakt og 30 dagers åpent kjøp.</p>
+      </div>
+      <img class="shot" src="img/g-norges-beste.jpg" alt="Google-annonse: Norges Beste Beredskapsboks">
+    </div>
+    <div class="txt" style="display:grid;gap:10px">
+      <h3>Nødradioen er ikke med i annonsene</h3>
+      <p>Dere har ingen annonser for nødradioen. Konkurrenter som Trygghetslagret, Sikkerhetslageret og Beredskapskompaniet har til sammen minst 25 aktive nødradio-annonser på Meta akkurat nå. Det er en enkel mulighet å ta.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Det vi ville startet med</h2>
+    <ol>
+      <li><b>Ny tekst på Google.</b> Ut med «Norges beste», inn med fakta dere faktisk kan stå for, og test dem mot hverandre.</li>
+      <li><b>Nødradioen ut i annonser.</b> En egen søkekampanje på Google og egne annonser på Meta, gjerne med «1 hjemme + 1 på hytta».</li>
+      <li><b>Mer av det som funker på Meta.</b> Flere konkrete situasjoner, «En uke uten strøm» som video, kortere UGC-klipp og en julegave-vinkel før jul.</li>
+    </ol>
+  </section>
+
+  <section class="hello">
+    <h2>Vi vil gjerne jobbe med dere</h2>
+    <p>Vi synes Krisesikker er et skikkelig kult prosjekt. Dere har et produkt folk faktisk trenger, en tydelig og rolig tone, gode anmeldelser og en historie som starter ved et kjøkkenbord. Det er et godt utgangspunkt for annonser.</p>
+    <p>Vi tror det er mye å hente, både på Google og Meta, og vi har lyst til å være med på veien videre. Neste steg er at vi får lesetilgang til kontoene. Da kan vi vise konkret hvor budsjettet gir mest.</p>
+    <p class="sign">Hilsen Victor, Arcads</p>
+    <a class="btn" href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book en ny prat</a>
+  </section>
+
+</main>
+
+<footer>Arcads · arcads.no · Skjermbildene er hentet fra Googles og Metas offentlige annonsebiblioteker, 2. november 2026.</footer>
+
+</body>
+</html>
