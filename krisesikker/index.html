@@ -2,69 +2,36 @@
 <html lang="no">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Krisesikker.no · Arcads</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Public+Sans:wght@400;600;700&display=swap">
+<title>Krisesikker.no × Arcads</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAJGVYSWZJSSoACAAAAAEAPAECAAkAAAAaAAAAAAAAAGltYWdlcnk0AAAnPYy6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD5klEQVRogd1aTUvrQBQ9bZOiFgp1I6igSFBs6ue+4rY77dqf5b9wq+DOP6CQOLGJCGrr8wuk2BaR2qbzFvpCZpLa92amqO9AoHNzO3NP7r2Ze4ckKKW/AGQBUPxMJAA0E5TSn0qAQRJA86uNUIBm8qstUAVtWBOXSiU8Pj4ilUoFsl6vh1wuh8PDQ2ia4qUppQ2qGBcXFxTvL4/Yy3Ec1Us2hhJalmV9et9xHOVrDoWIbduf3nddV/maX0Jk0H0RDJ2IrusYHR1l7g8KPREoJ1Kr1VCr1YLx+vo6dnZ2GJ3r62vc3d0pXVc5EUIIM87n8xEigPrwUk6ET+TZ2VlsbGxE9FSH19A9MjMzAwCYmJhg5Kenp0rXVU6Ef9KGYQAAlpeXGfm3Dq1Go8GElqZpyOfzAADTNBldz/Pw9PSkbG2lRAgh6HQ6wXh+fh65XA4AsLS0xOhSSpWGl1IifLgUCoXg99ra2kB9GSglwudHOJxM00Q2m2Xuf1sifKiEwymdTjMeAr4pkZeXlw4hpBOWraysMDp8eLmui2ZTTYOqjAghxH99fQ3Gk5OTmJubY3R4Iu12O7LviEIZkY+wCtpBft8Aoh4C1JX0qoj0PhI9mC/O6EKhgEwmw8jOzs6UGKCKiG/bdiIsWF1djSiNjIwMbYdXQuTt7Y0SQhgi/Ab4B7ynbNuG7/vSNigh4jgObbVaAZHx8XEsLCzE6vIJX6/XcX5+Lm2DEiKVSgXgEr3fcU9cyKkILxVE6MebJ5irX1gB7wnPt74qai4VRHz+icbVVX8wNjYWIaqiyVJBpMcbEreHhDGMUkWaSLVapbe3t8E8mUwm6EH6ge9N7u/vcXl5KWWHNBHLsmh4nmKxGMkBHuVyOSKT9YrsSTL9MCB4Y6XTaZycnDANVhipVAr1eh26rjM6lmVhe3tbwhK5Q+xOuVx+xScH1v2uZDLJjLe2tr70ELvHlyZ//cdejxlLJ7yMRx4eHnwAPgQ8Enfd3NwIe0QqRwghEY9ubm5C1/XIEw9D0zRUq1V4nsfPh+npaSFbpIjw4WCaJo6Ojv7qv57nYXFxkZG5rotSqSRki1SO8ETi6qh+MAwj0pvIdItSRPgaadCOHoamaZGNUSbhhYk8Pz9Hurt/8UicfqVSQavVErJHmAghBN1ul5HFtbefgdeXOYwQJsIfGhiGETlxH4S4UBQt6YWJ8PH8r94A4huw4+NjIXuEiezv7zPjQRVvHLLZLKamphjZwcGBkD1C+wilFLu7u2i320gmk+h2uygWi0IG7O3t4erqCrquw/d9pNNpoXkSlNIG3j9z+sn4fz5z0gDc4j/48Ow3vgNHz/jWN9gAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* Kort, personlig side: én kolonne, tre funn med bilde, tre grep, hilsen. Krisesikkers farger. */
-:root {
-  --bg: #f4f4fb;
-  --card: #ffffff;
-  --fg: #1f1c33;
-  --muted: #5d5873;
-  --line: #e2dfec;
-  --brand: #363058;
-  --warm: #e07a2a;
-  --good: #23864f;
-  --good-soft: #def3e6;
-  --warm-soft: #fdebd9;
-  --display: "Archivo", "Helvetica Neue", Arial, sans-serif;
-  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.6 var(--body); }
-img { max-width: 100%; display: block; }
-h1, h2, h3 { font-family: var(--display); margin: 0; line-height: 1.15; text-wrap: balance; }
-p { margin: 0; }
-
-.top { background: var(--brand); color: #fff; }
-.top .in { max-width: 860px; margin: 0 auto; padding: 56px 20px 64px; display: grid; gap: 16px; }
-.eyebrow { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; opacity: .75; }
-.top h1 { font-size: clamp(32px, 6vw, 50px); font-weight: 800; }
-.top p { max-width: 60ch; opacity: .92; }
-
-main { max-width: 860px; margin: -32px auto 0; padding: 0 20px 72px; display: grid; gap: 28px; }
-.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: grid; gap: 16px; }
-.card h2 { font-size: 26px; color: var(--brand); }
-.card h3 { font-size: 20px; }
-.tag { justify-self: start; font-size: 12px; font-weight: 700; padding: 4px 11px; border-radius: 99px; }
-.tag.g { background: var(--good-soft); color: var(--good); }
-.tag.w { background: var(--warm-soft); color: var(--warm); }
-.row { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,300px); gap: 24px; align-items: center; }
-.row .txt { display: grid; gap: 10px; min-width: 0; }
-.shot { border-radius: 10px; border: 1px solid var(--line); background: #fff; }
-.statics { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
-.statics div { aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
-.statics img { width: 100%; height: 100%; object-fit: cover; }
-.cap { font-size: 13px; color: var(--muted); }
-ol { margin: 0; padding-left: 22px; display: grid; gap: 10px; }
-ol b { color: var(--brand); }
-
-.hello { background: var(--brand); color: #fff; border-radius: 18px; padding: 32px; display: grid; gap: 14px; }
-.hello h2 { font-size: 28px; }
-.hello p { max-width: 60ch; opacity: .93; }
-.sign { font-weight: 700; opacity: 1; }
-.btn { justify-self: start; background: var(--warm); color: #fff; text-decoration: none; font-weight: 700; padding: 12px 22px; border-radius: 99px; }
-footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 20px 40px; }
-
-@media (max-width: 720px) {
-  .row { grid-template-columns: 1fr; }
-  .statics { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .card, .hello { padding: 20px; }
-}
+:root{--bg:#FFFFFF;--soft:#F5F5F3;--ink:#111111;--mut:#6B6B6B;--line:#E6E6E3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F0F0F;--soft:#1A1A1A;--ink:#F2F2F2;--mut:#9A9A9A;--line:#2A2A2A}}
+:root[data-theme="dark"]{--bg:#0F0F0F;--soft:#1A1A1A;--ink:#F2F2F2;--mut:#9A9A9A;--line:#2A2A2A}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 28px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--mut);margin:0 0 12px}
+h1{font-size:clamp(28px,4.6vw,44px);line-height:1.1;letter-spacing:-.02em;font-weight:700;margin:0 0 12px}
+.lead{font-size:17px;color:var(--mut);margin:0;max-width:640px}
+.video{border-radius:14px;overflow:hidden;background:#000;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08)}
+.video video{display:block;width:100%;height:auto;aspect-ratio:1662/1080}
+.dub{max-width:360px;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08)}
+.dub video{display:block;width:100%;height:auto;aspect-ratio:9/16}
+h2{font-size:22px;letter-spacing:-.01em;font-weight:700;margin:72px 0 6px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:15px}
+.slides{display:grid;gap:24px}
+.slides figure{margin:0}
+.slides a{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.slides img{display:block;width:100%;height:auto}
+.slides figcaption{font-size:13px;color:var(--mut);margin-top:8px}
+footer{margin:80px 0 48px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 </style>
 <!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
 <script type="text/javascript">
@@ -76,70 +43,25 @@ footer { text-align: center; font-size: 13px; color: var(--muted); padding: 0 20
 </script>
 </head>
 <body>
+<div class="w">
+  <header>
+    <p class="eyebrow">Krisesikker.no × Arcads</p>
+    <h1>Annonsegjennomgang</h1>
+    <p class="lead">Hei Herman, takk for praten! Her er en kort gjennomgang av annonsene dere kjører på Google og Meta, og hvordan vi ville gjort det videre. Vi vil gjerne jobbe med dere.</p>
+  </header>
 
-<header class="top">
-  <div class="in">
-    <div class="eyebrow">Arcads × Krisesikker.no</div>
-    <h1>Hei Herman, takk for praten!</h1>
-    <p>Vi har tatt en rask titt på annonsene dere kjører på Google og Meta. Her er det vi la merke til, kort fortalt. Vi har sett på det som er offentlig synlig, så tallene for salg og kostnad ser vi først når vi får tilgang.</p>
+  <h2>Slidene</h2>
+  <p class="sub">Klikk på en slide for å åpne den i full størrelse.</p>
+  <div class="slides">
+    <figure><a href="m/slide-1.jpg" target="_blank" rel="noopener"><img src="m/slide-1.jpg" alt="Slide 1" width="2134" height="1200"></a><figcaption>Slide 1 / 6</figcaption></figure>
+    <figure><a href="m/slide-2.jpg" target="_blank" rel="noopener"><img src="m/slide-2.jpg" alt="Slide 2" width="2134" height="1200"></a><figcaption>Slide 2 / 6</figcaption></figure>
+    <figure><a href="m/slide-3.jpg" target="_blank" rel="noopener"><img src="m/slide-3.jpg" alt="Slide 3" width="2134" height="1200"></a><figcaption>Slide 3 / 6</figcaption></figure>
+    <figure><a href="m/slide-4.jpg" target="_blank" rel="noopener"><img src="m/slide-4.jpg" alt="Slide 4" width="2134" height="1200"></a><figcaption>Slide 4 / 6</figcaption></figure>
+    <figure><a href="m/slide-5.jpg" target="_blank" rel="noopener"><img src="m/slide-5.jpg" alt="Slide 5" width="2134" height="1200"></a><figcaption>Slide 5 / 6</figcaption></figure>
+    <figure><a href="m/slide-6.jpg" target="_blank" rel="noopener"><img src="m/slide-6.jpg" alt="Slide 6" width="2134" height="1200"></a><figcaption>Slide 6 / 6</figcaption></figure>
   </div>
-</header>
 
-<main>
-
-  <section class="card">
-    <span class="tag g">Det som funker</span>
-    <h2>Meta-annonsene som viser en konkret situasjon vinner</h2>
-    <p>Av de 8 bildeannonsene som startet 14. oktober har Meta gitt nesten all visning til disse fire. Alle viser noe man kan se for seg: nettet er nede, 14 kg, hvor lenge dere klarer dere, en uke på en tidslinje. Annonsene om «1500+ hjem» og anmeldelser har knapt fått visning.</p>
-    <div class="statics">
-      <div><img src="img/s-google-sok.jpg" alt="Annonse: Vanskelig å google seg fram når nettet er nede"></div>
-      <div><img src="img/s-14kg.jpg" alt="Annonse: 14 kg, så mye veier en uke uten strøm"></div>
-      <div><img src="img/s-hvor-lenge.jpg" alt="Annonse: Hvor lenge bør dere klare dere uten strøm?"></div>
-      <div><img src="img/s-tidslinje.jpg" alt="Annonse: tidslinje fra tirsdag til søndag"></div>
-    </div>
-    <div class="row">
-      <div class="txt">
-        <p>Karusellen «En uke uten strøm» er den sterkeste ideen dere har. Den er konkret og rolig og slutter med «Dere klarte uka», helt uten skremsel. Den fortjener å bli en video og en hel serie.</p>
-      </div>
-      <img class="shot" src="img/m-karusell.jpg" alt="Karusell: En uke uten strøm">
-    </div>
-  </section>
-
-  <section class="card">
-    <span class="tag w">Det som kan bli bedre</span>
-    <div class="row">
-      <div class="txt">
-        <h3>Google har stått stille lenge</h3>
-        <p>Hovedannonsen «Norges Beste Beredskapsboks» har gått med samme tekst siden april 2025. Dere har mye sterkere ting å si: 4,8 av 5 fra 187 anmeldelser, over 1 500 norske hjem, DSBs liste for 7 dager, gratis frakt og 30 dagers åpent kjøp.</p>
-      </div>
-      <img class="shot" src="img/g-norges-beste.jpg" alt="Google-annonse: Norges Beste Beredskapsboks">
-    </div>
-    <div class="txt" style="display:grid;gap:10px">
-      <h3>Nødradioen er ikke med i annonsene</h3>
-      <p>Dere har ingen annonser for nødradioen. Konkurrenter som Trygghetslagret, Sikkerhetslageret og Beredskapskompaniet har til sammen minst 25 aktive nødradio-annonser på Meta akkurat nå. Det er en enkel mulighet å ta.</p>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Det vi ville startet med</h2>
-    <ol>
-      <li><b>Ny tekst på Google.</b> Ut med «Norges beste», inn med fakta dere faktisk kan stå for, og test dem mot hverandre.</li>
-      <li><b>Nødradioen ut i annonser.</b> En egen søkekampanje på Google og egne annonser på Meta, gjerne med «1 hjemme + 1 på hytta».</li>
-      <li><b>Mer av det som funker på Meta.</b> Flere konkrete situasjoner, «En uke uten strøm» som video, kortere UGC-klipp og en julegave-vinkel før jul.</li>
-    </ol>
-  </section>
-
-  <section class="hello">
-    <h2>Vi vil gjerne jobbe med dere</h2>
-    <p>Vi synes Krisesikker er et skikkelig kult prosjekt. Dere har et produkt folk faktisk trenger, en tydelig og rolig tone, gode anmeldelser og en historie som starter ved et kjøkkenbord. Det er et godt utgangspunkt for annonser.</p>
-    <p>Vi tror det er mye å hente, både på Google og Meta, og vi har lyst til å være med på veien videre. Neste steg er at vi får lesetilgang til kontoene. Da kan vi vise konkret hvor budsjettet gir mest.</p>
-    <p class="sign">Hilsen Victor, Arcads</p>
-    <a class="btn" href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book en ny prat</a>
-  </section>
-
-</main>
-
-<footer>Arcads · arcads.no · Skjermbildene er hentet fra Googles og Metas offentlige annonsebiblioteker, 2. november 2026.</footer>
-
+  <footer><span>Victor Skretteberg · Arcads</span><span>arcads.no</span></footer>
+</div>
 </body>
 </html>
