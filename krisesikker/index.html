@@ -32,6 +32,16 @@ h2{font-size:22px;letter-spacing:-.01em;font-weight:700;margin:72px 0 6px}
 .slides img{display:block;width:100%;height:auto}
 .slides figcaption{font-size:13px;color:var(--mut);margin-top:8px}
 footer{margin:80px 0 48px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:56px 16px}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+.lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:99px;width:48px;height:48px;font-size:26px;line-height:1;cursor:pointer}
+.lb button:hover,.lb button:focus-visible{background:rgba(255,255,255,.3);outline:none}
+.lb .x{top:max(12px,env(safe-area-inset-top));right:14px}
+.lb .p{left:14px;top:50%;transform:translateY(-50%)}
+.lb .n{right:14px;top:50%;transform:translateY(-50%)}
+.lb .c{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#bbb;font-size:14px}
 </style>
 <!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
 <script type="text/javascript">
@@ -51,17 +61,39 @@ footer{margin:80px 0 48px;padding-top:20px;border-top:1px solid var(--line);font
   </header>
 
   <h2>Slidene</h2>
-  <p class="sub">Klikk på en slide for å åpne den i full størrelse.</p>
+  <p class="sub">Klikk på en slide for å se den større.</p>
   <div class="slides">
-    <figure><a href="img/slide-1.jpg" target="_blank" rel="noopener"><img src="img/slide-1.jpg" alt="Slide 1" width="2134" height="1200"></a><figcaption>Slide 1 / 6</figcaption></figure>
-    <figure><a href="img/slide-2.jpg" target="_blank" rel="noopener"><img src="img/slide-2.jpg" alt="Slide 2" width="2134" height="1200"></a><figcaption>Slide 2 / 6</figcaption></figure>
-    <figure><a href="img/slide-3.jpg" target="_blank" rel="noopener"><img src="img/slide-3.jpg" alt="Slide 3" width="2134" height="1200"></a><figcaption>Slide 3 / 6</figcaption></figure>
-    <figure><a href="img/slide-4.jpg" target="_blank" rel="noopener"><img src="img/slide-4.jpg" alt="Slide 4" width="2134" height="1200"></a><figcaption>Slide 4 / 6</figcaption></figure>
-    <figure><a href="img/slide-5.jpg" target="_blank" rel="noopener"><img src="img/slide-5.jpg" alt="Slide 5" width="2134" height="1200"></a><figcaption>Slide 5 / 6</figcaption></figure>
-    <figure><a href="img/slide-6.jpg" target="_blank" rel="noopener"><img src="img/slide-6.jpg" alt="Slide 6" width="2134" height="1200"></a><figcaption>Slide 6 / 6</figcaption></figure>
+    <figure><a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Slide 1" width="2134" height="1200"></a><figcaption>Slide 1 / 6</figcaption></figure>
+    <figure><a href="img/slide-2.jpg"><img src="img/slide-2.jpg" alt="Slide 2" width="2134" height="1200"></a><figcaption>Slide 2 / 6</figcaption></figure>
+    <figure><a href="img/slide-3.jpg"><img src="img/slide-3.jpg" alt="Slide 3" width="2134" height="1200"></a><figcaption>Slide 3 / 6</figcaption></figure>
+    <figure><a href="img/slide-4.jpg"><img src="img/slide-4.jpg" alt="Slide 4" width="2134" height="1200"></a><figcaption>Slide 4 / 6</figcaption></figure>
+    <figure><a href="img/slide-5.jpg"><img src="img/slide-5.jpg" alt="Slide 5" width="2134" height="1200"></a><figcaption>Slide 5 / 6</figcaption></figure>
+    <figure><a href="img/slide-6.jpg"><img src="img/slide-6.jpg" alt="Slide 6" width="2134" height="1200"></a><figcaption>Slide 6 / 6</figcaption></figure>
   </div>
 
   <footer><span>Victor Skretteberg · Arcads</span><span>arcads.no</span></footer>
 </div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Slide">
+  <button class="x" id="lbx" aria-label="Lukk">&times;</button>
+  <button class="p" id="lbp" aria-label="Forrige">&#8249;</button>
+  <img id="lbi" alt="">
+  <button class="n" id="lbn" aria-label="Neste">&#8250;</button>
+  <div class="c" id="lbc"></div>
+</div>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.slides a')),lb=document.getElementById('lb'),im=document.getElementById('lbi'),cap=document.getElementById('lbc'),i=0;
+  function show(k){i=(k+links.length)%links.length;im.src=links[i].getAttribute('href');cap.textContent='Slide '+(i+1)+' / '+links.length+' · Esc eller × for å lukke';}
+  function open(k){show(k);lb.hidden=false;document.body.style.overflow='hidden';document.getElementById('lbx').focus();}
+  function close(){lb.hidden=true;document.body.style.overflow='';links[i].focus();}
+  links.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();open(k);});});
+  document.getElementById('lbx').onclick=close;
+  document.getElementById('lbp').onclick=function(e){e.stopPropagation();show(i-1);};
+  document.getElementById('lbn').onclick=function(e){e.stopPropagation();show(i+1);};
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+})();
+</script>
 </body>
 </html>
