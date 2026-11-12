@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Move Me × Arcads</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAJGVYSWZJSSoACAAAAAEAPAECAAkAAAAaAAAAAAAAAGltYWdlcnk0AAAnPYy6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAD5klEQVRogd1aTUvrQBQ9bZOiFgp1I6igSFBs6ue+4rY77dqf5b9wq+DOP6CQOLGJCGrr8wuk2BaR2qbzFvpCZpLa92amqO9AoHNzO3NP7r2Ze4ckKKW/AGQBUPxMJAA0E5TSn0qAQRJA86uNUIBm8qstUAVtWBOXSiU8Pj4ilUoFsl6vh1wuh8PDQ2ia4qUppQ2qGBcXFxTvL4/Yy3Ec1Us2hhJalmV9et9xHOVrDoWIbduf3nddV/maX0Jk0H0RDJ2IrusYHR1l7g8KPREoJ1Kr1VCr1YLx+vo6dnZ2GJ3r62vc3d0pXVc5EUIIM87n8xEigPrwUk6ET+TZ2VlsbGxE9FSH19A9MjMzAwCYmJhg5Kenp0rXVU6Ef9KGYQAAlpeXGfm3Dq1Go8GElqZpyOfzAADTNBldz/Pw9PSkbG2lRAgh6HQ6wXh+fh65XA4AsLS0xOhSSpWGl1IifLgUCoXg99ra2kB9GSglwudHOJxM00Q2m2Xuf1sifKiEwymdTjMeAr4pkZeXlw4hpBOWraysMDp8eLmui2ZTTYOqjAghxH99fQ3Gk5OTmJubY3R4Iu12O7LviEIZkY+wCtpBft8Aoh4C1JX0qoj0PhI9mC/O6EKhgEwmw8jOzs6UGKCKiG/bdiIsWF1djSiNjIwMbYdXQuTt7Y0SQhgi/Ab4B7ynbNuG7/vSNigh4jgObbVaAZHx8XEsLCzE6vIJX6/XcX5+Lm2DEiKVSgXgEr3fcU9cyKkILxVE6MebJ5irX1gB7wnPt74qai4VRHz+icbVVX8wNjYWIaqiyVJBpMcbEreHhDGMUkWaSLVapbe3t8E8mUwm6EH6ge9N7u/vcXl5KWWHNBHLsmh4nmKxGMkBHuVyOSKT9YrsSTL9MCB4Y6XTaZycnDANVhipVAr1eh26rjM6lmVhe3tbwhK5Q+xOuVx+xScH1v2uZDLJjLe2tr70ELvHlyZ//cdejxlLJ7yMRx4eHnwAPgQ8Enfd3NwIe0QqRwghEY9ubm5C1/XIEw9D0zRUq1V4nsfPh+npaSFbpIjw4WCaJo6Ojv7qv57nYXFxkZG5rotSqSRki1SO8ETi6qh+MAwj0pvIdItSRPgaadCOHoamaZGNUSbhhYk8Pz9Hurt/8UicfqVSQavVErJHmAghBN1ul5HFtbefgdeXOYwQJsIfGhiGETlxH4S4UBQt6YWJ8PH8r94A4huw4+NjIXuEiezv7zPjQRVvHLLZLKamphjZwcGBkD1C+wilFLu7u2i320gmk+h2uygWi0IG7O3t4erqCrquw/d9pNNpoXkSlNIG3j9z+sn4fz5z0gDc4j/48Ow3vgNHz/jWN9gAAAAASUVORK5CYII=">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFFFF;--soft:#F5F5F3;--ink:#111111;--mut:#6B6B6B;--line:#E6E6E3}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F0F0F;--soft:#1A1A1A;--ink:#F2F2F2;--mut:#9A9A9A;--line:#2A2A2A}}
+:root[data-theme="dark"]{--bg:#0F0F0F;--soft:#1A1A1A;--ink:#F2F2F2;--mut:#9A9A9A;--line:#2A2A2A}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 28px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--mut);margin:0 0 12px}
+h1{font-size:clamp(28px,4.6vw,44px);line-height:1.1;letter-spacing:-.02em;font-weight:700;margin:0 0 12px}
+.lead{font-size:17px;color:var(--mut);margin:0;max-width:640px}
+.video{border-radius:14px;overflow:hidden;background:#000;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08)}
+.video video{display:block;width:100%;height:auto;aspect-ratio:1662/1080}
+.dub{max-width:360px;border-radius:14px;overflow:hidden;background:#000;box-shadow:0 1px 2px rgba(0,0,0,.06),0 12px 40px rgba(0,0,0,.08)}
+.dub video{display:block;width:100%;height:auto;aspect-ratio:9/16}
+h2{font-size:22px;letter-spacing:-.01em;font-weight:700;margin:72px 0 6px}
+.sub{color:var(--mut);margin:0 0 24px;font-size:15px}
+.slides{display:grid;gap:24px}
+.slides figure{margin:0}
+.slides a{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+.slides img{display:block;width:100%;height:auto}
+.slides figcaption{font-size:13px;color:var(--mut);margin-top:8px}
+footer{margin:80px 0 48px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--mut);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.lb{position:fixed;inset:0;background:rgba(10,10,10,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:56px 16px}
+.lb[hidden]{display:none}
+.lb img{max-width:100%;max-height:100%;border-radius:8px;background:#fff}
+.lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:99px;width:48px;height:48px;font-size:26px;line-height:1;cursor:pointer}
+.lb button:hover,.lb button:focus-visible{background:rgba(255,255,255,.3);outline:none}
+.lb .x{top:max(12px,env(safe-area-inset-top));right:14px}
+.lb .p{left:14px;top:50%;transform:translateY(-50%)}
+.lb .n{right:14px;top:50%;transform:translateY(-50%)}
+.lb .c{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#bbb;font-size:14px}
+</style>
+<!-- Microsoft Clarity (prosjekt «Arcads» y2br1kx6o7) -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y2br1kx6o7");
+</script>
+</head>
+<body>
+<div class="w">
+  <header>
+    <p class="eyebrow">Move Me × Arcads</p>
+    <h1>Google-annonsene deres, og hva vi ville gjort</h1>
+    <p class="lead">Hei Fredrik! Takk for en god prat i går. Jeg har gått gjennom Google-kontoen deres og skrevet ned det viktigste vi ser, og hvordan vi ville startet. Det er bare å si fra hvis noe er uklart.</p>
+  </header>
+
+  <h2>Slidene</h2>
+  <p class="sub">Klikk på en slide for å se den større.</p>
+  <div class="slides">
+    <figure><a href="img/slide-1.jpg"><img src="img/slide-1.jpg" alt="Slide 1" width="2134" height="1200"></a><figcaption>Slide 1 / 7</figcaption></figure>
+    <figure><a href="img/slide-2.jpg"><img src="img/slide-2.jpg" alt="Slide 2" width="2134" height="1200"></a><figcaption>Slide 2 / 7</figcaption></figure>
+    <figure><a href="img/slide-3.jpg"><img src="img/slide-3.jpg" alt="Slide 3" width="2134" height="1200"></a><figcaption>Slide 3 / 7</figcaption></figure>
+    <figure><a href="img/slide-4.jpg"><img src="img/slide-4.jpg" alt="Slide 4" width="2134" height="1200"></a><figcaption>Slide 4 / 7</figcaption></figure>
+    <figure><a href="img/slide-5.jpg"><img src="img/slide-5.jpg" alt="Slide 5" width="2134" height="1200"></a><figcaption>Slide 5 / 7</figcaption></figure>
+    <figure><a href="img/slide-6.jpg"><img src="img/slide-6.jpg" alt="Slide 6" width="2134" height="1200"></a><figcaption>Slide 6 / 7</figcaption></figure>
+    <figure><a href="img/slide-7.jpg"><img src="img/slide-7.jpg" alt="Slide 7" width="2134" height="1200"></a><figcaption>Slide 7 / 7</figcaption></figure>
+  </div>
+
+  <p class="sub" style="margin-top:40px">Vil du ta en ny prat? <a href="https://cal.com/arcads/30min" target="_blank" rel="noopener">Book en halvtime her</a>, eller svar på mailen.</p>
+
+  <footer><span>Victor Skretteberg · Arcads</span><span>arcads.no</span></footer>
+</div>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Slide">
+  <button class="x" id="lbx" aria-label="Lukk">&times;</button>
+  <button class="p" id="lbp" aria-label="Forrige">&#8249;</button>
+  <img id="lbi" alt="">
+  <button class="n" id="lbn" aria-label="Neste">&#8250;</button>
+  <div class="c" id="lbc"></div>
+</div>
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.slides a')),lb=document.getElementById('lb'),im=document.getElementById('lbi'),cap=document.getElementById('lbc'),i=0;
+  function show(k){i=(k+links.length)%links.length;im.src=links[i].getAttribute('href');cap.textContent='Slide '+(i+1)+' / '+links.length+' · Esc eller × for å lukke';}
+  function open(k){show(k);lb.hidden=false;document.body.style.overflow='hidden';document.getElementById('lbx').focus();}
+  function close(){lb.hidden=true;document.body.style.overflow='';links[i].focus();}
+  links.forEach(function(a,k){a.addEventListener('click',function(e){e.preventDefault();open(k);});});
+  document.getElementById('lbx').onclick=close;
+  document.getElementById('lbp').onclick=function(e){e.stopPropagation();show(i-1);};
+  document.getElementById('lbn').onclick=function(e){e.stopPropagation();show(i+1);};
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(i-1);if(e.key==='ArrowRight')show(i+1);});
+})();
+</script>
+</body>
+</html>
