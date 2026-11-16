@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Bergmanns Fredrikstad | Restaurant, bar og pizza ved brygga</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta name="description" content="Restaurant, bar og pizza i Storgata 13, rett ved brygga i Fredrikstad. Åpent hver dag, live musikk hver fredag og lørdag.">
+<!-- Bergmanns Fredrikstad: eksempelside bygget fra bunnen av Arcads 16.11.2026. Egen kode, eget oppsett og egne tekster.
+     Fakta, priser og åpningstider er hentet fra bergmanns.no 13.11.2026. Bilder, video og logo er Bergmanns egne.
+     Skjemaet sender ingenting. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F2E9; --paper:#FFFDF8; --ink:#202124; --ink2:#4A4A4D; --line:#E6DDCD;
+  --gold:#BE9144; --gold-d:#9A7230; --gold-l:#E6C58D; --dark:#1F2023; --dark2:#2A2B2F;
+  --head:'Oswald','Arial Narrow',sans-serif; --sans:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --r:22px; --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);font-size:1.03rem;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:500;text-transform:uppercase;line-height:1.04;letter-spacing:.005em;text-wrap:balance}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.eye{display:inline-block;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--gold-d);margin-bottom:14px}
+.h2{font-size:clamp(2.1rem,4.6vw,3.5rem)}
+.lede{color:var(--ink2);font-size:1.1rem;max-width:54ch;margin-top:16px}
+section{padding:104px 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:16px 30px;font-family:var(--sans);font-weight:600;font-size:.95rem;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
+.btn svg{width:17px;height:17px;transition:transform .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:hover svg{transform:translateX(3px)}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.gold:hover{background:var(--gold-d)}
+.btn.line{border-color:rgba(255,255,255,.65);color:#fff}
+.btn.line:hover{background:#fff;color:var(--ink)}
+.btn.ink{background:var(--ink);color:#fff}
+.btn.ghost{border-color:var(--ink);color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+/* toppstripe + meny */
+.bar{background:var(--dark);color:#fff;text-align:center;font-size:.9rem;padding:10px 16px}
+.bar a{color:var(--gold-l);font-weight:600;text-underline-offset:3px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(247,242,233,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .in{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+.nav .logo{height:38px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{text-decoration:none;font-weight:500;font-size:.96rem;position:relative;padding:6px 0}
+.nav ul a::after{content:'';position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--gold);transition:right .25s ease}
+.nav ul a:hover::after{right:0}
+.nav .right{display:flex;align-items:center;gap:10px}
+.nav .btn{padding:12px 24px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--ink)}
+.burger svg{width:26px;height:26px;margin:auto}
+
+/* hero */
+.hero{position:relative;padding:0;min-height:min(86vh,820px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--dark)}
+.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,22,.3) 0%,rgba(20,20,22,.12) 35%,rgba(20,20,22,.86) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:120px;padding-bottom:110px}
+.hero .eye{color:var(--gold-l)}
+.hero h1{font-size:clamp(2.9rem,8vw,6.4rem);max-width:13ch}
+.hero p{font-size:1.2rem;max-width:44ch;margin:20px 0 30px;color:rgba(255,255,255,.9)}
+.acts{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.status{display:inline-flex;align-items:center;gap:10px;font-size:.98rem;margin-left:10px}
+.status i{width:9px;height:9px;border-radius:50%;background:#8FCB7A;box-shadow:0 0 0 4px rgba(143,203,122,.25)}
+.status.closed i{background:#E09A78;box-shadow:0 0 0 4px rgba(224,154,120,.25)}
+
+/* tre kort under hero */
+.quick{padding:0;margin-top:-58px;position:relative;z-index:5}
+.quick .g{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quick a{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;text-decoration:none;display:flex;justify-content:space-between;align-items:center;gap:14px;box-shadow:0 22px 44px -30px rgba(31,32,35,.5);transition:transform .25s ease,border-color .25s ease}
+.quick a:hover{transform:translateY(-4px);border-color:var(--gold)}
+.quick small{display:block;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:4px}
+.quick b{font-family:var(--head);font-weight:500;font-size:1.35rem;text-transform:uppercase}
+.quick svg{width:22px;height:22px;flex:none;color:var(--gold-d)}
+
+/* julebord */
+.jul .box{display:grid;grid-template-columns:1.05fr 1fr;background:var(--dark);color:#fff;border-radius:calc(var(--r) + 6px);overflow:hidden}
+.jul img{width:100%;height:100%;min-height:440px;object-fit:cover}
+.jul .t{padding:64px 56px;display:flex;flex-direction:column;justify-content:center}
+.jul .eye{color:var(--gold-l)}
+.jul p{color:rgba(255,255,255,.82);margin:18px 0 28px;max-width:44ch;font-size:1.08rem}
+.jul ul{list-style:none;margin:0 0 30px;display:grid;gap:10px}
+.jul li{display:flex;gap:12px;align-items:center;color:rgba(255,255,255,.9)}
+.jul li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none}
+
+/* meny */
+.menu .top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{font-family:var(--sans);font-weight:600;font-size:.92rem;border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:11px 22px;cursor:pointer;transition:all .2s ease}
+.tabs button.on,.tabs button:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.menu .body{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.menu .pic{border-radius:var(--r);overflow:hidden;position:sticky;top:104px}
+.menu .pic img{width:100%;aspect-ratio:4/4.4;object-fit:cover}
+.mcat{display:none}
+.mcat.on{display:block}
+.mcat .note{color:var(--ink2);margin-bottom:22px}
+.dish{padding:18px 0;border-top:1px solid var(--line)}
+.dish:last-child{border-bottom:1px solid var(--line)}
+.dish .row{display:flex;align-items:baseline;gap:12px}
+.dish b{font-weight:600;font-size:1.08rem}
+.dish i{flex:1;border-bottom:1px dotted #C9BEA9;transform:translateY(-4px)}
+.dish span{font-family:var(--head);font-size:1.15rem;white-space:nowrap}
+.dish p{color:var(--ink2);font-size:.96rem;margin-top:3px}
+
+/* live */
+.live{position:relative;color:#fff;background:var(--dark) url('img/live.jpg') center 30%/cover;padding:150px 0}
+.live::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,22,.9) 0%,rgba(20,20,22,.62) 48%,rgba(20,20,22,.2) 100%)}
+.live .wrap{position:relative}
+.live .eye{color:var(--gold-l)}
+.live p{max-width:42ch;margin:18px 0 30px;font-size:1.12rem;color:rgba(255,255,255,.88)}
+.days{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
+.days div{border:1px solid rgba(255,255,255,.28);border-radius:16px;padding:14px 22px;backdrop-filter:blur(6px);background:rgba(255,255,255,.06)}
+.days b{display:block;font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:1.25rem}
+.days span{font-size:.9rem;color:rgba(255,255,255,.8)}
+
+/* selskap */
+.party .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:48px 0 22px}
+.card{position:relative;border-radius:var(--r);overflow:hidden;min-height:400px;display:flex;align-items:flex-end;color:#fff;background:var(--dark)}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.card:hover img{transform:scale(1.05)}
+.card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,20,22,0) 35%,rgba(20,20,22,.88) 100%)}
+.card div{position:relative;z-index:2;padding:28px}
+.card h3{font-size:1.7rem;margin-bottom:6px}
+.card p{font-size:.97rem;color:rgba(255,255,255,.88)}
+.ask{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;background:var(--paper);border:1px solid var(--line);border-radius:calc(var(--r) + 6px);padding:52px}
+.ask h3{font-size:2.1rem;margin-bottom:12px}
+.ask .l p{color:var(--ink2)}
+.ask ul{list-style:none;margin-top:24px;display:grid;gap:12px}
+.ask li{display:flex;gap:12px;align-items:center;font-weight:500}
+.ask li svg{width:20px;height:20px;color:var(--gold-d);flex:none}
+.ask form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ask .full{grid-column:1/-1}
+.ask label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
+.ask input,.ask select,.ask textarea{width:100%;font-family:var(--sans);font-size:1rem;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;color:var(--ink)}
+.ask input:focus,.ask select:focus,.ask textarea:focus{outline:none;border-color:var(--gold)}
+.ask .err{display:none;color:#B5523F;font-size:.92rem}
+.ask .ok{display:none;grid-column:1/-1;text-align:center;padding:40px 0}
+.ask .ok h4{font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:1.9rem;margin-bottom:8px}
+.pick{display:flex;gap:8px;flex-wrap:wrap}
+.pick label{margin:0}
+.pick label{position:relative}
+.pick input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;padding:0;border:0}
+.pick span{display:inline-block;border:1.5px solid var(--line);border-radius:999px;padding:10px 18px;font-size:.92rem;font-weight:600;cursor:pointer;background:#fff;transition:all .15s ease}
+.pick input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+
+/* om oss */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about img{border-radius:var(--r);width:100%;aspect-ratio:4/4.6;object-fit:cover}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px;padding-top:28px;border-top:1px solid var(--line)}
+.facts b{display:block;font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:1.15rem}
+.facts span{font-size:.92rem;color:var(--ink2)}
+
+/* besøk */
+.visit{background:var(--paper);border-top:1px solid var(--line)}
+.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.visit img{border-radius:var(--r);width:100%;aspect-ratio:5/4;object-fit:cover}
+.visit address{font-style:normal;color:var(--ink2);margin:18px 0 22px}
+.hours{width:100%;border-collapse:collapse;margin-bottom:30px}
+.hours td{padding:13px 0;border-top:1px solid var(--line)}
+.hours tr:last-child td{border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-family:var(--head);font-size:1.1rem}
+.hours tr.today td{font-weight:600}
+.hours tr.today td:first-child::after{content:'i dag';margin-left:10px;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:#fff;border-radius:999px;padding:3px 9px;vertical-align:middle;font-family:var(--sans)}
+
+/* avslutning + bunn */
+.cta{background:var(--gold);color:#fff;text-align:center;padding:84px 0}
+.cta h2{font-size:clamp(2.2rem,5.4vw,4rem)}
+.cta p{margin:14px auto 28px;max-width:44ch;font-size:1.1rem}
+.cta .acts{justify-content:center}
+.cta .btn.ink:hover{background:#000}
+footer{background:var(--dark);color:rgba(255,255,255,.72);padding:68px 0 34px;font-size:.95rem}
+footer .top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px}
+footer .logo{height:40px;width:auto;filter:brightness(0) invert(1);margin-bottom:16px}
+footer h4{font-family:var(--sans);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:14px;font-weight:600}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--gold-l)}
+footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
+.mbook{display:none}
+
+@media(max-width:900px){
+  section{padding:72px 0}
+  .wrap{padding:0 20px}
+  .nav ul{display:none;position:absolute;left:0;right:0;top:76px;background:var(--bg);flex-direction:column;gap:0;padding:8px 20px 20px;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:14px 0;font-size:1.1rem;border-bottom:1px solid var(--line)}
+  .nav .right .btn{display:none}
+  .burger{display:block}
+  .hero{min-height:78vh}
+  .hero .wrap{padding-bottom:92px}
+  .hero p{font-size:1.06rem}
+  .status{margin:8px 0 0;width:100%}
+  .quick{margin-top:-46px}
+  .quick .g{grid-template-columns:1fr;gap:10px}
+  .quick a{padding:18px 20px}
+  .jul .box,.menu .body,.about,.visit .grid,.ask{grid-template-columns:1fr}
+  .jul img{min-height:260px;max-height:320px}
+  .jul .t{padding:36px 26px}
+  .menu .pic{position:static;order:-1}
+  .menu .pic img{aspect-ratio:16/10}
+  .menu .body{gap:28px}
+  .live{padding:96px 0;background-position:62% 30%}
+  .live::before{background:rgba(20,20,22,.7)}
+  .party .cards{grid-template-columns:1fr}
+  .card{min-height:300px}
+  .ask{padding:28px 22px;gap:30px}
+  .ask form{grid-template-columns:1fr}
+  .about{gap:32px}
+  .about img{aspect-ratio:4/3.4}
+  .facts{grid-template-columns:1fr;gap:12px}
+  .visit .grid{gap:32px}
+  footer .top{grid-template-columns:1fr 1fr}
+  body{padding-bottom:78px}
+  .mbook{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;box-shadow:0 14px 34px -12px rgba(0,0,0,.55)}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">Planlegger dere julebord? <a href="#selskap">Send en forespørsel</a></div>
+
+<header class="nav" id="nav">
+  <div class="wrap in">
+    <a href="#top" aria-label="Til toppen"><img class="logo" src="img/logo.png" alt="Bergmann's Restaurant Bar Pizza" width="126" height="38"></a>
+    <ul id="navList">
+      <li><a href="#meny">Meny</a></li>
+      <li><a href="#live">Live musikk</a></li>
+      <li><a href="#selskap">Selskap</a></li>
+      <li><a href="#om">Om oss</a></li>
+      <li><a href="#besok">Åpningstider</a></li>
+    </ul>
+    <div class="right">
+      <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
+      <button class="burger" id="burger" aria-label="Åpne meny" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <video src="media/hero.mp4" poster="media/hero-poster.jpg" autoplay muted loop playsinline></video>
+  <div class="wrap">
+    <span class="eye">Storgata 13 &middot; Fredrikstad</span>
+    <h1>Mat, drinker og live musikk ved brygga</h1>
+    <p>Restaurant, bar og pizza midt i Fredrikstad. Kom til lunsj, bli til middag, og bli gjerne litt til.</p>
+    <div class="acts">
+      <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn line" href="#meny">Se menyen</a>
+      <div class="status" id="status"><i></i><span id="statusTxt">Åpent hver dag</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="quick">
+  <div class="wrap g">
+    <a href="#besok"><div><small>Åpent i dag</small><b id="idag">Hver dag</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#live"><div><small>Live musikk</small><b>Fredag og lørdag</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#selskap"><div><small>Selskap</small><b>Send forespørsel</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+<section class="jul">
+  <div class="wrap">
+    <div class="box rv">
+      <img src="img/julebord.jpg" alt="Julepyntet bord med ribbe, pinnekjøtt og lutefisk">
+      <div class="t">
+        <span class="eye">Julebord</span>
+        <h2 class="h2">Ta julebordet hos oss</h2>
+        <p>God julemat, festlig stemning og live musikk i helgene. Si hvor mange dere blir, så hjelper vi deg med resten.</p>
+        <ul>
+          <li>Midt i sentrum, rett ved brygga</li>
+          <li>Vinterisolert pergola</li>
+          <li>Pinnekjøtt på menyen</li>
+        </ul>
+        <div class="acts">
+          <a class="btn gold" href="#selskap">Send forespørsel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn line" href="#meny">Se menyen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu" id="meny" style="padding-top:0">
+  <div class="wrap">
+    <div class="top rv">
+      <div>
+        <span class="eye">Vår meny</span>
+        <h2 class="h2">Smakebiter fra kjøkkenet</h2>
+      </div>
+      <div class="tabs" id="tabs">
+        <button class="on" data-t="lunsj">Lunsj</button>
+        <button data-t="sma">Småretter</button>
+        <button data-t="hoved">Hovedretter</button>
+        <button data-t="pizza">Burger og pizza</button>
+      </div>
+    </div>
+    <div class="body">
+      <div class="rv">
+        <div class="mcat on" data-c="lunsj">
+          <p class="note">Thora Bergmann sine klassiske lunsjretter. Serveres frem til kl. 15.</p>
+          <div class="dish"><div class="row"><b>Omelett med ost og skinke</b><i></i><span>239,-</span></div><p>Servert i panne med salat, brød og smør.</p></div>
+          <div class="dish"><div class="row"><b>Karbonadesmørbrød</b><i></i><span>239,-</span></div><p>Stekt egg, karamellisert løk, salat og majones.</p></div>
+          <div class="dish"><div class="row"><b>Stjerneskudd</b><i></i><span>319,-</span></div><p>Dampet og panert rødspettefilet på toast, med reker, asparges og dansk remulade.</p></div>
+          <div class="dish"><div class="row"><b>Lunsjburger i croissant</b><i></i><span>259,-</span></div><p>Dobbel smashburger med ost, fermentert chilimajones og karamellisert løk.</p></div>
+        </div>
+        <div class="mcat" data-c="sma">
+          <p class="note">Serveres hele dagen.</p>
+          <div class="dish"><div class="row"><b>Storgata 13's berømte club sandwich</b><i></i><span>279,-</span></div><p>Kylling, bacon, tomat, aioli, avokado og salat.</p></div>
+          <div class="dish"><div class="row"><b>Fransk løksuppe</b><i></i><span>189,-</span></div><p>Klassisk løksuppe med gruyère-gratinert toast.</p></div>
+          <div class="dish"><div class="row"><b>Rekesmørbrød</b><i></i><span>309,-</span></div><p>Servert med lime, salat, dill, majones og urtedressing.</p></div>
+          <div class="dish"><div class="row"><b>Kremet pasta carbonara</b><i></i><span>259,-</span></div><p>Parmesan og bacon, toppet med vårløk.</p></div>
+        </div>
+        <div class="mcat" data-c="hoved">
+          <p class="note">Serveres fra kl. 15.</p>
+          <div class="dish"><div class="row"><b>Indrefilet av okse 180 g</b><i></i><span>475,-</span></div><p>Sopp, grønnsaker, små plommetomater, bearnaise og småpoteter.</p></div>
+          <div class="dish"><div class="row"><b>Ovnsbakt torsk</b><i></i><span>425,-</span></div><p>Crème ninon, sautert spinat, bacon og poteter.</p></div>
+          <div class="dish"><div class="row"><b>Hjortebiff</b><i></i><span>485,-</span></div><p>Portvinsjy, rosenkål, estragonemulsjon og potetterrin.</p></div>
+          <div class="dish"><div class="row"><b>Pinnekjøtt</b><i></i><span>555,-</span></div><p>Med vossakorv, kjøkkensjefens kålrabistappe og sjy.</p></div>
+        </div>
+        <div class="mcat" data-c="pizza">
+          <p class="note">Det mange mener er byens beste pizza.</p>
+          <div class="dish"><div class="row"><b>Klassisk hamburger 200 g</b><i></i><span>263,-</span></div><p>Chipotledressing, salat, tomat, rødløk og ost.</p></div>
+          <div class="dish"><div class="row"><b>Bacon og blå burger 200 g</b><i></i><span>279,-</span></div><p>Gorgonzola, bacon, salat, syltet løk og karamellisert løkdressing.</p></div>
+          <div class="dish"><div class="row"><b>Pizza Blegen, byens favoritt</b><i></i><span>fra 159,-</span></div><p>Marinert biffkjøtt, skinke, salami, hakket bacon og pepperoni.</p></div>
+          <div class="dish"><div class="row"><b>Pizza Vesterøy</b><i></i><span>fra 146,-</span></div><p>Kjøttboller, skinke, salami, rødløk og fersk paprika.</p></div>
+        </div>
+        <div class="acts" style="margin-top:30px">
+          <a class="btn ink" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
+        </div>
+      </div>
+      <div class="pic rv"><img id="menuPic" src="img/mat-reker.jpg" alt="Stjerneskudd med rødspette og reker, med sitron"></div>
+    </div>
+  </div>
+</section>
+
+<section class="live" id="live">
+  <div class="wrap rv">
+    <span class="eye">Hver helg</span>
+    <h2 class="h2">Live musikk fredag og lørdag</h2>
+    <p>Spis middag, finn deg en plass i baren og bli til musikken starter. Vi holder åpent til 03.</p>
+    <div class="days">
+      <div><b>Fredag</b><span>åpent til 03:00</span></div>
+      <div><b>Lørdag</b><span>åpent til 03:00</span></div>
+    </div>
+    <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord til helgen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </div>
+</section>
+
+<section class="party" id="selskap">
+  <div class="wrap">
+    <div class="rv">
+      <span class="eye">Selskap</span>
+      <h2 class="h2">Julebord, bursdag eller firmafest?</h2>
+      <p class="lede">Uteområdet har vinterisolert pergola og passer for private sammenkomster hele året, både små og større.</p>
+    </div>
+    <div class="cards">
+      <div class="card rv"><img src="img/julebord.jpg" alt="Julepyntet bord med julemat"><div><h3>Julebord</h3><p>God julemat og en uformell, festlig stemning.</p></div></div>
+      <div class="card rv"><img src="img/brygga.jpg" alt="Bergmanns og pergolaen sett fra brygga" style="object-position:center 62%"><div><h3>Sommerfest</h3><p>God mat, god stemning og plass til å mingle.</p></div></div>
+      <div class="card rv"><img src="img/hero.jpg" alt="To smilende servitører med tallerkener foran Bergmanns"><div><h3>Bursdag</h3><p>Trivelige lokaler midt i sentrum, for venner og familie.</p></div></div>
+    </div>
+    <div class="ask rv">
+      <div class="l">
+        <h3>Fortell oss hva dere planlegger</h3>
+        <p>Det tar under ett minutt. Vi tar kontakt og planlegger sammen med deg.</p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Midt i sentrum, rett ved brygga</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Solrikt uteområde med vinterisolert pergola</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Live musikk hver fredag og lørdag</li>
+        </ul>
+      </div>
+      <form id="askForm" novalidate>
+        <div class="full"><label>Anledning</label>
+          <div class="pick">
+            <label><input type="radio" name="anledning" value="Julebord" checked><span>Julebord</span></label>
+            <label><input type="radio" name="anledning" value="Firmafest"><span>Firmafest</span></label>
+            <label><input type="radio" name="anledning" value="Bursdag"><span>Bursdag</span></label>
+            <label><input type="radio" name="anledning" value="Sommerfest"><span>Sommerfest</span></label>
+            <label><input type="radio" name="anledning" value="Annet"><span>Noe annet</span></label>
+          </div>
+        </div>
+        <div><label for="f-ant">Antall gjester</label><input id="f-ant" name="antall" type="number" min="1" inputmode="numeric" placeholder="Ca. antall"></div>
+        <div><label for="f-dato">Ønsket dato</label><input id="f-dato" name="dato" type="date"></div>
+        <div><label for="f-navn">Navn</label><input id="f-navn" name="navn" type="text" autocomplete="name" placeholder="Navnet ditt" required></div>
+        <div><label for="f-epost">E-post</label><input id="f-epost" name="epost" type="email" autocomplete="email" placeholder="din@epost.no" required></div>
+        <div class="full err" id="askErr">Fyll inn navn og en gyldig e-postadresse.</div>
+        <div class="full"><button class="btn gold" type="submit">Send forespørsel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+        <div class="ok" id="askOk"><h4>Takk for forespørselen!</h4><p>Vi tar kontakt, så planlegger vi selskapet sammen med deg.</p></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="om" style="padding-top:0">
+  <div class="wrap about">
+    <img class="rv" src="img/ansatte.jpg" alt="To ansatte hos Bergmanns serverer mat foran baren">
+    <div class="rv">
+      <span class="eye">Om oss</span>
+      <h2 class="h2">Arven etter Thora Bergmann</h2>
+      <p class="lede">Bergmann's bygger på arven etter Thora Bergmann, en lidenskapelig kokk. Lunsjrettene hennes står fortsatt på menyen.</p>
+      <p class="lede">Her er stemningen avslappet og varm. Ta en rask lunsj, en lang middag eller bare et glass i baren.</p>
+      <div class="facts">
+        <div><b>Midt i sentrum</b><span>Storgata 13, ved brygga</span></div>
+        <div><b>Åpent hver dag</b><span>til 03 fredag og lørdag</span></div>
+        <div><b>Pergola hele året</b><span>solrik og vinterisolert</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="besok">
+  <div class="wrap grid">
+    <img class="rv" src="img/brygga.jpg" alt="Bergmanns Fredrikstad sett fra brygga">
+    <div class="rv">
+      <span class="eye">Besøk oss</span>
+      <h2 class="h2">Åpent hver dag</h2>
+      <address>Storgata 13, 1607 Fredrikstad</address>
+      <table class="hours" id="hours">
+        <tr data-d="1,2,3,4"><td>Mandag til torsdag</td><td>11:00 til 22:00</td></tr>
+        <tr data-d="5"><td>Fredag</td><td>11:00 til 03:00</td></tr>
+        <tr data-d="6"><td>Lørdag</td><td>12:00 til 03:00</td></tr>
+        <tr data-d="0"><td>Søndag</td><td>12:00 til 21:00</td></tr>
+      </table>
+      <div class="acts">
+        <a class="btn ink" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Bergmanns+Fredrikstad+Storgata+13" target="_blank" rel="noopener">Vis i kart</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap rv">
+    <h2>Bord til i kveld?</h2>
+    <p>Book på nett på under ett minutt, eller stikk innom. Du er alltid velkommen.</p>
+    <div class="acts">
+      <a class="btn ink" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn line" href="#selskap">Planlegg selskap</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <img class="logo" src="img/logo.png" alt="Bergmann's Restaurant Bar Pizza" width="133" height="40">
+        <p>Storgata 13, 1607 Fredrikstad<br><a href="mailto:booking@bergmanns.no">booking@bergmanns.no</a></p>
+      </div>
+      <div>
+        <h4>Sider</h4>
+        <ul><li><a href="#meny">Meny</a></li><li><a href="#live">Live musikk</a></li><li><a href="#selskap">Selskap</a></li><li><a href="#om">Om oss</a></li><li><a href="#besok">Åpningstider</a></li></ul>
+      </div>
+      <div>
+        <h4>Åpningstider</h4>
+        <ul><li>Man til tor 11 til 22</li><li>Fredag 11 til 03</li><li>Lørdag 12 til 03</li><li>Søndag 12 til 21</li></ul>
+      </div>
+      <div>
+        <h4>Følg oss</h4>
+        <ul><li><a href="https://www.facebook.com/BergmannsFredrikstad" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.instagram.com/bergmanns.fredrikstad" target="_blank" rel="noopener">Instagram</a></li></ul>
+      </div>
+    </div>
+    <div class="bot"><span>&copy; 2026 Bergmanns Fredrikstad</span><span>En del av Serveringsgruppen</span></div>
+  </div>
+</footer>
+
+<a class="btn gold mbook" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
+
+<script>
+(function(){
+  var list=document.getElementById('navList'),b=document.getElementById('burger');
+  b.addEventListener('click',function(){var o=list.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  list.addEventListener('click',function(e){if(e.target.tagName==='A'){list.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+})();
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08});
+  els.forEach(function(e){io.observe(e);});
+})();
+/* menyfaner */
+(function(){
+  var pics={lunsj:['img/mat-reker.jpg','Stjerneskudd med rødspette og reker, med sitron'],sma:['img/mat-reker.jpg','Stjerneskudd med rødspette og reker, med sitron'],hoved:['img/burger.jpg','Ribs, biff og pommes frites servert ved vinduet'],pizza:['img/burger.jpg','Ribs, biff og pommes frites servert ved vinduet']};
+  var tabs=document.getElementById('tabs'),pic=document.getElementById('menuPic');
+  tabs.addEventListener('click',function(e){var t=e.target.getAttribute('data-t');if(!t)return;
+    tabs.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===e.target);});
+    document.querySelectorAll('.mcat').forEach(function(c){c.classList.toggle('on',c.getAttribute('data-c')===t);});
+    pic.src=pics[t][0];pic.alt=pics[t][1];});
+})();
+/* åpent nå? Tider fra bergmanns.no. Indeks 0 = søndag, stenger > 24 = over midnatt. */
+(function(){
+  var H=[[12,21],[11,22],[11,22],[11,22],[11,22],[11,27],[12,27]];
+  var now;try{now=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Oslo'}));}catch(e){now=new Date();}
+  var d=now.getDay(),t=now.getHours()+now.getMinutes()/60,y=(d+6)%7;
+  function kl(h){h=h%24;return (h<10?'0':'')+h+':00';}
+  var open=false,til=0;
+  if(H[y][1]>24 && t<H[y][1]-24){open=true;til=H[y][1];}
+  else if(t>=H[d][0] && t<H[d][1]){open=true;til=H[d][1];}
+  var box=document.getElementById('status'),txt=document.getElementById('statusTxt');
+  if(open){txt.textContent='Åpent nå, til kl. '+kl(til);}
+  else{var nd=t<H[d][0]?d:(d+1)%7;txt.textContent=(nd===d?'Åpner i dag kl. ':'Åpner i morgen kl. ')+kl(H[nd][0]);box.classList.add('closed');}
+  document.getElementById('idag').textContent=kl(H[d][0])+' til '+kl(H[d][1]);
+  document.querySelectorAll('#hours tr').forEach(function(r){if(r.getAttribute('data-d').split(',').indexOf(String(d))>-1)r.classList.add('today');});
+})();
+/* selskapsskjema: eksempel, sender ingenting */
+document.getElementById('askForm').addEventListener('submit',function(e){
+  e.preventDefault();var f=e.target,err=document.getElementById('askErr');
+  if(!f.navn.value.trim()||!/^\S+@\S+\.\S+$/.test(f.epost.value.trim())){err.style.display='block';return;}
+  [].forEach.call(f.children,function(c){c.style.display='none';});
+  document.getElementById('askOk').style.display='block';
+});
+</script>
+</body>
+</html>
