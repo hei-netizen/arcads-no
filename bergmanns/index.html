@@ -222,6 +222,67 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
   body{padding-bottom:78px}
   .mbook{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;box-shadow:0 14px 34px -12px rgba(0,0,0,.55)}
 }
+
+/* ===== v2: roligere og mer håndlaget uttrykk (16.11.2026) ===== */
+:root{--r:3px}
+.rv{opacity:1!important;transform:none!important}
+.btn{border-radius:3px;padding:15px 28px;text-transform:uppercase;letter-spacing:.06em;font-size:.86rem}
+.btn:hover{transform:none}
+.nav{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
+.nav ul a::after{display:none}
+.nav ul a:hover{color:var(--gold-d)}
+.hero{min-height:min(80vh,760px)}
+.hero::after{background:linear-gradient(180deg,rgba(20,20,22,.15) 0%,rgba(20,20,22,.1) 45%,rgba(20,20,22,.75) 100%)}
+.hero .wrap{padding-bottom:64px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.6rem);max-width:16ch}
+.hero p{margin:14px 0 26px;font-size:1.1rem}
+.status i{display:none}
+.strip{background:var(--dark);color:rgba(255,255,255,.86);font-size:.98rem}
+.strip .wrap{display:flex;justify-content:space-between;gap:10px 30px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+.strip b{font-weight:600;color:#fff}
+.strip a{color:inherit;text-underline-offset:3px}
+.jul .box{border-radius:0;grid-template-columns:1fr 1fr}
+.jul .t{padding:56px 52px}
+.jul p{margin:16px 0 26px}
+.menu .top{margin-bottom:30px}
+.menu .cols{columns:2;column-gap:64px}
+.mcat{display:block;break-inside:avoid;margin-bottom:44px}
+.mcat h3{font-size:1.6rem;margin-bottom:6px;color:var(--gold-d)}
+.mcat .note{font-style:italic;margin-bottom:14px;font-size:.96rem}
+.dish{padding:13px 0;border-top:1px solid var(--line)}
+.dish:last-child{border-bottom:0}
+.dish i{border-bottom:0}
+.dish span{font-family:var(--sans);font-size:1rem;font-weight:500}
+.menu .pics{display:grid;grid-template-columns:1.4fr 1fr;gap:14px;margin-top:8px}
+.menu .pics img{width:100%;height:380px;object-fit:cover}
+.live{padding:130px 0}
+.party .cards{gap:14px;margin:40px 0 56px}
+figure.card{display:block;min-height:0;background:none;color:var(--ink);border-radius:0;overflow:visible}
+figure.card::after{display:none}
+figure.card img{position:static;height:300px;transition:none}
+figure.card:hover img{transform:none}
+figure.card figcaption{padding:14px 0 0;color:var(--ink2);font-size:.97rem}
+figure.card figcaption b{display:block;font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:1.35rem;color:var(--ink);margin-bottom:2px}
+.ask{background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:52px 0 0}
+.ask h3{font-size:1.9rem}
+.ask input,.ask select,.ask textarea{border-radius:3px;border-width:1px}
+.pick span{border-radius:3px;border-width:1px;font-weight:500}
+.about img{aspect-ratio:4/4.2}
+.hours tr.today td:first-child::after{content:' (i dag)';background:none;color:var(--ink2);padding:0;margin-left:6px;font-size:.9rem;letter-spacing:0;text-transform:none}
+.visit{border-top:0}
+.mbook{border-radius:3px}
+@media(max-width:900px){
+  .hero{min-height:70vh}
+  .hero .wrap{padding-bottom:40px}
+  .strip .wrap{flex-direction:column}
+  .jul .box{grid-template-columns:1fr}
+  .jul .t{padding:34px 24px}
+  .menu .cols{columns:1}
+  .menu .pics{grid-template-columns:1fr}
+  .menu .pics img{height:240px}
+  figure.card img{height:230px}
+  .ask{padding:36px 0 0}
+}
 </style>
 </head>
 <body>
@@ -248,40 +309,27 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
 <section class="hero" id="top">
   <video src="media/hero.mp4" poster="media/hero-poster.jpg" autoplay muted loop playsinline></video>
   <div class="wrap">
-    <span class="eye">Storgata 13 &middot; Fredrikstad</span>
-    <h1>Mat, drinker og live musikk ved brygga</h1>
-    <p>Restaurant, bar og pizza midt i Fredrikstad. Kom til lunsj, bli til middag, og bli gjerne litt til.</p>
+    <h1>Restaurant, bar og pizza ved brygga</h1>
+    <p>Åpent hver dag. Live musikk fredag og lørdag.</p>
     <div class="acts">
-      <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
       <a class="btn line" href="#meny">Se menyen</a>
       <div class="status" id="status"><i></i><span id="statusTxt">Åpent hver dag</span></div>
     </div>
   </div>
 </section>
 
-<section class="quick">
-  <div class="wrap g">
-    <a href="#besok"><div><small>Åpent i dag</small><b id="idag">Hver dag</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#live"><div><small>Live musikk</small><b>Fredag og lørdag</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#selskap"><div><small>Selskap</small><b>Send forespørsel</b></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  </div>
-</section>
+<div class="strip"><div class="wrap"><span>I dag: <b id="idag">åpent</b></span><span>Storgata 13, Fredrikstad</span><span><a href="mailto:booking@bergmanns.no">booking@bergmanns.no</a></span></div></div>
 
 <section class="jul">
   <div class="wrap">
     <div class="box rv">
       <img src="img/julebord.jpg" alt="Julepyntet bord med ribbe, pinnekjøtt og lutefisk">
       <div class="t">
-        <span class="eye">Julebord</span>
         <h2 class="h2">Ta julebordet hos oss</h2>
-        <p>God julemat, festlig stemning og live musikk i helgene. Si hvor mange dere blir, så hjelper vi deg med resten.</p>
-        <ul>
-          <li>Midt i sentrum, rett ved brygga</li>
-          <li>Vinterisolert pergola</li>
-          <li>Pinnekjøtt på menyen</li>
-        </ul>
+        <p>Vi dekker til julebord for både små og store lag. Send oss antall og dato, så kommer vi tilbake med et forslag.</p>
         <div class="acts">
-          <a class="btn gold" href="#selskap">Send forespørsel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="btn gold" href="#selskap">Send forespørsel</a>
           <a class="btn line" href="#meny">Se menyen</a>
         </div>
       </div>
@@ -293,89 +341,67 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
   <div class="wrap">
     <div class="top rv">
       <div>
-        <span class="eye">Vår meny</span>
         <h2 class="h2">Smakebiter fra kjøkkenet</h2>
       </div>
-      <div class="tabs" id="tabs">
-        <button class="on" data-t="lunsj">Lunsj</button>
-        <button data-t="sma">Småretter</button>
-        <button data-t="hoved">Hovedretter</button>
-        <button data-t="pizza">Burger og pizza</button>
-      </div>
     </div>
-    <div class="body">
-      <div class="rv">
-        <div class="mcat on" data-c="lunsj">
+    <div class="cols">
+        <div class="mcat"><h3>Lunsj</h3>
           <p class="note">Thora Bergmann sine klassiske lunsjretter. Serveres frem til kl. 15.</p>
           <div class="dish"><div class="row"><b>Omelett med ost og skinke</b><i></i><span>239,-</span></div><p>Servert i panne med salat, brød og smør.</p></div>
           <div class="dish"><div class="row"><b>Karbonadesmørbrød</b><i></i><span>239,-</span></div><p>Stekt egg, karamellisert løk, salat og majones.</p></div>
           <div class="dish"><div class="row"><b>Stjerneskudd</b><i></i><span>319,-</span></div><p>Dampet og panert rødspettefilet på toast, med reker, asparges og dansk remulade.</p></div>
           <div class="dish"><div class="row"><b>Lunsjburger i croissant</b><i></i><span>259,-</span></div><p>Dobbel smashburger med ost, fermentert chilimajones og karamellisert løk.</p></div>
         </div>
-        <div class="mcat" data-c="sma">
+        <div class="mcat"><h3>Småretter</h3>
           <p class="note">Serveres hele dagen.</p>
           <div class="dish"><div class="row"><b>Storgata 13's berømte club sandwich</b><i></i><span>279,-</span></div><p>Kylling, bacon, tomat, aioli, avokado og salat.</p></div>
           <div class="dish"><div class="row"><b>Fransk løksuppe</b><i></i><span>189,-</span></div><p>Klassisk løksuppe med gruyère-gratinert toast.</p></div>
           <div class="dish"><div class="row"><b>Rekesmørbrød</b><i></i><span>309,-</span></div><p>Servert med lime, salat, dill, majones og urtedressing.</p></div>
           <div class="dish"><div class="row"><b>Kremet pasta carbonara</b><i></i><span>259,-</span></div><p>Parmesan og bacon, toppet med vårløk.</p></div>
         </div>
-        <div class="mcat" data-c="hoved">
+        <div class="mcat"><h3>Hovedretter</h3>
           <p class="note">Serveres fra kl. 15.</p>
           <div class="dish"><div class="row"><b>Indrefilet av okse 180 g</b><i></i><span>475,-</span></div><p>Sopp, grønnsaker, små plommetomater, bearnaise og småpoteter.</p></div>
           <div class="dish"><div class="row"><b>Ovnsbakt torsk</b><i></i><span>425,-</span></div><p>Crème ninon, sautert spinat, bacon og poteter.</p></div>
           <div class="dish"><div class="row"><b>Hjortebiff</b><i></i><span>485,-</span></div><p>Portvinsjy, rosenkål, estragonemulsjon og potetterrin.</p></div>
           <div class="dish"><div class="row"><b>Pinnekjøtt</b><i></i><span>555,-</span></div><p>Med vossakorv, kjøkkensjefens kålrabistappe og sjy.</p></div>
         </div>
-        <div class="mcat" data-c="pizza">
+        <div class="mcat"><h3>Burger og pizza</h3>
           <p class="note">Det mange mener er byens beste pizza.</p>
           <div class="dish"><div class="row"><b>Klassisk hamburger 200 g</b><i></i><span>263,-</span></div><p>Chipotledressing, salat, tomat, rødløk og ost.</p></div>
           <div class="dish"><div class="row"><b>Bacon og blå burger 200 g</b><i></i><span>279,-</span></div><p>Gorgonzola, bacon, salat, syltet løk og karamellisert løkdressing.</p></div>
           <div class="dish"><div class="row"><b>Pizza Blegen, byens favoritt</b><i></i><span>fra 159,-</span></div><p>Marinert biffkjøtt, skinke, salami, hakket bacon og pepperoni.</p></div>
           <div class="dish"><div class="row"><b>Pizza Vesterøy</b><i></i><span>fra 146,-</span></div><p>Kjøttboller, skinke, salami, rødløk og fersk paprika.</p></div>
         </div>
-        <div class="acts" style="margin-top:30px">
-          <a class="btn ink" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
-        </div>
       </div>
-      <div class="pic rv"><img id="menuPic" src="img/mat-reker.jpg" alt="Stjerneskudd med rødspette og reker, med sitron"></div>
-    </div>
+    <div class="pics"><img src="img/mat-reker.jpg" alt="Stjerneskudd med rødspette og reker, med sitron"><img src="img/burger.jpg" alt="Ribs, biff og pommes frites servert ved vinduet"></div>
   </div>
 </section>
 
 <section class="live" id="live">
   <div class="wrap rv">
-    <span class="eye">Hver helg</span>
     <h2 class="h2">Live musikk fredag og lørdag</h2>
-    <p>Spis middag, finn deg en plass i baren og bli til musikken starter. Vi holder åpent til 03.</p>
-    <div class="days">
-      <div><b>Fredag</b><span>åpent til 03:00</span></div>
-      <div><b>Lørdag</b><span>åpent til 03:00</span></div>
-    </div>
-    <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord til helgen <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p>Det er live musikk hos oss hver fredag og lørdag, og vi holder åpent til 03.</p>
+    <a class="btn gold" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
   </div>
 </section>
 
 <section class="party" id="selskap">
   <div class="wrap">
     <div class="rv">
-      <span class="eye">Selskap</span>
       <h2 class="h2">Julebord, bursdag eller firmafest?</h2>
       <p class="lede">Uteområdet har vinterisolert pergola og passer for private sammenkomster hele året, både små og større.</p>
     </div>
     <div class="cards">
-      <div class="card rv"><img src="img/julebord.jpg" alt="Julepyntet bord med julemat"><div><h3>Julebord</h3><p>God julemat og en uformell, festlig stemning.</p></div></div>
-      <div class="card rv"><img src="img/brygga.jpg" alt="Bergmanns og pergolaen sett fra brygga" style="object-position:center 62%"><div><h3>Sommerfest</h3><p>God mat, god stemning og plass til å mingle.</p></div></div>
-      <div class="card rv"><img src="img/hero.jpg" alt="To smilende servitører med tallerkener foran Bergmanns"><div><h3>Bursdag</h3><p>Trivelige lokaler midt i sentrum, for venner og familie.</p></div></div>
+      <figure class="card"><img src="img/julebord.jpg" alt="Julepyntet bord med julemat"><figcaption><b>Julebord</b>God julemat og en uformell, festlig stemning.</figcaption></figure>
+      <figure class="card"><img src="img/brygga.jpg" alt="Bergmanns og pergolaen sett fra brygga" style="object-position:center 62%"><figcaption><b>Sommerfest</b>God mat, god stemning og plass til å mingle.</figcaption></figure>
+      <figure class="card"><img src="img/hero.jpg" alt="To smilende servitører med tallerkener foran Bergmanns"><figcaption><b>Bursdag</b>Trivelige lokaler midt i sentrum, for venner og familie.</figcaption></figure>
     </div>
     <div class="ask rv">
       <div class="l">
-        <h3>Fortell oss hva dere planlegger</h3>
-        <p>Det tar under ett minutt. Vi tar kontakt og planlegger sammen med deg.</p>
-        <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Midt i sentrum, rett ved brygga</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Solrikt uteområde med vinterisolert pergola</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Live musikk hver fredag og lørdag</li>
-        </ul>
+        <h3>Send en forespørsel</h3>
+        <p>Skriv hvor mange dere blir og når dere vil komme, så tar vi kontakt.</p>
+        <p style="margin-top:14px">Du kan også sende e-post til <a href="mailto:booking@bergmanns.no">booking@bergmanns.no</a>.</p>
       </div>
       <form id="askForm" novalidate>
         <div class="full"><label>Anledning</label>
@@ -392,7 +418,7 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
         <div><label for="f-navn">Navn</label><input id="f-navn" name="navn" type="text" autocomplete="name" placeholder="Navnet ditt" required></div>
         <div><label for="f-epost">E-post</label><input id="f-epost" name="epost" type="email" autocomplete="email" placeholder="din@epost.no" required></div>
         <div class="full err" id="askErr">Fyll inn navn og en gyldig e-postadresse.</div>
-        <div class="full"><button class="btn gold" type="submit">Send forespørsel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
+        <div class="full"><button class="btn gold" type="submit">Send forespørsel</button></div>
         <div class="ok" id="askOk"><h4>Takk for forespørselen!</h4><p>Vi tar kontakt, så planlegger vi selskapet sammen med deg.</p></div>
       </form>
     </div>
@@ -403,15 +429,9 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
   <div class="wrap about">
     <img class="rv" src="img/ansatte.jpg" alt="To ansatte hos Bergmanns serverer mat foran baren">
     <div class="rv">
-      <span class="eye">Om oss</span>
       <h2 class="h2">Arven etter Thora Bergmann</h2>
       <p class="lede">Bergmann's bygger på arven etter Thora Bergmann, en lidenskapelig kokk. Lunsjrettene hennes står fortsatt på menyen.</p>
-      <p class="lede">Her er stemningen avslappet og varm. Ta en rask lunsj, en lang middag eller bare et glass i baren.</p>
-      <div class="facts">
-        <div><b>Midt i sentrum</b><span>Storgata 13, ved brygga</span></div>
-        <div><b>Åpent hver dag</b><span>til 03 fredag og lørdag</span></div>
-        <div><b>Pergola hele året</b><span>solrik og vinterisolert</span></div>
-      </div>
+      <p class="lede">Du kan komme for en rask lunsj, en lang middag eller bare et glass i baren.</p>
     </div>
   </div>
 </section>
@@ -420,7 +440,6 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
   <div class="wrap grid">
     <img class="rv" src="img/brygga.jpg" alt="Bergmanns Fredrikstad sett fra brygga">
     <div class="rv">
-      <span class="eye">Besøk oss</span>
       <h2 class="h2">Åpent hver dag</h2>
       <address>Storgata 13, 1607 Fredrikstad</address>
       <table class="hours" id="hours">
@@ -433,17 +452,6 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
         <a class="btn ink" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord</a>
         <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Bergmanns+Fredrikstad+Storgata+13" target="_blank" rel="noopener">Vis i kart</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="wrap rv">
-    <h2>Bord til i kveld?</h2>
-    <p>Book på nett på under ett minutt, eller stikk innom. Du er alltid velkommen.</p>
-    <div class="acts">
-      <a class="btn ink" href="https://booking.gastroplanner.no/bergmanns-fredrikstad/t" target="_blank" rel="noopener">Book bord <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="btn line" href="#selskap">Planlegg selskap</a>
     </div>
   </div>
 </section>
@@ -485,15 +493,6 @@ footer .bot{margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,2
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.08});
   els.forEach(function(e){io.observe(e);});
-})();
-/* menyfaner */
-(function(){
-  var pics={lunsj:['img/mat-reker.jpg','Stjerneskudd med rødspette og reker, med sitron'],sma:['img/mat-reker.jpg','Stjerneskudd med rødspette og reker, med sitron'],hoved:['img/burger.jpg','Ribs, biff og pommes frites servert ved vinduet'],pizza:['img/burger.jpg','Ribs, biff og pommes frites servert ved vinduet']};
-  var tabs=document.getElementById('tabs'),pic=document.getElementById('menuPic');
-  tabs.addEventListener('click',function(e){var t=e.target.getAttribute('data-t');if(!t)return;
-    tabs.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===e.target);});
-    document.querySelectorAll('.mcat').forEach(function(c){c.classList.toggle('on',c.getAttribute('data-c')===t);});
-    pic.src=pics[t][0];pic.alt=pics[t][1];});
 })();
 /* åpent nå? Tider fra bergmanns.no. Indeks 0 = søndag, stenger > 24 = over midnatt. */
 (function(){
