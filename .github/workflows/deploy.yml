@@ -24,7 +24,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Generer llms-full.txt (all sidetekst for AI-crawlere)
         run: python3 scripts/build_llms_full.py
@@ -39,12 +39,12 @@ jobs:
           find _site \( -name "*.css" -o -name "*.js" \) \
             -exec npx --yes esbuild@0.25 --minify --allow-overwrite {} --outfile={} \;
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 
       # Varsler Bing/IndexNow om alle URL-er i sitemap etter hver deploy —
       # ChatGPT-browsing bruker Bing-indeksen, så rask indeksering der = GEO.
