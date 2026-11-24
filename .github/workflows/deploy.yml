@@ -51,20 +51,20 @@ jobs:
         continue-on-error: true
 
       - name: Vent før forsøk 2
-        if: steps.deploy1.outcome == failure
+        if: steps.deploy1.outcome == 'failure'
         run: sleep 60
 
       - id: deploy2
-        if: steps.deploy1.outcome == failure
+        if: steps.deploy1.outcome == 'failure'
         uses: actions/deploy-pages@v5
         continue-on-error: true
 
       - name: Vent før forsøk 3
-        if: steps.deploy2.outcome == failure
+        if: steps.deploy2.outcome == 'failure'
         run: sleep 120
 
       - id: deploy3
-        if: steps.deploy2.outcome == failure
+        if: steps.deploy2.outcome == 'failure'
         uses: actions/deploy-pages@v5
 
       # Varsler Bing/IndexNow om alle URL-er i sitemap etter hver deploy —
