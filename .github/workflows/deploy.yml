@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
 
@@ -43,7 +43,28 @@ jobs:
         with:
           path: _site
 
-      - id: deployment
+      # GitHub Pages svarer av og til «Deployment failed, try again later».
+      # Prøver opptil 3 ganger (pause 1 og 2 min) før jobben feiler — da slipper vi
+      # manuelle «Ny deploy (forsøk N)»-commits og feil-e-poster ved forbigående feil.
+      - id: deploy1
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Vent før forsøk 2
+        if: steps.deploy1.outcome == failure
+        run: sleep 60
+
+      - id: deploy2
+        if: steps.deploy1.outcome == failure
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Vent før forsøk 3
+        if: steps.deploy2.outcome == failure
+        run: sleep 120
+
+      - id: deploy3
+        if: steps.deploy2.outcome == failure
         uses: actions/deploy-pages@v5
 
       # Varsler Bing/IndexNow om alle URL-er i sitemap etter hver deploy —
