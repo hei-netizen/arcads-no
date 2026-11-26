@@ -285,8 +285,8 @@ h1,h2,h3{overflow-wrap:break-word}
 .field select{flex:1;width:100%;padding:11px 13px;border:0;background:transparent;font-family:var(--mont);font-size:0.95rem;color:var(--ink);appearance:none}
 .field select:focus{outline:none}
 .pills{display:flex;flex-wrap:wrap;gap:8px}
-.pills label{margin:0;cursor:pointer}
-.pills input{position:absolute;opacity:0;pointer-events:none}
+.pills label{margin:0;cursor:pointer;position:relative}
+.pills input{position:absolute;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none}
 .pills span{display:inline-block;border:1.5px solid var(--line);background:var(--sand);border-radius:999px;padding:8px 14px;font-size:0.88rem;font-weight:700}
 .pills input:checked+span{border-color:var(--clay);background:var(--clay-tint);color:var(--clay-deep)}
 .founder{display:grid;grid-template-columns:minmax(0,340px) 1fr;gap:46px;align-items:center}
